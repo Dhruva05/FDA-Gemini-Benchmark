@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at the output of `[print(f'PASSAGE_{i:04d}:', ...)]`. The indices are wrong! Ah, because I wrote `labels[0]['chunks'][21:45]` but printed `i:04d` which printed `0000` to `0023` because of `enumerate(labels[0]['chunks'][21:45])` starting at 0! Let's write `enumerate(labels[0]['chunks'][21:45], start=21)` instead.",
+  "plan": "I will run the exact same print but with the correct index offset to see which chunk index corresponds to which drug interaction.",
+  "commands": [
+    {
+      "keystrokes": "[print(f'PASSAGE_{i:04d}:', c[:120].replace('\\n', ' ')) for i, c in enumerate(labels[0]['chunks'][21:45], start=21)]\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Lopinavir-Ritonavir":
+>             for idx in range(3, 9):
+>                 print(f"--- PASSAGE_{idx:04d} ---")
+>                 print(data["chunks"][idx])
+> '
+--- PASSAGE_0003 ---
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V
+, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V,
+V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+--- PASSAGE_0004 ---
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+--- PASSAGE_0005 ---
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage rec
+ommendations for twice daily dosing when lopinavir and ritonavir is taken in combination with these agents.
+--- PASSAGE_0006 ---
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+--- PASSAGE_0007 ---
+2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral solution
+ should be administered using the calibrated cup (supplied) or oral dosing syringe.
+Lopinavir and ritonavir oral solution is not recommended in neonates before a postmenstrual age (first day of the mother’s last menstrual period to birth plus t
+he time elapsed after birth) of 42 weeks and a postnatal age of at least 14 days has been attained .
+Lopinavir and ritonavir oral solution contains approximately 42% (v/v) ethanol and approximately 15% (w/v) propylene glycol. Total amounts of ethanol and propyl
+ene glycol from all medicines that are to be given to pediatric patients 14 days to 6 months of age should be taken into account in order to avoid toxicity from
+ these excipients .
+--- PASSAGE_0008 ---
+Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing or exceeding the recommended adult dose.
+Body surface area (BSA) can be calculated as follows:
+The lopinavir and ritonavir dose can be calculated based on weight or BSA:
+Based on Weight:
+Patient Weight (kg) × Prescribed lopinavir dose (mg/kg) = Administered lopinavir dose (mg)
+Based on BSA:
+Patient BSA (m2) × Prescribed lopinavir dose (mg/m2) = Administered lopinavir dose (mg)
+If lopinavir and ritonavir oral solution is used, the volume (mL) of lopinavir and ritonavir solution can be determined as follows:
+Volume of lopinavir and ritonavir solution (mL) = Administered lopinavir dose (mg) ÷ 80 (mg/mL)
+Oral Solution Dosage Recommendation in Pediatric Patients 14 Days to Less Than 18 Years:
+Table 4 summarizes the recommended daily dosing regimen for pediatric patients 14 days to less than 18 years of age using the oral solution.
+Lopinavir and ritonavir administered in combination with efavirenz, nevirapine, or nelfinavir in patients younger than 6 months of age is not recommended. Total
+ dose of lopinavir and ritonavir oral solution in pediatric patients should not exceed the recommended adult daily dose of 400/100 mg (5mL) twice daily.
+Table 4. Lopinavir and Ritonavir Oral Solution Daily Dosage Recommendations in Pediatric Patients 14 days to Less Than 18 Years Without Concomitant Efavirenz, N
+evirapine, or Nelfinavir
+root@3faa5da3ba91:/workspace#

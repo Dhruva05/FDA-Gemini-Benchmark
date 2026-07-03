@@ -1,0 +1,6 @@
+{
+  "analysis": "The task is fully complete and verified. Every question is answered correctly, schemas match perfectly, and references are grounded. I am ready to complete the task.",
+  "plan": "Output the final JSON with task_complete set to true.",
+  "commands": [],
+  "task_complete": true
+}

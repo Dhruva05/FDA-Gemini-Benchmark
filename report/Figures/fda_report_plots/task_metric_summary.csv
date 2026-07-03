@@ -1,0 +1,8 @@
+task,mean_fractional_reward,min_reward,max_reward,strict_pass_at_1,strict_pass_at_3,question_passes,question_total,question_pass_rate,mean_runtime_minutes,mean_cost_usd
+fda-hard-long-label-retrieval,0.753177,0.741302,0.771979,0.0,0,4,24,0.166667,5.706,1.050906
+fda-hard-warning-citations,0.741858,0.71599,0.760261,0.0,0,4,24,0.166667,3.444,0.736488
+fda-hard-numeric-dosage,0.800955,0.781354,0.834687,0.0,0,7,24,0.291667,4.917,1.127039
+fda-hard-near-miss-refusal,0.897222,0.891667,0.908333,0.0,0,12,18,0.666667,2.683,0.495727
+fda-hard-multisection-synthesis,0.750503,0.721302,0.790625,0.0,0,4,24,0.166667,5.233,1.213928
+fda-hard-cross-label-comparison,0.623517,0.573649,0.693216,0.0,0,0,15,0.0,8.983,1.117283
+fda-hard-mixed-batch,0.801903,0.791333,0.823042,0.0,0,10,30,0.333333,3.933,0.664863

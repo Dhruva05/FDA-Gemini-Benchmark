@@ -1,0 +1,11 @@
+{
+  "analysis": "This is very interesting.
+Let's print the rest of the outline from 100 to 209.",
+  "plan": "I will print lines 100 to 209 of `outline.txt` using sed.",
+  "commands": [
+    {
+      "keystrokes": "sed -n '100,209p' outline.txt\n",
+      "duration": 0.5
+    }
+  ]
+}

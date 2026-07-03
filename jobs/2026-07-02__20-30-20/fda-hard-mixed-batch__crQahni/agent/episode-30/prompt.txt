@@ -1,0 +1,58 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+>
+> with open("/workspace/data/public/questions.jsonl") as f:
+>     questions = [json.loads(line) for line in f]
+>
+> with open("/workspace/answers.json") as f:
+>     answers_data = json.load(f)
+>
+> answers = answers_data["answers"]
+> print("Number of answers:", len(answers))
+> assert len(answers) == len(questions), f"Expected {len(questions)} answers, got {len(answers)}"
+>
+> # Map by qid
+> ans_dict = {a["qid"]: a for a in answers}
+>
+> for q in questions:
+>     qid = q["qid"]
+>     print(f"Validating QID: {qid} ({q["task_type"]})")
+>     assert qid in ans_dict, f"Missing QID {qid}"
+>     a = ans_dict[qid]
+>
+>     # Check required fields
+>     for field in q["required_output_fields"]:
+>         # Check nested structured fields
+>         if field.startswith("structured_fields."):
+>             subfield = field.split(".")[1]
+>             assert "structured_fields" in a, f"Missing structured_fields in answer for {qid}"
+>             assert subfield in a["structured_fields"], f"Missing {subfield} in structured_fields for {qid}"
+>         else:
+>             assert field in a, f"Missing field {field} in answer for {qid}"
+>
+>     # Check citations
+>     assert "citations" in a, f"Missing citations for {qid}"
+>     for cit in a["citations"]:
+>         assert "set_id" in cit, f"Missing set_id in citation for {qid}"
+>         assert "passage_id" in cit, f"Missing passage_id in citation for {qid}"
+>         assert "section" in cit, f"Missing section in citation for {qid}"
+>         assert "supporting_quote" in cit, f"Missing supporting_quote in citation for {qid}"
+>         assert cit["set_id"] == q["set_id"], f"Mismatched set_id in citation for {qid}"
+>
+> print("All validations passed successfully!")
+> '
+Number of answers: 10
+Validating QID: b2531657ba5c7a78 (factual)
+Validating QID: 6f12607a1ba14dd5 (factual)
+Validating QID: mixed-2a90a3df19df68 (factual)
+Validating QID: mixed-7c14643ec4356a (factual)
+Validating QID: daef650b92e56473 (numeric)
+Validating QID: a0576a26f2a2eeac (numeric)
+Validating QID: near-miss-04f3afa658fdef (refusal)
+Validating QID: near-miss-0c6ec72416151f (refusal)
+Validating QID: mixed-eead76662cb6bf (multihop)
+Validating QID: mixed-97331106c3870d (multihop)
+All validations passed successfully!
+root@4b1b7b4fd079:/workspace#

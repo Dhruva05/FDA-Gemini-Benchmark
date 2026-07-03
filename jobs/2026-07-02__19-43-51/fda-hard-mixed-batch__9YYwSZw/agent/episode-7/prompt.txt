@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     first_line = json.loads(f.readline())
+>     for i in range(5):
+>         print(f"Chunk {i}:", first_line["chunks"][i][:150])
+> '
+Chunk 0: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of ce
+Chunk 1: 1 INDICATIONS AND USAGE
+PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high risk
+Chunk 2: Limitations of Use
+PAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 .
+Chunk 3: 2.1    Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dos
+Chunk 4: 2.2    Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with
+root@3faa5da3ba91:/workspace#

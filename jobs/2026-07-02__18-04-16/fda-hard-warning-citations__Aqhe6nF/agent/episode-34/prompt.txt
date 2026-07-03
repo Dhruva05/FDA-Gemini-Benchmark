@@ -1,0 +1,4 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# rm -f inspect_labels.py search_label.py search_lopinavir.py generate_answers.py validate_answers.py
+root@23e2e6a1b566:/workspace#

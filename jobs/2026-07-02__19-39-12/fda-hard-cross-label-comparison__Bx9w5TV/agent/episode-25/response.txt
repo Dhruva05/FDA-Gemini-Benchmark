@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! OTC drugs (like 12HR Allergy Relief and 365 Whole Foods Market Loratadine) and some prescription drugs might not have \"dosage and administration\" or \"directions\" in that exact spelling, or maybe they use other headers. Let's write a python script that searches for chunks of each drug that contain more generic terms, or print all chunks of the drugs that didn't match.",
+  "plan": "Let's write a python script to search for keywords in chunks for each drug, and output all chunks that look like dosing instructions, or if they don't exist, we can inspect all chunks of that drug.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        print(\"=\"*60)\n        print(\"Drug:\", data[\"drug_name\"])\n        print(\"Set ID:\", data[\"set_id\"])\n        for idx, chunk in enumerate(data[\"chunks\"]):\n            if any(kw in chunk.lower() for kw in [\"directions\", \"dosage and administration\", \"dosage\", \"how to take\", \"recommended dose\", \"adults and children\"]):\n                print(f\"  PASSAGE_{idx:04d}: {repr(chunk)[:150]}\")\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

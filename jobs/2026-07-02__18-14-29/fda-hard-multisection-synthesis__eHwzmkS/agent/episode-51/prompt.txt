@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]
+; print('6:', l['chunks'][17][:400]); print('6.1:', l['chunks'][18][:400]); f.close()"
+6: 6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Hypersensitivity reactions
+6.1: 6.1        Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The safety of PAXLOVID is based on two Phase 2/3 randomized, placebo-controlled trials in symptomatic adu
+root@a1980178bfd8:/workspace#

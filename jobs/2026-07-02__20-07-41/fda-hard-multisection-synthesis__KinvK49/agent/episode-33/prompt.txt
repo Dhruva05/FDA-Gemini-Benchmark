@@ -1,0 +1,93 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# sed -n '311,400p' /tmp/headers.txt
+PASSAGE_0099: Animal Data
+PASSAGE_0100: 8.2 Lactation
+PASSAGE_0101: 8.3 Females and Males of Reproductive Potential
+PASSAGE_0102: 8.4 Pediatric Use
+PASSAGE_0103: 8.5 Geriatric Use
+PASSAGE_0104: 8.6 Hepatic Impairment
+PASSAGE_0105: 10 OVERDOSAGE
+PASSAGE_0106: 11 DESCRIPTION
+PASSAGE_0107: 12.1 Mechanism of Action
+PASSAGE_0108: 12.2 Pharmacodynamics
+PASSAGE_0109: 12.3 Pharmacokinetics
+PASSAGE_0110: b. Changes in AUC values
+PASSAGE_0111: Gender, Race and Age
+PASSAGE_0112: Pediatric Patients
+PASSAGE_0113: AUC12(μg•hr/m)
+PASSAGE_0114: 43.39 ± 14.80a
+PASSAGE_0115: 74.50 ± 37.87a
+PASSAGE_0116: 85.8 ± 36.9c
+PASSAGE_0117: Pregnancy
+PASSAGE_0118: Renal Impairment
+PASSAGE_0119: Hepatic Impairment
+PASSAGE_0120: Drug Interactions
+PASSAGE_0121: n
+PASSAGE_0122: Fosamprenavir2
+PASSAGE_0123: (0.28, 0.74)
+PASSAGE_0124: (0.40, 0.58)
+PASSAGE_0125: 3 Parallel group design
+PASSAGE_0126: n
+PASSAGE_0127: Fosamprenavir1
+PASSAGE_0128: Indinavir
+PASSAGE_0129: Nelfinavir
+PASSAGE_0130: Rifabutin
+PASSAGE_0131: (1.32, 1.66)
+PASSAGE_0132: 3 Parallel group design
+PASSAGE_0133: 12.4 Microbiology
+PASSAGE_0134: Antiviral Activity
+PASSAGE_0135: Resistance
+PASSAGE_0136: Cross-resistance - Nonclinical Studies
+PASSAGE_0137: <4 fold
+PASSAGE_0138: 1/4 (25%)
+PASSAGE_0139: 2/8 (25%)
+PASSAGE_0140: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+PASSAGE_0141: Mutagenesis
+PASSAGE_0142: Impairment of Fertility
+PASSAGE_0143: 14.1 Adult Patients without Prior Antiretroviral Therapy
+PASSAGE_0144: 8%
+PASSAGE_0145: 89
+PASSAGE_0146: Outcome
+PASSAGE_0147: 11%
+PASSAGE_0148: 14.2 Adult Patients with Prior Antiretroviral Therapy
+PASSAGE_0149: Outcome
+PASSAGE_0150: 13%
+PASSAGE_0151: Outcome
+PASSAGE_0152: 24%
+PASSAGE_0153: 12%
+PASSAGE_0154: 3%
+PASSAGE_0155: 14.3 Other Studies Supporting Approval in Adult Patients
+PASSAGE_0156: 14.4 Pediatric Studies
+PASSAGE_0157: 16 HOW SUPPLIED/STORAGE AND HANDLING
+PASSAGE_0158: 160 mL bottle …………………………………(NDC 0527-1947-48)
+PASSAGE_0159: 17 PATIENT COUNSELING INFORMATION
+PASSAGE_0160: Drug Interactions
+PASSAGE_0161: Pancreatitis
+PASSAGE_0162: Skin Rash
+PASSAGE_0163: Hepatotoxicity
+PASSAGE_0164: QT and PR Interval Prolongation
+PASSAGE_0165: Diabetes Mellitus/Hyperglycemia
+PASSAGE_0166: Immune Reconstitution Syndrome
+PASSAGE_0167: Lipid Disorders
+PASSAGE_0168: Fat Redistribution
+PASSAGE_0169: Patients with Hemophilia
+PASSAGE_0170: Pregnancy Exposure Registry
+PASSAGE_0171: Lactation
+PASSAGE_0172: Lopinavir and Ritonavir
+PASSAGE_0173: Oral Solution USP
+PASSAGE_0174: ° stomach-area (abdominal) pain
+PASSAGE_0175: ° loss of appetite
+PASSAGE_0176: ° stomach area (abdominal) pain
+PASSAGE_0177: ° sensation of abnormal heartbeats
+PASSAGE_0178: ° dronedarone
+PASSAGE_0179: ° pimozide
+PASSAGE_0180: ° lomitapide
+PASSAGE_0181: ° St. John’s Wort (Hypericum perforatum®)
+PASSAGE_0182: ° unusual weight loss
+PASSAGE_0183: Philadelphia, PA 19136
+PASSAGE_0184: Lopinavir and Ritonavir (loe pin' a vir) (ri ton' na vir)                                           
+PASSAGE_0185: 1 Bottle adapter
+PASSAGE_0186: 1 Oral syringe
+PASSAGE_0187: 1 Prescribing Information
+root@1ce871952c8c:/workspace#

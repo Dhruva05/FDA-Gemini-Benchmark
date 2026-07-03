@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Lopinavir-Ritonavir":
+>             print(data["chunks"][1])
+> '
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+root@4b1b7b4fd079:/workspace#

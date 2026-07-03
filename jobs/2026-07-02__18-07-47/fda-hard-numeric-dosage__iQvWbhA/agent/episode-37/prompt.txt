@@ -1,0 +1,100 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > search_celecoxib_max.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+> l = [label for label in labels if label['set_id'] == '27f17ae7-939b-402e-9498-3b6611104089'][0]
+> for i, chunk in enumerate(l['chunks']):
+>     if any(kw in chunk.lower() for kw in ['maximum', 'exceed', 'limit', 'max']):
+>         print(f"PASSAGE_{i:04d}:")
+>         print(chunk[:300])
+>         print("-"*50)
+> EOF
+root@371ed25b9fd3:/workspace# python3 search_celecoxib_max.py
+PASSAGE_0021:
+5.3 Hepatotoxicity
+Elevations of ALT or AST (three or more times the upper limit of normal ULN]) have been reported in approximately 1% of NSAID-treated patients in clinical trial
+s. In addition, rare, sometimes fatal, cases of severe hepatic injury, including fulminant hepatitis, liver necrosis, and
+--------------------------------------------------
+PASSAGE_0031:
+Oligohydramnios/Neonatal Renal Impairment
+Use of NSAIDs, including celecoxib, at about 20 weeks gestation or later in pregnancy may cause fetal renal dysfunction leading to oligohydramnios and, in some
+cases, neonatal renal impairment. These adverse outcomes are seen, on average, after days to weeks
+--------------------------------------------------
+PASSAGE_0076:
+8.1 Pregnancy
+Risk Summary
+Use of NSAIDs, including celecoxib capsules, can cause premature closure of the fetal ductus arteriosus and fetal renal dysfunction leading to oligohydramnios a
+nd, in some cases, neonatal renal impairment. Because of these risks, limit dose and duration of celecoxib use be
+--------------------------------------------------
+PASSAGE_0078:
+Oligohydramnios/Neonatal Renal Impairment
+Use of NSAIDs at about 20 weeks gestation or later in pregnancy has been associated with cases of fetal renal dysfunction leading to oligohydramnios, and in som
+e cases, neonatal renal impairment.
+Data from observational studies regarding other potential embr
+--------------------------------------------------
+PASSAGE_0079:
+Fetal/Neonatal Adverse Reactions
+Premature Closure of Fetal Ductus Arteriosus:
+Avoid use of NSAIDs in women at about 30 weeks gestation and later in pregnancy, because NSAIDs, including celecoxib capsules, can cause premature closure of th
+e fetal ductus arteriosus .
+Oligohydramnios/Neonatal Renal Im
+--------------------------------------------------
+PASSAGE_0081:
+Human Data
+The available data do not establish the presence or absence of developmental toxicity related to the use of celecoxib capsules.
+Premature Closure of Fetal Ductus Arteriosus:
+Published literature reports that the use of NSAIDs at about 30 weeks of gestation and later in pregnancy may cause
+--------------------------------------------------
+PASSAGE_0083:
+8.2 Lactation
+Risk Summary
+Limited data from 3 published reports that included a total of 12 breastfeeding women showed low levels of celecoxib in breast milk. The calculated average dail
+y infant dose was 10 to 40 mcg/kg/day, less than 1% of the weight-based therapeutic dose for a two-year old-child
+--------------------------------------------------
+PASSAGE_0090:
+10 OVERDOSAGE
+Symptoms following acute NSAID overdosages have been typically limited to lethargy, drowsiness, nausea, vomiting, and epigastric pain, which have been generally
+ reversible with supportive care. Gastrointestinal bleeding has occurred. Hypertension, acute renal failure, respiratory depre
+--------------------------------------------------
+PASSAGE_0096:
+Absorption
+Peak plasma levels of celecoxib occur approximately 3 hours after an oral dose. Under fasting conditions, both peak plasma levels (C
+max) and area under the curve (AUC) are roughly dose-proportional up to 200 mg twice daily; at higher doses there are less than proportional increases in C
+
+--------------------------------------------------
+PASSAGE_0097:
+Food Effects
+When celecoxib capsules were taken with a high fat meal, peak plasma levels were delayed for about 1 to 2 hours with an increase in total absorption (AUC) of 10
+% to 20%. Under fasting conditions, at doses above 200 mg, there is less than a proportional increase in C
+maxand AUC, which is
+--------------------------------------------------
+PASSAGE_0101:
+Geriatric
+At steady state, elderly subjects (over 65 years old) had a 40% higher C
+maxand a 50% higher AUC compared to the young subjects. In elderly females, celecoxib C
+maxand AUC are higher than those for elderly males, but these increases are predominantly due to lower body weight in elderly fem
+--------------------------------------------------
+PASSAGE_0111:
+12.5 Pharmacogenomics
+CYP2C9 activity is reduced in individuals with genetic polymorphisms that lead to reduced enzyme activity, such as those homozygous for the CYP2C9*2 and CYP2C9*
+3 polymorphisms. Limited data from 4 published reports that included a total of 8 subjects with the homozygous CYP2C9*
+--------------------------------------------------
+PASSAGE_0118:
+14.3 Juvenile Rheumatoid Arthritis(NCT00652925)
+In a 12-week, randomized, double-blind active-controlled, parallel-group, multicenter, non-inferiority study, patients from 2 years to 17 years of age with pauc
+iarticular, polyarticular course JRA or systemic onset JRA (with currently inactive systemic
+--------------------------------------------------
+PASSAGE_0124:
+Primary Endpoint
+The trial had two prespecified analysis populations:
+- Intent-to-treat population (ITT): Comprised of all randomized subjects followed for a maximum of 30 months
+- Modified Intent-to-treat population (mITT): Comprised of all randomized subjects who received at least one dose of stud
+--------------------------------------------------
+PASSAGE_0131:
+Celecoxib Long-Term Arthritis Safety Study (CLASS)
+This was a prospective, long-term, safety outcome study conducted post-marketing in approximately 5,800 OA patients and 2,200 RA patients. Patients received cel
+ecoxib capsules 400 mg twice daily (4-fold and 2-fold the recommended OA and RA doses, re
+--------------------------------------------------
+root@371ed25b9fd3:/workspace#

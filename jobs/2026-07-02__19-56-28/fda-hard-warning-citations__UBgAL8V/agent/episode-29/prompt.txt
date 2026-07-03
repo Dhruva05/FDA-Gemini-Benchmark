@@ -1,0 +1,172 @@
+New Terminal Output:
+
+root@7ddc515b1a59:/workspace# cat << 'EOF' > generate_answers.py
+> import json
+>
+sin receptor > # Load labels
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+>
+> # Helper to get the passage content
+> def get_passage(set_id, passage_id):
+>     drug = next(d for d in labels if d['set_id'] == set_id)
+>     idx = int(passage_id.split('_')[1])
+>     return drug['chunks'][idx]
+>
+henobarbital, primidone, phenytoin, rifampin, rifapentine, lumacaftor/ivacaftor, St. John's Wort) must be avoided, as well as other specific drugs like tamsulos
+in, rivaroxaban, and voriconazole.",
+        "cita> paxlovid_set_id = "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a"
+vi> lop_rit_set_id = "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85"
+>
+ > answers_data = [
+>     {
+on>         "qid": "b2531657ba5c7a78",
+>         "status": "ANSWERED",
+>         "answer": "Paxlovid is associated with significant drug interactions due to ritonavir, which is a strong CYP3A inhibitor. This can increase the exposu
+re of certain concomitant medications, potentially resulting in severe, life-threatening, or fatal events. Commonly reported serious adverse reactions involved
+calcineurin inhibitors (e.g., tacrolimus, cyclosporine) and calcium channel blockers. Conversely, drugs that induce CYP3A can decrease Paxlovid concentrations,
+leading to a loss of therapeutic effect and possible development of viral resistance. Co-administration with drugs highly dependent on CYP3A for clearance is co
+ntraindicated. Prior to prescribing, healthcare providers must review all medications to assess potential interactions, adjust dosages, or perform additional mo
+nitoring.",
+>         "citations": [
+e."
+    >             {
+>                 "set_id": paxlovid_set_id,
+>                 "passage_id": "PASSAGE_0000",
+>                 "section": "WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID",
+>                 "supporting_quote": "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medicati
+ons, resulting in potentially severe, life-threatening, or fatal events"
+>             },
+ERED",
+        >             {
+>                 "set_id": paxlovid_set_id,
+be take>                 "passage_id": "PASSAGE_0013",
+>                 "section": "5.1 Risk of Serious Adverse Reactions Due to Drug Interactions",
+ incompatibility, but comp>                 "supporting_quote": "The most commonly reported concomitant medications resulting in serious adverse reactions were
+calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers."
+>             },
+he>             {
+ risk of accid>                 "set_id": paxlovid_set_id,
+ose. Step-by-step i>                 "passage_id": "PASSAGE_0019",
+>                 "section": "7.1 Potential for PAXLOVID to Affect Other Drugs",
+rning th>                 "supporting_quote": "Co-administration of PAXLOVID with drugs highly dependent on CYP3A for clearance and for which elevated plasma co
+ncentrations are associated with serious and/or life-threatening events is contraindicated"
+>             },
+AGE_>             {
+>                 "set_id": paxlovid_set_id,
+>                 "passage_id": "PASSAGE_0020",
+>                 "section": "7.2 Potential for Other Drugs to Affect PAXLOVID",
+>                 "supporting_quote": "drugs that induce CYP3A may decrease nirmatrelvir and ritonavir plasma concentrations and reduce PAXLOVID therapeutic eff
+ect"
+>             }
+>         ],
+>         "structured_fields": {}
+>     },
+>     {
+Be>         "qid": "6f12607a1ba14dd5",
+>         "status": "ANSWERED",
+solution contains ethanol and >         "answer": "Medications that should be avoided or are contraindicated with Paxlovid include: alpha 1-adrenoreceptor antag
+onists (alfuzosin), antianginals (ranolazine), antiarrhythmics (amiodarone, dronedarone, flecainide, propafenone, quinidine), anti-gout agents (colchicine in pa
+tients with renal/hepatic impairment), antipsychotics (lurasidone, pimozide), BPH agents (silodosin), cardiovascular agents (eplerenone, ivabradine), ergot deri
+vatives (dihydroergotamine, ergotamine, methylergonovine), HMG-CoA reductase inhibitors (lovastatin, simvastatin), immunosuppressants (voclosporin), microsomal
+triglyceride transfer protein inhibitors (lomitapide), migraine medications (eletriptan, ubrogepant), mineralocorticoid receptor antagonists (finerenone), opioi
+d antagonists (naloxegol), PDE5 inhibitors (sildenafil for PAH), sedative/hypnotics (triazolam, oral midazolam), serotonin receptor agonists (flibanserin), and
+vasopressin receptor antagonists (tolvaptan). Additionally, strong CYP3A inducers (e.g., apalutamide, enzalutamide, carbamazepine, phenobarbital, primidone, phe
+nytoin, rifampin, rifapentine, lumacaftor/ivacaftor, St. John's Wort) must be avoided, as well as other specific drugs like tamsulosin, rivaroxaban, and voricon
+azole.",
+>         "citations"
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+l necrolysis and Stevens-Johnson syndrome), and other hypers
+ensitivity reactions have been reported with PAXLOVID ."
+oin(quote>             },
+>             {
+   if norm_quo>                 "set_id": paxlovid_set_id,
+     print(f>                 "passage_id": "PASSAGE_0015",
+>                 "section": "5.3 Hepatotoxicity",
+")
+>                 "supporting_quote": "Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir."
+>             },
+s>             {
+>                 "set_id": paxlovid_set_id,
+>                 "passage_id": "PASSAGE_0016",
+, 'w') as f:
+    j>                 "section": "5.4 Risk of HIV-1 Resistance Development",
+>                 "supporting_quote": "Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV proteas
+e inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection ."
+>             }
+>         ],
+>         "structured_fields": {}
+>     },
+>     {
+>         "qid": "2d63e0a82215867f",
+>         "status": "ANSWERED",
+>         "answer": "The safety risks listed for Paxlovid include: 1) Serious, life-threatening, or fatal adverse reactions resulting from significant drug-drug
+ interactions due to ritonavir, a strong CYP3A inhibitor, and potential loss of therapeutic efficacy or resistance due to CYP3A inducers. 2) Hypersensitivity re
+actions, including anaphylaxis and serious skin conditions such as Stevens-Johnson syndrome (SJS) and toxic epidermal necrolysis (TEN). 3) Hepatotoxicity, inclu
+ding clinical hepatitis, jaundice, and hepatic transaminase elevations, necessitating caution in patients with pre-existing liver disease or liver enzyme abnorm
+alities. 4) Risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection, because nirmatrelvir
+ is co-administered with ritonavir.",
+>         "citations": [
+>             {
+>                 "set_id": paxlovid_set_id,
+>                 "passage_id": "PASSAGE_0000",
+>                 "section": "WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID",
+>                 "supporting_quote": "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medicati
+ons, resulting in potentially severe, life-threatening, or fatal events"
+>             },
+>             {
+>                 "set_id": paxlovid_set_id,
+>                 "passage_id": "PASSAGE_0013",
+>                 "section": "5.1 Risk of Serious Adverse Reactions Due to Drug Interactions",
+>                 "supporting_quote": "Loss of therapeutic effect of PAXLOVID and possible development of viral resistance."
+>             },
+>             {
+>                 "set_id": paxlovid_set_id,
+>                 "passage_id": "PASSAGE_0014",
+>                 "section": "5.2 Hypersensitivity Reactions",
+>                 "supporting_quote": "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypers
+ensitivity reactions have been reported with PAXLOVID ."
+>             },
+>             {
+>                 "set_id": paxlovid_set_id,
+>                 "passage_id": "PASSAGE_0015",
+>                 "section": "5.3 Hepatotoxicity",
+>                 "supporting_quote": "Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir."
+>             },
+>             {
+>                 "set_id": paxlovid_set_id,
+>                 "passage_id": "PASSAGE_0016",
+>                 "section": "5.4 Risk of HIV-1 Resistance Development",
+>                 "supporting_quote": "Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV proteas
+e inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection ."
+>             }
+>         ],
+>         "structured_fields": {}
+>     }
+> ]
+>
+> # Validate supporting quotes
+> print("Validating quotes...")
+> for ans in answers_data:
+>     print(f"Checking QID: {ans['qid']}")
+>     for cit in ans['citations']:
+>         passage_text = get_passage(cit['set_id'], cit['passage_id'])
+>         quote = cit['supporting_quote']
+>         # Normalize whitespace for matching
+>         norm_passage = " ".join(passage_text.split())
+>         norm_quote = " ".join(quote.split())
+>         if norm_quote not in norm_passage:
+>             print(f"ERROR: Quote not found in {cit['passage_id']}!")
+>             print(f"Expected: {norm_quote}")
+>             print(f"Passage: {norm_passage[:300]}...")
+>             exit(1)
+>         else:
+>             print(f"  {cit['passage_id']} quote verified!")
+>
+> # Save to /workspace/answers.json
+> out = {"answers": answers_data}
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(out, f, indent=2)
+> print("Answers written to /workspace/answers.json successfully!")
+> EOF
+root@7ddc515b1a59:/workspace#

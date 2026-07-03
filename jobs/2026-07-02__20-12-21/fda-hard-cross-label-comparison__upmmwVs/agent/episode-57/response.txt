@@ -1,0 +1,22 @@
+{
+  "analysis": "Excellent! For Acyclovir suspension (`3efa1e5e-5a14-4724-a2ca-25702f10faed`), we have:
+- `PASSAGE_0033`: \"800 mg every 4 hours orally, 5 times daily for 7 to 10 days.\"
+- `PASSAGE_0034`: \"200 mg every 4 hours, 5 times daily for 10 days.\"
+- `PASSAGE_0035`: \"400 mg 2 times daily...\"
+- `PASSAGE_0036`: \"200 mg every 4 hours, 5 times daily for 5 days...\"
+- `PASSAGE_0037`: \"Children (2 years of age and older) 20 mg/kg per dose orally 4 times daily...\"
+- `PASSAGE_0038`: \"Adults and Children over 40 kg 800 mg 4 times daily for 5 days.\"
+
+Let's print `PASSAGE_0008` of Acyclovir (`dcc29902-1fe6-4713-947e-335503959464`) and `PASSAGE_0033` of Acyclovir suspension (`3efa1e5e-5a14-4724-a2ca-25702f10faed`) to verify their exact text.",
+  "plan": "I will run a python command to print the full text of these two passages.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print('=== PASSAGE', i, '===', c) for d in (json.loads(l) for l in f) if d['set_id']=='dcc29902-1fe6-4713-947e-335503959464' for i, c in enumerate(d['chunks']) if i == 8]\"\n",
+      "duration": 1.0
+    },
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print('=== PASSAGE', i, '===', c) for d in (json.loads(l) for l in f) if d['set_id']=='3efa1e5e-5a14-4724-a2ca-25702f10faed' for i, c in enumerate(d['chunks']) if i == 33]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

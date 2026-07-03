@@ -1,0 +1,11 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]
+> for label in labels:
+>     raw = label['label_raw']
+>     parts = re.split(r'\|\|(PASSAGE_\d+)\|\|', raw)
+>     print(label['drug_name'], len(parts))
+> f.close()"
+Paxlovid 419
+Lopinavir-Ritonavir 377
+root@a1980178bfd8:/workspace#

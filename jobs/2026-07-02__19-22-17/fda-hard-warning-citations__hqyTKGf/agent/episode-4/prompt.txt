@@ -1,0 +1,10 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); line=f.readline(); obj=json.loads(line); print(obj.keys())
+; print(type(obj['chunks']), len(obj['chunks'])); print(obj['chunks'][0].keys() if len(obj['chunks']) > 0 else 'None')"
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+<class 'list'> 209
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'keys'
+root@b9fc21343844:/workspace#

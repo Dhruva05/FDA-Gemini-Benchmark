@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lenalidomide':
+>             print(data['chunks'][83])
+>             break
+> "
+12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lenalidomide on the QTc interval was evaluated in 60 healthy male subjects in a thorough QT study. At a dose two times the maximum recommended dos
+e, lenalidomide did not prolong the QTc interval. The largest upper bound of the two-sided 90% CI for the mean differences between lenalidomide and placebo was
+below 10 ms.
+root@3d44031eb234:/workspace#

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 143 (char 144) | Content preview: '{\n  "analysis": "All questions have the same `required_output_fields` which are `[\'qid\', \'status\', \''...
+
+Please fix these issues and provide a proper JSON response.

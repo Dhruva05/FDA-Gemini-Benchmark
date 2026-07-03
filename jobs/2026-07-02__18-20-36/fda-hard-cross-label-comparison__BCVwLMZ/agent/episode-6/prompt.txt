@@ -1,0 +1,24 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > inspect_raw.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         l = json.loads(line)
+>         print(f"set_id: {l['set_id']}")
+>         print("Type of label_raw:", type(l['label_raw']))
+>         if isinstance(l['label_raw'], dict):
+>             print("Keys of label_raw:", l['label_raw'].keys())
+>         elif isinstance(l['label_raw'], str):
+>             print("label_raw prefix:", repr(l['label_raw'][:500]))
+>         break
+> EOF
+root@faa94ec9460f:/workspace# python3 inspect_raw.py
+set_id: ea5d0e55-2191-4094-b082-24b317f95752
+Type of label_raw: <class 'str'>
+label_raw prefix: '||PASSAGE_0000||\nUses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\
+n- itchy, watery eyes\n- itching of the nose or throat\n\n||PASSAGE_0001||\nDo not use\xa0if you have ever had an allergic reaction to this product or any of it
+s ingredients.\n\n||PASSAGE_0002||\nAsk a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.\n\n||PASS
+AGE_0003||\n- do not take more than directed\n- do not take a'
+root@faa94ec9460f:/workspace#

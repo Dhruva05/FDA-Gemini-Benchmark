@@ -1,0 +1,112 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj['drug_name'] == 'Lopinavir-Ritonavir':
+>             for i in range(13, 26):
+>                 print(f'=== PASSAGE_{i:04d} ===')
+>                 print(obj['chunks'][i])
+> "
+=== PASSAGE_0013 ===
+4 CONTRAINDICATIONS
+- Lopinavir and ritonavir is contraindicated in patients with previously demonstrated clinically significant hypersensitivity (e.g., toxic epidermal necrolysis,
+ Stevens-Johnson syndrome, erythema multiforme, urticaria, angioedema) to any of its ingredients, including ritonavir.
+Lopinavir and ritonavir is contraindicated in patients with previously demonstrated clinically significant hypersensitivity (e.g., toxic epidermal necrolysis, S
+tevens-Johnson syndrome, erythema multiforme, urticaria, angioedema) to any of its ingredients, including ritonavir.
+- Lopinavir and ritonavir is contraindicated with drugs that are highly dependent on CYP3A for clearance and for which elevated plasma concentrations are associ
+ated with serious and/or life-threatening reactions
+Lopinavir and ritonavir is contraindicated with drugs that are highly dependent on CYP3A for clearance and for which elevated plasma concentrations are associat
+ed with serious and/or life-threatening reactions .
+- Alpha 1- Adrenoreceptor Antagonist: alfuzosin
+- Antianginal: ranolazine
+- Antiarrhythmic: dronedarone
+- Anti-gout: colchicine
+- Antipsychotics: lurasidone, pimozide
+- Ergot Derivatives: dihydroergotamine, ergotamine, methylergonovine
+- GI Motility Agent: cisapride
+- Hepatitis C direct acting antiviral: elbasvir/grazoprevir
+- HMG-CoA Reductase Inhibitors: lovastatin, simvastatin
+- Microsomal triglyceride transfer protein (MTTP) Inhibitor: lomitapide
+- PDE5 Inhibitor: sildenafil (Revatio®) when used for the treatment of pulmonary arterial hypertension
+- Sedative/Hypnotics: triazolam, orally administered midazolam
+- Lopinavir and ritonavir is contraindicated with drugs that are potent CYP3A inducers where significantly reduced lopinavir plasma concentrations may be associ
+ated with the potential for loss of virologic response and possible resistance and cross-resistance
+- Anticancer Agents: apalutamide
+- Antimycobacterial: rifampin
+- Herbal Products: St. John's Wort (hypericum perforatum)
+=== PASSAGE_0014 ===
+5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP
+3A in patients already receiving lopinavir and ritonavir, may increase plasma concentrations of medications metabolized by CYP3A.  Initiation of medications tha
+t inhibit or induce CYP3A may increase or decrease concentrations of lopinavir and ritonavir, respectively. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Clinically significant adverse reactions from greater exposures of lopinavir and ritonavir.
+- Loss of therapeutic effect of lopinavir and ritonavir and possible development of resistance.
+See Table 12 for steps to prevent or manage these possible and known significant drug interactions, including dosing recommendations . Consider the potential fo
+r drug interactions prior to and during lopinavir and ritonavir therapy; review concomitant medications during lopinavir and ritonavir therapy, and monitor for
+the adverse reactions associated with the concomitant medications .
+=== PASSAGE_0015 ===
+5.2 Toxicity in Preterm Neonates
+Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, approximately 15% (w/v). When administered
+concomitantly with propylene glycol, ethanol competitively inhibits the metabolism of propylene glycol, which may lead to elevated concentrations. Preterm neona
+tes may be at increased risk of propylene glycol-associated adverse events due to diminished ability to metabolize propylene glycol, thereby leading to accumula
+tion and potential adverse events. Postmarketing life-threatening cases of cardiac toxicity (including complete AV block, bradycardia, and cardiomyopathy), lact
+ic acidosis, acute renal failure, CNS depression and respiratory complications leading to death have been reported, predominantly in preterm neonates receiving
+lopinavir and ritonavir oral solution.
+Lopinavir and ritonavir oral solution should not be used in preterm neonates in the immediate postnatal period because of possible toxicities. A safe and effect
+ive dose of lopinavir and ritonavir oral solution in this patient population has not been established. However, if the benefit of using lopinavir and ritonavir
+oral solution to treat HIV infection in infants immediately after birth outw
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+ be considered in the patients with underlying chronic hepatitis or cirrhosis, especially during the first several mon
+ths of lopinavir and ritonavir treatment .
+=== PASSAGE_0018 ===
+5.5 QT Interval Prolongation
+Postmarketing cases of QT interval prolongation and torsade de pointes have been reported although causality of lopinavir and ritonavir could not be established
+. Avoid use in patients with congenital long QT syndrome, those with hypokalemia, and with other drugs that prolong the QT interval .
+=== PASSAGE_0019 ===
+5.6 PR Interval Prolongation
+Lopinavir and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atrioventricular block have been reported. Lopinavir and rito
+navir should be used with caution in patients with underlying structural heart disease, pre-existing conduction system abnormalities, ischemic heart disease or
+cardiomyopathies, as these patients may be at increased risk for developing cardiac conduction abnormalities.
+The impact on the PR interval of co-administration of lopinavir and ritonavir with other drugs that prolong the PR interval (including calcium channel blockers,
+ beta-adrenergic blockers, digoxin and atazanavir) has not been evaluated. As a result, co-administration of lopinavir and ritonavir with these drugs should be
+undertaken with caution, particularly with those drugs metabolized by CYP3A. Clinical monitoring is recommended .
+=== PASSAGE_0020 ===
+5.7 Diabetes Mellitus/Hyperglycemia
+New onset diabetes mellitus, exacerbation of pre-existing diabetes mellitus, and hyperglycemia have been reported during post-marketing surveillance in HIV-1 in
+fected patients receiving protease inhibitor therapy. Some patients required either initiation or dose adjustments of insulin or oral hypoglycemic agents for tr
+eatment of these events. In some cases, diabetic ketoacidosis has occurred. In those patients who discontinued protease inhibitor therapy, hyperglycemia persist
+ed in some cases. Because these events have been reported voluntarily during clinical practice, estimates of frequency cannot be made and a causal relationship
+between protease inhibitor therapy and these events has not been established. Consider monitoring for hyperglycemia, new onset diabetes mellitus or an exacerbat
+ion of diabetes mellitus in patients treated with lopinavir and ritonavir.
+=== PASSAGE_0021 ===
+5.8 Immune Reconstitution Syndrome
+Immune reconstitution syndrome has been reported in patients treated with combination antiretroviral therapy, including lopinavir and ritonavir. During the init
+ial phase of combination antiretroviral treatment, patients whose immune system responds may develop an inflammatory response to indolent or residual opportunis
+tic infections (such as Mycobacterium avium infection, cytomegalovirus, Pneumocystis jirovecii pneumonia PCP], or tuberculosis) which may necessitate further ev
+aluation and treatment.
+Autoimmune disorders (such as Graves’ disease, polymyositis, and Guillain-Barré syndrome) have also been reported to occur in the setting of immune reconstituti
+on, however, the time to onset is more variable, and can occur many months after initiation of treatment.
+=== PASSAGE_0022 ===
+5.9 Lipid Elevations
+Treatment with lopinavir and ritonavir has resulted in large increases in the concentration of total cholesterol and triglycerides . Triglyceride and cholestero
+l testing should be performed prior to initiating lopinavir and ritonavir therapy and at periodic intervals during therapy. Lipid disorders should be managed as
+ clinically appropriate, taking into account any potential drug-drug interactions with lopinavir and ritonavir and HMG-CoA reductase inhibitors .
+=== PASSAGE_0023 ===
+5.10 Fat Redistribution
+Redistribution/accumulation of body fat including central obesity, dorsocervical fat enlargement (buffalo hump), peripheral wasting, facial wasting, breast enla
+rgement, and "cushingoid appearance" have been observed in patients receiving antiretroviral therapy. The mechanism and long-term consequences of these events a
+re currently unknown. A causal relationship has not been established.
+=== PASSAGE_0024 ===
+5.11 Patients with Hemophilia
+Increased bleeding, including spontaneous skin hematomas and hemarthrosis have been reported in patients with hemophilia type A and B treated with protease inhi
+bitors. In some patients additional factor VIII was given. In more than half of the reported cases, treatment with protease inhibitors was continued or reintrod
+uced. A causal relationship between protease inhibitor therapy and these events has not been established.
+=== PASSAGE_0025 ===
+5.12 Resistance/Cross-resistance
+Because the potential for HIV cross-resistance among protease inhibitors has not been fully explored in lopinavir and ritonavir-treated patients, it is unknown
+what effect therapy with lopinavir and ritonavir will have on the activity of subsequently administered protease inhibitors .
+root@b9fc21343844:/workspace#

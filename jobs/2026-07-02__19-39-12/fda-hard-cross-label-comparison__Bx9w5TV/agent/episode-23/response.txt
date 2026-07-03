@@ -1,0 +1,11 @@
+{
+  "analysis": "Wait, let's write a python script to search for the specific words \"dosing\", \"directions\", \"administration\" or look at all chunks for each label to see if they are actually present or not.
+For example, let's print all matches of chunks that contain the section name \"directions\" or \"dosage and administration\" for all labels.",
+  "plan": "Let's run a script that searches for \"DOSAGE AND ADMINISTRATION\" or \"Directions\" (for OTC drugs) in each label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        print(\"=\"*60)\n        print(\"Drug:\", data[\"drug_name\"])\n        print(\"Set ID:\", data[\"set_id\"])\n        for idx, chunk in enumerate(data[\"chunks\"]):\n            if \"dosage and administration\" in chunk.lower() or \"directions\" in chunk.lower():\n                print(f\"  PASSAGE_{idx:04d}: {repr(chunk)[:150]}\")\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

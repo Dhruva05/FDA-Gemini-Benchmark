@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "answers": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "answer": {
+            "type": "string"
+          },
+          "cited_label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cited_section": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_quote": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "question_id": {
+            "type": "string"
+          },
+          "refusal": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "question_id",
+          "answer",
+          "cited_label",
+          "cited_section",
+          "evidence_quote",
+          "refusal"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "answers"
+  ],
+  "type": "object"
+}

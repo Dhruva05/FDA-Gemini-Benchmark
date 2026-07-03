@@ -1,0 +1,50 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["set_id"] == "8e396b27-b44a-4aa9-805b-086395444b5f":
+>             for i, c in enumerate(data["chunks"][10:]):
+>                 print(f"PASSAGE_{i+10:04d}: {repr(c)}")
+> '
+PASSAGE_0010: 'Long-term studies in animals to evaluate the carcinogenic potential of acetazolamide have not been conducted. In a bacterial mutagenicity assay,
+acetazolamide was not mutagenic when evaluated with and without metabolic activation.\nThe drug had no effect on fertility when administered in the diet to male
+ and female rats at a daily intake of up to 4 times the recommended human dose of 1000 mg in a 50 kg individual.'
+PASSAGE_0011: 'Teratogenic effects:\nAcetazolamide, administered orally or parenterally, has been shown to be teratogenic (defects of the limbs) in mice, rats,
+hamsters, and rabbits. There are no adequate and well-controlled studies in pregnant women. Acetazolamide should be used in pregnancy only if the potential bene
+fit justifies the potential risk to the fetus.'
+PASSAGE_0012: 'Because of the potential for serious adverse reactions in nursing infants from acetazolamide, a decision should be made whether to discontinue nu
+rsing or to discontinue the drug taking into account the importance of the drug to the mother. Acetazolamide should only be used by nursing women if the potenti
+al benefit justifies the potential risk to the child.'
+PASSAGE_0013: 'The safety and effectiveness of acetazolamide extended-release capsules in pediatric patients below the age of 12 years have not been established
+. Growth retardation has been reported in children receiving long-term therapy, believed secondary to chronic acidosis.'
+PASSAGE_0014: 'Metabolic acidosis, which can be severe, may occur in the elderly with reduced renal function.\nIn general, dose selection for an elderly patient
+ should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of decreased hepatic, renal, or cardiac function, and
+ concomitant disease or other drug therapy.'
+PASSAGE_0015: 'Body as a whole:\nHeadache, malaise, fatigue, fever, pain at injection site, flushing, growth retardation in children, flaccid paralysis, anaphyl
+axis.\nDigestive:\nGastrointestinal disturbances such as nausea, vomiting, diarrhea.\nHematological/Lymphatic:\nBlood dyscrasias such as aplastic anemia, agranu
+locytosis, leukopenia, thrombocytopenic purpura, melena.\nHepato-biliary disorders:\nAbnormal liver function, cholestatic jaundice, hepatic insufficiency, fulmi
+nant hepatic necrosis.\nMetabolic/Nutritional:\nMetabolic acidosis, electrolyte imbalance, including hypokalemia, hyponatremia, osteomalacia with long-term phen
+ytoin therapy, loss of appetite, taste alteration, hyper/hypoglycemia.\nNervous:\nDrowsiness, paresthesia (including numbness and tingling of extremities and fa
+ce), depression, excitement, ataxia, confusion, convulsions, dizziness.\nSkin:\nAllergic skin reactions including urticaria, photosensitivity, Stevens-Johnson s
+yndrome, toxic epidermal necrolysis.\nSpecial senses:\nHearing disturbances, tinnitus, transient myopia.\nUrogenital:\nCrystalluria, increased risk of nephrolit
+hiasis with long-term therapy, hematuria, glycosuria, renal failure, polyuria.'
+PASSAGE_0016: 'No specific antidote is known. Treatment should be symptomatic and supportive. Electrolyte imbalance, development of an acidotic state, and centr
+al nervous system effects might be expected to occur. Serum electrolyte levels (particularly potassium) and blood pH levels should be monitored. Supportive meas
+ures are required to restore electrolyte and pH balance. The acidotic state can usually be corrected by the administration of bicarbonate.\nDespite its high int
+raerythrocytic distribution and plasma protein binding properties, acetazolamide may be dialyzable. This may be particularly important in the management of acet
+azolamide overdosage when complicated by the presence of renal failure.'
+PASSAGE_0017: 'Glaucoma\nThe recommended dosage is 1 capsule (500 mg) two times a day. Usually 1 capsule is administered in the morning and 1 capsule in the eve
+ning. It may be necessary to adjust the dose, but it has usually been found that dosage in excess of 2 capsules (1 g) does not produce an increased effect. The
+dosage should be adjusted with careful individual attention both to symptomatology and intraocular tension. In all cases, continuous supervision by a physician
+is advisable.\nIn those unusual instances where adequate control is not obtained by the twice-a-day administration of acetazolamide extended-release capsules, t
+he desired control may be established by means of acetazolamide (tablets or parenteral). Use tablets or parenteral in accordance with the more frequent dosage s
+chedules recommended for these dosage forms, such as 250 mg every four hours, or an initial dose of 500 mg followed by 250 mg or 125 mg every four hours, depend
+ing on the case in question.'
+PASSAGE_0018: 'Acute Mountain Sickness\nDosage is 500 mg to 1000 mg daily, in divided doses using tablets or extended-release capsules as appropriate. In circum
+stances of rapid ascent, such as in rescue or military operations, the higher dose level of 1000 mg is recommended. It is preferable to initiate dosing 24 to 48
+ hours before ascent and to continue for 48 hours while at high altitude, or longer as necessary to control symptoms.'
+PASSAGE_0019: 'Product: 50090-5608\nNDC: 50090-5608-0 30 CAPSULE in a BOTTLE'
+root@2809f9ae2d53:/workspace#

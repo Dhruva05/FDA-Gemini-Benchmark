@@ -1,0 +1,4 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# # Let's do this programmatically or check the facts first
+root@faa94ec9460f:/workspace#

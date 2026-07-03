@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 35 (char 36) | Content preview: '{\n  "analysis": "This is very clear.\nLet\'s see what the fourth drug is:\n- Lenalidomide (`ed7a3099-ce'...
+
+Please fix these issues and provide a proper JSON response.

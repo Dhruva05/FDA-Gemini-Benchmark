@@ -1,0 +1,14 @@
+{
+  "analysis": "The previous attempt had an invalid control character. I will make sure the keystrokes are properly escaped and written.",
+  "plan": "I will write `inspect_label_raw.py` and run it.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > inspect_label_raw.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        raw = data.get('label_raw', '')\n        pos = 0\n        for _ in range(5):\n            pos = raw.find('PASSAGE_', pos)\n            if pos == -1:\n                break\n            print(f\"Occurrence: {raw[pos-50:pos+150]}\")\n            print('='*40)\n            pos += 8\nEOF\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 inspect_label_raw.py\n",
+      "duration": 1.0
+    }
+  ]
+}

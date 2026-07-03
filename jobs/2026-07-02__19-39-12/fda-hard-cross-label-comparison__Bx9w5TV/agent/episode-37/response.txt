@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no raw newlines or control characters are in any string in my JSON response.",
+  "plan": "Let us run a python script to search for maximum dosage information in Actoplus Met.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"set_id\"] == \"42e49120-6f3f-11db-9fe1-0800200c9a66\":\n            for i, c in enumerate(data[\"chunks\"]):\n                if \"maximum recommended dosage\" in c.lower() or \"maximum dosage\" in c.lower() or \"maximum dose\" in c.lower():\n                    print(f\"PASSAGE_{i:04d}: {repr(c)}\")\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]
+> for label in labels:
+>     raw = label['label_raw']
+>     parts = re.split(r'\|\|(PASSAGE_\d+)\|\|', raw)
+>     passages_from_raw = [parts[i].strip() for i in range(2, len(parts), 2)]
+>     chunks = [c.strip() for c in label['chunks']]
+>     print(label['drug_name'], len(passages_from_raw), len(chunks), passages_from_raw == chunks)
+> f.close()"
+Paxlovid 209 209 True
+Lopinavir-Ritonavir 188 188 True
+root@a1980178bfd8:/workspace#

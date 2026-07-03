@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > inspect_keys.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print("Label keys:", label.keys())
+>         # Let's print the length of label_raw or other fields
+>         if 'label_raw' in label:
+>             print("label_raw length:", len(label['label_raw']))
+>         break
+> EOF
+root@c7da805c5eb1:/workspace# python3 inspect_keys.py
+Label keys: dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+label_raw length: 1705
+root@c7da805c5eb1:/workspace#

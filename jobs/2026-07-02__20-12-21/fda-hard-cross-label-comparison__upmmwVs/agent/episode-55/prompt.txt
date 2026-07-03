@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); [print(i, c[:100].replace('\n', ' ')) for d in (json.loads
+(l) for l in f) if d['set_id']=='dcc29902-1fe6-4713-947e-335503959464' for i, c in enumerate(d['chunks'])]"
+0 DESCRIPTION Acyclovir is a synthetic nucleoside analogue active against herpesviruses. Each teaspoon
+1 The pharmacokinetics of acyclovir after oral administration have been evaluated in healthy volunteer
+2 Acyclovir oral suspension, USP is indicated for the acute treatment of herpes zoster (shingles). Acy
+3 Acyclovir is contraindicated for patients who develop hypersensitivity to acyclovir or valacyclovir.
+4 Acyclovir is intended for oral ingestion only. Renal failure, in some cases resulting in death, has
+5 Dosage adjustment is recommended when administering acyclovir to patients with renal impairment . Ca
+6 The most frequent adverse events reported during clinical trials of treatment of genital herpes with
+7 Overdoses involving ingestion of up to 20 g have been reported. Adverse events that have been report
+8 800 mg every 4 hours orally, 5 times daily for 7 to 10 days. 200 mg every 4 hours, 5 times daily for
+9 every 12 hours For patients who require hemodialysis, the mean plasma half-life of acyclovir during
+10 Acyclovir oral suspension, USP (off-white, artificial banana-flavored) containing 200 mg acyclovir i
+11 MG #19296 Relabeling of "Additional Barcode" by:Physicians Total Care, Inc.Tulsa, OK     74146
+root@7e48d58e23f3:/workspace#

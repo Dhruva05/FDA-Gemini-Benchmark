@@ -1,0 +1,13 @@
+{
+  "analysis": "Excellent. We have the dosage details for Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate (set_id `d9a4185e-43fa-4aeb-9b0f-8db01b166038`):\n"
+              "- Passage 3 (`PASSAGE_0003`): \"The recommended dosage of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets in adult and pediatric patients weighing at least 35 kg is one tablet taken orally once daily with food.\"\n"
+              "- This tablet contains 200 mg of emtricitabine (FTC), 25 mg of rilpivirine (RPV), and 300 mg of tenofovir disoproxil fumarate (TDF).\n\n"
+              "Let's look at CELECOXIB (set_id `27f17ae7-939b-402e-9498-3b6611104089`). Let's search for and print its dosage/administration sections.",
+  "plan": "Write a script to search and print the dosage/administration sections for CELECOXIB.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_celecoxib_passages.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == '27f17ae7-939b-402e-9498-3b6611104089'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if any(kw in chunk for kw in ['2 DOSAGE AND ADMINISTRATION', '2.1', '2.2', '2.3', '2.4', '2.5', '2.6']):\n        print(f\"PASSAGE_{i:04d}:\")\n        print(chunk)\n        print(\"-\"*50)\nEOF\npython3 print_celecoxib_passages.py\n",
+      "duration": 1.0
+    }
+  ]
+}

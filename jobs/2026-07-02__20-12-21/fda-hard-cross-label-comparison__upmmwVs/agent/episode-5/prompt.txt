@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > test_passage_id.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl', 'r') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print(f"drug: {data['drug_name']}")
+>         # Let's see if there are other keys inside label_raw or if chunks are represented differently
+>         print(f"label_raw type: {type(data.get('label_raw'))}")
+>         if isinstance(data.get('label_raw'), dict):
+>             print(f"label_raw keys: {list(data['label_raw'].keys())}")
+>         elif isinstance(data.get('label_raw'), str):
+>             print(f"label_raw length: {len(data['label_raw'])}")
+>         break
+> EOF
+root@7e48d58e23f3:/workspace# python3 test_passage_id.py
+drug: 12HR Allergy Relief
+label_raw type: <class 'str'>
+label_raw length: 1705
+root@7e48d58e23f3:/workspace#

@@ -1,0 +1,16 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > search_chunks.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         drug_name = data['drug_name']
+>         print(f"Drug: {drug_name}, chunks: {len(data['chunks'])}")
+> EOF
+root@af996c5fe492:/workspace# python3 search_chunks.py
+Drug: Lopinavir-Ritonavir, chunks: 188
+Drug: Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate, chunks: 167
+Drug: CELECOXIB, chunks: 153
+Drug: Lenalidomide, chunks: 143
+root@af996c5fe492:/workspace#

@@ -1,0 +1,5 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); l=json.loads(f.readline()); print(l.keys())"
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+root@371ed25b9fd3:/workspace#

@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@7ddc515b1a59:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         for k, v in data.items():
+>             if isinstance(v, str) and 'PASSAGE_' in v:
+>                 print('Found in key', k, 'value snippet:', v[:200])
+>             elif isinstance(v, list):
+>                 for i, item in enumerate(v):
+>                     if isinstance(item, str) and 'PASSAGE_' in item:
+>                         print(f'Found in list {k}[{i}] snippet:', item[:200])
+>                     elif isinstance(item, dict):
+>                         print('Found list of dicts in', k)
+>         break
+> "
+Found in key label_raw value snippet: ||PASSAGE_0000||
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, re
+root@7ddc515b1a59:/workspace#

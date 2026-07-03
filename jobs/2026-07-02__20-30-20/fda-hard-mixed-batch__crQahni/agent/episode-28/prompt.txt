@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# cat << 'EOF' > /workspace/generate_answers.py
+> import json
+>
+> labels = {}
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         labels[data['drug_name']] = data
+>
+> questions = []
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     for line in f:
+>         questions.append(json.loads(line))
+>
+> print("Loaded", len(labels), "labels and", len(questions), "questions.")
+> EOF
+root@4b1b7b4fd079:/workspace# python3 /workspace/generate_answers.py
+Loaded 4 labels and 10 questions.
+root@4b1b7b4fd079:/workspace#

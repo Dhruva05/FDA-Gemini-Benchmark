@@ -1,0 +1,125 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# sed -n '1,179p' /workspace/all_dosage_sections.txt
+====================================================================================================
+Lopinavir-Ritonavir (4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85)
+====================================================================================================
+PASSAGE_0001:
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+--------------------------------------------------------------------------------
+PASSAGE_0002:
+2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be us
+ed for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+--------------------------------------------------------------------------------
+PASSAGE_0003:
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V
+, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V,
+V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+--------------------------------------------------------------------------------
+PASSAGE_0004:
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+--------------------------------------------------------------------------------
+PASSAGE_0005:
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage rec
+ommendations for twice daily dosing when lopinavir and ritonavir is taken in combination with these agents.
+--------------------------------------------------------------------------------
+PASSAGE_0006:
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+--------------------------------------------------------------------------------
+PASSAGE_0007:
+2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral solution
+ should be administered using the calibrated cup (supplied) or oral dosing syringe.
+Lopinavir and ritonavir oral solution is not recommended in neonates before a postmenstrual age (first day of the mother’s last menstrual period to birth plus t
+he time elapsed after birth) of 42 weeks and a postnatal age of at least 14 days has been attained .
+Lopinavir and ritonavir oral solution contains approximately 42% (v/v) ethanol and approximately 15% (w/v) propylene glycol. Total amounts of ethanol and propyl
+ene glycol from all medicines that are to be given to pediatric patients 14 days to 6 months of age should be taken into account in order to avoid toxicity from
+ these excipients .
+--------------------------------------------------------------------------------
+PASSAGE_0008:
+Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing or exceeding the recommended adult dose.
+Body surface area (BSA) can be calculated as follows:
+The lopinavir and ritonavir dose can be calculated based on weight or BSA:
+Based on Weight:
+Patient Weight (kg) × Prescribed lopinavir dose (mg/kg) = Administered lopinavir dose (mg)
+Based on BSA:
+Patient BSA (m2) × Prescribed lopinavir dose (mg/m2) = Administered lopinavir dose (mg)
+If lopinavir and ritonavir oral solution is used, the volume (mL) of lopinavir and ritonavir solution can be determined as follows:
+Volume of lopinavir and riton
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+ith lopinavir and ritonavir is limited. Treatment of overdose with lopinavir and ritonavir should consist of general suppo
+rtive measures including monitoring of vital signs and observation of the clinical status of the patient. There is no specific antidote for overdose with lopina
+vir and ritonavir. If indicated, elimination of unabsorbed drug should be achieved by gastric lavage. Administration of activated charcoal may also be used to a
+id in removal of unabsorbed drug. Since lopinavir is highly protein bound, dialysis is unlikely to be beneficial in significant removal of the drug. However, di
+alysis can remove both ethanol and propylene glycol in the case of overdose with lopinavir and ritonavir oral solution.
+--------------------------------------------------------------------------------
+PASSAGE_0140:
+13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis
+Lopinavir and ritonavir combination was evaluated for carcinogenic potential by oral gavage administration to mice and rats for up to 104 weeks. Results showed
+an increase in the incidence of benign hepatocellular adenomas and an increase in the combined incidence of hepatocellular adenomas plus carcinoma in both males
+ and females in mice and males in rats at doses that produced approximately 1.6-2.2 times (mice) and 0.5 times (rats) the human exposure (based on AUC0-24hr mea
+surement) at the recommended dose of 400/100 mg lopinavir and ritonavir twice daily. Administration of lopinavir and ritonavir did not cause a statistically sig
+nificant increase in the incidence of any other benign or malignant neoplasm in mice or rats.
+Carcinogenicity studies in mice and rats have been carried out on ritonavir. In male mice, there was a dose dependent increase in the incidence of both adenomas
+ and combined adenomas and carcinomas in the liver. Based on AUC measurements, the exposure at the high dose was approximately 4-fold for males that of the expo
+sure in humans with the recommended therapeutic dose (400/100 mg lopinavir and ritonavir twice daily). There were no carcinogenic effects seen in females at the
+ dosages tested. The exposure at the high dose was approximately 9-fold for the females that of the exposure in humans. There were no carcinogenic effects in ra
+ts. In this study, the exposure at the high dose was approximately 0.7-fold that of the exposure in humans with the 400/100 mg lopinavir and ritonavir twice dai
+ly regimen. Based on the exposures achieved in the animal studies, the significance of the observed effects is not known.
+--------------------------------------------------------------------------------
+PASSAGE_0152:
+24%
+No virologic data in Week 48 window
+Discontinued study due to adverse event or death2
+--------------------------------------------------------------------------------
+PASSAGE_0159:
+17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to accurate administration of their dose to minimize the risk of accidental overdose or underdose of lopinavir and ri
+tonavir.
+- Advise patients and caregivers that the oral solution should be administered using the calibrated dosing cup (supplied) or oral dosing syringe.
+- Advise caregivers to inform their healthcare provider if the child’s weight changes in order to make sure that the child’s lopinavir and ritonavir dose is adj
+usted as needed.
+- Inform patients and caregivers that lopinavir and ritonavir oral solution should be taken with food to enhance absorption.
+- Advise patients to remain under the care of a healthcare provider while using lopinavir and ritonavir and to take lopinavir and ritonavir in combination with
+other antiretroviral drugs as prescribed.
+- Advise patients not to alter the dose or discontinue therapy without consulting with their healthcare provider. If a dose of lopinavir and ritonavir is missed
+ patients should take the dose as soon as possible and then return to their normal schedule. However, if a dose is skipped the patient should not double the nex
+t dose.
+- Inform patients that it is important to take lopinavir and ritonavir on a regular dosing schedule as directed and to avoid missing doses as that can result in
+ development of resistance.
+- Inform patients that there may be a greater chance of developing diarrhea with the once daily regimen as compared with the twice daily regimen.
+- Inform patients that lopinavir and ritonavir is not a cure for HIV-1 infection and that they may continue to experience illnesses associated with HIV-1 infect
+ion, including opportunistic infections.
+--------------------------------------------------------------------------------
+PASSAGE_0183:
+Philadelphia, PA 19136
+This Medication Guide has been approved by the U.S. Food and Drug Administration.
+--------------------------------------------------------------------------------
+root@3d44031eb234:/workspace#

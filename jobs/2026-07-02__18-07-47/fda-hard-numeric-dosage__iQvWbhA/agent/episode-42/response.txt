@@ -1,0 +1,10 @@
+{
+  "analysis": "Aha! Chunk 79 is indeed `10 OVERDOSAGE`. Let's print chunk 79 in full to see what it says.",
+  "plan": "Print chunk 79 of Lenalidomide.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; l = json.loads(open('/workspace/data/public/labels.jsonl').readlines()[3]); print(l['chunks'][79])\"\n",
+      "duration": 0.5
+    }
+  ]
+}

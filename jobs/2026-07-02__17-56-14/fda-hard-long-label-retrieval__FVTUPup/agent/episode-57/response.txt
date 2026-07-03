@@ -1,0 +1,14 @@
+{
+  "analysis": "Let's print the full text of `PASSAGE_0017` and `PASSAGE_0018` to see what safety risks and adverse reactions are listed.",
+  "plan": "I will print the full text of PASSAGE_0017 and PASSAGE_0018 using print_passage.py.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0017\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0018\n",
+      "duration": 0.5
+    }
+  ]
+}

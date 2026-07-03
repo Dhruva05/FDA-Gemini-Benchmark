@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 190 (char 191) | Content preview: '{\n  "analysis": "Ah! The supporting quote for `PASSAGE_0007` in QID `000ecd1d6df50389` has a mismatc'...
+
+Please fix these issues and provide a proper JSON response.

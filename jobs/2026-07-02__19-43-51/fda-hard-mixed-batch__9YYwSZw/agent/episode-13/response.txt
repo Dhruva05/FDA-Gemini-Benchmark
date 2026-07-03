@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's search for \"hepatic\" specifically in the Acamprosate Calcium label.",
+  "plan": "I will search the Acamprosate Calcium label for the word \"hepatic\" (case-insensitive) to see if it is mentioned anywhere.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"drug_name\"] == \"Acamprosate Calcium\":\n            for idx, chunk in enumerate(data[\"chunks\"]):\n                if \"hepatic\" in chunk.lower():\n                    print(f\"PASSAGE_{idx:04d}: {chunk[:300]}\\n\")\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

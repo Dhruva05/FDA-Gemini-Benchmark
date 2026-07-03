@@ -1,0 +1,29 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > parse_all_questions.py
+> import json
+>
+> with open('/workspace/data/public/questions.jsonl', 'r') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> with open('/workspace/data/public/labels.jsonl', 'r') as f:
+>     labels = {data['set_id']: data for data in (json.loads(line) for line in f)}
+>
+> for i, q in enumerate(questions):
+>     print(f"\n{'='*80}\nQUESTION {i}: {q['qid']} - {q['drug_name']}\n{'='*80}")
+>     print(f"Question: {q['question']}")
+>     for set_id in q['comparison_set_ids']:
+>         label = labels[set_id]
+>         print(f"\n  --- DRUG: {label['drug_name']} ({set_id}) ---")
+>         # Print all chunks for this drug that could contain dosing/directions
+>         for idx, chunk in enumerate(label['chunks']):
+>             lower_chunk = chunk.lower()
+>             # Let's print any chunk that mentions dosing, dosage, directions, administration, or has numbers with mg/ml/tablets
+>             if any(k in lower_chunk for k in ['direction', 'dosage', 'administration', 'how to use', 'instru']) or ('take' in lower_chunk and any(u in lower_c
+hunk for u in ['mg', 'ml', 'tablet', 'capsule', 'spoon'])):
+>                 print(f"    PASSAGE_{idx:04d}:")
+>                 print(chunk)
+>                 print("-"*40)
+> EOF
+root@7e48d58e23f3:/workspace# python3 parse_all_questions.py > all_details.txt
+root@7e48d58e23f3:/workspace#

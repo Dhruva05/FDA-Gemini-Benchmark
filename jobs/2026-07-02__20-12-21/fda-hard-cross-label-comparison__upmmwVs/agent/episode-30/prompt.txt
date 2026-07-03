@@ -1,0 +1,33 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > extract_by_question.py
+> with open('all_details.txt', 'r') as f:
+>     content = f.read()
+>
+> # Let's split using the separator
+> import re
+> questions = re.split(r'={80}', content)
+>
+> # We expect questions to be paired: headers and contents.
+> # Let's clean up and write each question block to a separate file.
+> q_idx = 0
+> for block in questions:
+>     if 'QUESTION' in block:
+>         # Find the next block which contains the actual question and details
+>         with open(f"q{q_idx}_details.txt", "w") as out_f:
+>             out_f.write(block)
+>             # also append the next block if it's the details
+>             next_idx = questions.index(block) + 1
+>             if next_idx < len(questions):
+>                 out_f.write("\n" + "="*80 + "\n")
+>                 out_f.write(questions[next_idx])
+>         q_idx += 1
+> EOF
+root@7e48d58e23f3:/workspace# python3 extract_by_question.py
+root@7e48d58e23f3:/workspace# ls -la q*_details.txt
+-rw-r--r-- 1 root root   989 Jul  3 00:14 q0_details.txt
+-rw-r--r-- 1 root root 11969 Jul  3 00:14 q1_details.txt
+-rw-r--r-- 1 root root 31406 Jul  3 00:14 q2_details.txt
+-rw-r--r-- 1 root root 34231 Jul  3 00:14 q3_details.txt
+-rw-r--r-- 1 root root 28035 Jul  3 00:14 q4_details.txt
+root@7e48d58e23f3:/workspace#

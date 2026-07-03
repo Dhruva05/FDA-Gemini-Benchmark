@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah, the chunks might be strings or a list of dictionaries, or maybe `chunks` is a dictionary where the keys are passage IDs, or a list of strings? Let's check the type of `chunks` and its elements.",
+  "plan": "I will check the type of `chunks` and its elements.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        chunks = data.get('chunks', [])\n        print(data.get('drug_name'), type(chunks), len(chunks))\n        if len(chunks) > 0:\n            print('first element type:', type(chunks[0]))\n            print('first element:', chunks[0] if isinstance(chunks, list) else list(chunks.items())[0])\n        break\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

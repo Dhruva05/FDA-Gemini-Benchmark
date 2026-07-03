@@ -1,0 +1,24 @@
+{
+  "analysis": "The file `/workspace/answers.json` has been successfully generated.
+Let's write a python validation script to check if the generated JSON is fully valid and strictly adheres to all specified schemas and rules.
+Specifically, let's verify:
+1. The JSON is valid.
+2. The schema has exactly the specified structure (`answers` array of objects).
+3. Every qid is answered exactly once, with no extra qids.
+4. The status is either `ANSWERED` or `NOT_FOUND`.
+5. Every citation uses a valid `set_id` and a real `PASSAGE_####` passage ID from the same label.
+6. The `supporting_quote` is present and actually resides in the cited passage.
+7. `structured_fields` is present.
+Let's write this validator and run it to be absolutely sure.",
+  "plan": "I will write `validate_answers.py` to validate `/workspace/answers.json` against all constraints and run it.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > validate_answers.py\nimport json\nimport re\n\nwith open('/workspace/data/public/questions.jsonl') as f:\n    questions = [json.loads(line) for line in f]\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = {json.loads(line)['set_id']: json.loads(line) for line in f}\n\nwith open('/workspace/answers.json') as f:\n    answers_data = json.load(f)\n\n# Check top-level key\nassert 'answers' in answers_data, \"Missing 'answers' key\"\nanswers = answers_data['answers']\n\n# Check questions match\nqids_expected = {q['qid'] for q in questions}\nqids_actual = {a['qid'] for a in answers}\n\nassert qids_expected == qids_actual, f\"Mismatch in QIDs. Expected: {qids_expected}, Actual: {qids_actual}\"\nassert len(answers) == len(questions), \"Mismatch in length\"\n\n# Check each answer\nfor ans in answers:\n    qid = ans['qid']\n    status = ans.get('status')\n    assert status in ['ANSWERED', 'NOT_FOUND'], f\"Invalid status for {qid}: {status}\"\n    \n    # Check required fields\n    for field in ['qid', 'status', 'answer', 'citations', 'structured_fields']:\n        assert field in ans, f\"Missing field '{field}' in answer {qid}\"\n    \n    # Check citations\n    citations = ans['citations']\n    for cit in citations:\n        for field in ['set_id', 'passage_id', 'section', 'supporting_quote']:\n            assert field in cit, f\"Missing field '{field}' in citation for {qid}\"\n        \n        set_id = cit['set_id']\n        passage_id = cit['passage_id']\n        quote = cit['supporting_quote']\n        \n        assert set_id in labels, f\"Unknown set_id {set_id} in citation for {qid}\"\n        label = labels[set_id]\n        \n        # Parse passage index\n        m = re.match(r'^PASSAGE_(\\d{4})$', passage_id)\n        assert m, f\"Invalid passage_id format: {passage_id} in citation for {qid}\"\n        idx = int(m.group(1))\n        \n        assert idx < len(label['chunks']), f\"Passage ID {passage_id} out of bounds for label {set_id} in citation for {qid}\"\n        chunk = label['chunks'][idx]\n        \n        # Verify supporting quote is in chunk\n        # Strip spaces and punctuation for loose match if needed, but let's do a direct substring first\n        assert quote in chunk, f\"Quote '{quote}' not found in passage {passage_id} for {qid}\"\n\nprint(\"All validations PASSED successfully!\")\nEOF\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 validate_answers.py\n",
+      "duration": 1.0
+    }
+  ]
+}

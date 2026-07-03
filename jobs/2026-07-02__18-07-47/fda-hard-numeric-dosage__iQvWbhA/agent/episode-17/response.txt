@@ -1,0 +1,10 @@
+{
+  "analysis": "Let's check the rest of the chunks for Lopinavir-Ritonavir section 2, specifically PASSAGE_0004 to PASSAGE_0011 to see Tables 1 and 2 and pediatric dosage.",
+  "plan": "Print chunks 3 to 11 for Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; l = json.loads(open('/workspace/data/public/labels.jsonl').readline()); [print(f'PASSAGE_{i:04d}:\\n{l[\"chunks\"][i]}\\n' + '-'*50) for i in range(3, 12)]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

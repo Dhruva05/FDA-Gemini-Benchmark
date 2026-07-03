@@ -1,0 +1,14 @@
+{
+  "analysis": "Ah! Let's print out `PASSAGE_0159` and search for any other administration-related passages in Lopinavir-Ritonavir. Also, let's look at `PASSAGE_0187` which mentions \"Instructions for Use\" of the oral solution.",
+  "plan": "I will print `PASSAGE_0159` and `PASSAGE_0187` for Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "print(labels[1]['chunks'][159])\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "print(labels[1]['chunks'][187][:1500])\n",
+      "duration": 0.5
+    }
+  ]
+}

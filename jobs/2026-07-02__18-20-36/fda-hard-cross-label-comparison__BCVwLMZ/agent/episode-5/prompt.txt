@@ -1,0 +1,29 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > inspect_chunks_2.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         l = json.loads(line)
+>         print(f"set_id: {l['set_id']}, drug_name: {l.get('drug_name')}")
+>         for k, v in l.items():
+>             if k != 'chunks' and k != 'label_raw':
+>                 print(f"  {k}: {repr(v)[:200]}")
+>         # Check if chunks contain any special format
+>         print(f"  Number of chunks: {len(l['chunks'])}")
+>         for i, chunk in enumerate(l['chunks'][:3]):
+>             print(f"    Chunk {i}: {repr(chunk[:200])}")
+>         break
+> EOF
+root@faa94ec9460f:/workspace# python3 inspect_chunks_2.py
+set_id: ea5d0e55-2191-4094-b082-24b317f95752, drug_name: 12HR Allergy Relief
+  drug_id: '12hr_allergy_relief'
+  drug_name: '12HR Allergy Relief'
+  set_id: 'ea5d0e55-2191-4094-b082-24b317f95752'
+  Number of chunks: 13
+    Chunk 0: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, watery eyes\n
+- itching of the nose or throat'
+    Chunk 1: 'Do not use\xa0if you have ever had an allergic reaction to this product or any of its ingredients.'
+    Chunk 2: 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.'
+root@faa94ec9460f:/workspace#

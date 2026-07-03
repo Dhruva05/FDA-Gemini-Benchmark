@@ -1,0 +1,10 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl');
+> for line in f:
+>     obj = json.loads(line)
+>     for i, chunk in enumerate(obj['chunks']):
+>         if 'PASSAGE' in chunk:
+>             print(f'{obj["drug_name"]} chunk {i}: {chunk[:100]}...')
+> "
+root@b9fc21343844:/workspace#

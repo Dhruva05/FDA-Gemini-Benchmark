@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no raw newlines or control characters are in any string in my JSON response.",
+  "plan": "Let us run a python script to find chunks containing 'dosage and administration' or 'directions' across all labels.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        print(\"=\"*60)\n        print(\"Drug:\", data[\"drug_name\"])\n        print(\"Set ID:\", data[\"set_id\"])\n        for idx, chunk in enumerate(data[\"chunks\"]):\n            if \"dosage and administration\" in chunk.lower() or \"directions\" in chunk.lower():\n                print(f\"  PASSAGE_{idx:04d}: {repr(chunk)[:150]}\")\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": "Aha! Each passage starts with `||PASSAGE_####||`. Let's verify if the chunks correspond exactly to these passages. Let's write a python script to parse `label_raw` into passage IDs and passage text, and compare them with `chunks`.",
+  "plan": "I will run a python script to parse `label_raw` and map passage IDs to their corresponding text.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json, re\nwith open('/workspace/data/public/labels.jsonl') as f:\n    data = json.loads(f.readline())\n    label_raw = data['label_raw']\n    passages = re.split(r'\\|\\|(PASSAGE_\\d+)\\|\\|\\n', label_raw)\n    # The split results in ['', 'PASSAGE_0000', 'text...', 'PASSAGE_0001', 'text...', ...]\n    print('Split length:', len(passages))\n    parsed = {}\n    for i in range(1, len(passages), 2):\n        pid = passages[i]\n        text = passages[i+1].strip()\n        parsed[pid] = text\n    print('Number of parsed passages:', len(parsed))\n    chunks = [c.strip() for c in data['chunks']]\n    print('Number of chunks:', len(chunks))\n    # Check if they match\n    matched = 0\n    for i, chunk in enumerate(chunks):\n        pid = f'PASSAGE_{i:04d}'\n        if pid in parsed and parsed[pid] == chunk:\n            matched += 1\n    print('Matched chunks by index:', matched)\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

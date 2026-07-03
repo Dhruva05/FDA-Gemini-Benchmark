@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# rm -f generate_answers.py validate_answers.py inspect_selected_chunks.py inspect_renal_hepatic.py inspect_pediatric.py inspect_chu
+nk_001.py inspect_passage_format.py inspect_labels.py inspect_labels2.py check_passages_mapping.py find_passage_string.py search_passage.py print_questions.py p
+rint_full_questions.py print_label_outline.py test_passages.py chunk_*.txt outline.txt inspect_label_raw.py
+root@b161fe3d96d1:/workspace# ls -la /workspace
+total 28
+drwxr-xr-x 1 root root  4096 Jul  2 23:55 .
+drwxr-xr-x 1 root root  4096 Jul  2 23:50 ..
+-rw-r--r-- 1 root root 13047 Jul  2 23:55 answers.json
+drwxr-xr-x 3 root root  4096 Jul  2 20:40 data
+root@b161fe3d96d1:/workspace#

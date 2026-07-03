@@ -1,0 +1,8 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# find /workspace -type f
+/workspace/inspect_labels.py
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+root@23e2e6a1b566:/workspace#

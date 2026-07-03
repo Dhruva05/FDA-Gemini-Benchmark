@@ -1,0 +1,8 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ea5d0e55' in line
+][0]; [print(f'PASSAGE_{i:04d}:', chunk) for i, chunk in enumerate(data['chunks']) if 'warning' in chunk.lower() or 'warn' in chunk.lower()]"
+PASSAGE_0009: - store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete product information and warnings
+root@3646eb22abe5:/workspace#

@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); [print('DRUG:', d['drug_name'], d['set_id'], [(i, c[:100])
+ for i, c in enumerate(d['chunks']) if any(k in c.lower() for k in ['dosage', 'administration', 'directions', 'usual dose'])]) for d in (json.loads(l) for l in
+f) if d['set_id'] in ['dcc29902-1fe6-4713-947e-335503959464', '3efa1e5e-5a14-4724-a2ca-25702f10faed']]"
+DRUG: Acyclovir dcc29902-1fe6-4713-947e-335503959464 [(0, 'DESCRIPTION\nAcyclovir is a synthetic nucleoside analogue active against\nherpesviruses.\nEach teaspo
+on'), (1, 'The pharmacokinetics of acyclovir after oral administration have\nbeen evaluated in healthy volunteer'), (5, 'Dosage adjustment is recommended when a
+dministering acyclovir to\npatients with renal impairment . Ca'), (6, 'The most frequent adverse events reported during clinical trials\nof treatment of genital
+ herpes with'), (7, 'Overdoses involving ingestion of up to 20 g have been reported. Adverse events\nthat have been report')]
+DRUG: Acyclovir suspension 3efa1e5e-5a14-4724-a2ca-25702f10faed [(0, 'DESCRIPTION\nAcyclovir, USP is a synthetic nucleoside analogue active against herpes virus
+es. Acyclov'), (1, 'Pharmacokinetics\nThe\xa0pharmacokinetics\xa0of\xa0acyclovir\xa0after\xa0oral\xa0administration\xa0have\xa0been\xa0evaluated in\xa0'), (2, '
+Table\xa01.\xa0Acyclovir\xa0Pharmacokinetic\xa0Characteristics\xa0(Range)\n*Bioavailability\xa0decreases\xa0with\xa0increasin'), (3, 'Adults With\xa0Impaired\xa
+0Renal\xa0Function\nThe\xa0half-life\xa0and\xa0total\xa0body clearance\xa0of\xa0acyclovir\xa0are\xa0dependen'), (4, 'Geriatrics\nAcyclovir\xa0plasma\xa0concentr
+ations\xa0are\xa0higher\xa0in\xa0geriatric\xa0patients\xa0compared\xa0with younger\xa0ad'), (6, 'Drug\xa0Interactions\nCoadministration\xa0of\xa0probenecid\xa0w
+ith\xa0intravenous\xa0acyclovir\xa0has\xa0been\xa0shown\xa0to increa'), (16, 'Dosage\xa0adjustment\xa0is\xa0recommended\xa0when\xa0administering\xa0acyclovir\xa
+0to\xa0patients\xa0with\xa0renal impairment\xa0.\xa0Ca'), (24, 'Acyclovir concentrations have been documented in breast milk in 2 women following oral administr
+atio'), (27, 'Short-Term\xa0Administration\nThe most frequent adverse events reported during clinical trials of treatm'), (28, 'Long-Term\xa0Administration\nThe
+ most frequent adverse events reported in a clinical trial for the preve'), (32, 'Overdoses\xa0involving\xa0ingestion\xa0of\xa0up\xa0to\xa0100\xa0capsules\xa0(2
+0\xa0g)\xa0have\xa0been\xa0reported.\xa0Adverse\xa0events that\xa0h'), (38, 'Adults\xa0and\xa0Children\xa0over\xa040\xa0kg\n800\xa0mg\xa04\xa0times\xa0daily\xa0
+for\xa05\xa0days.\nIntravenous\xa0acyclovir\xa0is\xa0indicated\xa0f'), (41, 'Bioequivalence\xa0of\xa0Dosage\xa0Forms\nAcyclovir Oral Suspension\xa0was\xa0shown\
+xa0to\xa0be\xa0bioequivalent\xa0to Acyclovir\xa0')]
+root@7e48d58e23f3:/workspace#

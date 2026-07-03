@@ -1,0 +1,5 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# python3 search_labels.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 "DOSAGE FORMS AND STRENGTHS"
+=== Searching in Lopinavir-Ritonavir (4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85) for ['DOSAGE FORMS AND STRENGTHS'] ===
+root@15b83e10b8d1:/workspace#

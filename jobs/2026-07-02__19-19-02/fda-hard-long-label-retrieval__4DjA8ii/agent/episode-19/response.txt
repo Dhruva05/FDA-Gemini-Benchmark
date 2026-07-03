@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, 'warning' only matched 1 chunk, and 'precaution' matched 0. Let's see if there are other terms or if we should search with case-insensitivity or check the chunk list for section headers. Let's check chunks containing '5 WARNINGS AND PRECAUTIONS' or similar. Wait, section 5 is \"WARNINGS AND PRECAUTIONS\". Let's search for '5 ' or '5.1' or '5.2' etc.",
+  "plan": "Search for chunks containing '5 ' or '5.1' or '5.2' or 'WARNINGS'.",
+  "commands": [
+    {
+      "keystrokes": "for idx, chunk in enumerate(label_data['chunks']):\n    if 'WARNING' in chunk or 'PRECAUTION' in chunk or chunk.startswith('5 '):\n        print(f\"{idx}: {chunk[:100]}...\")\n",
+      "duration": 0.5
+    }
+  ]
+}

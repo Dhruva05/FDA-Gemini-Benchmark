@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 199 (char 200) | Content preview: '{\n  "analysis": "The file `/workspace/answers.json` matches the required structure perfectly. All fi'...
+
+Please fix these issues and provide a proper JSON response.

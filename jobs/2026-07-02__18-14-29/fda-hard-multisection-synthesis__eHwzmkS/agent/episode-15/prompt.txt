@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 377 (char 378) | Content preview: '{\n  "analysis": "This is very clear. We can determine the section of each passage by tracking the mo'...
+
+Please fix these issues and provide a proper JSON response.

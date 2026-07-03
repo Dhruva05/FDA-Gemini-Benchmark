@@ -1,0 +1,7 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "import json; data=json.load(open('/workspace/answers.json')); print(len(data['answers'])); print([ans['qid'] for ans i
+n data['answers']])"
+8
+['b2531657ba5c7a78', '6f12607a1ba14dd5', 'daef650b92e56473', 'a0576a26f2a2eeac', '9be5515bc3064979', '18078efe9380c8dc', 'fbab4114f66e2dda', '2d63e0a82215867f']
+root@b9fc21343844:/workspace#

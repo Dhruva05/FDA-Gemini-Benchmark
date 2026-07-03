@@ -1,0 +1,41 @@
+Current Terminal Screen:
+>     "18078efe9380c8dc",
+>     "fbab4114f66e2dda",
+>     "2d63e0a82215867f"
+> }
+>
+> qids_found = set()
+> for idx, ans in enumerate(answers):
+>     qid = ans.get("qid")
+>     print(f"{idx}: qid={qid} status={ans.get('status')}")
+>     assert qid in expected_qids, f"Unexpected qid: {qid}"
+>     qids_found.add(qid)
+>
+>     # Check fields
+>     for field in ["qid", "status", "answer", "citations", "structured_fields"]:
+>         assert field in ans, f"Missing field '{field}' in answer for qid {qid}"
+>
+>     # Check citations
+>     citations = ans["citations"]
+>     assert isinstance(citations, list), "citations must be a list"
+>     assert len(citations) >= 1, "at least one citation is required"
+>     for cit in citations:
+>         for fld in ["set_id", "passage_id", "section", "supporting_quote"]:
+>             assert fld in cit, f"Missing field '{fld}' in citation of qid {qid}"
+>         assert cit["passage_id"].startswith("PASSAGE_"), f"Invalid passage_id: {cit['passage_id']}"
+>
+> assert qids_found == expected_qids, "Not all expected qids were found"
+> print("All validations passed successfully!")
+> EOF
+root@23e2e6a1b566:/workspace# python3 validate_answers.py
+Number of answers: 8
+0: qid=b2531657ba5c7a78 status=ANSWERED
+1: qid=6f12607a1ba14dd5 status=ANSWERED
+2: qid=daef650b92e56473 status=ANSWERED
+3: qid=a0576a26f2a2eeac status=ANSWERED
+4: qid=9be5515bc3064979 status=ANSWERED
+5: qid=18078efe9380c8dc status=ANSWERED
+6: qid=fbab4114f66e2dda status=ANSWERED
+7: qid=2d63e0a82215867f status=ANSWERED
+All validations passed successfully!
+root@23e2e6a1b566:/workspace#

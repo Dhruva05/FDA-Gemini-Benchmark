@@ -1,0 +1,33 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# cat << 'EOF' > inspect_labels.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for idx, line in enumerate(f):
+>         data = json.loads(line)
+>         print(f"Row {idx}: set_id={data.get('set_id')}, drug_name={data.get('drug_name')}")
+>         chunks = data.get('chunks', [])
+>         print(f"Number of chunks: {len(chunks)}")
+>         if chunks:
+>             print(f"Type of first chunk: {type(chunks[0])}")
+>             print(f"First chunk: {repr(chunks[0][:200])}")
+>             print(f"Second chunk: {repr(chunks[1][:200]) if len(chunks) > 1 else ''}")
+>         print('='*50)
+> EOF
+root@23e2e6a1b566:/workspace# python3 inspect_labels.py
+Row 0: set_id=8a99d6d6-fd9e-45bb-b1bf-48c7f761232a, drug_name=Paxlovid
+Number of chunks: 209
+Type of first chunk: <class 'str'>
+First chunk: 'WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\n- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure
+of certain concomitant medications, resulting in potent'
+Second chunk: '1 INDICATIONS AND USAGE\nPAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at hig
+h risk for progression to severe COVID-19, including hos'
+==================================================
+Row 1: set_id=4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85, drug_name=Lopinavir-Ritonavir
+Number of chunks: 188
+Type of first chunk: <class 'str'>
+First chunk: '1 INDICATIONS AND USAGE\nLopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection
+ in adults and pediatric patients 14 days and older.\nLi'
+Second chunk: '2.1 General Administration Recommendations\nLopinavir\xa0and ritonavir oral solution must be taken with food.'
+==================================================
+root@23e2e6a1b566:/workspace#

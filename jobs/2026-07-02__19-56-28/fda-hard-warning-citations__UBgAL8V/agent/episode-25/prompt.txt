@@ -1,0 +1,54 @@
+New Terminal Output:
+
+>>> print(labels[1]['chunks'][14])
+5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP
+3A in patients already receiving lopinavir and ritonavir, may increase plasma concentrations of medications metabolized by CYP3A.  Initiation of medications tha
+t inhibit or induce CYP3A may increase or decrease concentrations of lopinavir and ritonavir, respectively. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Clinically significant adverse reactions from greater exposures of lopinavir and ritonavir.
+- Loss of therapeutic effect of lopinavir and ritonavir and possible development of resistance.
+See Table 12 for steps to prevent or manage these possible and known significant drug interactions, including dosing recommendations . Consider the potential fo
+r drug interactions prior to and during lopinavir and ritonavir therapy; review concomitant medications during lopinavir and ritonavir therapy, and monitor for
+the adverse reactions associated with the concomitant medications .
+>>> print(labels[1]['chunks'][15])
+5.2 Toxicity in Preterm Neonates
+Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, approximately 15% (w/v). When administered
+concomitantly with propylene glycol, ethanol competitively inhibits the metabolism of propylene glycol, which may lead to elevated concentrations. Preterm neona
+tes may be at increased risk of propylene glycol-associated adverse events due to diminished ability to metabolize propylene glycol, thereby leading to accumula
+tion and potential adverse events. Postmarketing life-threatening cases of cardiac toxicity (including complete AV block, bradycardia, and cardiomyopathy), lact
+ic acidosis, acute renal failure, CNS depression and respiratory complications leading to death have been reported, predominantly in preterm neonates receiving
+lopinavir and ritonavir oral solution.
+Lopinavir and ritonavir oral solution should not be used in preterm neonates in the immediate postnatal period because of possible toxicities. A safe and effect
+ive dose of lopinavir and ritonavir oral solution in this patient population has not been established. However, if the benefit of using lopinavir and ritonavir
+oral solution to treat HIV infection in infants immediately after birth outweighs the potential risks, infants should be monitored closely for increases in seru
+m osmolality and serum creatinine, and for toxicity related to lopinavir and ritonavir oral solution including: hyperosmolality, with or without lactic acidosis
+, renal toxicity, CNS depression (including stupor, coma, and apnea), seizures, hypotonia, cardiac arrhythmias and ECG changes, and hemolysis. Total amounts of 
+ethanol and propylene glycol from all medicines that are to be given to infants should be taken into account in order to avoid toxicity from these excipients .
+>>> print(labels[1]['chunks'][16])
+5.3 Pancreatitis
+Pancreatitis has been observed in patients receiving lopinavir and ritonavir therapy, including those who developed marked triglyceride elevations. In some case
+s, fatalities have been observed. Although a causal relationship to lopinavir and ritonavir has not been established, marked triglyceride elevations are a risk
+factor for development of pancreatitis . Patients with advanced HIV-1 disease may be at increased risk of elevated triglycerides and pancreatitis, and patients
+with a history of pancreatitis may be at increased risk for recurrence during lopinavir and ritonavir therapy.
+Pancreatitis should be considered if clinical symptoms (nausea, vomiting, abdominal pain) or abnormalities in laboratory values (such as increased serum lipase
+or amylase values) suggestive of pancreatitis occur. Patients who exhibit these signs or symptoms should be evaluated and lopinavir and ritonavir and/or other a
+ntiretroviral therapy should be suspended as clinically appropriate.
+>>> print(labels[1]['chunks'][17])
+5.4 Hepatotoxicity
+Patients with underlying hepatitis B or C or marked elevations in transaminase prior to treatment may be at increased risk for developing or worsening of transa
+minase elevations or hepatic decompensation with use of lopinavir and ritonavir.
+There have been postmarketing reports of hepatic dysfunction, including some fatalities. These have generally occurred in patients with advanced HIV-1 disease t
+aking multiple concomitant medications in the setting of underlying chronic hepatitis or cirrhosis. A causal relationship with lopinavir and ritonavir therapy h
+as not been established.
+Elevated transaminases with or without elevated bilirubin levels have been reported in HIV-1 mono-infected and uninfected patients as early as 7 days after the
+initiation of lopinavir and ritonavir in conjunction with other antiretroviral agents. In some cases, the hepatic dysfunction was serious; however, a definitive
+ causal relationship with lopinavir and ritonavir therapy has not been established.
+Appropriate laboratory testing should be conducted prior to initiating therapy with lopinavir and ritonavir and patients should be monitored closely during trea
+tment. Increased AST/ALT monitoring should be considered in the patients with underlying chronic hepatitis or cirrhosis, especially during the first several mon
+ths of lopinavir and ritonavir treatment .
+>>> print(labels[1]['chunks'][18])
+5.5 QT Interval Prolongation
+Postmarketing cases of QT interval prolongation and torsade de pointes have been reported although causality of lopinavir and ritonavir could not be established
+. Avoid use in patients with congenital long QT syndrome, those with hypokalemia, and with other drugs that prolong the QT interval .
+>>>

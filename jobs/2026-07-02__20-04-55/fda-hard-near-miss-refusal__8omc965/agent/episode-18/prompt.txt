@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > print_renal.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> label = labels['ae6e79c0-a307-4888-b647-1b7be4cb9127'] # Acamprosate
+> for idx in [2, 5, 6, 35, 51]:
+>     print(f"PASSAGE_{idx:04d}:")
+>     print(repr(label['chunks'][idx]))
+> EOF
+root@0ef79956d710:/workspace# python3 print_renal.py
+PASSAGE_0002:
+'2.1 Dosage in Renal Impairment\nFor patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet tak
+en three times daily is recommended. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine cleara
+nce of ≤30 mL/min) .'
+PASSAGE_0005:
+'4.2 Severe Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0006:
+'5.1 Renal Impairment\nTreatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose r
+eduction . Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0035:
+'8.6 Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0051:
+'Renal Impairment\nA lower dose is recommended for patients with moderate renal impairment. Acamprosate calcium is contraindicated in patients with severe renal
+ impairment (creatinine clearance of ≤30 mL/min) .'
+root@0ef79956d710:/workspace#

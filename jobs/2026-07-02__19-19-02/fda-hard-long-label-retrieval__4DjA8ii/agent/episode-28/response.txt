@@ -1,0 +1,10 @@
+{
+  "analysis": "Let's print chunks 3, 4, 5, 6, 7, 8, 9, 10, 11 to see the entire DOSAGE AND ADMINISTRATION section (section 2).",
+  "plan": "Print the titles or full content of chunks 3 to 11.",
+  "commands": [
+    {
+      "keystrokes": "for idx in range(3, 12):\n    print(f\"=== PASSAGE_{idx:04d} ===\")\n    print(label_data['chunks'][idx][:250] + \"...\")\n",
+      "duration": 0.5
+    }
+  ]
+}_

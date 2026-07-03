@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a control character error due to unescaped control characters in the analysis field. I will be very careful not to write any control characters or literal newlines in the JSON string fields, keeping them clean.",
+  "plan": "I will run a python script to inspect the first 15 passages of Paxlovid to see where the section names are or how they are formatted.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; d=json.loads(open('/workspace/data/public/labels.jsonl').readline()); [print(f'PASSAGE_{i:04d}:', [repr(d['chunks'][i][:100])]) for i in range(15)]\"\n",
+      "duration": 0.5
+    }
+  ]
+}

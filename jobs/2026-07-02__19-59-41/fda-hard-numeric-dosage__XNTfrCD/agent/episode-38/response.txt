@@ -1,0 +1,10 @@
+{
+  "analysis": "The previous JSON was invalid due to unescaped control characters. I fixed it. Now I will search for the word 'maximum' or 'max' in CELECOXIB chunks to find any explicit maximum daily dose statement.",
+  "plan": "Search for 'maximum' or 'max' in CELECOXIB chunks.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'CELECOXIB':\n            for i, chunk in enumerate(data['chunks']):\n                if 'maximum' in chunk.lower() or 'max' in chunk.lower():\n                    print(f'PASSAGE_{i:04d}: {chunk[:200]}...')\n            break\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

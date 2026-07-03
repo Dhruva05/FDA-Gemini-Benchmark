@@ -1,0 +1,6 @@
+{
+  "analysis": "All checks passed successfully! The output JSON is valid and correctly formatted, with matching QIDs, accurate citations, and structured fields properly filled. The task is fully complete.",
+  "plan": "I will submit the completed task.",
+  "commands": [],
+  "task_complete": true
+}

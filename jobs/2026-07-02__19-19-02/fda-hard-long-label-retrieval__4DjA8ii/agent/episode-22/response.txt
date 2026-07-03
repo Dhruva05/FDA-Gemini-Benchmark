@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! `5\\.` has several matches! Let's print the chunk indices and their titles/first 100 characters for chunks 13, 14, 15, 16, 17, 18.",
+  "plan": "Print the titles or first 100 characters of chunks 13, 14, 15, 16, 17, 18.",
+  "commands": [
+    {
+      "keystrokes": "for idx in range(13, 19):\n    print(f\"{idx}: {label_data['chunks'][idx][:120]}\")\n",
+      "duration": 0.5
+    }
+  ]
+}

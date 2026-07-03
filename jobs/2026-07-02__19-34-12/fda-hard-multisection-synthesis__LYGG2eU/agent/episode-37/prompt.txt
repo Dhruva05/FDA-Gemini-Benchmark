@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > find_desc.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85':
+>             for idx, chunk in enumerate(label['chunks']):
+>                 if 'DESCRIPTION' in chunk.upper():
+>                     print(f"PASSAGE_{idx:04d}: {chunk[:300]}")
+> EOF
+root@15b83e10b8d1:/workspace# python3 find_desc.py
+PASSAGE_0106: 11 DESCRIPTION
+Lopinavir and Ritonavir Oral Solution USP is a co-formulation of lopinavir and ritonavir. Lopinavir is an inhibitor of the HIV-1 protease. As co-formulated in l
+opinavir and ritonavir, ritonavir inhibits the CYP3A-mediated metabolism of lopinavir, thereby providing increased plasma lev
+root@15b83e10b8d1:/workspace#

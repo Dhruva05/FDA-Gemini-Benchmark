@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@7ddc515b1a59:/workspace# cat << 'EOF' > search.py
+> import json, re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+>
+> def search(drug_name, query):
+>     drug = next(d for d in labels if d['drug_name'].lower() == drug_name.lower())
+>     print(f"Searching for '{query}' in {drug['drug_name']}:")
+>     for i, chunk in enumerate(drug['chunks']):
+>         if re.search(query, chunk, re.IGNORECASE):
+>             print(f"PASSAGE_{i:04d} (len={len(chunk)}): {chunk[:200]}...")
+>
+> EOF
+root@7ddc515b1a59:/workspace#

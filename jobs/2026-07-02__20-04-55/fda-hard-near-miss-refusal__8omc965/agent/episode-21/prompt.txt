@@ -1,0 +1,41 @@
+Current Terminal Screen:
+>             "searched_topic": "pediatric",
+>             "unsupported_topic": "geriatric maximum cumulative lifetime dose"
+>         }
+>     },
+>     {
+>         "qid": "near-miss-5b5cb6a5249660",
+>         "status": "NOT_FOUND",
+>         "answer": "The Acclean Chlorhexidine Gluconate 0.12% Oral Rinse label does not provide a supported recommendation for breastfeeding dose adjustment in
+ its pregnancy section.",
+>         "citations": [
+>             {
+>                 "set_id": "08c9d3dd-717b-0148-e054-00144ff8d46c",
+>                 "passage_id": "PASSAGE_0006",
+>                 "section": "Pregnancy Category B",
+>                 "supporting_quote": "Because animal reproduction studies are not always predictive of human response, this drug should be used during pregnanc
+y only if clearly needed."
+>             }
+>         ],
+>         "structured_fields": {
+>             "searched_topic": "pregnancy",
+>             "unsupported_topic": "breastfeeding dose adjustment"
+>         }
+>     }
+> ]
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     qids_ordered = [json.loads(line)['qid'] for line in f]
+>
+> answers_map = {a['qid']: a for a in answers}
+> ordered_answers = [answers_map[qid] for qid in qids_ordered]
+>
+> output = {"answers": ordered_answers}
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(output, f, indent=2)
+>
+> print("Answers generated successfully with exact unicode match!")
+> EOF
+root@0ef79956d710:/workspace# python3 generate_answers.py
+Answers generated successfully with exact unicode match!
+root@0ef79956d710:/workspace#

@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     data = json.loads(next(f))
+>     raw = data["label_raw"]
+>     print("First 300 chars of raw:")
+>     print(raw[:300])
+> '
+First 300 chars of raw:
+||PASSAGE_0000||
+Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+
+||PASSAGE_0001||
+Do not use if you have ever had an allergic reaction to this product or any of its ingredien
+root@2809f9ae2d53:/workspace#

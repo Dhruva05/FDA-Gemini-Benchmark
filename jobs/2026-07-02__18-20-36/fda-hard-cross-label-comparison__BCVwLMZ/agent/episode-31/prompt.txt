@@ -1,0 +1,41 @@
+Current Terminal Screen:
+PASSAGE_0010: 'Chickenpox\nThree randomized, double-blind, placebo-controlled trials were conducted in 993 pediatric patients aged 2 to 18 years with chickenpox
+. All patients were treated within 24 hours after the onset of rash. In 2 trials, acyclovir was administered at 20 mg/kg 4 times daily (up to 3,200 mg per day)
+for 5 days. In the third trial, doses of 10, 15, or 20 mg/kg were administered 4 times daily for 5 to 7 days. Treatment with acyclovir shortened the time to 50%
+ healing; reduced the maximum number of lesions; reduced the median number of vesicles; decreased the median number of residual lesions on day 28; and decreased
+ the proportion of patients with fever, anorexia, and lethargy by day 2. Treatment with acyclovir did not affect varicella-zoster virus-specific humoral or cell
+ular immune responses at 1 month or 1 year following treatment.'
+PASSAGE_0032: 'Overdoses\xa0involving\xa0ingestion\xa0of\xa0up\xa0to\xa0100\xa0capsules\xa0(20\xa0g)\xa0have\xa0been\xa0reported.\xa0Adverse\xa0events that\xa0h
+ave\xa0been\xa0reported\xa0in\xa0association\xa0with\xa0overdosage\xa0include\xa0agitation,\xa0coma,\xa0seizures,\xa0and\xa0lethargy. Precipitation\xa0of\xa0acy
+clovir\xa0in\xa0renal\xa0tubules\xa0may\xa0occur\xa0when\xa0the\xa0solubility\xa0(2.5\xa0mg/mL)\xa0is\xa0exceeded\xa0in the\xa0intratubular\xa0fluid.\xa0Overdos
+age\xa0has\xa0been\xa0reported\xa0following\xa0bolus\xa0injections\xa0or\xa0inappropriately\xa0high doses\xa0and\xa0in\xa0patients\xa0whose\xa0fluid\xa0and\xa0e
+lectrolyte\xa0balance\xa0were\xa0not\xa0properly\xa0monitored.\xa0This\xa0has resulted\xa0in\xa0elevated\xa0BUN\xa0and\xa0serum\xa0creatinine\xa0and\xa0subseque
+nt\xa0renal\xa0failure.\xa0In\xa0the\xa0event\xa0of\xa0acute\xa0renal failure\xa0and\xa0anuria,\xa0the\xa0patient\xa0may\xa0benefit\xa0from\xa0hemodialysis\xa0u
+ntil\xa0renal\xa0function\xa0is\xa0restored\xa0.'
+PASSAGE_0033: 'Acute\xa0Treatment\xa0of\xa0Herpes\xa0Zoster\n800\xa0mg\xa0every\xa04\xa0hours\xa0orally,\xa05\xa0times\xa0daily\xa0for\xa07\xa0to\xa010\xa0days.
+'
+PASSAGE_0034: 'Treatment\xa0of\xa0Initial\xa0Genital\xa0Herpes\n200\xa0mg\xa0every\xa04\xa0hours,\xa05\xa0times\xa0daily\xa0for 10\xa0days.'
+PASSAGE_0035: 'Chronic\xa0Suppressive\xa0Therapy\xa0for\xa0Recurrent\xa0Disease\n400 mg 2 times daily for up to 12 months, followed by re-evaluation. Alternativ
+e regimens have included doses ranging from 200 mg 3 times daily to 200 mg 5 times daily. The frequency and severity of episodes of untreated genital herpes may
+ change over time. After 1 year of therapy, the frequency and severity of the patient’s genital herpes infection should be re- evaluated to assess the need for
+continuation of therapy with acyclovir.'
+PASSAGE_0036: 'Intermittent\xa0Therapy\n200\xa0mg\xa0every\xa04\xa0hours,\xa05\xa0times\xa0daily\xa0for\xa05\xa0days.\xa0Therapy\xa0should\xa0be initiated\xa0at
+\xa0the\xa0earliest\xa0sign\xa0or\xa0symptom\xa0(prodrome)\xa0of\xa0recurrence.'
+PASSAGE_0037: 'Treatment\xa0of\xa0Chickenpox\nChildren\xa0(2\xa0years\xa0of\xa0age\xa0and\xa0older)\n20 mg/kg per dose orally 4 times daily (80 mg/kg/day) for 5
+ days. Children over 40 kg should receive the adult dose for chickenpox.'
+PASSAGE_0038: 'Adults\xa0and\xa0Children\xa0over\xa040\xa0kg\n800\xa0mg\xa04\xa0times\xa0daily\xa0for\xa05\xa0days.\nIntravenous\xa0acyclovir\xa0is\xa0indicated
+\xa0for\xa0the\xa0treatment\xa0of\xa0varicella-zoster\xa0infections\xa0in immunocompromised\xa0patients.\nWhen\xa0therapy\xa0is\xa0indicated,\xa0it\xa0should\xa
+0be\xa0initiated\xa0at\xa0the\xa0earliest\xa0sign\xa0or\xa0symptom\xa0of\xa0chickenpox. There\xa0is\xa0no\xa0information\xa0about\xa0the\xa0efficacy\xa0of\xa0th
+erapy\xa0initiated\xa0more\xa0than\xa024\xa0hours\xa0after\xa0onset\xa0of\xa0signs and\xa0symptoms.\nPatients\xa0With\xa0Acute\xa0or\xa0Chronic\xa0Renal\xa0Impa
+irment\nIn\xa0patients\xa0with\xa0renal\xa0impairment,\xa0the\xa0dose of Acyclovir\xa0Capsules,\xa0Tablets,\xa0or Oral Suspension\xa0should\xa0be\xa0modified\xa
+0as\xa0shown\xa0in\xa0Table\xa03.\nTable\xa03.\xa0Dosage\xa0Modification\xa0for\xa0Renal\xa0Impairment'
+PASSAGE_0039: 'Hemodialysis\nFor patients who require hemodialysis, the mean plasma half-life of acyclovir during hemodialysis is approximately 5 hours. This re
+sults in a 60% decrease in plasma concentrations following a 6-hour dialysis period. Therefore, the patient’s dosing schedule should be adjusted so that an addi
+tional dose is administered after each dialysis.'
+PASSAGE_0040: 'Peritoneal\xa0Dialysis\nNo\xa0supplemental\xa0dose\xa0appears\xa0to\xa0be\xa0necessary\xa0after\xa0adjustment\xa0of\xa0the\xa0dosing interval.'
+PASSAGE_0041: 'Bioequivalence\xa0of\xa0Dosage\xa0Forms\nAcyclovir Oral Suspension\xa0was\xa0shown\xa0to\xa0be\xa0bioequivalent\xa0to Acyclovir\xa0Capsules\xa0(n
+\xa0=\xa020)\xa0and\xa01\xa0acyclovir\xa0800-mg\xa0tablet\xa0was\xa0shown\xa0to\xa0be\xa0bioequivalent\xa0to\xa04 acyclovir\xa0200-mg\xa0capsules\xa0(n\xa0=\xa0
+24).'
+PASSAGE_0042: 'Acyclovir Oral Suspension, USP\xa0contains\xa0200\xa0mg of acyclovir, USP in\xa0each teaspoonful\xa0(5\xa0mL). The white to off white, banana fla
+vored suspension is available as follows:'
+root@faa94ec9460f:/workspace#

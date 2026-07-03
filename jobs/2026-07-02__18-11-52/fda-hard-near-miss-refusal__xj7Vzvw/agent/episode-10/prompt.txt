@@ -1,0 +1,69 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# grep -c "PASSAGE_" details.txt
+47
+root@c7da805c5eb1:/workspace# head -n 50 details.txt
+================================================================================
+QID: near-miss-04f3afa658fdef
+QUESTION: The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND
+ if the label does not support it, and cite the section you searched.
+================================================================================
+--- PASSAGE_0001 ---
+Do not use if you have ever had an allergic reaction to this product or any of its ingredients.
+
+--- PASSAGE_0002 ---
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+
+--- PASSAGE_0004 ---
+Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek medical help right away.
+
+--- PASSAGE_0005 ---
+If pregnant or breast-feeding, ask a health professional before use.
+
+--- PASSAGE_0006 ---
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+
+--- PASSAGE_0009 ---
+- store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete product information and warnings
+
+================================================================================
+QID: near-miss-0c6ec72416151f
+QUESTION: The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND i
+f the label does not support it, and cite the section you searched.
+================================================================================
+--- PASSAGE_0002 ---
+2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommend
+ed. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+
+--- PASSAGE_0005 ---
+4.2 Severe Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+
+--- PASSAGE_0006 ---
+5.1 Renal Impairment
+Treatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose reduction . Acamprosate
+calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+
+--- PASSAGE_0027 ---
+Concomitant Therapies
+In clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hypnotics and sedatives (including benzodiaz
+epines), or non-opioid analgesics was similar to that of subjects taking placebo with these concomitant medications. Patients taking acamprosate calcium concomi
+tantly with antidepressants more commonly reported both weight gain and weight loss, compared with patients taking either medication alone.
+Other Events Observed During the Premarketing Evaluation of Acamprosate Calcium
+Following is a list of terms that reflect treatment-emergent adverse events reported by patients treated with acamprosate calcium in 20 clinical trials (4461 pa
+tients treated with acamprosate calcium, 3526 of whom received the maximum recommended dose of 1998 mg/day for up to one year in duration). This listing does no
+t include those events already listed above; events for which a drug cause was considered remote; event terms which were so general as to be uninformative; and
+events reported only once which were not likely to be acutely life-threatening.
+Events are further categorized by body system and listed in order of decreasing frequency according to the following definitions: frequent adverse events are th
+ose occurring in at least 1/100 patients (only those not already listed in the summary of adverse events in controlled trials appear in this listing); infrequen
+t adverse events are those occurring in 1/100 to 1/1000 patients; rare events are those occurring in fewer than 1/1000 patients.
+Body as a Whole –
+Frequent: headache, abdominal pain, back pain, infection, flu syndrome, chest pain, chills, suicide attempt; Infrequent: fever, intentional overdose, malaise, a
+llergic reaction, abscess, neck pain, hernia, intentional injury; Rare: ascites, face edema, photosensitivity reaction, abdomen enlarged, sudden death.
+Cardiovascular System –
+Frequent: palpitation, syncope; Infrequent: hypotension, tachycardia, hemorrhage, angina pectoris, migraine, varicose vein, myocardial infarct, phlebitis, postu
+ral hypotension; Rare: heart failure, mesenteric arterial occlusion, cardiomyopathy, deep thrombophlebitis, shock.
+root@c7da805c5eb1:/workspace#

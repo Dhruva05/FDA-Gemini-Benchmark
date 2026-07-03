@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The `label_raw` contains markers like `||PASSAGE_0000||`! Let's check how `chunks` maps to `||PASSAGE_####||`. Is each chunk in `chunks` corresponding to a passage? Or does `chunks` contain the passage markers inside, or are they split by them? Let's check.",
+  "plan": "I will run a python script to inspect how `label_raw` is segmented with `||PASSAGE_####||` and how that relates to the elements in `chunks`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        print('label_raw snippet:', data['label_raw'][:1000])\n        print('chunks[0]:', data['chunks'][0])\n        print('chunks[1]:', data['chunks'][1])\n        break\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

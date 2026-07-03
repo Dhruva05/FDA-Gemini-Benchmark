@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 32 (char 33) | Content preview: '{\n  "analysis": "This is perfect!\nEach chunk `i` corresponds exactly to `PASSAGE_{i:04d}`.\nFor examp'...
+
+Please fix these issues and provide a proper JSON response.

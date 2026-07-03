@@ -1,0 +1,43 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]
+> for label in labels:
+>     print('===', label['drug_name'], '===')
+>     for i in range(15):
+>         text = label['chunks'][i].strip()
+>         first_line = text.split('\n')[0]
+>         print(f'PASSAGE_{i:04d}: {first_line[:80]}')
+> f.close()"
+=== Paxlovid ===
+PASSAGE_0000: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+PASSAGE_0001: 1 INDICATIONS AND USAGE
+PASSAGE_0002: Limitations of Use
+PASSAGE_0003: 2.1       Important Dosage and Administration Information
+PASSAGE_0004: 2.2       Recommended Dosage
+PASSAGE_0005: 2.3 Dosage in Patients with Renal Impairment
+PASSAGE_0006: Days of Treatment
+PASSAGE_0007: Days 1-5
+PASSAGE_0008: Day 1
+PASSAGE_0009: Days 2-5
+PASSAGE_0010: 2.4       Use in Patients with Hepatic Impairment
+PASSAGE_0011: 3 DOSAGE FORMS AND STRENGTHS
+PASSAGE_0012: 4 CONTRAINDICATIONS
+PASSAGE_0013: 5.1       Risk of Serious Adverse Reactions Due to Drug Interactions
+PASSAGE_0014: 5.2       Hypersensitivity Reactions
+=== Lopinavir-Ritonavir ===
+PASSAGE_0000: 1 INDICATIONS AND USAGE
+PASSAGE_0001: 2.1 General Administration Recommendations
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+PASSAGE_0004: Recommended Dosage
+PASSAGE_0005: Recommended Dosage
+PASSAGE_0006: Recommended Dosage
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+PASSAGE_0008: Pediatric Dosage Calculations
+PASSAGE_0009: Based on Weight (mg/kg)
+PASSAGE_0010: Dosing recommendations using oral solution
+PASSAGE_0011: Frequency
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+PASSAGE_0013: 4 CONTRAINDICATIONS
+PASSAGE_0014: 5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+root@a1980178bfd8:/workspace#

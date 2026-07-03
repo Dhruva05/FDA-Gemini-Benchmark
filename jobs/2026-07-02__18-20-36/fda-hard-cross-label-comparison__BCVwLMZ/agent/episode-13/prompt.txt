@@ -1,0 +1,30 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > print_all_dosage.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print(f"=== QUESTION: {q['drug_name']} ===")
+>     for set_id in q['comparison_set_ids']:
+>         l = labels[set_id]
+>         print(f"  Label: {l['drug_name']} ({set_id})")
+>         for i, chunk in enumerate(l['chunks']):
+>             lower = chunk.lower()
+>             # If chunk is short, or contains key terms
+>             terms = ['directions', 'dosage', 'administration', 'how to take', 'adults', 'children', 'active ingredient', 'warnings', 'use ']
+>             if any(t in lower for t in terms) or len(chunk) < 200:
+>                 # Only print if it seems relevant to instructions
+>                 if any(t in lower for t in ['directions', 'dosage', 'administration', 'take', 'tablet', 'rinse', 'swish', 'dose', 'mg']):
+>                     print(f"    PASSAGE_{i:04d} ({len(chunk)} chars):")
+>                     print(chunk)
+>                     print("-" * 40)
+>     print("=" * 80)
+> EOF
+root@faa94ec9460f:/workspace# python3 print_all_dosage.py > all_dosage.txt
+root@faa94ec9460f:/workspace#

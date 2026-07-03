@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Expecting ',' delimiter: line 3 column 15 (char 67) | Content preview: '{\n  "analysis": "Wait, the task description says:\\n"\n              "\\"Each citation must use a `set_'...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,33 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# ls -la /
+total 72
+drwxr-xr-x   1 root root 4096 Jul  2 22:25 .
+drwxr-xr-x   1 root root 4096 Jul  2 22:25 ..
+-rwxr-xr-x   1 root root    0 Jul  2 22:25 .dockerenv
+lrwxrwxrwx   1 root root    7 Apr 22  2024 bin -> usr/bin
+drwxr-xr-x   2 root root 4096 Apr 22  2024 boot
+drwxr-xr-x   5 root root  340 Jul  2 22:25 dev
+drwxr-xr-x   1 root root 4096 Jul  2 22:25 etc
+drwxr-xr-x   3 root root 4096 Jun 10 02:16 home
+lrwxrwxrwx   1 root root    7 Apr 22  2024 lib -> usr/lib
+drwxr-xr-x   5 root root 4096 Jul  2 22:25 logs
+drwxr-xr-x   2 root root 4096 Jun 10 02:09 media
+drwxr-xr-x   2 root root 4096 Jun 10 02:09 mnt
+drwxr-xr-x   2 root root 4096 Jun 10 02:09 opt
+dr-xr-xr-x 272 root root    0 Jul  2 22:25 proc
+drwx------   1 root root 4096 Jul  2 22:25 root
+drwxr-xr-x   4 root root 4096 Jun 10 02:16 run
+lrwxrwxrwx   1 root root    8 Apr 22  2024 sbin -> usr/sbin
+drwxr-xr-x   2 root root 4096 Jun 10 02:09 srv
+dr-xr-xr-x  11 root root    0 Jul  2 21:57 sys
+drwxrwxrwt   1 root root 4096 Jul  2 22:25 tmp
+drwxr-xr-x   1 root root 4096 Jun 10 02:09 usr
+drwxr-xr-x   1 root root 4096 Jun 10 02:16 var
+drwxr-xr-x   1 root root 4096 Jul  2 21:00 workspace
+root@c3dfb07a1d45:/workspace# ls -la /workspace
+total 12
+drwxr-xr-x 1 root root 4096 Jul  2 21:00 .
+drwxr-xr-x 1 root root 4096 Jul  2 22:25 ..
+drwxr-xr-x 3 root root 4096 Jul  2 20:40 data
+root@c3dfb07a1d45:/workspace#

@@ -1,0 +1,29 @@
+{
+  "analysis": "Excellent. Let's look at the remaining passages for Celecoxib. Is there any explicit maximum daily dose? It says:\n"
+              "\"For OA, the dosage is 200 mg per day...\"\n"
+              "\"For RA, the dosage is 100 mg to 200 mg twice daily.\" (which is 400 mg per day)\n"
+              "\"For AS, the dosage of celecoxib capsules is 200 mg daily... a trial of 400 mg daily may be worthwhile.\"\n"
+              "\"For management of Acute Pain and Treatment of Primary Dysmenorrhea, the dosage is 400 mg initially, followed by an additional 200 mg dose if needed on the first day [so 600 mg on day 1]. On subsequent days, the recommended dose is 200 mg twice daily as needed [so 400 mg/day].\"\n"
+              "Let's see: the maximum daily dose for Celecoxib is 400 mg per day (or 600 mg on the first day of acute pain/dysmenorrhea). We can state that the recommended dosage depends on the indication, ranging from 200 mg to 400 mg per day (with a maximum of 600 mg on the first day for acute pain/dysmenorrhea).\n"
+              "\n"
+              "Let's check Lenalidomide (set_id `ed7a3099-ce31-4865-b212-358d9ff6261b`):\n"
+              "- Let's check \"How should Lenalidomide be administered?\" (QID: `0d262ce5d03f7c38`)\n"
+              "  - `PASSAGE_0032` (2.7 Administration): \"Advise patients to take lenalidomide orally at about the same time each day, either with or without food. Advise patients to swallow lenalidomide capsules whole with water and not to open, break, or chew them.\"\n"
+              "  - Route: Oral (capsules, taken orally).\n"
+              "  - Administration details: orally at about the same time each day, with or without food, swallowed whole with water, do not open, break, or chew.\n"
+              "  - Citations: `PASSAGE_0032`.\n"
+              "- Let's check \"What is the recommended dosage regimen of Lenalidomide?\" (QID: `85c49de5de841cb9`)\n"
+              "  - Multiple Myeloma (`PASSAGE_0009`): \"The recommended starting dose of lenalidomide is 25 mg orally once daily on Days 1 to 21 of repeated 28-day cycles in combination with dexamethasone.\"\n"
+              "  - Myelodysplastic Syndromes (`PASSAGE_0015`): \"The recommended starting dose of lenalidomide is 10 mg daily.\"\n"
+              "  - Mantle Cell Lymphoma (`PASSAGE_0019`): \"The recommended starting dose of lenalidomide is 25 mg/day orally on Days 1 to 21 of repeated 28-day cycles for relapsed or refractory mantle cell lymphoma.\"\n"
+              "  - Follicular Lymphoma or Marginal Zone Lymphoma (`PASSAGE_0022`): \"The recommended starting dose of lenalidomide is 20 mg orally once daily on Days 1 to 21 of repeated 28-day cycles for up to 12 cycles of treatment in combination with a rituximab-product.\"\n"
+              "  - Renal Impairment (`PASSAGE_0028` / `PASSAGE_0029` / `PASSAGE_0030` / `PASSAGE_0031`): Dosing adjustments are required based on renal function (Cockcroft-Gault CLcr).\n"
+              "  - Let's check if there is a max daily dose for Lenalidomide. Let's search for \"maximum\" or \"exceed\" or \"max\" in Lenalidomide's label chunks.",
+  "plan": "Search for maximum dose details in Lenalidomide.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > search_lenalidomide_max.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == 'ed7a3099-ce31-4865-b212-358d9ff6261b'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if any(kw in chunk.lower() for kw in ['maximum', 'exceed', 'limit', 'max']):\n        print(f\"PASSAGE_{i:04d}:\")\n        print(chunk[:300])\n        print(\"-\"*50)\nEOF\npython3 search_lenalidomide_max.py\n",
+      "duration": 1.0
+    }
+  ]
+}

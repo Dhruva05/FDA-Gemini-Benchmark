@@ -1,0 +1,10 @@
+{
+  "analysis": "Only 8 chunks mention 'interaction'. Let's print them.",
+  "plan": "Print the chunks that match 'interaction'.",
+  "commands": [
+    {
+      "keystrokes": "for idx, chunk in search('interaction'):\n    print(f\"=== PASSAGE_{idx:04d} ===\")\n    print(chunk[:200] + \"...\")\n\n",
+      "duration": 0.5
+    }
+  ]
+}

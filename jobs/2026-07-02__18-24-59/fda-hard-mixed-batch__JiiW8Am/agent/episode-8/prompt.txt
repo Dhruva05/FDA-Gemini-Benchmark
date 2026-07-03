@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj["drug_name"] == "Acamprosate Calcium":
+>             print(obj["label_raw"][:1500])
+> '
+||PASSAGE_0000||
+1 INDICATIONS AND USAGE
+Acamprosate calcium delayed-release tablets are indicated for the maintenance of abstinence from alcohol in patients with alcohol dependence who are abstinent a
+t treatment initiation. Treatment with acamprosate calcium delayed-release tablets should be part of a comprehensive management program that includes psychosoci
+al support.
+The efficacy of acamprosate calcium delayed-release tablets in promoting abstinence has not been demonstrated in subjects who have not undergone detoxification
+and not achieved alcohol abstinence prior to beginning acamprosate calcium delayed-release tablets treatment. The efficacy of acamprosate calcium delayed-releas
+e tablets in promoting abstinence from alcohol in polysubstance abusers has not been adequately assessed.
+
+||PASSAGE_0001||
+2 DOSAGE AND ADMINISTRATION
+The recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should total 666 mg) taken three times daily. A lower dose
+may be effective in some patients.
+Although dosing may be done without regard to meals, dosing with meals was employed during clinical trials and is suggested in those patients who regularly eat
+three meals daily.
+Treatment with acamprosate calcium delayed-release tablets should be initiated as soon as possible after the period of alcohol withdrawal, when the patient has
+achieved abstinence, and should be maintained if the patient relapses. Acamprosate calcium delayed-release tablets should
+root@c3dfb07a1d45:/workspace#

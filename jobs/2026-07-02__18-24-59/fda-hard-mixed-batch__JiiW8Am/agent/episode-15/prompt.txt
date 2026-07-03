@@ -1,0 +1,23 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj["drug_name"] == "Acamprosate Calcium":
+>             for i, chunk in enumerate(obj["chunks"]):
+>                 if "hepatic" in chunk.lower() or "liver" in chunk.lower():
+>                     print(f"PASSAGE_{i:04d}: {chunk[:300]}")
+> '
+PASSAGE_0027: Concomitant Therapies
+In clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hypnotics and sedatives (including benzodiaz
+epines), or non-opioid analgesics was similar to that of subjects taking placebo with these concomitant medications. P
+PASSAGE_0031: 8.2 Labor and Delivery
+The potential for acamprosate calcium to affect the duration of labor and delivery is unknown.
+PASSAGE_0044: Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a geriatric population. However, since renal function diminishes in elderly patients and
+acamprosate
+root@c3dfb07a1d45:/workspace#

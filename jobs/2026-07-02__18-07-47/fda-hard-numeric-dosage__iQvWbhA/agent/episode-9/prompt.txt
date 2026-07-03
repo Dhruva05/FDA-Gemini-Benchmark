@@ -1,0 +1,16 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); l=json.loads(f.readline()); [print(f'Chunk {i}: {c[:150]}.
+..') for i, c in enumerate(l['chunks'][:5])]"
+Chunk 0: 1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in a...
+Chunk 1: 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food....
+Chunk 2: 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recomme...
+Chunk 3: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and...
+Chunk 4: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir T...
+root@371ed25b9fd3:/workspace#

@@ -1,0 +1,24 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > inspect_chunks.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         l = json.loads(line)
+>         print(f"set_id: {l['set_id']}")
+>         print(f"Keys: {l.keys()}")
+>         if 'chunks' in l and len(l['chunks']) > 0:
+>             print("First chunk keys:", l['chunks'][0].keys())
+>             print("First chunk sample:", l['chunks'][0])
+>         break
+> EOF
+root@faa94ec9460f:/workspace# python3 inspect_chunks.py
+set_id: ea5d0e55-2191-4094-b082-24b317f95752
+Keys: dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+Traceback (most recent call last):
+  File "/workspace/inspect_chunks.py", line 9, in <module>
+    print("First chunk keys:", l['chunks'][0].keys())
+                               ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+root@faa94ec9460f:/workspace#

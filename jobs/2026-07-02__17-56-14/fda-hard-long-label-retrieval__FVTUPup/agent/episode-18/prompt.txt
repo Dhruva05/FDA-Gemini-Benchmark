@@ -1,0 +1,4 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# find /workspace -name ".*"
+root@2635f56baf2a:/workspace#

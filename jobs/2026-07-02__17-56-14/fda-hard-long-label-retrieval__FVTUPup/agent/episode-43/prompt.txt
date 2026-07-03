@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 19 (char 20) | Content preview: '{\n  "analysis": "Ah!\nSo:\n- For patients with severe renal impairment (eGFR <30 mL/min), including th'...
+
+Please fix these issues and provide a proper JSON response.

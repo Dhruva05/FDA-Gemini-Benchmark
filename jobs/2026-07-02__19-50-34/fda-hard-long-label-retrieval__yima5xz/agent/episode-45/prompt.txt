@@ -1,0 +1,15 @@
+New Terminal Output:
+
+- If you have kidney disease, your healthcare provider may prescribe a lower dose (see androot@b161fe3d96d1:/workspace# cat << 'EOF' > inspect_pediatric.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         chunks = data.get('chunks', [])
+>         if len(chunks) > 108:
+>             with open('chunk_108.txt', 'w') as out:
+>                 out.write(chunks[108])
+> EOF
+root@b161fe3d96d1:/workspace# python3 inspect_pediatric.py && cat chunk_108.txt
+8.4 Pediatric Use
+The optimal dose of PAXLOVID has not been established in pediatric patients.root@b161fe3d96d1:/workspace#

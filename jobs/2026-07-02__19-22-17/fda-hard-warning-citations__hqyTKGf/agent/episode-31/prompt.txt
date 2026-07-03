@@ -1,0 +1,35 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj['drug_name'] == 'Lopinavir-Ritonavir':
+>             for i in [16, 17]:
+>                 print(f'=== PASSAGE_{i:04d} ===')
+>                 print(obj['chunks'][i])
+> "
+=== PASSAGE_0016 ===
+5.3 Pancreatitis
+Pancreatitis has been observed in patients receiving lopinavir and ritonavir therapy, including those who developed marked triglyceride elevations. In some case
+s, fatalities have been observed. Although a causal relationship to lopinavir and ritonavir has not been established, marked triglyceride elevations are a risk
+factor for development of pancreatitis . Patients with advanced HIV-1 disease may be at increased risk of elevated triglycerides and pancreatitis, and patients
+with a history of pancreatitis may be at increased risk for recurrence during lopinavir and ritonavir therapy.
+Pancreatitis should be considered if clinical symptoms (nausea, vomiting, abdominal pain) or abnormalities in laboratory values (such as increased serum lipase
+or amylase values) suggestive of pancreatitis occur. Patients who exhibit these signs or symptoms should be evaluated and lopinavir and ritonavir and/or other a
+ntiretroviral therapy should be suspended as clinically appropriate.
+=== PASSAGE_0017 ===
+5.4 Hepatotoxicity
+Patients with underlying hepatitis B or C or marked elevations in transaminase prior to treatment may be at increased risk for developing or worsening of transa
+minase elevations or hepatic decompensation with use of lopinavir and ritonavir.
+There have been postmarketing reports of hepatic dysfunction, including some fatalities. These have generally occurred in patients with advanced HIV-1 disease t
+aking multiple concomitant medications in the setting of underlying chronic hepatitis or cirrhosis. A causal relationship with lopinavir and ritonavir therapy h
+as not been established.
+Elevated transaminases with or without elevated bilirubin levels have been reported in HIV-1 mono-infected and uninfected patients as early as 7 days after the
+initiation of lopinavir and ritonavir in conjunction with other antiretroviral agents. In some cases, the hepatic dysfunction was serious; however, a definitive
+ causal relationship with lopinavir and ritonavir therapy has not been established.
+Appropriate laboratory testing should be conducted prior to initiating therapy with lopinavir and ritonavir and patients should be monitored closely during trea
+tment. Increased AST/ALT monitoring should be considered in the patients with underlying chronic hepatitis or cirrhosis, especially during the first several mon
+ths of lopinavir and ritonavir treatment .
+root@b9fc21343844:/workspace#

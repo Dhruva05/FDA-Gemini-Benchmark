@@ -1,0 +1,43 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["set_id"] == "36adb32c-638c-4d6e-b66a-1a1c35174ce6":
+>             print("ACETAMINOPHEN with CODEINE PASSAGE_0011:", repr(data["chunks"][11]))
+>         if data["set_id"] == "6972d9c1-36ec-4246-bf7b-13206d5952c3":
+>             for i in range(14, 18):
+>                 print(f"AcetaZOLAMIDE PASSAGE_{i:04d}: {repr(data["chunks"][i])}")
+> '
+ACETAMINOPHEN with CODEINE PASSAGE_0011: 'Dosage should be adjusted according to severity of pain and response of the patient.\nTake (1 - 2) tablets orally ever
+y 6-8 hours as needed.\nThe usual dose of codeine phosphate in children is 0.5 mg/kg.\nDoses may be repeated up to every 4 hours.\nThe prescriber must determine
+ the number of tablets per dose, and the maximum number of tablets per 24 hours based upon the above dosage guidance. This information should be conveyed in the
+ prescription.\nIt should be kept in mind, however, that tolerance to codeine can develop with continued use and that the incidence of untoward effects is dose
+related. Adult doses of codeine higher than 60 mg fail to give commensurate relief of pain but merely prolong analgesia and are associated with an appreciably i
+ncreased incidence of undesirable side effects. Equivalently high doses in children would have similar effects.'
+AcetaZOLAMIDE PASSAGE_0014: 'Glaucoma\nAcetaZOLAMIDE should be used as an adjunct to the usual therapy. The dosage employed in the treatment of chronic simple (
+open-angle) glaucoma ranges from 250 mg to 1 g of acetaZOLAMIDE per 24 hours, usually in divided doses for amounts over 250 mg. It has usually been found that a
+ dosage in excess of 1 g per 24 hours does not produce an increased effect. In all cases, the dosage should be adjusted with careful individual attention both t
+o symptomatology and ocular tension. Continuous supervision by a physician is advisable.\nIn treatment of secondary glaucoma and in the preoperative treatment o
+f some cases of acute congestive (closed-angle) glaucoma, the preferred dosage is 250 mg every four hours, although some cases have responded to 250 mg twice da
+ily on short-term therapy. In some acute cases, it may be more satisfactory to administer an initial dose of 500 mg followed by 125 mg or 250 mg every four hour
+s depending on the individual case. Intravenous therapy may be used for rapid relief of ocular tension in acute cases. A complementary effect has been noted whe
+n acetaZOLAMIDE has been used in conjunction with miotics or mydriatics as the case demanded.'
+AcetaZOLAMIDE PASSAGE_0015: 'Epilepsy\nIt is not clearly known whether the beneficial effects observed in epilepsy are due to direct inhibition of carbonic anhy
+drase in the central nervous system or whether they are due to the slight degree of acidosis produced by the divided dosage. The best results to date have been
+seen in petit mal in children.\nGood results, however, have been seen in patients, both children and adults, in other types of seizures such as grand mal, mixed
+ seizure patterns, myoclonic jerk patterns, etc. The suggested total daily dose is 8 to 30 mg per kg in divided doses. Although some patients respond to a low d
+ose, the optimum range appears to be from 375 to 1000 mg daily. However, some investigators feel that daily doses in excess of 1 g do not produce any better res
+ults than a 1 g dose. When acetaZOLAMIDE is given in combination with other anticonvulsants, it is suggested that the starting dose should be 250 mg once daily
+in addition to the existing medications. This can be increased to levels as indicated above.\nThe change from other medications to acetaZOLAMIDE should be gradu
+al and in accordance with usual practice in epilepsy therapy.'
+AcetaZOLAMIDE PASSAGE_0016: 'Congestive Heart Failure\nFor diuresis in congestive heart failure, the starting dose is usually 250 to 375 mg once daily in the mo
+rning (5 mg/kg). If after an initial response, the patient fails to continue to lose edema fluid, do not increase the dose but allow for kidney recovery by skip
+ping medication for a day.\nAcetaZOLAMIDE yields best diuretic results when given on alternate days, or for two days alternating with a day of rest.\nFailures i
+n therapy may be due to overdosage or too frequent dosage. The use of acetaZOLAMIDE does not eliminate the need for other therapy such as digitalis, bed rest, a
+nd salt restriction.'
+AcetaZOLAMIDE PASSAGE_0017: 'Drug-Induced Edema\nRecommended dosage is 250 to 375 mg of acetaZOLAMIDE once a day for one or two days, alternating with a day of
+rest.'
+root@2809f9ae2d53:/workspace#

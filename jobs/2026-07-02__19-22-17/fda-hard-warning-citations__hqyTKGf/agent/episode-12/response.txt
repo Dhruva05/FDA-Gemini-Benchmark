@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! In python double quotes inside python string double quotes can be tricky. Let's fix that syntax error.",
+  "plan": "I will run a python script to check if chunks map directly to `PASSAGE_####` where `####` is the zero-padded index.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); \nfor line in f:\n    obj = json.loads(line)\n    raw = obj['label_raw']\n    chunks = obj['chunks']\n    for i, chunk in enumerate(chunks):\n        pid = f'PASSAGE_{i:04d}'\n        tag = f'||{pid}||'\n        if tag not in raw:\n            print('Error:', pid, 'not in raw for', obj['drug_name'])\n            break\n    else:\n        print('Success for', obj['drug_name'])\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

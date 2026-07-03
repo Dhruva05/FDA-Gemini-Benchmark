@@ -1,0 +1,16 @@
+{
+  "analysis": "This is very clear.
+Let's see what the fourth drug is:
+- Lenalidomide (`ed7a3099-ce31-4865-b212-358d9ff6261b`)
+- Question 7 (`85c49de5de841cb9`): \"What is the recommended dosage regimen of Lenalidomide?\"
+- Question 8 (`0d262ce5d03f7c38`): \"How should Lenalidomide be administered?\"
+
+Let's print the first 25 chunks of Lenalidomide to understand its dosage and administration guidelines.",
+  "plan": "I will run a python script to print the first 25 passages of Lenalidomide.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'Lenalidomide':\n            for i, chunk in enumerate(data['chunks']):\n                if i < 25:\n                    print(f'=== PASSAGE_{i:04d} ===')\n                    print(chunk[:300] + '...')\n            break\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

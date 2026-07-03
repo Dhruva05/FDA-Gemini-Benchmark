@@ -1,0 +1,14 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = label
+s[1]
+> for i in range(26, len(l['chunks'])):
+>     text = l['chunks'][i]
+>     if '6.1' in text or '6.2' in text or 'adverse reaction' in text.lower():
+>         if any(w in text.lower() for w in ['common', 'diarrhea', 'nausea', 'vomiting']):
+>             print(f'PASSAGE_{i:04d}:', text.strip().split('\n')[0][:80])
+> f.close()"
+PASSAGE_0028: Adverse Reactions in Adults
+PASSAGE_0039: Adverse Reactions in Pediatric Patients
+PASSAGE_0071: ↑ trazodone
+root@a1980178bfd8:/workspace#

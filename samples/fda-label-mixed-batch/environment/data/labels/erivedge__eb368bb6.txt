@@ -1,0 +1,398 @@
+DRUG NAME: ERIVEDGE
+SET ID: eb368bb6-80e3-4df9-8a85-91df0a2ada6a
+
+=== PASSAGE_0000 ===
+SECTION: WARNING: EMBRYO-FETAL TOXICITY
+WARNING: EMBRYO-FETAL TOXICITY
+- ERIVEDGE can cause embryo-fetal death or severe birth defects when administered to a pregnant woman. ERIVEDGE is embryotoxic, fetotoxic, and teratogenic in animals. Teratogenic effects included severe midline defects, missing digits, and other irreversible malformations
+- Verify the pregnancy status of females of reproductive potential within 7 days prior to initiating ERIVEDGE. Advise pregnant women of the potential risks to a fetus. Advise females of reproductive potential to use effective contraception during and after ERIVEDGE
+- Advise males of the potential risk of ERIVEDGE exposure through semen and to use condoms with a pregnant partner or a female partner of reproductive potential
+
+=== PASSAGE_0001 ===
+SECTION: 1 INDICATIONS AND USAGE
+1 INDICATIONS AND USAGE
+ERIVEDGE is indicated for the treatment of adults with metastatic basal cell carcinoma, or with locally advanced basal cell carcinoma that has recurred following surgery or who are not candidates for surgery and who are not candidates for radiation.
+
+=== PASSAGE_0002 ===
+SECTION: 2.1 Important Safety Information
+2.1	Important Safety Information
+Verify pregnancy status of females of reproductive potential within 7 days prior to initiating ERIVEDGE .
+
+=== PASSAGE_0003 ===
+SECTION: 2.2 Recommended Dosage
+2.2	Recommended Dosage
+The recommended dosage of ERIVEDGE is 150 mg taken orally once daily, with or without food, until disease progression or until unacceptable toxicity.
+Swallow capsules whole. Do not open or crush capsules.
+If a dose of ERIVEDGE is missed, resume dosing with the next scheduled dose.
+
+=== PASSAGE_0004 ===
+SECTION: 2.3 Dosage Modifications for Adverse Reactions
+2.3	Dosage Modifications for Adverse Reactions
+Withhold ERIVEDGE for up to 8 weeks for intolerable adverse reactions until improvement or resolution. Treatment durations shorter than 8 weeks prior to interruptions have not been studied.
+Permanently discontinue ERIVEDGE if patients experience severe cutaneous adverse reactions (SCARs) including Stevens-Johnson syndrome (SJS), toxic epidermal necrolysis (TEN), or drug reaction with eosinophilia and systemic symptoms (DRESS) .
+Interrupt ERIVEDGE for severe or intolerable musculoskeletal adverse reactions. Permanently discontinue ERIVEDGE for recurrent, severe or intolerable musculoskeletal adverse reactions .
+
+=== PASSAGE_0005 ===
+SECTION: 3 DOSAGE FORMS AND STRENGTHS
+3 DOSAGE FORMS AND STRENGTHS
+Capsules: 150 mg with "150 mg" printed on pink opaque body and "VISMO" printed on grey opaque cap in black ink.
+
+=== PASSAGE_0006 ===
+SECTION: 4 CONTRAINDICATIONS
+4 CONTRAINDICATIONS
+None.
+
+=== PASSAGE_0007 ===
+SECTION: 5.1 Embryo-Fetal Toxicity
+5.1	Embryo-Fetal Toxicity
+Based on its mechanism of action, ERIVEDGE can cause embryo-fetal death or severe birth defects when administered to a pregnant woman. In animal reproduction studies, vismodegib was embryotoxic, fetotoxic, and teratogenic at maternal exposures lower than the human exposures at the recommended dose of 150 mg once daily .
+
+=== PASSAGE_0008 ===
+SECTION: Females of Reproductive Potential
+Females of Reproductive Potential
+Verify the pregnancy status of females of reproductive potential within 7 days prior to initiating ERIVEDGE. Advise pregnant women of the potential risk to a fetus. Advise females of reproductive potential to use effective contraception during therapy with ERIVEDGE and for 24 months after the final dose .
+
+=== PASSAGE_0009 ===
+SECTION: Males
+Males
+Vismodegib is present in semen. It is not known if the amount of vismodegib in semen can cause embryo-fetal harm. Advise males to use condoms, even after a vasectomy, to avoid potential drug exposure in pregnant partners and female partners of reproductive potential during therapy and for 3 months after the final dose of ERIVEDGE. Advise male patients not to donate semen during and for 3 months after the final dose of ERIVEDGE .
+
+=== PASSAGE_0010 ===
+SECTION: Blood Donation
+Blood Donation
+Advise patients not to donate blood or blood products while receiving ERIVEDGE and for 24 months after the final dose of ERIVEDGE.
+
+=== PASSAGE_0011 ===
+SECTION: 5.2 Severe Cutaneous Adverse Reactions
+5.2 	Severe Cutaneous Adverse Reactions
+Severe cutaneous adverse reactions (SCARs), including Stevens-Johnson syndrome (SJS), toxic epidermal necrolysis (TEN) and drug reaction with eosinophilia and systemic symptoms (DRESS), which can be life-threatening or fatal, have been reported during treatment with ERIVEDGE .
+Permanently discontinue ERIVEDGE in patients with these reactions .
+
+=== PASSAGE_0012 ===
+SECTION: 5.3 Musculoskeletal Adverse Reactions
+5.3 	Musculoskeletal Adverse Reactions
+Musculoskeletal adverse reactions, which may be accompanied by serum creatine phosphokinase (CPK) elevations, have occurred with ERIVEDGE and other drugs which inhibit the hedgehog (Hh) pathway. In the pooled safety population in clinical trials of ERIVEDGE, musculoskeletal and connective tissue adverse reactions occurred in 78% of patients treated, with 7% (9/138) reported as Grade 3. The most frequent manifestations of musculoskeletal and connective tissue adverse reactions (all grades) reported were muscle spasms (72%) and arthralgias (16%). In a post-approval clinical trial of 1232 patients, Grade 3 or 4 elevations in serum CPK laboratory values occurred in 2.4% of the 453 patients who had any CPK measurement
+.
+Obtain baseline serum creatine phosphokinase (CPK) and creatinine levels and as clinically indicated (e.g., if muscle symptoms are reported). Depending on the severity of symptoms, temporary dose interruption or discontinuation may be required for musculoskeletal adverse reactions or serum CPK elevation .
+
+=== PASSAGE_0013 ===
+SECTION: 5.4 Premature Fusion of the Epiphyses
+5.4 	Premature Fusion of the Epiphyses
+Premature fusion of the epiphyses has been reported in pediatric patients exposed to ERIVEDGE. In some cases, fusion progressed after drug discontinuation . ERIVEDGE is not indicated for pediatric patients.
+
+=== PASSAGE_0014 ===
+SECTION: 6 ADVERSE REACTIONS
+6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Embryo-Fetal Toxicity
+- Severe Cutaneous Adverse Reactions
+- Musculoskeletal Adverse Reactions
+- Premature Fusion of the Epiphyses
+
+=== PASSAGE_0015 ===
+SECTION: 6.1 Clinical Trials Experience
+6.1	Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice.
+The safety data described below reflect exposure to ERIVEDGE in 138 patients with advanced basal cell carcinoma (BCC) who received ERIVEDGE at doses ≥ 150 mg orally daily in four open-label, uncontrolled, dose-ranging or fixed single dose clinical trials Study SHH3925g, SHH4437g, SHH4476g and SHH4610g]. The median age of these patients was 61 years (range 21 to 101 years), 100% were White (including Hispanics), and 64% were male. The median duration of treatment was approximately 10 months (range 21 days to 36 months); 111 patients received ERIVEDGE for 6 months or longer.
+The most common adverse reactions (≥ 10%) were muscle spasms, alopecia, dysgeusia, weight loss, fatigue, nausea, diarrhea, decreased appetite, constipation, arthralgias, vomiting, and ageusia (Table 1).
+
+=== PASSAGE_0016 ===
+SECTION: Amenorrhea
+Amenorrhea
+Among patients from the clinical trials included in the pooled safety data analysis, 30% of 10 pre-menopausal women developed amenorrhea while receiving ERIVEDGE.
+
+=== PASSAGE_0017 ===
+SECTION: Laboratory Abnormalities
+Laboratory Abnormalities
+Grade 3 laboratory abnormalities observed in clinical trials were hyponatremia (4%), azotemia (2%) and hypokalemia (1%).
+Additionally, in a post-approval clinical trial conducted in 1232 patients with locally advanced or metastatic BCC treated with ERIVEDGE, a subset of 29 patients had baseline values for blood creatine phosphokinase (CPK) reported. Within this subset of patients, 38% had a shift from baseline, including Grade 3 (3%) increased CPK. Grade 3 or 4 increased CPK occurred in 2.4% of the 453 patients across the entire study population with any CPK measurement.
+
+=== PASSAGE_0018 ===
+SECTION: 6.2 Postmarketing Experience
+6.2	Postmarketing Experience
+The following adverse reactions have been identified during post-approval use of ERIVEDGE. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.
+Hepatobiliary disorders: Drug-induced liver injury
+Skin and subcutaneous tissue disorders: Stevens-Johnson syndrome/toxic epidermal necrolysis, drug reaction with eosinophilia and systemic symptoms .
+
+=== PASSAGE_0019 ===
+SECTION: 8.1 Pregnancy
+8.1 Pregnancy
+Pregnancy Exposure Registry
+There is a pregnancy exposure registry that monitors pregnancy outcomes in women exposed to ERIVEDGE during pregnancy. Report pregnancies to Genentech at 1-888-835-2555.
+
+=== PASSAGE_0020 ===
+SECTION: Risk Summary
+Risk Summary
+Based on its mechanism of action and findings from animal reproduction studies, ERIVEDGE can cause fetal harm when administered to a pregnant woman . In animal reproduction studies, oral administration of vismodegib during organogenesis at doses below the 150 mg clinical dose resulted in embryotoxicity, fetotoxicity, and teratogenicity in rats . There are no human data on the use of ERIVEDGE in pregnant women. Advise pregnant women of the potential risk to a fetus.
+In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2-4% and 15-20%, respectively.
+
+=== PASSAGE_0021 ===
+SECTION: Animal Data
+Animal Data
+In an embryo-fetal toxicity study, pregnant rats were administered vismodegib orally at doses of 10, 60, or 300 mg/kg/day during the period of organogenesis. Pre- and post-implantation loss were increased at doses of ≥ 60 mg/kg/day approximately 2 times the human exposure at the 150 mg clinical dose based on area under the curve (AUC)], which included early resorption of 100% of the fetuses. A dose of 10 mg/kg/day approximately 0.2 times the human exposure (AUC) at the recommended 150 mg clinical dose] resulted in malformations (including missing and/or fused digits, open perineum and craniofacial anomalies) and retardations or variations (including dilated renal pelvis, dilated ureter, and incompletely or unossified sternal elements, centra of vertebrae, or proximal phalanges and claws).
+
+=== PASSAGE_0022 ===
+SECTION: 8.2 Lactation
+8.2 Lactation
+No data are available regarding the presence of vismodegib in human milk, the effects of the drug on the breastfed child, or the effects of the drug on milk production. Because of the potential for serious adverse reactions in breastfed infants from ERIVEDGE, advise women that breastfeeding is not recommended during therapy with ERIVEDGE and for 24 months after the final dose.
+
+=== PASSAGE_0023 ===
+SECTION: 8.3 Females and Males of Reproductive Potential
+8.3 Females and Males of Reproductive Potential
+Pregnancy Testing
+Verify the pregnancy status of females of reproductive potential within 7 days prior to initiating ERIVEDGE.
+
+=== PASSAGE_0024 ===
+SECTION: Contraception
+Contraception
+Based on its mechanism of action and animal data, ERIVEDGE can cause fetal harm when administered to a pregnant woman .
+
+=== PASSAGE_0025 ===
+SECTION: Females
+Females
+Advise females of reproductive potential to use effective contraception during therapy with ERIVEDGE and for 24 months after the final dose.
+
+=== PASSAGE_0026 ===
+SECTION: Males
+Males
+Vismodegib is present in semen . It is not known if the amount of vismodegib in semen can cause embryo-fetal harm. Advise male patients to use condoms, even after a vasectomy, to avoid drug exposure to pregnant partners and female partners of reproductive potential during therapy with and for 3 months after the final dose of ERIVEDGE. Advise males of the potential risk to an embryo or fetus if a female partner of reproductive potential is exposed to ERIVEDGE. Advise males not to donate semen during therapy with ERIVEDGE and for 3 months after the final dose.
+
+=== PASSAGE_0027 ===
+SECTION: Females
+Females
+Amenorrhea can occur in females of reproductive potential. Reversibility of amenorrhea is unknown .
+
+=== PASSAGE_0028 ===
+SECTION: 8.4 Pediatric Use
+8.4 Pediatric Use
+The safety and effectiveness of ERIVEDGE have not been established in pediatric patients.
+Premature fusion of the epiphyses and precocious puberty have been reported in pediatric patients exposed to ERIVEDGE. In some cases, epiphyseal fusion progressed after drug discontinuation.
+
+=== PASSAGE_0029 ===
+SECTION: Juvenile Animal Toxicity Data
+Juvenile Animal Toxicity Data
+In repeat-dose toxicology studies in rats, administration of oral vismodegib resulted in toxicities in bone and teeth. Effects on bone consisted of closure of the epiphyseal growth plate when oral vismodegib was administered for 26 weeks at ≥ 50 mg/kg/day (approximately ≥ 0.4 times the human exposure (AUC) at the 150 mg clinical dose). Abnormalities in growing incisor teeth (including degeneration/necrosis of odontoblasts, formation of fluid-filled cysts in the dental pulp, ossification of the root canal, and hemorrhage resulting in breakage or loss of teeth) were observed after administration of oral vismodegib at ≥ 15 mg/kg/day (approximately ≥ 0.2 times the human exposure (AUC) at the 150 mg clinical dose).
+
+=== PASSAGE_0030 ===
+SECTION: 8.5 Geriatric Use
+8.5 Geriatric Use
+Clinical studies of ERIVEDGE did not include sufficient numbers of patients aged 65 and over to determine whether they respond differently from younger patients.
+
+=== PASSAGE_0031 ===
+SECTION: 8.6 Hepatic Impairment
+8.6	Hepatic Impairment
+No dose adjustment is required in patients with hepatic impairment .
+
+=== PASSAGE_0032 ===
+SECTION: 8.7 Renal Impairment
+8.7	Renal Impairment
+No dose adjustment is required in patients with renal impairment .
+
+=== PASSAGE_0033 ===
+SECTION: 11 DESCRIPTION
+11 DESCRIPTION
+Vismodegib is a hedgehog (Hh) pathway inhibitor, which is described chemically as 2-Chloro-N-(4-chloro-3-(pyridin-2-yl)phenyl)-4-(methylsulfonyl)benzamide. The molecular formula is C19H14Cl2N2O3S. The molecular weight is 421.3 g/mol and the structural formula is:
+Vismodegib is a crystalline free base with a pKa (pyridinium cation) of 3.8, appearing as a white to tan powder. The solubility of vismodegib is pH dependent with 0.1 µg/mL at pH 7 and 0.99 mg/mL at pH 1. The partition coefficient (log P) is 2.7.
+ERIVEDGE (vismodegib) for oral administration is supplied in capsules containing 150 mg vismodegib and the following inactive ingredients: microcrystalline cellulose, lactose monohydrate, sodium lauryl sulfate, povidone, sodium starch glycolate, talc, and magnesium stearate (non-bovine). The capsule shell contains gelatin, titanium dioxide, red iron oxide, and black iron oxide. The black printing ink contains shellac and black iron oxide.
+
+=== PASSAGE_0034 ===
+SECTION: 12.1 Mechanism of Action
+12.1 Mechanism of Action
+Vismodegib is an inhibitor of the Hedgehog pathway. Vismodegib binds to and inhibits Smoothened, a transmembrane protein involved in Hedgehog signal transduction.
+
+=== PASSAGE_0035 ===
+SECTION: 12.2 Pharmacodynamics
+12.2 Pharmacodynamics
+Cardiac Electrophysiology
+ERIVEDGE did not prolong the QT interval to any clinically relevant extent following 7 days of 150 mg once-daily dosing (at steady state) .
+
+=== PASSAGE_0036 ===
+SECTION: 12.3 Pharmacokinetics
+12.3 Pharmacokinetics
+The pharmacokinetics of vismodegib were studied in healthy subjects and patients. Following daily oral dosing, the pharmacokinetics of vismodegib appear to be nonlinear with steady state achieved within 7 days. Increasing the dose from 150 mg to 540 mg (1 to 3.6 times the recommended dose) does not result in higher steady state plasma concentrations. Average plasma concentration of vismodegib at steady state (Css,avg) is ~23 µM following 150 mg once daily dose.
+
+=== PASSAGE_0037 ===
+SECTION: Absorption
+Absorption
+The single dose absolute bioavailability of vismodegib is 32%. Absorption is saturable as evidenced by the lack of dose proportional increase in exposure after a single dose of 270 mg or 540 mg vismodegib.
+
+=== PASSAGE_0038 ===
+SECTION: Effect of Food
+Effect of Food
+Cmax and AUC0-24hr of vismodegib at steady state are not affected by food.
+
+=== PASSAGE_0039 ===
+SECTION: Distribution
+Distribution
+The volume of distribution of vismodegib ranges from 16.4 to 26.6 L. Vismodegib plasma protein binding in patients is > 99%. Vismodegib binds to both human serum albumin and alpha-1-acid glycoprotein (AAG) and binding to AAG is saturable.
+Male patients had an average concentration of vismodegib in semen on day 8 that was 6.5% of the average steady state concentration (Css) observed in plasma.
+
+=== PASSAGE_0040 ===
+SECTION: Elimination
+Elimination
+The estimated elimination half-life (t1/2) of vismodegib is 4 days after continuous once-daily dosing and 12 days after a single dose.
+
+=== PASSAGE_0041 ===
+SECTION: Metabolism
+Metabolism
+Greater than 98% of the total circulating drug-related components are the parent drug. Metabolic pathways of vismodegib in humans include oxidation, glucuronidation, and pyridine ring cleavage. The two most abundant oxidative metabolites recovered in feces are produced in vitro by recombinant CYP2C9 and CYP3A.
+
+=== PASSAGE_0042 ===
+SECTION: Excretion
+Excretion
+Vismodegib and its metabolites are eliminated primarily by the hepatic route with 82% of the administered dose recovered in the feces and 4.4% recovered in urine.
+
+=== PASSAGE_0043 ===
+SECTION: Specific Populations
+Specific Populations
+Weight (41-140 kg), age (26-89 years), sex, mild to moderate renal impairment (creatinine clearance of 30 to 79 mL/min), mild hepatic impairment (normal total bilirubin and aspartate transaminase (AST) > upper limit of normal (ULN) or total bilirubin > 1 to 1.5 times ULN), moderate hepatic impairment (total bilirubin > 1.5 to 3 times ULN), or severe hepatic impairment (total bilirubin > 3 to 10 times ULN) had no clinically relevant effects on the systemic exposure of vismodegib. The impact of severe renal impairment on the pharmacokinetics of vismodegib is unknown.
+
+=== PASSAGE_0044 ===
+SECTION: Clinical Studies
+Clinical Studies
+No clinically significant differences in vismodegib pharmacokinetics were observed when used concomitantly with fluconazole (moderate CYP2C9 and CYP3A4 inhibitor), itraconazole (strong CYP3A4 inhibitor and P-gp inhibitor) and rabeprazole (gastric acid reducing agent, proton pump inhibitor).
+No clinically significant differences in the pharmacokinetics of the following drugs were observed when used concomitantly with vismodegib: rosiglitazone (a CYP2C8 substrate) or ethinyl estradiol and norethindrone (oral contraceptive).
+
+=== PASSAGE_0045 ===
+SECTION: In Vitro Studies
+In Vitro Studies
+Vismodegib is an inhibitor of the transporter BCRP and is not an inducer of CYP1A2, CYP2B6, or CYP3A.
+
+=== PASSAGE_0046 ===
+SECTION: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+13.1	Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenicity studies were performed in mice and rats. No carcinogenic potential was identified in either species. Vismodegib was not mutagenic in the in vitro bacterial reverse mutation (Ames) assay and was not clastogenic in the in vitro human chromosomal aberration assay in human peripheral blood lymphocytes or in the in vivo rat bone marrow micronucleus assay.
+In a dedicated 26-week rat fertility study, no effects on male reproductive organs or fertility endpoints were observed at vismodegib doses of 100 mg/kg/day approximately 1.3 times the human exposure (steady state AUC0-24hr) at the 150 mg clinical dose] either at the end of dosing or following a 16-week recovery phase. While there were increased numbers of degenerating germ cells and hypospermia in sexually immature dogs observed at ≥ 50 mg/kg/day in the 4-week general toxicity study, there were no effects on male reproductive organs in sexually mature rats and dogs, in the vismodegib general toxicity studies of up to 26-weeks.
+In a female fertility study, treatment of rats with vismodegib at 100 mg/kg/day approximately 1.2-times the human exposure (steady state AUC0-24hr) at the 150 mg clinical dose] for 26-weeks prior to mating resulted in decreased implantations, increased percent preimplantation loss, and decreased numbers of dams with viable embryos. No vismodegib-related changes in fertility were observed following a 16-week recovery period. In a 26-week general toxicity study in rats, decreased numbers of corpora lutea were observed at 100 mg/kg/day; the effect was not reversed by the end of an 8-week recovery period.
+
+=== PASSAGE_0047 ===
+SECTION: 13.2 Animal Toxicology and/or Pharmacology
+13.2	Animal Toxicology and/or Pharmacology
+Neurologic effects characterized as limb or body tremors or twitching were observed in rats administered oral vismodegib for 4 weeks or longer at ≥ 50 mg/kg/day (approximately ≥ 0.4 times the human exposure (AUC) at the 150 mg clinical dose). These observations resolved upon discontinuation of dosing and were not associated with microscopic findings.
+
+=== PASSAGE_0048 ===
+SECTION: 14 CLINICAL STUDIES
+14 CLINICAL STUDIES
+A single, international, single-arm, multi-center, open-label, 2-cohort trial SHH4476g (NCT00833417)] was conducted in 104 patients with either metastatic basal cell carcinoma (mBCC) (n = 33) or locally advanced BCC (laBCC) (n = 71). Patients with laBCC were required to have lesions that had recurred after radiotherapy, unless radiotherapy was contraindicated or inappropriate (e.g. Gorlin syndrome; limitations because of location of tumor or cumulative prior radiotherapy dose), and where the lesions were either unresectable or surgical resection would result in substantial deformity. Patients were to receive ERIVEDGE 150 mg orally once daily until disease progression or unacceptable toxicity.
+The major efficacy outcome measure was objective response rate (ORR) as assessed by an independent review facility (IRF). In the mBCC cohort, tumor response was assessed according to the Response Evaluation Criteria in Solid Tumors (RECIST) version 1.0. In the laBCC cohort, tumor response evaluation included measurement of externally assessable tumor (including scar) and assessment for ulceration in photographs, radiographic assessment of target lesions (if appropriate), and tumor biopsy. An objective response in laBCC required at least one of the following criteria and absence of any criterion for disease progression: (1) ≥ 30% reduction in lesion size sum of the longest diameter (SLD)] from baseline in target lesions by radiographic assessment; (2) ≥ 30% reduction in SLD from baseline in externally visible dimension of target lesions; (3) complete resolution of ulceration in all target lesions. Complete response was defined as objective response (as defined above) with no residual BCC on sampling tumor biopsy. Disease progression was defined as any of the following: (1) ≥ 20% increase in the SLD from nadir in target lesions (either by radiography or by externally visible dimension); (2) new ulceration of target lesions persisting without evidence of healing for at least 2 weeks; (3) new lesions by radiographic assessment or physical examination; (4) progression of non-target lesions by RECIST.
+Of the 104 patients enrolled, 96 patients were evaluable for ORR. Twenty-one percent of patients carried a diagnosis of Gorlin syndrome. The median age of the efficacy evaluable population was 62 years (46% were at least 65 years old), 61% male and 100% White. For the mBCC cohort (n = 33), 97% of patients had prior therapy including surgery (97%), radiotherapy (58%), and systemic therapies (30%). For the laBCC cohort (n = 63), 94% of patients had prior therapies including surgery (89%), radiotherapy (27%), and systemic/topical therapies (11%). The median duration of treatment was 10.2 months (range 0.7 to 18.7 months).
+The efficacy results are presented in Table 2.
+
+=== PASSAGE_0049 ===
+SECTION: 16 HOW SUPPLIED/STORAGE AND HANDLING
+16 HOW SUPPLIED/STORAGE AND HANDLING
+ERIVEDGE capsules have a pink opaque body and a grey opaque cap with "150 mg" printed on the capsule body and "VISMO" printed on the capsule cap in black ink.
+ERIVEDGE capsules are available in bottles of 28 capsules (NDC 50242-140-01).
+
+=== PASSAGE_0050 ===
+SECTION: Store at room temperature 20°C to 25°C (68°F to 77°F); excursions permitted between 15°C to 30°C (59°F to 86°F) .
+Store at room temperature 20°C to 25°C (68°F to 77°F); excursions permitted between 15°C to 30°C (59°F to 86°F) .
+Keep the bottle tightly closed to protect from moisture.
+
+=== PASSAGE_0051 ===
+SECTION: 17 PATIENT COUNSELING INFORMATION
+17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide).
+
+=== PASSAGE_0052 ===
+SECTION: Embryo-Fetal Toxicity
+Embryo-Fetal Toxicity
+
+=== PASSAGE_0053 ===
+SECTION: Females of Reproductive Potential
+Females of Reproductive Potential
+- Advise women of the potential risk to a fetus. Advise female patients and female partners of male patients to contact their healthcare provider with a known or suspected pregnancy.
+- Inform females there is a Pregnancy Exposure Registry that monitors pregnancy outcomes in females exposed to ERIVEDGE during pregnancy and that they can contact the Pregnancy Exposure Registry by calling 1-888-835-2555.
+- Advise females of reproductive potential to use effective contraception during therapy with ERIVEDGE and for 24 months after the final dose.
+
+=== PASSAGE_0054 ===
+SECTION: Males
+Males
+- Advise males, even those with prior vasectomy, to use condoms to avoid potential drug exposure in both pregnant partners and female partners of reproductive potential during therapy with ERIVEDGE and for 3 months after the final dose.
+- Advise males not to donate semen during therapy with ERIVEDGE and for 3 months after the final dose.
+
+=== PASSAGE_0055 ===
+SECTION: Blood Donation
+Blood Donation
+- Advise patients not to donate blood or blood products during therapy with ERIVEDGE and for 24 months after the final dose.
+
+=== PASSAGE_0056 ===
+SECTION: Lactation
+Lactation
+- Advise women not to breastfeed during therapy with ERIVEDGE and for 24 months after the final dose
+
+=== PASSAGE_0057 ===
+SECTION: Severe Cutaneous Reactions
+Severe Cutaneous Reactions
+- Inform patients of the signs and symptoms of severe cutaneous reactions. Advise patients to contact their healthcare provider immediately for signs and symptoms of severe cutaneous reactions
+
+=== PASSAGE_0058 ===
+SECTION: Muscle-related adverse reactions
+Muscle-related adverse reactions
+- Advise patients starting therapy with ERIVEDGE of the risk of muscle-related adverse reactions. Advise patients to contact their healthcare provider immediately for any new unexplained muscle pain, tenderness, or weakness occurring during treatment or that persists after discontinuing ERIVEDGE
+
+=== PASSAGE_0059 ===
+SECTION: ERIVEDGE® (vismodegib) capsules
+ERIVEDGE® (vismodegib) capsules
+Manufactured by:Patheon, Inc.Mississauga, Canada
+Distributed by:
+Genentech USA, Inc.A Member of the Roche Group1 DNA WaySouth San Francisco, CA 94080-4990
+ERIVEDGE is a registered trademark of Genentech, Inc.
+©2023 Genentech, Inc. All rights reserved.
+
+=== PASSAGE_0060 ===
+SECTION: MEDICATION GUIDE
+MEDICATION GUIDE
+- You should talk with your healthcare provider about the risks of ERIVEDGE to your unborn child.
+- Your healthcare provider will do a pregnancy test within 7 days before you start taking ERIVEDGE.
+- In order to avoid pregnancy, you should use birth control during treatment and for 24 months after your final dose of ERIVEDGE. Talk with your healthcare provider about what birth control method is right for you during this time.
+- Talk to your healthcare provider right away if you have unprotected sex or if you think that your birth control has failed.
+- Tell your healthcare provider right away if you become pregnant or think that you may be pregnant.
+- ERIVEDGE is present in semen. Do not donate semen while you are taking ERIVEDGE and for 3 months after your final dose.
+- You should always use a condom, even if you have had a vasectomy, during sex with female partners who are pregnant or who are able to become pregnant, during treatment with ERIVEDGE and for 3 months after your final dose to protect your female partner from being exposed to ERIVEDGE.
+- Tell your healthcare provider right away if your partner becomes pregnant or thinks she is pregnant while you are taking ERIVEDGE.
+- are pregnant or plan to become pregnant. See "
+- are breastfeeding or plan to breastfeed. It is not known if ERIVEDGE passes into your breast milk. You should not breastfeed during treatment and for 24 months after your final dose of ERIVEDGE. Talk to your healthcare provider about the best way to feed your baby during this time.
+- Take ERIVEDGE exactly as your healthcare provider tells you.
+- You can take ERIVEDGE with or without food.
+- Swallow ERIVEDGE capsules whole. Do not open or crush the capsules .
+- Take ERIVEDGE 1 time each day.
+- If you miss a dose, skip the missed dose. Just take your next scheduled dose.
+- Your healthcare provider will perform certain tests to check you for side effects before and during treatment with ERIVEDGE.
+- Your healthcare provider may temporarily or permanently stop treatment with ERIVEDGE if you have certain side effects. Do not stop taking ERIVEDGE unless your healthcare provider tells you to.
+- Do not donate blood or blood products while you are taking ERIVEDGE and for 24 months after your final dose.
+- For Males: Do not donate semen while you are taking ERIVEDGE and for 3 months after your final dose.
+- See "
+- Severe skin reactions . Severe skin reactions have happened in some people taking ERIVEDGE. You may need to be treated in a hospital because these severe skin reactions can be life-threatening or lead to death. Tell your healthcare provider right away if you develop any of the following signs or symptoms of a severe skin reaction, including:
+- blisters or peeling of your skin
+- blisters on your lip, or around your mouth or eyes
+- mouth sores or genital sores
+- high fever or flu-like symptoms
+- enlarged lymph nodes
+- skin pain and burning
+- Your healthcare provider may permanently stop ERIVEDGE if you develop a severe skin reaction.
+- Muscle Problems. Muscle problems are common with ERIVEDGE, but can also sometimes be serious. ERIVEDGE can increase your risk of muscle spasms or muscle pain. Tell your healthcare provider right away if you develop any new or worsening muscle pain, tenderness, or weakness during or after treatment with ERIVEDGE. Your healthcare provider should do a blood test to check for muscle problems and to check your kidney function before you start taking ERIVEDGE, and as needed during treatment if you develop muscle problems.
+- Bone growth problems. Bone growth problems have happened in children who have been exposed to ERIVEDGE. These problems may continue even after stopping treatment with ERIVEDGE.
+- muscle spasms
+- hair loss
+- change in how things taste or loss of taste
+- weight loss
+- tiredness
+- nausea
+- diarrhea
+- decreased appetite
+- constipation
+- joint pain
+- vomiting
+- Store ERIVEDGE at room temperature between 68°F to 77°F (20°C to 25°C).
+- Keep the bottle tightly closed to protect ERIVEDGE from moisture.
+
+=== PASSAGE_0061 ===
+SECTION: Representative sample of labeling :
+Representative sample of labeling :
+
+=== PASSAGE_0062 ===
+SECTION: 150 mg
+150 mg
+Each capsule contains 150 mg of vismodegib
+Attention Pharmacist: Dispense the accompanying Medication Guide to each patient.

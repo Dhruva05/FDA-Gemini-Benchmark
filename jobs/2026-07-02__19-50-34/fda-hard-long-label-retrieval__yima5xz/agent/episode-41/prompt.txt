@@ -1,0 +1,23 @@
+New Terminal Output:
+
+OVID is not recommended for use in patients with severe (Child-Pugh Class C) hepatic impairment .root@b161fe3d96d1:/workspace# cat chunk_003.txt
+2.1     Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 150 mg;100 mg for patients with moderate renal impairment
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg (Day 1) and 150 mg;100 mg (Days 2-5) for patients with severe renal impairment
+Nirmatrelvir must be co-administered with ritonavir. Failure to correctly co-administer nirmatrelvir with ritonavir may result in plasma levels of nirmatrelvir
+that are insufficient to achieve the desired therapeutic effect.
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID . Completion of the full 5-day treatment course and continued isolation
+in accordance with public health recommendations are important to maximize viral clearance and minimize transmission of SARS-CoV-2.
+The 5-day treatment course of PAXLOVID should be initiated as soon as possible after a diagnosis of COVID-19 has been made, and within 5 days of symptom onset e
+ven if baseline COVID-19 symptoms are mild. Should a patient require hospitalization due to severe or critical COVID-19 after starting treatment with PAXLOVID,
+the patient should complete the full 5-day treatment course per the healthcare provider's discretion.
+If the patient misses a dose of PAXLOVID within 8 hours of the time it is usually taken, the patient should take it as soon as possible and resume the normal do
+sing schedule. If the patient misses a dose by more than 8 hours, the patient should not take the missed dose and instead take the next dose at the regularly sc
+heduled time. The patient should not double the dose to make up for a missed dose.
+PAXLOVID (both nirmatrelvir and ritonavir tablets) can be taken with or without food . The tablets should be swallowed whole and not chewed, broken, or crushed.
+root@b161fe3d96d1:/workspace# cat chunk_004.txt
+2.2     Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together oral
+ly twice daily in the morning and at bedtime for 5 days.root@b161fe3d96d1:/workspace#

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 150 (char 151) | Content preview: '{\n  "analysis": "Wait, for `bba4e7c8-db8e-4522-915c-48ee809e3bce` (365 Whole Foods Market Loratadine'...
+
+Please fix these issues and provide a proper JSON response.

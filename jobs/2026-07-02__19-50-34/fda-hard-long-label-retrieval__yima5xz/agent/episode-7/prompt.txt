@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# find /workspace -maxdepth 3
+/workspace
+/workspace/inspect_labels2.py
+/workspace/inspect_labels.py
+/workspace/data
+/workspace/data/public
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+root@b161fe3d96d1:/workspace#

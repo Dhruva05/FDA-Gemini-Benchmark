@@ -1,0 +1,16 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "import json
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     for line in f:
+>         q = json.loads(line)
+>         print(q['qid'], q['required_output_fields'])"
+b2531657ba5c7a78 ['qid', 'status', 'answer', 'citations', 'structured_fields']
+6f12607a1ba14dd5 ['qid', 'status', 'answer', 'citations', 'structured_fields']
+fbab4114f66e2dda ['qid', 'status', 'answer', 'citations', 'structured_fields']
+2d63e0a82215867f ['qid', 'status', 'answer', 'citations', 'structured_fields']
+cf74a5a8ac9b19de ['qid', 'status', 'answer', 'citations', 'structured_fields']
+c4dc176c4827f0ef ['qid', 'status', 'answer', 'citations', 'structured_fields']
+000ecd1d6df50389 ['qid', 'status', 'answer', 'citations', 'structured_fields']
+b54c25890c1ae3a6 ['qid', 'status', 'answer', 'citations', 'structured_fields']
+root@2635f56baf2a:/workspace#

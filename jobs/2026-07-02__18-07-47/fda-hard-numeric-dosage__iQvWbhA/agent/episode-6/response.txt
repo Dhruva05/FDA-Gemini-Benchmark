@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! `chunks` is a list of strings! But wait, how does a chunk have a `passage_id` or `heading`? Let's check the schema of `labels.jsonl` more carefully. Let's see all keys of the label dictionary.",
+  "plan": "I will print the keys of the first label dict and check if there are other keys like `passage_id` or if the chunks are formatted in a certain way, or if there's a mapping.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); l=json.loads(f.readline()); print(l.keys())\"\n",
+      "duration": 0.5
+    }
+  ]
+}

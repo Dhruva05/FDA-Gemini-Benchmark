@@ -1,0 +1,14 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     data = json.loads(next(f))
+>     print("PASSAGE in label_raw:", "PASSAGE" in data["label_raw"])
+>     if "PASSAGE" in data["label_raw"]:
+>         idx = data["label_raw"].find("PASSAGE")
+>         print("Snippet around PASSAGE:", repr(data["label_raw"][idx-50:idx+150]))
+> '
+PASSAGE in label_raw: True
+Snippet around PASSAGE: ''
+root@2809f9ae2d53:/workspace#

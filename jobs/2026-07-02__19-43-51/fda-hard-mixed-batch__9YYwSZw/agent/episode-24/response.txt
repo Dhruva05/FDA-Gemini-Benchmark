@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The label does mention \"tablets\" in PASSAGE_0059. Let's print PASSAGE_0059 and see.",
+  "plan": "I will print the full text of PASSAGE_0059 for Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"drug_name\"] == \"Lopinavir-Ritonavir\":\n            print(data[\"chunks\"][59])\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

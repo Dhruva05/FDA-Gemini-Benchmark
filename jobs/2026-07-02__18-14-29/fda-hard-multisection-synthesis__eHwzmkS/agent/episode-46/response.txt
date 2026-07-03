@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! Section 4 is exactly `PASSAGE_0012`! Let's print the entire `PASSAGE_0012` to see what is contraindicated with Paxlovid.",
+  "plan": "I will run a python script to display the full text of `PASSAGE_0012` in the Paxlovid label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; print(labels[0]['chunks'][12]); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "analysis": "Wait, let's list all headings starting with \"3 \" or \"3.\" in Lopinavir-Ritonavir to see if there is a Dosage Forms and Strengths section.",
+  "plan": "I will write a python script to list headings starting with \"3\" in Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > list_lopinavir_forms.py\nimport json\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        label = json.loads(line)\n        if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85':\n            for idx, chunk in enumerate(label['chunks']):\n                first_line = chunk.strip().split('\\n')[0]\n                if first_line.startswith('3 ') or first_line.startswith('3.'):\n                    print(f\"PASSAGE_{idx:04d}: {first_line}\")\nEOF\npython3 list_lopinavir_forms.py\n",
+      "duration": 1.0
+    }
+  ],
+  "task_complete": false
+}

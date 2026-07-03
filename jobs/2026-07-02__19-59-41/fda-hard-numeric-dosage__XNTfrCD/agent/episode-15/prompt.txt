@@ -1,0 +1,64 @@
+Previous response had warnings:
+WARNINGS: - Extra text detected after JSON object
+
+New Terminal Output:
+
+root@3d44031eb234:/workspace# sed -n '1,10p' /workspace/all_dosage_sections.txt
+====================================================================================================
+Lopinavir-Ritonavir (4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85)
+====================================================================================================
+PASSAGE_0001:
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+--------------------------------------------------------------------------------
+PASSAGE_0002:
+2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be us
+ed for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+root@3d44031eb234:/workspace# sed -n '180,190p' /workspace/all_dosage_sections.txt
+====================================================================================================
+Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate (d9a4185e-43fa-4aeb-9b0f-8db01b166038)
+====================================================================================================
+PASSAGE_0002:
+2.1 Testing Prior to Initiation and During Treatment with Emtricitabine, Rilpivirine and Tenofovir Disoproxil Fumarate Tablets
+Prior to or when initiating emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, test patients for hepatitis B virus infection .
+Prior to initiation of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, and during treatment with emtricitabine, rilpivirine and tenofovir
+disoproxil fumarate tablets, on a clinically appropriate schedule, assess serum creatinine, estimated creatinine clearance, urine glucose and urine protein in a
+ll patients. In patients with chronic kidney disease, also assess serum phosphorus .
+--------------------------------------------------------------------------------
+PASSAGE_0003:
+2.2 Recommended Dosage
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are a three-drug fixed dose combination product containing 200 mg of emtricitabine (FTC), 2
+5 mg of rilpivirine (RPV), and 300 mg of tenofovir disoproxil fumarate (TDF). The recommended dosage of emtricitabine, rilpivirine and tenofovir disoproxil fuma
+rate tablets in adult and pediatric patients weighing at least 35 kg is one tablet taken orally once daily with food .
+root@3d44031eb234:/workspace# sed -n '295,305p' /workspace/all_dosage_sections.txt
+====================================================================================================
+CELECOXIB (27f17ae7-939b-402e-9498-3b6611104089)
+====================================================================================================
+PASSAGE_0008:
+2.1 General Dosing Instructions
+Carefully consider the potential benefits and risks of celecoxib capsules and other treatment options before deciding to use celecoxib capsules. Use the lowest
+effective dosage for the shortest duration consistent with individual patient treatment goals .
+These doses can be given without regard to timing of meals.
+--------------------------------------------------------------------------------
+PASSAGE_0009:
+2.2 Osteoarthritis
+For OA, the dosage is 200 mg per day administered as a single dose or as 100 mg twice daily.
+root@3d44031eb234:/workspace# sed -n '407,417p' /workspace/all_dosage_sections.txt
+====================================================================================================
+Lenalidomide (ed7a3099-ce31-4865-b212-358d9ff6261b)
+====================================================================================================
+PASSAGE_0009:
+2.1 Recommended Dosage for Multiple Myeloma
+Lenalidomide Combination Therapy
+The recommended starting dose of lenalidomide is 25 mg orally once daily on Days 1 to 21 of repeated 28-day cycles in combination with dexamethasone. Refer to S
+ection 14.1 for specific dexamethasone dosing. For patients greater than 75 years old, the starting dose of dexamethasone may be reduced . Treatment should be c
+ontinued until disease progression or unacceptable toxicity.
+In patients who are not eligible for auto-HSCT, treatment should continue until disease progression or unacceptable toxicity. For patients who are auto-HSCT-eli
+gible, hematopoietic stem cell mobilization should occur within 4 cycles of a lenalidomide-containing therapy .
+Dose Adjustments for Hematologic Toxicities During MM Treatment
+Dose modification guidelines, as summarized in Table 1 below, are recommended to manage Grade 3 or 4 neutropenia or thrombocytopenia or other Grade 3 or 4 toxic
+ity judged to be related to lenalidomide.
+Table 1: Dose Adjustments for Hematologic Toxicities for MM
+root@3d44031eb234:/workspace#

@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a syntax error. I will make sure my JSON is fully valid. I will print chunk 0 of Lopinavir-Ritonavir.",
+  "plan": "Print chunk 0 of Lopinavir-Ritonavir to see what formulation it is.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); l=json.loads(f.readline()); print(l['chunks'][0])\"\n",
+      "duration": 0.5
+    }
+  ]
+}

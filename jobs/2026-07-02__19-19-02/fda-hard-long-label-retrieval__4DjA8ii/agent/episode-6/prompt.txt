@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@19fe3c8dfb02:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>     print('Type of label_raw:', type(data.get('label_raw')))
+>     if isinstance(data.get('label_raw'), dict):
+>         print('label_raw keys:', data['label_raw'].keys())
+>     else:
+>         print('label_raw excerpt:', data['label_raw'][:500])
+> "
+Type of label_raw: <class 'str'>
+label_raw excerpt: ||PASSAGE_0000||
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe,
+ life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PA
+XLOVID and 2) Determine if concomitant medications require a dose adjustmen
+root@19fe3c8dfb02:/workspace#

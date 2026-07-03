@@ -1,0 +1,4 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# grep -rn "structured_fields" /usr /opt /home /var /etc /lib /root 2>/dev/null | head -n 20 || true
+

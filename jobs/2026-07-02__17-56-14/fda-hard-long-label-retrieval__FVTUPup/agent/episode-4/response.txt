@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, the task description says: \"Each citation must use a `set_id` from the relevant label and a real `PASSAGE_####` passage ID from that same label.\" But `chunks` is a list of strings! Where do the passage IDs come from? Let's check how the chunks are formatted or if there's any ID information embedded or if the passage ID is just the index (e.g., `PASSAGE_0000`, `PASSAGE_0001`, etc.). Let's print the first few chunks and see if they have any prefix or if we can deduce the format of `PASSAGE_####`.",
+  "plan": "I will inspect the first few chunks in detail to see if they contain any ID prefixes or how they are structured.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    data = json.loads(f.readline())\n    for i in range(5):\n        print(f'Chunk {i}:', data['chunks'][i][:200])\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

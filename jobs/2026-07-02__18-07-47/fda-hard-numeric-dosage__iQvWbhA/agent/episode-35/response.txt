@@ -1,0 +1,36 @@
+{
+  "analysis": "Excellent. We have the dosage details for Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate:\n"
+              "- Dose: One tablet (containing 200 mg of emtricitabine, 25 mg of rilpivirine, and 300 mg of tenofovir disoproxil fumarate).\n"
+              "- Route: Oral (taken orally).\n"
+              "- Frequency: Once daily.\n"
+              "- Population: Adults and pediatric patients weighing at least 35 kg.\n"
+              "- Max Daily Dose: One tablet daily.\n"
+              "- Recommended with/without food: With food (taken orally once daily with food).\n"
+              "- Passage ID: `PASSAGE_0003` for recommended dose, route, frequency, population, and food requirement.\n"
+              "\n"
+              "Let's double check if there are other passages or details. No, this is extremely clear.\n"
+              "\n"
+              "Let's check CELECOXIB (set_id `27f17ae7-939b-402e-9498-3b6611104089`):\n"
+              "- Let's check \"How should CELECOXIB be administered?\" (QID: `2566741a8a58fd5d`)\n"
+              "  - `PASSAGE_0008` (2.1 General Dosing Instructions): \"Carefully consider the potential benefits and risks of celecoxib capsules and other treatment options before deciding to use celecoxib capsules. Use the lowest effective dosage for the shortest duration consistent with individual patient treatment goals. These doses can be given without regard to timing of meals.\"\n"
+              "  - `PASSAGE_0011` (2.4 Juvenile Rheumatoid Arthritis): \"For patients who have difficulty swallowing capsules, the contents of a celecoxib capsule can be added to applesauce...\"\n"
+              "  - Route: Oral (capsules, taken orally).\n"
+              "  - Administration details: orally, lowest effective dosage for shortest duration, without regard to meals. For JRA patients with difficulty swallowing, capsule contents can be added to applesauce.\n"
+              "  - Citations: `PASSAGE_0008`, `PASSAGE_0011`.\n"
+              "  - Structured fields:\n"
+              "    - `dose`: \"100\" (or maybe \"100 to 200\" mg twice daily, or \"200\" mg daily? Let's check the recommended dosage regimen for CELECOXIB).\n"
+              "- Let's check \"What is the recommended dosage regimen of CELECOXIB?\" (QID: `0de6259e34606d2d`)\n"
+              "  - In OA: \"200 mg per day administered as a single dose or as 100 mg twice daily.\" (`PASSAGE_0009`)\n"
+              "  - In RA: \"100 mg to 200 mg twice daily.\" (`PASSAGE_0010`)\n"
+              "  - In JRA: \"For patients >=10 kg to <=25 kg the recommended dose is 50 mg twice daily. For patients >25 kg the recommended dose is 100 mg twice daily.\" (`PASSAGE_0011`)\n"
+              "  - In AS: \"200 mg daily in single (once per day) or divided (twice per day) doses. If no effect is observed after 6 weeks, a trial of 400 mg daily may be worthwhile.\" (`PASSAGE_0012`)\n"
+              "  - In Acute Pain & Primary Dysmenorrhea: \"400 mg initially, followed by an additional 200 mg dose if needed on the first day. On subsequent days, the recommended dose is 200 mg twice daily as needed.\" (`PASSAGE_0013`)\n"
+              "  - Let's check if there is a max daily dose for Celecoxib. Let's search for \"maximum\" or \"exceed\" in Celecoxib's label chunks.",
+  "plan": "Search for maximum dose details in CELECOXIB.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > search_celecoxib_max.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == '27f17ae7-939b-402e-9498-3b6611104089'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if any(kw in chunk.lower() for kw in ['maximum', 'exceed', 'limit', 'max']):\n        print(f\"PASSAGE_{i:04d}:\")\n        print(chunk[:300])\n        print(\"-\"*50)\nEOF\npython3 search_celecoxib_max.py\n",
+      "duration": 1.0
+    }
+  ]
+}

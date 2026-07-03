@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a syntax error. I will make sure my JSON is fully valid. I will run a python command to inspect the first 5 chunks of the first label.",
+  "plan": "Print the first 5 chunks of the first label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); l=json.loads(f.readline()); [print(f'Chunk {i}: {c[:150]}...') for i, c in enumerate(l['chunks'][:5])]\"\n",
+      "duration": 0.5
+    }
+  ]
+}

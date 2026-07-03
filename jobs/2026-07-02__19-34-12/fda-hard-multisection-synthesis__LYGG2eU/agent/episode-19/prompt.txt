@@ -1,0 +1,36 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# python3 search_labels.py 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a "interaction"
+=== Searching in Paxlovid (8a99d6d6-fd9e-45bb-b1bf-48c7f761232a) for ['interaction'] ===
+PASSAGE_0000 (Heading: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOV):
+  WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+  - Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactio
+  - Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential dr
+----------------------------------------
+PASSAGE_0013 (Heading: 5.1      Risk of Serious Adverse Reactions Due to Drug ):
+  5.1   Risk of Serious Adverse Reactions Due to Drug Interactions
+  Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolize
+  Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated
+  Prior to prescribing PAXLOVID, review all medications taken by the patient to assess potential drug-drug interactions an
+  Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug
+----------------------------------------
+PASSAGE_0021 (Heading: 7.3      Established and Other Potentially Significant ):
+  7.3   Established and Other Potentially Significant Drug Interactions
+  Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed i
+----------------------------------------
+PASSAGE_0031 (Heading: ↑ rivaroxaban):
+  dabigatranSee Pharmacokinetics, Clinical Drug Interaction Studies (12.3).
+----------------------------------------
+PASSAGE_0133 (Heading: Clinical Drug Interaction Studies):
+  Clinical Drug Interaction Studies
+----------------------------------------
+PASSAGE_0135 (Heading: In Vitro Studies):
+  - Nirmatrelvir is a reversible and time-dependent inhibitor of CYP3A, but not an inhibitor CYP1A2, CYP2B6, CYP2C8, CYP2C
+----------------------------------------
+PASSAGE_0149 (Heading: 14.1     Efficacy in Subjects at High Risk of Progress):
+  EPIC-HR (NCT04960202) was a Phase 2/3, randomized, double-blind, placebo-controlled trial in non-hospitalized symptomati
+----------------------------------------
+PASSAGE_0173 (Heading: Drug Interactions):
+  Drug Interactions
+----------------------------------------
+root@15b83e10b8d1:/workspace#

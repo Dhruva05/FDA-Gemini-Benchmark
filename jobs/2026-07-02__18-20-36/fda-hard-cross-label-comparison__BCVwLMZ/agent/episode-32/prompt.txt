@@ -1,0 +1,41 @@
+Current Terminal Screen:
+e also more likely to have renal or\nCNS adverse events. With respect to CNS adverse events observed during clinical\npractice, somnolence, hallucinations, conf
+usion, and coma were reported more\nfrequently in elderly patients .'
+PASSAGE_0006: 'The most frequent adverse events reported during clinical trials\nof treatment of genital herpes with acyclovir 200 mg administered orally 5 time
+s\ndaily every 4 hours for 10 days were nausea and/or vomiting in 8 of 298 patient\ntreatments (2.7%). Nausea and/or vomiting occurred in 2 of 287 (0.7%) patien
+ts\nwho received placebo.\nThe most frequent adverse events reported in a clinical trial for\nthe prevention of recurrences with continuous administration of 40
+0 mg (two\n200-mg capsules) 2 times daily for 1 year in 586 patients treated with acyclovir\nwere nausea (4.8%) and diarrhea (2.4%). The 589 control patients re
+ceiving\nintermittent treatment of recurrences with acyclovir for 1 year reported\ndiarrhea (2.7%), nausea (2.4%), and headache (2.2%).\nThe most frequent adver
+se event reported during 3 clinical trials\nof treatment of herpes zoster (shingles) with 800 mg of oral acyclovir 5 times\ndaily for 7 to 10 days in 323 patien
+ts was malaise (11.5%). The 323 placebo\nrecipients reported malaise (11.1%).\nThe most frequent adverse event reported during 3 clinical trials\nof treatment o
+f chickenpox with oral acyclovir at doses of 10 to 20 mg/kg 4\ntimes daily for 5 to 7 days or 800 mg 4 times daily for 5 days in 495 patients\nwas diarrhea (3.2
+%). The 498 patients receiving placebo reported diarrhea\n(2.2%).\nIn addition to adverse events reported from clinical trials, the\nfollowing events have been
+identified during post-approval use of acyclovir.\nBecause they are reported voluntarily from a population of unknown size,\nestimates of frequency cannot be ma
+de. These events have been chosen for\ninclusion due to either their seriousness, frequency of reporting, potential\ncausal connection to acyclovir, or a combin
+ation of these factors.\nAnaphylaxis, angioedema, fever, headache, pain, peripheral\nedema.\nAggressive behavior, agitation, ataxia, coma, confusion,\ndecreased
+ consciousness, delirium, dizziness, dysarthria, encephalopathy,\nhallucinations, paresthesia, psychosis, seizure, somnolence, tremors. These\nsymptoms may be m
+arked, particularly in older adults or in patients with renal\nimpairment .\nDiarrhea, gastrointestinal distress, nausea.\nAnemia, leukocytoclastic vasculitis,
+leukopenia, lymphadenopathy,\nthrombocytopenia.\nElevated liver function tests, hepatitis, hyperbilirubinemia,\njaundice.\nMyalgia.\nAlopecia, erythema multifor
+me, photosensitive rash, pruritus,\nrash, Stevens- Johnson syndrome, toxic epidermal necrolysis, urticaria.\nVisual abnormalities.\nRenal failure, renal pain (m
+ay be associated with renal failure),\nelevated blood urea nitrogen, elevated creatinine, hematuria .'
+PASSAGE_0007: 'Overdoses involving ingestion of up to 20 g have been reported. Adverse events\nthat have been reported in association with overdosage include ag
+itation, coma,\nseizures, and lethargy. Precipitation of acyclovir in renal tubules may occur\nwhen the solubility (2.5 mg/mL) is exceeded in the intratubular f
+luid.\nOverdosage has been reported following bolus injections or inappropriately high\ndoses and in patients whose fluid and electrolyte balance were not prope
+rly\nmonitored. This has resulted in elevated BUN and serum creatinine and subsequent\nrenal failure. In the event of acute renal failure and anuria, the patien
+t may\nbenefit from hemodialysis until renal function is restored .'
+PASSAGE_0008: '800 mg every 4 hours orally, 5 times daily for 7 to 10\ndays.\n200 mg every 4 hours, 5 times daily for 10 days.\n400 mg 2 times daily for up to 1
+2 months, followed by\nre-evaluation. Alternative regimens have included doses ranging from 200 mg 3\ntimes daily to 200 mg 5 times daily.\nThe frequency and se
+verity of episodes of untreated genital herpes may change\nover time. After 1 year of therapy, the frequency and severity of the patient’s\ngenital herpes infec
+tion should be re-evaluated to assess the need for\ncontinuation of therapy with acyclovir oral suspension.\n200 mg every 4 hours, 5 times daily for 5 days. The
+rapy should be\ninitiated at the earliest sign or symptom (prodrome) of recurrence.\n20 mg/kg per dose orally 4 times daily\n(80 mg/kg per day) for 5 days. Chil
+dren over 40 kg should receive the adult dose\nfor chickenpox.\n800 mg 4 times daily for 5 days.\nIntravenous acyclovir oral suspension is indicated for the tre
+atment of\nvaricellazoster infections in immunocompromised patients.\nWhen therapy is indicated, it should be initiated at the earliest sign or\nsymptom of chic
+kenpox. There is no information about the efficacy of therapy\ninitiated more than 24 hours after onset of signs and symptoms.\nIn patients with renal impairmen
+t, the dose of acyclovir oral\nsuspension should be modified as shown in Table 3:'
+PASSAGE_0009: 'every 12 hours\nFor patients who require hemodialysis, the mean plasma half-life\nof acyclovir during hemodialysis is approximately 5 hours. This
+ results in a 60%\ndecrease in plasma concentrations following a 6-hour dialysis period. Therefore,\nthe patient’s dosing schedule should be adjusted so that an
+ additional dose is\nadministered after each dialysis.\nNo supplemental dose appears to be necessary after adjustment of\nthe dosing interval.'
+PASSAGE_0010: 'Acyclovir oral suspension, USP (off-white, artificial\nbanana-flavored) containing 200 mg acyclovir in each teaspoonful (5 mL) – Bottle\nof 1 pin
+t (473 mL)\nNDC 54868-5687-0.\nStore at 20° - 25°C (68° to 77°F) .\nManufactured by:\nHi-Tech Pharmacal Co., Inc.'
+PASSAGE_0011: 'MG #19296\nRelabeling of "Additional Barcode" by:Physicians Total Care, Inc.Tulsa, OK\xa0\xa0\xa0\xa0 74146'
+root@faa94ec9460f:/workspace#

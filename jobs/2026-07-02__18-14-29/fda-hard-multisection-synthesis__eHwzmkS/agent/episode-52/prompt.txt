@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = label
+s[0]
+> for i in range(17, len(l['chunks'])):
+>     text = l['chunks'][i]
+>     if '6.1' in text or '6.2' in text or 'adverse reaction' in text.lower():
+>         if any(w in text.lower() for w in ['common', 'dysgeusia', 'diarrhea', 'nausea']):
+>             print(f'PASSAGE_{i:04d}:', text[:400] + '...')
+> f.close()"
+PASSAGE_0018: 6.1       Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The safety of PAXLOVID is based on two Phase 2/3 randomized, placebo-controlled trials in symptomatic adu...
+PASSAGE_0037: ↑ trazodone
+Adverse reactions of nausea, dizziness, hypotension, and syncope have been observed following co-administration of trazodone and ritonavir. A lower dose of traz
+odone should be considered. Refer to trazadone product label for further information....
+root@a1980178bfd8:/workspace#

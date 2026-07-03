@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>     chunks = data['chunks']
+>     print('First 3 chunks with full text:')
+>     for i in range(3):
+>         print(f'Chunk {i}: {repr(chunks[i])}')
+> "
+First 3 chunks with full text:
+Chunk 0: 'WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\n- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of c
+ertain concomitant medications, resulting in potentially severe, life-threatening, or fatal events\n- Prior to prescribing PAXLOVID: 1) Review all medications t
+aken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PAXLOVID and 2) Determine if concomitant medications require a
+ dose adjustment, interruption, and/or additional monitoring\n- Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether th
+e risk of potential drug-drug interactions for an individual patient can be appropriately managed'
+Chunk 1: '1 INDICATIONS AND USAGE\nPAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high ris
+k for progression to severe COVID-19, including hospitalization or death.'
+Chunk 2: 'Limitations of Use\nPAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 .'
+root@2635f56baf2a:/workspace#

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 121 (char 122) | Content preview: '{\n  "analysis": "Okay, so chunk 108 says: \\"The optimal dose of PAXLOVID has not been established in'...
+
+Please fix these issues and provide a proper JSON response.

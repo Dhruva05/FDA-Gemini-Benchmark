@@ -1,0 +1,47 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > get_dosing_info.py
+> import json
+>
+> with open('/workspace/data/public/questions.jsonl', 'r') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> with open('/workspace/data/public/labels.jsonl', 'r') as f:
+>     labels = {data['set_id']: data for data in (json.loads(line) for line in f)}
+>
+> def print_label_dosing(q_idx):
+>     q = questions[q_idx]
+>     print(f"=== QUESTION {q_idx}: {q['drug_name']} ===")
+>     for set_id in q['comparison_set_ids']:
+>         label = labels[set_id]
+>         print(f"  Label: {label['drug_name']} ({set_id})")
+>         # Let's find chunks containing dosing or directions or use
+>         for idx, chunk in enumerate(label['chunks']):
+>             lower_chunk = chunk.lower()
+>             # If it's a Drug Facts label (OTC like Loratadine or 12HR Allergy Relief)
+>             # we can look for 'directions' or 'active ingredient' or 'purpose'
+>             # For prescription, we look for 'dosage and administration' or 'dosing'
+>             if 'direction' in lower_chunk or 'dosage and administration' in lower_chunk or 'dosing' in lower_chunk or 'how to use' in lower_chunk or ('take' i
+n lower_chunk and ('tablet' in lower_chunk or 'capsule' in lower_chunk or 'rinse' in lower_chunk or 'mg' in lower_chunk)):
+>                 print(f"    PASSAGE_{idx:04d}:")
+>                 print(chunk)
+>                 print("-"*30)
+>
+> print_label_dosing(0)
+> EOF
+root@7e48d58e23f3:/workspace# python3 get_dosing_info.py
+=== QUESTION 0: 12HR Allergy Relief vs 365 Whole Foods Market Loratadine ===
+  Label: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752)
+    PASSAGE_0007:
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+------------------------------
+  Label: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce)
+    PASSAGE_0011:
+Loratadine
+
+                     Tablets USP, 10mg
+Indoor & Outdoor
+Allergies
+*WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL.
+------------------------------
+root@7e48d58e23f3:/workspace#

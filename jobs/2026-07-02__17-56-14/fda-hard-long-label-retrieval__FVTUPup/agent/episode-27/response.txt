@@ -1,0 +1,10 @@
+{
+  "analysis": "I will make sure to properly escape all backslashes and control characters. I want to check the `required_output_fields` of each question to see if there are any differences.",
+  "plan": "I will run a python script to inspect the `required_output_fields` of all the questions.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json\nwith open('/workspace/data/public/questions.jsonl') as f:\n    for line in f:\n        q = json.loads(line)\n        print(q['qid'], q['required_output_fields'])\"\n",
+      "duration": 0.5
+    }
+  ]
+}

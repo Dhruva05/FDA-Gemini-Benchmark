@@ -1,0 +1,15 @@
+New Terminal Output:
+
+root@19fe3c8dfb02:/workspace# python3 -c "
+> import json, re
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>     raw = data['label_raw']
+>     passages = re.split(r'\|\|(PASSAGE_\d+)\|\|', raw)
+>     # The first element of split might be empty if it starts with the delimiter
+>     print('First 5 elements of split:', [p[:50] for p in passages[:10]])
+> "
+First 5 elements of split: ['', 'PASSAGE_0000', '\nWARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLO', 'PASSAGE_0001', '\n1 INDICATIONS AND USAGE\nPAXLOVID is i
+ndicated for', 'PASSAGE_0002', '\nLimitations of Use\nPAXLOVID is not approved for u', 'PASSAGE_0003', '\n2.1\tImportant Dosage and Administration Informati', '
+PASSAGE_0004']
+root@19fe3c8dfb02:/workspace#

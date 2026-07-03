@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); [print('DRUG:', d['drug_name'], d['set_id'], [(i, c[:100])
+ for i, c in enumerate(d['chunks']) if any(k in c.lower() for k in ['dosage', 'administration', 'directions', 'usual dose'])]) for d in (json.loads(l) for l in
+f) if d['set_id'] in ['36adb32c-638c-4d6e-b66a-1a1c35174ce6', '6972d9c1-36ec-4246-bf7b-13206d5952c3']]"
+DRUG: ACETAMINOPHEN with CODEINE 36adb32c-638c-4d6e-b66a-1a1c35174ce6 [(1, "Acetaminophen and codeine is supplied in tablet form for oral administration.\nAceta
+minophen, 4'-hydr"), (3, 'This product combines the analgesic effects of a centrally acting analgesic, codeine, with a periphe'), (7, 'Hepatotoxicity:\nAcetamin
+ophen has been associated with cases of acute liver failure, at times result'), (9, 'Controlled Substance:\nAcetaminophen and Codeine Phosphate tablets are clas
+sified as a Schedule III c'), (10, 'Following an acute overdosage, toxicity may result from codeine or acetaminophen.\xa0 Signs and Symptom'), (11, 'Dosage shou
+ld be adjusted according to severity of pain and response of the patient.\nTake (1 - 2) ta'), (14, 'Acetaminophen/codeine 300/30mg tablets CIII\nFor indications
+, dosage, precautions, etc. see package i')]
+DRUG: AcetaZOLAMIDE 6972d9c1-36ec-4246-bf7b-13206d5952c3 [(0, 'DESCRIPTION\nAcetaZOLAMIDE, an inhibitor of the enzyme carbonic anhydrase, is a white to faintly
+yell'), (1, 'AcetaZOLAMIDE is a potent carbonic anhydrase inhibitor, effective in the control of fluid secretion '), (3, 'AcetaZOLAMIDE therapy is contraindicat
+ed in situations in which sodium and/or potassium blood serum '), (4, 'Fatalities have occurred, although rarely, due to severe reactions to sulfonamides includ
+ing Stevens'), (13, 'No data are available regarding acetaZOLAMIDE overdose in humans as no cases of acute poisoning with'), (14, 'Glaucoma\nAcetaZOLAMIDE shoul
+d be used as an adjunct to the usual therapy. The dosage employed in the'), (15, 'Epilepsy\nIt is not clearly known whether the beneficial effects observed in e
+pilepsy are due to dire'), (16, 'Congestive Heart Failure\nFor diuresis in congestive heart failure, the starting dose is usually 250 '), (17, 'Drug-Induced Ede
+ma\nRecommended dosage is 250 to 375 mg of acetaZOLAMIDE once a day for one or two da'), (18, 'Acute Mountain Sickness\nDosage is 500 mg to 1000 mg daily, in di
+vided doses using tablets or sustain'), (21, 'Rx only\nFINAL DOSAGE FORMMANUFACTURED BYLANNETT CO. INC.PHILADELPHIA, PA 19136')]
+root@7e48d58e23f3:/workspace#

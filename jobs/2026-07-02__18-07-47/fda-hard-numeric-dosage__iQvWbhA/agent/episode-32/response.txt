@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a syntax error. I will make sure my JSON is fully valid. I will search for maximum dose details in Lopinavir-Ritonavir.",
+  "plan": "Search for maximum dose details in Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > search_lopinavir_max.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if any(kw in chunk.lower() for kw in ['maximum', 'exceed', 'limit', 'max']):\n        print(f\"PASSAGE_{i:04d}:\")\n        print(chunk[:300])\n        print(\"-\"*50)\nEOF\npython3 search_lopinavir_max.py\n",
+      "duration": 1.0
+    }
+  ]
+}

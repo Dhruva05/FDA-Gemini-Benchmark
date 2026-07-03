@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > search_labels.py
+> import json
+> import sys
+>
+> def search(set_id, keywords):
+>     with open('/workspace/data/public/labels.jsonl') as f:
+>         for line in f:
+>             label = json.loads(line)
+>             if label['set_id'] != set_id:
+>                 continue
+>             print(f"=== Searching in {label['drug_name']} ({set_id}) for {keywords} ===")
+>             for idx, chunk in enumerate(label['chunks']):
+>                 # Check if all keywords are in the chunk (case-insensitive)
+>                 if all(kw.lower() in chunk.lower() for kw in keywords):
+>                     first_line = chunk.strip().split('\n')[0]
+>                     print(f"PASSAGE_{idx:04d} (Heading: {first_line[:50]}):")
+>                     # Print lines matching keywords
+>                     for line in chunk.split('\n'):
+>                         if any(kw.lower() in line.lower() for kw in keywords):
+>                             print(f"  {line[:120]}")
+>                     print("-"*40)
+>
+> if len(sys.argv) > 2:
+>     search(sys.argv[1], sys.argv[2:])
+> EOF
+root@15b83e10b8d1:/workspace#

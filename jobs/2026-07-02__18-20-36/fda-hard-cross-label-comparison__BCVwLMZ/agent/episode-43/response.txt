@@ -1,0 +1,6 @@
+{
+  "analysis": "The temporary files are cleaned up, the output is valid and located in `/workspace/answers.json`, and all constraints of the task have been met.",
+  "plan": "I will return the final JSON indicating that the task is complete.",
+  "commands": [],
+  "task_complete": true
+}

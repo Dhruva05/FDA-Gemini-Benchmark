@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import os
+> for root, dirs, files in os.walk("/workspace"):
+>     for file in files:
+>         print(os.path.join(root, file))
+> '
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+root@c3dfb07a1d45:/workspace#

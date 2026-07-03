@@ -1,0 +1,7 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); line=f.readline(); print(json.loads(line).keys()); print(j
+son.loads(line)['drug_name'], json.loads(line)['set_id'])"
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+12HR Allergy Relief ea5d0e55-2191-4094-b082-24b317f95752
+root@3646eb22abe5:/workspace#

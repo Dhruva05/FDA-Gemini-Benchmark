@@ -1,0 +1,16 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     text = f.read()
+>     idx = text.find('PASSAGE_')
+>     if idx != -1:
+>         print('Found PASSAGE_ at index', idx)
+>         print(text[idx-50:idx+150])
+>     else:
+>         print('Not found')
+> "
+Found PASSAGE_ at index 93966
+xlovid", "drug_name": "Paxlovid", "label_raw": "||PASSAGE_0000||\nWARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\n- PAXLOVID includes ritonavir, a strong
+CYP3A inhibitor, which may lead to great
+root@2635f56baf2a:/workspace#

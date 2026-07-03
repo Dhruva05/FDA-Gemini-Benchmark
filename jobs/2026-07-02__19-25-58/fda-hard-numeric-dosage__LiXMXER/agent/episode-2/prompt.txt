@@ -1,0 +1,36 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat /workspace/data/public/questions.jsonl
+{"drug_name": "Lopinavir-Ritonavir", "qid": "daef650b92e56473", "question": "How should Lopinavir-Ritonavir be administered?", "required_output_fields": ["qid",
+ "status", "answer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.frequen
+cy", "structured_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85
+", "task_type": "numeric"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "a0576a26f2a2eeac", "question": "What is the recommended dosage regimen of Lopinavir-Ritonavir?", "required_output_f
+ields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured
+_fields.frequency", "structured_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "4b1caefa-e6a2-42f3-91
+94-6dc1dd9e6d85", "task_type": "numeric"}
+{"drug_name": "Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate", "qid": "55d09c5df742eaec", "question": "What is the recommended dosage regimen of Emt
+ricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fi
+elds.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.frequency", "structured_fields.population", "structured_fields.max_daily_dos
+e", "structured_fields.citation_passages"], "set_id": "d9a4185e-43fa-4aeb-9b0f-8db01b166038", "task_type": "numeric"}
+{"drug_name": "Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate", "qid": "005acaea4542b5ca", "question": "How should Emtricitabine, Rilpivirine, Tenofo
+vir Disoproxil Fumarate be administered?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.dose", "st
+ructured_fields.unit", "structured_fields.route", "structured_fields.frequency", "structured_fields.population", "structured_fields.max_daily_dose", "structured
+_fields.citation_passages"], "set_id": "d9a4185e-43fa-4aeb-9b0f-8db01b166038", "task_type": "numeric"}
+{"drug_name": "CELECOXIB", "qid": "2566741a8a58fd5d", "question": "How should CELECOXIB be administered?", "required_output_fields": ["qid", "status", "answer",
+ "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.frequency", "structured_fie
+lds.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "27f17ae7-939b-402e-9498-3b6611104089", "task_type": "num
+eric"}
+{"drug_name": "CELECOXIB", "qid": "0de6259e34606d2d", "question": "What is the recommended dosage regimen of CELECOXIB?", "required_output_fields": ["qid", "sta
+tus", "answer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.frequency",
+"structured_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "27f17ae7-939b-402e-9498-3b6611104089", "t
+ask_type": "numeric"}
+{"drug_name": "Lenalidomide", "qid": "85c49de5de841cb9", "question": "What is the recommended dosage regimen of Lenalidomide?", "required_output_fields": ["qid"
+, "status", "answer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.freque
+ncy", "structured_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "ed7a3099-ce31-4865-b212-358d9ff6261
+b", "task_type": "numeric"}
+{"drug_name": "Lenalidomide", "qid": "0d262ce5d03f7c38", "question": "How should Lenalidomide be administered?", "required_output_fields": ["qid", "status", "an
+swer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.frequency", "structur
+ed_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "ed7a3099-ce31-4865-b212-358d9ff6261b", "task_type"
+: "numeric"}
+root@af996c5fe492:/workspace#

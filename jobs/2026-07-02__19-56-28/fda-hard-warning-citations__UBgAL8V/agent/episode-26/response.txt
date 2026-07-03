@@ -1,0 +1,18 @@
+{
+  "analysis": "This is great! Let's check Question 7:\n`drug_name`: \"Paxlovid\"\n`qid`: \"fbab4114f66e2dda\"\n`question`: \"What important warnings or precautions are associated with Paxlovid?\"\n`set_id`: \"8a99d6d6-fd9e-45bb-b1bf-48c7f761232a\"\n\nLet's check the warnings and precautions for Paxlovid. These are under Section 5 of Paxlovid. Let's see what chunks we have starting from `PASSAGE_0013`:\n- `PASSAGE_0013` \"5.1 Risk of Serious Adverse Reactions Due to Drug Interactions\"\n- `PASSAGE_0014` \"5.2 Hypersensitivity Reactions\" (anaphylaxis, serious skin reactions like TEN and SJS)\n- `PASSAGE_0015` \"5.3 Hepatotoxicity\" (hepatic transaminase elevations, clinical hepatitis, jaundice)\n- `PASSAGE_0016` \"5.4 Risk of HIV-1 Resistance Development\" (due to ritonavir co-administration in patients with uncontrolled or undiagnosed HIV-1 infection)\n\nLet's print `PASSAGE_0014`, `PASSAGE_0015`, `PASSAGE_0016` of Paxlovid.",
+  "plan": "I will print chunks 14, 15, and 16 of Paxlovid.",
+  "commands": [
+    {
+      "keystrokes": "print(labels[0]['chunks'][14])\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "print(labels[0]['chunks'][15])\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "print(labels[0]['chunks'][16])\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'CELECOXIB':
+>             for i in range(8, 16):
+>                 print(f'=== PASSAGE_{i:04d} ===')
+>                 print(data['chunks'][i])
+>             break
+> "
+=== PASSAGE_0008 ===
+2.1 General Dosing Instructions
+Carefully consider the potential benefits and risks of celecoxib capsules and other treatment options before deciding to use celecoxib capsules. Use the lowest
+effective dosage for the shortest duration consistent with individual patient treatment goals .
+These doses can be given without regard to timing of meals.
+=== PASSAGE_0009 ===
+2.2 Osteoarthritis
+For OA, the dosage is 200 mg per day administered as a single dose or as 100 mg twice daily.
+=== PASSAGE_0010 ===
+2.3 Rheumatoid Arthritis
+For RA, the dosage is 100 mg to 200 mg twice daily.
+=== PASSAGE_0011 ===
+2.4 Juvenile Rheumatoid Arthritis
+For JRA, the dosage for pediatric patients (age 2 years and older) is based on weight. For patients ≥10 kg to 25 kg the recommended dose is 50 mg twice daily.
+For patients >25 kg the recommended dose is 100 mg twice daily.
+For patients who have difficulty swallowing capsules, the contents of a celecoxib capsule can be added to applesauce. The entire capsule contents are carefully
+emptied onto a level teaspoon of cool or room temperature applesauce and ingested immediately with water. The sprinkled capsule contents on applesauce are stabl
+e for up to 6 hours under refrigerated conditions (2°C to 8°C/35°F to 45°F).
+=== PASSAGE_0012 ===
+2.5 Ankylosing Spondylitis
+For AS, the dosage of celecoxib capsules is 200 mg daily in single (once per day) or divided (twice per day) doses. If no effect is observed after 6 weeks, a tr
+ial of 400 mg daily may be worthwhile. If no effect is observed after 6 weeks on 400 mg daily, a response is not likely and consideration should be given to alt
+ernate treatment options.
+=== PASSAGE_0013 ===
+2.6 Management of Acute Pain and Treatment of Primary Dysmenorrhea
+For management of Acute Pain and Treatment of Primary Dysmenorrhea, the dosage is 400 mg initially, followed by an additional 200 mg dose if needed on the first
+ day. On subsequent days, the recommended dose is 200 mg twice daily as needed.
+=== PASSAGE_0014 ===
+2.7 Special Populations
+Hepatic
+                           Impairment
+In patients with moderate hepatic impairment (Child-Pugh Class B), reduce the dose by 50%. The use of celecoxib capsules in patients with severe hepatic impairm
+ent is not recommended .
+=== PASSAGE_0015 ===
+Poor Metabolizers of CYP2C9 Substrates
+In adult patients who are known or suspected to be poor CYP2C9 metabolizers based on genotype or previous history/experience with other CYP2C9 substrates (such
+as warfarin, phenytoin), initiate treatment with half of the lowest recommended dose.
+In patients with JRA who are known or suspected to be poor CYP2C9 metabolizers, consider using alternative treatments .
+root@3d44031eb234:/workspace#

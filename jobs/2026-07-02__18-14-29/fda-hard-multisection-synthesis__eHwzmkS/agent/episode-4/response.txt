@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah, the chunks in `labels[0]['chunks']` are strings? Let's check the type of `labels[0]['chunks'][0]` or how the chunks are structured.",
+  "plan": "I will run a python command to check the type and content of `labels[0]['chunks'][0]`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; print(type(labels[0]['chunks'][0])); print(labels[0]['chunks'][0][:200]); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

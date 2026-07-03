@@ -1,0 +1,24 @@
+New Terminal Output:
+
+root@19fe3c8dfb02:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print('Keys:', data.keys())
+>         print('Drug name:', data.get('drug_name'))
+>         print('Set ID:', data.get('set_id'))
+>         print('Number of chunks:', len(data.get('chunks', [])))
+>         if data.get('chunks'):
+>             print('First chunk keys:', data['chunks'][0].keys())
+>             print('First chunk excerpt:', data['chunks'][0].get('text')[:200])
+>         break
+> "
+Keys: dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+Drug name: Paxlovid
+Set ID: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+Number of chunks: 209
+Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+AttributeError: 'str' object has no attribute 'keys'
+root@19fe3c8dfb02:/workspace#

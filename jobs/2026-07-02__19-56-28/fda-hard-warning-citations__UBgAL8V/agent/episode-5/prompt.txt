@@ -1,0 +1,47 @@
+New Terminal Output:
+
+root@7ddc515b1a59:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print('Drug:', data['drug_name'])
+>         for i in range(5):
+>             print(f'Chunk {i}:', data['chunks'][i][:300])
+> "
+Drug: Paxlovid
+Chunk 0: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe,
+ life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medic
+Chunk 1: 1 INDICATIONS AND USAGE
+PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high risk for progression to severe COVID-1
+9, including hospitalization or death.
+Chunk 2: Limitations of Use
+PAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 .
+Chunk 3: 2.1    Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for or
+Chunk 4: 2.2    Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together oral
+ly twice daily in the morning and at bedtime for 5 days.
+Drug: Lopinavir-Ritonavir
+Chunk 0: 1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in adults and pediatric patients 14 da
+ys and older.
+Limitations of Use:
+- Genotypic or phenotypic testing and/or treatment history should guide the use of
+Chunk 1: 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+Chunk 2: 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, su
+Chunk 3: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance
+Chunk 4: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+root@7ddc515b1a59:/workspace#

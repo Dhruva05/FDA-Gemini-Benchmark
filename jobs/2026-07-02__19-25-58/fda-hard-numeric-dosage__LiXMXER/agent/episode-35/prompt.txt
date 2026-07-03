@@ -1,0 +1,71 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > parse_lenalidomide_2.py
+> with open('Lenalidomide_chunks.txt') as f:
+>     text = f.read()
+>     idx = text.find('=== CHUNK 9')
+>     print(text[idx:idx+4000])
+> EOF
+root@af996c5fe492:/workspace# python3 parse_lenalidomide_2.py
+=== CHUNK 9 (PASSAGE_0009) ===
+2.1 Recommended Dosage for Multiple Myeloma
+Lenalidomide Combination Therapy
+The recommended starting dose of lenalidomide is 25 mg orally once daily on Days 1 to 21 of repeated 28-day cycles in combination with dexamethasone. Refer to S
+ection 14.1 for specific dexamethasone dosing. For patients greater than 75 years old, the starting dose of dexamethasone may be reduced . Treatment should be c
+ontinued until disease progression or unacceptable toxicity.
+In patients who are not eligible for auto-HSCT, treatment should continue until disease progression or unacceptable toxicity. For patients who are auto-HSCT-eli
+gible, hematopoietic stem cell mobilization should occur within 4 cycles of a lenalidomide-containing therapy .
+Dose Adjustments for Hematologic Toxicities During MM Treatment
+Dose modification guidelines, as summarized in Table 1 below, are recommended to manage Grade 3 or 4 neutropenia or thrombocytopenia or other Grade 3 or 4 toxic
+ity judged to be related to lenalidomide.
+Table 1: Dose Adjustments for Hematologic Toxicities for MM
+
+=== CHUNK 10 (PASSAGE_0010) ===
+Lenalidomide Maintenance Therapy Following Auto-HSCT
+Following auto-HSCT, initiate lenalidomide maintenance therapy after adequate hematologic recovery (ANC at least 1,000/mcL and/or platelet counts at least 75,00
+0/mcL). The recommended starting dose of lenalidomide is 10 mg once daily continuously (Days 1 to 28 of repeated 28-day cycles) until disease progression or una
+cceptable toxicity. After 3 cycles of maintenance therapy, the dose can be increased to 15 mg once daily if tolerated.
+Dose Adjustments for Hematologic Toxicities During MM Treatment
+Dose modification guidelines, as summarized in Table 2 below, are recommended to manage Grade 3 or 4 neutropenia or thrombocytopenia or other Grade 3 or 4 toxic
+ity judged to be related to lenalidomide.
+Table 2: Dose Adjustments for Hematologic Toxicities for MM
+
+=== CHUNK 11 (PASSAGE_0011) ===
+Interrupt lenalidomide treatment, follow CBC weekly
+Resume lenalidomide at next lower dose, continuously for Days 1 to 28 of repeated 28-day cycle
+If at the 5 mg daily dose,
+
+=== CHUNK 12 (PASSAGE_0012) ===
+Return to at least 30,000/mcL
+Interrupt lenalidomide treatment. Do not dose below 5 mg daily for Day 1 to 21 of 28 day cycle
+Resume lenalidomide at 5 mg daily for Days 1 to 21 of 28-day cycle. Do not dose below 5 mg daily for Day 1 to 21 of 28 day cycle
+
+=== CHUNK 13 (PASSAGE_0013) ===
+Interrupt lenalidomide treatment, follow CBC weekly
+Resume lenalidomide at next lower dose, continuously for Days 1 to 28 of repeated 28-day cycle
+
+=== CHUNK 14 (PASSAGE_0014) ===
+Return to at least 500/mcL
+Interrupt lenalidomide treatment. Do not dose below 5 mg daily for Day 1 to 21 of 28-day cycle
+Resume lenalidomide at 5 mg daily for Days 1 to 21 of 28-day cycle. Do not dose below 5 mg daily for Day 1 to 21 of 28-day cycle
+
+=== CHUNK 15 (PASSAGE_0015) ===
+2.2 Recommended Dosage for Myelodysplastic Syndromes
+The recommended starting dose of lenalidomide is 10 mg daily. Treatment is continued or modified based upon clinical and laboratory findings. Continue treatment
+ until disease progression or unacceptable toxicity.
+Dose Adjustments for Hematologic Toxicities During MDS Treatment
+Patients who are dosed initially at 10 mg and who experience thrombocytopenia should have their dosage adjusted as follows:
+
+=== CHUNK 16 (PASSAGE_0016) ===
+Platelet counts
+If thrombocytopenia develops WITHIN 4 weeks of starting treatment at 10 mg daily in MDS
+Fall to 50% of the baseline value
+If baseline is at least 60,000/mcL and returns to at least 50,000/mcL
+If baseline is below 60,000/mcL and returns to at least 30,000/mcL
+
+=== CHUNK 17 (PASSAGE_0017) ===
+Resume lenalidomide at 5 mg daily
+If thrombocytopenia develops AFTER 4 weeks of starting treatment at 10 mg daily in MDS
+Patients who experience thrombocytopenia at 5 mg daily should have their dosage adjusted as follows:
+If thrombocytopenia develops during treatment at 5 mg
+root@af996c5fe492:/workspace#

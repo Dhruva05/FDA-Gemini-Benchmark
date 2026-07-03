@@ -1,0 +1,119 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# cat << 'EOF' > search.py
+> import json
+> import sys
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>
+> chunks = data['chunks']
+>
+> if len(sys.argv) > 1:
+>     query = sys.argv[1].lower()
+>     for i, chunk in enumerate(chunks):
+>         if query in chunk.lower():
+>             print(f'=== PASSAGE_{i:04d} ===')
+>             print(chunk[:300] + '...')
+>             print()
+> EOF
+root@2635f56baf2a:/workspace# python3 search.py "dosage"
+=== PASSAGE_0003 ===
+2.1     Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for or...
+
+=== PASSAGE_0004 ===
+2.2     Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together oral
+ly twice daily in the morning and at bedtime for 5 days....
+
+=== PASSAGE_0005 ===
+2.3 Dosage in Patients with Renal Impairment
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID. Providers should counsel patients about renal dosing instructions .
+No dosage adjustment is recommended in patients with mild renal impairment estimated glomerular fi...
+
+=== PASSAGE_0010 ===
+2.4     Use in Patients with Hepatic Impairment
+No dosage adjustment is needed in patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment.
+No pharmacokinetic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pug...
+
+=== PASSAGE_0011 ===
+3 DOSAGE FORMS AND STRENGTHS
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets .
+- Nirmatrelvir is supplied as oval, pink immediate-release, film-coated tablets debossed with "PFE" on one side and "3CL" on the other side. Each tablet contain
+s 150 mg of nirmatrelvir.
+- Ritonavir is ...
+
+=== PASSAGE_0057 ===
+↑ cilostazol
+Dosage adjustment of cilostazol is recommended. Refer to the cilostazol product label for more information....
+
+=== PASSAGE_0060 ===
+↑ ivacaftor↑ elexacaftor/tezacaftor/ivacaftor
+                                       ↑ tezacaftor/ivacaftor
+Reduce dosage when co-administered with PAXLOVID. Refer to individual product labels for more information....
+
+=== PASSAGE_0061 ===
+↑ saxagliptin
+Dosage adjustment of saxagliptin is recommended. Refer to the saxagliptin product label for more information....
+
+=== PASSAGE_0076 ===
+↑ tofacitinib
+Dosage adjustment of tofacitinib is recommended. Refer to the tofacitinib product label for more information....
+
+=== PASSAGE_0085 ===
+↑ fentanyl↑ hydrocodone↑ oxycodone↑ meperidine
+Careful monitoring of therapeutic and adverse effects (including potentially fatal respiratory depression) is recommended when fentanyl, hydrocodone, oxycodone,
+ or meperidine is concomitantly administered with PAXLOVID. If concomitant use with PAXLOVID ...
+
+=== PASSAGE_0088 ===
+aripiprazole,brexpiprazole,cariprazine,iloperidone,lumateperone,pimavanserin
+↑ aripiprazole↑ brexpiprazole↑ cariprazine↑ iloperidone↑ lumateperone↑ pimavanserin
+Dosage adjustment of aripiprazole, brexpiprazole, cariprazine, iloperidone, lumateperone, and pimavanserin is recommended. Refer to individ...
+
+=== PASSAGE_0092 ===
+↑ riociguat
+Dosage adjustment is recommended for riociguat when used for pulmonary hypertension. Refer to the riociguat product label for more information....
+
+=== PASSAGE_0093 ===
+↑ avanafil
+Do not use PAXLOVID with avanafil because a safe and effective avanafil dosage regimen has not been established....
+
+=== PASSAGE_0094 ===
+↑ sildenafil↑ tadalafil↑ vardenafil
+Dosage adjustment is recommended for use of sildenafil, tadalafil or vardenafil with PAXLOVID when used for erectile dysfunction. Refer to individual product la
+bel for more information....
+
+=== PASSAGE_0097 ===
+↑ midazolam
+Co-administration of midazolam (parenteral) should be done in a setting which ensures close clinical monitoring and appropriate medical management in case of re
+spiratory depression and/or prolonged sedation. Dosage reduction for midazolam should be considered, especially if more than a s...
+
+=== PASSAGE_0110 ===
+8.6 Renal Impairment
+Renal impairment increases nirmatrelvir exposure, which may increase the risk of PAXLOVID adverse reactions. No dosage adjustment is recommended in patients wit
+h mild renal impairment (eGFR ≥60 to <90 mL/min). Reduce the PAXLOVID dosage in patients with moderate renal impairment...
+
+=== PASSAGE_0111 ===
+8.7 Hepatic Impairment
+No dosage adjustment of PAXLOVID is recommended for patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment. No pharmacokine
+tic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pugh C...
+
+=== PASSAGE_0112 ===
+10 OVERDOSAGE
+Treatment of overdose with PAXLOVID should consist of general supportive measures including monitoring of vital signs and observation of the clinical status of
+the patient. There is no specific antidote for overdose with PAXLOVID....
+
+=== PASSAGE_0118 ===
+12.3 Pharmacokinetics
+The pharmacokinetics of nirmatrelvir/ritonavir were similar in healthy subjects and in subjects with mild-to-moderate COVID-19.
+Nirmatrelvir AUC increased in a less than dose proportional manner over a single dose range from 250 mg to 750 mg (0.83 to 2.5 times the approved reco...
+
+=== PASSAGE_0174 ===
+Hypersensitivity Reactions
+Inform patients that anaphylaxis, serious skin reactions, and other hypersensitivity reactions have been reported, even following a single dose of PAXLOVID. Adv
+ise them to immediately discontinue the drug and to inform their healthcare provider at the first sign of a skin ...
+
+root@2635f56baf2a:/workspace#

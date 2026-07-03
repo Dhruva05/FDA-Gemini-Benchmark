@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         for chunk in data["chunks"]:
+>             if "PASSAGE" in chunk:
+>                 print("Found PASSAGE in chunk:", chunk[:100])
+> '
+root@3faa5da3ba91:/workspace#

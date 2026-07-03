@@ -1,0 +1,72 @@
+[
+  {
+    "drug_name": "Thiothixene",
+    "question": "Does the prescribing information suggest altering Thiothixene dosage for individuals with severe hepatic impairment and thyroid dysfunction?",
+    "question_id": "9a1008e377adf183",
+    "question_type": "refusal",
+    "set_id": "029fda33-9df4-465d-8f43-40c61b26bb76"
+  },
+  {
+    "drug_name": "METOPROLOL SUCCINATE",
+    "question": "Does the prescribing information suggest altering the dose of METOPROLOL SUCCINATE for patients with G6PD deficiency and abnormal thyroid function?",
+    "question_id": "a30bda18d698ff91",
+    "question_type": "refusal",
+    "set_id": "90a69a79-5517-0ccf-e053-2995a90a441f"
+  },
+  {
+    "drug_name": "Phenelzine Sulfate",
+    "question": "What monitoring protocols for D-dimer are advised for geriatric patients receiving Phenelzine Sulfate therapy?",
+    "question_id": "b4f0c8a6bd0bee7d",
+    "question_type": "refusal",
+    "set_id": "b7ec6ae7-3d76-42aa-9d8a-fc3e187769b5"
+  },
+  {
+    "drug_name": "Enalapril Maleate",
+    "question": "Are dose modifications of Enalapril Maleate advised in cases of thyroid dysfunction among patients experiencing severe hepatic impairment?",
+    "question_id": "00d59a871d79c4fb",
+    "question_type": "refusal",
+    "set_id": "7efed863-919d-458e-99e1-ce0cec95537a"
+  },
+  {
+    "drug_name": "Thiothixene",
+    "question": "What is the QTc interval cutoff for commencing Thiothixene therapy in pregnant females?",
+    "question_id": "e60e80c91a147d9c",
+    "question_type": "refusal",
+    "set_id": "029fda33-9df4-465d-8f43-40c61b26bb76"
+  },
+  {
+    "drug_name": "METOPROLOL SUCCINATE",
+    "question": "What is the INR cutoff for commencing METOPROLOL SUCCINATE in patients suffering from severe hepatic impairment?",
+    "question_id": "86c54ee3c14791ce",
+    "question_type": "refusal",
+    "set_id": "90a69a79-5517-0ccf-e053-2995a90a441f"
+  },
+  {
+    "drug_name": "Phenelzine Sulfate",
+    "question": "Does the prescribing information indicate the need for dose modifications of Phenelzine Sulfate in cases of thyroid dysfunction among patients with severe hepatic impairment?",
+    "question_id": "71640d56831c846f",
+    "question_type": "refusal",
+    "set_id": "b7ec6ae7-3d76-42aa-9d8a-fc3e187769b5"
+  },
+  {
+    "drug_name": "Enalapril Maleate",
+    "question": "Does the prescribing information indicate that Enalapril Maleate requires dosage alterations in G6PD deficient individuals with thyroid abnormalities?",
+    "question_id": "5dcea4a72b4c1956",
+    "question_type": "refusal",
+    "set_id": "7efed863-919d-458e-99e1-ce0cec95537a"
+  },
+  {
+    "drug_name": "Thiothixene",
+    "question": "Are dose modifications for Thiothixene indicated in individuals with G6PD deficiency who exhibit thyroid dysfunction?",
+    "question_id": "97ff81304fe4e697",
+    "question_type": "refusal",
+    "set_id": "029fda33-9df4-465d-8f43-40c61b26bb76"
+  },
+  {
+    "drug_name": "METOPROLOL SUCCINATE",
+    "question": "Are dose modifications of METOPROLOL SUCCINATE advised in cases of thyroid dysfunction among patients suffering from severe hepatic impairment?",
+    "question_id": "9b50f4ba30f22a23",
+    "question_type": "refusal",
+    "set_id": "90a69a79-5517-0ccf-e053-2995a90a441f"
+  }
+]

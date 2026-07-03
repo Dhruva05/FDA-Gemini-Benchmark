@@ -1,0 +1,37 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > find_formulations.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85':
+>             for idx, chunk in enumerate(label['chunks']):
+>                 if 'oral solution' in chunk.lower() and idx < 20:
+>                     print(f"PASSAGE_{idx:04d}: {chunk[:150]}")
+> EOF
+root@15b83e10b8d1:/workspace# python3 find_formulations.py
+PASSAGE_0001: 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recomme
+PASSAGE_0004: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir T
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when admini
+PASSAGE_0006: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg
+PASSAGE_0010: Dosing recommendations using oral solution
+Table 6 provides the dosing recommendations for pediatric patients older than 6 months to less than 18 year
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir
+PASSAGE_0015: 5.2 Toxicity in Preterm Neonates
+Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol,
+root@15b83e10b8d1:/workspace#

@@ -1,0 +1,24 @@
+{
+  "analysis": "Excellent.
+For Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate:
+- Dose: 200 mg / 25 mg / 300 mg (or one tablet containing 200 mg emtricitabine, 25 mg rilpivirine, and 300 mg tenofovir disoproxil fumarate).
+- Unit: tablet (or mg/mg/mg)
+- Route: orally
+- Frequency: once daily
+- Population: adult and pediatric patients weighing at least 35 kg
+- Max daily dose: one tablet (or 200 mg/25 mg/300 mg)
+- Citation passages: `PASSAGE_0003` (and maybe others like `PASSAGE_0004` or `PASSAGE_0006`).
+Wait, let's look at the third drug:
+- CELECOXIB (`27f17ae7-939b-402e-9498-3b6611104089`)
+- Question 5 (`2566741a8a58fd5d`): \"How should CELECOXIB be administered?\"
+- Question 6 (`0de6259e34606d2d`): \"What is the recommended dosage regimen of CELECOXIB?\"
+
+Let's print all dosage and administration passages for CELECOXIB.",
+  "plan": "I will run a python script to print the dosage and administration passages of CELECOXIB.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'CELECOXIB':\n            for i, chunk in enumerate(data['chunks']):\n                # Print the first 25 chunks of Celecoxib\n                if i < 25:\n                    print(f'=== PASSAGE_{i:04d} ===')\n                    print(chunk[:300] + '...')\n            break\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

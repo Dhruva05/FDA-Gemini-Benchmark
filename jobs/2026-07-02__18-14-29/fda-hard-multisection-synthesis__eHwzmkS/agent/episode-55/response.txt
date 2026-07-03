@@ -1,0 +1,11 @@
+{
+  "analysis": "This is very clear. Let's see what else is in these passages.
+Wait, let's print the entire `PASSAGE_0001` and `PASSAGE_0003` to get the full administration and adult dosage recommendations.",
+  "plan": "I will run a python script to print the full text of `PASSAGE_0001` and `PASSAGE_0003` of Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[1]; print('PASSAGE_0001:', l['chunks'][1]); print('PASSAGE_0003:', l['chunks'][3]); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

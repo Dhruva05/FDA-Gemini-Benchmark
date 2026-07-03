@@ -1,0 +1,32 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > inspect_labels.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print(f"Drug: {label.get('drug_name')}, Set ID: {label.get('set_id')}")
+>         chunks = label.get('chunks', [])
+>         print(f"Number of chunks: {len(chunks)}, Type of first chunk: {type(chunks[0]) if chunks else 'None'}")
+>         if chunks:
+>             print("First chunk preview:", repr(chunks[0][:200]))
+>         print("-" * 40)
+> EOF
+root@c7da805c5eb1:/workspace# python3 inspect_labels.py
+Drug: 12HR Allergy Relief, Set ID: ea5d0e55-2191-4094-b082-24b317f95752
+Number of chunks: 13, Type of first chunk: <class 'str'>
+First chunk preview: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, water
+y eyes\n- itching of the nose or throat'
+----------------------------------------
+Drug: Acamprosate Calcium, Set ID: ae6e79c0-a307-4888-b647-1b7be4cb9127
+Number of chunks: 59, Type of first chunk: <class 'str'>
+First chunk preview: '1 INDICATIONS AND USAGE\nAcamprosate calcium delayed-release tablets are indicated for the maintenance of abstinence from alcohol in patie
+nts with alcohol dependence who are abstinent at treatment init'
+----------------------------------------
+Drug: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse, Set ID: 08c9d3dd-717b-0148-e054-00144ff8d46c
+Number of chunks: 18, Type of first chunk: <class 'str'>
+First chunk preview: 'untitled\nACCLEAN is an oral rinse containing 0.12% chlorhexidine gluconate (1,1’-hexamethylene bis 5-(p-chlorphenyl) biguanide]di-D-gluco
+nate) in a base containing water, 11.6% alcohol, glycerin, PEG-'
+----------------------------------------
+root@c7da805c5eb1:/workspace#

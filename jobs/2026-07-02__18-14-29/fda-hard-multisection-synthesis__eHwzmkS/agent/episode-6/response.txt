@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! `PASSAGE` count is 397. This matches the total number of chunks (209 for Paxlovid, let's see how many for Lopinavir-Ritonavir). Let's print the first few chunks of Paxlovid to see where `PASSAGE_` is.",
+  "plan": "I will print the first 5 chunks of Paxlovid in full to see if the passage ID is embedded in the chunk text.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; print('\\n---\\n'.join(labels[0]['chunks'][:5])); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > test_normalize.py
+> import re
+>
+> def get_exact_substring(chunk, target_text):
+>     # Normalize whitespaces to a single space, including non-breaking spaces
+>     def normalize(text):
+>         return re.sub(r'\s+', ' ', text).strip().lower()
+>
+>     norm_chunk = normalize(chunk)
+>     norm_target = normalize(target_text)
+>
+>     if norm_target not in norm_chunk:
+>         print(f"Target NOT found in normalized chunk!")
+>         print(f"Norm Target: {repr(norm_target)}")
+>         print(f"Norm Chunk:  {repr(norm_chunk[:200])}")
+>         return None
+>
+>     # We want to find the start and end indices of the match in the original chunk
+>     # Let's do a character-by-character search or regex search
+>     # Since regex can be tricky with special chars, let's build a regex from target_text
+>     # where each whitespace is replaced by \s+
+>     escaped = re.escape(target_text)
+>     # Replace escaped spaces with \s+
+>     pattern = re.sub(r'\\\s+', r'\s+', escaped)
+>     # Also allow non-breaking spaces and other spaces
+>     pattern = pattern.replace(' ', r'\s+')
+>
+>     match = re.search(pattern, chunk, re.IGNORECASE)
+>     if match:
+>         return match.group(0)
+>     return None
+>
+> chunk = "Treatment with lopinavir\xa0and ritonavir has resulted in large increases"
+> target = "Treatment with lopinavir and ritonavir has resulted"
+> print(repr(get_exact_substring(chunk, target)))
+> EOF
+root@15b83e10b8d1:/workspace# python3 test_normalize.py
+Traceback (most recent call last):
+  File "/workspace/test_normalize.py", line 34, in <module>
+    print(repr(get_exact_substring(chunk, target)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/test_normalize.py", line 23, in get_exact_substring
+    pattern = re.sub(r'\\\s+', r'\s+', escaped)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/re/__init__.py", line 186, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/re/__init__.py", line 334, in _compile_template
+    return _sre.template(pattern, _parser.parse_template(repl, pattern))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/re/_parser.py", line 1075, in parse_template
+    raise s.error('bad escape %s' % this, len(this)) from None
+re.error: bad escape \s at position 0
+root@15b83e10b8d1:/workspace#

@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# python3 -c "import json; d=json.loads(open('/workspace/data/public/labels.jsonl').readline()); [print(f'PASSAGE_{i:04d}:', [repr(d
+['chunks'][i][:100])]) for i in range(15)]"
+PASSAGE_0000: ["'WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\\n- PAXLOVID includes ritonavir, a strong CYP3A i'"]
+PASSAGE_0001: ["'1 INDICATIONS AND USAGE\\nPAXLOVID is indicated for the treatment of mild-to-moderate coronavirus dise'"]
+PASSAGE_0002: ["'Limitations of Use\\nPAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for'"]
+PASSAGE_0003: ["'2.1\\tImportant Dosage and Administration Information\\nPAXLOVID is nirmatrelvir tablets co-packaged wit'"]
+PASSAGE_0004: ["'2.2\\tRecommended Dosage\\nThe recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablet'"]
+PASSAGE_0005: ["'2.3 Dosage in Patients with Renal Impairment\\nPrescriptions should specify the numeric dose of each a'"]
+PASSAGE_0006: ["'Days of Treatment\\nDose and Dose Frequency\\nPAXLOVID should be administered at approximately the same '"]
+PASSAGE_0007: ["'Days 1-5\\n150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice dai'"]
+PASSAGE_0008: ["'Day 1\\n300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) once'"]
+PASSAGE_0009: ["'Days 2-5\\n150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) once dail'"]
+PASSAGE_0010: ["'2.4\\tUse in Patients with Hepatic Impairment\\nNo dosage adjustment is needed in patients with mild (Ch'"]
+PASSAGE_0011: ["'3 DOSAGE FORMS AND STRENGTHS\\nPAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets .\\n-'"]
+PASSAGE_0012: ["'4 CONTRAINDICATIONS\\nPAXLOVID is contraindicated in patients with a history of clinically significant'"]
+PASSAGE_0013: ["'5.1\\tRisk of Serious Adverse Reactions Due to Drug Interactions\\nInitiation of PAXLOVID, which contain'"]
+PASSAGE_0014: ["'5.2\\tHypersensitivity Reactions\\nAnaphylaxis, serious skin reactions (including toxic epidermal necrol'"]
+root@1ce871952c8c:/workspace#

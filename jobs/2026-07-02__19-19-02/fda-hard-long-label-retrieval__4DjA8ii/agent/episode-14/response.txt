@@ -1,0 +1,10 @@
+{
+  "analysis": "These are very detailed and clear passages. \nLet's check the next question:\n2. `6f12607a1ba14dd5`: \"Which medications should be avoided with Paxlovid?\"\nLet's search for 'avoid' or 'contraindicated' or 'Table 2' or 'contraindication' to see which medications are listed as contraindicated or to be avoided.",
+  "plan": "Search for chunks containing 'avoid' or 'contraindicated' or 'contraindication' or 'Table 2'.",
+  "commands": [
+    {
+      "keystrokes": "print(len(search('avoid')))\nprint(len(search('contraindicated')))\nprint(len(search('contraindication')))\n",
+      "duration": 0.5
+    }
+  ]
+}

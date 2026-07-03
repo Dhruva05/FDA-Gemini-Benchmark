@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Paxlovid":
+>             for i, chunk in enumerate(data["chunks"]):
+>                 if "CONTRAINDICATIONS" in chunk or "DRUG INTERACTIONS" in chunk:
+>                     lines = chunk.split("\n")
+>                     for l in lines:
+>                         if "CONTRAINDICATIONS" in l or "DRUG INTERACTIONS" in l or "7 " in l or "4 " in l:
+>                             print(f"PASSAGE_{i:04d}: {l[:100]}")
+> '
+PASSAGE_0000: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+PASSAGE_0012: 4 CONTRAINDICATIONS
+root@4b1b7b4fd079:/workspace#

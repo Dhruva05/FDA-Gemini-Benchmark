@@ -1,0 +1,26 @@
+{
+  "analysis": "Wait, let's look at `PASSAGE_0105` (Overdosage):\n"
+              "\"One of these reports described fatal cardiogenic shock in a 2.1 kg infant who received a single dose of 6.5 mL of lopinavir and ritonavir oral solution (520 mg lopinavir, approximately 10-fold above the recommended dose...)\"\n"
+              "And in `PASSAGE_0008`:\n"
+              "\"Total dose of lopinavir and ritonavir oral solution in pediatric patients should not exceed the recommended adult daily dose of 400/100 mg (5mL) twice daily.\"\n"
+              "Wait, 400/100 mg twice daily is 800/200 mg per day. So the recommended adult daily dose is 800 mg lopinavir and 200 mg ritonavir (or 800/200 mg per day).\n"
+              "\n"
+              "Let's review the two questions for Lopinavir-Ritonavir:\n"
+              "1. `daef650b92e56473`: \"How should Lopinavir-Ritonavir be administered?\"\n"
+              "   - Answer: Lopinavir and ritonavir oral solution must be taken with food. It can be administered orally or via a compatible feeding tube (such as silicone or PVC, but not polyurethane feeding tubes). For pediatric patients, the dose of the oral solution should be administered using the calibrated cup (supplied) or oral dosing syringe.\n"
+              "   - `citations`: `PASSAGE_0001` (General Administration Recommendations), `PASSAGE_0002` (Administering Oral Solution by Feeding Tube), and `PASSAGE_0007` (Dosage Recommendations in Pediatric Patients).\n"
+              "   - Let's check the structured fields for this question:\n"
+              "     - `dose`: \"400/100\" (or maybe null since it's about general administration, but wait, can we specify \"400/100\" mg or \"800/200\" mg? Let's check `PASSAGE_0005` which says \"400 mg/100 mg (5 mL) twice daily\" and `PASSAGE_0004` which says \"800 mg/200 mg (10 mL) once daily\"). Let's check if we should put the dose as \"400/100\" or \"800/200\" or null. Let's see if we can provide a good general representation, or if we can use the most specific one. Wait, since it's \"How should Lopinavir-Ritonavir be administered?\", maybe the dose is \"400/100\", unit is \"mg\", route is \"oral\", frequency is \"twice daily\" (or \"once daily or twice daily\"), population is \"adults and pediatric patients 14 days and older\", max_daily_dose is \"800/200 mg\". Let's check if the other question is \"What is the recommended dosage regimen of Lopinavir-Ritonavir?\".\n"
+              "     - Let's check the difference between the two questions. Usually, \"How should [Drug] be administered?\" focuses on route, administration with/without food, etc. while \"What is the recommended dosage regimen?\" focuses on dose, frequency, etc. But they both have the exact same structured fields. Let's provide the values that correspond to the most standard/primary recommended dosage/administration for each.\n"
+              "\n"
+              "Let's check Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate (set_id `d9a4185e-43fa-4aeb-9b0f-8db01b166038`):\n"
+              "- `PASSAGE_0003` (2.2 Recommended Dosage): \"The recommended dosage of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets in adult and pediatric patients weighing at least 35 kg is one tablet taken orally once daily with food.\"\n"
+              "- Let's check if there is a max daily dose or other instructions. Let's search for \"maximum\" or \"exceed\" in this drug's label.",
+  "plan": "Search for maximum dose details in Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > search_emtricitabine_max.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == 'd9a4185e-43fa-4aeb-9b0f-8db01b166038'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if any(kw in chunk.lower() for kw in ['maximum', 'exceed', 'limit', 'max']):\n        print(f\"PASSAGE_{i:04d}:\")\n        print(chunk[:300])\n        print(\"-\"*50)\nEOF\npython3 search_emtricitabine_max.py\n",
+      "duration": 1.0
+    }
+  ]
+}

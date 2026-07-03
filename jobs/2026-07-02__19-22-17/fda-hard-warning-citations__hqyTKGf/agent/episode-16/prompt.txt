@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 151 (char 152) | Content preview: '{\n  "analysis": "Wait, the `required_output_fields` lists the top-level keys: `[\\"qid\\", \\"status\\",'...
+
+Please fix these issues and provide a proper JSON response.

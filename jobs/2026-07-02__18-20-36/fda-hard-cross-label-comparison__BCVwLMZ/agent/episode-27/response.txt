@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's write a python script to search and display the candidate passages for ACETAZOLAMIDE EXTENDED-RELEASE (8e396b27-b44a-4aa9-805b-086395444b5f) and Actoplus Met (42e49120-6f3f-11db-9fe1-0800200c9a66) in full, as the previous screen was scrolled.",
+  "plan": "I will write a python script to print the relevant passages for Question 4.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > view_q4_full.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = {l['set_id']: l for l in (json.loads(line) for line in f)}\n\nprint(\"=== ACETAZOLAMIDE EXTENDED-RELEASE (8e396b27-b44a-4aa9-805b-086395444b5f) ===\")\nl1 = labels['8e396b27-b44a-4aa9-805b-086395444b5f']\nfor i, c in enumerate(l1['chunks']):\n    if any(w in c.lower() for w in ['dosage', 'direction', 'take', 'tablet', 'dose', 'mg', 'capsule']):\n        print(f\"PASSAGE_{i:04d}: {repr(c)}\")\n\nprint(\"=== Actoplus Met (42e49120-6f3f-11db-9fe1-0800200c9a66) ===\")\nl2 = labels['42e49120-6f3f-11db-9fe1-0800200c9a66']\nfor i, c in enumerate(l2['chunks']):\n    # Only print first few passages of Actoplus Met that are relevant to dosage/administration\n    if i < 15 and any(w in c.lower() for w in ['dosage', 'direction', 'take', 'tablet', 'dose', 'mg']):\n        print(f\"PASSAGE_{i:04d}: {repr(c)}\")\nEOF\npython3 view_q4_full.py\n",
+      "duration": 1.0
+    }
+  ]
+}

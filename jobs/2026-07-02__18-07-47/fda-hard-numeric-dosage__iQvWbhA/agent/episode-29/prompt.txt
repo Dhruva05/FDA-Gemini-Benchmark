@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# python3 -c "import json; f=open('/workspace/data/public/questions.jsonl'); [print(json.loads(line)['required_output_fields']) for
+line in f]"
+['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.
+frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.
+frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.
+frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.
+frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.
+frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.
+frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.
+frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.
+frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+root@371ed25b9fd3:/workspace#

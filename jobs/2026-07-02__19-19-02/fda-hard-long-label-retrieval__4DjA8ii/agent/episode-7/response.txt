@@ -1,0 +1,10 @@
+{
+  "analysis": "This is perfect! The `label_raw` contains `||PASSAGE_####||` followed by the text of that passage. Let's verify if the text in `data['chunks']` is exactly the cleaned version of the text of each passage, or if we can map them index-by-index. Let's check if `len(data['chunks'])` matches the number of passages in `label_raw`.",
+  "plan": "Write a python script to check if the chunk list indices match the PASSAGE_#### IDs.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json, re\nwith open('/workspace/data/public/labels.jsonl') as f:\n    data = json.loads(f.readline())\n    raw = data['label_raw']\n    matches = re.findall(r'\\|\\|(PASSAGE_\\d+)\\|\\|', raw)\n    print('Number of PASSAGE_#### found:', len(matches))\n    print('Number of chunks:', len(data['chunks']))\n    # Let's check first 5 chunks vs raw passages\n    for i in range(5):\n        chunk = data['chunks'][i]\n        # Find the passage text\n        p_id = f'PASSAGE_{i:04d}'\n        # Let's extract the text between ||PASSAGE_i|| and the next ||PASSAGE_j|| or end of string\n        start_marker = f'||{p_id}||'\n        next_p_id = f'PASSAGE_{i+1:04d}'\n        end_marker = f'||{next_p_id}||'\n        start_idx = raw.find(start_marker) + len(start_marker)\n        end_idx = raw.find(end_marker) if i+1 < len(data['chunks']) else len(raw)\n        p_text = raw[start_idx:end_idx].strip()\n        print(f'Match {i}:', chunk.strip() == p_text)\n        if chunk.strip() != p_text:\n            print('Chunk:', repr(chunk[:100]))\n            print('P_text:', repr(p_text[:100]))\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

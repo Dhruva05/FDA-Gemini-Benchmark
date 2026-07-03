@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The chunks are plain text strings. But wait, how do we get the `passage_id`? The rule says: \"Each citation must use a `set_id` from the relevant label and a real `PASSAGE_####` passage ID from that same label.\" Let's check if the raw label (`label_raw`) contains passages with `PASSAGE_####` IDs, or if we can find passage IDs elsewhere, or if `passage_id` is simply `PASSAGE_` followed by the 4-digit zero-padded index of the chunk (e.g. `PASSAGE_0000`, `PASSAGE_0001`, etc.). Let's check `label_raw` first to see if it's structured, or if there are other fields.",
+  "plan": "Print the keys and sample content of `label_raw` to see if it contains passage IDs.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    data = json.loads(f.readline())\n    print('Type of label_raw:', type(data.get('label_raw')))\n    if isinstance(data.get('label_raw'), dict):\n        print('label_raw keys:', data['label_raw'].keys())\n    else:\n        print('label_raw excerpt:', data['label_raw'][:500])\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

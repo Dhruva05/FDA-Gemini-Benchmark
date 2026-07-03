@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at the output of `view_acyclovir_raw.py`! The first part of it (PASSAGE_0000 to PASSAGE_0005) was scrolled off. Let's write a python script to inspect those first 6 passages of Acyclovir (dcc29902-1fe6-4713-947e-335503959464).",
+  "plan": "I will write a python script to print passages 0 to 5 of Acyclovir (dcc29902-1fe6-4713-947e-335503959464).",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); l={x['set_id']: x for x in (json.loads(line) for line in f)}; l1=l['dcc29902-1fe6-4713-947e-335503959464']; [print(f'PASSAGE_{i:04d}: {c}') for i, c in enumerate(l1['chunks'][:6])]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 221 (char 222) | Content preview: '{\n  "analysis": "This is perfect! Every chunk corresponds exactly to one passage in `label_raw`, and'...
+
+Please fix these issues and provide a proper JSON response.

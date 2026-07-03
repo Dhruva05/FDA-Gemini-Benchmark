@@ -1,0 +1,11 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# ls -la /workspace
+total 24
+drwxr-xr-x 1 root root 4096 Jul  3 00:05 .
+drwxr-xr-x 1 root root 4096 Jul  3 00:05 ..
+drwxr-xr-x 3 root root 4096 Jul  2 20:40 data
+-rw-r--r-- 1 root root  277 Jul  3 00:05 inspect_chunks.py
+-rw-r--r-- 1 root root  478 Jul  3 00:05 inspect_labels.py
+-rw-r--r-- 1 root root  367 Jul  3 00:05 inspect_structure.py
+root@0ef79956d710:/workspace#

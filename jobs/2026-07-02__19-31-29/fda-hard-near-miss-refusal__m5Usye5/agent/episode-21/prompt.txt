@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line
+][0]; print(repr(data['chunks'][35]))"
+'8.6 Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+root@3646eb22abe5:/workspace#

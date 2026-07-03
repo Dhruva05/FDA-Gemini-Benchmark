@@ -1,0 +1,34 @@
+{
+    "id": "3098535b-bbf2-43bc-ad19-62f3ca766670",
+    "started_at": "2026-07-02T20:12:21.422662",
+    "finished_at": "2026-07-02T20:30:19.446891",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "terminus-2__gemini-3.5-flash__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.693216
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.693216": [
+                            "fda-hard-cross-label-comparison__upmmwVs"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 2729243,
+        "n_cache_tokens": 2248486,
+        "n_output_tokens": 36216,
+        "cost_usd": 1.3843523999999998
+    }
+}

@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; [print(list(q.keys())) for q in [json.loads(line) for line in open('/workspace/data/public/questions.json
+l')]]"
+['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+root@a1980178bfd8:/workspace#

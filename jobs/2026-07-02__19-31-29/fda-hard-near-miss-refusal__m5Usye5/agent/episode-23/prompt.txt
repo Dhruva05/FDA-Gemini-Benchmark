@@ -1,0 +1,10 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line
+][0]; print(repr(data['chunks'][9]))"
+'6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials o
+f a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice.\nClinically si
+gnificant serious adverse reactions associated with acamprosate calcium described elsewhere in labeling include suicidality and depression and acute kidney fail
+ure .\nThe adverse event data described below reflect the safety experience in over 7000 patients exposed to acamprosate calcium for up to one year, including o
+ver 2000 acamprosate calcium-exposed patients who participated in placebo-controlled trials.'
+root@3646eb22abe5:/workspace#

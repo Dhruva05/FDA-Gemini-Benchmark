@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Acamprosate Calcium":
+>             for idx, chunk in enumerate(data["chunks"]):
+>                 if "hepatic" in chunk.lower():
+>                     print(f"PASSAGE_{idx:04d}: {chunk[:300]}\n")
+> '
+PASSAGE_0044: Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a geriatric population. However, since renal function diminishes in elderly patients and
+acamprosate
+
+root@3faa5da3ba91:/workspace#

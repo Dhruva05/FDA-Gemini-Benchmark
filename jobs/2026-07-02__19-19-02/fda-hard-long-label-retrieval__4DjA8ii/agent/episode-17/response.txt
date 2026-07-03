@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! So PASSAGE_0012 is the CONTRAINDICATIONS section, and there are multiple passages (from 0022 onwards) that specify contraindicated medications (e.g., alfuzosin, ranolazine, antiarrhythmics, colchicine, etc.). Let's print the entire section 4 (CONTRAINDICATIONS) which is likely PASSAGE_0012, and check if there are other passages in section 4.",
+  "plan": "Print PASSAGE_0012 in its entirety.",
+  "commands": [
+    {
+      "keystrokes": "print(label_data['chunks'][12])\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "text = open('/workspace/data/public/labels.jsonl').read(); idx = text.find('PASSAGE'); print(text[idx-100:idx+100])"
+hould NOT be taken with Paxlovid"], "drug_id": "paxlovid", "drug_name": "Paxlovid", "label_raw": "||PASSAGE_0000||\nWARNING: SIGNIFICANT DRUG INTERACTIONS WITH
+PAXLOVID\n- PAXLOVID includes ritonavir,
+root@b9fc21343844:/workspace#

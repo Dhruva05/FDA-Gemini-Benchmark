@@ -1,0 +1,108 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > validate_answers.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {label['set_id']: label for line in f for label in [json.loads(line)]}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = {q['qid']: q for line in f for q in [json.loads(line)]}
+>
+> with open('/workspace/answers.json') as f:
+>     ans_data = json.load(f)
+>
+> print("Keys in answers.json:", ans_data.keys())
+> answers = ans_data.get('answers', [])
+> print(f"Number of answers: {len(answers)}")
+>
+> # Check that every question is answered exactly once
+> qids_in_ans = [a['qid'] for a in answers]
+> print("QIDs match questions.jsonl:", set(qids_in_ans) == set(questions.keys()))
+>
+> for a in answers:
+>     qid = a['qid']
+>     print(f"\nChecking QID: {qid}")
+>     q = questions[qid]
+>
+>     # Check required fields
+>     req_fields = q['required_output_fields']
+>     print(f"  Required fields: {req_fields}")
+>     # Check status
+>     assert a['status'] in ['ANSWERED', 'NOT_FOUND'], f"Invalid status {a['status']}"
+>
+>     # Check citations
+>     citations = a.get('citations', [])
+>     print(f"  Number of citations: {len(citations)}")
+>     for c in citations:
+>         set_id = c['set_id']
+>         passage_id = c['passage_id']
+>         section = c['section']
+>         quote = c['supporting_quote']
+>
+>         # Check set_id matches question
+>         assert set_id == q['set_id'], f"set_id {set_id} does not match question set_id {q['set_id']}"
+>
+>         # Check passage_id exists in label
+>         label = labels[set_id]
+>         idx = int(passage_id.split('_')[1])
+>         assert 0 <= idx < len(label['chunks']), f"passage_id {passage_id} out of bounds"
+>
+>         # Check quote is in the chunk
+>         chunk = label['chunks'][idx]
+>         assert quote in chunk, f"Quote '{quote}' not found in passage {passage_id}"
+>         print(f"  Citation verified: {passage_id} contains quote.")
+>
+>     # Check structured fields
+>     sf = a.get('structured_fields', {})
+>     print(f"  Structured fields: {sf}")
+>     for field in req_fields:
+>         if field.startswith('structured_fields.'):
+>             subfield = field.split('.')[1]
+>             assert subfield in sf, f"Missing structured_field {subfield}"
+>
+> print("\nAll validations passed successfully!")
+> EOF
+root@c7da805c5eb1:/workspace# python3 validate_answers.py
+Keys in answers.json: dict_keys(['answers'])
+Number of answers: 6
+QIDs match questions.jsonl: True
+
+Checking QID: near-miss-04f3afa658fdef
+  Required fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+  Number of citations: 1
+  Citation verified: PASSAGE_0002 contains quote.
+  Structured fields: {'searched_topic': 'warnings', 'unsupported_topic': 'pharmacogenomic testing requirement'}
+
+Checking QID: near-miss-0c6ec72416151f
+  Required fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+  Number of citations: 1
+  Citation verified: PASSAGE_0006 contains quote.
+  Structured fields: {'searched_topic': 'renal impairment', 'unsupported_topic': 'severe hepatic impairment'}
+
+Checking QID: near-miss-bd69d0bfb1fc7d
+  Required fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+  Number of citations: 1
+  Citation verified: PASSAGE_0030 contains quote.
+  Structured fields: {'searched_topic': 'pregnancy', 'unsupported_topic': 'breastfeeding dose adjustment'}
+
+Checking QID: near-miss-d4ca1884aa8ab4
+  Required fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+  Number of citations: 1
+  Citation verified: PASSAGE_0009 contains quote.
+  Structured fields: {'searched_topic': 'adverse reactions', 'unsupported_topic': 'therapeutic drug monitoring target range'}
+
+Checking QID: near-miss-52e5f8cac33c50
+  Required fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+  Number of citations: 1
+  Citation verified: PASSAGE_0033 contains quote.
+  Structured fields: {'searched_topic': 'pediatric', 'unsupported_topic': 'geriatric maximum cumulative lifetime dose'}
+
+Checking QID: near-miss-5b5cb6a5249660
+  Required fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+  Number of citations: 1
+  Citation verified: PASSAGE_0006 contains quote.
+  Structured fields: {'searched_topic': 'pregnancy', 'unsupported_topic': 'breastfeeding dose adjustment'}
+
+All validations passed successfully!
+root@c7da805c5eb1:/workspace#

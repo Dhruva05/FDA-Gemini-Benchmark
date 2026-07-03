@@ -1,0 +1,41 @@
+Current Terminal Screen:
+Acetaminophen and Codeine Phosphate tablets are classified as a Schedule III controlled substance.  Abuse and Dependence:
+Codeine can produce drug dependence of the morphine type and, therefore, has the potential for being abused. Psychological dependence, physical dependence, and
+tolerance may develop upon repeated administration, and it should be prescribed and administered with the same degree of caution appropriate to the use of other
+ oral narcotic medications.
+PASSAGE_0010: Following an acute overdosage, toxicity may result from codeine or acetaminophen.  Signs and Symptoms:
+Toxicity from codeine poisoning includes the opioid triad of: pinpoint pupils, depression of respiration, and loss of consciousness. Convulsions may occur.
+In acetaminophen overdosage: dose-dependent, potentially fatal hepatic necrosis is the most serious adverse effect. Renal tubular necrosis, hypoglycemic coma an
+d coagulation defects may also occur. Early symptoms following a potentially hepatotoxic overdose may include: nausea, vomiting, diaphoresis and general malaise
+. Clinical and laboratory evidence of hepatic toxicity may not be apparent until 48 to 72 hours post-ingestion.  Treatment:
+A single or multiple drug overdose with acetaminophen and codeine is a potentially lethal polydrug overdose, and consultation with a regional poison control cen
+ter is recommended. Immediate treatment includes support of cardiorespiratory function and measures to reduce drug absorption.
+Oxygen, intravenous fluids, vasopressors, and other supportive measures should be employed as indicated. Assisted or controlled ventilation should also be consi
+dered. For respiratory depression due to overdosage or unusual sensitivity to codeine, parenteral naloxone is a specific and effective antagonist.
+Gastric decontamination with activated charcoal should be administered just prior to N-acetylcysteine (NAC) to decrease systemic absorption if acetaminophen ing
+estion is known or suspected to have occurred within a few hours of presentation. Serum acetaminophen levels should be obtained immediately if the patient prese
+nts 4 hours or more after ingestion to assess potential risk of hepatotoxicity; acetaminophen levels drawn less than 4 hours post-ingestion may be misleading. T
+o obtain the best possible outcome, NAC should be administered as soon as possible where impending or evolving liver injury is suspected. Intravenous NAC may be
+ administered when circumstances preclude oral administration.
+Vigorous supportive therapy is required in severe intoxication. Procedures to limit the continuing absorption of the drug must be readily performed since the he
+patic injury is dose dependent and occurs early in the course of intoxication.
+PASSAGE_0011: Dosage should be adjusted according to severity of pain and response of the patient.
+Take (1 - 2) tablets orally every 6-8 hours as needed.
+The usual dose of codeine phosphate in children is 0.5 mg/kg.
+Doses may be repeated up to every 4 hours.
+The prescriber must determine the number of tablets per dose, and the maximum number of tablets per 24 hours based upon the above dosage guidance. This informat
+ion should be conveyed in the prescription.
+It should be kept in mind, however, that tolerance to codeine can develop with continued use and that the incidence of untoward effects is dose related. Adult d
+oses of codeine higher than 60 mg fail to give commensurate relief of pain but merely prolong analgesia and are associated with an appreciably increased inciden
+ce of undesirable side effects. Equivalently high doses in children would have similar effects.
+PASSAGE_0012: Acetaminophen and Codeine Phosphate Tablets 300 mg/30 mg are white, round, flat-faced, beveled edge, scored (bisect bar) tablets, debossed "2064"
+and "V" on one side and debossed "3" on the reverse side. They are supplied in bottles of 30, 50, 60, 90, 100, 120, 180, 500 and 1000.
+PASSAGE_0014: Acetaminophen/codeine 300/30mg tablets CIII
+For indications, dosage, precautions, etc. see package insert.Store at controlled room temperature 20-25° C (68-77° F.)
+Do not use if foil wrap and seal are damagedFor questions call: 1-800-541-6315
+Lot #     NDC #    Mft:
+Packaged by PharmPak                       RX Only
+Lot # L04401501C   Exp. 12/31/2015  Qty: 1 tablet
+ACETAMIN W/CODEINE300/30G TABLETS
+5434801501LOT H18401501CEXP 08/2015
+root@faa94ec9460f:/workspace#

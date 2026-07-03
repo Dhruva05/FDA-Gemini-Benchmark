@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 259 (char 260) | Content preview: '{\n  "analysis": "So there is only 1 drug label in `labels.jsonl`, which is Paxlovid with `set_id` `8'...
+
+Please fix these issues and provide a proper JSON response.

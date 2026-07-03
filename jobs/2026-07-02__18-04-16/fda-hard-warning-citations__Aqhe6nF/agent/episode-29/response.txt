@@ -1,0 +1,10 @@
+{
+  "analysis": "This is great! The warnings and precautions for Paxlovid are located in PASSAGE_0013, PASSAGE_0014, PASSAGE_0015, and PASSAGE_0016. Let's print the full text of these chunks to read them carefully.",
+  "plan": "I will print the full text of PASSAGE_0013, PASSAGE_0014, PASSAGE_0015, and PASSAGE_0016 from the Paxlovid label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    pax = json.loads(f.readline())\nfor idx in [13, 14, 15, 16]:\n    print(f'=== PASSAGE_{idx:04d} ===')\n    print(pax['chunks'][idx])\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

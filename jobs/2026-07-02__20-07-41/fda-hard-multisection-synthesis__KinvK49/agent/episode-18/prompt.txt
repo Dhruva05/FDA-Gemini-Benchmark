@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 233 (char 234) | Content preview: '{\n  "analysis": "No environment variables specify structured_fields. Let\'s see if we should make str'...
+
+Please fix these issues and provide a proper JSON response.

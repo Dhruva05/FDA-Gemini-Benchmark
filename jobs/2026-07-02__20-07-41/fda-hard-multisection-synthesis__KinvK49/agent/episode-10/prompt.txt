@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 254 (char 255) | Content preview: '{\n  "analysis": "This is extremely clear and elegant! The `label_raw` is split by `||PASSAGE_####||`'...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,15 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     data = json.loads(next(f))
+>     idx = data["label_raw"].find("PASSAGE")
+>     print("idx:", idx)
+>     print("len:", len(data["label_raw"]))
+>     print("slice:", repr(data["label_raw"][idx:idx+50]))
+> '
+idx: 2
+len: 1705
+slice: 'PASSAGE_0000||\nUses\ntemporarily relieves these sym'
+root@2809f9ae2d53:/workspace#

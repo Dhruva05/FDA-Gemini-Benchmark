@@ -1,0 +1,55 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj["drug_name"] == "Lopinavir-Ritonavir":
+>             for i, chunk in enumerate(obj["chunks"]):
+>                 if "dosage and administration" in chunk.lower() or "dose" in chunk.lower() or "adminis" in chunk.lower():
+>                     if i < 30:
+>                         print(f"PASSAGE_{i:04d}: {chunk[:300]}")
+> '
+PASSAGE_0001: 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, su
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage rec
+ommendations for twice daily dosing when lopinavir and
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral solution
+ should be administered using the calibrated cup (supplied) or oral dosing syringe.
+Lopinav
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing or exceeding the recommended adult dose.
+Body surface area (BSA) can be calculated as follows:
+The l
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-associated resistance substitutions.
+- Once daily lopinavir and ritonavir dosing is not recommended in pregnancy
+Once daily lopinavir and ritonavir d
+PASSAGE_0013: 4 CONTRAINDICATIONS
+- Lopinavir and ritonavir is contraindicated in patients with previously demonstrated clinically significant hypersensitivity (e.g., toxic epidermal necrolysis,
+ Stevens-Johnson syndrome, erythema multiforme, urticaria, angioedema) to any of its ingredients, including ritonavir.
+L
+PASSAGE_0015: 5.2 Toxicity in Preterm Neonates
+Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, approximately 15% (w/v). When administered
+concomitantly with propylene glycol, ethanol competitively inhibits the metabolism of propylene glycol, whi
+PASSAGE_0019: 5.6 PR Interval Prolongation
+Lopinavir and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atrioventricular block have been reported. Lopinavir and rito
+navir should be used with caution in patients with underlying structural heart disease, pre-existing conduction
+PASSAGE_0020: 5.7 Diabetes Mellitus/Hyperglycemia
+New onset diabetes mellitus, exacerbation of pre-existing diabetes mellitus, and hyperglycemia have been reported during post-marketing surveillance in HIV-1 in
+fected patients receiving protease inhibitor therapy. Some patients required either initiation or dose a
+PASSAGE_0025: 5.12 Resistance/Cross-resistance
+Because the potential for HIV cross-resistance among protease inhibitors has not been fully explored in lopinavir and ritonavir-treated patients, it is unknown
+what effect therapy with lopinavir and ritonavir will have on the activity of subsequently administered pro
+PASSAGE_0028: Adverse Reactions in Adults
+The safety of lopinavir and ritonavir has been investigated in about 2,600 patients in Phase II-IV clinical trials, of which about 700 have received a dose of 8
+00/200 mg (6 capsules or 4 tablets) once daily. Along with nucleoside reverse transcriptase inhibitors (NRTIs),
+root@c3dfb07a1d45:/workspace#

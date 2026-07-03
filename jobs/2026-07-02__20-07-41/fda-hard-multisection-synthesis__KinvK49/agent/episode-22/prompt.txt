@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 246 (char 247) | Content preview: '{\n  "analysis": "Ah! Why did the search yield nothing? Let\'s check: `re.search(r\'\\\\b\' + re.escape(kw'...
+
+Please fix these issues and provide a proper JSON response.

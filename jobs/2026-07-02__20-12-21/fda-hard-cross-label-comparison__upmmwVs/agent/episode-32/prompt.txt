@@ -1,0 +1,41 @@
+Current Terminal Screen:
+nd healthy subjects.
+----------------------------------------
+    PASSAGE_0045:
+Acamprosate had no inducing potential on the cytochrome CYP1A2 and 3A4 systems, and in vitro inhibition studies suggest that acamprosate does not inhibit in viv
+o metabolism mediated by cytochrome CYP1A2, 2C9, 2C19, 2D6, 2E1, or 3A4. The pharmacokinetics of acamprosate calcium were unaffected when co-administered with a
+lcohol, disulfiram or diazepam. Similarly, the pharmacokinetics of ethanol, diazepam and nordiazepam, imipramine and desipramine, naltrexone and 6-beta naltrexo
+l were unaffected following co-administration with acamprosate calcium. However, co-administration of acamprosate calcium with naltrexone led to a 33% increase
+in the Cmax and a 25% increase in the AUC of acamprosate. No adjustment of dosage is recommended in such patients.
+----------------------------------------
+    PASSAGE_0046:
+13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Dietary administration of acamprosate calcium for 2 years to Sprague-Dawley rats at doses of 25, 100 and 400 mg/kg/day (up to 3 times the maximum recommended hu
+man daily (MRHD) oral dose on an AUC basis) and CD-1 mice at doses of 400, 1200 and 3600 mg/kg/day (up to 25 times the MRHD on an AUC basis) showed no evidence
+of increased tumor incidence.
+Acamprosate calcium was negative in all genetic toxicology studies conducted. Acamprosate calcium demonstrated no evidence of genotoxicity in an in vitro bacter
+ial reverse point mutation assay (Ames assay) or an in vitro mammalian cell gene mutation test using
+Chinese Hamster Lung V79 cells. No clastogenicity was observed in an in vitro chromosomal aberration assay in human lymphocytes and no chromosomal damage detect
+ed in an in vivo mouse micronucleus assay.
+Acamprosate calcium had no effect on fertility after treatment for 70 days prior to mating in male rats and for 14 days prior to mating, throughout mating, gest
+ation and lactation in female rats at doses up to 1000 mg/kg/day (approximately 4 times the MRHD oral dose on a mg/m2 basis). In mice, acamprosate calcium admin
+istered orally for 60 days prior to mating and throughout gestation in females at doses up to 2400 mg/kg/day (approximately 5 times the MRHD oral dose on a mg/m
+2 basis) had no effect on fertility.
+----------------------------------------
+
+  --- DRUG: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (08c9d3dd-717b-0148-e054-00144ff8d46c) ---
+    PASSAGE_0012:
+Chlorhexidine gluconate oral rinse therapy should be initiated directly following a dental prophylaxis. Patients using chlorhexidine gluconate oral rinse should
+ be reevaluated and given a thorough prophylaxis at intervals no longer than six months.
+Recommended use is twice daily oral rinsing for 30 seconds, morning and evening after tooth brushing. Usual dosage is 15 ml (1 tablespoon) of undiluted chlorhex
+idine gluconate oral rinse. Patients should be instructed to not rinse with water, or other mouthwashes, brush teeth, or eat immediately after using chlorhexidi
+ne gluconate oral rinse. Chlorhexidine gluconate oral rinse is not intended for ingestion and should be expectorated after rinsing.
+----------------------------------------
+    PASSAGE_0016:
+REF 112-6720
+DIRECTIONS FOR USE: Swish one tablespoon (15ml) in mouth undiluted for 30 seconds, then
+spit out. Use after breakfast and before bedtime. Or, use as prescribed.
+NOTE: to minimize medicinal taste, do not rinse with water immediately after use.
+----------------------------------------
+
+root@7e48d58e23f3:/workspace#

@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); line=f.readline(); data=json.loads(line); print(type(data[
+'chunks'][0])); print(data['chunks'][0])"
+<class 'str'>
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe,
+ life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PA
+XLOVID and 2) Determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring
+- Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual p
+atient can be appropriately managed
+root@1ce871952c8c:/workspace#

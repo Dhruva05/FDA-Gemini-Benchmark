@@ -1,0 +1,10 @@
+{
+  "analysis": "This is extremely clear and helpful as well! Let's check the remaining questions:\n\n- `000ecd1d6df50389`: \"What is the recommended dosage regimen of Paxlovid?\"\nLet's search for dosage or regimen or administration. We saw chunk 3 and 4 earlier. Let's list chunks starting with '2.' or containing 'dosage' or 'administration' or 'dose'.",
+  "plan": "Search for chunks containing 'dosage' or 'administration' or 'dose' or starting with '2.'.",
+  "commands": [
+    {
+      "keystrokes": "print('dosage:', [idx for idx, chunk in search('dosage')])\nprint('administration:', [idx for idx, chunk in search('administration')])\nprint('2\\\\.:', [idx for idx, chunk in search('2\\\\.')])\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Lopinavir-Ritonavir":
+>             print(data["chunks"][59])
+> '
+↓ lopinavir
+Increase the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administered with efavirenz or nevirapine. Lopinavi
+r and ritonavir once daily in combination with efavirenz or nevirapine is not recommended .
+Non-nucleoside Reverse Transcriptase Inhibitor:
+root@3faa5da3ba91:/workspace#

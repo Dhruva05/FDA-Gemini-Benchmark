@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Expecting ',' delimiter: line 3 column 15 (char 142) | Content preview: '{\n  "analysis": "All 8 questions have the exact same list of `required_output_fields`! Let\'s underst'...
+
+Please fix these issues and provide a proper JSON response.

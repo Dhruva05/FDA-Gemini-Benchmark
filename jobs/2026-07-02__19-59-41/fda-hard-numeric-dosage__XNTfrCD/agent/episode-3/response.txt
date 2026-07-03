@@ -1,0 +1,10 @@
+{
+  "analysis": "There are exactly 4 labels. Let's see how many chunks each label has, and what the structure of a chunk is.",
+  "plan": "I will write a python script to inspect the structure of the chunks in the labels.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        chunks = data.get('chunks', [])\n        print(data.get('drug_name'), len(chunks))\n        if chunks:\n            print('chunk keys:', chunks[0].keys())\n            print('sample chunk:', chunks[0])\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

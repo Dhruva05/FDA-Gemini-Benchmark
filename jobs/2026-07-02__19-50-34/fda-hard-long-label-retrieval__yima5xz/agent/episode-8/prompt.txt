@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 57 (char 58) | Content preview: '{\n  "analysis": "There are no other files in `/workspace`.\nLet\'s think. The prompt says: \\"Each cita'...
+
+Please fix these issues and provide a proper JSON response.

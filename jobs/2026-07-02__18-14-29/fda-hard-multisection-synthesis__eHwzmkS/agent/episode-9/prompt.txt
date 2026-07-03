@@ -1,0 +1,9 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; raw = lab
+els[0]['label_raw']; passages = re.split(r'\|\|(PASSAGE_\d+)\|\|', raw); print('Length of split raw:', len(passages)); print('First few elements of split raw:',
+ [p[:100] for p in passages[:6]]); f.close()"
+Length of split raw: 419
+First few elements of split raw: ['', 'PASSAGE_0000', '\nWARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\n- PAXLOVID includes ritonavir, a strong CYP3A ',
+'PASSAGE_0001', '\n1 INDICATIONS AND USAGE\nPAXLOVID is indicated for the treatment of mild-to-moderate coronavirus dis', 'PASSAGE_0002']
+root@a1980178bfd8:/workspace#

@@ -1,0 +1,22 @@
+{
+  "analysis": "These are the exact 4 warnings and precautions!
+Let's summarize them:
+1. Risk of Serious Adverse Reactions Due to Drug Interactions (`PASSAGE_0013`)
+2. Hypersensitivity Reactions (`PASSAGE_0014`)
+3. Hepatotoxicity (`PASSAGE_0015`)
+4. Risk of HIV-1 Resistance Development (`PASSAGE_0016`)
+
+Wait, are there other safety risks or adverse reactions listed? Let's check Section 6 (Adverse Reactions) of the label.
+Let's search for \"adverse reactions\" or \"6 ADVERSE REACTIONS\" or \"most common\".",
+  "plan": "I will run a search for 'adverse reactions' or 'most common' to find the list of common adverse reactions and safety risks.",
+  "commands": [
+    {
+      "keystrokes": "python3 search.py \"adverse reactions\"\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 search.py \"most common\"\n",
+      "duration": 0.5
+    }
+  ]
+}

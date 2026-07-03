@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     first_line = json.loads(f.readline())
+>     print("Keys in label record:", list(first_line.keys()))
+>     print("Number of chunks:", len(first_line["chunks"]))
+>     print("First chunk keys:", list(first_line["chunks"][0].keys()))
+>     print("First chunk:", json.dumps(first_line["chunks"][0], indent=2))
+> '
+Keys in label record: ['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']
+Number of chunks: 209
+Traceback (most recent call last):
+  File "<string>", line 7, in <module>
+AttributeError: 'str' object has no attribute 'keys'
+root@3faa5da3ba91:/workspace#

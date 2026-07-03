@@ -1,0 +1,641 @@
+DRUG NAME: LAMPIT
+SET ID: 90d09714-a8b1-4696-8ada-f99dc54d0721
+
+=== PASSAGE_0000 ===
+SECTION: 1 INDICATIONS AND USAGE
+1 INDICATIONS AND USAGE
+LAMPIT is indicated in pediatric patients (birth to less than 18 years of age and weighing at least 2.5 kg) for the treatment of Chagas disease (American Trypanosomiasis) caused by Trypanosoma cruzi
+.
+
+=== PASSAGE_0001 ===
+SECTION: 2.1 Important Administration Instructions
+2.1 Important Administration Instructions
+- LAMPIT (30 mg and 120 mg) tablets are for oral use and must be taken with food.
+- LAMPIT tablets are dosed by body weight of the patient
+- LAMPIT (30 mg and 120 mg) tablets are functionally scored tablets which can be split into one-half (15 mg and 60 mg respectively) at the scored lines by hand. Do not break LAMPIT tablets mechanically with a tablet splitting device
+- LAMPIT 30 mg and 120 mg tablets can be made into a slurry as an alternative method of administration for patients who cannot swallow the tablets
+- Discontinue consumption of alcohol during treatment with LAMPIT
+- Complete the full course of treatment to prevent recurrence of the infection.
+- If a dose is missed, take the missed dose as soon as possible together with food. However, if it is within 3 hours of the next scheduled dose, skip the missed dose and continue treatment as prescribed. Do not take a double dose to make up for a missed dose.
+
+=== PASSAGE_0002 ===
+SECTION: 2.2 Recommended Dosage in Pediatric Patients
+2.2 Recommended Dosage in Pediatric Patients
+- Administer LAMPIT (30 mg and 120 mg) tablets orally three times a day with food.
+- Total daily recommended dosages of LAMPIT are based on the body weight of the patient .
+- Adjust LAMPIT dosage accordingly if body weight decreases during treatment
+- The recommended duration of treatment with LAMPIT is 60 days.
+Table 1: Total Daily Recommended Dosages of LAMPIT Based on Body Weight
+
+=== PASSAGE_0003 ===
+SECTION: 10 to 20
+10 to 20
+aTerm newborn with body weight of greater than or equal to 2.5 kg
+Table 2: Individual Dosages Based on Body Weight in Pediatric Patients (Birtha to Less than 18 years of age)
+
+=== PASSAGE_0004 ===
+SECTION: Dose (mg)
+Dose (mg)
+Number of LAMPIT 30 mg tablets per dose
+(3 x Daily)
+Number of LAMPIT
+120 mg tablets per dose
+(3 x Daily)
+
+=== PASSAGE_0005 ===
+SECTION: —
+—
+4.6 kg to less than 9 kg
+
+=== PASSAGE_0006 ===
+SECTION: —
+—
+9 kg to less than 13 kg
+
+=== PASSAGE_0007 ===
+SECTION: —
+—
+13 kg to less than 18 kg
+
+=== PASSAGE_0008 ===
+SECTION: ½ tablet
+½ tablet
+18 kg to less than 22 kg
+
+=== PASSAGE_0009 ===
+SECTION: —
+—
+22 kg to less than 27 kg
+
+=== PASSAGE_0010 ===
+SECTION: —
+—
+27 kg to less than 35 kg
+
+=== PASSAGE_0011 ===
+SECTION: 1 tablet
+1 tablet
+35 kg to less than 41 kg
+
+=== PASSAGE_0012 ===
+SECTION: 1 ½ tablets
+1 ½ tablets
+41 kg to less than 51 kg
+
+=== PASSAGE_0013 ===
+SECTION: 1 tablet
+1 tablet
+51 kg to less than 71 kg
+
+=== PASSAGE_0014 ===
+SECTION: 1 ½ tablets
+1 ½ tablets
+71 kg to less than 91 kg
+
+=== PASSAGE_0015 ===
+SECTION: 2 ½ tablets
+2 ½ tablets
+aTerm newborn with body weight of greater than or equal to 2.5 kg
+
+=== PASSAGE_0016 ===
+SECTION: 2.3 Pregnancy Testing Prior to Initiating LAMPIT
+2.3 Pregnancy Testing Prior to Initiating LAMPIT
+Obtain a pregnancy test in females of reproductive potential prior to initiating treatment with LAMPIT .
+
+=== PASSAGE_0017 ===
+SECTION: 2.4 Instructions for Splitting LAMPIT Tablets
+2.4 Instructions for Splitting LAMPIT Tablets
+Do not break LAMPIT tablets mechanically with a tablet splitting device. A functional score line is used to divide the tablet by hand as follows:
+- To split LAMPIT tablet, place the tablet on a flat surface with the score line facing up.
+- With the tablet resting on the flat surface, apply enough downward pressure with the index finger centered on the top of the tablet to break it along the score line.
+
+=== PASSAGE_0018 ===
+SECTION: 2.5 Preparation of a Slurry of LAMPIT as an Alternate Method of Administration
+2.5 Preparation of a Slurry of LAMPIT as an Alternate Method of Administration
+For patients who are unable to swallow whole or half tablets, LAMPIT tablet can be dispersed in water and administered as outlined below.
+- Place approximately 2.5 mL of water into a spoon.
+- Place the prescribed dose into the water.
+- Allow the tablet(s) to disintegrate (typically less than 30 seconds).
+- A slurry (liquid suspension) is formed.
+- Take the slurry immediately with food.
+
+=== PASSAGE_0019 ===
+SECTION: 3 DOSAGE FORMS AND STRENGTHS
+3 DOSAGE FORMS AND STRENGTHS
+LAMPIT tablets are available as 30 mg and 120 mg tablets.
+- 30 mg, yellow, round, biconvex tablets, functionally scored on one side for the division of the tablet into equal doses and marked with ‘30’ on the other side.
+- 120 mg, yellow, round, biconvex tablets, functionally scored on one side for the division of the tablet into equal doses and marked with ‘120’ on the other side
+
+=== PASSAGE_0020 ===
+SECTION: 4 CONTRAINDICATIONS
+4 CONTRAINDICATIONS
+LAMPIT tablets are contraindicated in:
+- Patients with known hypersensitivity to nifurtimox or any of the excipients in LAMPIT
+- Patients who consume alcohol during treatment
+
+=== PASSAGE_0021 ===
+SECTION: 5.1 Genotoxicity
+5.1	Genotoxicity
+Genotoxicity of LAMPIT has been demonstrated in humans, in vitro in several bacterial species and mammalian cell systems, and in vivo in rodents .
+A study evaluating the cytogenetic effect of nifurtimox in pediatric patients ranging from 7 months to 14 years of age with Chagas disease demonstrated a 13-fold increase in chromosomal aberrations.
+
+=== PASSAGE_0022 ===
+SECTION: Carcinogenicity has been observed in mice and rats treated chronically with nitrofuran agents which are structurally similar to nifurtimox. Similar data have not been reported for LAMPIT . It is not known whether LAMPIT is associated with carcinogenicity in humans.
+Carcinogenicity has been observed in mice and rats treated chronically with nitrofuran agents which are structurally similar to nifurtimox. Similar data have not been reported for LAMPIT . It is not known whether LAMPIT is associated with carcinogenicity in humans.
+
+=== PASSAGE_0023 ===
+SECTION: 5.2 Embryo-Fetal Toxicity
+5.2 Embryo-Fetal Toxicity
+Based on findings from animal studies, LAMPIT can cause fetal harm when administered to a pregnant woman. In animal reproduction studies, nifurtimox administered orally to pregnant rats, and rabbits during organogenesis was associated with reduced maternal body weights in rats, and abortions, fetal death, and smaller litter sizes in rabbits at doses approximately equivalent to and 2-times, respectively, the maximum recommended human dose (MRHD) of 10 mg/kg/day. Fetal malformations were observed in pregnant rabbits administered nifurtimox doses less than the MRHD .
+Advise pregnant women of the potential risk to a fetus. Pregnancy testing is recommended for females of reproductive potential prior to initiating treatment with LAMPIT . Advise females of reproductive potential to use effective contraception during treatment with LAMPIT and for 6 months after the last dose. Advise male patients with female partners of reproductive potential to use condoms during treatment and for 3 months after the last dose of LAMPIT .
+
+=== PASSAGE_0024 ===
+SECTION: 5.3 Worsening of Neurological and Psychiatric Conditions
+5.3 Worsening of Neurological and Psychiatric Conditions
+Patients with a history of brain injury, seizures, psychiatric disease, or serious behavioral alterations may experience worsening of their conditions when receiving LAMPIT. Administer LAMPIT under close medical supervision in these patients and in patients who develop neurological disturbances or psychiatric drug reactions.
+
+=== PASSAGE_0025 ===
+SECTION: 5.4 Hypersensitivity
+5.4 Hypersensitivity
+Cases of hypersensitivity have been reported in patients receiving therapy with nifurtimox. The hypersensitivity could be a reaction induced by nifurtimox or an immune response triggered by Chagas disease during treatment. Hypersensitivity reactions could be accompanied by hypotension, angioedema (including laryngeal or facial edema), dyspnea, pruritus, rash or other severe skin reactions. At the first sign of serious hypersensitivity, discontinue treatment with LAMPIT .
+
+=== PASSAGE_0026 ===
+SECTION: 5.5 Decreased Appetite and Weight Loss
+5.5 Decreased Appetite and Weight Loss
+Decreased appetite and weight loss were reported in patients treated with LAMPIT in the clinical trials. During treatment with LAMPIT, patients can lose their appetite or experience nausea/vomiting which can result in weight loss. Check body weight every 14 days, as the dosage may have to be adjusted .
+
+=== PASSAGE_0027 ===
+SECTION: 5.6 Porphyria
+5.6 Porphyria
+Treatment with nitrofuran derivatives, such as LAMPIT, may precipitate acute attacks of porphyria. Administer LAMPIT tablets under close medical supervision in patients with porphyria.
+
+=== PASSAGE_0028 ===
+SECTION: 6 ADVERSE REACTIONS
+6 ADVERSE REACTIONS
+The following serious or otherwise important adverse reactions are discussed elsewhere in the labeling:
+- Potential for Genotoxicity, Carcinogenicity, and Mutagenicity
+- Worsening of Neurological and Psychiatric Conditions
+- Hypersensitivity
+- Decreased Appetite and Weight Loss
+- Porphyria
+
+=== PASSAGE_0029 ===
+SECTION: 6.1 Clinical Trials Experience
+6.1 Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The safety data described below reflect exposure to LAMPIT in one prospective, randomized, double-blind trial (Trial 1). 330 pediatric patients with serologic evidence of T. cruzi infection and without Chagas disease-related cardiac or gastrointestinal symptoms were randomly assigned in a 2:1 fashion to a 60-day (n=219) or a 30-day (n=111) LAMPIT treatment regimen and were followed up for one year after end of treatment. LAMPIT was administered three times a day with food using a body weight-based dosing. The median treatment duration was 61 days for subjects in the 60-day regimen. The majority (86.7%) of the study population was ≥2 to <18 years of age at randomization.
+Discontinuation of LAMPIT due to adverse reactions occurred in 14 of 330 (4.2%) patients overall, 12 of 219 (5.5%) patients in the 60-day arm, and 2 of 111 (1.8%) patients in the 30-day arm. Adverse reactions were reported for 213 of 330 (64.5%) patients. The proportion of patients with adverse reactions was higher in the 60-day regimen (67.1%) compared with the 30-day regimen (59.5%). Most patients with adverse reactions had mild (76.5%) or moderate (22.0%) reactions.
+The most frequently reported adverse reactions in patients treated with LAMPIT for 60 days were vomiting (14.6%), abdominal pain (13.2%), headache (12.8%), decreased appetite (10.5%), nausea (8.2%), pyrexia (7.3%), rash (5.5%).
+Adverse reactions occurring in ≥1% of LAMPIT-treated patients are shown in Table 3.
+Table 3 Adverse Reactions Reported in (≥1%) Pediatric Patients with Chagas Disease in Trial 1 Treated with LAMPIT for 60 days
+
+=== PASSAGE_0030 ===
+SECTION: 2.3%
+2.3%
+a Abdominal pain includes abdominal pain and abdominal pain upper b Rash includes rash, rash macular, rash maculo-papular, rash morbilliform, and rash papular.
+Other adverse reactions occurring in 0.1% to less than 1% of patients treated with LAMPIT for 60 days included asthenia, vertigo, arthralgia, myalgia, paresthesia, tremor, irritability, anxiety, pruritus, fatigue, somnolence, seizure, syncope, neutropenia, leukopenia.
+
+=== PASSAGE_0031 ===
+SECTION: 6.2 Postmarketing Experience
+6.2 Postmarketing Experience
+The following safety data were derived during postmarketing surveillance of nifurtimox from outside the United States, including literature data for all age groups (pediatric and adult populations). Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.
+Table 4: Postmarketing Adverse Reactions Reported in Pediatric and Adult Populations Treated with Nifurtimox
+
+=== PASSAGE_0032 ===
+SECTION: Angioedema
+Angioedema
+Drug reaction with eosinophilia and systemic symptoms (DRESS)
+
+=== PASSAGE_0033 ===
+SECTION: 7 DRUG INTERACTIONS
+7 DRUG INTERACTIONS
+Concomitant use of LAMPIT with alcohol may increase the incidence and severity of undesirable effects similar to other nitrofurans and nitroheterocyclic compounds. LAMPIT is contraindicated in patients who consume alcohol during treatment .
+
+=== PASSAGE_0034 ===
+SECTION: 8.1 Risk Summary
+8.1	Risk Summary
+Based on animal studies, LAMPIT may cause fetal harm when administered to a pregnant woman. Published postmarketing reports on nifurtimox use during pregnancy are insufficient to inform a drug-associated risk of birth defects and miscarriage. There are risks to the fetus associated with Chagas disease .
+Nifurtimox administered orally to pregnant rats, and rabbits during organogenesis was associated with reduced maternal body weights in rats, and abortions, reduced maternal weight gain, and reduced numbers of live fetuses in rabbits when nifurtimox was administered orally during organogenesis at doses approximately equal to the MRHD in rats and 2-times the MRHD in rabbits. An increased incidence of a fetal skeletal malformation (fusion of caudal vertebral bodies) occurred in rabbits at nifurtimox doses approximately 0.2 times the MRHD. In a pre-postnatal study, maternal body weights and fetal body weights of first-generation offspring were reduced at doses approximately equal to or 0.5 times the MRHD, respectively, and several male offspring in the nifurtimox treatment groups exhibited slightly small testes at doses ≥0.2 times the MRHD . Advise pregnant women of the potential risk to a fetus.
+There is a pregnancy safety study for LAMPIT. If LAMPIT is administered during pregnancy, or if a patient becomes pregnant while receiving LAMPIT or within six months following the last dose of LAMPIT, healthcare providers should report LAMPIT exposure by calling 1-888-842-2937.
+The estimated background risk of major birth defects and miscarriage for the indicated population is unknown. All pregnancies have a background risk of birth defect, loss, or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2 to 4% and 15 to 20%, respectively.
+
+=== PASSAGE_0035 ===
+SECTION: Published data from case-control and observational studies on chronic Chagas disease during pregnancy are inconsistent in their findings. Some studies showed an increased risk of pregnancy loss, prematurity and neonatal mortality in pregnant women who have chronic Chagas disease while other studies did not demonstrate these findings. Chronic Chagas disease is usually not immediately life-threatening. Since pregnancy findings are inconsistent, treatment of chronic Chagas disease during pregnancy is not recommended due to risk of embryo-fetal toxicity from LAMPIT.
+Published data from case-control and observational studies on chronic Chagas disease during pregnancy are inconsistent in their findings. Some studies showed an increased risk of pregnancy loss, prematurity and neonatal mortality in pregnant women who have chronic Chagas disease while other studies did not demonstrate these findings. Chronic Chagas disease is usually not immediately life-threatening. Since pregnancy findings are inconsistent, treatment of chronic Chagas disease during pregnancy is not recommended due to risk of embryo-fetal toxicity from LAMPIT.
+Acute symptomatic Chagas disease is rare in pregnant women; however, symptoms may be serious or life-threatening. If a pregnant woman presents with acute symptomatic Chagas disease, the risks versus benefits of treatment with LAMPIT to the mother and the fetus should be evaluated on a case-by-case basis.
+
+=== PASSAGE_0036 ===
+SECTION: In an embryo-fetal toxicity study in pregnant rats, 15, 30, and 60 mg/kg/day nifurtimox were administered orally during the period of organogenesis (GD 6 to GD 17). Maternal body weights, body weight gain, and food consumption were reduced in the 60 mg/kg/day dose group. Treatment with nifurtimox did not produce fetal toxicity and no nifurtimox-related fetal malformations were observed. No maternal toxicity was observed at 30 mg/kg/day nifurtimox (approximately 0.5 times the MRHD based on body surface area comparison) and no adverse fetal effects were observed at 60 mg/kg/day nifurtimox (approximately equivalent to the MRHD based on body surface area comparison).
+In an embryo-fetal toxicity study in pregnant rats, 15, 30, and 60 mg/kg/day nifurtimox were administered orally during the period of organogenesis (GD 6 to GD 17). Maternal body weights, body weight gain, and food consumption were reduced in the 60 mg/kg/day dose group. Treatment with nifurtimox did not produce fetal toxicity and no nifurtimox-related fetal malformations were observed. No maternal toxicity was observed at 30 mg/kg/day nifurtimox (approximately 0.5 times the MRHD based on body surface area comparison) and no adverse fetal effects were observed at 60 mg/kg/day nifurtimox (approximately equivalent to the MRHD based on body surface area comparison).
+In pregnant rabbits orally administered 5, 15, and 60 mg/kg/day nifurtimox during the period of organogenesis (GD 6 to GD 20), the high dose was associated with maternal toxicity including reduced body weights and food consumption, and abortions in 8/20 high-dose dams. The mean number of live fetuses/litter and the percent of live fetuses per total implantations per group were significantly lower in the mid- and high-dose groups compared to the control group. Nifurtimox administration was associated with increased fetal and litter incidences of a skeletal malformation (fusion of caudal vertebral bodies) in fetuses in the low-dose group receiving 5 mg/kg/day (approximately equivalent to 0.2-times the MRHD based on body surface area comparison). No maternal toxicity was observed at 15 mg/kg/day which is approximately equivalent to 0.5 times the MRHD based on body surface area comparison.
+In a pre-postnatal study, pregnant female rats were orally administered 15, 30, and 60 mg/kg/day nifurtimox during organogenesis and lactation GD 6 to lactation day (LD) 21]. Maternal findings included reduced maternal body weights in high-dose dams during gestation and to a lesser degree during lactation. In first-generation offspring, body weights were significantly reduced in males and females in the high-dose group during the lactation and post-lactation periods. Physical development, neurological function, and reproduction of first-generation offspring were not substantially changed in the nifurtimox treatment groups, but 5–20% of male offspring in all the nifurtimox treatment groups exhibited slightly small testes. No adverse maternal effects or fetal effects on first-generation female offspring occurred at 30 mg/kg/day, and no adverse fetal effects on the development of male offspring occurred at 15 mg/kg/day (respectively approximately 0.5- and 0.2-times the MRHD based on body surface area comparison).
+
+=== PASSAGE_0037 ===
+SECTION: 8.2 Risk Summary
+8.2	Risk Summary
+Published literature demonstrates that nifurtimox is present in human breast milk with an estimated infant daily dose of less than 15% of the recommended daily dose for pediatric patients with Chagas disease. There were no reports of adverse effects on the small number of infants who were breastfed by mothers taking nifurtimox. There is no information on the effects of nifurtimox on milk production. Monitor infants exposed to LAMPIT through breast milk for vomiting, rash, decreased appetite, pyrexia and irritability.
+The developmental and health benefits of breastfeeding should be considered along with the mother’s clinical need for LAMPIT and any potential adverse effects on the breastfed infant from LAMPIT or from the underlying maternal condition.
+
+=== PASSAGE_0038 ===
+SECTION: 8.3 Pregnancy Testing
+8.3	Pregnancy Testing
+Pregnancy testing is recommended for females of reproductive potential prior to initiating treatment with LAMPIT.
+
+=== PASSAGE_0039 ===
+SECTION: LAMPIT may cause fetal harm when administered to a pregnant woman . Advise females of reproductive potential to use effective contraception during treatment with LAMPIT and for 6 months after the final dose.
+LAMPIT may cause fetal harm when administered to a pregnant woman . Advise females of reproductive potential to use effective contraception during treatment with LAMPIT and for 6 months after the final dose.
+
+=== PASSAGE_0040 ===
+SECTION: Due to the potential for genotoxicity, advise male patients with female partners of reproductive potential to use condoms during treatment and for 3 months after the final dose of LAMPIT .
+Due to the potential for genotoxicity, advise male patients with female partners of reproductive potential to use condoms during treatment and for 3 months after the final dose of LAMPIT .
+
+=== PASSAGE_0041 ===
+SECTION: Based on findings in rodents, LAMPIT may impair fertility in males of reproductive potential. These effects on fertility were not reversible in 75% of the animals at 11 weeks after dosing .
+Based on findings in rodents, LAMPIT may impair fertility in males of reproductive potential. These effects on fertility were not reversible in 75% of the animals at 11 weeks after dosing .
+
+=== PASSAGE_0042 ===
+SECTION: 8.4 Pediatric Use
+8.4 Pediatric Use
+The safety and effectiveness of LAMPIT have been established for the treatment of Chagas disease (American Trypanosomiasis) caused by Trypanosoma cruzi in pediatric patients from birth to less than 18 years of age weighing at least 2.5 kg. The efficacy of LAMPIT was demonstrated in pediatric patients 0 to 4 years of age in Trial 1 based on seroconversion to negative on lysate ELISA, recombinant ELISA and IHA at 4 years post-treatment compared to untreated patients. The efficacy of LAMPIT in pediatric patients 5 to <18 years of age was extrapolated from efficacy established in the younger pediatric population. Supportive evidence of efficacy was provided by seroconversion to negative on the F29 ELISA .
+The safety and effectiveness of LAMPIT has not been established in pediatric patients weighing less than 2.5 kg.
+
+=== PASSAGE_0043 ===
+SECTION: 8.6 Renal Impairment
+8.6 Renal Impairment
+The effect of renal impairment on the pharmacokinetics of nifurtimox is unknown . Published literature suggests that blood concentrations of nifurtimox were increased in patients with End Stage Renal Disease (ESRD) requiring hemodialysis . Administer LAMPIT under close medical supervision.
+
+=== PASSAGE_0044 ===
+SECTION: 8.7 Hepatic Impairment
+8.7 Hepatic Impairment
+The effect of hepatic impairment on the pharmacokinetics of nifurtimox is unknown Clinical Pharmacology (12.3)]. Administer LAMPIT under close medical supervision.
+
+=== PASSAGE_0045 ===
+SECTION: 11 DESCRIPTION
+11 DESCRIPTION
+LAMPIT contains nifurtimox, an antiprotozoal. The chemical name is (E)-N-(3-Methyl-1,1-dioxidothiomorpholin-4-yl)-1-(5-nitro-2-furyl)methanimine.
+The molecular weight is 287.29 and the molecular formula is C10 H13 N3 O5 S. The structural formula is:
+LAMPIT (nifurtimox) tablets are yellow round, biconvex tablets, each containing 30 mg or 120 mg of nifurtimox, intended for oral use. The 30 mg tablets are functionally scored on one side and marked with ‘30’ on the other side. The 120 mg tablets are functionally scored on one side and marked with ‘120’ on the other side.
+The inactive ingredients of the tablets are as follows: calcium hydrogen phosphate dihydrate, magnesium stearate, maize starch, silica colloidal anhydrous and sodium lauryl sulfate.
+
+=== PASSAGE_0046 ===
+SECTION: 12.1 Mechanism of Action
+12.1 Mechanism of Action
+Nifurtimox is an antiprotozoal drug .
+
+=== PASSAGE_0047 ===
+SECTION: 12.2 Pharmacodynamics
+12.2 Pharmacodynamics
+Nifurtimox exposure-response relationships and the time course of pharmacodynamics response are unknown.
+
+=== PASSAGE_0048 ===
+SECTION: At the recommended dose, nifurtimox treatment does not result in large mean increases (>20 ms) in the QTc interval.
+At the recommended dose, nifurtimox treatment does not result in large mean increases (>20 ms) in the QTc interval.
+
+=== PASSAGE_0049 ===
+SECTION: 12.3 Absorption
+12.3	Absorption
+The mean (%CV) nifurtimox AUC estimates ranged between 1676-2670 µg∙h/L (19–32%) and Cmax estimates ranged between 425-568 µg/L (26–50%) following administration of single dose 120 mg nifurtimox with food in adult Chagas patients. No clinically significant differences in nifurtimox AUC or Cmax at the 120 mg dose were observed when using two tablet strengths (30 and 120 mg) or administered as whole or dissolved tablets under fed conditions. The median time to reach maximum concentration (Tmax) of nifurtimox under fed conditions was 4 hours (range: 2 to 8 hours).
+
+=== PASSAGE_0050 ===
+SECTION: Following administration of a single oral dose of 120 mg LAMPIT in adult Chagas patients, nifurtimox Cmax increased 68%, AUC increased 71%, and Tmax increased by 1 hour with a high-fat meal (800–1000 calorie, approximately 60% fat) compared to fasted conditions.
+Following administration of a single oral dose of 120 mg LAMPIT in adult Chagas patients, nifurtimox Cmax increased 68%, AUC increased 71%, and Tmax increased by 1 hour with a high-fat meal (800–1000 calorie, approximately 60% fat) compared to fasted conditions.
+
+=== PASSAGE_0051 ===
+SECTION: Nifurtimox passes the blood brain barrier as well as the placental barrier. The plasma proteins binding of nifurtimox is 42%.
+Nifurtimox passes the blood brain barrier as well as the placental barrier. The plasma proteins binding of nifurtimox is 42%.
+
+=== PASSAGE_0052 ===
+SECTION: The mean (%CV) estimates for elimination half-life of nifurtimox ranged between 2.4–3.6 hours (12–37%).
+The mean (%CV) estimates for elimination half-life of nifurtimox ranged between 2.4–3.6 hours (12–37%).
+
+=== PASSAGE_0053 ===
+SECTION: Metabolism of nifurtimox is primarily mediated via nitroreductases. Exploratory investigations identified two major pharmacologically inactive metabolites (M-4, M-6) and several other minor metabolites in pooled human plasma. M-4 is a rearranged cysteine conjugate of nifurtimox with a half-life of approximately 28 hours, and M-6 is postulated to be formed by hydrolytic cleavage of the hydrazone moiety with a half-life of approximately 10 hours.
+Metabolism of nifurtimox is primarily mediated via nitroreductases. Exploratory investigations identified two major pharmacologically inactive metabolites (M-4, M-6) and several other minor metabolites in pooled human plasma. M-4 is a rearranged cysteine conjugate of nifurtimox with a half-life of approximately 28 hours, and M-6 is postulated to be formed by hydrolytic cleavage of the hydrazone moiety with a half-life of approximately 10 hours.
+
+=== PASSAGE_0054 ===
+SECTION: Following administration of nifurtimox under fed and fasted conditions, approximately 44% and 27% of the dose was recovered in urine mainly as metabolites, respectively. Biliary and fecal elimination of nifurtimox and its metabolites has not been evaluated.
+Following administration of nifurtimox under fed and fasted conditions, approximately 44% and 27% of the dose was recovered in urine mainly as metabolites, respectively. Biliary and fecal elimination of nifurtimox and its metabolites has not been evaluated.
+
+=== PASSAGE_0055 ===
+SECTION: The effect of renal or hepatic impairment on the pharmacokinetics of nifurtimox is unknown. Blood concentrations of nifurtimox increased in patients with ESRD.
+The effect of renal or hepatic impairment on the pharmacokinetics of nifurtimox is unknown. Blood concentrations of nifurtimox increased in patients with ESRD.
+
+=== PASSAGE_0056 ===
+SECTION: No clinical studies evaluating the drug interaction potential of nifurtimox have been conducted.
+No clinical studies evaluating the drug interaction potential of nifurtimox have been conducted.
+
+=== PASSAGE_0057 ===
+SECTION: Cytochrome P450 Enzymes (CYPs): Nifurtimox is not a substrate of CYPs. Nifurtimox and its metabolites (M-4 or M-6) are not inhibitors or inducers of CYPs.
+Cytochrome P450 Enzymes (CYPs): Nifurtimox is not a substrate of CYPs. Nifurtimox and its metabolites (M-4 or M-6) are not inhibitors or inducers of CYPs.
+Transporter Systems: Nifurtimox is not a substrate or inhibitor of P-glycoprotein (P-gp) or breast cancer resistant protein (BCRP), and is not an inhibitor of organic anion transporting polypeptide (OATPs), multidrug and toxin extrusion (MATE) proteins (MATE1/MATE2-K), organic anion transporter 1/3 (OAT1/OAT3), or organic cation transporter 2 (OCT2). Major metabolites (M-4 or M-6) of nifurtimox are not inhibitors of P-gp, BCRP, OATPs, MATE1, MATE2K, OAT1, OAT3, or OCT2 at clinically relevant concentrations.
+
+=== PASSAGE_0058 ===
+SECTION: 12.4 Mechanism of Action
+12.4	Mechanism of Action
+The mechanism of action of nifurtimox is not fully understood. Studies suggest that nifurtimox is metabolized/activated, by Type I (oxygen insensitive) and Type II (oxygen sensitive) nitoreductases (NTR) leading to production of toxic intermediate metabolites and/or reactive oxygen species that induce DNA damage and cell death of both intracellular and extracellular forms of T. cruzi.
+
+=== PASSAGE_0059 ===
+SECTION: Nifurtimox is active against all three stages, trypomastigotes, amastigotes, and epimastigotes, of T. cruzi. However, the sensitivity of T. cruzi strains to nifurtimox, from different geographic regions, may vary.
+Nifurtimox is active against all three stages, trypomastigotes, amastigotes, and epimastigotes, of T. cruzi. However, the sensitivity of T. cruzi strains to nifurtimox, from different geographic regions, may vary.
+
+=== PASSAGE_0060 ===
+SECTION: In vitro studies suggest the potential for development of resistance in T. cruzi against nifurtimox.
+In vitro studies suggest the potential for development of resistance in T. cruzi against nifurtimox.
+The mechanism of resistance to nifurtimox appears to be multifactorial. Trypanosomal nitroreductase is defined as a key resistance determinate. Either loss of gene copy, mutation of gene or down-regulation of gene expression are sufficient to cause decreased susceptibility of T. cruzi against nitroheterocyclic drugs like nifurtimox. In addition, other mechanisms of resistance like lower drug influx or higher drug efflux are described. However, the clinical relevance of these findings is not known.
+
+=== PASSAGE_0061 ===
+SECTION: Nonclinical studies suggest cross-resistance between nifurtimox and benznidazole. This appears to be due to down regulation of Type I NTR localized in the mitochondria.
+Nonclinical studies suggest cross-resistance between nifurtimox and benznidazole. This appears to be due to down regulation of Type I NTR localized in the mitochondria.
+
+=== PASSAGE_0062 ===
+SECTION: 13.1 Carcinogenicity
+13.1	Carcinogenicity
+Adequate long-term carcinogenicity studies for nifurtimox have not been performed. Nitrofurans, which have similar chemical structures to nifurtimox have been reported to be carcinogenic in mice and rats.
+
+=== PASSAGE_0063 ===
+SECTION: Genetic Toxicity
+Genetic Toxicity
+The genotoxicity of nifurtimox has been demonstrated in vitro in several bacterial species and mammalian cell systems and in vivo in mammals.
+Nifurtimox was mutagenic in strains of S. typhimurium (TA 98, 100, and 1537) in an Ames assay.
+Nifurtimox was genotoxic in human lymphocytes in an in vitro micronucleus assay.
+In vivo, nifurtimox was shown to be positive for genotoxicity in a mouse micronucleus assay, a mouse sister-chromatid exchange assay, and a human chromosome aberration assay. However, in a sister-chromatid exchange study in humans, oral doses of nifurtimox did not cause a significant increase in the frequency of sister-chromatid exchange in blood lymphocytes.
+
+=== PASSAGE_0064 ===
+SECTION: In a study examining the effects of nifurtimox on testicular morphology, male mice fed 0.08% or 0.16% nifurtimox in animal feed for 14 weeks experienced dose-dependent testicular toxicity including complete inhibition of spermatogenesis with the highest dose, evidence of arrested mitosis, signs of pyknosis, and no mature sperm. However, interstitial cells were unchanged, and fibrosis and inflammatory infiltrates were not observed. Nine weeks after the end of nifurtimox exposure, all testicular effects were almost entirely reversed.
+In a study examining the effects of nifurtimox on testicular morphology, male mice fed 0.08% or 0.16% nifurtimox in animal feed for 14 weeks experienced dose-dependent testicular toxicity including complete inhibition of spermatogenesis with the highest dose, evidence of arrested mitosis, signs of pyknosis, and no mature sperm. However, interstitial cells were unchanged, and fibrosis and inflammatory infiltrates were not observed. Nine weeks after the end of nifurtimox exposure, all testicular effects were almost entirely reversed.
+In a male and female fertility study in rats, nifurtimox was administered in dietary feed at doses of 150 ppm (equivalent to 7–15 mg/kg), 300 ppm (equivalent to 15–30 mg/kg/day), and 600 ppm (equivalent to 30–60 mg/kg/day) for 10 weeks before mating. Male fertility was completely inhibited in rats administered 30–60 mg/kg/day nifurtimox, but female fertility was not affected for the same dosing regimen. In a recovery study, 11 weeks after the end of dosing, fertility was still inhibited in 75% of male rats administered nifurtimox for 32 weeks indicating a lack of complete reversibility. The nifurtimox dose in male rats that was not associated with inhibition of fertility was considered to be ≤30 mg/kg/day which is approximately equivalent to 0.5 times the MRHD for fertile males based on body surface area comparison.
+
+=== PASSAGE_0065 ===
+SECTION: 14 CLINICAL STUDIES
+14 CLINICAL STUDIES
+Clinical Study Overview
+The safety and efficacy of LAMPIT for the treatment of Chagas disease in pediatric patients birth to <18 years of age and weighing at least 2.5 kg were demonstrated in one prospective, randomized, double-blind trial conducted in Argentina, Bolivia and Colombia (Trial 1, NCT02625974). This trial consisted of 2 parts, Part 1 which included treatment with LAMPIT and one year post-treatment follow-up and Part 2, which included an additional three-years of follow up.
+Trial 1: Treatment with LAMPIT including One Year Post-treatment Follow-up (Part 1)
+Pediatric patients (n=330) with serologic evidence of T. cruzi infection and without Chagas disease-related cardiac or gastrointestinal symptoms were randomly assigned in a 2:1 fashion to a 60-day (n=219) or a 30-day (n=111) LAMPIT treatment regimen. Patients were followed up for one year. LAMPIT was administered three times a day with food using the following body weight-based dosing regimens: pediatric patients weighing less than 41 kg received a total daily dose of 10-20 mg/kg, and those weighing 41 kg or more received a total daily dose of 8-10 mg/kg . Chagas disease diagnosis was confirmed by direct observation of T. cruzi by concentration test in patients <8 months of age at randomization and by demonstrating positive results for both the lysate enzyme-linked immunosorbent assay (ELISA) and the recombinant ELISA in patients ≥8 months to <18 years of age at randomization.
+Serological response to treatment was defined as ≥20% decrease in optical density measured by lysate and recombinant ELISA in subjects >8 months to <18 years or seroconversion to negative (defined as negative immunoglobulin G concentration in all patients) at 1-year post-treatment follow-up.
+The results for both the lysate ELISA and the recombinant ELISA (Table 5) showed superiority in favor of the LAMPIT 60-day arm compared to the LAMPIT 30-day arm (not an approved dosing regimen).
+Table 5: Efficacy Results using Lysate ELISA and Recombinant ELISA at 1 year Post-Treatment
+
+=== PASSAGE_0066 ===
+SECTION: 7 (6%)
+7 (6%)
+Difference (60 day – 30 day), 95% CI, p-value
+
+=== PASSAGE_0067 ===
+SECTION: CI=confidence interval
+CI=confidence interval
+*The 30-day duration is not an approved dosing regimen.
+The F29 ELISA detects antibodies to recombinant antigens obtained from the flagellar protein F29 of T. cruzi. Of the 214 patients who were seropositive for the assay at baseline, 46 of 142 (32.4%) in the 60-day LAMPIT treatment arm and 20 of 72 (27.8%) in the 30-day LAMPIT treatment arm (not an approved dosing regimen) seroconverted to negative at the 1-year post-treatment follow-up. Twenty of 59 (33.9%, 95% CI: 22.1%, 47.4%) patients between 6 and 12 years of age in the 60-day arm seroconverted to negative at the 1-year post-treatment follow-up. A similar seroconversion rate was observed in patients 6 and 12 years of age in the 30-day treatment arm. These rates were higher than the 2.8% conversion rate from historical data1 for untreated patients between 6 and 12 years old at 12 months using the F29 ELISA.
+Trial 1: Additional Three-years of Follow-up (Part 2)
+To determine the seroconversion rate in patients treated with LAMPIT at the 4-year time point, a total of 295 (197 in the 60-day regimen and 98 in the 30-day regimen) of the 330 pediatric patients were followed for another 3 years after the end of Part 1. Seroconversion to negative confirmed by three assays, lysate ELISA, recombinant ELISA and IHA, was evaluated in patients in the 60-day treatment arm by age group (Table 6) in Part 2. Patients were considered as seroconverted to negative if all three test results were negative. All seroconversions at 4 years post-treatment were from patients who were <2 years of age at baseline. Nine of 11 (81.8%) patients in the 60-day treatment arm who were <8 months of age at baseline seroconverted to negative at 4 years post-treatment. Among 39 patients in the 60-day treatment arm who were 0 to 4 years of age at baseline, 9 (23.1%) seroconverted for 2 or more consecutive years, which was higher than the 0% conversion rate from historical data2 for untreated patients infected between 0 and 4 years of age during long-term follow-up.
+Table 6: Efficacy Results using Seroconversion to Negative Confirmed by Lysate ELISA, Recombinant ELISA and IHA at 4 years Post-Treatment
+
+=== PASSAGE_0068 ===
+SECTION: 0/171
+0/171
+* A positive T. cruzi concentration test was required for subjects <8 months of age at baseline for enrollment
+The efficacy of LAMPIT in pediatric patients 5 to <18 years of age was extrapolated from efficacy established in the younger pediatric population between 0 and 4 years of age. Biologically, it is expected that LAMPIT would have the same effect on T. cruzi in all pediatric age groups. The pathogenesis of Chagas disease is the same across the pediatric population; however, older patients may have a longer duration of infection than younger patients. Given longer duration of infection, time to seroconversion is expected to be longer. Based on published studies, younger pediatric patients seroconvert faster.2,3 The lack of seroconversion to negative on traditional assays in older pediatric patients in Trial 1 is not unexpected given the duration of follow up of 4 years. It is expected that seroconversion rates would increase in older pediatric age groups over time. Supportive evidence of efficacy was provided by data on seroconversion to negative by the F29 ELISA.
+
+=== PASSAGE_0069 ===
+SECTION: 15 REFERENCES
+15 REFERENCES
+1. Sosa Estani, S., E. L. Segura, A. M. Ruiz, E. Velazquez, B. M. Porcel and C. Yampotis (1998) Efficacy of chemotherapy with benznidazole in children in the indeterminate phase of Chagas' disease. Am J Trop Med Hyg 59(4): 526-529.
+2. Suasnábar S, Olivera LV, Arias E, Bizai ML, Bottasso O, Arias E, Fabbro D (2021) Trypanocidal therapy among children infected by Trypanosoma cruzi. Serological and electrocardiographic changes over a mean twenty-five-years follow-up period. Acta Tropica 222:106050.
+3. Streiger ML, del Barco ML, Fabbro DL, Arias ED, Amicone NA (2004) Longitudinal study and specific chemotherapy in children with chronic Chagas' disease, residing in a low endemicity area of Argentina. Rev Soc Bras Med Trop 37(5):365-375.
+
+=== PASSAGE_0070 ===
+SECTION: 16.1 How Supplied
+16.1 How Supplied
+LAMPIT tablets are supplied as follows:
+- 30 mg, yellow, round, biconvex tablets, functionally scored on one side and marked with ‘30’ on the other side.
+- 120 mg, yellow, round, biconvex tablets, functionally scored on one side and marked with ‘120’ on the other side.
+LAMPIT tablets 30 mg are supplied as bottles of 100 tablets with child-resistant closures (NDC 50419-750-01).
+LAMPIT tablets 120 mg are supplied as bottles of 100 tablets with child-resistant closures (NDC 50419-751-01).
+
+=== PASSAGE_0071 ===
+SECTION: 16.2 Storage and Handling
+16.2 Storage and Handling
+Store at controlled room temperature 20°C to 25°C (68°F to 77°F); excursions permitted to 15°C to 30°C (59°F to 86°F). .
+Store LAMPIT tablets in the original bottle with child-resistant closures and do not remove the desiccant.
+Keep bottle with child-resistant closures tightly closed and protect from moisture.
+
+=== PASSAGE_0072 ===
+SECTION: 17 PATIENT COUNSELING INFORMATION
+17 PATIENT COUNSELING INFORMATION
+Advise patients to read the FDA-approved patient labeling (Patient Information and Instructions for Use).
+
+=== PASSAGE_0073 ===
+SECTION: Embryo Fetal Toxicity
+Embryo Fetal Toxicity
+- Advise pregnant women and females of reproductive potential of the potential risk of LAMPIT to a fetus and to inform their healthcare provider of a known or suspected pregnancy
+- Advise females of reproductive potential to use effective contraception while taking LAMPIT and for 6 months after the last dose
+- Advise male patients with female partners of reproductive potential to use condoms during treatment with LAMPIT and for 3 months after the final dose of LAMPIT
+
+=== PASSAGE_0074 ===
+SECTION: Lactation
+Lactation
+Advise nursing mothers to monitor infants exposed to LAMPIT through breast milk for vomiting, rash, decreased appetite, fever, and irritability Use in Specific Populations (8.2)].
+
+=== PASSAGE_0075 ===
+SECTION: Infertility
+Infertility
+Advise males of reproductive potential that LAMPIT may impair fertility .
+
+=== PASSAGE_0076 ===
+SECTION: Worsening of Neurological and Psychiatric Conditions
+Worsening of Neurological and Psychiatric Conditions
+Advise patients with a history of brain injury, seizures, psychiatric disease, serious behavioral alterations or if neurological and/or psychiatric drug reactions occur, that LAMPIT tablets should be administered only under close medical supervision .
+
+=== PASSAGE_0077 ===
+SECTION: Hypersensitivity
+Hypersensitivity
+Inform patients that hypersensitivity could be a reaction caused by LAMPIT or an immune response triggered by Chagas disease during treatment. Hypersensitivity reactions could include hypotension, angioedema (including laryngeal or facial edema), dyspnea, pruritus, rash or other severe skin reactions .
+
+=== PASSAGE_0078 ===
+SECTION: Alcohol Consumption
+Alcohol Consumption
+Advise patients to discontinue alcohol use during treatment with LAMPIT. LAMPIT is contraindicated in patients who consume alcohol during treatment .
+
+=== PASSAGE_0079 ===
+SECTION: Decreased Appetite and Weight Loss
+Decreased Appetite and Weight Loss
+Inform patients that LAMPIT can cause decreased appetite and weight loss. Body weight should be checked every 14 days, as the dosage may have to be adjusted .
+
+=== PASSAGE_0080 ===
+SECTION: Porphyria
+Porphyria
+Advise patients with porphyria that treatment with nitrofuran derivatives, such as LAMPIT, may precipitate acute attacks of porphyria. Administer LAMPIT tablets under close medical supervision in patients with porphyria. .
+
+=== PASSAGE_0081 ===
+SECTION: Important Administration Instructions
+Important Administration Instructions
+Advise patients to take LAMPIT with food.
+Advise patients not to break LAMPIT tablets mechanically with a tablet splitting device .
+For patients who cannot swallow tablets, LAMPIT can be dispersed in water and administered as a slurry, taken with food .
+
+=== PASSAGE_0082 ===
+SECTION: Ability to Operate Vehicles or Machinery
+Ability to Operate Vehicles or Machinery
+Inform patients that if muscle weakness or tremors occur during treatment with LAMPIT they should not drive, cycle or use any tools or machines .
+Manufactured for:
+Bayer HealthCare Pharmaceuticals Inc., Whippany, NJ 07981 USA
+© 2023 Bayer HealthCare Pharmaceuticals Inc.
+- For more information, call Bayer HealthCare Pharmaceuticals Inc. at Bayer at 1-888-842-2937 or go to www.LAMPIT.com
+
+=== PASSAGE_0083 ===
+SECTION: PATIENT INFORMATION
+PATIENT INFORMATION
+LAMPIT® (LAM-pit)
+(nifurtimox)
+tablets, for oral use
+What is LAMPIT?
+LAMPIT is a prescription medicine used to treat Chagas disease caused by the parasite Trypanosoma cruzi in children less than 18 years of age weighing at least 5.5 pounds (2.5 kg).
+It is not known if LAMPIT is safe and effective in children weighing less than 5.5 pounds (2.5 kg).
+Do not take LAMPIT if you:
+- are allergic to nifurtimox, or any of the ingredients in LAMPIT. See the end of this Patient Information leaflet for a complete list of ingredients in LAMPIT.
+- plan to drink alcohol during treatment with LAMPIT.
+Before taking LAMPIT, tell your healthcare provider about all your medical conditions, including if you:
+- have a history of brain injury, seizures, mental health problems, or behavior changes.
+- have kidney problems or are on dialysis.
+- have liver problems.
+- have a genetic problem called porphyria. Taking LAMPIT can make your symptoms of porphyria including dark urine, severe stomach pain, muscle pain, tingling, numbness, mental changes or skin sensitivity to light worse.
+- are pregnant, plan to become pregnant, or think you may be pregnant. LAMPIT can harm your unborn baby.
+For females who are able to become pregnant:
+- Your healthcare provider should do a pregnancy test before you start taking LAMPIT to make sure that you are not pregnant.
+- You should use effective forms of birth control during treatment with LAMPIT and for 6 months after your last dose of LAMPIT . Talk to your healthcare provider about what forms of birth control may be right for you.
+- Call your healthcare provider right away if you become pregnant or think you are pregnant during treatment with LAMPIT.
+For males:
+- LAMPIT may cause fertility problems in males. This may affect your ability to father a child. Talk to your healthcare provider if you have concerns about fertility.
+- You should use a condom with female partners who are able to become pregnant, during treatment with LAMPIT and for 3 months after your last dose of LAMPIT .
+- are breastfeeding or plan to breastfeed. LAMPIT can pass into breast milk and may harm your baby. Talk to your healthcare provider about the best way to feed your baby during treatment with LAMPIT. If you take LAMPIT and breastfeed, monitor your baby for vomiting, rash, decreased appetite, fever, and irritability.
+Tell your healthcare provider about all the medicines you take, including prescription and over-the-counter medicines, vitamins, and herbal supplements.
+Know the medicines you take. Keep a list of them with you to show to your healthcare provider and pharmacist when you get a new medicine.
+
+=== PASSAGE_0084 ===
+SECTION: How should I take LAMPIT?
+How should I take LAMPIT?
+See the detailed Instructions for Use that comes with LAMPIT for information about how to split LAMPIT tablets and how to take LAMPIT if whole tablets or half tablets cannot be swallowed.
+- Take LAMPIT exactly as your healthcare provider tells you.
+- Your healthcare provider may change your dose if needed.
+- Take your prescribed dose of LAMPIT 3 times a day with food .
+- LAMPIT tablets are marked with a scored line. LAMPIT tablets can be taken whole or split at the scored line.
+- LAMPIT tablets should be split by hand at the scored line. Do not split LAMPIT tablets using a tablet splitting device.
+- If you cannot swallow LAMPIT tablets or you are giving LAMPIT to a child who cannot swallow the tablets, be sure to read the Instructions for Use that come with LAMPIT. LAMPIT tablets can be dissolved in water if whole tablets or half tablets cannot be swallowed.
+- If you miss a dose of LAMPIT, take it as soon as possible with food. If it is within 3 hours of your next scheduled dose, skip the missed dose and take the next dose at your regular time. Do not take 2 doses to make up for a missed dose.
+What are the possible side effects of LAMPIT?
+LAMPIT may cause serious side effects, including:
+- Worsening of symptoms related to brain injury, seizures, mental health problems or behavior changes in people with a history of these problems. Call your healthcare provider right away if any of these problems get worse during treatment with LAMPIT.
+- Allergic reactions. Allergic reactions can happen when taking nifurtimox, the active ingredient in LAMPIT, or with changes in your immune system caused by Chagas disease during treatment with LAMPIT. These allergic reactions can include low blood pressure, swelling of the face and tongue (angioedema), shortness of breath, itching, rash or other skin problems. Call your healthcare provider or get emergency medical help if you get any of these signs and symptoms of an allergic reaction during treatment with LAMPIT.
+- Loss of appetite and weight loss. Your healthcare provider should check your weight every 14 days to see if your dose of LAMPIT may need to be changed.
+The most common side effects of LAMPIT include:
+- vomiting
+- abdominal pain
+- headache
+- decreased appetite
+- nausea
+- fever
+- rash
+These are not all the possible side effects of LAMPIT.
+Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.
+
+=== PASSAGE_0085 ===
+SECTION: How should I store LAMPIT?
+How should I store LAMPIT?
+- Store LAMPIT at room temperature between 68°F to 77°F (20°C to 25°C).
+- Keep LAMPIT in the bottle that it comes in with the child-resistant cap on the bottle. Do not remove the packet that helps to keep your medicine dry (desiccant).
+- Keep the bottle tightly closed and protect from moisture.
+Keep LAMPIT and all medicines out of the reach of children.
+General information about the safe and effective use of LAMPIT.
+Medicines are sometimes prescribed for purposes other than those listed in a Patient Information leaflet. Do not use LAMPIT for a condition for which it was not prescribed. Do not give LAMPIT to other people, even if they have the same symptoms that you have. It may harm them.
+You can ask your healthcare provider or pharmacist for information about LAMPIT that is written for health professionals.
+What are the ingredients in LAMPIT?
+Active ingredient: nifurtimox
+Inactive ingredients: calcium hydrogen phosphate dihydrate, magnesium stearate, maize starch, silica colloidal anhydrous, and sodium lauryl sulfate.
+Manufactured for: Bayer HealthCare Pharmaceuticals Inc., Whippany, NJ 07981 USA
+© 2023 Bayer HealthCare Pharmaceuticals Inc.
+For more information, call Bayer HealthCare Pharmaceuticals Inc. at Bayer at 1-888-842-2937 or go to www.LAMPIT.com
+This Patient Information has been approved by the U.S. Food and Drug Administration Issued:5/2023
+
+=== PASSAGE_0086 ===
+SECTION: INSTRUCTIONS FOR USE
+INSTRUCTIONS FOR USE
+LAMPIT (LAM-pit)
+(nifurtimox)
+tablets, for oral use
+This Instructions for Use contains information on how to split LAMPIT tablets and how to prepare a tablet and water mixture (called a slurry) if whole tablets or half tablets cannot be swallowed. Read this Instructions for Use before you start taking LAMPIT and each time you get a refill. There may be new information. This information does not take the place of talking to your healthcare provider about your medical condition or treatment.
+
+=== PASSAGE_0087 ===
+SECTION: LAMPIT 120 mg tablets
+LAMPIT 120 mg tablets
+Important Information You Need to Know Before Taking LAMPIT
+- Do not take more LAMPIT than prescribed by your healthcare provider.
+- Take LAMPIT with food .
+- Split LAMPIT tablets by hand. Do not split LAMPIT tablets using a tablet splitting device. See the instructions below for splitting tablets by hand.
+- If you cannot swallow LAMPIT tablets or you are giving LAMPIT to a child who cannot swallow the tablets, you can dissolve the tablet in water and give the mixture with food. See the instructions below for preparing a tablet and water mixture (slurry).
+
+=== PASSAGE_0088 ===
+SECTION: How to Take LAMPIT
+How to Take LAMPIT
+- Take LAMPIT 3 times a day with food.
+- Your healthcare provider may need to change your dose of LAMPIT during treatment as needed. Take your LAMPIT dose exactly as prescribed by your healthcare provider.
+- LAMPIT 30 mg tablets and 120 mg tablets have a scored line on one side and can be taken whole or broken at the scored line.
+- If you miss a dose of LAMPIT, take the missed dose as soon as possible with food. If it is within 3 hours of the next scheduled dose, skip the missed dose and take the next dose at your regular time. Do not take 2 doses to make up for a missed dose.
+How to Split LAMPIT Tablets by Hand
+Step 1: To split the tablet, place the tablet on a flat surface with the scored line facing up .
+
+=== PASSAGE_0089 ===
+SECTION: Figure A
+Figure A
+Step 2: With the tablet still on the flat surface, apply enough pressure down on the center of the tablet with your index finger to split it in half along the scored line .
+
+=== PASSAGE_0090 ===
+SECTION: Figure B
+Figure B
+Step 3: LAMPIT tablets can be split in half along the scored line .
+
+=== PASSAGE_0091 ===
+SECTION: Figure C
+Figure C
+Step 4: Only use a tablet that has been broken at the scored line .
+
+=== PASSAGE_0092 ===
+SECTION: Figure D
+Figure D
+Do not split LAMPIT tablets in any other way.
+Preparing a Tablet and Water Mixture (Slurry)
+For people who are not able to swallow whole tablets or half tablets, LAMPIT can be mixed in water.
+Step 1: Place approximately one-half teaspoonful (2.5 ml) of water into a spoon .
+
+=== PASSAGE_0093 ===
+SECTION: Figure E
+Figure E
+Step 2: Place the prescribed dose into the water .
+
+=== PASSAGE_0094 ===
+SECTION: Figure F
+Figure F
+Step 3: Allow the tablet to dissolve in the water. This should take less than 30 seconds .
+
+=== PASSAGE_0095 ===
+SECTION: Figure G
+Figure G
+Step 4: A tablet and water mixture (slurry) will form .
+
+=== PASSAGE_0096 ===
+SECTION: Figure H
+Figure H
+Give the tablet and water mixture (slurry) right away with food. Do not mix more than the prescribed dose.
+
+=== PASSAGE_0097 ===
+SECTION: Storing LAMPIT
+Storing LAMPIT
+- Store LAMPIT at room temperature between 68°F to 77°F (20°C to 25°C).
+- Keep LAMPIT in the bottle with child-resistant cap that it comes with. Do not remove the packet that helps to keep your medicine dry (desiccant).
+- Keep the bottle tightly closed and protect from moisture.
+Keep LAMPIT and all medicines out of the reach of children.
+This Instructions for Use has been approved by the U.S. Food and Drug Administration.
+Manufactured for:
+Bayer HealthCare Pharmaceuticals Inc., Whippany, NJ 07981 USA
+© 2020 Bayer HealthCare Pharmaceuticals Inc.
+For more information, call Bayer HealthCare Pharmaceuticals Inc. at Bayer at 1-888-842-2937 or go to www.LAMPIT.com
+Issued: 8/2020

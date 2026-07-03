@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > inspect_raw.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print(label['drug_name'], type(label['label_raw']))
+>         if isinstance(label['label_raw'], dict):
+>             print("  Keys:", label['label_raw'].keys())
+>         else:
+>             print("  Type:", type(label['label_raw']))
+>             print("  Preview:", repr(label['label_raw'][:200]))
+> EOF
+root@0ef79956d710:/workspace# python3 inspect_raw.py
+12HR Allergy Relief <class 'str'>
+  Type: <class 'str'>
+  Preview: '||PASSAGE_0000||\nUses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itch
+y, watery eyes\n- itching of the nose or throat\n\n||PASSAGE'
+Acamprosate Calcium <class 'str'>
+  Type: <class 'str'>
+  Preview: '||PASSAGE_0000||\n1 INDICATIONS AND USAGE\nAcamprosate calcium delayed-release tablets are indicated for the maintenance of abstinence from alcohol
+in patients with alcohol dependence who are abstinent '
+Acclean Chlorhexidine Gluconate 0.12% Oral Rinse <class 'str'>
+  Type: <class 'str'>
+  Preview: '||PASSAGE_0000||\nuntitled\nACCLEAN is an oral rinse containing 0.12% chlorhexidine gluconate (1,1’-hexamethylene bis 5-(p-chlorphenyl) biguanide]di
+-D-gluconate) in a base containing water, 11.6% alcoho'
+root@0ef79956d710:/workspace#

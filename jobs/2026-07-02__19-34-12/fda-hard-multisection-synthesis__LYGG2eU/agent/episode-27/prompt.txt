@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > list_paxlovid_adverse.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         if label['set_id'] == '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a':
+>             for idx, chunk in enumerate(label['chunks']):
+>                 first_line = chunk.strip().split('\n')[0]
+>                 if first_line.startswith('6 ') or first_line.startswith('6.'):
+>                     print(f"PASSAGE_{idx:04d}: {first_line}")
+> EOF
+root@15b83e10b8d1:/workspace# python3 list_paxlovid_adverse.py
+PASSAGE_0017: 6 ADVERSE REACTIONS
+PASSAGE_0018: 6.1       Clinical Trials Experience
+root@15b83e10b8d1:/workspace#

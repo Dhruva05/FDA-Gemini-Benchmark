@@ -1,0 +1,86 @@
+[
+  {
+    "drug_name": "Gleevec",
+    "question": "What important warnings or precautions are associated with Gleevec?",
+    "question_id": "8deb7244393e0d52",
+    "question_type": "factual",
+    "set_id": "211ef2da-2868-4a77-8055-1cb2cd78e24b"
+  },
+  {
+    "drug_name": "Aripiprazole",
+    "question": "What safety risks are listed for Aripiprazole?",
+    "question_id": "739131cb82d5b99f",
+    "question_type": "factual",
+    "set_id": "da47ad78-e62c-4bf3-9b53-d8cc246bcfb6"
+  },
+  {
+    "drug_name": "DOJOLVI",
+    "question": "What is the recommended dosage regimen of DOJOLVI?",
+    "question_id": "35831321fd8697bf",
+    "question_type": "factual",
+    "set_id": "4cfeb8bd-143e-4dd7-bc34-b0bcda02460d"
+  },
+  {
+    "drug_name": "Saxagliptin",
+    "question": "What adverse reactions have been reported for Saxagliptin?",
+    "question_id": "07ca0b446e87521d",
+    "question_type": "factual",
+    "set_id": "6e8d8c4f-96eb-4b64-9c8c-4a5448a23a78"
+  },
+  {
+    "drug_name": "Nifediac CC",
+    "question": "Why should Nifediac CC\u00ae Extended-release Tablets be used cautiously in patients taking other blood pressure-lowering medications?",
+    "question_id": "cfc17e2708ae22c7",
+    "question_type": "multihop",
+    "set_id": "fa952140-c9f6-472d-a04f-96c44fe9bca8"
+  },
+  {
+    "drug_name": "ERIVEDGE",
+    "question": "Why is it crucial to verify pregnancy status before starting ERIVEDGE in women of reproductive potential while also advising against breastfeeding during and after treatment?",
+    "question_id": "899ed79b8912519b",
+    "question_type": "multihop",
+    "set_id": "eb368bb6-80e3-4df9-8a85-91df0a2ada6a"
+  },
+  {
+    "drug_name": "lamivudine",
+    "question": "Why should HIV-1-infected mothers avoid breastfeeding while receiving lamivudine, particularly in light of its use in pediatric patients?",
+    "question_id": "1d76aa504be07852",
+    "question_type": "multihop",
+    "set_id": "ef9977cb-ec91-46d7-b769-d26decfd6fe7"
+  },
+  {
+    "drug_name": "cevimeline hydrochloride",
+    "question": "Why should Cevimeline be used with caution in patients with pulmonary disease who are also nursing?",
+    "question_id": "6acdb9ab4fa3321a",
+    "question_type": "multihop",
+    "set_id": "d7432a48-1142-431e-997f-8419dc724824"
+  },
+  {
+    "drug_name": "Guardian Loratadine",
+    "question": "What INR value indicates the initiation of Guardian Loratadine therapy in individuals with severe hepatic impairment?",
+    "question_id": "6765cb9daa9ecf8d",
+    "question_type": "refusal",
+    "set_id": "af8cdd37-8fd0-4651-ae03-36c7d4863301"
+  },
+  {
+    "drug_name": "Sandimmune",
+    "question": "What is the INR cutoff for commencing Sandimmune therapy in patients experiencing severe hepatic impairment?",
+    "question_id": "dc22aa2ba20c74fa",
+    "question_type": "refusal",
+    "set_id": "5e5926a7-1de0-4b54-a5c0-286b6200ff82"
+  },
+  {
+    "drug_name": "Eszopiclone",
+    "question": "What therapeutic purpose does Eszopiclone serve in relation to inflammatory markers among G6PD deficient patients?",
+    "question_id": "2332e9b9b4f206d5",
+    "question_type": "refusal",
+    "set_id": "52ab8ee9-a04d-4e27-b0f4-eb050f144715"
+  },
+  {
+    "drug_name": "ORLISTAT",
+    "question": "Are dose modifications of ORLISTAT indicated for individuals with G6PD deficiency experiencing abnormal platelet levels?",
+    "question_id": "541f5d9c6e2bd551",
+    "question_type": "refusal",
+    "set_id": "f81dfaeb-46d5-47ce-9ef6-19259f5ac61c"
+  }
+]

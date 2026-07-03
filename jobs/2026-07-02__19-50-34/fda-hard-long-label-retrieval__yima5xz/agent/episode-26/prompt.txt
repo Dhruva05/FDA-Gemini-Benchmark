@@ -1,0 +1,65 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > print_label_outline.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         chunks = data.get('chunks', [])
+>         for idx, chunk in enumerate(chunks):
+>             first_line = chunk.split('\n')[0].strip() if '\n' in chunk else chunk.strip()
+>             print(f'{idx:03d}: {first_line[:120]}')
+> EOF
+root@b161fe3d96d1:/workspace# python3 print_label_outline.py > outline.txt
+root@b161fe3d96d1:/workspace# head -n 50 outline.txt
+000: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+001: 1 INDICATIONS AND USAGE
+002: Limitations of Use
+003: 2.1        Important Dosage and Administration Information
+004: 2.2        Recommended Dosage
+005: 2.3 Dosage in Patients with Renal Impairment
+006: Days of Treatment
+007: Days 1-5
+008: Day 1
+009: Days 2-5
+010: 2.4        Use in Patients with Hepatic Impairment
+011: 3 DOSAGE FORMS AND STRENGTHS
+012: 4 CONTRAINDICATIONS
+013: 5.1        Risk of Serious Adverse Reactions Due to Drug Interactions
+014: 5.2        Hypersensitivity Reactions
+015: 5.3        Hepatotoxicity
+016: 5.4        Risk of HIV-1 Resistance Development
+017: 6 ADVERSE REACTIONS
+018: 6.1        Clinical Trials Experience
+019: 7.1        Potential for PAXLOVID to Affect Other Drugs
+020: 7.2        Potential for Other Drugs to Affect PAXLOVID
+021: 7.3        Established and Other Potentially Significant Drug Interactions
+022: ↑ alfuzosin
+023: ↑ tamsulosin
+024: ↑ ranolazine
+025: ↑ antiarrhythmic
+026: ↑ antiarrhythmic
+027: ↓ nirmatrelvir/ritonavir
+028: Anticancer drugs
+029: ↑ anticancer drugs
+030: ↑↓ warfarin
+031: ↑ rivaroxaban
+032: ↑ dabigatran
+033: ↑ apixaban
+034: ↓ nirmatrelvir/ritonavir
+035: ↑ anticonvulsant
+036: ↓ bupropion and active metabolite hydroxy-bupropion
+037: ↑ trazodone
+038: ↓ voriconazole
+039: ↑ ketoconazole↑ isavuconazonium sulfate↑ itraconazole
+040: ↑ nirmatrelvir/ritonavir
+041: ↑ colchicine
+042: ↑ protease inhibitor
+043: efavirenz,maraviroc,nevirapine,zidovudine,bictegravir/ emtricitabine/ tenofovir
+044: ↑ clarithromycin↑ erythromycin
+045: ↓ nirmatrelvir/ritonavir
+046: ↑ bedaquiline
+047: ↑ rifabutin
+048: ↑ lurasidone↑ pimozide
+049: ↑ quetiapine
+root@b161fe3d96d1:/workspace#

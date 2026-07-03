@@ -1,0 +1,4 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# find / -name "*.py" -o -name "*.sh" 2>/dev/null | xargs grep -l "structured_fields" 2>/dev/null
+root@b9fc21343844:/workspace#

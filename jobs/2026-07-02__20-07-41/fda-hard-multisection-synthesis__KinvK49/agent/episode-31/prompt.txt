@@ -1,0 +1,8 @@
+Previous response had warnings:
+WARNINGS: - Extra text detected after JSON object
+
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# grep -n "Lopinavir-Ritonavir" /tmp/headers.txt
+211:==================== Lopinavir-Ritonavir (4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85) ====================
+root@1ce871952c8c:/workspace#

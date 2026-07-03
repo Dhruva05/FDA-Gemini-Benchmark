@@ -1,0 +1,9 @@
+New Terminal Output:
+
+>>> search('Paxlovid', '7 DRUG INTERACTIONS')
+Searching for '7 DRUG INTERACTIONS' in Paxlovid:
+>>> search('Paxlovid', 'WARNING: SIGNIFICANT DRUG')
+Searching for 'WARNING: SIGNIFICANT DRUG' in Paxlovid:
+PASSAGE_0000 (len=724): WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potent...
+>>>

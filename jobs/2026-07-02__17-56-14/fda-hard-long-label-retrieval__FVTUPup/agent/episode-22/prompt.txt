@@ -1,0 +1,10 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for i, line in enumerate(f):\n        import json\n
+   d = json.loads(line)\n        print(i, d['drug_name'], d['set_id'])\n"
+  File "<string>", line 1
+    \nwith open('/workspace/data/public/labels.jsonl') as f:\n    for i, line in enumerate(f):\n        import json\n        d = json.loads(line)\n        print
+(i, d['drug_name'], d['set_id'])\n
+     ^
+SyntaxError: unexpected character after line continuation character
+root@2635f56baf2a:/workspace#

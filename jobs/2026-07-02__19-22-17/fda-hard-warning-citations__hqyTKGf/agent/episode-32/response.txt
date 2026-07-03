@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a parsing error because of single quotes or nested quotes in the analysis block. I will avoid using single or double quote nesting in the analysis and plan blocks.",
+  "plan": "I will run env to see if there are any environment variables with additional configuration or instructions.",
+  "commands": [
+    {
+      "keystrokes": "env\n",
+      "duration": 0.5
+    }
+  ]
+}

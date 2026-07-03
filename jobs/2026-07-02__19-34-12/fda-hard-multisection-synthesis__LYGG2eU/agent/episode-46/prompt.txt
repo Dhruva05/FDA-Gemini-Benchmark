@@ -1,0 +1,41 @@
+Current Terminal Screen:
+>             },
+>             {
+>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>                 "passage_id": "PASSAGE_0018",
+>                 "section": "6.1 Clinical Trials Experience",
+>                 "target_text": "The most common adverse reactions (\u22651% incidence in the PAXLOVID group and occurring at a greater frequency than in the p
+lacebo group) were dysgeusia (5% and <1%, respectively) and diarrhea (3% and 2%, respectively)."
+>             }
+>         ],
+>         "structured_fields": {}
+>     }
+> ]
+>
+> answers_final = []
+> for ans in answers_raw:
+>     citations = []
+>     for cit in ans['citations_raw']:
+>         exact_quote = verify_and_get_quote(cit['set_id'], cit['passage_id'], cit['target_text'])
+>         citations.append({
+>             "set_id": cit['set_id'],
+>             "passage_id": cit['passage_id'],
+>             "section": cit['section'],
+>             "supporting_quote": exact_quote
+>         })
+>     answers_final.append({
+>         "qid": ans['qid'],
+>         "status": ans['status'],
+>         "answer": ans['answer'],
+>         "citations": citations,
+>         "structured_fields": ans['structured_fields']
+>     })
+>
+> output = {"answers": answers_final}
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(output, f, indent=2)
+> print("Successfully wrote verified /workspace/answers.json!")
+> EOF
+root@15b83e10b8d1:/workspace# python3 generate_answers.py
+Successfully wrote verified /workspace/answers.json!
+root@15b83e10b8d1:/workspace#

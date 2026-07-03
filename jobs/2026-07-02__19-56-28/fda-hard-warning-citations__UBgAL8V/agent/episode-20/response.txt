@@ -1,0 +1,14 @@
+{
+  "analysis": "Wait, let's look at the administration instructions for Lopinavir-Ritonavir. Is there a tablet form mentioned in the label? Let's search for 'tablet' or 'crush' or 'chew' in Lopinavir-Ritonavir chunks.",
+  "plan": "I will run search('Lopinavir-Ritonavir', 'tablet') and search('Lopinavir-Ritonavir', 'food') to see how the tablet formulation (if any) is administered.",
+  "commands": [
+    {
+      "keystrokes": "search('Lopinavir-Ritonavir', 'tablet')\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "search('Lopinavir-Ritonavir', 'food')\n",
+      "duration": 0.5
+    }
+  ]
+}

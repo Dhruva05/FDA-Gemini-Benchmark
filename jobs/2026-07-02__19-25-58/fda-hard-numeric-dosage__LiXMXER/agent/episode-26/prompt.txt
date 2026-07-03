@@ -1,0 +1,43 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > parse_emtricitabine_2.py
+> with open('Emtricitabine_Rilpivirine_Tenofovir_Disoproxil_Fumarate_chunks.txt') as f:
+>     text = f.read()
+>     idx = text.find('=== CHUNK 4')
+>     print(text[idx:idx+2500])
+> EOF
+root@af996c5fe492:/workspace# python3 parse_emtricitabine_2.py
+=== CHUNK 4 (PASSAGE_0004) ===
+2.3 Recommended Dosage During Pregnancy
+For pregnant patients who are already on emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets prior to pregnancy and are virologically suppresse
+d (HIV-1 RNA less than 50 copies per mL), one tablet of emtricitabine, rilpivirine and tenofovir disoproxil fumarate taken once daily may be continued. Lower ex
+posures of rilpivirine, a component of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, were observed during pregnancy, therefore viral loa
+d should be monitored closely .
+
+=== CHUNK 5 (PASSAGE_0005) ===
+2.4 Not Recommended in Patients with Moderate or Severe Renal Impairment
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are not recommended in patients with moderate or severe renal impairment (estimated creatin
+ine clearance below 50 mL per minute) .
+
+=== CHUNK 6 (PASSAGE_0006) ===
+2.5 Recommended Dosage with Rifabutin Coadministration
+If emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are coadministered with rifabutin, take an additional 25 mg tablet of rilpivirine (Edura
+nt®) with emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets once daily with a meal for the duration of the rifabutin coadministration .
+
+=== CHUNK 7 (PASSAGE_0007) ===
+3 DOSAGE FORMS AND STRENGTHS
+Emtricitabine, Rilpivirine and Tenofovir Disoproxil Fumarate Tablets are available containing 200 mg of emtricitabine, 27.5 mg of rilpivirine hydrochloride equi
+valent to 25 mg of rilpivirine, and 300 mg of tenofovir disoproxil fumarate equivalent to 245 mg of tenofovir disoproxil.
+- The 200 mg/25 mg/300 mg tablets are yellow, film-coated, capsule shaped, unscored tablets debossed with M n one side of the tablet and ERT on the other side.
+
+=== CHUNK 8 (PASSAGE_0008) ===
+4 CONTRAINDICATIONS
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are contraindicated when coadministered with the following drugs; coadministration may resu
+lt in loss of virologic response and possible resistance to emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets or to the class of NNRTIs :
+- Anticonvulsants: carbamazepine, oxcarbazepine, phenobarbital, phenytoin
+- Antimycobacterials: rifampin, rifapentine
+- Glucocorticoid (systemic): dexamethasone (more than a single-dose)
+- Herbal Products: St John’s wort (
+- Proton Pump Inhibitors: e.g., dexlansoprazole, esomeprazole, lansoprazole, omeprazole, pantoprazole, rabeprazole
+
+root@af996c5fe492:/workspace#

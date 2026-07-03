@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/answers.json") as f:
+>     data = json.load(f)
+>     print("Total answers:", len(data["answers"]))
+>     for a in data["answers"]:
+>         print(f"QID: {a["qid"]}, Status: {a["status"]}, Citations: {len(a["citations"])}")
+> '
+Total answers: 5
+QID: cross-0df97f1e2f1e4c, Status: NOT_FOUND, Citations: 0
+QID: cross-e9a79ba825959d, Status: ANSWERED, Citations: 2
+QID: cross-7421ed8b98b8f9, Status: ANSWERED, Citations: 2
+QID: cross-a4153187ea298f, Status: ANSWERED, Citations: 2
+QID: cross-893c71f570b542, Status: ANSWERED, Citations: 2
+root@2809f9ae2d53:/workspace#

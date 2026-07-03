@@ -1,0 +1,72 @@
+[
+  {
+    "drug_name": "SHAROBEL",
+    "question": "Why should progestin-only contraceptives like SHAROBEL be discontinued if a patient develops severe headaches with focal neurological symptoms?",
+    "question_id": "4c661df7d431bd3c",
+    "question_type": "multihop",
+    "set_id": "a96f5194-ad2a-4783-a9a9-22a288caff25"
+  },
+  {
+    "drug_name": "ERLOTINIB HYDROCHLORIDE",
+    "question": "What important warnings or precautions are associated with ERLOTINIB HYDROCHLORIDE?",
+    "question_id": "8547c32761488413",
+    "question_type": "factual",
+    "set_id": "ab6f3cb3-34a8-4492-a5d7-fb6b055a2d6b"
+  },
+  {
+    "drug_name": "SYMDEKO",
+    "question": "What important warnings or precautions are associated with SYMDEKO?",
+    "question_id": "a2356cd29e77ae23",
+    "question_type": "factual",
+    "set_id": "302ae804-37db-44fd-ac2f-3dbdeda9aa4b"
+  },
+  {
+    "drug_name": "SHAROBEL",
+    "question": "What is the recommended administration schedule for SHAROBEL\u2122 tablets?",
+    "question_id": "f1a6997222fd3656",
+    "question_type": "factual",
+    "set_id": "a96f5194-ad2a-4783-a9a9-22a288caff25"
+  },
+  {
+    "drug_name": "ERLOTINIB HYDROCHLORIDE",
+    "question": "What safety risks are listed for ERLOTINIB HYDROCHLORIDE?",
+    "question_id": "86e6f9c97badb426",
+    "question_type": "factual",
+    "set_id": "ab6f3cb3-34a8-4492-a5d7-fb6b055a2d6b"
+  },
+  {
+    "drug_name": "SYMDEKO",
+    "question": "What safety risks are listed for SYMDEKO?",
+    "question_id": "13c273472daead37",
+    "question_type": "factual",
+    "set_id": "302ae804-37db-44fd-ac2f-3dbdeda9aa4b"
+  },
+  {
+    "drug_name": "SHAROBEL",
+    "question": "What is the recommendation for women using oral contraceptives and smoking in relation to SHAROBEL\u2122?",
+    "question_id": "190721bf5636800a",
+    "question_type": "factual",
+    "set_id": "a96f5194-ad2a-4783-a9a9-22a288caff25"
+  },
+  {
+    "drug_name": "ERLOTINIB HYDROCHLORIDE",
+    "question": "What important drug interactions are noted for ERLOTINIB HYDROCHLORIDE?",
+    "question_id": "017775054c56f02f",
+    "question_type": "factual",
+    "set_id": "ab6f3cb3-34a8-4492-a5d7-fb6b055a2d6b"
+  },
+  {
+    "drug_name": "SYMDEKO",
+    "question": "How should SYMDEKO be administered?",
+    "question_id": "7d2efbc4667c7c41",
+    "question_type": "factual",
+    "set_id": "302ae804-37db-44fd-ac2f-3dbdeda9aa4b"
+  },
+  {
+    "drug_name": "SHAROBEL",
+    "question": "What is the primary use of SHAROBEL (Norethindrone Tablets, USP)?",
+    "question_id": "c764f432912d70f8",
+    "question_type": "factual",
+    "set_id": "a96f5194-ad2a-4783-a9a9-22a288caff25"
+  }
+]

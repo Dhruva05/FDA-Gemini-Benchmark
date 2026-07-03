@@ -1,0 +1,52 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > display_questions.py
+> import json
+>
+> with open('/workspace/data/public/questions.jsonl', 'r') as f:
+>     for line in f:
+>         q = json.loads(line)
+>         print(f"QID: {q['qid']}")
+>         print(f"Drug Name: {q['drug_name']}")
+>         print(f"Question: {q['question']}")
+>         print(f"Comparison set ids: {q['comparison_set_ids']}")
+>         print(f"Required output fields: {q['required_output_fields']}")
+>         print("-"*50)
+> EOF
+root@7e48d58e23f3:/workspace# python3 display_questions.py
+QID: cross-0df97f1e2f1e4c
+Drug Name: 12HR Allergy Relief vs 365 Whole Foods Market Loratadine
+Question: Compare the dosing instructions for 12HR Allergy Relief and 365 Whole Foods Market Loratadine. For each label, report dose or strength, route, frequen
+cy, population, and maximum daily dose if stated. Cite one passage from each label.
+Comparison set ids: ['ea5d0e55-2191-4094-b082-24b317f95752', 'bba4e7c8-db8e-4522-915c-48ee809e3bce']
+Required output fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+--------------------------------------------------
+QID: cross-e9a79ba825959d
+Drug Name: Acamprosate Calcium vs Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+Question: Compare the dosing instructions for Acamprosate Calcium and Acclean Chlorhexidine Gluconate 0.12% Oral Rinse. For each label, report dose or strength,
+ route, frequency, population, and maximum daily dose if stated. Cite one passage from each label.
+Comparison set ids: ['ae6e79c0-a307-4888-b647-1b7be4cb9127', '08c9d3dd-717b-0148-e054-00144ff8d46c']
+Required output fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+--------------------------------------------------
+QID: cross-7421ed8b98b8f9
+Drug Name: ACETAMINOPHEN with CODEINE vs AcetaZOLAMIDE
+Question: Compare the dosing instructions for ACETAMINOPHEN with CODEINE and AcetaZOLAMIDE. For each label, report dose or strength, route, frequency, populatio
+n, and maximum daily dose if stated. Cite one passage from each label.
+Comparison set ids: ['36adb32c-638c-4d6e-b66a-1a1c35174ce6', '6972d9c1-36ec-4246-bf7b-13206d5952c3']
+Required output fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+--------------------------------------------------
+QID: cross-a4153187ea298f
+Drug Name: ACETAZOLAMIDE EXTENDED-RELEASE vs Actoplus Met
+Question: Compare the dosing instructions for ACETAZOLAMIDE EXTENDED-RELEASE and Actoplus Met. For each label, report dose or strength, route, frequency, popula
+tion, and maximum daily dose if stated. Cite one passage from each label.
+Comparison set ids: ['8e396b27-b44a-4aa9-805b-086395444b5f', '42e49120-6f3f-11db-9fe1-0800200c9a66']
+Required output fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+--------------------------------------------------
+QID: cross-893c71f570b542
+Drug Name: Acyclovir vs Acyclovir suspension
+Question: Compare the dosing instructions for Acyclovir and Acyclovir suspension. For each label, report dose or strength, route, frequency, population, and max
+imum daily dose if stated. Cite one passage from each label.
+Comparison set ids: ['dcc29902-1fe6-4713-947e-335503959464', '3efa1e5e-5a14-4724-a2ca-25702f10faed']
+Required output fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+--------------------------------------------------
+root@7e48d58e23f3:/workspace#

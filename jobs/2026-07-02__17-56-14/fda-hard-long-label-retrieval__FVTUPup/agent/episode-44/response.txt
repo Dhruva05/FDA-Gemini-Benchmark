@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at `PASSAGE_0009` as well. Let's print `PASSAGE_0009`.",
+  "plan": "I will print PASSAGE_0009 using print_passage.py.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0009\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > inspect_passage_format.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         for idx, chunk in enumerate(data['chunks']):
+>             if 'PASSAGE_' in chunk:
+>                 print(f"Chunk {idx} has 'PASSAGE_':")
+>                 print(chunk[:200])
+>                 print("-"*40)
+>             else:
+>                 print(f"Chunk {idx} does NOT have 'PASSAGE_'")
+>             if idx >= 5:
+>                 break
+> EOF
+root@b161fe3d96d1:/workspace# python3 inspect_passage_format.py
+Chunk 0 does NOT have 'PASSAGE_'
+Chunk 1 does NOT have 'PASSAGE_'
+Chunk 2 does NOT have 'PASSAGE_'
+Chunk 3 does NOT have 'PASSAGE_'
+Chunk 4 does NOT have 'PASSAGE_'
+Chunk 5 does NOT have 'PASSAGE_'
+root@b161fe3d96d1:/workspace#

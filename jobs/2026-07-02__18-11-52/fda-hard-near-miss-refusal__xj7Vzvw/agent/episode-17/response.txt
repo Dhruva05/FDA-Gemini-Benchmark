@@ -1,0 +1,10 @@
+{
+  "analysis": "Excellent. We have PASSAGE_0009: \"6.1 Clinical Trials Experience\" and PASSAGE_0028: \"6.2 Postmarketing Experience\". Let's look at PASSAGE_0009. Let's write a script to display the entire PASSAGE_0009 to find a good supporting quote for adverse reactions.",
+  "plan": "I will write a python script to print the full text of PASSAGE_0009 in the Acamprosate Calcium label.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_ar_full.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        label = json.loads(line)\n        if label['set_id'] == 'ae6e79c0-a307-4888-b647-1b7be4cb9127':\n            print(label['chunks'][9])\nEOF\npython3 print_ar_full.py\n",
+      "duration": 1.0
+    }
+  ]
+}

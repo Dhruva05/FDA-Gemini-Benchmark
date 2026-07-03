@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 201 (char 202) | Content preview: '{\n  "analysis": "The chunks have been successfully dumped into text files. Let\'s inspect each drug\'s'...
+
+Please fix these issues and provide a proper JSON response.

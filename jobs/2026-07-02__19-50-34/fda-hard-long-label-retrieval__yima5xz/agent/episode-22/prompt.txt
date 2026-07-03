@@ -1,0 +1,37 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > print_questions.py
+> import json
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print(f'QID: {data["qid"]}')
+>         print(f'Question: {data["question"]}')
+>         print('-'*40)
+> EOF
+root@b161fe3d96d1:/workspace# python3 print_questions.py
+QID: b2531657ba5c7a78
+Question: What important drug interactions are noted for Paxlovid?
+----------------------------------------
+QID: 6f12607a1ba14dd5
+Question: Which medications should be avoided with Paxlovid?
+----------------------------------------
+QID: fbab4114f66e2dda
+Question: What important warnings or precautions are associated with Paxlovid?
+----------------------------------------
+QID: 2d63e0a82215867f
+Question: What safety risks are listed for Paxlovid?
+----------------------------------------
+QID: cf74a5a8ac9b19de
+Question: What are the contraindications for Paxlovid?
+----------------------------------------
+QID: c4dc176c4827f0ef
+Question: Who should not take Paxlovid?
+----------------------------------------
+QID: 000ecd1d6df50389
+Question: What is the recommended dosage regimen of Paxlovid?
+----------------------------------------
+QID: b54c25890c1ae3a6
+Question: How should Paxlovid be administered?
+----------------------------------------
+root@b161fe3d96d1:/workspace#

@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line
+][0]; print(repr(data['chunks'][33]))"
+'8.4 Pediatric Use\nThe safety and efficacy of acamprosate calcium have not been established in the pediatric population.'
+root@3646eb22abe5:/workspace#

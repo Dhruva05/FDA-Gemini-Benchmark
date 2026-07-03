@@ -1,0 +1,140 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print("="*60)
+>         print("Drug:", data["drug_name"])
+>         print("Set ID:", data["set_id"])
+>         for idx, chunk in enumerate(data["chunks"]):
+>             if any(kw in chunk.lower() for kw in ["directions", "dosage and administration", "dosage", "how to take", "recommended dose", "adults and children
+"]):
+>                 print(f"  PASSAGE_{idx:04d}: {repr(chunk)[:150]}")
+> '
+============================================================
+Drug: 12HR Allergy Relief
+Set ID: ea5d0e55-2191-4094-b082-24b317f95752
+  PASSAGE_0007: 'adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours'
+============================================================
+Drug: 365 Whole Foods Market Loratadine
+Set ID: bba4e7c8-db8e-4522-915c-48ee809e3bce
+============================================================
+Drug: Acamprosate Calcium
+Set ID: ae6e79c0-a307-4888-b647-1b7be4cb9127
+  PASSAGE_0001: '2 DOSAGE AND ADMINISTRATION\nThe recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should total
+666 mg
+  PASSAGE_0002: '2.1 Dosage in Renal Impairment\nFor patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 3
+33 mg
+  PASSAGE_0003: '3 DOSAGE FORMS AND STRENGTHS\nAcamprosate calcium delayed-release tablets, 333 mg are white to off-white, round, biconvex, enteric-coated table
+ts deb
+  PASSAGE_0026: '39 (2%)\n†*includes events coded as “fracture” by sponsor;\n††**includes events coded as “nervousness” by sponsor 1 includes 258 patients treat
+ed wit
+  PASSAGE_0027: 'Concomitant Therapies\nIn clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hypn
+otics
+  PASSAGE_0036: '10 OVERDOSAGE\nIn all reported cases of acute overdosage with acamprosate calcium (total reported doses of up to 56 grams of acamprosate calciu
+m), th
+  PASSAGE_0044: 'Gender:\nAcamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.\nAge:\nThe pharmaco
+kineti
+  PASSAGE_0045: 'Acamprosate had no inducing potential on the cytochrome CYP1A2 and 3A4 systems, and in vitro inhibition studies suggest that acamprosate does n
+ot inh
+============================================================
+Drug: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+Set ID: 08c9d3dd-717b-0148-e054-00144ff8d46c
+  PASSAGE_0012: 'Chlorhexidine gluconate oral rinse therapy should be initiated directly following a dental prophylaxis. Patients using chlorhexidine gluconate
+oral r
+  PASSAGE_0016: 'REF 112-6720\nDIRECTIONS FOR USE: Swish one tablespoon (15ml) in mouth undiluted for 30 seconds, then\nspit out. Use after breakfast and before
+ bedti
+============================================================
+Drug: ACETAMINOPHEN with CODEINE
+Set ID: 36adb32c-638c-4d6e-b66a-1a1c35174ce6
+  PASSAGE_0003: 'This product combines the analgesic effects of a centrally acting analgesic, codeine, with a peripherally acting analgesic, acetaminophen.\xa0
+Pharma
+  PASSAGE_0007: 'Hepatotoxicity:\nAcetaminophen has been associated with cases of acute liver failure, at times resulting in liver transplant and death. Most of
+ the c
+  PASSAGE_0008: "General:\nAcetaminophen and codeine phosphate tablets should be prescribed with caution in certain special-risk patients, such as the elderly o
+r debi
+  PASSAGE_0010: 'Following an acute overdosage, toxicity may result from codeine or acetaminophen.\xa0 Signs and Symptoms:\nToxicity from codeine poisoning incl
+udes t
+  PASSAGE_0011: 'Dosage should be adjusted according to severity of pain and response of the patient.\nTake (1 - 2) tablets orally every 6-8 hours as needed.\nT
+he usu
+  PASSAGE_0014: 'Acetaminophen/codeine 300/30mg tablets CIII\nFor indications, dosage, precautions, etc. see package insert.Store at controlled room temperature
+ 20-25
+============================================================
+Drug: AcetaZOLAMIDE
+Set ID: 6972d9c1-36ec-4246-bf7b-13206d5952c3
+  PASSAGE_0013: 'No data are available regarding acetaZOLAMIDE overdose in humans as no cases of acute poisoning with this drug have been reported. Animal data
+sugges
+  PASSAGE_0014: 'Glaucoma\nAcetaZOLAMIDE should be used as an adjunct to the usual therapy. The dosage employed in the treatment of chronic simple (open-angle)
+glauco
+  PASSAGE_0015: 'Epilepsy\nIt is not clearly known whether the beneficial effects observed in epilepsy are due to direct inhibition of carbonic anhydrase in the
+ centr
+  PASSAGE_0016: 'Congestive Heart Failure\nFor diuresis in congestive heart failure, the starting dose is usually 250 to 375 mg once daily in the morning (5 mg/
+kg). I
+  PASSAGE_0017: 'Drug-Induced Edema\nRecommen
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+ Thiazolidinediones, including pioglitazone, which is a compo
+nent o
+  PASSAGE_0004: '2 DOSAGE AND ADMINISTRATION\n- Obtain liver tests (serum alanine and aspartate aminotransferases, alkaline phosphatase, and total bilirubin) pr
+ior to
+  PASSAGE_0005: "Recommended Starting Dosage Based on Current Regimen\nIndividualize the starting dosage of ACTOPLUS MET based on the patient's current regimen
+and th
+  PASSAGE_0006: 'Dosage Titration for Additional Glycemic Control\nTitrate the ACTOPLUS MET dosage gradually, as needed, after assessing therapeutic response an
+d tole
+  PASSAGE_0008: 'Starting Dosage in Patients with NYHA Class I or II Congestive Heart Failure\nFor patients with preexisting NYHA Class I or II congestive heart
+ failu
+  PASSAGE_0009: 'The maximum recommended dosage of ACTOPLUS MET is one tablet (15 mg of pioglitazone and 850 mg of metformin HCl) once daily when used in combin
+ation
+  PASSAGE_0011: '3 DOSAGE FORMS AND STRENGTHS\n- 15 mg of pioglitazone and 850 mg of metformin HCl tablets: White to off-white, oblong, film-coated tablets debo
+ssed w
+  PASSAGE_0013: '5.1 Congestive Heart Failure\nPioglitazone, like other thiazolidinediones, can cause dose-related fluid retention when used alone or in combina
+tion w
+  PASSAGE_0024: '5.4\tHypoglycemia with Concomitant Use with Insulin or Insulin Secretagogues\nInsulin and insulin secretagogues, such as sulfonylureas, are kno
+wn to
+  PASSAGE_0063: '7.1 Strong CYP2C8 Inhibitors\nAn inhibitor of CYP2C8 (e.g., gemfibrozil) significantly increases the exposure (area under the serum concentrati
+on-tim
+  PASSAGE_0064: '7.2 CYP2C8 Inducers\nAn inducer of CYP2C8 (e.g., rifampin) may significantly decrease the exposure (AUC) of pioglitazone. Therefore, if an indu
+cer of
+  PASSAGE_0078: 'Data\nPublished clinical lactation studies report that metformin is present in human milk which resulted in infant doses approximately 0.11% to
+ 1% of
+  PASSAGE_0085: '10 OVERDOSAGE\nPioglitazone\nDuring controlled clinical trials, one case of overdose with pioglitazone was reported. A male patient took 120 mg
+ per d
+  PASSAGE_0086: 'Metformin HCl\nOverdose of metformin HCl has occurred, including ingestion of amounts greater than 50 grams. Hypoglycemia was reported in appro
+ximate
+  PASSAGE_0108: 'Pioglitazone\nThe mean Cmax and AUC values of pioglitazone were increased 20 to 60% in females compared to males. In controlled clinical trials
+, HbA1
+  PASSAGE_0112: 'Pioglitazone\nThe serum elimination half-life of pioglitazone, M-III and M-IV remains unchanged in patients with moderate (CrCl 30 to 50 mL/min
+) and
+  PASSAGE_0114: 'Pioglitazone\nCompared with healthy controls, subjects with impaired hepatic function (Child-Turcotte-Pugh Grade B/C) have an approximate 45% r
+educti
+  PASSAGE_0117: 'Coadministered Drug\nPioglitazone Dosage\nRegimen (mg)\nDaily for 7 days unless otherwise noted.'
+  PASSAGE_0172: '17 PATIENT COUNSELING INFORMATION\nAdvise the patient to read the FDA-approved patient labeling (Medication Guide).\n- Congestive Heart Failure
+: Info
+============================================================
+Drug: Acyclovir
+Set ID: dcc29902-1fe6-4713-947e-335503959464
+  PASSAGE_0001: 'The pharmacokinetics of acyclovir after oral administration have\nbeen evaluated in healthy volunteers and in immunocompromised patients with\n
+herpes
+  PASSAGE_0005: 'Dosage adjustment is recommended when administering acyclovir to\npatients with renal impairment . Caution should also be exercised when admini
+sterin
+  PASSAGE_0007: 'Overdoses involving ingestion of up to 20 g have been reported. Adverse events\nthat have been reported in association with overdosage include
+agitat
+============================================================
+Drug: Acyclovir suspension
+Set ID: 3efa1e5e-5a14-4724-a2ca-25702f10faed
+  PASSAGE_0002: 'Table\xa01.\xa0Acyclovir\xa0Pharmacokinetic\xa0Characteristics\xa0(Range)\n*Bioavailability\xa0decreases\xa0with\xa0increasing\xa0dose.\nIn\xa0
+one\xa
+  PASSAGE_0003: 'Adults With\xa0Impaired\xa0Renal\xa0Function\nThe\xa0half-life\xa0and\xa0total\xa0body clearance\xa0of\xa0acyclovir\xa0are\xa0dependent\xa0on\x
+a0rena
+  PASSAGE_0004: 'Geriatrics\nAcyclovir\xa0plasma\xa0concentrations\xa0are\xa0higher\xa0in\xa0geriatric\xa0patients\xa0compared\xa0with younger\xa0adults,\xa0in\
+xa0par
+  PASSAGE_0016: 'Dosage\xa0adjustment\xa0is\xa0recommended\xa0when\xa0administering\xa0acyclovir\xa0to\xa0patients\xa0with\xa0renal impairment\xa0.\xa0Caution\x
+a0shou
+  PASSAGE_0032: 'Overdoses\xa0involving\xa0ingestion\xa0of\xa0up\xa0to\xa0100\xa0capsules\xa0(20\xa0g)\xa0have\xa0been\xa0reported.\xa0Adverse\xa0events that\xa
+0have\
+  PASSAGE_0038: 'Adults\xa0and\xa0Children\xa0over\xa040\xa0kg\n800\xa0mg\xa04\xa0times\xa0daily\xa0for\xa05\xa0days.\nIntravenous\xa0acyclovir\xa0is\xa0indicat
+ed\xa0
+  PASSAGE_0041: 'Bioequivalence\xa0of\xa0Dosage\xa0Forms\nAcyclovir Oral Suspension\xa0was\xa0shown\xa0to\xa0be\xa0bioequivalent\xa0to Acyclovir\xa0Capsules\xa0
+(n\xa0
+root@2809f9ae2d53:/workspace#

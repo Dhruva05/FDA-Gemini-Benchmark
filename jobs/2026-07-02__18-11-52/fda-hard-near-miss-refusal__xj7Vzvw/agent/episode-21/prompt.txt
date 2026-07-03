@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# rm -f inspect_labels.py inspect_keys.py inspect_chunks.py find_passages.py print_details.py parse_details.py print_clean.py inspec
+t_acamprosate.py inspect_others.py find_ar.py print_ar_full.py generate_answers.py validate_answers.py details.txt clean_details.txt read_clean.py inspect_12hr.
+py
+root@c7da805c5eb1:/workspace# ls -la /workspace
+total 24
+drwxr-xr-x 1 root root 4096 Jul  2 22:14 .
+drwxr-xr-x 1 root root 4096 Jul  2 22:12 ..
+-rw-r--r-- 1 root root  788 Jul  2 22:13 analyze_q.py
+-rw-r--r-- 1 root root 4644 Jul  2 22:13 answers.json
+drwxr-xr-x 3 root root 4096 Jul  2 20:40 data
+root@c7da805c5eb1:/workspace#

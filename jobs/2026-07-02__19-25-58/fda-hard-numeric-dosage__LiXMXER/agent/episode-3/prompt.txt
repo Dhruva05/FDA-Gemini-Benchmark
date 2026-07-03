@@ -1,0 +1,23 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > inspect_labels.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for i, line in enumerate(f):
+>         data = json.loads(line)
+>         print(f"Line {i}: drug_name={data.get('drug_name')}, set_id={data.get('set_id')}, keys={list(data.keys())}")
+>         if 'chunks' in data:
+>             print(f"  Number of chunks: {len(data['chunks'])}")
+>             if len(data['chunks']) > 0:
+>                 print(f"  First chunk keys: {list(data['chunks'][0].keys())}")
+>                 print(f"  First chunk example: {data['chunks'][0]}")
+> EOF
+root@af996c5fe492:/workspace# python3 inspect_labels.py
+Line 0: drug_name=Lopinavir-Ritonavir, set_id=4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85, keys=['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']
+  Number of chunks: 188
+Traceback (most recent call last):
+  File "/workspace/inspect_labels.py", line 9, in <module>
+    print(f"  First chunk keys: {list(data['chunks'][0].keys())}")
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+root@af996c5fe492:/workspace#

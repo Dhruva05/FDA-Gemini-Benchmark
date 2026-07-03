@@ -1,0 +1,179 @@
+{
+    "id": "08f71e6d-04c1-4d9d-bc09-d35ee70346f8",
+    "task_name": "abundant/fda-hard-long-label-retrieval",
+    "trial_name": "fda-hard-long-label-retrieval__FVTUPup",
+    "trial_uri": "file:///Users/dhruvashekdar/Documents/Abundant/FDA_question_review/jobs/2026-07-02__17-56-14/fda-hard-long-label-retrieval__FVTUPup",
+    "task_id": {
+        "path": "samples/fda-hard-long-label-retrieval"
+    },
+    "source": null,
+    "task_checksum": "5617a4c12d364ee6a1f9d9d17a1099ccb95e6fce126fbbf78682d96a87237ab1",
+    "config": {
+        "task": {
+            "path": "samples/fda-hard-long-label-retrieval",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": null
+        },
+        "trial_name": "fda-hard-long-label-retrieval__FVTUPup",
+        "trials_dir": "jobs/2026-07-02__17-56-14",
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "gemini/gemini-3.5-flash",
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "kwargs": {},
+            "env": {}
+        },
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "suppress_override_warnings": false,
+            "mounts_json": null,
+            "env": {},
+            "kwargs": {}
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "env": {},
+            "disable": false
+        },
+        "artifacts": [],
+        "job_id": "62c19d57-f61e-4bc2-bbcf-2bce72123101"
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "gemini-3.5-flash",
+            "provider": "gemini"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 2234018,
+        "n_cache_tokens": 1769136,
+        "n_output_tokens": 47914,
+        "cost_usd": 1.3939193999999997,
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 71,
+            "api_request_times_msec": [
+                2444.8649883270264,
+                2169.4767475128174,
+                1975.1522541046143,
+                1707.4060440063477,
+                2077.6891708374023,
+                1753.486156463623,
+                2058.5579872131348,
+                1975.9080410003662,
+                1948.5182762145996,
+                1810.8470439910889,
+                2801.287889480591,
+                2287.5418663024902,
+                1818.3231353759766,
+                3223.036766052246,
+                2570.1448917388916,
+                1892.0989036560059,
+                1376.2891292572021,
+                1761.950969696045,
+                1387.5229358673096,
+                1829.0188312530518,
+                3601.8829345703125,
+                1948.9901065826416,
+                1822.5209712982178,
+                3539.2768383026123,
+                1964.2653465270996,
+                2485.553026199341,
+                4335.920810699463,
+                1707.7610492706299,
+                3766.3538455963135,
+                1362.6229763031006,
+                1570.5609321594238,
+                4554.195880889893,
+                1726.5431880950928,
+                2026.0729789733887,
+                1668.849229812622,
+                3109.2090606689453,
+                1523.0917930603027,
+                1500.3058910369873,
+                1278.9239883422852,
+                7591.653108596802,
+                1641.1950588226318,
+                1895.279884338379,
+                2180.060863494873,
+                1627.2809505462646,
+                1834.8028659820557,
+                2598.6690521240234,
+                1601.2427806854248,
+                5899.2578983306885,
+                1503.5579204559326,
+                1828.2108306884766,
+                1797.847032546997,
+                2157.6590538024902,
+                2012.7460956573486,
+                2101.3998985290527,
+                1701.188087463379,
+                2208.800792694092,
+                1582.8168392181396,
+                20973.056077957153,
+                47010.16426086426,
+                22158.464908599854,
+                5474.776029586792,
+                3706.348180770874,
+                2958.477020263672,
+                1527.1778106689453,
+                3006.1659812927246,
+                1976.017951965332,
+                143043.68567466736,
+                20398.775100708008,
+                2316.16473197937,
+                2062.0391368865967,
+                1825.5796432495117
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.771979
+        }
+    },
+    "exception_info": null,
+    "started_at": "2026-07-02T21:56:15.393847Z",
+    "finished_at": "2026-07-02T22:04:15.394026Z",
+    "environment_setup": {
+        "started_at": "2026-07-02T21:56:15.454474Z",
+        "finished_at": "2026-07-02T21:56:20.492271Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-07-02T21:56:20.492346Z",
+        "finished_at": "2026-07-02T21:56:25.662360Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-07-02T21:56:25.662491Z",
+        "finished_at": "2026-07-02T22:04:04.261541Z"
+    },
+    "verifier": {
+        "started_at": "2026-07-02T22:04:04.434538Z",
+        "finished_at": "2026-07-02T22:04:04.751714Z"
+    },
+    "step_results": null
+}

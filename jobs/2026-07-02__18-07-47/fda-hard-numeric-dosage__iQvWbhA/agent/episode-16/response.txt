@@ -1,0 +1,10 @@
+{
+  "analysis": "Now let's use the script to print chunks that mention section headings like '2 DOSAGE AND ADMINISTRATION' or '2.1' or similar for each drug. Let's start with Lopinavir-Ritonavir.",
+  "plan": "Print the chunks for Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import print_details; print_details.search_drug_chunks('4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85', ['2 DOSAGE AND ADMINISTRATION', '2.1', '2.2', '2.3', '2.4', '2.5'])\" | head -n 150\n",
+      "duration": 1.0
+    }
+  ]
+}

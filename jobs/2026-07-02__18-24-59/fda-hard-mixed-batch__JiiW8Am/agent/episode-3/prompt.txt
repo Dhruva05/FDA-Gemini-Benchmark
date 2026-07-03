@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         print("drug_name:", obj.get("drug_name"), "set_id:", obj.get("set_id"))
+>         print("keys:", list(obj.keys()))
+>         if "chunks" in obj:
+>             print("num chunks:", len(obj["chunks"]))
+>             if len(obj["chunks"]) > 0:
+>                 print("chunk 0 keys:", list(obj["chunks"][0].keys()))
+>         print("-"*40)
+> '
+drug_name: Paxlovid set_id: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+keys: ['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']
+num chunks: 209
+Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+AttributeError: 'str' object has no attribute 'keys'
+root@c3dfb07a1d45:/workspace#

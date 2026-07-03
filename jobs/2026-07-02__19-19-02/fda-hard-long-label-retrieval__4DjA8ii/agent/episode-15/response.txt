@@ -1,0 +1,10 @@
+{
+  "analysis": "Let's print some of the matching chunks for 'avoid' and 'contraindicated'.",
+  "plan": "Print matching chunks for 'avoid' and 'contraindicated'.",
+  "commands": [
+    {
+      "keystrokes": "for idx, chunk in search('contraindicated')[:10]:\n    print(f\"=== PASSAGE_{idx:04d} ===\")\n    print(chunk[:250] + \"...\")\n",
+      "duration": 0.5
+    }
+  ]
+}

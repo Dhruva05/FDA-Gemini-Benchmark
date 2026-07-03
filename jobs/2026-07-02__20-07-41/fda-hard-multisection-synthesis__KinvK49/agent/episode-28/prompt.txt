@@ -1,0 +1,84 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# sed -n '21,100p' /tmp/headers.txt
+PASSAGE_0019: 7.1       Potential for PAXLOVID to Affect Other Drugs
+PASSAGE_0020: 7.2       Potential for Other Drugs to Affect PAXLOVID
+PASSAGE_0021: 7.3       Established and Other Potentially Significant Drug Interactions
+PASSAGE_0022: ↑ alfuzosin
+PASSAGE_0023: ↑ tamsulosin
+PASSAGE_0024: ↑ ranolazine
+PASSAGE_0025: ↑ antiarrhythmic
+PASSAGE_0026: ↑ antiarrhythmic
+PASSAGE_0027: ↓ nirmatrelvir/ritonavir
+PASSAGE_0028: Anticancer drugs
+PASSAGE_0029: ↑ anticancer drugs
+PASSAGE_0030: ↑↓ warfarin
+PASSAGE_0031: ↑ rivaroxaban
+PASSAGE_0032: ↑ dabigatran
+PASSAGE_0033: ↑ apixaban
+PASSAGE_0034: ↓ nirmatrelvir/ritonavir
+PASSAGE_0035: ↑ anticonvulsant
+PASSAGE_0036: ↓ bupropion and active metabolite hydroxy-bupropion
+PASSAGE_0037: ↑ trazodone
+PASSAGE_0038: ↓ voriconazole
+PASSAGE_0039: ↑ ketoconazole↑ isavuconazonium sulfate↑ itraconazole
+PASSAGE_0040: ↑ nirmatrelvir/ritonavir
+PASSAGE_0041: ↑ colchicine
+PASSAGE_0042: ↑ protease inhibitor
+PASSAGE_0043: efavirenz,maraviroc,nevirapine,zidovudine,bictegravir/ emtricitabine/ tenofovir
+PASSAGE_0044: ↑ clarithromycin↑ erythromycin
+PASSAGE_0045: ↓ nirmatrelvir/ritonavir
+PASSAGE_0046: ↑ bedaquiline
+PASSAGE_0047: ↑ rifabutin
+PASSAGE_0048: ↑ lurasidone↑ pimozide
+PASSAGE_0049: ↑ quetiapine
+PASSAGE_0050: ↑ clozapine
+PASSAGE_0051: ↑ silodosin
+PASSAGE_0052: ↑ calcium channel blocker
+PASSAGE_0053: ↑ digoxin
+PASSAGE_0054: ↑ eplerenone
+PASSAGE_0055: ↑ ivabradine
+PASSAGE_0056: aliskiren,ticagrelor,vorapaxar
+PASSAGE_0057: ↑ cilostazol
+PASSAGE_0058: ↑ corticosteroid
+PASSAGE_0059: ↓ nirmatrelvir/ritonavir
+PASSAGE_0060: ↑ ivacaftor↑ elexacaftor/tezacaftor/ivacaftor
+PASSAGE_0061: ↑ saxagliptin
+PASSAGE_0062: ↑ bosentan↓ nirmatrelvir/ritonavir
+PASSAGE_0063: ↑ dihydroergotamine↑ ergotamine↑ methylergonovine
+PASSAGE_0064: ↑ antiviral
+PASSAGE_0065: glecaprevir/pibrentasvir
+PASSAGE_0066: ombitasvir/paritaprevir/ ritonavir and dasabuvir
+PASSAGE_0067: sofosbuvir/velpatasvir/ voxilaprevir
+PASSAGE_0068: ↓ nirmatrelvir/ritonavir
+PASSAGE_0069: ↑ lovastatin↑ simvastatin
+PASSAGE_0070: ↑ atorvastatin
+PASSAGE_0071: ↓ ethinyl estradiol
+PASSAGE_0072: ↑ voclosporin
+PASSAGE_0073: Immunosuppressants
+PASSAGE_0074: ↑ cyclosporine↑ tacrolimus
+PASSAGE_0075: ↑ everolimus↑ sirolimus
+PASSAGE_0076: ↑ tofacitinib
+PASSAGE_0077: ↑ upadacitinib
+PASSAGE_0078: ↑ salmeterol
+PASSAGE_0079: ↑ lomitapide
+PASSAGE_0080: ↑ eletriptan
+PASSAGE_0081: ↑ ubrogepant
+PASSAGE_0082: ↑ rimegepant
+PASSAGE_0083: ↑ finerenone
+PASSAGE_0084: ↑ darifenacin
+PASSAGE_0085: ↑ fentanyl↑ hydrocodone↑ oxycodone↑ meperidine
+PASSAGE_0086: ↓ methadone
+PASSAGE_0087: ↑ suvorexant
+PASSAGE_0088: aripiprazole,brexpiprazole,cariprazine,iloperidone,lumateperone,pimavanserin
+PASSAGE_0089: ↑ naloxegol
+PASSAGE_0090: ↑ sildenafil
+PASSAGE_0091: ↑ tadalafil
+PASSAGE_0092: ↑ riociguat
+PASSAGE_0093: ↑ avanafil
+PASSAGE_0094: ↑ sildenafil↑ tadalafil↑ vardenafil
+PASSAGE_0095: ↑ triazolam↑ midazolam
+PASSAGE_0096: ↑ sedative/hypnotic
+PASSAGE_0097: ↑ midazolam
+PASSAGE_0098: ↑ flibanserin
+root@1ce871952c8c:/workspace#

@@ -1,0 +1,25 @@
+{
+  "debug_subset": "qa_toy.jsonl",
+  "final_eval_inputs": [
+    "labels.jsonl",
+    "qa.jsonl"
+  ],
+  "private_field_policy": "Verifier-only QA scoring fields are not exposed to agents.",
+  "source_files": [
+    {
+      "description": "FDA drug-label documents with raw label text and chunked sections.",
+      "path": "labels.jsonl",
+      "role": "primary label corpus used to build public label files"
+    },
+    {
+      "description": "QA records with public question metadata and verifier-only scoring fields.",
+      "path": "qa.jsonl",
+      "role": "primary QA corpus used to select questions and private verifier scoring data"
+    },
+    {
+      "description": "small debug subset used for inspection and smoke testing the source format.",
+      "path": "qa_toy.jsonl",
+      "role": "debug subset only; not used for final sampled benchmark tasks"
+    }
+  ]
+}

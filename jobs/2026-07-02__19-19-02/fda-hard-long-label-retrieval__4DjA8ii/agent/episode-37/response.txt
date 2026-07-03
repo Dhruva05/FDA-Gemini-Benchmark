@@ -1,0 +1,6 @@
+{
+  "analysis": "Cleanup complete. The task is fully complete and correct.",
+  "plan": "Mark task_complete as true and return.",
+  "commands": [],
+  "task_complete": true
+}

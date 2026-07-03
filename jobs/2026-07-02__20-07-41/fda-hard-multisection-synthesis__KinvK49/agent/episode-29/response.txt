@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a control character error. I will make sure not to include any literal control characters or unescaped newlines in the JSON strings.",
+  "plan": "I will run a shell command to view the headers from PASSAGE_0099 to PASSAGE_0210 in `/tmp/headers.txt`.",
+  "commands": [
+    {
+      "keystrokes": "sed -n '100,210p' /tmp/headers.txt\n",
+      "duration": 0.5
+    }
+  ]
+}

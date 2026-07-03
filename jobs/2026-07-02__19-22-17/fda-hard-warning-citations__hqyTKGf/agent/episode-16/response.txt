@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a parsing error because of double quotes escaping or control characters. I'll be very careful and use simple text, avoiding literal newlines or weird characters in the analysis.",
+  "plan": "I will run `find /workspace` to see all files in the workspace.",
+  "commands": [
+    {
+      "keystrokes": "find /workspace\n",
+      "duration": 0.5
+    }
+  ]
+}

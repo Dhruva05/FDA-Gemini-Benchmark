@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The `label_raw` is a string that contains passages separated by something, and each passage starts with `PASSAGE_####||`. Let's understand how many passages there are and how they are structured. Let's write a python script to parse `label_raw` and map each `PASSAGE_####` to its text.",
+  "plan": "Let's write a python snippet to parse `label_raw` into a dictionary of passage ID to passage text.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    data = json.loads(next(f))\n    raw = data[\"label_raw\"]\n    print(\"First 300 chars of raw:\")\n    print(raw[:300])\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

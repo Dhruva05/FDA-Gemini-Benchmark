@@ -1,0 +1,10 @@
+{
+  "analysis": "The search script works beautifully! Let's write a python script that will let us print the full text of any passage ID, so we can read the exact text and extract the exact quotes.",
+  "plan": "I will add a print command or update search.py to allow printing the full text of a specific passage ID.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_passage.py\nimport json\nimport sys\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    data = json.loads(f.readline())\n\nchunks = data['chunks']\n\nif len(sys.argv) > 1:\n    pid_str = sys.argv[1].upper()\n    # Extract number\n    import re\n    m = re.search(r'\\d+', pid_str)\n    if m:\n        idx = int(m.group(0))\n        if idx < len(chunks):\n            print(f\"=== PASSAGE_{idx:04d} ===\")\n            print(chunks[idx])\n        else:\n            print(\"Index out of range\")\n    else:\n        print(\"No number found\")\nEOF\npython3 print_passage.py PASSAGE_0004\n",
+      "duration": 0.5
+    }
+  ]
+}

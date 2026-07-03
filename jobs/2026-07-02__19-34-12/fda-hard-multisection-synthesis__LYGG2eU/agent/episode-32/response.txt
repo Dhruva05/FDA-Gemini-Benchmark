@@ -1,0 +1,11 @@
+{
+  "analysis": "Wait, let's print PASSAGE_0109 or search for dosage forms in Lopinavir-Ritonavir to see if there are tablets or only oral solution. Let's do a search for \"DOSAGE FORMS AND STRENGTHS\" in Lopinavir-Ritonavir.",
+  "plan": "I will search the Lopinavir-Ritonavir label for \"DOSAGE FORMS AND STRENGTHS\" to see which formulations are available.",
+  "commands": [
+    {
+      "keystrokes": "python3 search_labels.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 \"DOSAGE FORMS AND STRENGTHS\"\n",
+      "duration": 1.0
+    }
+  ],
+  "task_complete": false
+}

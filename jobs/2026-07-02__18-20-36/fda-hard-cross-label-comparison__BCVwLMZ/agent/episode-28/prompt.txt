@@ -1,0 +1,41 @@
+Current Terminal Screen:
+ion gap acidosis (without evidence of ketonuria or ketonemia), an increased lactate:pyruvate ratio; and metformin plasma levels generally greater than 5 mcg/mL\
+n- Risk factors for metformin-associated lactic acidosis include renal impairment, concomitant use of certain drugs (e.g., carbonic anhydrase inhibitors such as
+ topiramate), age 65 years old or greater, having a radiological study with contrast, surgery and other procedures, hypoxic states (e.g., acute congestive heart
+ failure), excessive alcohol intake, and hepatic impairment.\n- Steps to reduce the risk of and manage metformin-associated lactic acidosis in these high-risk g
+roups are provided in the Full Prescribing Information\n- If metformin-associated lactic acidosis is suspected, immediately discontinue ACTOPLUS MET and institu
+te general supportive measures in a hospital setting. Prompt hemodialysis is recommended'
+PASSAGE_0004: '2 DOSAGE AND ADMINISTRATION\n- Obtain liver tests (serum alanine and aspartate aminotransferases, alkaline phosphatase, and total bilirubin) prio
+r to initiating ACTOPLUS MET\n- ACTOPLUS MET contains 15 mg of pioglitazone and 850 mg of metformin hydrochloride (HCl) in each tablet.\n- Take ACTOPLUS MET wit
+h meals to reduce gastrointestinal adverse reactions with metformin\n- If a dose is missed, do not double the next dose.'
+PASSAGE_0005: "Recommended Starting Dosage Based on Current Regimen\nIndividualize the starting dosage of ACTOPLUS MET based on the patient's current regimen an
+d the available strength of ACTOPLUS MET ."
+PASSAGE_0006: 'Dosage Titration for Additional Glycemic Control\nTitrate the ACTOPLUS MET dosage gradually, as needed, after assessing therapeutic response and
+tolerability.\nACTOPLUS MET may be increased to a maximum recommended total daily dosage of three tablets per day (45 mg of pioglitazone and 2,550 mg of metform
+in HCl). Total daily dosages of 2,550 mg of metformin HCl may be taken in divided doses three times a day to reduce gastrointestinal adverse reactions .'
+PASSAGE_0008: 'Starting Dosage in Patients with NYHA Class I or II Congestive Heart Failure\nFor patients with preexisting NYHA Class I or II congestive heart f
+ailure, the recommended starting dosage of ACTOPLUS MET is 15 mg of pioglitazone and 850 mg of metformin .\nMonitoring for Fluid Retention and Dosage Modificati
+ons for Congestive Heart Failure\nAfter initiation of ACTOPLUS MET or with dosage increase, monitor patients carefully for adverse reactions related to fluid re
+tention as has been seen with pioglitazone (e.g., weight gain, edema and signs and symptoms of congestive heart failure).\nIf congestive heart failure develops
+while taking ACTOPLUS MET, consider discontinuation of ACTOPLUS MET or dosage reduction of pioglitazone in ACTOPLUS MET .'
+PASSAGE_0009: 'The maximum recommended dosage of ACTOPLUS MET is one tablet (15 mg of pioglitazone and 850 mg of metformin HCl) once daily when used in combinat
+ion with gemfibrozil or other strong CYP2C8 inhibitors .'
+PASSAGE_0011: '3 DOSAGE FORMS AND STRENGTHS\n- 15 mg of pioglitazone and 850 mg of metformin HCl tablets: White to off-white, oblong, film-coated tablets deboss
+ed with “4833M” on one side and “15/850” on the other'
+PASSAGE_0013: '5.1 Congestive Heart Failure\nPioglitazone, like other thiazolidinediones, can cause dose-related fluid retention when used alone or in combinati
+on with other antidiabetic medications and is most common when pioglitazone is used in combination with insulin. Fluid retention may lead to or exacerbate conge
+stive heart failure. Observe patients for signs and symptoms of congestive heart failure. If congestive heart failure develops while taking ACTOPLUS MET, consid
+er discontinuation of ACTOPLUS MET or dosage reduction of pioglitazone in ACTOPLUS MET .'
+PASSAGE_0014: '5.2 Lactic Acidosis\nLactic Acidosis\nThere have been postmarketing cases of metformin-associated lactic acidosis, including fatal cases. These c
+ases had a subtle onset and were accompanied by nonspecific symptoms such as malaise, myalgias, abdominal pain, respiratory distress, or increased somnolence; h
+owever, hypothermia, hypotension and resistant bradyarrhythmias have occurred with severe acidosis. Metformin-associated lactic acidosis was characterized by el
+evated blood lactate concentrations (greater than 5 mmol/L), anion gap acidosis (without evidence of ketonuria or ketonemia), an increased lactate:pyruvate rati
+o, and metformin plasma levels generally greater than 5 mcg/mL. Metformin decreases liver uptake of lactate increasing lactate blood levels which may increase t
+he risk of lactic acidosis, especially in patients at risk.\nIf metformin-associated lactic acidosis is suspected, general supportive measures should be institu
+ted promptly in a hospital setting, along with immediate discontinuation of ACTOPLUS MET. In ACTOPLUS MET-treated patients with a diagnosis or strong suspicion
+of lactic acidosis, prompt hemodialysis is recommended to correct the acidosis and remove accumulated metformin (metformin HCl is dialyzable, with a clearance o
+f up to 170 mL/min under good hemodynamic conditions). Hemodialysis has often resulted in reversal of symptoms and recovery.\nEducate patients and their familie
+s about the symptoms of lactic acidosis and if these symptoms occur instruct them to discontinue ACTOPLUS MET and report these symptoms to their healthcare prov
+ider.\nFor each of the known and possible risk factors for metformin-associated lactic acidosis, recommendations to reduce the risk of and manage metformin-asso
+ciated lactic acidosis are provided below:'
+root@faa94ec9460f:/workspace#

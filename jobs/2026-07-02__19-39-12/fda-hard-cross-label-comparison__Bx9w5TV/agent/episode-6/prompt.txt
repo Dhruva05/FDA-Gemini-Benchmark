@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     data = json.loads(next(f))
+>     print("Type of chunks:", type(data["chunks"]))
+>     print("Type of chunk 0:", type(data["chunks"][0]))
+>     print("Chunk 0:", repr(data["chunks"][0]))
+>     print("Chunk 1:", repr(data["chunks"][1]))
+> '
+Type of chunks: <class 'list'>
+Type of chunk 0: <class 'str'>
+Chunk 0: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, watery eyes\n- it
+ching of the nose or throat'
+Chunk 1: 'Do not use\xa0if you have ever had an allergic reaction to this product or any of its ingredients.'
+root@2809f9ae2d53:/workspace#

@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 extract_specific_dosing.py > clean_dosing.txt
+root@7e48d58e23f3:/workspace# wc -l clean_dosing.txt
+343 clean_dosing.txt
+root@7e48d58e23f3:/workspace#

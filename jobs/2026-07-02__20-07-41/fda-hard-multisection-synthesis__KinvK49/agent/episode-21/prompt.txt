@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# cat << 'EOF' > search_labels.py
+> import json, re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+>
+> def search_drug(drug_name, keywords):
+>     for label in labels:
+>         if label['drug_name'].lower() == drug_name.lower():
+>             print(f"=== {label['drug_name']} ({label['set_id']}) ===")
+>             for idx, chunk in enumerate(label['chunks']):
+>                 if any(re.search(r'\\b' + re.escape(kw) + r'\\b', chunk, re.IGNORECASE) for kw in keywords):
+>                     print(f"PASSAGE_{idx:04d} (len={len(chunk)}):")
+>                     lines = chunk.strip().split('\n')
+>                     print("  Header:", lines[0])
+>                     print("  Snippet:", ' | '.join(lines[1:4]))
+>                     print("-" * 40)
+>
+> print("Search Paxlovid interactions:")
+> search_drug("Paxlovid", ["interaction", "co-administered", "cyp3a"])
+> EOF
+root@1ce871952c8c:/workspace# python3 search_labels.py > /tmp/search_paxlovid_interactions.txt
+root@1ce871952c8c:/workspace# head -n 40 /tmp/search_paxlovid_interactions.txt
+Search Paxlovid interactions:
+=== Paxlovid (8a99d6d6-fd9e-45bb-b1bf-48c7f761232a) ===
+root@1ce871952c8c:/workspace#

@@ -1,0 +1,101 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# cat << 'EOF' > validate_answers.py
+> import json
+>
+> with open("/workspace/data/public/questions.jsonl") as f:
+>     questions = {q["qid"]: q for q in (json.loads(line) for line in f)}
+>
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     labels = {l["set_id"]: l for l in (json.loads(line) for line in f)}
+>
+> with open("/workspace/answers.json") as f:
+>     answers_data = json.load(f)
+>
+> if "answers" not in answers_data:
+>     print("ERROR: Missing answers key.")
+>     exit(1)
+>
+> ans_list = answers_data["answers"]
+> if len(ans_list) != len(questions):
+>     print(f"ERROR: Number of answers ({len(ans_list)}) does not match number of questions ({len(questions)}).")
+>     exit(1)
+>
+> all_ok = True
+> for ans in ans_list:
+>     qid = ans.get("qid")
+>     if qid not in questions:
+>         print(f"ERROR: Unknown qid {qid}")
+>         all_ok = False
+>         continue
+>
+>     q = questions[qid]
+>     req_fields = q["required_output_fields"]
+>
+>     # Check required top-level fields
+>     for field in ["qid", "status", "answer", "citations", "structured_fields"]:
+>         if field not in ans:
+>             print(f"ERROR: Missing top-level field {field} for qid {qid}")
+>             all_ok = False
+>
+>     # Check status
+>     status = ans.get("status")
+>     if status not in ["ANSWERED", "NOT_FOUND"]:
+>         print(f"ERROR: Invalid status {status} for qid {qid}")
+>         all_ok = False
+>
+>     # Check structured_fields
+>     sf = ans.get("structured_fields", {})
+>     for req in req_fields:
+>         if req.startswith("structured_fields."):
+>             subfield = req.split(".", 1)[1]
+>             if subfield not in sf:
+>                 print(f"ERROR: Missing structured_fields.{subfield} for qid {qid}")
+>                 all_ok = False
+>
+>     # Check citations
+>     citations = ans.get("citations", [])
+>     if not citations:
+>         print(f"ERROR: Missing citations for qid {qid}")
+>         all_ok = False
+>
+>     for cit in citations:
+>         set_id = cit.get("set_id")
+>         passage_id = cit.get("passage_id")
+>         supporting_quote = cit.get("supporting_quote")
+>
+>         if set_id != q["set_id"]:
+>             print(f"ERROR: Citation set_id {set_id} does not match question set_id {q['set_id']} for qid {qid}")
+>             all_ok = False
+>
+>         if set_id not in labels:
+>             print(f"ERROR: Unknown set_id {set_id} for qid {qid}")
+>             all_ok = False
+>             continue
+>
+>         label = labels[set_id]
+>         try:
+>             passage_idx = int(passage_id.split("_")[1])
+>         except Exception:
+>             print(f"ERROR: Invalid passage_id format {passage_id} for qid {qid}")
+>             all_ok = False
+>             continue
+>
+>         if passage_idx < 0 or passage_idx >= len(label["chunks"]):
+>             print(f"ERROR: passage_id {passage_id} out of bounds for set_id {set_id} (len {len(label['chunks'])}) for qid {qid}")
+>             all_ok = False
+>             continue
+>
+>         chunk = label["chunks"][passage_idx]
+>         if supporting_quote not in chunk:
+>             print(f"ERROR: supporting_quote {repr(supporting_quote)} not in chunk {passage_id} for qid {qid}")
+>             all_ok = False
+>
+> if all_ok:
+>     print("ALL VALIDATIONS PASSED SUCCESSFULLY!")
+> else:
+>     print("SOME VALIDATIONS FAILED!")
+> EOF
+root@3faa5da3ba91:/workspace# python3 validate_answers.py
+ALL VALIDATIONS PASSED SUCCESSFULLY!
+root@3faa5da3ba91:/workspace#

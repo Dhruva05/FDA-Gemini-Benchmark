@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > test_passage.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print(label['drug_name'], len(label['chunks']))
+>         # Let's see if 'PASSAGE' is mentioned anywhere in the raw text of the label or chunks
+>         raw_str = json.dumps(label)
+>         if 'PASSAGE' in raw_str:
+>             print("Found PASSAGE in raw label!")
+>         else:
+>             print("PASSAGE not found in raw label.")
+> EOF
+root@15b83e10b8d1:/workspace# python3 test_passage.py
+Paxlovid 209
+Found PASSAGE in raw label!
+Lopinavir-Ritonavir 188
+Found PASSAGE in raw label!
+root@15b83e10b8d1:/workspace#

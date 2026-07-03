@@ -1,0 +1,10 @@
+{
+  "analysis": "Let's inspect how the chunks are structured in `labels.jsonl`.",
+  "plan": "I will write a python script to inspect the fields of a chunk in `labels.jsonl`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    first_line = json.loads(f.readline())\n    print(\"Keys in label record:\", list(first_line.keys()))\n    print(\"Number of chunks:\", len(first_line[\"chunks\"]))\n    print(\"First chunk keys:\", list(first_line[\"chunks\"][0].keys()))\n    print(\"First chunk:\", json.dumps(first_line[\"chunks\"][0], indent=2))\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

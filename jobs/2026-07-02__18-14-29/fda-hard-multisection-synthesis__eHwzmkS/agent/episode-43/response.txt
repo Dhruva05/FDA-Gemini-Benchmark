@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no control characters are present in the JSON. I will list the headers or first lines of passages 22 to 35 in Paxlovid to see how Table 2 is represented.",
+  "plan": "I will run the Python command.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]\nfor i in range(22, 36):\n    print(f'PASSAGE_{i:04d}:', l['chunks'][i].strip().split('\\n')[0][:80])\nf.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": "This is great! Let's check if there are other chunks about administration of Lopinavir-Ritonavir. For example, what about pregnant women or pediatric patients? Let's check `PASSAGE_0001` (taken with food), `PASSAGE_0002` (feeding tube compatibility), `PASSAGE_0159` (accurate dosing, using calibrated cup/syringe, taking with food), and `PASSAGE_0187` (step-by-step instructions for oral solution).\n\nWait, are there any other administration directions for Lopinavir-Ritonavir in the label? Let's search for \"administer\" or \"administration\" in the chunks of Lopinavir-Ritonavir.",
+  "plan": "I will run search('Lopinavir-Ritonavir', 'administ') to find all passages discussing administration.",
+  "commands": [
+    {
+      "keystrokes": "search('Lopinavir-Ritonavir', 'administ')\n",
+      "duration": 0.5
+    }
+  ]
+}

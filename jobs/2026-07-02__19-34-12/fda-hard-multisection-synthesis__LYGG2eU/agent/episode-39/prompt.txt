@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > list_lopinavir_warnings.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85':
+>             for idx, chunk in enumerate(label['chunks']):
+>                 first_line = chunk.strip().split('\n')[0]
+>                 if first_line.startswith('5 ') or first_line.startswith('5.'):
+>                     print(f"PASSAGE_{idx:04d}: {first_line}")
+> EOF
+root@15b83e10b8d1:/workspace# python3 list_lopinavir_warnings.py
+PASSAGE_0014: 5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+PASSAGE_0015: 5.2 Toxicity in Preterm Neonates
+PASSAGE_0016: 5.3 Pancreatitis
+PASSAGE_0017: 5.4 Hepatotoxicity
+PASSAGE_0018: 5.5 QT Interval Prolongation
+PASSAGE_0019: 5.6 PR Interval Prolongation
+PASSAGE_0020: 5.7 Diabetes Mellitus/Hyperglycemia
+PASSAGE_0021: 5.8 Immune Reconstitution Syndrome
+PASSAGE_0022: 5.9 Lipid Elevations
+PASSAGE_0023: 5.10 Fat Redistribution
+PASSAGE_0024: 5.11 Patients with Hemophilia
+PASSAGE_0025: 5.12 Resistance/Cross-resistance
+root@15b83e10b8d1:/workspace#

@@ -1,0 +1,79 @@
+Previous response had warnings:
+WARNINGS: - Extra text detected after JSON object
+
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > validate_answers.py
+> import json
+>
+> try:
+>     with open('/workspace/answers.json') as f:
+>         data = json.load(f)
+>     print("Successfully loaded answers.json!")
+>
+>     # Check structure
+>     if 'answers' not in data:
+>         print("Error: 'answers' key not found!")
+>     else:
+>         answers = data['answers']
+>         print(f"Number of answers: {len(answers)}")
+>
+>         # Load questions to compare qids
+>         qids = []
+>         with open('/workspace/data/public/questions.jsonl') as qf:
+>             for line in qf:
+>                 q = json.loads(line)
+>                 qids.append(q['qid'])
+>
+>         ans_qids = [a['qid'] for a in answers]
+>         print(f"Expected QIDs: {qids}")
+>         print(f"Actual QIDs: {ans_qids}")
+>         if set(qids) != set(ans_qids):
+>             print("Error: QID lists do not match!")
+>         else:
+>             print("QID lists match perfectly!")
+>
+>         # Check fields
+>         for idx, ans in enumerate(answers):
+>             print(f"Answer {idx} (qid={ans['qid']}):")
+>             for field in ['qid', 'status', 'answer', 'citations', 'structured_fields']:
+>                 if field not in ans:
+>                     print(f"  Error: field '{field}' is missing!")
+>             sf = ans.get('structured_fields', {})
+>             for field in ['dose', 'unit', 'route', 'frequency', 'population', 'max_daily_dose', 'citation_passages']:
+>                 if field not in sf:
+>                     print(f"  Error: structured_fields field '{field}' is missing!")
+>             citations = ans.get('citations', [])
+>             print(f"  Citations count: {len(citations)}")
+>             for cit in citations:
+>                 for cfield in ['set_id', 'passage_id', 'section', 'supporting_quote']:
+>                     if cfield not in cit:
+>                         print(f"    Error: citation field '{cfield}' is missing!")
+> except Exception as e:
+>     print(f"Error: {e}")
+> EOF
+root@af996c5fe492:/workspace# python3 validate_answers.py
+Successfully loaded answers.json!
+Number of answers: 8
+Expected QIDs: ['daef650b92e56473', 'a0576a26f2a2eeac', '55d09c5df742eaec', '005acaea4542b5ca', '2566741a8a58fd5d', '0de6259e34606d2d', '85c49de5de841cb9', '0d2
+62ce5d03f7c38']
+Actual QIDs: ['daef650b92e56473', 'a0576a26f2a2eeac', '55d09c5df742eaec', '005acaea4542b5ca', '2566741a8a58fd5d', '0de6259e34606d2d', '85c49de5de841cb9', '0d262
+ce5d03f7c38']
+QID lists match perfectly!
+Answer 0 (qid=daef650b92e56473):
+  Citations count: 2
+Answer 1 (qid=a0576a26f2a2eeac):
+  Citations count: 3
+Answer 2 (qid=55d09c5df742eaec):
+  Citations count: 1
+Answer 3 (qid=005acaea4542b5ca):
+  Citations count: 1
+Answer 4 (qid=2566741a8a58fd5d):
+  Citations count: 2
+Answer 5 (qid=0de6259e34606d2d):
+  Citations count: 5
+Answer 6 (qid=85c49de5de841cb9):
+  Citations count: 5
+Answer 7 (qid=0d262ce5d03f7c38):
+  Citations count: 2
+root@af996c5fe492:/workspace#

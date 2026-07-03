@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > list_lopinavir_dosage.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85':
+>             for idx, chunk in enumerate(label['chunks']):
+>                 first_line = chunk.strip().split('\n')[0]
+>                 if first_line.startswith('2 ') or first_line.startswith('2.'):
+>                     print(f"PASSAGE_{idx:04d}: {first_line}")
+> EOF
+root@15b83e10b8d1:/workspace# python3 list_lopinavir_dosage.py
+PASSAGE_0001: 2.1 General Administration Recommendations
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+root@15b83e10b8d1:/workspace#

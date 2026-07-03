@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no control characters are present in the JSON. I will run a python script to inspect the beginning of `PASSAGE_0021` (Section 7.3) of the Paxlovid label.",
+  "plan": "I will run the Python command.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]; print(l['chunks'][21][:1000] + '...'); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

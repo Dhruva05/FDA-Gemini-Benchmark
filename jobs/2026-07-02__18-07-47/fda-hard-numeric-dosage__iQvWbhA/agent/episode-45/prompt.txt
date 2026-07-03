@@ -1,0 +1,41 @@
+Current Terminal Screen:
+  Max Daily Dose: 1 tablet
+  Citation Passages: ['PASSAGE_0003']
+----------------------------------------
+4. QID: 005acaea4542b5ca
+  Status: ANSWERED
+  Route: oral
+  Frequency: once daily with food
+  Max Daily Dose: 1 tablet
+  Citation Passages: ['PASSAGE_0003']
+----------------------------------------
+5. QID: 2566741a8a58fd5d
+  Status: ANSWERED
+  Route: oral
+  Frequency: as single dose or divided twice daily
+  Max Daily Dose: 400 mg (or 600 mg on the first day of acute pain/primary dysmenorrhea)
+  Citation Passages: ['PASSAGE_0008', 'PASSAGE_0011']
+----------------------------------------
+6. QID: 0de6259e34606d2d
+  Status: ANSWERED
+  Route: oral
+  Frequency: once daily or twice daily
+  Max Daily Dose: 400 mg (or 600 mg on the first day of acute pain/primary dysmenorrhea)
+  Citation Passages: ['PASSAGE_0009', 'PASSAGE_0010', 'PASSAGE_0011', 'PASSAGE_0012', 'PASSAGE_0013']
+----------------------------------------
+7. QID: 85c49de5de841cb9
+  Status: ANSWERED
+  Route: oral
+  Frequency: once daily
+  Max Daily Dose: 25 mg
+  Citation Passages: ['PASSAGE_0009', 'PASSAGE_0015', 'PASSAGE_0019', 'PASSAGE_0022', 'PASSAGE_0028']
+----------------------------------------
+8. QID: 0d262ce5d03f7c38
+  Status: ANSWERED
+  Route: oral
+  Frequency: once daily, either with or without food
+  Max Daily Dose: 25 mg
+  Citation Passages: ['PASSAGE_0032']
+----------------------------------------
+All checks passed successfully!
+root@371ed25b9fd3:/workspace#

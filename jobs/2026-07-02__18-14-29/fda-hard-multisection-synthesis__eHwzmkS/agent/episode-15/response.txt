@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to avoid control characters in the JSON. I will list all files in the `/workspace` directory to see if there are any other instructions or files that define the structured fields schema.",
+  "plan": "I will run a simple `ls -la /workspace` command.",
+  "commands": [
+    {
+      "keystrokes": "ls -la /workspace\n",
+      "duration": 0.5
+    }
+  ]
+}

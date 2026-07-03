@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > inspect_labels.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+>
+> for l in labels:
+>     print(f"Drug: {l.get('drug_name')}, Set ID: {l.get('set_id')}, Chunks: {len(l.get('chunks', []))}")
+>     for i, chunk in enumerate(l.get('chunks', [])[:5]):
+>         print(f"  Chunk {i}: passage_id={chunk.get('passage_id')}, section={chunk.get('section_name') or chunk.get('section')}")
+>         print(f"    Text: {chunk.get('text')[:100]}...")
+> EOF
+root@0ef79956d710:/workspace# python3 inspect_labels.py
+Drug: 12HR Allergy Relief, Set ID: ea5d0e55-2191-4094-b082-24b317f95752, Chunks: 13
+Traceback (most recent call last):
+  File "/workspace/inspect_labels.py", line 9, in <module>
+    print(f"  Chunk {i}: passage_id={chunk.get('passage_id')}, section={chunk.get('section_name') or chunk.get('section')}")
+                                     ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+root@0ef79956d710:/workspace#

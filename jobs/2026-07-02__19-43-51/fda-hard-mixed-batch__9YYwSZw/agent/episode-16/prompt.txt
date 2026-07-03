@@ -1,0 +1,35 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Acamprosate Calcium":
+>             for idx in range(35, 46):
+>                 print(f"PASSAGE_{idx:04d}: {data["chunks"][idx][:150]}")
+> '
+PASSAGE_0035: 8.6 Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+PASSAGE_0036: 10 OVERDOSAGE
+In all reported cases of acute overdosage with acamprosate calcium (total reported doses of up to 56 grams of acamprosate calcium), the
+PASSAGE_0037: 11 DESCRIPTION
+Acamprosate calcium delayed-release tablets are supplied as an enteric-coated tablet for oral administration. Acamprosate calcium, USP
+PASSAGE_0038: 12.1 Mechanism of Action
+The mechanism of action of acamprosate in maintenance of alcohol abstinence is not completely understood. Chronic alcohol exp
+PASSAGE_0039: 12.2 Pharmacodynamics
+Pharmacodynamic studies have shown that acamprosate calcium reduces alcohol intake in alcohol-dependent animals in a dose-depend
+PASSAGE_0040: 12.3      Absorption
+The absolute bioavailability of acamprosate calcium after oral administration is about 11%. Steady-state plasma concentrations of acam
+PASSAGE_0041: The volume of distribution for acamprosate following intravenous administration is estimated to be 72 to 109 liters (approximately 1 L/kg). Plasma
+ pro
+PASSAGE_0042: Acamprosate does not undergo metabolism.
+PASSAGE_0043: After oral dosing of 2 x 333 mg of acamprosate calcium, the terminal half-life ranges from approximately 20 to 33 hours. Following oral administra
+tion
+PASSAGE_0044: Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics o
+PASSAGE_0045: Acamprosate had no inducing potential on the cytochrome CYP1A2 and 3A4 systems, and in vitro inhibition studies suggest that acamprosate does not
+inhi
+root@3faa5da3ba91:/workspace#

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 103 (char 104) | Content preview: '{\n  "analysis": "This is extremely informative! Let\'s examine each question and find the exact passa'...
+
+Please fix these issues and provide a proper JSON response.

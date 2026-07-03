@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no control characters are present in the JSON. I will run a python script to inspect the content of these Paxlovid drug interaction passages.",
+  "plan": "I will run the Python command.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]\nfor idx in [0, 19, 20]:\n    print(f'*** PASSAGE_{idx:04d} ***')\n    print(l['chunks'][idx][:400] + '...')\nf.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

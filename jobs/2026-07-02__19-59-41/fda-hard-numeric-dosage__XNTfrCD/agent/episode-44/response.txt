@@ -1,0 +1,24 @@
+{
+  "analysis": "Now let's design the answers and the structured fields for each of the 8 questions in our python script.
+Let's specify the answers, citations, and structured fields carefully.
+
+Let's double-check the exact questions, their drug, and their QID:
+1. `daef650b92e56473`: Lopinavir-Ritonavir, \"How should Lopinavir-Ritonavir be administered?\"
+2. `a0576a26f2a2eeac`: Lopinavir-Ritonavir, \"What is the recommended dosage regimen of Lopinavir-Ritonavir?\"
+3. `55d09c5df742eaec`: Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate, \"What is the recommended dosage regimen of Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate?\"
+4. `005acaea4542b5ca`: Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate, \"How should Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate be administered?\"
+5. `2566741a8a58fd5d`: CELECOXIB, \"How should CELECOXIB be administered?\"
+6. `0de6259e34606d2d`: CELECOXIB, \"What is the recommended dosage regimen of CELECOXIB?\"
+7. `85c49de5de841cb9`: Lenalidomide, \"What is the recommended dosage regimen of Lenalidomide?\"
+8. `0d262ce5d03f7c38`: Lenalidomide, \"How should Lenalidomide be administered?\"
+
+Wait, let's write a python script to check the available passages in labels for each drug so we can copy supporting quotes exactly and get the correct passage IDs.
+We already have the passage dumps in `/workspace/all_dosage_sections.txt`. Let's use python to search and print the exact sentences/passages we want to use, and verify their exact spelling, spaces, and punctuation.",
+  "plan": "I will write a python script to help us extract exact quotes and passage IDs for each of the 4 drugs.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > get_exact_passages.py\nimport json\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        drug = data['drug_name']\n        print(\"=\"*80)\n        print(drug)\n        print(\"=\"*80)\n        if drug == 'Lopinavir-Ritonavir':\n            # Passage 1, 2, 3, 4, 5, 7\n            for i in [1, 2, 3, 4, 5, 7]:\n                print(f\"PASSAGE_{i:04d}:\")\n                print(repr(data['chunks'][i]))\n        elif drug == 'Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate':\n            # Passage 2, 3\n            for i in [2, 3]:\n                print(f\"PASSAGE_{i:04d}:\")\n                print(repr(data['chunks'][i]))\n        elif drug == 'CELECOXIB':\n            # Passage 8, 9, 10, 11, 12, 13\n            for i in [8, 9, 10, 11, 12, 13]:\n                print(f\"PASSAGE_{i:04d}:\")\n                print(repr(data['chunks'][i]))\n        elif drug == 'Lenalidomide':\n            # Passage 9, 10, 15, 19, 22, 32\n            for i in [9, 10, 15, 19, 22, 32]:\n                print(f\"PASSAGE_{i:04d}:\")\n                print(repr(data['chunks'][i]))\nEOF\npython3 get_exact_passages.py\n",
+      "duration": 1.0
+    }
+  ]
+}

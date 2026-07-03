@@ -1,0 +1,11 @@
+{
+  "analysis": "Wait, let's look at the actual dosage tables. What are the recommended dosages in Adults? Let's check Table 1 (Once Daily Regimen) and Table 2 (Twice Daily Regimen) in Lopinavir-Ritonavir. They should be in PASSAGE_0004, PASSAGE_0005, or PASSAGE_0006.",
+  "plan": "I will run the print script to print PASSAGE_0004 through PASSAGE_0006 for Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passages.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 PASSAGE_0004 PASSAGE_0005 PASSAGE_0006\n",
+      "duration": 1.0
+    }
+  ],
+  "task_complete": false
+}

@@ -1,0 +1,6 @@
+New Terminal Output:
+
+>>> for idx, chunk in enumerate(label_data['chunks']):
+...     if 'WARNING' in chunk or 'PRECAUTION' in chunk or chunk.startswith('5 '):
+...         print(f"{idx}: {chunk[:100]}...")
+...

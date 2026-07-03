@@ -1,0 +1,27 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat q0_details.txt
+
+QUESTION 0: cross-0df97f1e2f1e4c - 12HR Allergy Relief vs 365 Whole Foods Market Loratadine
+
+================================================================================
+
+Question: Compare the dosing instructions for 12HR Allergy Relief and 365 Whole Foods Market Loratadine. For each label, report dose or strength, route, frequen
+cy, population, and maximum daily dose if stated. Cite one passage from each label.
+
+  --- DRUG: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752) ---
+    PASSAGE_0007:
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+----------------------------------------
+
+  --- DRUG: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce) ---
+    PASSAGE_0011:
+Loratadine
+
+                     Tablets USP, 10mg
+Indoor & Outdoor
+Allergies
+*WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL.
+----------------------------------------
+
+root@7e48d58e23f3:/workspace#

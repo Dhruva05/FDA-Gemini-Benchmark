@@ -1,0 +1,1159 @@
+[?2004hroot@4b1b7b4fd079:/workspace# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@4b1b7b4fd079:/workspace# clear
+[?2004l[H[J[3J[?2004hroot@4b1b7b4fd079:/workspace# ls -la /workspace/data/public
+[?2004ltotal 488
+drwxr-xr-x 2 root root   4096 Jul  2 21:00 [0m[01;34m.[0m
+drwxr-xr-x 3 root root   4096 Jul  2 20:40 [01;34m..[0m
+-rw-r--r-- 1 root root    616 Jul  2 20:40 README.md
+-rw-r--r-- 1 root root 480414 Jul  2 20:40 labels.jsonl
+-rw-r--r-- 1 root root   3845 Jul  2 20:40 questions.jsonl
+[?2004hroot@4b1b7b4fd079:/workspace# cat /workspace/data/public/README.md
+[?2004l        # Public FDA Label Data
+
+        This directory contains only public task inputs for `fda-hard-mixed-batch`.
+
+        - `labels.jsonl` has full FDA label rows with `label_raw` and `chunks`.
+        - `questions.jsonl` has 10 public questions.
+        - Gold answers, references, citations, and curated context are not included here.
+
+        Labels included:
+        - Paxlovid (`8a99d6d6-fd9e-45bb-b1bf-48c7f761232a`)
+- Lopinavir-Ritonavir (`4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85`)
+- 12HR Allergy Relief (`ea5d0e55-2191-4094-b082-24b317f95752`)
+- Acamprosate Calcium (`ae6e79c0-a307-4888-b647-1b7be4cb9127`)
+[?2004hroot@4b1b7b4fd079:/workspace# cat /workspace/data/public/questions.jsonl
+[?2004l{"drug_name": "Paxlovid", "qid": "b2531657ba5c7a78", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "6f12607a1ba14dd5", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "mixed-2a90a3df19df68", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "mixed-7c14643ec4356a", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "daef650b92e56473", "question": "How should Lopinavir-Ritonavir be administered?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.frequency", "structured_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "numeric"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "a0576a26f2a2eeac", "question": "What is the recommended dosage regimen of Lopinavir-Ritonavir?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.frequency", "structured_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "numeric"}
+{"drug_name": "12HR Allergy Relief", "qid": "near-miss-04f3afa658fdef", "question": "The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "ea5d0e55-2191-4094-b082-24b317f95752", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-0c6ec72416151f", "question": "The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Paxlovid", "qid": "mixed-eead76662cb6bf", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "multihop"}
+{"drug_name": "Paxlovid", "qid": "mixed-97331106c3870d", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "multihop"}
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/questions.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         print(json.loads(line))
+[?2004l[?2004h> '
+[?2004l{'drug_name': 'Paxlovid', 'qid': 'b2531657ba5c7a78', 'question': 'What important drug interactions are noted for Paxlovid?', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields'], 'set_id': '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a', 'task_type': 'factual'}
+{'drug_name': 'Paxlovid', 'qid': '6f12607a1ba14dd5', 'question': 'Which medications should be avoided with Paxlovid?', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields'], 'set_id': '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a', 'task_type': 'factual'}
+{'drug_name': 'Paxlovid', 'qid': 'mixed-2a90a3df19df68', 'question': 'What important drug interactions are noted for Paxlovid?', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields'], 'set_id': '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a', 'task_type': 'factual'}
+{'drug_name': 'Paxlovid', 'qid': 'mixed-7c14643ec4356a', 'question': 'Which medications should be avoided with Paxlovid?', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields'], 'set_id': '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a', 'task_type': 'factual'}
+{'drug_name': 'Lopinavir-Ritonavir', 'qid': 'daef650b92e56473', 'question': 'How should Lopinavir-Ritonavir be administered?', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages'], 'set_id': '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85', 'task_type': 'numeric'}
+{'drug_name': 'Lopinavir-Ritonavir', 'qid': 'a0576a26f2a2eeac', 'question': 'What is the recommended dosage regimen of Lopinavir-Ritonavir?', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages'], 'set_id': '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85', 'task_type': 'numeric'}
+{'drug_name': '12HR Allergy Relief', 'qid': 'near-miss-04f3afa658fdef', 'question': 'The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND if the label does not support it, and cite the section you searched.', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic'], 'set_id': 'ea5d0e55-2191-4094-b082-24b317f95752', 'task_type': 'refusal'}
+{'drug_name': 'Acamprosate Calcium', 'qid': 'near-miss-0c6ec72416151f', 'question': 'The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic'], 'set_id': 'ae6e79c0-a307-4888-b647-1b7be4cb9127', 'task_type': 'refusal'}
+{'drug_name': 'Paxlovid', 'qid': 'mixed-eead76662cb6bf', 'question': 'What important drug interactions are noted for Paxlovid?', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields'], 'set_id': '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a', 'task_type': 'multihop'}
+{'drug_name': 'Paxlovid', 'qid': 'mixed-97331106c3870d', 'question': 'Which medications should be avoided with Paxlovid?', 'required_output_fields': ['qid', 'status', 'answer', 'citations', 'structured_fields'], 'set_id': '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a', 'task_type': 'multihop'}
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for i, line in enumerate(f):
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         print(f"Row {i}: drug_name={data.get("drug_name")}, set_id={data.get("set_id")}, chunks_count={len(data.get("chunks", []))}")
+[?2004l[?2004h> '
+[?2004lRow 0: drug_name=Paxlovid, set_id=8a99d6d6-fd9e-45bb-b1bf-48c7f761232a, chunks_count=209
+Row 1: drug_name=Lopinavir-Ritonavir, set_id=4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85, chunks_count=188
+Row 2: drug_name=12HR Allergy Relief, set_id=ea5d0e55-2191-4094-b082-24b317f95752, chunks_count=13
+Row 3: drug_name=Acamprosate Calcium, set_id=ae6e79c0-a307-4888-b647-1b7be4cb9127, chunks_count=59
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     data = json.loads(f.readline())
+[?2004l[?2004h>     print(json.dumps(data["chunks"][0], indent=2))
+[?2004l[?2004h> '
+[?2004l"WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\n- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events\n- Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PAXLOVID and 2) Determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring\n- Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed"
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     data = json.loads(f.readline())
+[?2004l[?2004h>     print("Keys:", list(data.keys()))
+[?2004l[?2004h>     for k in ["set_id", "drug_name"]:
+[?2004l[?2004h>         print(k, ":", data[k])
+[?2004l[?2004h> '
+[?2004lKeys: ['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']
+set_id : 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+drug_name : Paxlovid
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         raw = data.get("label_raw", "")
+[?2004l[?2004h>         chunks = data.get("chunks", [])
+[?2004l[?2004h>         print(data["drug_name"], "raw has PASSAGE_:", "PASSAGE_" in raw)
+[?2004l[?2004h>         print(data["drug_name"], "chunks has PASSAGE_:", any("PASSAGE_" in str(c) for c in chunks))
+[?2004l[?2004h> '
+[?2004lPaxlovid raw has PASSAGE_: True
+Paxlovid chunks has PASSAGE_: False
+Lopinavir-Ritonavir raw has PASSAGE_: True
+Lopinavir-Ritonavir chunks has PASSAGE_: False
+12HR Allergy Relief raw has PASSAGE_: True
+12HR Allergy Relief chunks has PASSAGE_: False
+Acamprosate Calcium raw has PASSAGE_: True
+Acamprosate Calcium chunks has PASSAGE_: False
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     data = json.loads(f.readline())
+[?2004l[?2004h>     print(data["label_raw"][:2000])
+[?2004l[?2004h> '
+[?2004l||PASSAGE_0000||
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PAXLOVID and 2) Determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring
+- Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed
+
+||PASSAGE_0001||
+1 INDICATIONS AND USAGE
+PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high risk for progression to severe COVID-19, including hospitalization or death.
+
+||PASSAGE_0002||
+Limitations of Use
+PAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 .
+
+||PASSAGE_0003||
+2.1	Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 150 mg;100 mg for patients with moderate renal impairment
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg (Day 1) and 150 mg;100 mg (Days 2-5) for patients with severe renal impairment
+Nirmatrelvir must be co-administered with ritonavir. Failure to correctly co-administer nirmatrelvir with ritonavir may result in plasma levels of nirmatrelvir that are insufficient to achieve the desired therapeutic effect.
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID . Completion of the fu
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json, re
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         raw = data["label_raw"]
+[?2004l[?2004h>         passages = re.split(r"\|\|(PASSAGE_\d+)\|\|", raw)
+[?2004l[?2004h>         # passages[0] should be empty or whitespace
+[?2004l[?2004h>         # passages[1] is PASSAGE_0000, passages[2] is the text, etc.
+[?2004l[?2004h>         header = passages[0]
+[?2004l[?2004h>         parsed_passages = {}
+[?2004l[?2004h>         for i in range(1, len(passages), 2):
+[?2004l[?2004h>             pid = passages[i]
+[?2004l[?2004h>             text = passages[i+1].strip()
+[?2004l[?2004h>             parsed_passages[pid] = text
+[?2004l[?2004h>         print(data["drug_name"], "chunks length:", len(data["chunks"]), "parsed passages length:", len(parsed_passages))
+[?2004l[?2004h>         # Check if they match
+[?2004l[?2004h>         match = True
+[?2004l[?2004h>         for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>             pid = f"PASSAGE_{i:04d}"
+[?2004l[?2004h>             if pid not in parsed_passages:
+[?2004l[?2004h>                 match = False
+[?2004l[?2004h>                 print(f"  Missing {pid} in parsed passages!")
+[?2004l[?2004h>                 break
+[?2004l[?2004h>             if chunk.strip() != parsed_passages[pid]:
+[?2004l[?2004h>                 match = False
+[?2004l[?2004h>                 print(f"  Mismatch at {pid}!")
+[?2004l[?2004h>                 print("Chunk:", repr(chunk.strip()[:100]))
+[?2004l[?2004h>                 print("Parsed:", repr(parsed_passages[pid][:100]))
+[?2004l[?2004h>                 break
+[?2004l[?2004h>         if match:
+[?2004l[?2004h>             print(f"  All {len(data["chunks"])} chunks match PASSAGE_0000 to PASSAGE_{len(data["chunks"])-1:04d} exactly!")
+[?2004l[?2004h> '
+[?2004lPaxlovid chunks length: 209 parsed passages length: 209
+  All 209 chunks match PASSAGE_0000 to PASSAGE_0208 exactly!
+Lopinavir-Ritonavir chunks length: 188 parsed passages length: 188
+  All 188 chunks match PASSAGE_0000 to PASSAGE_0187 exactly!
+12HR Allergy Relief chunks length: 13 parsed passages length: 13
+  All 13 chunks match PASSAGE_0000 to PASSAGE_0012 exactly!
+Acamprosate Calcium chunks length: 59 parsed passages length: 59
+  All 59 chunks match PASSAGE_0000 to PASSAGE_0058 exactly!
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/questions.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         q = json.loads(line)
+[?2004l[?2004h>         print("QID:", q["qid"], "Drug:", q["drug_name"], "Type:", q["task_type"])
+[?2004l[?2004h>         print("  Q:", q["question"])
+[?2004l[?2004h>         print("  Fields:", q["required_output_fields"])
+[?2004l[?2004h> '
+[?2004lQID: b2531657ba5c7a78 Drug: Paxlovid Type: factual
+  Q: What important drug interactions are noted for Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+QID: 6f12607a1ba14dd5 Drug: Paxlovid Type: factual
+  Q: Which medications should be avoided with Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+QID: mixed-2a90a3df19df68 Drug: Paxlovid Type: factual
+  Q: What important drug interactions are noted for Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+QID: mixed-7c14643ec4356a Drug: Paxlovid Type: factual
+  Q: Which medications should be avoided with Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+QID: daef650b92e56473 Drug: Lopinavir-Ritonavir Type: numeric
+  Q: How should Lopinavir-Ritonavir be administered?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+QID: a0576a26f2a2eeac Drug: Lopinavir-Ritonavir Type: numeric
+  Q: What is the recommended dosage regimen of Lopinavir-Ritonavir?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structured_fields.frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+QID: near-miss-04f3afa658fdef Drug: 12HR Allergy Relief Type: refusal
+  Q: The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND if the label does not support it, and cite the section you searched.
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+QID: near-miss-0c6ec72416151f Drug: Acamprosate Calcium Type: refusal
+  Q: The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+QID: mixed-eead76662cb6bf Drug: Paxlovid Type: multihop
+  Q: What important drug interactions are noted for Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+QID: mixed-97331106c3870d Drug: Paxlovid Type: multihop
+  Q: Which medications should be avoided with Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "12HR Allergy Relief":
+[?2004l[?2004h>             for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>                 print(f"PASSAGE_{i:04d}: {chunk[:100]}...")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0000: Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- ru...
+PASSAGE_0001: Do not use if you have ever had an allergic reaction to this product or any of its ingredients....
+PASSAGE_0002: Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a diff...
+PASSAGE_0003: - do not take more than directed
+- do not take at the same time as aluminum or magnesium antacids
+- ...
+PASSAGE_0004: Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek medical help right a...
+PASSAGE_0005: If pregnant or breast-feeding, ask a health professional before use....
+PASSAGE_0006: Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Cen...
+PASSAGE_0007: adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not...
+PASSAGE_0008: do not use
+adults 65 years of age and older...
+PASSAGE_0009: - store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete pro...
+PASSAGE_0010: colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, ir...
+PASSAGE_0011: Antihistamine
+Indoor/Outdoor Relief of:...
+PASSAGE_0012: Actual Size
+COMPARE TO ALLEGRA® 12 HOUR ALLERGY active ingredient*...
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "12HR Allergy Relief":
+[?2004l[?2004h>             print(data["label_raw"])
+[?2004l[?2004h> '
+[?2004l||PASSAGE_0000||
+Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+
+||PASSAGE_0001||
+Do not use if you have ever had an allergic reaction to this product or any of its ingredients.
+
+||PASSAGE_0002||
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+
+||PASSAGE_0003||
+- do not take more than directed
+- do not take at the same time as aluminum or magnesium antacids
+- do not take with fruit juices
+
+||PASSAGE_0004||
+Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek medical help right away.
+
+||PASSAGE_0005||
+If pregnant or breast-feeding, ask a health professional before use.
+
+||PASSAGE_0006||
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+
+||PASSAGE_0007||
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+
+||PASSAGE_0008||
+do not use
+adults 65 years of age and older
+
+||PASSAGE_0009||
+- store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete product information and warnings
+
+||PASSAGE_0010||
+colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, iron oxide yellow, lactose monohydrate, macrogol, magnesium stearate, microcrystalline cellulose, pregelatinized starch, titanium dioxide
+
+||PASSAGE_0011||
+Antihistamine
+Indoor/Outdoor Relief of:
+
+||PASSAGE_0012||
+Actual Size
+COMPARE TO ALLEGRA® 12 HOUR ALLERGY active ingredient*
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Acamprosate Calcium":
+[?2004l[?2004h>             for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>                 if "renal" in chunk.lower() or "hepatic" in chunk.lower():
+[?2004l[?2004h>                     print(f"PASSAGE_{i:04d}: {chunk[:150]}...")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0002: 2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg ta...
+PASSAGE_0005: 4.2 Severe Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) ....
+PASSAGE_0006: 5.1 Renal Impairment
+Treatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires ...
+PASSAGE_0034: 8.5 Geriatric Use
+Forty-one of the 4234 patients in double-blind, placebo-controlled, clinical trials of acamprosate calcium were 65 years of age or o...
+PASSAGE_0035: 8.6 Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) ....
+PASSAGE_0044: Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics o...
+PASSAGE_0051: Renal Impairment
+A lower dose is recommended for patients with moderate renal impairment. Acamprosate calcium is contraindicated in patients with seve...
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Acamprosate Calcium":
+[?2004l[?2004h>             for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>                 if "hepatic" in chunk.lower():
+[?2004l[?2004h>                     print(f"PASSAGE_{i:04d}: {chunk}")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0044: Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a geriatric population. However, since renal function diminishes in elderly patients and acamprosate is excreted unchanged in urine, acamprosate plasma concentrations are likely to be higher in the elderly population compared to younger adults.
+Pediatrics:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a pediatric population.
+Renal Impairment:
+Peak plasma concentrations after administration of a single dose of 2 x 333 mg acamprosate calcium tablets to patients with moderate or severe renal impairment were about 2-fold and 4-fold higher, respectively, compared to healthy subjects. Similarly, elimination half-life was about 1.8-fold and 2.6-fold longer, respectively, compared to healthy subjects. There is a linear relationship between creatinine clearance values and total apparent plasma clearance, renal clearance and plasma half-life of acamprosate. A dose of 1 x 333 mg acamprosate calcium, three times daily, is recommended in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min, .
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+Hepatic Impairment:
+Acamprosate is not metabolized by the liver and the pharmacokinetics of acamprosate calcium are not altered in patients with mild to moderate hepatic impairment (groups A and B of the Child-Pugh classification). No adjustment of dosage is recommended in such patients.
+Alcohol-dependent subjects:
+A cross-study comparison of acamprosate calcium at doses of 2 x 333 mg three times daily indicated similar pharmacokinetics between alcohol-dependent subjects and healthy subjects.
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Acamprosate Calcium":
+[?2004l[?2004h>             print(data["chunks"][35])
+[?2004l[?2004h> '
+[?2004l8.6 Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Lopinavir-Ritonavir":
+[?2004l[?2004h>             for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>                 if "2 DOSAGE AND ADMINISTRATION" in chunk or "2.1" in chunk or "2.2" in chunk:
+[?2004l[?2004h>                     print(f"PASSAGE_{i:04d}: {chunk[:300]}...")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0001: 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food....
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potential incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, su...
+PASSAGE_0098: Human Data
+Lopinavir and ritonavir was evaluated in 12 HIV-infected pregnant women in an open-label pharmacokinetic trial . No new trends in the safety profile were identified in pregnant women dosed with lopinavir and ritonavir compared to the safety described in non-pregnant adults, based on the r...
+PASSAGE_0105: 10 OVERDOSAGE
+Overdoses with lopinavir and ritonavir oral solution have been reported. One of these reports described fatal cardiogenic shock in a 2.1 kg infant who received a single dose of 6.5 mL of lopinavir and ritonavir oral solution (520 mg lopinavir, approximately 10-fold above the recommende...
+PASSAGE_0107: 12.1 Mechanism of Action
+Lopinavir and ritonavir is a fixed-dose combination of HIV-1 antiviral drugs lopinavir and ritonavir. As co-formulated in lopinavir and ritonavir, ritonavir inhibits the CYP3A-mediated metabolism of lopinavir, thereby providing increased plasma levels of lopinavir....
+PASSAGE_0108: 12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo and active (moxifloxacin 400 mg once daily) controlled crossover study in 39 healthy adults. The maximum mean time-matched (95% upper confidence bound) differences in QTc...
+PASSAGE_0140: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis
+Lopinavir and ritonavir combination was evaluated for carcinogenic potential by oral gavage administration to mice and rats for up to 104 weeks. Results showed an increase in the incidence of benign hepatocellular adenomas and ...
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Lopinavir-Ritonavir":
+[?2004l[?2004h>             for i in range(16):
+[?2004l[?2004h>                 print(f"PASSAGE_{i:04d}: {data["chunks"][i][:150]}...")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0000: 1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in a...
+PASSAGE_0001: 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food....
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recomme...
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and...
+PASSAGE_0004: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir T...
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when admini...
+PASSAGE_0006: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily...
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients ...
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg...
+PASSAGE_0009: Based on Weight (mg/kg)
+Concomitant Therapy: Efavirenz, Nevirapine, or Nelfinavir...
+PASSAGE_0010: Dosing recommendations using oral solution
+Table 6 provides the dosing recommendations for pediatric patients older than 6 months to less than 18 year...
+PASSAGE_0011: Frequency
+> 6 months to < 18 years...
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir...
+PASSAGE_0013: 4 CONTRAINDICATIONS
+- Lopinavir and ritonavir is contraindicated in patients with previously demonstrated clinically significant hypersensitivity (e.g...
+PASSAGE_0014: 5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medicat...
+PASSAGE_0015: 5.2 Toxicity in Preterm Neonates
+Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, ...
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Lopinavir-Ritonavir":
+[?2004l[?2004h>             for idx in [3, 4, 5, 6, 7, 12]:
+[?2004l[?2004h>                 print(f"=== PASSAGE_{idx:04d} ===")
+[?2004l[?2004h>                 print(data["chunks"][idx])
+[?2004l[?2004h> '
+[?2004l=== PASSAGE_0003 ===
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing regimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V, V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+=== PASSAGE_0004 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+=== PASSAGE_0005 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage recommendations for twice daily dosing when lopinavir and ritonavir is taken in combination with these agents.
+=== PASSAGE_0006 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+=== PASSAGE_0007 ===
+2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral solution should be administered using the calibrated cup (supplied) or oral dosing syringe.
+Lopinavir and ritonavir oral solution is not recommended in neonates before a postmenstrual age (first day of the mother’s last menstrual period to birth plus the time elapsed after birth) of 42 weeks and a postnatal age of at least 14 days has been attained .
+Lopinavir and ritonavir oral solution contains approximately 42% (v/v) ethanol and approximately 15% (w/v) propylene glycol. Total amounts of ethanol and propylene glycol from all medicines that are to be given to pediatric patients 14 days to 6 months of age should be taken into account in order to avoid toxicity from these excipients .
+=== PASSAGE_0012 ===
+2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-associated resistance substitutions.
+- Once daily lopinavir and ritonavir dosing is not recommended in pregnancy
+Once daily lopinavir and ritonavir dosing is not recommended in pregnancy .
+- There are insufficient data to recommend dosing in pregnant women with any documented lopinavir-associated resistance substitutions.
+There are insufficient data to recommend dosing in pregnant women with any documented lopinavir-associated resistance substitutions.
+- No dosage adjustment of lopinavir and ritonavir is required for patients during the postpartum period.
+No dosage adjustment of lopinavir and ritonavir is required for patients during the postpartum period.
+- Avoid use of lopinavir and ritonavir oral solution in pregnant women
+Avoid use of lopinavir and ritonavir oral solution in pregnant women .
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Lopinavir-Ritonavir":
+[?2004l[?2004h>             print(data["chunks"][1])
+[?2004l[?2004h> '
+[?2004l2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Lopinavir-Ritonavir":
+[?2004l[?2004h>             for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>                 if "table 1" in chunk.lower() or "table 2" in chunk.lower() or "table 3" in chunk.lower():
+[?2004l[?2004h>                     print(f"PASSAGE_{i:04d}: {chunk[:200]}...")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0003: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing regi...
+PASSAGE_0004: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen...
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine o...
+PASSAGE_0014: 5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medicat...
+PASSAGE_0040: Laboratory Abnormalities in Pediatric Patients
+The percentages of pediatric patients treated with combination therapy including lopinavir and ritonavir with Grade 3-4 laboratory abnormalities are pres...
+PASSAGE_0047: 7.1 Potential for Lopinavir and Ritonavir to Affect Other Drugs
+Lopinavir and ritonavir is an inhibitor of CYP3A and may increase plasma concentrations of agents that are primarily metabolized by CYP3...
+PASSAGE_0049: 7.3 Established and Other Potentially Significant Drug Interactions
+Table 12 provides a listing of established or potentially clinically significant drug interactions. Alteration in dose or regimen ma...
+PASSAGE_0109: 12.3 Pharmacokinetics
+The pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic parameters of lopinavir are summarized in Table 14. Under fed conditions,...
+PASSAGE_0110: b. Changes in AUC values
+Table 14. Steady-State Pharmacokinetic Parameters of Lopinavir, Mean ± SD
+a. 19 HIV-1 subjects, lopinavir and ritonavir 400/100 mg twice daily...
+PASSAGE_0112: Pediatric Patients
+The 230/57.5 mg/m2 twice daily regimen without nevirapine and the 300/75 mg/m2 twice daily regimen with nevirapine provided lopinavir plasma concentrations similar to those obtained...
+PASSAGE_0120: Drug Interactions
+Lopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit CYP2D6, CYP2C9, CYP2C19, CYP2E1, CYP2B6 or CYP1A2 at clinically r...
+PASSAGE_0136: Cross-resistance - Nonclinical Studies
+Varying degrees of cross-resistance have been observed among HIV-1 protease inhibitors. The antiviral activity in cell culture of lopinavir against clinical isol...
+PASSAGE_0138: 1/4 (25%)
+2 43% indinavir, 42% nelfinavir, 10% ritonavir, 15% saquinavir.
+3 41% indinavir, 38% nelfinavir, 4% ritonavir, 16% saquinavir.
+4 86% indinavir, 54% nelfinavir, 80% ritonavir, 70% saquinavir....
+PASSAGE_0143: 14.1 Adult Patients without Prior Antiretroviral Therapy
+Study 863:
+Lopinavir and Ritonavir
+Capsules twice daily + stavudine + lamivudine compared to nelfinavir three times daily + stavudine + lamivud...
+PASSAGE_0144: 8%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and other...
+PASSAGE_0145: 89
+2 Patients achieved HIV-1 RNA < 50 copies/mL at Week 48.
+Through 48 weeks of therapy, the mean increase from baseline in CD4+ cell count was 207 cells/mm3 for the lopinavir and ritonavir arm and 19...
+PASSAGE_0148: 14.2 Adult Patients with Prior Antiretroviral Therapy
+Study 888:
+Lopinavir and Ritonavir
+Capsules twice daily + nevirapine + NRTIs compared to investigator-selected protease inhibitor(s) + nevirapine ...
+PASSAGE_0150: 13%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and othe...
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Lopinavir-Ritonavir":
+[?2004l[?2004h>             for idx in [3, 4, 5]:
+[?2004l[?2004h>                 print(f"=== PASSAGE_{idx:04d} ===")
+[?2004l[?2004h>                 print(data["chunks"][idx])
+[?2004l[?2004h> '
+[?2004l=== PASSAGE_0003 ===
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing regimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V, V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+=== PASSAGE_0004 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+=== PASSAGE_0005 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage recommendations for twice daily dosing when lopinavir and ritonavir is taken in combination with these agents.
+[?2004hroot@4b1b7b4fd079:/workspace# find /workspace
+[?2004l/workspace
+/workspace/data
+/workspace/data/public
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Lopinavir-Ritonavir":
+[?2004l[?2004h>             for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>                 if "max" in chunk.lower() or "limit" in chunk.lower() or "daily" in chunk.lower():
+[?2004l[?2004h>                     if "dose" in chunk.lower():
+[?2004l[?2004h>                         print(f"PASSAGE_{i:04d}: {chunk[:200]}...")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine o...
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral...
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid underdosing ...
+PASSAGE_0028: Adverse Reactions in Adults
+The safety of lopinavir and ritonavir has been investigated in about 2,600 patients in Phase II-IV clinical trials, of which about 700 have received a dose of 800/200 mg (6...
+PASSAGE_0053: ↑ indinavir
+Decrease indinavir dose to 600 mg twice daily, when co-administered with lopinavir and ritonavir 400/100 mg twice daily. Lopinavir and ritonavir once daily has not been studied in combinat...
+PASSAGE_0056: ↑ saquinavir
+The saquinavir dose is 1000 mg twice daily, when co-administered with lopinavir and ritonavir 400/100 mg twice daily. Lopinavir and ritonavir once daily has not been studied in combinatio...
+PASSAGE_0059: ↓ lopinavir
+Increase the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administered with efavirenz or nevirapine. Lopinavir and ritonavir once daily i...
+PASSAGE_0066: ↓ lopinavir/ritonavir#
+Apalutamide is contraindicated due to potential for loss of virologic response and possible resistance to lopinavir and ritonavir or to the class of protease inhibitors .
+Avoid ...
+PASSAGE_0074: ↑ colchicine
+Contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment .
+For patients with normal renal or hepatic function:
+Treat...
+PASSAGE_0076: ↑ rifabutin and rifabutin metabolite
+Dosage reduction of rifabutin by at least 75% of the usual dose of 300 mg/day is recommended (i.e., a maximum dose of 150 mg every other day or three times per wee...
+PASSAGE_0091: ↑ vardenafil
+Sildenafil when used for the treatment of pulmonary arterial hypertension (Revatio®) is contraindicated due to the potential for sildenafil-associated adverse events, including visual abn...
+PASSAGE_0096: Risk Summary
+Available data from the Antiretroviral Pregnancy Registry show no difference in the risk of overall major birth defects compared to the background rate for major birth defects of 2.7% in ...
+PASSAGE_0097: Clinical Considerations
+Dose Adjustments During Pregnancy and the Postpartum Period
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-assoc...
+PASSAGE_0098: Human Data
+Lopinavir and ritonavir was evaluated in 12 HIV-infected pregnant women in an open-label pharmacokinetic trial . No new trends in the safety profile were identified in pregnant women dosed ...
+PASSAGE_0099: Animal Data
+Embryonic and fetal developmental toxicities (early resorption, decreased fetal viability, decreased fetal body weight, increased incidence of skeletal variations and skeletal ossification...
+PASSAGE_0102: 8.4 Pediatric Use
+The safety, efficacy, and pharmacokinetic profiles of lopinavir and ritonavir in pediatric patients below the age of 14 days have not been established. Lopinavir and ritonavir should...
+PASSAGE_0105: 10 OVERDOSAGE
+Overdoses with lopinavir and ritonavir oral solution have been reported. One of these reports described fatal cardiogenic shock in a 2.1 kg infant who received a single dose of 6.5 mL of...
+PASSAGE_0108: 12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo and active (moxifloxacin 400 mg once daily) controlled crossover study...
+PASSAGE_0120: Drug Interactions
+Lopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit CYP2D6, CYP2C9, CYP2C19, CYP2E1, CYP2B6 or CYP1A2 at clinically r...
+PASSAGE_0140: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis
+Lopinavir and ritonavir combination was evaluated for carcinogenic potential by oral gavage administration to mice and rats for...
+PASSAGE_0142: Impairment of Fertility
+Lopinavir in combination with ritonavir at a 2:1 ratio produced no effects on fertility in male and female rats at levels of 10/5, 30/15 or 100/50 mg/kg/day. Based on AUC measu...
+PASSAGE_0155: 14.3 Other Studies Supporting Approval in Adult Patients
+Study 720:
+Lopinavir and Ritonavir
+twice daily + stavudine + lamivudine
+Study 765:
+Lopinavir and Ritonavir
+twice daily + nevirapine + NRTIs
+Stu...
+PASSAGE_0156: 14.4 Pediatric Studies
+Study 1030 was an open-label, multicenter, dose-finding trial evaluating the pharmacokinetic profile, tolerability, safety and efficacy of lopinavir and ritonavir oral solution ...
+PASSAGE_0159: 17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to acc...
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Lopinavir-Ritonavir":
+[?2004l[?2004h>             print("PASSAGE_0004:", repr(data["chunks"][4]))
+[?2004l[?2004h>             print("PASSAGE_0005:", repr(data["chunks"][5]))
+[?2004l[?2004h> '
+[?2004lPASSAGE_0004: 'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily\nTable 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen'
+PASSAGE_0005: 'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL)\xa0twice daily\nThe dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage recommendations for twice daily dosing when lopinavir and ritonavir is taken in combination with these agents.'
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Paxlovid":
+[?2004l[?2004h>             for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>                 if "DRUG INTERACTIONS" in chunk or "CONTRAINDICATIONS" in chunk or "avoid" in chunk.lower():
+[?2004l[?2004h>                     if len(chunk) < 500:
+[?2004l[?2004h>                         print(f"PASSAGE_{i:04d}: {chunk[:200]}...")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0023: ↑ tamsulosin
+Avoid concomitant use with PAXLOVID....
+PASSAGE_0029: ↑ anticancer drugs
+Avoid co-administration of encorafenib or ivosidenib due to potential risk of serious adverse events such as QT interval prolongation. Avoid use of neratinib, venetoclax or ibrutini...
+PASSAGE_0031: ↑ rivaroxaban
+Increased bleeding risk with rivaroxaban. Avoid concomitant use.
+dabigatranSee Pharmacokinetics, Clinical Drug Interaction Studies (12.3)....
+PASSAGE_0032: ↑ dabigatran
+Increased bleeding risk with dabigatran. Depending on dabigatran indication and renal function, reduce dose of dabigatran or avoid concomitant use. Refer to the dabigatran product label f...
+PASSAGE_0038: ↓ voriconazole
+Avoid concomitant use of voriconazole....
+PASSAGE_0056: aliskiren,ticagrelor,vorapaxar
+                                       clopidogrel
+↑ aliskiren↑ ticagrelor↑ vorapaxar
+↓ clopidogrel active metabolite
+Avoid concomitant use with PAXLOVID....
+PASSAGE_0065: glecaprevir/pibrentasvir
+Avoid concomitant use of glecaprevir/pibrentasvir with PAXLOVID....
+PASSAGE_0075: ↑ everolimus↑ sirolimus
+Avoid concomitant use of everolimus and sirolimus and PAXLOVID.
+Refer to the individual immunosuppressant product label and latest guidelines for further information....
+PASSAGE_0078: ↑ salmeterol
+Avoid concomitant use with PAXLOVID. The combination may result in increased risk of cardiovascular adverse events associated with salmeterol, including QT prolongation, palpitations, and...
+PASSAGE_0082: ↑ rimegepant
+Avoid concomitant use with PAXLOVID....
+PASSAGE_0087: ↑ suvorexant
+Avoid concomitant use of suvorexant with PAXLOVID....
+PASSAGE_0091: ↑ tadalafil
+Avoid concomitant use of tadalafil with PAXLOVID for pulmonary hypertension....
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Paxlovid":
+[?2004l[?2004h>             for i, chunk in enumerate(data["chunks"]):
+[?2004l[?2004h>                 if "CONTRAINDICATIONS" in chunk or "DRUG INTERACTIONS" in chunk:
+[?2004l[?2004h>                     lines = chunk.split("\n")
+[?2004l[?2004h>                     for l in lines:
+[?2004l[?2004h>                         if "CONTRAINDICATIONS" in l or "DRUG INTERACTIONS" in l or "7 " in l or "4 " in l:
+[?2004l[?2004h>                             print(f"PASSAGE_{i:04d}: {l[:100]}")
+[?2004l[?2004h> '
+[?2004lPASSAGE_0000: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+PASSAGE_0012: 4 CONTRAINDICATIONS
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open("/workspace/data/public/labels.jsonl") as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data["drug_name"] == "Paxlovid":
+[?2004l[?2004h>             for idx in range(12, 21):
+[?2004l[?2004h>                 print(f"=== PASSAGE_{idx:04d} ===")
+[?2004l[?2004h>                 print(data["chunks"][idx])
+[?2004l[?2004h> '
+[?2004l=== PASSAGE_0012 ===
+4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.
+PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance. There are certain other drugs for which concomitant use with PAXLOVID should be avoided and/or dose adjustment, interruption, or therapeutic monitoring is recommended. Drugs listed in this section are a guide and not considered a comprehensive list of all drugs that may be contraindicated with PAXLOVID. The healthcare provider should consult other appropriate resources such as the prescribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor like PAXLOVID :
+- ➢ Drugs that are primarily metabolized by CYP3A for which elevated concentrations are associated with serious and/or life-threatening reactions
+- Alpha 1-adrenoreceptor antagonist: alfuzosin
+- Antianginal: ranolazine
+- Antiarrhythmic: amiodarone, dronedarone, flecainide, propafenone, quinidine
+- Anti-gout: colchicine (in patients with renal and/or hepatic impairment
+- Antipsychotics: lurasidone, pimozide
+- Benign prostatic hyperplasia agents: silodosin
+- Cardiovascular agents: eplerenone, ivabradine
+- Ergot derivatives: dihydroergotamine, ergotamine, methylergonovine
+- HMG-CoA reductase inhibitors: lovastatin, simvastatin (these drugs can be temporarily discontinued to allow PAXLOVID use
+- Immunosuppressants: voclosporin
+- Microsomal triglyceride transfer protein inhibitor: lomitapide
+- Migraine medications: eletriptan, ubrogepant
+- Mineralocorticoid receptor antagonists: finerenone
+- Opioid antagonists: naloxegol
+- PDE5 inhibitor: sildenafil (Revatio ® ) when used for pulmonary arterial hypertension (PAH)
+- Sedative/hypnotics: triazolam, oral midazolam
+- Serotonin receptor 1A agonist/serotonin receptor 2A antagonist: flibanserin
+- Vasopressin receptor antagonists: tolvaptan
+- ➢ Drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance. PAXLOVID cannot be started immediately after discontinuation of any of the following medications due to the delayed offset of the recently discontinued CYP3A inducer
+- Anticancer drugs: apalutamide , enzalutamide
+- Anticonvulsant: carbamazepine, phenobarbital, primidone, phenytoin
+- Antimycobacterials: rifampin, rifapentine
+- Cystic fibrosis transmembrane conductance regulator potentiators: lumacaftor/ivacaftor
+- Herbal products: St. John's Wort (
+=== PASSAGE_0013 ===
+5.1	Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A. Medications that induce CYP3A may decrease concentrations of PAXLOVID. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Loss of therapeutic effect of PAXLOVID and possible development of viral resistance.
+Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated with PAXLOVID. The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers.
+Prior to prescribing PAXLOVID, review all medications taken by the patient to assess potential drug-drug interactions and determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring (e.g., calcineurin inhibitors) . See Table 2 for clinically significant drug interactions, including contraindicated drugs. Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXLOVID.
+Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed .
+=== PASSAGE_0014 ===
+5.2	Hypersensitivity Reactions
+Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported with PAXLOVID . If signs and symptoms of a clinically significant hypersensitivity reaction or anaphylaxis occur, immediately discontinue PAXLOVID and initiate appropriate medications and/or supportive care.
+=== PASSAGE_0015 ===
+5.3	Hepatotoxicity
+Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir. Therefore, caution should be exercised when administering PAXLOVID to patients with pre-existing liver diseases, liver enzyme abnormalities, or hepatitis.
+=== PASSAGE_0016 ===
+5.4	Risk of HIV-1 Resistance Development
+Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection .
+=== PASSAGE_0017 ===
+6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Hypersensitivity reactions
+=== PASSAGE_0018 ===
+6.1	Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The safety of PAXLOVID is based on two Phase 2/3 randomized, placebo-controlled trials in symptomatic adult subjects 18 years of age and older with a laboratory confirmed diagnosis of SARS-CoV-2 infection. Subjects in both studies received PAXLOVID (nirmatrelvir/ritonavir 300 mg/100 mg) or placebo every 12 hours for 5 days for the treatment of mild-to-moderate COVID-19 within 5 days of symptom onset :
+- Trial C4671005 (EPIC-HR) enrolled subjects who were at high risk for progression to severe disease.
+- Trial C4671002 (EPIC-SR) enrolled subjects who were at standard risk for progression to severe disease (previously unvaccinated subjects at standard risk or fully vaccinated subjects with at least 1 risk factor for progression to severe disease).
+Adverse reactions were those reported while subjects were on study medication and through 28 days after the last dose of study treatment.
+In Trial C4671005 (EPIC-HR), 1,038 subjects received PAXLOVID and 1,053 subjects received placebo. The most common adverse reactions (≥1% incidence in the PAXLOVID group and occurring at a greater frequency than in the placebo group) were dysgeusia (5% and <1%, respectively) and diarrhea (3% and 2%, respectively).
+Among vaccinated or unvaccinated subjects at standard risk or fully vaccinated subjects with at least 1 risk factor for progression to severe disease in Trial C4671002 (EPIC-SR), 540 subjects received PAXLOVID and 528 subjects received placebo. The adverse reactions observed were consistent with those observed in EPIC-HR.
+Trial C4671028 (EPIC-SRI) was a Phase 1, open-label trial that evaluated the effects of severe renal impairment on the pharmacokinetics, safety, and tolerability of PAXLOVID in non-hospitalized adult participants with COVID-19 and severe renal impairment. A total of 15 subjects with severe renal impairment were enrolled in this trial, with 12 subjects receiving intermittent hemodialysis and 3 subjects not on hemodialysis. Subjects received nirmatrelvir/ritonavir 300 mg/100 mg once on Day 1 followed by nirmatrelvir/ritonavir 150 mg/100 mg once daily from Days 2-5. The safety profile of PAXLOVID in subjects with severe renal impairment, including those requiring hemodialysis, was consistent with the safety profile observed in the Phase 2/3 randomized, placebo-controlled trials.
+Emergency Use Authorization Experience in Subjects with COVID-19
+The following adverse reactions have been identified during use of PAXLOVID under Emergency Use Authorization.
+Immune System Disorders: Anaphylaxis, hypersensitivity reactions
+Skin and Subcutaneous Tissue Disorders: Toxic epidermal necrolysis, Stevens-Johnson syndrome
+Nervous System Disorders: Headache
+Vascular Disorders: Hypertension
+Gastrointestinal Disorders: Abdominal pain, nausea, vomiting
+General Disorders and Administration Site Conditions: Malaise
+=== PASSAGE_0019 ===
+7.1	Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID with drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or OATP1B1 may result in increased plasma concentrations of such drugs and increase the risk of adverse events. Co-administration of PAXLOVID with drugs highly dependent on CYP3A for clearance and for which elevated plasma concentrations are associated with serious and/or life-threatening events is contraindicated . Co-administration with other CYP3A substrates may require a dose adjustment or additional monitoring as shown in Table 2.
+=== PASSAGE_0020 ===
+7.2	Potential for Other Drugs to Affect PAXLOVID
+Nirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A may decrease nirmatrelvir and ritonavir plasma concentrations and reduce PAXLOVID therapeutic effect .
+[?2004hroot@4b1b7b4fd079:/workspace# cat << 'EOF' > /workspace/generate_answers.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> labels = {}
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         labels[data['drug_name']] = data
+[?2004l[?2004h> 
+[?2004l[?2004h> questions = []
+[?2004l[?2004h> with open('/workspace/data/public/questions.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         questions.append(json.loads(line))
+[?2004l[?2004h> 
+[?2004l[?2004h> print("Loaded", len(labels), "labels and", len(questions), "questions.")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@4b1b7b4fd079:/workspace# python3 /workspace/generate_answers.py
+[?2004lLoaded 4 labels and 10 questions.
+[?2004hroot@4b1b7b4fd079:/workspace# cat << 'EOF' > /workspace/build_answers.py
+[?2004l[?2004h> import json
+[?2004lx, ibrutinib[?2004h> 
+[?2004l[?2004h> # Let's define the answers for each QID
+[?2004l[?2004h> 
+[?2004l[?2004h> # Paxlovid set_id: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+[?2004l[?2004h> # Lopinavir-Ritonavir set_id: 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85
+[?2004l[?2004h> # 12HR Allergy Relief set_id: ea5d0e55-2191-4094-b082-24b317f95752
+[?2004l[?2004h> # Acamprosate Calcium set_id: ae6e79c0-a307-4888-b647-1b7be4cb9127
+[?2004l61232a",
+            "passage_id": "PASSAG[?2004h> 
+[?2004l[?2004h> answers_map = {}
+[?2004l,
+         [?2004h> 
+[?2004l [?2004h> # 1. b2531657ba5c7a78 (Paxlovid, factual)
+[?2004l[?2004h> answers_map["b2531657ba5c7a78"] = {
+[?2004l[?2004h>     "qid": "b2531657ba5c7a78",
+[?2004l[?2004h>     "status": "ANSWERED",
+[?2004l[?2004h>     "answer": "PAXLOVID is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp, and OATP1B1. Co-administration of PAXLOVID with drugs primarily metabolized by CYP3A and CYP2D6 or transported by P-gp or OATP1B1 can significantly increase their plasma concentrations and the risk of serious, life-threatening, or fatal adverse events. Additionally, co-administration of PAXLOVID with strong CYP3A inducers is contraindicated because it can significantly reduce plasma concentrations of nirmatrelvir or ritonavir, potentially leading to a loss of virologic response and development of resistance.",
+[?2004l[?2004h>     "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0000",
+[?2004l[?2004h>             "section": "WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID",
+[?2004l of efficacy and [?2004h>             "supporting_quote": "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events"
+[?2004l[?2004h>         },
+[?2004l
+[?2004h>         {
+[?2004l[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0012",
+[?2004lRACTIONS WITH PAXL[?2004h>             "section": "4 CONTRAINDICATIONS",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers"
+[?2004l[?2004h>         },
+[?2004l2[?2004h>         {
+[?2004l[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l"[?2004h>             "passage_id": "PASSAGE_0019",
+[?2004lfect Other[?2004h>             "section": "7.1 Potential for PAXLOVID to Affect Other Drugs",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID with drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or OATP1B1 may result in increased plasma concentrations of such drugs and increase the risk of adverse events."
+[?2004l[?2004h>         }
+[?2004l[?2004h>     ],
+[?2004l[?2004h>     "structured_fields": {}
+[?2004lo[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 2. 6f12607a1ba14dd5 (Paxlovid, factual)
+[?2004l[?2004h> answers_map["6f12607a1ba14dd5"] = {
+[?2004l[?2004h>     "qid": "6f12607a1ba14dd5",
+[?2004lrenone, ivab[?2004h>     "status": "ANSWERED",
+[?2004l,[?2004h>     "answer": "Medications that should be avoided or are contraindicated with PAXLOVID include: alpha 1-adrenoreceptor antagonists (alfuzosin), antianginals (ranolazine), antiarrhythmics (amiodarone, dronedarone, flecainide, propafenone, quinidine), anti-gout agents (colchicine in patients with renal and/or hepatic impairment), antipsychotics (lurasidone, pimozide), benign prostatic hyperplasia agents (silodosin), cardiovascular agents (eplerenone, ivabradine), ergot derivatives (dihydroergotamine, ergotamine, methylergonovine), HMG-CoA reductase inhibitors (lovastatin, simvastatin), immunosuppressants (voclosporin), microsomal triglyceride transfer protein inhibitors (lomitapide), migraine medications (eletriptan, ubrogepant), mineralocorticoid receptor antagonists (finerenone), opioid antagonists (naloxegol), PDE5 inhibitors (sildenafil [Revatio] for pulmonary arterial hypertension), sedative/hypnotics (triazolam, oral midazolam), serotonin receptor 1A agonist/serotonin receptor 2A antagonists (flibanserin), and vasopressin receptor antagonists (tolvaptan). Strong CYP3A inducers to be avoided include apalutamide, enzalutamide, carbamazepine, phenobarbital, primidone, phenytoin, rifampin, rifapentine, lumacaftor/ivacaftor, and St. John\u0027s Wort. Other medications to avoid concomitant use with include tamsulosin, encorafenib, ivosidenib, neratinib, venetoclax, ibrutinib, rivaroxaban, voriconazole, aliskiren, ticagrelor, vorapaxar, glecaprevir/pibrentasvir, everolimus, sirolimus, salmeterol, rimegepant, suvorexant, and tadalafil (for PAH).",
+[?2004l[?2004h>     "citations": [
+[?2004lvi[?2004h>         {
+[?2004l). [?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0012",
+[?2004lin c[?2004h>             "section": "4 CONTRAINDICATIONS",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers"
+[?2004lR[?2004h>         }
+[?2004l[?2004h>     ],
+[?2004l[?2004h>     "structured_fields": {}
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 3. mixed-2a90a3df19df68 (Paxlovid, factual)
+[?2004l[?2004h> answers_map["mixed-2a90a3df19df68"] = {
+[?2004l[?2004h>     "qid": "mixed-2a90a3df19df68",
+[?2004l[?2004h>     "status": "ANSWERED",
+[?2004l[?2004h>     "answer": "PAXLOVID contains ritonavir, which is a strong CYP3A inhibitor. This can result in increased plasma concentrations of concomitant medications that are primarily metabolized by CYP3A, potentially leading to serious, life-threatening, or fatal adverse events. PAXLOVID is contraindicated with drugs highly dependent on CYP3A for clearance and with strong CYP3A inducers that can significantly lower PAXLOVID plasma levels and lead to loss of efficacy and viral resistance. It also inhibits CYP2D6, P-gp, and OATP1B1, which can increase exposure to drugs metabolized or transported by these pathways.",
+[?2004l[?2004h>     "citations": [
+[?2004lt[?2004h>         {
+[?2004le": "oral"[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0000",
+[?2004l[?2004h>             "section": "WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events"
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l00[?2004h>             "passage_id": "PASSAGE_0019",
+[?2004l(5 mL) tw[?2004h>             "section": "7.1 Potential for PAXLOVID to Affect Other Drugs",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1."
+[?2004l[?2004h>         }
+[?2004ls":[?2004h>     ],
+[?2004l
+    [?2004h>     "structured_fields": {}
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 4. mixed-7c14643ec4356a (Paxlovid, factual)
+[?2004l[?2004h> answers_map["mixed-7c14643ec4356a"] = {
+[?2004l[?2004h>     "qid": "mixed-7c14643ec4356a",
+[?2004l[?2004h>     "status": "ANSWERED",
+[?2004l[?2004h>     "answer": "Medications contraindicated and to be avoided with PAXLOVID include: alfuzosin, ranolazine, amiodarone, dronedarone, flecainide, propafenone, quinidine, colchicine (in renal/hepatic impairment), lurasidone, pimozide, silodosin, eplerenone, ivabradine, dihydroergotamine, ergotamine, methylergonovine, lovastatin, simvastatin, voclosporin, lomitapide, eletriptan, ubrogepant, finerenone, naloxegol, sildenafil (Revatio for PAH), triazolam, oral midazolam, flibanserin, and tolvaptan. Strong CYP3A inducers such as apalutamide, enzalutamide, carbamazepine, phenobarbital, primidone, phenytoin, rifampin, rifapentine, lumacaftor/ivacaftor, and St. John\u0027s Wort are also contraindicated. Concomitant use of other drugs like tamsulosin, encorafenib, ivosidenib, neratinib, venetoclax, ibrutinib, rivaroxaban, voriconazole, aliskiren, ticagrelor, vorapaxar, glecaprevir/pibrentasvir, everolimus, sirolimus, salmeterol, rimegepant, suvorexant, and tadalafil (for PAH) should also be avoided.",
+[?2004l[?2004h>     "citations": [
+[?2004l[?2004h>         {
+[?2004lnear-miss-[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0012",
+[?2004l[?2004h>             "section": "4 CONTRAINDICATIONS",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers"
+[?2004l[?2004h>         }
+[?2004l[?2004h>     ],
+[?2004l [?2004h>     "structured_fields": {}
+[?2004l[?2004h> }
+[?2004l40[?2004h> 
+[?2004l[?2004h> # 5. daef650b92e56473 (Lopinavir-Ritonavir, numeric)
+[?2004lS[?2004h> answers_map["daef650b92e56473"] = {
+[?2004lW[?2004h>     "qid": "daef650b92e56473",
+[?2004l"supporti[?2004h>     "status": "ANSWERED",
+[?2004l[?2004h>     "answer": "Lopinavir-Ritonavir oral solution must be administered with food. In adults, it can be given in a once-daily regimen of 800 mg lopinavir / 200 mg ritonavir (10 mL) or a twice-daily regimen of 400 mg lopinavir / 100 mg ritonavir (5 mL). Once-daily dosing is not recommended in pediatric patients, pregnant women, or patients taking certain concomitant medications. The maximum recommended daily adult dose is 800 mg lopinavir / 200 mg ritonavir (10 mL).",
+[?2004l[?2004h>     "citations": [
+[?2004l[?2004h>         {
+[?2004ld_topic": [?2004h>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004ls-[?2004h>             "passage_id": "PASSAGE_0001",
+[?2004l[?2004h>             "section": "2.1 General Administration Recommendations",
+[?2004l[?2004h>             "supporting_quote": "Lopinavir and ritonavir oral solution must be taken with food."
+[?2004lss[?2004h>         },
+[?2004les dosage a[?2004h>         {
+[?2004l[?2004h>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0003",
+[?2004lag[?2004h>             "section": "2.3 Dosage Recommendations in Adults",
+[?2004l[?2004h>             "supporting_quote": "Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2."
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004lae6e79c0-a[?2004h>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0005",
+[?2004l[?2004h>             "section": "Recommended Dosage",
+[?2004l   [?2004h>             "supporting_quote": "80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily"
+[?2004l[?2004h>         }
+[?2004l[?2004h>     ],
+[?2004l[?2004h>     "structured_fields": {
+[?2004l [?2004h>         "dose": "400/100",
+[?2004lt[?2004h>         "unit": "mg",
+[?2004l[?2004h>         "route": "oral",
+[?2004l[?2004h>         "frequency": "twice daily",
+[?2004l[?2004h>         "population": "adults",
+[?2004l[?2004h>         "max_daily_dose": "800/200 mg",
+[?2004l[?2004h>         "citation_passages": ["PASSAGE_0001", "PASSAGE_0003", "PASSAGE_0005"]
+[?2004l[?2004h>     }
+[?2004l[?2004h> }
+[?2004lE_[?2004h> 
+[?2004l0[?2004h> # 6. a0576a26f2a2eeac (Lopinavir-Ritonavir, numeric)
+[?2004l[?2004h> answers_map["a0576a26f2a2eeac"] = {
+[?2004lote": "Aca[?2004h>     "qid": "a0576a26f2a2eeac",
+[?2004lcontraindic[?2004h>     "status": "ANSWERED",
+[?2004lseve[?2004h>     "answer": "The recommended dosage regimen of Lopinavir-Ritonavir in adults is either 800 mg lopinavir / 200 mg ritonavir (10 mL) once daily or 400 mg lopinavir / 100 mg ritonavir (5 mL) twice daily, administered with food. Once-daily dosing is not recommended in pregnant patients, pediatric patients, or in combination with certain CYP3A inducers. The maximum daily adult dose is 800 mg lopinavir / 200 mg ritonavir.",
+[?2004l[?2004h>     "citations": [
+[?2004litor.[?2004h>         {
+[?2004l Co-admini[?2004h>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0001",
+[?2004lelevated [?2004h>             "section": "2.1 General Administration Recommendations",
+[?2004l[?2004h>             "supporting_quote": "Lopinavir and ritonavir oral solution must be taken with food."
+[?2004lcers is cont[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l loss [?2004h>             "passage_id": "PASSAGE_0003",
+[?2004l[?2004h>             "section": "2.3 Dosage Recommendations in Adults",
+[?2004l[?2004h>             "supporting_quote": "Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2."
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0005",
+[?2004l[?2004h>             "section": "Recommended Dosage",
+[?2004l[?2004h>             "supporting_quote": "80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily"
+[?2004l[?2004h>         }
+[?2004lead to gre[?2004h>     ],
+[?2004l[?2004h>     "structured_fields": {
+[?2004l[?2004h>         "dose": "400/100",
+[?2004l[?2004h>         "unit": "mg",
+[?2004l[?2004h>         "route": "oral",
+[?2004l[?2004h>         "frequency": "twice daily",
+[?2004l    {
+     [?2004h>         "population": "adults",
+[?2004l[?2004h>         "max_daily_dose": "800/200 mg",
+[?2004l[?2004h>         "citation_passages": ["PASSAGE_0001", "PASSAGE_0003", "PASSAGE_0005"]
+[?2004l[?2004h>     }
+[?2004l[?2004h> }
+[?2004lec[?2004h> 
+[?2004l[?2004h> # 7. near-miss-04f3afa658fdef (12HR Allergy Relief, refusal)
+[?2004l[?2004h> answers_map["near-miss-04f3afa658fdef"] = {
+[?2004ls[?2004h>     "qid": "near-miss-04f3afa658fdef",
+[?2004l[?2004h>     "status": "NOT_FOUND",
+[?2004l OAT[?2004h>     "answer": "The 12HR Allergy Relief label discusses warnings, including warnings about allergic reactions and kidney disease, but it does not provide any supported recommendation for a pharmacogenomic testing requirement.",
+[?2004l[?2004h>     "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "ea5d0e55-2191-4094-b082-24b317f95752",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0002",
+[?2004l[?2004h>             "section": "Warnings",
+[?2004l[?2004h>             "supporting_quote": "Ask a doctor before use if you have kidney disease. Your doctor should determine if you need a different dose."
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "ea5d0e55-2191-4094-b082-24b317f95752",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0001",
+[?2004l[?2004h>             "section": "Warnings",
+[?2004l[?2004h>             "supporting_quote": "Do not use if you have ever had an allergic reaction to this product or any of its ingredients."
+[?2004l[?2004h>         }
+[?2004l[?2004h>     ],
+[?2004l[?2004h>     "structured_fields": {
+[?2004l[?2004h>         "searched_topic": "warnings",
+[?2004l[?2004h>         "unsupported_topic": "pharmacogenomic testing requirement"
+[?2004l[?2004h>     }
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 8. near-miss-0c6ec72416151f (Acamprosate Calcium, refusal)
+[?2004l[?2004h> answers_map["near-miss-0c6ec72416151f"] = {
+[?2004l[?2004h>     "qid": "near-miss-0c6ec72416151f",
+[?2004l[?2004h>     "status": "NOT_FOUND",
+[?2004l[?2004h>     "answer": "The Acamprosate Calcium label discusses dosage adjustment in moderate renal impairment and contraindication in severe renal impairment, and mentions that no dosage adjustment is recommended in mild to moderate hepatic impairment. However, it does not provide any supported recommendation for patients with severe hepatic impairment.",
+[?2004l[?2004h>     "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0044",
+[?2004l[?2004h>             "section": "12.3 Pharmacokinetics - Hepatic Impairment",
+[?2004l[?2004h>             "supporting_quote": "Acamprosate is not metabolized by the liver and the pharmacokinetics of acamprosate calcium are not altered in patients with mild to moderate hepatic impairment (groups A and B of the Child-Pugh classification). No adjustment of dosage is recommended in such patients."
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0035",
+[?2004l[?2004h>             "section": "8.6 Renal Impairment",
+[?2004l[?2004h>             "supporting_quote": "Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of <=30 mL/min) ."
+[?2004l[?2004h>         }
+[?2004l[?2004h>     ],
+[?2004l[?2004h>     "structured_fields": {
+[?2004l[?2004h>         "searched_topic": "renal impairment",
+[?2004l[?2004h>         "unsupported_topic": "severe hepatic impairment"
+[?2004l[?2004h>     }
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 9. mixed-eead76662cb6bf (Paxlovid, multihop)
+[?2004l[?2004h> answers_map["mixed-eead76662cb6bf"] = {
+[?2004l[?2004h>     "qid": "mixed-eead76662cb6bf",
+[?2004l[?2004h>     "status": "ANSWERED",
+[?2004l[?2004h>     "answer": "PAXLOVID contains ritonavir, which is a strong CYP3A inhibitor. Co-administration of PAXLOVID with drugs that are highly dependent on CYP3A for clearance and for which elevated plasma concentrations are associated with serious and/or life-threatening events is contraindicated. In addition, co-administration with strong CYP3A inducers is contraindicated as they can dramatically lower PAXLOVID plasma levels, leading to loss of therapeutic effect and potential viral resistance. PAXLOVID also inhibits CYP2D6, P-gp, and OATP1B1, which can lead to increased exposure of co-administered drugs metabolized or transported via these pathways.",
+[?2004l[?2004h>     "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0000",
+[?2004l[?2004h>             "section": "WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events"
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0019",
+[?2004l[?2004h>             "section": "7.1 Potential for PAXLOVID to Affect Other Drugs",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID with drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or OATP1B1 may result in increased plasma concentrations of such drugs and increase the risk of adverse events."
+[?2004l[?2004h>         }
+[?2004l[?2004h>     ],
+[?2004l[?2004h>     "structured_fields": {}
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 10. mixed-97331106c3870d (Paxlovid, multihop)
+[?2004l[?2004h> answers_map["mixed-97331106c3870d"] = {
+[?2004l[?2004h>     "qid": "mixed-97331106c3870d",
+[?2004l[?2004h>     "status": "ANSWERED",
+[?2004l[?2004h>     "answer": "Medications contraindicated or to be avoided with PAXLOVID include: alfuzosin, ranolazine, amiodarone, dronedarone, flecainide, propafenone, quinidine, colchicine (in renal or hepatic impairment), lurasidone, pimozide, silodosin, eplerenone, ivabradine, dihydroergotamine, ergotamine, methylergonovine, lovastatin, simvastatin, voclosporin, lomitapide, eletriptan, ubrogepant, finerenone, naloxegol, sildenafil (Revatio for PAH), triazolam, oral midazolam, flibanserin, and tolvaptan. Strong CYP3A inducers like apalutamide, enzalutamide, carbamazepine, phenobarbital, primidone, phenytoin, rifampin, rifapentine, lumacaftor/ivacaftor, and St. John\u0027s Wort are also contraindicated. Other medications for which concomitant use should be avoided include tamsulosin, encorafenib, ivosidenib, neratinib, venetoclax, ibrutinib, rivaroxaban, voriconazole, aliskiren, ticagrelor, vorapaxar, glecaprevir/pibrentasvir, everolimus, sirolimus, salmeterol, rimegepant, suvorexant, and tadalafil (for PAH).",
+[?2004l[?2004h>     "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>             "passage_id": "PASSAGE_0012",
+[?2004l[?2004h>             "section": "4 CONTRAINDICATIONS",
+[?2004l[?2004h>             "supporting_quote": "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers"
+[?2004l[?2004h>         }
+[?2004l[?2004h>     ],
+[?2004l[?2004h>     "structured_fields": {}
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # Let\u0027s build the final list of answers in the exact order of questions.jsonl
+[?2004l[?2004h> final_answers = []
+[?2004l[?2004h> with open('/workspace/data/public/questions.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         q = json.loads(line)
+[?2004l[?2004h>         qid = q['qid']
+[?2004l[?2004h>         if qid in answers_map:
+[?2004l[?2004h>             final_answers.append(answers_map[qid])
+[?2004l[?2004h>         else:
+[?2004l[?2004h>             print("WARNING: missing QID", qid)
+[?2004l[?2004h> 
+[?2004l[?2004h> output_data = {"answers": final_answers}
+[?2004l[?2004h> with open('/workspace/answers.json', 'w') as f:
+[?2004l[?2004h>     json.dump(output_data, f, indent=2)
+[?2004l[?2004h> 
+[?2004l[?2004h> print("Wrote answers.json with", len(final_answers), "answers.")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@4b1b7b4fd079:/workspace# python3 /workspace/build_answers.py
+[?2004lWrote answers.json with 10 answers.
+[?2004hroot@4b1b7b4fd079:/workspace# python3 -c '
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> with open("/workspace/data/public/questions.jsonl") as f:
+[?2004l[?2004h>     questions = [json.loads(line) for line in f]
+[?2004l[?2004h> 
+[?2004l[?2004h> with open("/workspace/answers.json") as f:
+[?2004l[?2004h>     answers_data = json.load(f)
+[?2004l[?2004h> 
+[?2004l[?2004h> answers = answers_data["answers"]
+[?2004l[?2004h> print("Number of answers:", len(answers))
+[?2004l[?2004h> assert len(answers) == len(questions), f"Expected {len(questions)} answers, got {len(answers)}"
+[?2004l[?2004h> 
+[?2004l[?2004h> # Map by qid
+[?2004l[?2004h> ans_dict = {a["qid"]: a for a in answers}
+[?2004l[?2004h> 
+[?2004l[?2004h> for q in questions:
+[?2004l[?2004h>     qid = q["qid"]
+[?2004l[?2004h>     print(f"Validating QID: {qid} ({q["task_type"]})")
+[?2004l[?2004h>     assert qid in ans_dict, f"Missing QID {qid}"
+[?2004l[?2004h>     a = ans_dict[qid]
+[?2004l[?2004h>     
+[?2004l[?2004h>     # Check required fields
+[?2004l[?2004h>     for field in q["required_output_fields"]:
+[?2004l[?2004h>         # Check nested structured fields
+[?2004l[?2004h>         if field.startswith("structured_fields."):
+[?2004l[?2004h>             subfield = field.split(".")[1]
+[?2004l[?2004h>             assert "structured_fields" in a, f"Missing structured_fields in answer for {qid}"
+[?2004l[?2004h>             assert subfield in a["structured_fields"], f"Missing {subfield} in structured_fields for {qid}"
+[?2004l[?2004h>         else:
+[?2004l[?2004h>             assert field in a, f"Missing field {field} in answer for {qid}"
+[?2004l[?2004h>             
+[?2004l[?2004h>     # Check citations
+[?2004l[?2004h>     assert "citations" in a, f"Missing citations for {qid}"
+[?2004l[?2004h>     for cit in a["citations"]:
+[?2004l[?2004h>         assert "set_id" in cit, f"Missing set_id in citation for {qid}"
+[?2004l[?2004h>         assert "passage_id" in cit, f"Missing passage_id in citation for {qid}"
+[?2004l[?2004h>         assert "section" in cit, f"Missing section in citation for {qid}"
+[?2004l[?2004h>         assert "supporting_quote" in cit, f"Missing supporting_quote in citation for {qid}"
+[?2004l[?2004h>         assert cit["set_id"] == q["set_id"], f"Mismatched set_id in citation for {qid}"
+[?2004l[?2004h> 
+[?2004l[?2004h> print("All validations passed successfully!")
+[?2004l[?2004h> '
+[?2004lNumber of answers: 10
+Validating QID: b2531657ba5c7a78 (factual)
+Validating QID: 6f12607a1ba14dd5 (factual)
+Validating QID: mixed-2a90a3df19df68 (factual)
+Validating QID: mixed-7c14643ec4356a (factual)
+Validating QID: daef650b92e56473 (numeric)
+Validating QID: a0576a26f2a2eeac (numeric)
+Validating QID: near-miss-04f3afa658fdef (refusal)
+Validating QID: near-miss-0c6ec72416151f (refusal)
+Validating QID: mixed-eead76662cb6bf (multihop)
+Validating QID: mixed-97331106c3870d (multihop)
+All validations passed successfully!
+[?2004hroot@4b1b7b4fd079:/workspace# 

@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl');
+> for line in f:
+>     obj = json.loads(line)
+>     raw = obj['label_raw']
+>     chunks = obj['chunks']
+>     for i, chunk in enumerate(chunks):
+>         pid = f'PASSAGE_{i:04d}'
+>         tag = f'||{pid}||'
+>         if tag not in raw:
+>             print('Error:', pid, 'not in raw for', obj['drug_name'])
+>             break
+>     else:
+>         print('Success for', obj['drug_name'])
+> "
+Success for Paxlovid
+Success for Lopinavir-Ritonavir
+root@b9fc21343844:/workspace#

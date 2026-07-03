@@ -1,0 +1,10 @@
+{
+  "analysis": "This is great. Let's do a more general search. Let's list the questions we have and address them one by one:\n\n1. `b2531657ba5c7a78`: \"What important drug interactions are noted for Paxlovid?\"\nLet's see what PASSAGE_0000, PASSAGE_0013, PASSAGE_0021, and PASSAGE_0173 say. Let's print them fully or look at them.\nLet's print PASSAGE_0000, PASSAGE_0013, PASSAGE_0021, and PASSAGE_0173.",
+  "plan": "Print the contents of PASSAGE_0000, PASSAGE_0013, PASSAGE_0021, and PASSAGE_0173.",
+  "commands": [
+    {
+      "keystrokes": "print(label_data['chunks'][0])\nprint('='*40)\nprint(label_data['chunks'][13])\nprint('='*40)\nprint(label_data['chunks'][21])\n",
+      "duration": 0.5
+    }
+  ]
+}

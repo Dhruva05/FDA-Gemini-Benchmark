@@ -1,0 +1,39 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+>             lop = data
+>             break
+> for idx, chunk in enumerate(lop['chunks']):
+>     if chunk.startswith('5.') or 'WARNINGS AND PRECAUTIONS' in chunk:
+>         print(f'PASSAGE_{idx:04d}: {repr(chunk[:150])}')
+> "
+PASSAGE_0014: '5.1 Risk of Serious Adverse Reactions Due to Drug Interactions\nInitiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving m
+edicat'
+PASSAGE_0015: '5.2 Toxicity in Preterm Neonates\nLopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene gl
+ycol, '
+PASSAGE_0016: '5.3 Pancreatitis\nPancreatitis has been observed in patients receiving lopinavir\xa0and ritonavir therapy, including those who developed marked t
+riglyceri'
+PASSAGE_0017: '5.4 Hepatotoxicity\nPatients with underlying hepatitis B or C or marked elevations in transaminase prior to treatment may be at increased risk fo
+r deve'
+PASSAGE_0018: '5.5 QT Interval Prolongation\nPostmarketing cases of QT interval prolongation and torsade de pointes have been reported although causality of lop
+inavir'
+PASSAGE_0019: '5.6 PR Interval Prolongation\nLopinavir\xa0and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atrioventricu
+lar block'
+PASSAGE_0020: '5.7 Diabetes Mellitus/Hyperglycemia\nNew onset diabetes mellitus, exacerbation of pre-existing diabetes mellitus, and hyperglycemia have been rep
+orted '
+PASSAGE_0021: '5.8 Immune Reconstitution Syndrome\nImmune reconstitution syndrome has been reported in patients treated with combination antiretroviral therapy,
+ inclu'
+PASSAGE_0022: '5.9 Lipid Elevations\nTreatment with lopinavir\xa0and ritonavir has resulted in large increases in the concentration of total cholesterol and tri
+glyceride'
+PASSAGE_0023: '5.10 Fat Redistribution\nRedistribution/accumulation of body fat including central obesity, dorsocervical fat enlargement (buffalo hump), periphe
+ral wa'
+PASSAGE_0024: '5.11 Patients with Hemophilia\nIncreased bleeding, including spontaneous skin hematomas and hemarthrosis have been reported in patients with hemo
+philia'
+PASSAGE_0025: '5.12 Resistance/Cross-resistance\nBecause the potential for HIV cross-resistance among protease inhibitors has not been fully explored in lopinav
+ir\xa0and'
+root@23e2e6a1b566:/workspace#

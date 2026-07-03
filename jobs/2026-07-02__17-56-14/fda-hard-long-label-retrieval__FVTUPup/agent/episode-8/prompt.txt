@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>     for k, v in data.items():
+>         if k != 'label_raw' and k != 'chunks':
+>             print(k, repr(v)[:100])
+>         elif k == 'chunks':
+>             print(k, type(v), len(v))
+> "
+chunks <class 'list'> 209
+drug_id 'paxlovid'
+drug_name 'Paxlovid'
+set_id '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a'
+root@2635f56baf2a:/workspace#

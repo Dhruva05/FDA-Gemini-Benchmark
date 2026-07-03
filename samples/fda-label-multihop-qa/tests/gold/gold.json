@@ -1,0 +1,256 @@
+{
+  "questions": [
+    {
+      "answer": "LAMPIT may cause fetal harm, including reduced maternal weight gain, abortions, and an increased incidence of fetal skeletal malformations, particularly when administered at doses around the maximum recommended human dose (MRHD).",
+      "citations": [
+        "8.1",
+        "8.1"
+      ],
+      "context": [
+        {
+          "section_label": "8.1",
+          "section_title": "Animal Data",
+          "text": "In an embryo-fetal toxicity study in pregnant rats, 15, 30, and 60 mg/kg/day nifurtimox were administered orally during the period of organogenesis (GD 6 to GD 17). Maternal body weights, body weight gain, and food consumption were reduced in the 60 mg/kg/day dose group. Treatment with nifurtimox did not produce fetal toxicity and no nifurtimox-related fetal malformations were observed. No maternal toxicity was observed at 30 mg/kg/day nifurtimox (approximately 0.5 times the MRHD based on body surface area comparison) and no adverse fetal effects were observed at 60 mg/kg/day nifurtimox (approximately equivalent to the MRHD based on body surface area comparison).\nIn pregnant rabbits orally administered 5, 15, and 60 mg/kg/day nifurtimox during the period of organogenesis (GD 6 to GD 20), the high dose was associated with maternal toxicity including reduced body weights and food consumption, and abortions in 8/20 high-dose dams. The mean number of live fetuses/litter and the percent of live fetuses per total implantations per group were significantly lower in the mid- and high-dose groups compared to the control group. Nifurtimox administration was associated with increased fetal an"
+        },
+        {
+          "section_label": "8.1",
+          "section_title": "Risk Summary",
+          "text": "Based on animal studies, LAMPIT may cause fetal harm when administered to a pregnant woman. Published postmarketing reports on nifurtimox use during pregnancy are insufficient to inform a drug-associated risk of birth defects and miscarriage. There are risks to the fetus associated with Chagas disease .\nNifurtimox administered orally to pregnant rats, and rabbits during organogenesis was associated with reduced maternal body weights in rats, and abortions, reduced maternal weight gain, and reduced numbers of live fetuses in rabbits when nifurtimox was administered orally during organogenesis at doses approximately equal to the MRHD in rats and 2-times the MRHD in rabbits. An increased incidence of a fetal skeletal malformation (fusion of caudal vertebral bodies) occurred in rabbits at nifurtimox doses approximately 0.2 times the MRHD. In a pre-postnatal study, maternal body weights and fetal body weights of first-generation offspring were reduced at doses approximately equal to or 0.5 times the MRHD, respectively, and several male offspring in the nifurtimox treatment groups exhibited slightly small testes at doses \u22650.2 times the MRHD . Advise pregnant women of the potential risk t"
+        }
+      ],
+      "drug_name": "LAMPIT",
+      "question": "What risks should be communicated to pregnant women regarding the use of LAMPIT for Chagas disease treatment during organogenesis?",
+      "question_id": "1d735c9c9780ebea",
+      "question_type": "multihop",
+      "references": [
+        "Animal Data",
+        "Risk Summary"
+      ],
+      "set_id": "90d09714-a8b1-4696-8ada-f99dc54d0721"
+    },
+    {
+      "answer": "Caution should be exercised when administering Gastrografin to nursing mothers due to its excretion in breast milk, and specific dilutions must be used for young children to prevent dehydration and potential shock-like states.",
+      "citations": [
+        null,
+        null
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "WARNINGS",
+          "text": "Dehydration: Administration of hypertonic\nGastrografin solutions may lead to hypovolemia and hypotension due to fluid loss from the intestine. A 1 in 4.6 (1:4.6) dilution of Gastrografin yields an approximately isotonic 16.5 percent diatrizoate salts solution; less dilute solutions are hypertonic and may lead to intraluminal movement of fluid with resulting hypovolemia. In young or debilitated children and in elderly cachectic persons, the loss of plasma fluid may be sufficient to cause a shock-like state. If Gastrografin is used in infants and children (under 10 kg) or in dehydrated or debilitated patients, the solution must be prepared using the specific dilutions described in DOSAGE AND ADMINISTRATION. In debilitated patients and in patients with electrolyte imbalances, postprocedural monitoring of hydration, serum osmolarity, electrolytes and clinical status is essential. In pediatric or severely debilitated patients, the maintenance of an open intravenous fluid line for rehydration may be advisable should hypotension or shock supervene. Electrolyte disturbances must be corrected prior to the administration of any hypertonic Gastrografin solutions.\nAspiration: Aspiration of Gas"
+        },
+        {
+          "section_label": null,
+          "section_title": "Nursing Mothers",
+          "text": "Diatrizoate meglumine is excreted in breast milk following intravascular administration.\nBecause small amounts of enteral gastrointestinal radiopaque agents may be absorbed following oral or rectal administration, caution should be exercised when they are administered to a nursing woman."
+        }
+      ],
+      "drug_name": "Gastrografin",
+      "question": "What precautions should be taken when administering Gastrografin to nursing mothers and young children?",
+      "question_id": "3cdf0b5cec5c6d24",
+      "question_type": "multihop",
+      "references": [
+        "WARNINGS",
+        "Nursing Mothers"
+      ],
+      "set_id": "8c2340e4-2b42-45dc-8fac-9960e8172547"
+    },
+    {
+      "answer": "A nursing mother should consider discontinuing the drug or nursing, as Afeditab\u00ae CR can cause mild to moderate peripheral edema, which may complicate the assessment of her health and the health of her infant.",
+      "citations": [
+        null,
+        null
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "Peripheral Edema:",
+          "text": "Mild to moderate peripheral edema occurs in a dose-dependent manner with Afeditab\u00ae CR. The placebo subtracted rate is approximately 8% at 30 mg, 12% at 60 mg and 19% at 90 mg daily. This edema is a localized phenomenon, thought to be associated with vasodilation of dependent arterioles and small blood vessels and not due to left ventricular dysfunction or generalized fluid retention. With patients whose hypertension is complicated by congestive heart failure, care should be taken to differentiate this peripheral edema from the effects of increasing left ventricular dysfunction."
+        },
+        {
+          "section_label": null,
+          "section_title": "Nursing Mothers:",
+          "text": "Nifedipine is excreted in human milk. Therefore, a decision should be made to discontinue nursing or to discontinue the drug, taking into account the importance of the drug to the mother."
+        }
+      ],
+      "drug_name": "Afeditab",
+      "question": "What should a nursing mother consider when taking Afeditab\u00ae CR, given its potential for dose-dependent peripheral edema?",
+      "question_id": "b5e7075815e89dc0",
+      "question_type": "multihop",
+      "references": [
+        "Peripheral Edema:",
+        "Nursing Mothers:"
+      ],
+      "set_id": "323351d8-de18-4cd6-9497-c2d5e8666414"
+    },
+    {
+      "answer": "LAMPIT's pharmacokinetics may be altered in patients with End Stage Renal Disease, and its concomitant use with alcohol is contraindicated due to the potential for increased severity of undesirable effects.",
+      "citations": [
+        "8.6",
+        "7"
+      ],
+      "context": [
+        {
+          "section_label": "8.6",
+          "section_title": "8.6 Renal Impairment",
+          "text": "The effect of renal impairment on the pharmacokinetics of nifurtimox is unknown . Published literature suggests that blood concentrations of nifurtimox were increased in patients with End Stage Renal Disease (ESRD) requiring hemodialysis .\u00a0Administer LAMPIT under close medical supervision."
+        },
+        {
+          "section_label": "7",
+          "section_title": "7 DRUG INTERACTIONS",
+          "text": "Concomitant use of LAMPIT with alcohol\u00a0may increase the incidence and severity of undesirable effects similar to other nitrofurans and nitroheterocyclic compounds. LAMPIT is contraindicated in patients who consume alcohol during treatment ."
+        }
+      ],
+      "drug_name": "LAMPIT",
+      "question": "Why must LAMPIT be administered under close medical supervision in patients with End Stage Renal Disease who also consume alcohol?",
+      "question_id": "a5827467adc0fc81",
+      "question_type": "multihop",
+      "references": [
+        "8.6 Renal Impairment",
+        "7 DRUG INTERACTIONS"
+      ],
+      "set_id": "90d09714-a8b1-4696-8ada-f99dc54d0721"
+    },
+    {
+      "answer": "Thyroid function tests may be inaccurately affected for up to six months after the administration of iodinated agents like Gastrografin, which can precipitate a thyroid storm in hyperthyroid patients.",
+      "citations": [
+        null,
+        null
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "General",
+          "text": "Diagnostic procedures which involve the use of radiopaque contrast agents should be carried out under the direction of personnel with the prerequisite training and with a thorough knowledge of the particular procedure to be performed.\nAppropriate facilities should be available for coping with any complication of administration, as well as for treatment of reaction to the contrast medium .\nRectal administration of undiluted Gastrografin (Diatrizoate Meglumine and Diatrizoate Sodium\nSolution) in any patient, particularly with large doses and/or in those with overdistention, has been reported to be associated with mucosal irritation.\nCases of hyperthyroidism have been reported with the use of oral contrast media. Some of these patients reportedly had multinodular goiters which may have been responsible for the increased hormone synthesis in response to excess iodine.\nAdministration of an intravascular iodinated radiopaque diagnostic agent to a hyperthyroid patient precipitated thyroid storm; a similar situation could follow administration of oral preparations of iodides.\nTherefore, caution should be exercised when administering enteral gastrointestinal radiopaque agents to hyperthyroi"
+        },
+        {
+          "section_label": null,
+          "section_title": "Drug/Laboratory Test Interactions",
+          "text": "The results of protein bound iodine (PBI) and radioactive iodine uptake studies, which depend on iodine estimations, will not accurately reflect thyroid function for six months, and possibly as long as one year, following the administration of diagnostic enteral radiopaque media.\nThyroid function tests, if indicated, generally should be performed prior to the administration of any iodinated agent.\nHowever, thyroid function can be evaluated after use of these agents by using T3 resin uptake and total or free thyroxine (T4) assays which are not dependent on iodine estimations.\n\nSmall quantities of contrast medium in the intestinal tract may cause false low trypsin values when determined spectrophotometrically. Therefore, duodenal instillation should not precede pancreatic function tests involving spectrophotometric trypsin assays.\nAny test which might be affected by contrast media should be performed prior to administration of the contrast medium."
+        }
+      ],
+      "drug_name": "Gastrografin",
+      "question": "Why should thyroid function tests be performed before administering Gastrografin to patients with hyperthyroidism?",
+      "question_id": "acb65491fd5ede93",
+      "question_type": "multihop",
+      "references": [
+        "General",
+        "Drug/Laboratory Test Interactions"
+      ],
+      "set_id": "8c2340e4-2b42-45dc-8fac-9960e8172547"
+    },
+    {
+      "answer": "Careful monitoring of blood pressure is suggested during the initial administration and titration due to the risk of exacerbated hypotension from both Afeditab\u00ae CR and the antihypertensive medications.",
+      "citations": [
+        null,
+        null
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "General - Hypotension:",
+          "text": "Because nifedipine decreases peripheral vascular resistance, careful monitoring of blood pressure during the initial administration and titration of Afeditab\u00ae CR is suggested. Close observation is especially recommended for patients already taking medications that are known to lower blood pressure ."
+        },
+        {
+          "section_label": null,
+          "section_title": "Geriatric Use:",
+          "text": "Although small pharmacokinetic studies have identified an increased half-life and increased Cmax and AUC , clinical studies of nifedipine did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. Other reported clinical experience has not identified differences in responses between the elderly and younger patients. In general, dose selection for an elderly patient should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of decreased hepatic, renal, or cardiac function, and of concomitant disease or other drug therapy."
+        }
+      ],
+      "drug_name": "Afeditab",
+      "question": "What precautions should be taken when administering Afeditab\u00ae CR to elderly patients who are also on antihypertensive medications?",
+      "question_id": "7e378745d57dacec",
+      "question_type": "multihop",
+      "references": [
+        "General - Hypotension:",
+        "Geriatric Use:"
+      ],
+      "set_id": "323351d8-de18-4cd6-9497-c2d5e8666414"
+    },
+    {
+      "answer": "LAMPIT may precipitate acute attacks of porphyria, worsening symptoms such as dark urine and severe stomach pain, necessitating careful monitoring during treatment.",
+      "citations": [
+        "5.6",
+        "17"
+      ],
+      "context": [
+        {
+          "section_label": "5.6",
+          "section_title": "5.6 Porphyria",
+          "text": "Treatment with nitrofuran derivatives, such as LAMPIT, may precipitate acute attacks of porphyria. Administer LAMPIT tablets under close medical supervision in patients with porphyria."
+        },
+        {
+          "section_label": "17",
+          "section_title": "Patient Package Insert",
+          "text": "PATIENT INFORMATION\nLAMPIT\u00ae (LAM-pit)\n(nifurtimox)\ntablets, for oral use\nWhat is LAMPIT?\nLAMPIT is a prescription medicine used to treat Chagas disease caused by the parasite Trypanosoma cruzi in children less than 18 years of age weighing at least 5.5 pounds (2.5 kg).\nIt is not known if LAMPIT is safe and effective in children weighing less than 5.5 pounds (2.5 kg).\nDo not take LAMPIT if you:\n- are allergic to nifurtimox, or any of the ingredients in LAMPIT. See the end of this Patient Information leaflet for a complete list of ingredients in LAMPIT.\n- plan to drink alcohol during treatment with LAMPIT.\nBefore taking LAMPIT, tell your healthcare provider about all your medical conditions, including if you:\n- have a history of brain injury, seizures, mental health problems, or behavior changes.\n- have kidney problems or are on dialysis.\n- have liver problems.\n- have a genetic problem called porphyria. Taking LAMPIT can make your symptoms of porphyria including dark urine, severe stomach pain, muscle pain, tingling, numbness, mental changes or skin sensitivity to light worse.\n- are pregnant, plan to become pregnant, or think you may be pregnant. LAMPIT can harm your unborn baby.\nFor"
+        }
+      ],
+      "drug_name": "LAMPIT",
+      "question": "Why must LAMPIT be administered under close medical supervision in patients with porphyria despite being indicated for treating Chagas disease in children?",
+      "question_id": "58b99352bb4d2c8c",
+      "question_type": "multihop",
+      "references": [
+        "5.6 Porphyria",
+        "Patient Package Insert"
+      ],
+      "set_id": "90d09714-a8b1-4696-8ada-f99dc54d0721"
+    },
+    {
+      "answer": "Afeditab\u00ae CR is indicated for hypertension, and in patients with impaired ventricular function, it can lead to an increase in ejection fraction and a reduction in left ventricular filling pressure, enhancing its therapeutic effect.",
+      "citations": [
+        null,
+        null
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "INDICATION AND USAGE",
+          "text": "Afeditab\u00ae CR is indicated for the treatment of hypertension. It may be used alone or in combination with other antihypertensive agents."
+        },
+        {
+          "section_label": null,
+          "section_title": "Hemodynamics:",
+          "text": "Like other slow-channel blockers, nifedipine exerts a negative inotropic effect on isolated myocardial tissue. This is rarely, if ever, seen in intact animals or man, probably because of reflex responses to its vasodilating effects. In man, nifedipine decreases peripheral vascular resistance which leads to a fall in systolic and diastolic pressures, usually minimal in normotensive volunteers (less than 5 to 10 mm Hg systolic), but sometimes larger. With nifedipine extended-release tablets, these decreases in blood pressure are not accompanied by any significant change in heart rate. Hemodynamic studies of the immediate release nifedipine formulation in patients with normal ventricular function have generally found a small increase in cardiac index without major effects on ejection fraction, left ventricular end-diastolic pressure (LVEDP) or volume (LVEDV). In patients with impaired ventricular function, most acute studies have shown some increase in ejection fraction and reduction in left ventricular filling pressure."
+        }
+      ],
+      "drug_name": "Afeditab",
+      "question": "How does Afeditab\u00ae CR's indication for hypertension relate to its hemodynamic effects on patients with impaired ventricular function?",
+      "question_id": "3f905c7ce3d6b057",
+      "question_type": "multihop",
+      "references": [
+        "INDICATION AND USAGE",
+        "Hemodynamics:"
+      ],
+      "set_id": "323351d8-de18-4cd6-9497-c2d5e8666414"
+    }
+  ],
+  "seed": 20260701,
+  "source_data": {
+    "debug_subset": "qa_toy.jsonl",
+    "final_eval_inputs": [
+      "labels.jsonl",
+      "qa.jsonl"
+    ],
+    "private_field_policy": "Verifier-only QA scoring fields are not exposed to agents.",
+    "source_files": [
+      {
+        "description": "FDA drug-label documents with raw label text and chunked sections.",
+        "path": "labels.jsonl",
+        "role": "primary label corpus used to build public label files"
+      },
+      {
+        "description": "QA records with public question metadata and verifier-only scoring fields.",
+        "path": "qa.jsonl",
+        "role": "primary QA corpus used to select questions and private verifier scoring data"
+      },
+      {
+        "description": "small debug subset used for inspection and smoke testing the source format.",
+        "path": "qa_toy.jsonl",
+        "role": "debug subset only; not used for final sampled benchmark tasks"
+      }
+    ]
+  },
+  "task_name": "fda-label-multihop-qa",
+  "task_type": "multihop"
+}

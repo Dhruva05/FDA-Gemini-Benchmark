@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 364 (char 365) | Content preview: '{\n  "analysis": "The validation script loaded `/workspace/answers.json` successfully, verified that '...
+
+Please fix these issues and provide a proper JSON response.

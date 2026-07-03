@@ -1,0 +1,54 @@
+New Terminal Output:
+
+root@7ddc515b1a59:/workspace# python3 generate_answers.py
+Validating quotes...
+Checking QID: b2531657ba5c7a78
+  PASSAGE_0000 quote verified!
+  PASSAGE_0013 quote verified!
+  PASSAGE_0019 quote verified!
+  PASSAGE_0020 quote verified!
+Checking QID: 6f12607a1ba14dd5
+  PASSAGE_0012 quote verified!
+  PASSAGE_0023 quote verified!
+  PASSAGE_0031 quote verified!
+  PASSAGE_0038 quote verified!
+Checking QID: daef650b92e56473
+  PASSAGE_0001 quote verified!
+  PASSAGE_0002 quote verified!
+  PASSAGE_0159 quote verified!
+  PASSAGE_0187 quote verified!
+Checking QID: a0576a26f2a2eeac
+  PASSAGE_0003 quote verified!
+  PASSAGE_0004 quote verified!
+  PASSAGE_0005 quote verified!
+  PASSAGE_0006 quote verified!
+  PASSAGE_0007 quote verified!
+  PASSAGE_0012 quote verified!
+Checking QID: 9be5515bc3064979
+  PASSAGE_0014 quote verified!
+  PASSAGE_0015 quote verified!
+  PASSAGE_0016 quote verified!
+  PASSAGE_0017 quote verified!
+  PASSAGE_0018 quote verified!
+  PASSAGE_0019 quote verified!
+Checking QID: 18078efe9380c8dc
+  PASSAGE_0014 quote verified!
+  PASSAGE_0015 quote verified!
+  PASSAGE_0016 quote verified!
+  PASSAGE_0017 quote verified!
+  PASSAGE_0018 quote verified!
+  PASSAGE_0019 quote verified!
+Checking QID: fbab4114f66e2dda
+  PASSAGE_0000 quote verified!
+  PASSAGE_0013 quote verified!
+  PASSAGE_0014 quote verified!
+  PASSAGE_0015 quote verified!
+  PASSAGE_0016 quote verified!
+Checking QID: 2d63e0a82215867f
+  PASSAGE_0000 quote verified!
+  PASSAGE_0013 quote verified!
+  PASSAGE_0014 quote verified!
+  PASSAGE_0015 quote verified!
+  PASSAGE_0016 quote verified!
+Answers written to /workspace/answers.json successfully!
+root@7ddc515b1a59:/workspace#

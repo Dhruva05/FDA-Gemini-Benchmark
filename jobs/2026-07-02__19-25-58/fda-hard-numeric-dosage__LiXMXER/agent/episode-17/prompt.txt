@@ -1,0 +1,36 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > dump_chunks.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         drug_name = data['drug_name'].replace(',', '').replace(' ', '_')
+>         filename = f"{drug_name}_chunks.txt"
+>         with open(filename, 'w') as out:
+>             for i, chunk in enumerate(data['chunks'][:40]):
+>                 out.write(f"=== CHUNK {i} (PASSAGE_{i:04d}) ===\n")
+>                 out.write(chunk)
+>                 out.write("\n\n")
+>         print(f"Dumped {drug_name} chunks to {filename}")
+> EOF
+root@af996c5fe492:/workspace# python3 dump_chunks.py && ls -la
+Dumped Lopinavir-Ritonavir chunks to Lopinavir-Ritonavir_chunks.txt
+Dumped Emtricitabine_Rilpivirine_Tenofovir_Disoproxil_Fumarate chunks to Emtricitabine_Rilpivirine_Tenofovir_Disoproxil_Fumarate_chunks.txt
+Dumped CELECOXIB chunks to CELECOXIB_chunks.txt
+Dumped Lenalidomide chunks to Lenalidomide_chunks.txt
+total 148
+drwxr-xr-x 1 root root  4096 Jul  2 23:27 .
+drwxr-xr-x 1 root root  4096 Jul  2 23:26 ..
+-rw-r--r-- 1 root root 28116 Jul  2 23:27 CELECOXIB_chunks.txt
+-rw-r--r-- 1 root root 34810 Jul  2 23:27 Emtricitabine_Rilpivirine_Tenofovir_Disoproxil_Fumarate_chunks.txt
+-rw-r--r-- 1 root root 17571 Jul  2 23:27 Lenalidomide_chunks.txt
+-rw-r--r-- 1 root root 26215 Jul  2 23:27 Lopinavir-Ritonavir_chunks.txt
+drwxr-xr-x 3 root root  4096 Jul  2 20:40 data
+-rw-r--r-- 1 root root   530 Jul  2 23:27 dump_chunks.py
+-rw-r--r-- 1 root root   465 Jul  2 23:26 find_dosage_chunks.py
+-rw-r--r-- 1 root root   635 Jul  2 23:26 find_dosage_chunks_2.py
+-rw-r--r-- 1 root root   495 Jul  2 23:26 inspect_labels.py
+-rw-r--r-- 1 root root   326 Jul  2 23:26 print_lopinavir.py
+-rw-r--r-- 1 root root   223 Jul  2 23:26 search_chunks.py
+root@af996c5fe492:/workspace#

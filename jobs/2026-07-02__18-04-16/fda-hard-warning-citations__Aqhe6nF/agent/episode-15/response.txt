@@ -1,0 +1,10 @@
+{
+  "analysis": "We see PASSAGE_0019, PASSAGE_0020, and PASSAGE_0021. Let's look at PASSAGE_0013 and PASSAGE_0018 as well. Let's write a python script to print the full text of these chunks to read them carefully.",
+  "plan": "I will print the text of PASSAGE_0013, PASSAGE_0019, PASSAGE_0020, and PASSAGE_0021 from the Paxlovid label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    pax = json.loads(f.readline())\nfor idx in [13, 19, 20, 21]:\n    print(f'=== PASSAGE_{idx:04d} ===')\n    print(pax['chunks'][idx])\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 175 (char 176) | Content preview: '{\n  "analysis": "Okay, so there are no other files at all! This means we only have the files in `/wo'...
+
+Please fix these issues and provide a proper JSON response.

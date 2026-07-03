@@ -1,0 +1,79 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 search.py "adverse reactions"
+=== PASSAGE_0013 ===
+5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications
+metabolized by CYP3A in patients already receiving PAXLOVID, may increase pla...
+
+=== PASSAGE_0017 ===
+6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Hypersensitivity reactions...
+
+=== PASSAGE_0018 ===
+6.1     Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The s...
+
+=== PASSAGE_0037 ===
+↑ trazodone
+Adverse reactions of nausea, dizziness, hypotension, and syncope have been observed following co-administration of trazodone and ritonavir. A lower dose of traz
+odone should be considered. Refer to trazadone product label for further information....
+
+=== PASSAGE_0049 ===
+↑ quetiapine
+If co-administration is necessary, reduce quetiapine dose and monitor for quetiapine-associated adverse reactions. Refer to the quetiapine prescribing informati
+on for recommendations....
+
+=== PASSAGE_0050 ===
+↑ clozapine
+If co-administration is necessary, consider reducing the clozapine dose and monitor for adverse reactions....
+
+=== PASSAGE_0074 ===
+↑ cyclosporine↑ tacrolimus
+Avoid concomitant use of calcineurin inhibitors with PAXLOVID when close monitoring of immunosuppressant concentrations is not feasible. If co-administered, dos
+e adjustment of the immunosuppressant and close and regular monitoring for immunosuppressant concentrations and a...
+
+=== PASSAGE_0079 ===
+↑ lomitapide
+Co-administration contraindicated due to potential for hepatotoxicity and gastrointestinal adverse reactions ....
+
+=== PASSAGE_0080 ===
+↑ eletriptan
+Co-administration of eletriptan within at least 72 hours of PAXLOVID is contraindicated due to potential for serious adverse reactions including cardiovascular
+and cerebrovascular events ....
+
+=== PASSAGE_0081 ===
+↑ ubrogepant
+Co-administration of ubrogepant with PAXLOVID is contraindicated due to potential for serious adverse reactions ....
+
+=== PASSAGE_0083 ===
+↑ finerenone
+Co-administration contraindicated due to potential for serious adverse reactions including hyperkalemia, hypotension, and hyponatremia ....
+
+=== PASSAGE_0110 ===
+8.6 Renal Impairment
+Renal impairment increases nirmatrelvir exposure, which may increase the risk of PAXLOVID adverse reactions. No dosage adjustment is recommended in patients wit
+h mild renal impairment (eGFR ≥60 to <90 mL/min). Reduce the PAXLOVID dosage in patients with moderate renal impairment...
+
+root@2635f56baf2a:/workspace# python3 search.py "most common"
+=== PASSAGE_0013 ===
+5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications
+metabolized by CYP3A in patients already receiving PAXLOVID, may increase pla...
+
+=== PASSAGE_0018 ===
+6.1     Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The s...
+
+=== PASSAGE_0183 ===
+1 white ritonavir tablet together
+(Pink part of the blister card).
+- Do not remove your PAXLOVID tablets from the blister card before you are ready to take your dose.
+- If you are taking PAXLOVID tablets twice daily ( Figure A or Figure B ), take your first dose of PAXLOVID in the morning or at bedt...
+
+root@2635f56baf2a:/workspace#

@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a control character error. I will make sure not to include any literal control characters or unescaped newlines in the JSON strings.",
+  "plan": "I will run a python script to dump the passage IDs, lengths, and the first line of each passage for both Paxlovid and Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > dump_headers.py\nimport json\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        d = json.loads(line)\n        print(f\"==================== {d['drug_name']} ({d['set_id']}) ====================\")\n        for idx, chunk in enumerate(d['chunks']):\n            lines = chunk.strip().split('\\n')\n            header = lines[0] if lines else ''\n            print(f\"PASSAGE_{idx:04d}: {header[:100]}\")\nEOF\npython3 dump_headers.py > /tmp/headers.txt\ngrep -A 20 \"Paxlovid\" /tmp/headers.txt\n",
+      "duration": 1.0
+    }
+  ]
+}

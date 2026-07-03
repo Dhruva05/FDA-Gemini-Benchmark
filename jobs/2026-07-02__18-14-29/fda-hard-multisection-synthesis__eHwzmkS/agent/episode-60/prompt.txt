@@ -1,0 +1,16 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[1]
+; print('PASSAGE_0007:', l['chunks'][7][:400]); print('PASSAGE_0008:', l['chunks'][8][:400]); f.close()"
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral solution
+ should be administered using the calibrated cup (supplied) or oral dosing syringe.
+Lopinavir and ritonavir oral solution is not recommended in neonates before a postmenstrual age (first day
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing or exceeding the recommended adult dose.
+Body surface area (BSA) can be calculated as follows:
+The lopinavir and ritonavir dose can be calculated based on weight or BSA:
+Based on Weight:
+Patient Weigh
+root@a1980178bfd8:/workspace#

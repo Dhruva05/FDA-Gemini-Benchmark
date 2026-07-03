@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at this. For Acyclovir (`dcc29902-1fe6-4713-947e-335503959464`), why are there so few chunks shown? Let's write a python script to search for any other chunks in Acyclovir that might have dosing instructions but were not matched, or let's print all chunks of Acyclovir.",
+  "plan": "I will run a python command to print the titles and first few words of all chunks of Acyclovir (`dcc29902-1fe6-4713-947e-335503959464`).",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print(i, c[:100].replace('\\n', ' ')) for d in (json.loads(l) for l in f) if d['set_id']=='dcc29902-1fe6-4713-947e-335503959464' for i, c in enumerate(d['chunks'])]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

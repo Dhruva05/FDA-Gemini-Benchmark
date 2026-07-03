@@ -1,0 +1,10 @@
+{
+  "analysis": "This is perfect! The passage ID maps exactly to `PASSAGE_####` where `####` is the 4-digit zero-padded index (e.g., index 0 is `PASSAGE_0000`, index 1 is `PASSAGE_0001`, etc.).\nNow let's examine each question and understand what we need to find, what section we need to search, what the answer should be, and what structured fields are required.",
+  "plan": "I will print the text of each question and then write a Python script to search the label chunks for key terms to find the correct answer or confirm that the answer is not found, and get the exact citations and text.",
+  "commands": [
+    {
+      "keystrokes": "cat /workspace/data/public/questions.jsonl\n",
+      "duration": 0.5
+    }
+  ]
+}

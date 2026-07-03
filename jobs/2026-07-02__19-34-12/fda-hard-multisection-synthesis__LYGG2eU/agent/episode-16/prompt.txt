@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# find /workspace -type f
+/workspace/inspect_questions.py
+/workspace/diff_check.py
+/workspace/find_passage_raw.py
+/workspace/explore.py
+/workspace/parse_passages.py
+/workspace/match_chunks.py
+/workspace/print_around.py
+/workspace/test_passage.py
+/workspace/find_passage.py
+/workspace/parse_passages_v2.py
+/workspace/diff_check_2.py
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+root@15b83e10b8d1:/workspace#

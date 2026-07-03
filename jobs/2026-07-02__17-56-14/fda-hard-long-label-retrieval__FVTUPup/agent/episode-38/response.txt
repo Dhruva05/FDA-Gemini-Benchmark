@@ -1,0 +1,10 @@
+{
+  "analysis": "I will escape all newlines and control characters carefully. I want to read the full text of PASSAGE_0012 to understand the contraindications of Paxlovid.",
+  "plan": "I will print the full text of PASSAGE_0012 using print_passage.py.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0012\n",
+      "duration": 0.5
+    }
+  ]
+}

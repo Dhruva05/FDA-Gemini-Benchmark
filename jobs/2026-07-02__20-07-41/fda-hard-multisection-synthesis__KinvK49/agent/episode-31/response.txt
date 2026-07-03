@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah, Lopinavir-Ritonavir starts at line 211 in `/tmp/headers.txt`. Let's print lines 211 to 311 to see the headers for Lopinavir-Ritonavir.",
+  "plan": "I will run a shell command to view the first 100 headers of Lopinavir-Ritonavir in `/tmp/headers.txt`.",
+  "commands": [
+    {
+      "keystrokes": "sed -n '211,311p' /tmp/headers.txt\n",
+      "duration": 0.5
+    }
+  ]
+}

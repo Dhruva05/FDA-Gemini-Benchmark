@@ -1,0 +1,130 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > inspect_others.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {label['set_id']: label for line in f for label in [json.loads(line)]}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> def inspect_q(qid, keywords):
+>     q = next(x for x in questions if x['qid'] == qid)
+>     label = labels[q['set_id']]
+>     print("=" * 80)
+>     print(f"QID: {qid}")
+>     print(f"Question: {q['question']}")
+>     print("-" * 40)
+>     for idx, chunk in enumerate(label['chunks']):
+>         if any(kw in chunk.lower() for kw in keywords):
+>             print(f"PASSAGE_{idx:04d}:")
+>             print(chunk)
+>             print("." * 40)
+>
+> # Q3: Acamprosate Calcium discusses pregnancy. recommendation for breastfeeding dose adjustment?
+> inspect_q("near-miss-bd69d0bfb1fc7d", ["pregnan", "breast", "lactat", "milk"])
+>
+> # Q4: Acamprosate Calcium discusses adverse reactions. recommendation for therapeutic drug monitoring target range?
+> inspect_q("near-miss-d4ca1884aa8ab4", ["adverse", "reaction", "monitoring"])
+>
+> # Q5: Acamprosate Calcium discusses pediatric. recommendation for geriatric maximum cumulative lifetime dose?
+> inspect_q("near-miss-52e5f8cac33c50", ["pediatric", "geriatric", "child", "elder", "cumulative", "lifetime"])
+>
+> # Q6: Acclean Chlorhexidine pregnancy, breastfeeding dose adjustment?
+> inspect_q("near-miss-5b5cb6a5249660", ["pregnan", "breast", "lactat", "milk"])
+> EOF
+root@c7da805c5eb1:/workspace# python3 inspect_others.py
+================================================================================
+QID: near-miss-bd69d0bfb1fc7d
+Question: The Acamprosate Calcium label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adjustment? Answer NOT_FOUND if t
+he label does not support it, and cite the section you searched.
+----------------------------------------
+PASSAGE_0030:
+8.1 Pregnancy
+Teratogenic effects: Acamprosate calcium has been shown to be teratogenic in rats when given in doses that are approximately equal to the human dose (on a mg/m2
+ basis) and in rabbits when given in doses that are approximately 3 times the human dose (on a mg/m2 basis). Acamprosate calcium produced a dose-related increas
+e in the number of fetuses with malformations in rats at oral doses of 300 mg/kg/day or greater (approximately equal to the maximum recommended human daily (MRH
+D) oral dose on a mg/m2 basis). The malformations included hydronephrosis, malformed iris, retinal dysplasia, and retroesophageal subclavian artery. No findings
+ were observed at an oral dose of 50 mg/kg/day (approximately one-fifth the MRHD oral dose on a mg/m2 basis). An increased incidence of hydronephrosis was also
+noted in Burgundy Tawny rabbits at oral doses of 400 mg/kg/day or greater (approximately 3 times the MRHD oral dose on a mg/m2 basis). No developmental effects
+were observed in New Zealand white rabbits at oral doses up to 1000 mg/kg/day (approximately 8 times the MRHD oral dose on a mg/m2 basis). The findings in anima
+ls should be considered in relation to known adverse developmental effects of ethyl alcohol, which include the characteristics of fetal alcohol syndrome (cranio
+facial dysmorphism, intrauterine and postnatal growth retardation, retarded psychomotor and intellectual development) and milder forms of neurological and behav
+ioral disorders in humans. There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be used during pregnancy only if the
+potential benefit justifies the potential risk to the fetus.
+Nonteratogenic effects: A study conducted in pregnant mice that were administered acamprosate calcium by the oral route starting on Day 15 of gestation through
+the end of lactation on postnatal day 28 demonstrated an increased incidence of still-born fetuses at doses of 960 mg/kg/day or greater (approximately 2 times t
+he MRHD oral dose on a mg/m2 basis). No effects were observed at a dose of 320 mg/kg/day (approximately one-half the MRHD dose on a mg/m2 basis).
+........................................
+PASSAGE_0032:
+8.3 Nursing Mothers
+In animal studies, acamprosate was excreted in the milk of lactating rats dosed orally with acamprosate calcium. The concentration of acamprosate in milk compar
+ed to blood was 1.3:1. It is not known whether acamprosate is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised
+ when acamprosate calcium is administered to a nursing woman.
+........................................
+PASSAGE_0046:
+13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Dietary administration of acamprosate calcium for 2 years to Sprague-Dawley rats at doses of 25, 100 and 400 mg/kg/day (up to 3 times the maximum recommended hu
+man daily (MRHD) oral dose on an AUC basis) and CD-1 mice at doses of 400, 1200 and 3600 mg/kg/day (
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+ate calcium abuse or dependence.
+Acamprosate calcium is not known to cause alcohol aversion and does not cause a disulfiram-like reaction as a result of ethanol ingestion.
+........................................
+================================================================================
+QID: near-miss-52e5f8cac33c50
+Question: The Acamprosate Calcium label discusses pediatric. Does it provide a supported recommendation for geriatric maximum cumulative lifetime dose? Answer N
+OT_FOUND if the label does not support it, and cite the section you searched.
+----------------------------------------
+PASSAGE_0033:
+8.4 Pediatric Use
+The safety and efficacy of acamprosate calcium have not been established in the pediatric population.
+........................................
+PASSAGE_0034:
+8.5 Geriatric Use
+Forty-one of the 4234 patients in double-blind, placebo-controlled, clinical trials of acamprosate calcium were 65 years of age or older, while none were 75 yea
+rs of age or over. There were too few patients in the ≥65 age group to evaluate any differences in safety or effectiveness for geriatric patients compared to yo
+unger patients.
+This drug is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug may be greater in patients with impaired renal funct
+ion. Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection, and it may be useful to monitor renal fu
+nction .
+........................................
+PASSAGE_0044:
+Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a geriatric population. However, since renal function diminishes in elderly patients and
+acamprosate is excreted unchanged in urine, acamprosate plasma concentrations are likely to be higher in the elderly population compared to younger adults.
+Pediatrics:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a pediatric population.
+Renal Impairment:
+Peak plasma concentrations after administration of a single dose of 2 x 333 mg acamprosate calcium tablets to patients with moderate or severe renal impairment
+were about 2-fold and 4-fold higher, respectively, compared to healthy subjects. Similarly, elimination half-life was about 1.8-fold and 2.6-fold longer, respec
+tively, compared to healthy subjects. There is a linear relationship between creatinine clearance values and total apparent plasma clearance, renal clearance an
+d plasma half-life of acamprosate. A dose of 1 x 333 mg acamprosate calcium, three times daily, is recommended in patients with moderate renal impairment (creat
+inine clearance of 30 to 50 mL/min, .
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+Hepatic Impairment:
+Acamprosate is not metabolized by the liver and the pharmacokinetics of acamprosate calcium are not altered in patients with mild to moderate hepatic impairment
+ (groups A and B of the Child-Pugh classification). No adjustment of dosage is recommended in such patients.
+Alcohol-dependent subjects:
+A cross-study comparison of acamprosate calcium at doses of 2 x 333 mg three times daily indicated similar pharmacokinetics between alcohol-dependent subjects a
+nd healthy subjects.
+........................................
+================================================================================
+QID: near-miss-5b5cb6a5249660
+Question: The Acclean Chlorhexidine Gluconate 0.12% Oral Rinse label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adju
+stment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.
+----------------------------------------
+PASSAGE_0006:
+Pregnancy Category B Reproduction studies have been performed in rats and rabbits at chlorhexidine gluconate doses up to 300 mg/kg/day and 40 mg/kg/day, respect
+ively, and have not revealed evidence of harm to the fetus. However, adequate and well-controlled studies in pregnant women have not been done. Because animal r
+eproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.
+........................................
+PASSAGE_0007:
+It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when chlorhexidine gluco
+nate oral rinse is administered to nursing women.
+In parturition and lactation studies with rats, no evidence of impaired parturition or of toxic effects to suckling pups was observed when chlorhexidine glucona
+te was administered to dams at doses that were over 100 times greater than that which would result from a person's ingesting 30 ml of chlorhexidine gluconate or
+al rinse per day.
+........................................
+root@c7da805c5eb1:/workspace#

@@ -1,0 +1,41 @@
+Current Terminal Screen:
+>             "frequency": "once daily",
+>             "population": "adults",
+>             "max_daily_dose": "25 mg",
+>             "citation_passages": ["PASSAGE_0009", "PASSAGE_0015", "PASSAGE_0019", "PASSAGE_0022", "PASSAGE_0028"]
+>         }
+>     },
+>     {
+>         "qid": "0d262ce5d03f7c38",
+>         "status": "ANSWERED",
+>         "answer": "Lenalidomide should be taken orally at about the same time each day, either with or without food. The capsules must be swallowed whole with
+ water and should not be opened, broken, or chewed.",
+>         "citations": [
+>             {
+>                 "set_id": "ed7a3099-ce31-4865-b212-358d9ff6261b",
+>                 "passage_id": "PASSAGE_0032",
+>                 "section": "2.7 Administration",
+>                 "supporting_quote": "Advise patients to take lenalidomide orally at about the same time each day, either with or without food. Advise patients
+ to swallow lenalidomide capsules whole with water and not to open, break, or chew them."
+>             }
+>         ],
+>         "structured_fields": {
+>             "dose": None,
+>             "unit": None,
+>             "route": "oral",
+>             "frequency": "once daily, either with or without food",
+>             "population": "adults",
+>             "max_daily_dose": "25 mg",
+>             "citation_passages": ["PASSAGE_0032"]
+>         }
+>     }
+> ]
+>
+> output = {"answers": answers}
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(output, f, indent=2)
+> print("answers.json successfully generated!")
+> EOF
+root@371ed25b9fd3:/workspace# python3 generate_answers.py
+answers.json successfully generated!
+root@371ed25b9fd3:/workspace#

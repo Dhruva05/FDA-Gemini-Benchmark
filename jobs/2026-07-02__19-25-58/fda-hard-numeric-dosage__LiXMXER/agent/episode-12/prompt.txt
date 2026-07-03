@@ -1,0 +1,138 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > print_lopinavir.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+>             for i in range(15):
+>                 print(f"--- CHUNK {i} (PASSAGE_{i:04d}) ---")
+>                 print(data['chunks'][i])
+>             break
+> EOF
+root@af996c5fe492:/workspace# python3 print_lopinavir.py
+--- CHUNK 0 (PASSAGE_0000) ---
+1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in adults and pediatric patients 14 da
+ys and older.
+Limitations of Use:
+- Genotypic or phenotypic testing and/or treatment history should guide the use of lopinavir and ritonavir. The number of baseline lopinavir resistance-associat
+ed substitutions affects the virologic response to lopinavir and ritonavir
+Genotypic or phenotypic testing and/or treatment history should guide the use of lopinavir and ritonavir. The number of baseline lopinavir resistance-associated
+ substitutions affects the virologic response to lopinavir and ritonavir .
+--- CHUNK 1 (PASSAGE_0001) ---
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+--- CHUNK 2 (PASSAGE_0002) ---
+2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be us
+ed for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+--- CHUNK 3 (PASSAGE_0003) ---
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V
+, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V,
+V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+--- CHUNK 4 (PASSAGE_0004) ---
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+--- CHUNK 5 (PASSAGE_0005) ---
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage rec
+ommendations for twice daily dosing when lopinavir and ritonavir is taken in combination with these agents.
+--- CHUNK 6 (PASSAGE_0006) ---
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+--- CHUNK 7 (PASSAGE_0007) ---
+2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral solution
+ should be administered using the calibrated cup (supplied) or oral dosing syringe.
+Lopinavir and ritonavir oral solution is not recommended in neonates before a postmenstrual age (first day of the mother’s last menstrual period to birth plus t
+he time elapsed after birth) of 42 weeks and a postnatal age of at least 14 days has been attained .
+Lopinavir and ritonavir oral solution contains approximately 42% (v/v) ethanol and approximately 15% (w/v) propylene glycol. Total amounts of ethanol and propyl
+ene glycol from all medicines that are to be given to pediatric patients 14 days to 6 months of age should be taken into account in order to avoid toxicity from
+ these excipients .
+--- CHUNK 8 (PASSAGE_0008) ---
+Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing or exceeding the recommended adult dose.
+Body surface area (BSA) can be calculated as follows:
+The lopinavir and ritonavir dos
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+in Pediatric Patients 14 days to Less Than 18 Years Without Concomitant Efavirenz, N
+evirapine, or Nelfinavir
+--- CHUNK 9 (PASSAGE_0009) ---
+Based on Weight (mg/kg)
+Concomitant Therapy: Efavirenz, Nevirapine, or Nelfinavir
+--- CHUNK 10 (PASSAGE_0010) ---
+Dosing recommendations using oral solution
+Table 6 provides the dosing recommendations for pediatric patients older than 6 months to less than 18 years of age based on body weight or body surface area fo
+r lopinavir and ritonavir oral solution when given in combination with efavirenz, nevirapine, or nelfinavir:
+--- CHUNK 11 (PASSAGE_0011) ---
+Frequency
+> 6 months to < 18 years
+--- CHUNK 12 (PASSAGE_0012) ---
+2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-associated resistance substitutions.
+- Once daily lopinavir and ritonavir dosing is not recommended in pregnancy
+Once daily lopinavir and ritonavir dosing is not recommended in pregnancy .
+- There are insufficient data to recommend dosing in pregnant women with any documented lopinavir-associated resistance substitutions.
+There are insufficient data to recommend dosing in pregnant women with any documented lopinavir-associated resistance substitutions.
+- No dosage adjustment of lopinavir and ritonavir is required for patients during the postpartum period.
+No dosage adjustment of lopinavir and ritonavir is required for patients during the postpartum period.
+- Avoid use of lopinavir and ritonavir oral solution in pregnant women
+Avoid use of lopinavir and ritonavir oral solution in pregnant women .
+--- CHUNK 13 (PASSAGE_0013) ---
+4 CONTRAINDICATIONS
+- Lopinavir and ritonavir is contraindicated in patients with previously demonstrated clinically significant hypersensitivity (e.g., toxic epidermal necrolysis,
+ Stevens-Johnson syndrome, erythema multiforme, urticaria, angioedema) to any of its ingredients, including ritonavir.
+Lopinavir and ritonavir is contraindicated in patients with previously demonstrated clinically significant hypersensitivity (e.g., toxic epidermal necrolysis, S
+tevens-Johnson syndrome, erythema multiforme, urticaria, angioedema) to any of its ingredients, including ritonavir.
+- Lopinavir and ritonavir is contraindicated with drugs that are highly dependent on CYP3A for clearance and for which elevated plasma concentrations are associ
+ated with serious and/or life-threatening reactions
+Lopinavir and ritonavir is contraindicated with drugs that are highly dependent on CYP3A for clearance and for which elevated plasma concentrations are associat
+ed with serious and/or life-threatening reactions .
+- Alpha 1- Adrenoreceptor Antagonist: alfuzosin
+- Antianginal: ranolazine
+- Antiarrhythmic: dronedarone
+- Anti-gout: colchicine
+- Antipsychotics: lurasidone, pimozide
+- Ergot Derivatives: dihydroergotamine, ergotamine, methylergonovine
+- GI Motility Agent: cisapride
+- Hepatitis C direct acting antiviral: elbasvir/grazoprevir
+- HMG-CoA Reductase Inhibitors: lovastatin, simvastatin
+- Microsomal triglyceride transfer protein (MTTP) Inhibitor: lomitapide
+- PDE5 Inhibitor: sildenafil (Revatio®) when used for the treatment of pulmonary arterial hypertension
+- Sedative/Hypnotics: triazolam, orally administered midazolam
+- Lopinavir and ritonavir is contraindicated with drugs that are potent CYP3A inducers where significantly reduced lopinavir plasma concentrations may be associ
+ated with the potential for loss of virologic response and possible resistance and cross-resistance
+- Anticancer Agents: apalutamide
+- Antimycobacterial: rifampin
+- Herbal Products: St. John's Wort (hypericum perforatum)
+--- CHUNK 14 (PASSAGE_0014) ---
+5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP
+3A in patients already receiving lopinavir and ritonavir, may increase plasma concentrations of medications metabolized by CYP3A.  Initiation of medications tha
+t inhibit or induce CYP3A may increase or decrease concentrations of lopinavir and ritonavir, respectively. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Clinically significant adverse reactions from greater exposures of lopinavir and ritonavir.
+- Loss of therapeutic effect of lopinavir and ritonavir and possible development of resistance.
+See Table 12 for steps to prevent or manage these possible and known significant drug interactions, including dosing recommendations . Consider the potential fo
+r drug interactions prior to and during lopinavir and ritonavir therapy; review concomitant medications during lopinavir and ritonavir therapy, and monitor for
+the adverse reactions associated with the concomitant medications .
+root@af996c5fe492:/workspace#

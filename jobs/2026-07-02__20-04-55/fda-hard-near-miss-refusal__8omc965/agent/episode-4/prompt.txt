@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > inspect_structure.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     line = f.readline()
+>     label = json.loads(line)
+>     print("Keys in label:", label.keys())
+>     print("Type of chunks:", type(label['chunks']))
+>     if len(label['chunks']) > 0:
+>         print("Type of first chunk:", type(label['chunks'][0]))
+>         print("First chunk:", repr(label['chunks'][0]))
+> EOF
+root@0ef79956d710:/workspace# python3 inspect_structure.py
+Keys in label: dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+Type of chunks: <class 'list'>
+Type of first chunk: <class 'str'>
+First chunk: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, watery eyes\n
+- itching of the nose or throat'
+root@0ef79956d710:/workspace#

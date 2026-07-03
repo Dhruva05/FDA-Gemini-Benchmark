@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "
+> import json
+> with open('/workspace/answers.json') as f:
+>     data = json.load(f)
+>     print('Valid JSON:', isinstance(data, dict) and 'answers' in data)
+>     print('Number of answers:', len(data['answers']))
+>     for i, ans in enumerate(data['answers']):
+>         print(i, ans.get('qid'), ans.get('status'), len(ans.get('citations', [])))
+> "
+Valid JSON: True
+Number of answers: 8
+0 b2531657ba5c7a78 ANSWERED 2
+1 6f12607a1ba14dd5 ANSWERED 1
+2 daef650b92e56473 ANSWERED 2
+3 a0576a26f2a2eeac ANSWERED 2
+4 9be5515bc3064979 ANSWERED 2
+5 18078efe9380c8dc ANSWERED 2
+6 fbab4114f66e2dda ANSWERED 2
+7 2d63e0a82215867f ANSWERED 2
+root@b9fc21343844:/workspace#

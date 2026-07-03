@@ -1,0 +1,5 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# python3 -c "import json; l = json.loads(open('/workspace/data/public/labels.jsonl').readline()); print('PASSAGE_0000' in str(l))"
+True
+root@371ed25b9fd3:/workspace#

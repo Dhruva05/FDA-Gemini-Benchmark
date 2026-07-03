@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The passage IDs are embedded in the `label_raw` field! They look like `||PASSAGE_0000||` or similar.\nWait, does each chunk in `chunks` correspond to `PASSAGE_0000`, `PASSAGE_0001`, etc. in order? Let's check if the index of the chunk in the `chunks` list corresponds exactly to the passage index, i.e., `chunks[0]` is `PASSAGE_0000`, `chunks[1]` is `PASSAGE_0001`, etc. Let's verify this.",
+  "plan": "Write a python script to verify that the chunks in `label_raw` correspond to the items in `chunks` list in order.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > test_chunks.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        l = json.loads(line)\n        print(f\"Drug: {l['drug_name']}\")\n        # Let's split label_raw by ||PASSAGE_####||\n        import re\n        parts = re.split(r'\\|\\|PASSAGE_\\d+\\|\\|', l['label_raw'])\n        # The first part might be empty if it starts with a passage tag\n        parts = [p.strip() for p in parts if p.strip()]\n        print(f\"Number of parts from split: {len(parts)}, chunks: {len(l['chunks'])}\")\n        # Let's compare first few\n        for i in range(min(5, len(parts), len(l['chunks']))):\n            p_clean = parts[i].replace('\\n', ' ')[:50]\n            c_clean = l['chunks'][i].replace('\\n', ' ')[:50]\n            print(f\"  Part {i}: {p_clean}\")\n            print(f\"  Chunk {i}: {c_clean}\")\nEOF\npython3 test_chunks.py\n",
+      "duration": 1.0
+    }
+  ]
+}

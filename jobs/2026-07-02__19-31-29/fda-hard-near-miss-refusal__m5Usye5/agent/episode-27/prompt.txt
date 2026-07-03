@@ -1,0 +1,105 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# cat << 'EOF' > validate.py
+> import json
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> with open('/workspace/answers.json') as f:
+>     answers_data = json.load(f)
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {json.loads(line)['set_id']: json.loads(line) for line in f}
+>
+> answers = answers_data['answers']
+>
+> print(f"Total questions: {len(questions)}")
+> print(f"Total answers: {len(answers)}")
+>
+> assert len(questions) == len(answers), "Number of answers does not match number of questions"
+>
+> q_dict = {q['qid']: q for q in questions}
+>
+> for i, ans in enumerate(answers):
+>     qid = ans['qid']
+>     print(f"\nValidating qid: {qid}")
+>     assert qid in q_dict, f"qid {qid} not found in questions"
+>     q = q_dict[qid]
+>
+>     # Check status
+>     print(f"  Status: {ans['status']}")
+>     assert ans['status'] in ["ANSWERED", "NOT_FOUND"], "Invalid status"
+>
+>     # Check citations
+>     print(f"  Citations count: {len(ans['citations'])}")
+>     assert len(ans['citations']) >= 1, "At least one citation is required"
+>
+>     for cit in ans['citations']:
+>         set_id = cit['set_id']
+>         passage_id = cit['passage_id']
+>         section = cit['section']
+>         supporting_quote = cit['supporting_quote']
+>
+>         assert set_id == q['set_id'], f"set_id {set_id} does not match question set_id {q['set_id']}"
+>         assert set_id in labels, f"set_id {set_id} not found in labels"
+>
+>         label = labels[set_id]
+>         passage_idx = int(passage_id.split('_')[1])
+>         assert passage_idx < len(label['chunks']), f"passage_id {passage_id} out of bounds for label"
+>
+>         passage_text = label['chunks'][passage_idx]
+>         assert supporting_quote in passage_text, f"supporting_quote '{supporting_quote}' not found in passage text"
+>         print(f"    Citation {passage_id} is valid. Supporting quote found.")
+>
+>     # Check structured fields
+>     print(f"  Structured fields: {ans['structured_fields']}")
+>     for field in q['required_output_fields']:
+>         if field.startswith('structured_fields.'):
+>             subfield = field.split('.')[1]
+>             assert subfield in ans['structured_fields'], f"Required subfield {subfield} not found in structured_fields"
+>
+> print("\nAll checks passed successfully!")
+> EOF
+root@3646eb22abe5:/workspace# python3 validate.py
+Total questions: 6
+Total answers: 6
+
+Validating qid: near-miss-04f3afa658fdef
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0002 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'warnings', 'unsupported_topic': 'pharmacogenomic testing requirement'}
+
+Validating qid: near-miss-0c6ec72416151f
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0035 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'renal impairment', 'unsupported_topic': 'severe hepatic impairment'}
+
+Validating qid: near-miss-bd69d0bfb1fc7d
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0030 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'pregnancy', 'unsupported_topic': 'breastfeeding dose adjustment'}
+
+Validating qid: near-miss-d4ca1884aa8ab4
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0009 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'adverse reactions', 'unsupported_topic': 'therapeutic drug monitoring target range'}
+
+Validating qid: near-miss-52e5f8cac33c50
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0033 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'pediatric', 'unsupported_topic': 'geriatric maximum cumulative lifetime dose'}
+
+Validating qid: near-miss-5b5cb6a5249660
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0006 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'pregnancy', 'unsupported_topic': 'breastfeeding dose adjustment'}
+
+All checks passed successfully!
+root@3646eb22abe5:/workspace#

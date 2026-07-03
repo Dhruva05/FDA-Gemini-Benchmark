@@ -1,0 +1,97 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# cat << 'EOF' > validate_answers.py
+> import json
+>
+> with open('/workspace/answers.json') as f:
+>     data = json.load(f)
+>
+> print("Keys in answers.json:", list(data.keys()))
+> answers = data['answers']
+> print("Number of answers:", len(answers))
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in [json.loads(line) for line in f]}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = {q['qid']: q for q in [json.loads(line) for line in f]}
+>
+> for i, ans in enumerate(answers):
+>     qid = ans['qid']
+>     print(f"\n--- Validating Answer {i+1} (qid: {qid}) ---")
+>     assert qid in questions, f"qid {qid} not in questions!"
+>     assert ans['status'] in ['ANSWERED', 'NOT_FOUND'], f"invalid status {ans['status']}!"
+>     assert isinstance(ans['answer'], str) and len(ans['answer']) > 0, "answer must be a non-empty string!"
+>     assert isinstance(ans['citations'], list), "citations must be a list!"
+>     assert isinstance(ans['structured_fields'], dict), "structured_fields must be a dict!"
+>
+>     for cit in ans['citations']:
+>         set_id = cit['set_id']
+>         passage_id = cit['passage_id']
+>         section = cit['section']
+>         quote = cit['supporting_quote']
+>
+>         assert set_id in labels, f"set_id {set_id} not in labels!"
+>         label = labels[set_id]
+>
+>         assert passage_id.startswith('PASSAGE_'), f"invalid passage_id format {passage_id}!"
+>         idx = int(passage_id.split('_')[1])
+>         assert idx < len(label['chunks']), f"passage index {idx} out of range!"
+>
+>         chunk = label['chunks'][idx]
+>         assert quote in chunk, f"quote {repr(quote)} not found in chunk {passage_id}!"
+>         print(f"  Citation OK: {passage_id} -> {repr(quote[:50])}...")
+>
+> print("\nAll validations passed successfully!")
+> EOF
+root@a1980178bfd8:/workspace# python3 validate_answers.py
+Keys in answers.json: ['answers']
+Number of answers: 8
+
+--- Validating Answer 1 (qid: b2531657ba5c7a78) ---
+  Citation OK: PASSAGE_0000 -> 'PAXLOVID includes ritonavir, a strong CYP3A inhibi'...
+  Citation OK: PASSAGE_0019 -> 'PAXLOVID (nirmatrelvir co-packaged with ritonavir)'...
+  Citation OK: PASSAGE_0020 -> 'Nirmatrelvir and ritonavir are CYP3A substrates; t'...
+
+--- Validating Answer 2 (qid: 6f12607a1ba14dd5) ---
+  Citation OK: PASSAGE_0012 -> 'PAXLOVID is contraindicated with drugs that are pr'...
+
+--- Validating Answer 3 (qid: daef650b92e56473) ---
+  Citation OK: PASSAGE_0001 -> 'oral solution must be taken with food.'...
+  Citation OK: PASSAGE_0002 -> 'Because lopinavir and ritonavir oral solution cont'...
+  Citation OK: PASSAGE_0007 -> 'The dose of the oral solution should be administer'...
+
+--- Validating Answer 4 (qid: a0576a26f2a2eeac) ---
+  Citation OK: PASSAGE_0003 -> 'Lopinavir and ritonavir can be given in once daily'...
+  Citation OK: PASSAGE_0004 -> '80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10'...
+  Citation OK: PASSAGE_0005 -> 'The dose of lopinavir and ritonavir must be increa'...
+  Citation OK: PASSAGE_0006 -> '80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.'...
+
+--- Validating Answer 5 (qid: 9be5515bc3064979) ---
+  Citation OK: PASSAGE_0014 -> 'Initiation of lopinavir and ritonavir, a CYP3A inh'...
+  Citation OK: PASSAGE_0015 -> 'Lopinavir and ritonavir oral solution contains the'...
+  Citation OK: PASSAGE_0016 -> 'Pancreatitis has been observed in patients receivi'...
+  Citation OK: PASSAGE_0028 -> 'reported ongoing diarrhea.'...
+
+--- Validating Answer 6 (qid: 18078efe9380c8dc) ---
+  Citation OK: PASSAGE_0014 -> 'Initiation of lopinavir and ritonavir, a CYP3A inh'...
+  Citation OK: PASSAGE_0015 -> 'Lopinavir and ritonavir oral solution contains the'...
+  Citation OK: PASSAGE_0016 -> 'Pancreatitis has been observed in patients receivi'...
+  Citation OK: PASSAGE_0018 -> 'Avoid use in patients with congenital long QT synd'...
+  Citation OK: PASSAGE_0019 -> 'Cases of second or third degree atrioventricular b'...
+
+--- Validating Answer 7 (qid: fbab4114f66e2dda) ---
+  Citation OK: PASSAGE_0000 -> 'PAXLOVID includes ritonavir, a strong CYP3A inhibi'...
+  Citation OK: PASSAGE_0013 -> 'Medications that induce CYP3A may decrease concent'...
+  Citation OK: PASSAGE_0014 -> 'immediately discontinue PAXLOVID and initiate appr'...
+  Citation OK: PASSAGE_0015 -> 'Hepatic transaminase elevations, clinical hepatiti'...
+  Citation OK: PASSAGE_0016 -> 'Because nirmatrelvir is co-administered with riton'...
+
+--- Validating Answer 8 (qid: 2d63e0a82215867f) ---
+  Citation OK: PASSAGE_0000 -> 'PAXLOVID includes ritonavir, a strong CYP3A inhibi'...
+  Citation OK: PASSAGE_0014 -> 'immediately discontinue PAXLOVID and initiate appr'...
+  Citation OK: PASSAGE_0015 -> 'Hepatic transaminase elevations, clinical hepatiti'...
+  Citation OK: PASSAGE_0018 -> 'The most common adverse reactions (≥1% incidence i'...
+
+All validations passed successfully!
+root@a1980178bfd8:/workspace#

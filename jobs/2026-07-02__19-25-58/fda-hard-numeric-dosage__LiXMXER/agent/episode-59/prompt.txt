@@ -1,0 +1,79 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# python3 -c "import json; print(json.dumps(json.load(open('/workspace/answers.json'))['answers'][:2], indent=2))"
+[
+  {
+    "qid": "daef650b92e56473",
+    "status": "ANSWERED",
+    "answer": "Lopinavir and ritonavir oral solution must be taken with food. It is not recommended for use with polyurethane feeding tubes due to potential inc
+ompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be used for
+administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.",
+    "citations": [
+      {
+        "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+        "passage_id": "PASSAGE_0001",
+        "section": "2.1 General Administration Recommendations",
+        "supporting_quote": "Lopinavir and ritonavir oral solution must be taken with food."
+      },
+      {
+        "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+        "passage_id": "PASSAGE_0002",
+        "section": "2.2 Administering Oral Solution by Feeding Tube",
+        "supporting_quote": "Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, c
+an be used for administration of lopinavir and ritonavir oral solution."
+      }
+    ],
+    "structured_fields": {
+      "dose": null,
+      "unit": null,
+      "route": "oral",
+      "frequency": null,
+      "population": null,
+      "max_daily_dose": null,
+      "citation_passages": [
+        "PASSAGE_0001",
+        "PASSAGE_0002"
+      ]
+    }
+  },
+  {
+    "qid": "a0576a26f2a2eeac",
+    "status": "ANSWERED",
+    "answer": "In adults, lopinavir and ritonavir can be given in a once daily or twice daily dosing regimen. The recommended once daily dosage regimen is 800 m
+g/200 mg (10 mL) once daily. The recommended twice daily dosage regimen is 400 mg/100 mg (5 mL) twice daily. The oral solution must be taken with food.",
+    "citations": [
+      {
+        "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+        "passage_id": "PASSAGE_0003",
+        "section": "2.3 Dosage Recommendations in Adults",
+        "supporting_quote": "Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2."
+      },
+      {
+        "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+        "passage_id": "PASSAGE_0004",
+        "section": "Table 1. Recommended Dosage in Adults \u2013 Lopinavir and Ritonavir Once Daily Regimen",
+        "supporting_quote": "80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily"
+      },
+      {
+        "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+        "passage_id": "PASSAGE_0005",
+        "section": "Table 2. Recommended Dosage in Adults \u2013 Lopinavir and Ritonavir Twice Daily Regimen",
+        "supporting_quote": "80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily"
+      }
+    ],
+    "structured_fields": {
+      "dose": "800 mg/200 mg or 400 mg/100 mg",
+      "unit": "mg",
+      "route": "oral",
+      "frequency": "once daily or twice daily",
+      "population": "adults",
+      "max_daily_dose": "800 mg/200 mg",
+      "citation_passages": [
+        "PASSAGE_0003",
+        "PASSAGE_0004",
+        "PASSAGE_0005"
+      ]
+    }
+  }
+]
+root@af996c5fe492:/workspace#

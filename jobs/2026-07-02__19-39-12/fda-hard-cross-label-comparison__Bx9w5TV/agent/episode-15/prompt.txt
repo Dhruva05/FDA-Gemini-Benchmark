@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 49 (char 50) | Content preview: '{\n  "analysis": "All 5 questions are asking us to:\n\'Compare the dosing instructions for [Drug A] and'...
+
+Please fix these issues and provide a proper JSON response.

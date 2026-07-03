@@ -1,0 +1,5 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 133 (char 134) | Content preview: '{\n  "analysis": "This is great! Let\'s understand the details of Question 1: \'What important drug int'...
+WARNINGS: - Extra text detected after JSON object
+
+Please fix these issues and provide a proper JSON response.

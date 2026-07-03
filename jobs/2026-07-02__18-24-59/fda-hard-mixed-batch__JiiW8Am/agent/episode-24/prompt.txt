@@ -1,0 +1,33 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj["drug_name"] == "Lopinavir-Ritonavir":
+>             for i, chunk in enumerate(obj["chunks"]):
+>                 if "2." in chunk[:10] or "dosage and administration" in chunk.lower()[:30]:
+>                     print(f"PASSAGE_{i:04d}: {chunk[:150]}")
+> '
+PASSAGE_0001: 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recomme
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir
+PASSAGE_0107: 12.1 Mechanism of Action
+Lopinavir and ritonavir is a fixed-dose combination of HIV-1 antiviral drugs lopinavir and ritonavir. As co-formulated in lop
+PASSAGE_0108: 12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo and active (moxiflox
+PASSAGE_0109: 12.3 Pharmacokinetics
+The pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic parameters of lopinavir
+PASSAGE_0133: 12.4 Microbiology
+Mechanism of Action
+Lopinavir, an inhibitor of the HIV-1 protease, prevents cleavage of the viral Gag-Pol polyprotein, resulting in
+root@c3dfb07a1d45:/workspace#

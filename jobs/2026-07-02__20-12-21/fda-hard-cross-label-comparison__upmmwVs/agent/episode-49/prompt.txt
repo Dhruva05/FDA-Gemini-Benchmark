@@ -1,0 +1,35 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); [print('DRUG:', d['drug_name'], d['set_id'], [(i, c[:100])
+ for i, c in enumerate(d['chunks']) if any(k in c.lower() for k in ['dosage', 'administration', 'directions', 'usual dose'])]) for d in (json.loads(l) for l in
+f) if d['set_id'] in ['8e396b27-b44a-4aa9-805b-086395444b5f', '42e49120-6f3f-11db-9fe1-0800200c9a66']]"
+DRUG: ACETAZOLAMIDE EXTENDED-RELEASE 8e396b27-b44a-4aa9-805b-086395444b5f [(0, 'DESCRIPTION:\nAcetazolamide extended-release capsules are an inhibitor of the en
+zyme carbonic anhydra'), (1, 'Acetazolamide is a potent carbonic anhydrase inhibitor, effective in the control of fluid secretion '), (3, 'Hypersensitivity to a
+cetazolamide or any excipients in the formulation. Since acetazolamide is a sul'), (4, 'Fatalities have occurred, although rarely, due to severe reactions to su
+lfonamides including Stevens'), (16, 'No specific antidote is known. Treatment should be symptomatic and supportive. Electrolyte imbalance'), (17, 'Glaucoma\nTh
+e recommended dosage is 1 capsule (500 mg) two times a day. Usually 1 capsule is administ'), (18, 'Acute Mountain Sickness\nDosage is 500 mg to 1000 mg daily, i
+n divided doses using tablets or extende')]
+DRUG: Actoplus Met 42e49120-6f3f-11db-9fe1-0800200c9a66 [(0, 'WARNING: CONGESTIVE HEART FAILURE and LACTIC ACIDOSIS\nCongestive Heart Failure\n- Thiazolidinedio
+nes,'), (4, '2 DOSAGE AND ADMINISTRATION\n- Obtain liver tests (serum alanine and aspartate aminotransferases, alk'), (5, 'Recommended Starting Dosage Based on
+Current Regimen\nIndividualize the starting dosage of ACTOPLUS M'), (6, 'Dosage Titration for Additional Glycemic Control\nTitrate the ACTOPLUS MET dosage gradu
+ally, as neede'), (8, 'Starting Dosage in Patients with NYHA Class I or II Congestive Heart Failure\nFor patients with preex'), (9, 'The maximum recommended dos
+age of ACTOPLUS MET is one tablet (15 mg of pioglitazone and 850 mg of me'), (11, '3 DOSAGE FORMS AND STRENGTHS\n- 15 mg of pioglitazone and 850 mg of metformin
+ HCl tablets: White to o'), (13, '5.1 Congestive Heart Failure\nPioglitazone, like other thiazolidinediones, can cause dose-related flu'), (18, 'Radiological St
+udies with Contrast\nAdministration of intravascular iodinated contrast agents in metf'), (24, '5.4\tHypoglycemia with Concomitant Use with Insulin or Insulin S
+ecretagogues\nInsulin and insulin secr'), (61, 'Pioglitazone\nCardiac Disorders: Rapid increases in weight, edema, congestive heart failure with and '), (63, '7
+.1 Strong CYP2C8 Inhibitors\nAn inhibitor of CYP2C8 (e.g., gemfibrozil) significantly increases the '), (64, '7.2 CYP2C8 Inducers\nAn inducer of CYP2C8 (e.g., r
+ifampin) may significantly decrease the exposure (A'), (68, '7.6\tInsulin Secretagogues or Insulin\nCoadministration of ACTOPLUS MET with an insulin secretagogu
+e ('), (70, '7.8 Topiramate\nA decrease in the exposure of pioglitazone and its active metabolites were noted with'), (78, 'Data\nPublished clinical lactation s
+tudies report that metformin is present in human milk which resul'), (85, '10 OVERDOSAGE\nPioglitazone\nDuring controlled clinical trials, one case of overdose
+with pioglitazone'), (86, 'Metformin HCl\nOverdose of metformin HCl has occurred, including ingestion of amounts greater than 50'), (87, '11 DESCRIPTION\nACTOPL
+US MET tablets are a thiazolidinediones and biguanide combination product that '), (95, '12.3 Pharmacokinetics\nACTOPLUS MET\nIn bioequivalence studies of ACTOP
+LUS MET 15 mg/500 mg and 15 mg/'), (96, 'Pioglitazone\nFollowing once-daily administration of pioglitazone, steady-state serum concentrations '), (97, 'Metformi
+n HCl\nThe absolute bioavailability of a 500 mg metformin tablet given under fasting conditio'), (98, 'Pioglitazone\nThe mean apparent volume of distribution (V
+d/F) of pioglitazone following single-dose a'), (102, 'Pioglitazone\nFollowing oral administration, approximately 15 to 30% of the pioglitazone dose is reco'),
+(103, 'Metformin HCl\nRenal clearance is approximately 3.5 times greater than creatinine clearance (CrCl), w'), (107, 'Metformin HCl\nAfter administration of a
+single oral metformin 500 mg tablet with food, geometric mea'), (108, 'Pioglitazone\nThe mean Cmax and AUC values of pioglitazone were increased 20 to 60% in fe
+males compar'), (112, 'Pioglitazone\nThe serum elimination half-life of pioglitazone, M-III and M-IV remains unchanged in pa'), (114, 'Pioglitazone\nCompared wi
+th healthy controls, subjects with impaired hepatic function (Child-Turcotte'), (117, 'Coadministered Drug\nPioglitazone Dosage\nRegimen (mg)\nDaily for 7 days
+unless otherwise noted.'), (140, '↓2%\nTopiramate 96 mgtwice daily for 7 daysIndicates duration of concomitant administration with high'), (172, '17 PATIENT COU
+NSELING INFORMATION\nAdvise the patient to read the FDA-approved patient labeling (Medi')]
+root@7e48d58e23f3:/workspace#

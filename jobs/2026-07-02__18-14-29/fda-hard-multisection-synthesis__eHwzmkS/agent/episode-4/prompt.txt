@@ -1,0 +1,11 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; print('Label
+0 name:', labels[0]['drug_name'], 'set_id:', labels[0]['set_id']); print('Number of chunks in Label 0:', len(labels[0]['chunks'])); print('First chunk keys:', l
+abels[0]['chunks'][0].keys()); print('First chunk sample:', json.dumps(labels[0]['chunks'][0], indent=2)); f.close()"
+Label 0 name: Paxlovid set_id: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+Number of chunks in Label 0: 209
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'keys'
+root@a1980178bfd8:/workspace#

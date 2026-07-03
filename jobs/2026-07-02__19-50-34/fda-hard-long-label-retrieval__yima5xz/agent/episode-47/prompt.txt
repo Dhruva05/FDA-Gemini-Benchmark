@@ -1,0 +1,16 @@
+New Terminal Output:
+
+The optimal dose of PAXLOVID has not been established in pediatric patients.root@b161fe3d96d1:/workspace# cat << 'EOF' > inspect_chunk_001.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         chunks = data.get('chunks', [])
+>         if len(chunks) > 1:
+>             with open('chunk_001.txt', 'w') as out:
+>                 out.write(chunks[1])
+> EOF
+root@b161fe3d96d1:/workspace# python3 inspect_chunk_001.py && cat chunk_001.txt
+1 INDICATIONS AND USAGE
+PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high risk for progression to severe COVID-1
+9, including hospitalization or death.root@b161fe3d96d1:/workspace#

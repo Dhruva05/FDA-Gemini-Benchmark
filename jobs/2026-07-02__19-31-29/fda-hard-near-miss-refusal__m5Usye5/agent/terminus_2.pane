@@ -1,0 +1,599 @@
+[?2004hroot@3646eb22abe5:/workspace# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@3646eb22abe5:/workspace# clear
+[?2004l[H[J[3J[?2004hroot@3646eb22abe5:/workspace# ls -la /workspace/data/public
+[?2004ltotal 104
+drwxr-xr-x 2 root root  4096 Jul  2 20:59 [0m[01;34m.[0m
+drwxr-xr-x 3 root root  4096 Jul  2 20:40 [01;34m..[0m
+-rw-r--r-- 1 root root   598 Jul  2 20:40 README.md
+-rw-r--r-- 1 root root 86307 Jul  2 20:40 labels.jsonl
+-rw-r--r-- 1 root root  3338 Jul  2 20:40 questions.jsonl
+[?2004hroot@3646eb22abe5:/workspace# cat /workspace/data/public/README.md
+[?2004l        # Public FDA Label Data
+
+        This directory contains only public task inputs for `fda-hard-near-miss-refusal`.
+
+        - `labels.jsonl` has full FDA label rows with `label_raw` and `chunks`.
+        - `questions.jsonl` has 6 public questions.
+        - Gold answers, references, citations, and curated context are not included here.
+
+        Labels included:
+        - 12HR Allergy Relief (`ea5d0e55-2191-4094-b082-24b317f95752`)
+- Acamprosate Calcium (`ae6e79c0-a307-4888-b647-1b7be4cb9127`)
+- Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (`08c9d3dd-717b-0148-e054-00144ff8d46c`)
+[?2004hroot@3646eb22abe5:/workspace# cat /workspace/data/public/questions.jsonl
+[?2004l{"drug_name": "12HR Allergy Relief", "qid": "near-miss-04f3afa658fdef", "question": "The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "ea5d0e55-2191-4094-b082-24b317f95752", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-0c6ec72416151f", "question": "The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-bd69d0bfb1fc7d", "question": "The Acamprosate Calcium label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adjustment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-d4ca1884aa8ab4", "question": "The Acamprosate Calcium label discusses adverse reactions. Does it provide a supported recommendation for therapeutic drug monitoring target range? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-52e5f8cac33c50", "question": "The Acamprosate Calcium label discusses pediatric. Does it provide a supported recommendation for geriatric maximum cumulative lifetime dose? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Acclean Chlorhexidine Gluconate 0.12% Oral Rinse", "qid": "near-miss-5b5cb6a5249660", "question": "The Acclean Chlorhexidine Gluconate 0.12% Oral Rinse label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adjustment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "08c9d3dd-717b-0148-e054-00144ff8d46c", "task_type": "refusal"}
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); line=f.readline(); print(json.loads(line).keys()); print(json.loads(line)['drug_name'], json.loads(line)['set_id'])"
+[?2004ldict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+12HR Allergy Relief ea5d0e55-2191-4094-b082-24b317f95752
+[?2004hroot@3646eb22abe5:/workspace# cat << 'EOF' > explore.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         print(f"Drug: {data['drug_name']}, Set ID: {data['set_id']}, Chunks count: {len(data['chunks'])}")
+[?2004l[?2004h>         if data['chunks']:
+[?2004l[?2004h>             print("First chunk keys:", data['chunks'][0].keys())
+[?2004l[?2004h>             print("First chunk example:", json.dumps(data['chunks'][0], indent=2)[:500])
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@3646eb22abe5:/workspace# python3 explore.py
+[?2004lDrug: 12HR Allergy Relief, Set ID: ea5d0e55-2191-4094-b082-24b317f95752, Chunks count: 13
+Traceback (most recent call last):
+  File "/workspace/explore.py", line 7, in <module>
+    print("First chunk keys:", data['chunks'][0].keys())
+                               ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+[?2004hroot@3646eb22abe5:/workspace# cat << 'EOF' > explore.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         print(f"Drug: {data['drug_name']}, Set ID: {data['set_id']}, Chunks count: {len(data['chunks'])}")
+[?2004l[?2004h>         if data['chunks']:
+[?2004l[?2004h>             print("First chunk type:", type(data['chunks'][0]))
+[?2004l[?2004h>             print("First chunk:", repr(data['chunks'][0])[:500])
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@3646eb22abe5:/workspace# python3 explore.py
+[?2004lDrug: 12HR Allergy Relief, Set ID: ea5d0e55-2191-4094-b082-24b317f95752, Chunks count: 13
+First chunk type: <class 'str'>
+First chunk: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, watery eyes\n- itching of the nose or throat'
+Drug: Acamprosate Calcium, Set ID: ae6e79c0-a307-4888-b647-1b7be4cb9127, Chunks count: 59
+First chunk type: <class 'str'>
+First chunk: '1 INDICATIONS AND USAGE\nAcamprosate calcium delayed-release tablets are indicated for the maintenance of abstinence from alcohol in patients with alcohol dependence who are abstinent at treatment initiation. Treatment with acamprosate calcium delayed-release tablets should be part of a comprehensive management program that includes psychosocial support.\nThe efficacy of acamprosate calcium delayed-release tablets in promoting abstinence has not been demonstrated in subjects who have not underg
+Drug: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse, Set ID: 08c9d3dd-717b-0148-e054-00144ff8d46c, Chunks count: 18
+First chunk type: <class 'str'>
+First chunk: 'untitled\nACCLEAN is an oral rinse containing 0.12% chlorhexidine gluconate (1,1’-hexamethylene bis 5-(p-chlorphenyl) biguanide]di-D-gluconate) in a base containing water, 11.6% alcohol, glycerin, PEG-40 sorbitan diisostearate, flavor, sodium saccharin and FD&C Blue No. 1. Chlorhexidine gluconate product is a near neutral solution (pH range 5-7). Chlorhexidine gluconate is a salt of chlorhexidine and gluconic acid. Its chemical structure is:'
+[?2004hroot@3646eb22abe5:/workspace# find . -maxdepth 3
+[?2004l.
+./explore.py
+./data
+./data/public
+./data/public/README.md
+./data/public/questions.jsonl
+./data/public/labels.jsonl
+[?2004hroot@3646eb22abe5:/workspace# cat << 'EOF' > print_chunks.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         print("="*80)
+[?2004l[?2004h>         print(f"Drug: {data['drug_name']} ({data['set_id']})")
+[?2004l[?2004h>         print("="*80)
+[?2004l[?2004h>         for i, chunk in enumerate(data['chunks']):
+[?2004l[?2004h>             passage_id = f"PASSAGE_{i:04d}"
+[?2004l[?2004h>             first_line = chunk.split('\n')[0] if chunk else ""
+[?2004l[?2004h>             print(f"{passage_id}: {repr(first_line)[:100]} (Length: {len(chunk)})")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@3646eb22abe5:/workspace# python3 print_chunks.py
+[?2004l================================================================================
+Drug: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752)
+================================================================================
+PASSAGE_0000: 'Uses' (Length: 172)
+PASSAGE_0001: 'Do not use\xa0if you have ever had an allergic reaction to this product or any of its ingredients.' (Length: 95)
+PASSAGE_0002: 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a  (Length: 111)
+PASSAGE_0003: '- do not take more than directed' (Length: 129)
+PASSAGE_0004: 'Stop use and ask a doctor if an allergic reaction to this product occurs.\xa0 Seek medical help rig (Length: 104)
+PASSAGE_0005: 'If pregnant or breast-feeding,\xa0ask a health professional before use.' (Length: 68)
+PASSAGE_0006: 'Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Ce (Length: 132)
+PASSAGE_0007: 'adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do no (Length: 137)
+PASSAGE_0008: 'do not use' (Length: 43)
+PASSAGE_0009: '- store between 20-25°C (68-77°F)' (Length: 129)
+PASSAGE_0010: 'colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, i (Length: 235)
+PASSAGE_0011: 'Antihistamine' (Length: 39)
+PASSAGE_0012: 'Actual Size' (Length: 66)
+================================================================================
+Drug: Acamprosate Calcium (ae6e79c0-a307-4888-b647-1b7be4cb9127)
+================================================================================
+PASSAGE_0000: '1 INDICATIONS AND USAGE' (Length: 781)
+PASSAGE_0001: '2 DOSAGE AND ADMINISTRATION' (Length: 750)
+PASSAGE_0002: '2.1 Dosage in Renal Impairment' (Length: 338)
+PASSAGE_0003: '3 DOSAGE FORMS AND STRENGTHS' (Length: 205)
+PASSAGE_0004: '4.1 Hypersensitivity to Acamprosate Calcium' (Length: 190)
+PASSAGE_0005: '4.2 Severe Renal Impairment' (Length: 146)
+PASSAGE_0006: '5.1 Renal Impairment' (Length: 287)
+PASSAGE_0007: '5.2 Suicidality and Depression' (Length: 1449)
+PASSAGE_0008: '5.3 Alcohol Withdrawal' (Length: 101)
+PASSAGE_0009: '6.1 Clinical Trials Experience' (Length: 728)
+PASSAGE_0010: 'Adverse Events Leading to Discontinuation' (Length: 1715)
+PASSAGE_0011: '517 (30%)' (Length: 31)
+PASSAGE_0012: '52 (3%)' (Length: 18)
+PASSAGE_0013: '93 (5%)' (Length: 14)
+PASSAGE_0014: '344 (20%)' (Length: 20)
+PASSAGE_0015: '44 (3%)' (Length: 18)
+PASSAGE_0016: '166 (10%)' (Length: 22)
+PASSAGE_0017: '28 (2%)' (Length: 16)
+PASSAGE_0018: '500 (29%)' (Length: 23)
+PASSAGE_0019: '98 (6%)' (Length: 20)
+PASSAGE_0020: '87 (5%)' (Length: 19)
+PASSAGE_0021: '44 (3%)' (Length: 19)
+PASSAGE_0022: '28 (2%)' (Length: 18)
+PASSAGE_0023: '121 (7%)' (Length: 22)
+PASSAGE_0024: '169 (10%)' (Length: 20)
+PASSAGE_0025: '58 (3%)' (Length: 18)
+PASSAGE_0026: '39 (2%)' (Length: 393)
+PASSAGE_0027: 'Concomitant Therapies' (Length: 4541)
+PASSAGE_0028: '6.2 Postmarketing Experience' (Length: 632)
+PASSAGE_0029: '7 DRUG INTERACTIONS' (Length: 263)
+PASSAGE_0030: '8.1 Pregnancy' (Length: 2140)
+PASSAGE_0031: '8.2 Labor and Delivery' (Length: 117)
+PASSAGE_0032: '8.3 Nursing Mothers' (Length: 401)
+PASSAGE_0033: '8.4 Pediatric Use' (Length: 119)
+PASSAGE_0034: '8.5 Geriatric Use' (Length: 682)
+PASSAGE_0035: '8.6 Renal Impairment' (Length: 139)
+PASSAGE_0036: '10 OVERDOSAGE' (Length: 434)
+PASSAGE_0037: '11 DESCRIPTION' (Length: 1301)
+PASSAGE_0038: '12.1 Mechanism of Action' (Length: 472)
+PASSAGE_0039: '12.2 Pharmacodynamics' (Length: 993)
+PASSAGE_0040: '12.3\tAbsorption' (Length: 610)
+PASSAGE_0041: 'The volume of distribution for acamprosate following intravenous administration is estimated to be  (Length: 192)
+PASSAGE_0042: 'Acamprosate does not undergo metabolism.' (Length: 40)
+PASSAGE_0043: 'After oral dosing of 2 x 333 mg of acamprosate calcium, the terminal half-life ranges from approxim (Length: 238)
+PASSAGE_0044: 'Gender:' (Length: 1863)
+PASSAGE_0045: 'Acamprosate had no inducing potential on the cytochrome CYP1A2 and 3A4 systems, and in vitro inhibi (Length: 754)
+PASSAGE_0046: '13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility' (Length: 1388)
+PASSAGE_0047: '14 CLINICAL STUDIES' (Length: 1024)
+PASSAGE_0048: '16 HOW SUPPLIED/STORAGE AND HANDLING' (Length: 288)
+PASSAGE_0049: 'Storage and Handling' (Length: 112)
+PASSAGE_0050: '17.1 Information for Patients' (Length: 143)
+PASSAGE_0051: 'Renal Impairment' (Length: 208)
+PASSAGE_0052: 'Suicidality and Depression' (Length: 279)
+PASSAGE_0053: 'Alcohol Withdrawal' (Length: 98)
+PASSAGE_0054: 'Pregnancy and Breast Feeding' (Length: 213)
+PASSAGE_0055: 'Relapse to Drinking' (Length: 379)
+PASSAGE_0056: 'Colvale-Bardez, Goa 403513, India' (Length: 51)
+PASSAGE_0057: 'Mahwah, NJ 07430' (Length: 45)
+PASSAGE_0058: 'Indianapolis, IN 46268 USA' (Length: 78)
+================================================================================
+Drug: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (08c9d3dd-717b-0148-e054-00144ff8d46c)
+================================================================================
+PASSAGE_0000: 'untitled' (Length: 444)
+PASSAGE_0001: 'ACCLEAN chlorhexidine gluconate oral rinse provides antimicrobial activity during oral rinsing. The (Length: 1730)
+PASSAGE_0002: 'Chlorhexidine gluconate oral rinse is indicated for use between dental visits as part of a professi (Length: 444)
+PASSAGE_0003: 'Chlorhexidine gluconate oral rinse should not be used by persons who are known to be hypersensitive (Length: 156)
+PASSAGE_0004: 'The effect of chlorhexidine gluconate oral rinse on periodontitis has not been determined. An incre (Length: 605)
+PASSAGE_0005: 'General:' (Length: 1941)
+PASSAGE_0006: 'Pregnancy Category B Reproduction studies have been performed in rats and rabbits at chlorhexidine  (Length: 450)
+PASSAGE_0007: 'It is not known whether this drug is excreted in human milk. Because many drugs are excreted in hum (Length: 547)
+PASSAGE_0008: 'Clinical effectiveness and safety of chlorhexidine gluconate oral rinse have not been established i (Length: 130)
+PASSAGE_0009: 'The most common side effects associated with chlorhexidine gluconate oral rinses are: 1) an increas (Length: 1261)
+PASSAGE_0010: 'In a drinking water study in rats, carcinogenic effects were not observed at doses up to 38 mg/kg/d (Length: 456)
+PASSAGE_0011: 'Ingestion of 1 or 2 ounces of chlorhexidine gluconate oral rinse by a small child (~10 kg body weig (Length: 357)
+PASSAGE_0012: 'Chlorhexidine gluconate oral rinse therapy should be initiated directly following a dental prophyla (Length: 700)
+PASSAGE_0013: 'Chlorhexidine gluconate oral rinse is supplied as a blue liquid in 4-ounce (118 ml) and 1-pint (473 (Length: 253)
+PASSAGE_0014: 'Rx Only' (Length: 77)
+PASSAGE_0015: 'Your dentist has prescribed ACCLEAN chlorhexidine gluconate oral rinse to treat your gingivitis, to (Length: 2047)
+PASSAGE_0016: 'REF 112-6720' (Length: 255)
+PASSAGE_0017: '\ufeff' (Length: 269)
+[?2004hroot@3646eb22abe5:/workspace# cat << 'EOF' > print_12hr.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data['set_id'] == 'ea5d0e55-2191-4094-b082-24b317f95752':
+[?2004l[?2004h>             for i, chunk in enumerate(data['chunks']):
+[?2004l[?2004h>                 print(f"PASSAGE_{i:04d}:")
+[?2004l[?2004h>                 print(chunk)
+[?2004l[?2004h>                 print("-"*40)
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@3646eb22abe5:/workspace# python3 print_12hr.py
+[?2004lPASSAGE_0000:
+Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+----------------------------------------
+PASSAGE_0001:
+Do not use if you have ever had an allergic reaction to this product or any of its ingredients.
+----------------------------------------
+PASSAGE_0002:
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+----------------------------------------
+PASSAGE_0003:
+- do not take more than directed
+- do not take at the same time as aluminum or magnesium antacids
+- do not take with fruit juices
+----------------------------------------
+PASSAGE_0004:
+Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek medical help right away.
+----------------------------------------
+PASSAGE_0005:
+If pregnant or breast-feeding, ask a health professional before use.
+----------------------------------------
+PASSAGE_0006:
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+----------------------------------------
+PASSAGE_0007:
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+----------------------------------------
+PASSAGE_0008:
+do not use
+adults 65 years of age and older
+----------------------------------------
+PASSAGE_0009:
+- store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete product information and warnings
+----------------------------------------
+PASSAGE_0010:
+colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, iron oxide yellow, lactose monohydrate, macrogol, magnesium stearate, microcrystalline cellulose, pregelatinized starch, titanium dioxide
+----------------------------------------
+PASSAGE_0011:
+Antihistamine
+Indoor/Outdoor Relief of:
+----------------------------------------
+PASSAGE_0012:
+Actual Size
+COMPARE TO ALLEGRA® 12 HOUR ALLERGY active ingredient*
+----------------------------------------
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; data = json.load(open('/workspace/data/public/labels.jsonl')); print(data['label_raw'][:2000])" 
+[?2004lTraceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 1 (char 3498)
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; line = open('/workspace/data/public/labels.jsonl').readline(); data = json.loads(line); print(data['label_raw'][:3000])"
+[?2004l||PASSAGE_0000||
+Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+
+||PASSAGE_0001||
+Do not use if you have ever had an allergic reaction to this product or any of its ingredients.
+
+||PASSAGE_0002||
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+
+||PASSAGE_0003||
+- do not take more than directed
+- do not take at the same time as aluminum or magnesium antacids
+- do not take with fruit juices
+
+||PASSAGE_0004||
+Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek medical help right away.
+
+||PASSAGE_0005||
+If pregnant or breast-feeding, ask a health professional before use.
+
+||PASSAGE_0006||
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+
+||PASSAGE_0007||
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+
+||PASSAGE_0008||
+do not use
+adults 65 years of age and older
+
+||PASSAGE_0009||
+- store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete product information and warnings
+
+||PASSAGE_0010||
+colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, iron oxide yellow, lactose monohydrate, macrogol, magnesium stearate, microcrystalline cellulose, pregelatinized starch, titanium dioxide
+
+||PASSAGE_0011||
+Antihistamine
+Indoor/Outdoor Relief of:
+
+||PASSAGE_0012||
+Actual Size
+COMPARE TO ALLEGRA® 12 HOUR ALLERGY active ingredient*
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ea5d0e55' in line][0]; [print(f'PASSAGE_{i:04d}:', chunk) for i, chunk in enumerate(data['chunks']) if 'warning' in chunk.lower() or 'warn' in chunk.lower()]"
+[?2004lPASSAGE_0009: - store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete product information and warnings
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(chunk[:150])) for i, chunk in enumerate(data['chunks']) if 'renal impairment' in chunk.lower()]"
+[?2004lPASSAGE_0002: '2.1 Dosage in Renal Impairment\nFor patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg ta'
+PASSAGE_0005: '4.2 Severe Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0006: '5.1 Renal Impairment\nTreatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires '
+PASSAGE_0035: '8.6 Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0044: 'Gender:\nAcamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.\nAge:\nThe pharmacokinetics o'
+PASSAGE_0051: 'Renal Impairment\nA lower dose is recommended for patients with moderate renal impairment. Acamprosate calcium is contraindicated in patients with seve'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(chunk[:150])) for i, chunk in enumerate(data['chunks']) if 'hepatic' in chunk.lower() or 'liver' in chunk.lower()]"
+[?2004lPASSAGE_0027: 'Concomitant Therapies\nIn clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hypnotics an'
+PASSAGE_0031: '8.2 Labor and Delivery\nThe potential for acamprosate calcium to affect the duration of labor and delivery is unknown.'
+PASSAGE_0044: 'Gender:\nAcamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.\nAge:\nThe pharmacokinetics o'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [2, 5, 6, 35, 51]]"
+[?2004lPASSAGE_0002: '2.1 Dosage in Renal Impairment\nFor patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommended. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0005: '4.2 Severe Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0006: '5.1 Renal Impairment\nTreatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose reduction . Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0035: '8.6 Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+PASSAGE_0051: 'Renal Impairment\nA lower dose is recommended for patients with moderate renal impairment. Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [30, 32, 54]]"
+[?2004lPASSAGE_0030: '8.1 Pregnancy\nTeratogenic effects: Acamprosate calcium has been shown to be teratogenic in rats when given in doses that are approximately equal to the human dose (on a mg/m2 basis) and in rabbits when given in doses that are approximately 3 times the human dose (on a mg/m2 basis). Acamprosate calcium produced a dose-related increase in the number of fetuses with malformations in rats at oral doses of 300 mg/kg/day or greater (approximately equal to the maximum recommended human daily (MRHD) oral dose on a mg/m2 basis). The malformations included hydronephrosis, malformed iris, retinal dysplasia, and retroesophageal subclavian artery. No findings were observed at an oral dose of 50 mg/kg/day (approximately one-fifth the MRHD oral dose on a mg/m2 basis). An increased incidence of hydronephrosis was also noted in Burgundy Tawny rabbits at oral doses of 400 mg/kg/day or greater (approximately 3 times the MRHD oral dose on a mg/m2 basis). No developmental effects were observed in New Zealand white rabbits at oral doses up to 1000 mg/kg/day (approximately 8 times the MRHD oral dose on a mg/m2 basis). The findings in animals should be considered in relation to known adverse developmental effects of ethyl alcohol, which include the characteristics of fetal alcohol syndrome (craniofacial dysmorphism, intrauterine and postnatal growth retardation, retarded psychomotor and intellectual development) and milder forms of neurological and behavioral disorders in humans. There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.\nNonteratogenic effects: A study conducted in pregnant mice that were administered acamprosate calcium by the oral route starting on Day 15 of gestation through the end of lactation on postnatal day 28 demonstrated an increased incidence of still-born fetuses at doses of 960 mg/kg/day or greater (approximately 2 times the MRHD oral dose on a mg/m2 basis). No effects were observed at a dose of 320 mg/kg/day (approximately one-half the MRHD dose on a mg/m2 basis).'
+PASSAGE_0032: '8.3 Nursing Mothers\nIn animal studies, acamprosate was excreted in the milk of lactating rats dosed orally with acamprosate calcium. The concentration of acamprosate in milk compared to blood was 1.3:1. It is not known whether acamprosate is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when acamprosate calcium is administered to a nursing woman.'
+PASSAGE_0054: 'Pregnancy and Breast Feeding\n- Advise patients to notify their physician if they become pregnant or intend to become pregnant during therapy.\n- Advise patients to notify their physician if they are breast-feeding.'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(chunk[:150])) for i, chunk in enumerate(data['chunks']) if 'adverse reaction' in chunk.lower() or 'adverse event' in chunk.lower()]"
+[?2004lPASSAGE_0007: '5.2 Suicidality and Depression\nIn controlled clinical trials of acamprosate calcium, adverse events of a suicidal nature (suicidal ideation, suicide a'
+PASSAGE_0009: '6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical '
+PASSAGE_0010: 'Adverse Events Leading to Discontinuation\nIn placebo-controlled trials of 6 months or less, 8% of acamprosate calcium-treated patients discontinued tr'
+PASSAGE_0027: 'Concomitant Therapies\nIn clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hypnotics an'
+PASSAGE_0028: '6.2 Postmarketing Experience\nThe following adverse reactions have been identified during post approval use of acamprosate calcium. Because these react'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [9, 28]]"
+[?2004lPASSAGE_0009: '6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice.\nClinically significant serious adverse reactions associated with acamprosate calcium described elsewhere in labeling include suicidality and depression and acute kidney failure .\nThe adverse event data described below reflect the safety experience in over 7000 patients exposed to acamprosate calcium for up to one year, including over 2000 acamprosate calcium-exposed patients who participated in placebo-controlled trials.'
+PASSAGE_0028: '6.2 Postmarketing Experience\nThe following adverse reactions have been identified during post approval use of acamprosate calcium. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.\nSerious Adverse Events Observed During the Non-US Postmarketing Evaluation of Acamprosate Calcium\nThe serious adverse event of acute kidney failure has been reported to be temporally associated with acamprosate calcium treatment in at least 3 patients and is not described elsewhere in the labeling.'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [33, 34]]"
+[?2004lPASSAGE_0033: '8.4 Pediatric Use\nThe safety and efficacy of acamprosate calcium have not been established in the pediatric population.'
+PASSAGE_0034: '8.5 Geriatric Use\nForty-one of the 4234 patients in double-blind, placebo-controlled, clinical trials of acamprosate calcium were 65 years of age or older, while none were 75 years of age or over. There were too few patients in the ≥65 age group to evaluate any differences in safety or effectiveness for geriatric patients compared to younger patients.\nThis drug is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug may be greater in patients with impaired renal function. Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection, and it may be useful to monitor renal function .'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if '08c9d3dd' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [6, 7]]"
+[?2004lPASSAGE_0006: 'Pregnancy Category B Reproduction studies have been performed in rats and rabbits at chlorhexidine gluconate doses up to 300 mg/kg/day and 40 mg/kg/day, respectively, and have not revealed evidence of harm to the fetus. However, adequate and well-controlled studies in pregnant women have not been done. Because animal reproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.'
+PASSAGE_0007: "It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when chlorhexidine gluconate oral rinse is administered to nursing women.\nIn parturition and lactation studies with rats, no evidence of impaired parturition or of toxic effects to suckling pups was observed when chlorhexidine gluconate was administered to dams at doses that were over 100 times greater than that which would result from a person's ingesting 30 ml of chlorhexidine gluconate oral rinse per day."
+[?2004hroot@3646eb22abe5:/workspace# find /workspace -type f
+[?2004l/workspace/explore.py
+/workspace/print_chunks.py
+/workspace/print_12hr.py
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ea5d0e55' in line][0]; print(repr(data['chunks'][2]))"
+[?2004l'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; print(repr(data['chunks'][35]))"
+[?2004l'8.6 Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; print(repr(data['chunks'][30]))"
+[?2004l'8.1 Pregnancy\nTeratogenic effects: Acamprosate calcium has been shown to be teratogenic in rats when given in doses that are approximately equal to the human dose (on a mg/m2 basis) and in rabbits when given in doses that are approximately 3 times the human dose (on a mg/m2 basis). Acamprosate calcium produced a dose-related increase in the number of fetuses with malformations in rats at oral doses of 300 mg/kg/day or greater (approximately equal to the maximum recommended human daily (MRHD) oral dose on a mg/m2 basis). The malformations included hydronephrosis, malformed iris, retinal dysplasia, and retroesophageal subclavian artery. No findings were observed at an oral dose of 50 mg/kg/day (approximately one-fifth the MRHD oral dose on a mg/m2 basis). An increased incidence of hydronephrosis was also noted in Burgundy Tawny rabbits at oral doses of 400 mg/kg/day or greater (approximately 3 times the MRHD oral dose on a mg/m2 basis). No developmental effects were observed in New Zealand white rabbits at oral doses up to 1000 mg/kg/day (approximately 8 times the MRHD oral dose on a mg/m2 basis). The findings in animals should be considered in relation to known adverse developmental effects of ethyl alcohol, which include the characteristics of fetal alcohol syndrome (craniofacial dysmorphism, intrauterine and postnatal growth retardation, retarded psychomotor and intellectual development) and milder forms of neurological and behavioral disorders in humans. There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus.\nNonteratogenic effects: A study conducted in pregnant mice that were administered acamprosate calcium by the oral route starting on Day 15 of gestation through the end of lactation on postnatal day 28 demonstrated an increased incidence of still-born fetuses at doses of 960 mg/kg/day or greater (approximately 2 times the MRHD oral dose on a mg/m2 basis). No effects were observed at a dose of 320 mg/kg/day (approximately one-half the MRHD dose on a mg/m2 basis).'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; print(repr(data['chunks'][9]))"
+[?2004l'6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice.\nClinically significant serious adverse reactions associated with acamprosate calcium described elsewhere in labeling include suicidality and depression and acute kidney failure .\nThe adverse event data described below reflect the safety experience in over 7000 patients exposed to acamprosate calcium for up to one year, including over 2000 acamprosate calcium-exposed patients who participated in placebo-controlled trials.'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; print(repr(data['chunks'][33]))"
+[?2004l'8.4 Pediatric Use\nThe safety and efficacy of acamprosate calcium have not been established in the pediatric population.'
+[?2004hroot@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if '08c9d3dd' in line][0]; print(repr(data['chunks'][6]))"
+[?2004l'Pregnancy Category B Reproduction studies have been performed in rats and rabbits at chlorhexidine gluconate doses up to 300 mg/kg/day and 40 mg/kg/day, respectively, and have not revealed evidence of harm to the fetus. However, adequate and well-controlled studies in pregnant women have not been done. Because animal reproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.'
+[?2004hroot@3646eb22abe5:/workspace# cat << 'EOF' > generate_answers.py
+[?2004l  "structured_fields"[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> answers_data = {
+[?2004l[?2004h>   "answers": [
+[?2004l[?2004h>     {
+[?2004l      [?2004h>       "qid": "near-miss-04f3afa658fdef",
+[?2004l[?2004h>       "status": "NOT_FOUND",
+[?2004l  [?2004h>       "answer": "The 12HR Allergy Relief label discusses warnings, including asking a doctor before use if you have kidney disease, but it does not provide a supported recommendation or requirement for pharmacogenomic testing.",
+[?2004l[?2004h>       "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>           "set_id": "ea5d0e55-2191-4094-b082-24b317f95752",
+[?2004l[?2004h>           "passage_id": "PASSAGE_0002",
+[?2004l[?2004h>           "section": "Warnings",
+[?2004l[?2004h>           "supporting_quote": "Ask a doctor before use if you have kidney disease."
+[?2004lid": "P[?2004h>         }
+[?2004l[?2004h>       ],
+[?2004l[?2004h>       "structured_fields": {
+[?2004l[?2004h>         "searched_topic": "warnings",
+[?2004l[?2004h>         "unsupported_topic": "pharmacogenomic testing requirement"
+[?2004l[?2004h>       }
+[?2004l[?2004h>     },
+[?2004ln [?2004h>     {
+[?2004l[?2004h>       "qid": "near-miss-0c6ec72416151f",
+[?2004l[?2004h>       "status": "NOT_FOUND",
+[?2004l[?2004h>       "answer": "The Acamprosate Calcium label discusses renal impairment under clinical pharmacology, use in specific populations, and dosage and administration, but it does not provide a supported recommendation for severe hepatic impairment.",
+[?2004l[?2004h>       "citations": [
+[?2004l[?2004h>         {
+[?2004lpe[?2004h>           "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+[?2004l[?2004h>           "passage_id": "PASSAGE_0035",
+[?2004l[?2004h>           "section": "8.6 Renal Impairment",
+[?2004l[?2004h>           "supporting_quote": "Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of \u226430 mL/min) ."
+[?2004l[?2004h>         }
+[?2004l[?2004h>       ],
+[?2004l[?2004h>       "structured_fields": {
+[?2004l[?2004h>         "searched_topic": "renal impairment",
+[?2004l[?2004h>         "unsupported_topic": "severe hepatic impairment"
+[?2004l[?2004h>       }
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>       "qid": "near-miss-bd69d0bfb1fc7d",
+[?2004l[?2004h>       "status": "NOT_FOUND",
+[?2004l[?2004h>       "answer": "The Acamprosate Calcium label discusses pregnancy, stating that the drug should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus, but it does not provide a supported recommendation for breastfeeding dose adjustment.",
+[?2004l[?2004h>       "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>           "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+[?2004l[?2004h>           "passage_id": "PASSAGE_0030",
+[?2004l[?2004h>           "section": "8.1 Pregnancy",
+[?2004l[?2004h>           "supporting_quote": "There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be used during pregnancy only if the potential benefit justifies the potential risk to the fetus."
+[?2004l[?2004h>         }
+[?2004l[?2004h>       ],
+[?2004l[?2004h>       "structured_fields": {
+[?2004l[?2004h>         "searched_topic": "pregnancy",
+[?2004l[?2004h>         "unsupported_topic": "breastfeeding dose adjustment"
+[?2004l[?2004h>       }
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>       "qid": "near-miss-d4ca1884aa8ab4",
+[?2004l[?2004h>       "status": "NOT_FOUND",
+[?2004l[?2004h>       "answer": "The Acamprosate Calcium label discusses adverse reactions observed during clinical trials and postmarketing experience, but it does not provide a supported recommendation for a therapeutic drug monitoring target range.",
+[?2004l[?2004h>       "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>           "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+[?2004l[?2004h>           "passage_id": "PASSAGE_0009",
+[?2004l[?2004h>           "section": "6.1 Clinical Trials Experience",
+[?2004l[?2004h>           "supporting_quote": "Clinically significant serious adverse reactions associated with acamprosate calcium described elsewhere in labeling include suicidality and depression and acute kidney failure ."
+[?2004l[?2004h>         }
+[?2004l[?2004h>       ],
+[?2004l[?2004h>       "structured_fields": {
+[?2004l[?2004h>         "searched_topic": "adverse reactions",
+[?2004l[?2004h>         "unsupported_topic": "therapeutic drug monitoring target range"
+[?2004l[?2004h>       }
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>       "qid": "near-miss-52e5f8cac33c50",
+[?2004l[?2004h>       "status": "NOT_FOUND",
+[?2004l[?2004h>       "answer": "The Acamprosate Calcium label discusses use in the pediatric population, stating that safety and efficacy have not been established in this age group, but it does not provide a supported recommendation for a geriatric maximum cumulative lifetime dose.",
+[?2004l[?2004h>       "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>           "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+[?2004l[?2004h>           "passage_id": "PASSAGE_0033",
+[?2004l[?2004h>           "section": "8.4 Pediatric Use",
+[?2004l[?2004h>           "supporting_quote": "The safety and efficacy of acamprosate calcium have not been established in the pediatric population."
+[?2004l[?2004h>         }
+[?2004l[?2004h>       ],
+[?2004l[?2004h>       "structured_fields": {
+[?2004l[?2004h>         "searched_topic": "pediatric",
+[?2004l[?2004h>         "unsupported_topic": "geriatric maximum cumulative lifetime dose"
+[?2004l[?2004h>       }
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>       "qid": "near-miss-5b5cb6a5249660",
+[?2004l[?2004h>       "status": "NOT_FOUND",
+[?2004l[?2004h>       "answer": "The Acclean Chlorhexidine Gluconate 0.12% Oral Rinse label discusses pregnancy, stating that adequate and well-controlled studies in pregnant women have not been done, but it does not provide a supported recommendation for breastfeeding dose adjustment.",
+[?2004l[?2004h>       "citations": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>           "set_id": "08c9d3dd-717b-0148-e054-00144ff8d46c",
+[?2004l[?2004h>           "passage_id": "PASSAGE_0006",
+[?2004l[?2004h>           "section": "Pregnancy Category B",
+[?2004l[?2004h>           "supporting_quote": "However, adequate and well-controlled studies in pregnant women have not been done. Because animal reproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed."
+[?2004l[?2004h>         }
+[?2004l[?2004h>       ],
+[?2004l[?2004h>       "structured_fields": {
+[?2004l[?2004h>         "searched_topic": "pregnancy",
+[?2004l[?2004h>         "unsupported_topic": "breastfeeding dose adjustment"
+[?2004l[?2004h>       }
+[?2004l[?2004h>     }
+[?2004l[?2004h>   ]
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # Save to answers.json
+[?2004l[?2004h> with open('/workspace/answers.json', 'w') as f:
+[?2004l[?2004h>     json.dump(answers_data, f, indent=2)
+[?2004l[?2004h> 
+[?2004l[?2004h> print("answers.json successfully generated and saved.")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@3646eb22abe5:/workspace# python3 generate_answers.py
+[?2004lanswers.json successfully generated and saved.
+[?2004hroot@3646eb22abe5:/workspace# cat << 'EOF' > validate.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/data/public/questions.jsonl') as f:
+[?2004l[?2004h>     questions = [json.loads(line) for line in f]
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/answers.json') as f:
+[?2004l[?2004h>     answers_data = json.load(f)
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     labels = {json.loads(line)['set_id']: json.loads(line) for line in f}
+[?2004l[?2004h> 
+[?2004l[?2004h> answers = answers_data['answers']
+[?2004l[?2004h> 
+[?2004l[?2004h> print(f"Total questions: {len(questions)}")
+[?2004l[?2004h> print(f"Total answers: {len(answers)}")
+[?2004l[?2004h> 
+[?2004l[?2004h> assert len(questions) == len(answers), "Number of answers does not match number of questions"
+[?2004l[?2004h> 
+[?2004l[?2004h> q_dict = {q['qid']: q for q in questions}
+[?2004l[?2004h> 
+[?2004l[?2004h> for i, ans in enumerate(answers):
+[?2004l[?2004h>     qid = ans['qid']
+[?2004l[?2004h>     print(f"\nValidating qid: {qid}")
+[?2004l[?2004h>     assert qid in q_dict, f"qid {qid} not found in questions"
+[?2004l[?2004h>     q = q_dict[qid]
+[?2004l[?2004h>     
+[?2004l[?2004h>     # Check status
+[?2004l[?2004h>     print(f"  Status: {ans['status']}")
+[?2004l[?2004h>     assert ans['status'] in ["ANSWERED", "NOT_FOUND"], "Invalid status"
+[?2004l[?2004h>     
+[?2004l[?2004h>     # Check citations
+[?2004l[?2004h>     print(f"  Citations count: {len(ans['citations'])}")
+[?2004l[?2004h>     assert len(ans['citations']) >= 1, "At least one citation is required"
+[?2004l[?2004h>     
+[?2004l[?2004h>     for cit in ans['citations']:
+[?2004l[?2004h>         set_id = cit['set_id']
+[?2004l[?2004h>         passage_id = cit['passage_id']
+[?2004l[?2004h>         section = cit['section']
+[?2004l[?2004h>         supporting_quote = cit['supporting_quote']
+[?2004l[?2004h>         
+[?2004l[?2004h>         assert set_id == q['set_id'], f"set_id {set_id} does not match question set_id {q['set_id']}"
+[?2004l[?2004h>         assert set_id in labels, f"set_id {set_id} not found in labels"
+[?2004l[?2004h>         
+[?2004l[?2004h>         label = labels[set_id]
+[?2004l[?2004h>         passage_idx = int(passage_id.split('_')[1])
+[?2004l[?2004h>         assert passage_idx < len(label['chunks']), f"passage_id {passage_id} out of bounds for label"
+[?2004l[?2004h>         
+[?2004l[?2004h>         passage_text = label['chunks'][passage_idx]
+[?2004l[?2004h>         assert supporting_quote in passage_text, f"supporting_quote '{supporting_quote}' not found in passage text"
+[?2004l[?2004h>         print(f"    Citation {passage_id} is valid. Supporting quote found.")
+[?2004l[?2004h>         
+[?2004l[?2004h>     # Check structured fields
+[?2004l[?2004h>     print(f"  Structured fields: {ans['structured_fields']}")
+[?2004l[?2004h>     for field in q['required_output_fields']:
+[?2004l[?2004h>         if field.startswith('structured_fields.'):
+[?2004l[?2004h>             subfield = field.split('.')[1]
+[?2004l[?2004h>             assert subfield in ans['structured_fields'], f"Required subfield {subfield} not found in structured_fields"
+[?2004l[?2004h> 
+[?2004l[?2004h> print("\nAll checks passed successfully!")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@3646eb22abe5:/workspace# python3 validate.py
+[?2004lTotal questions: 6
+Total answers: 6
+
+Validating qid: near-miss-04f3afa658fdef
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0002 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'warnings', 'unsupported_topic': 'pharmacogenomic testing requirement'}
+
+Validating qid: near-miss-0c6ec72416151f
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0035 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'renal impairment', 'unsupported_topic': 'severe hepatic impairment'}
+
+Validating qid: near-miss-bd69d0bfb1fc7d
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0030 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'pregnancy', 'unsupported_topic': 'breastfeeding dose adjustment'}
+
+Validating qid: near-miss-d4ca1884aa8ab4
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0009 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'adverse reactions', 'unsupported_topic': 'therapeutic drug monitoring target range'}
+
+Validating qid: near-miss-52e5f8cac33c50
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0033 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'pediatric', 'unsupported_topic': 'geriatric maximum cumulative lifetime dose'}
+
+Validating qid: near-miss-5b5cb6a5249660
+  Status: NOT_FOUND
+  Citations count: 1
+    Citation PASSAGE_0006 is valid. Supporting quote found.
+  Structured fields: {'searched_topic': 'pregnancy', 'unsupported_topic': 'breastfeeding dose adjustment'}
+
+All checks passed successfully!
+[?2004hroot@3646eb22abe5:/workspace# rm explore.py print_chunks.py print_12hr.py generate_answers.py validate.py
+[?2004l[?2004hroot@3646eb22abe5:/workspace# 

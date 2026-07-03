@@ -1,0 +1,11 @@
+metric,value
+total_runs,21
+tasks,7
+strict_pass_runs,0
+strict_pass_tasks_at3,0
+aggregate_mean_reward,0.767019
+question_passes,41
+question_total,159
+strict_pass_at_1,0.0
+strict_pass_at_3,0.0
+question_pass_rate,0.257862

@@ -1,0 +1,190 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj["drug_name"] == "Lopinavir-Ritonavir":
+>             for i, chunk in enumerate(obj["chunks"]):
+>                 if "max" in chunk.lower() or "daily" in chunk.lower():
+>                     print(f"PASSAGE_{i:04d}: {chunk[:200]}")
+> '
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egi
+PASSAGE_0004: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine o
+PASSAGE_0006: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-associated resistance substitutions.
+- Once daily
+PASSAGE_0028: Adverse Reactions in Adults
+The safety of lopinavir and ritonavir has been investigated in about 2,600 patients in Phase II-IV clinical trials, of which about 700 have received a dose of 8
+00/200 mg (6
+PASSAGE_0034: Limit1
+Lopinavir and
+Ritonavir
+400/100 mgTwice Daily + d4T
++ 3TC
+(N=326)
+Nelfinavir
+750 mg Three Times Daily + d4T + 3TC
+(N=327)
+Lopinavir and Ritonavir
+Twice Daily + d4T + 3TC
+(N=100)
+Lopinavir and R
+PASSAGE_0037: Limit1
+Lopinavir and  Ritonavir
+400/100 mg Twice Daily + NVP + NRTIs (N=148)
+Investigator-Selected Protease Inhibitor(s) + NVP + NRTIs (N=140)
+Lopinavir and Ritonavir
+Twice Daily + NNRTI + NRTIs (N=12
+PASSAGE_0038: 2%
+2 Includes clinical laboratory data from patients receiving 400/100 mg twice daily (n=29) or 533/133 mg twice daily (n=28) for 84 weeks. Patients received lopin
+avir and ritonavir in combination wit
+PASSAGE_0041: Limit1
+Lopinavir and Ritonavir
+Twice Daily + RTIs(N=100)
+PASSAGE_0053: ↑ indinavir
+Decrease indinavir dose to 600 mg twice daily, when co-administered with lopinavir and ritonavir 400/100 mg twice daily. Lopinavir and ritonavir once daily has
+not been studied in combinat
+PASSAGE_0054: ↓ lopinavir
+Lopinavir and ritonavir once daily in combination with nelfinavir is not recommended .
+HIV-1 Protease Inhibitor:
+PASSAGE_0056: ↑ saquinavir
+The saquinavir dose is 1000 mg twice daily, when co-administered with lopinavir and ritonavir 400/100 mg twice daily. Lopinavir and ritonavir once daily has not
+ been studied in combinatio
+PASSAGE_0057: ↓ lopinavir
+Co-administration with tipranavir (500 mg twice daily) and ritonavir (200 mg twice daily) is not recommended.
+HIV CCR5 – Antagonist:
+PASSAGE_0058: ↑ maraviroc
+When co-administered, patients should receive 150 mg twice daily of maraviroc. For further details see complete prescribing information for maraviroc.
+Non-nucleoside Reverse Transcriptase
+PASSAGE_0059: ↓ lopinavir
+Increase the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administered with efavirenz or nevirapine. Lopinavi
+r and ritonavir once daily i
+PASSAGE_0066: ↓ lopinavir/ritonavir#
+Apalutamide is contraindicated due to potential for loss of virologic response and possible resistance to lopinavir and ritonavir or to the class of protease in
+hibitors .
+Avoid
+PASSAGE_0068: ↓ phenytoin
+Lopinavir and ritonavir may be less effective due to decreased lopinavir plasma concentrations in patients taking these agents concomitantly and should be used
+with caution.
+Lopinavir and
+PASSAGE_0074: ↑ colchicine
+Contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment .
+For patients with normal renal or hepatic function:
+Treat
+PASSAGE_0076: ↑ rifabutin and rifabutin metabolite
+Dosage reduction of rifabutin by at least 75% of the usual dose of 300 mg/day is recommended (i.e., a maximum dose of 150 mg every other day or three times per
+wee
+PASSAGE_0081: ↑ bosentan
+Co-administration of bosentan in patients on lopinavir and ritonavir:
+In patients who have been receiving lopinavir and ritonavir for at least 10 days, start bosentan at 62.5 mg once
+[... output limited to 10000 bytes; 69 interior bytes omitted ...]
+atric Use
+The safety, efficacy, and pharmacokinetic profiles of lopinavir and ritonavir in pediatric patients below the age of 14 days have not been established. Lopinavi
+r and ritonavir should
+PASSAGE_0108: 12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo and active (moxifloxacin 400 mg once daily) controlled crossover study
+PASSAGE_0110: b. Changes in AUC values
+Table 14. Steady-State Pharmacokinetic Parameters of Lopinavir, Mean ± SD
+a. 19 HIV-1 subjects, lopinavir and ritonavir 400/100 mg twice daily
+PASSAGE_0112: Pediatric Patients
+The 230/57.5 mg/m2 twice daily regimen without nevirapine and the 300/75 mg/m2 twice daily regimen with nevirapine provided lopinavir plasma concentrations simi
+lar to those obtained
+PASSAGE_0116: 85.8 ± 36.9c
+a. Lopinavir and ritonavir oral solution 300/75 mg/m2 twice daily without concomitant NNRTI therapy b. Lopinavir and ritonavir oral solution 230/57.5 mg/m2 twic
+e daily without nevirapine
+PASSAGE_0117: Pregnancy
+The C12h values of lopinavir were lower during the second and third trimester by approximately 40% as compared to post-partum in 12 HIV-infected pregnant women
+received lopinavir and ritonav
+PASSAGE_0119: Hepatic Impairment
+Multiple dosing of lopinavir and ritonavir 400/100 mg twice daily to HIV-1 and HCV co-infected patients with mild to moderate hepatic impairment (n = 12) result
+ed in a 30% increase
+PASSAGE_0120: Drug Interactions
+Lopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit CYP2D6, CYP2C9, CYP2C19, CYP2E1, CYP2B6 or
+CYP1A2 at clinically r
+PASSAGE_0122: Fosamprenavir2
+700 twice daily plus ritonavir 100 twice daily
+PASSAGE_0123: (0.28, 0.74)
+7 mg/kg or 4 mg/kg once daily;
+PASSAGE_0127: Fosamprenavir1
+700 twice daily plus ritonavir 100 twice daily
+PASSAGE_0128: Indinavir
+600 twice daily combo nonfasting vs. 800 three times daily alone fasting
+PASSAGE_0129: Nelfinavir
+1000 twice daily combo vs. 1250 twice daily alone
+PASSAGE_0130: Rifabutin
+150 once daily combo vs. 300 once daily alone
+PASSAGE_0137: <4 fold
+Isolates from patients previously treated with two or more protease inhibitors showed greater reductions in susceptibility to lopinavir, as described in the fol
+lowing section.
+Clinical Studies
+PASSAGE_0140: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis
+Lopinavir and ritonavir combination was evaluated for carcinogenic potential by oral gavage administration to mice and rats for
+PASSAGE_0142: Impairment of Fertility
+Lopinavir in combination with ritonavir at a 2:1 ratio produced no effects on fertility in male and female rats at levels of 10/5, 30/15 or 100/50 mg/kg/day. Ba
+sed on AUC measu
+PASSAGE_0143: 14.1 Adult Patients without Prior Antiretroviral Therapy
+Study 863:
+Lopinavir and Ritonavir
+Capsules twice daily + stavudine + lamivudine compared to nelfinavir three times daily + stavudine + lamivud
+PASSAGE_0145: 89
+2 Patients achieved HIV-1 RNA < 50 copies/mL at Week 48.
+Through 48 weeks of therapy, the mean increase from baseline in CD4+ cell count was 207 cells/mm3 for the lopinavir and ritonavir arm and 19
+PASSAGE_0146: Outcome
+Lopinavir and Ritonavir
+Once Daily + TDF + FTC(n = 333)
+Lopinavir and Ritonavir
+Twice Daily + TDF + FTC(n = 331)
+PASSAGE_0147: 11%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 50 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and other
+PASSAGE_0148: 14.2 Adult Patients with Prior Antiretroviral Therapy
+Study 888:
+Lopinavir and Ritonavir
+Capsules twice daily + nevirapine + NRTIs compared to investigator-selected protease inhibitor(s) + nevirapine
+PASSAGE_0150: 13%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and othe
+PASSAGE_0151: Outcome
+Lopinavir and Ritonavir
+Once Daily + NRTIs(n = 300)
+Lopinavir and Ritonavir
+Twice Daily + NRTIs(n = 299)
+PASSAGE_0154: 3%
+2 Includes patients who discontinued due to adverse events or death at any time from Day 1 through Week 48 if this resulted in no virologic data on treatment at
+ Week 48.
+3 Includes withdrawal of co
+PASSAGE_0155: 14.3 Other Studies Supporting Approval in Adult Patients
+Study 720:
+Lopinavir and Ritonavir
+twice daily + stavudine + lamivudine
+Study 765:
+Lopinavir and Ritonavir
+twice daily + nevirapine + NRTIs
+Stu
+PASSAGE_0156: 14.4 Pediatric Studies
+Study 1030 was an open-label, multicenter, dose-finding trial evaluating the pharmacokinetic profile, tolerability, safety and efficacy of lopinavir and ritonav
+ir oral solution
+PASSAGE_0159: 17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to acc
+root@c3dfb07a1d45:/workspace#

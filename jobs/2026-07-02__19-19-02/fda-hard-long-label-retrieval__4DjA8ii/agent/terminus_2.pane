@@ -1,0 +1,899 @@
+[?2004hroot@19fe3c8dfb02:/workspace# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@19fe3c8dfb02:/workspace# clear
+[?2004l[H[J[3J[?2004hroot@19fe3c8dfb02:/workspace# ls -la /workspace/data/public/
+[?2004ltotal 204
+drwxr-xr-x 2 root root   4096 Jul  2 20:40 [0m[01;34m.[0m
+drwxr-xr-x 3 root root   4096 Jul  2 20:40 [01;34m..[0m
+-rw-r--r-- 1 root root    379 Jul  2 20:40 README.md
+-rw-r--r-- 1 root root 191664 Jul  2 20:40 labels.jsonl
+-rw-r--r-- 1 root root   2232 Jul  2 20:40 questions.jsonl
+[?2004hroot@19fe3c8dfb02:/workspace# cat /workspace/data/public/README.md
+[?2004l# Public FDA Label Data
+
+This directory contains only public task inputs for `fda-hard-long-label-retrieval`.
+
+- `labels.jsonl` has full FDA label rows with `label_raw` and `chunks`.
+- `questions.jsonl` has 8 public questions.
+- Gold answers, references, citations, and curated context are not included here.
+
+Labels included:
+- Paxlovid (`8a99d6d6-fd9e-45bb-b1bf-48c7f761232a`)
+[?2004hroot@19fe3c8dfb02:/workspace# cat /workspace/data/public/questions.jsonl
+[?2004l{"drug_name": "Paxlovid", "qid": "b2531657ba5c7a78", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "6f12607a1ba14dd5", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "fbab4114f66e2dda", "question": "What important warnings or precautions are associated with Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "2d63e0a82215867f", "question": "What safety risks are listed for Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "cf74a5a8ac9b19de", "question": "What are the contraindications for Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "c4dc176c4827f0ef", "question": "Who should not take Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "000ecd1d6df50389", "question": "What is the recommended dosage regimen of Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "b54c25890c1ae3a6", "question": "How should Paxlovid be administered?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+[?2004hroot@19fe3c8dfb02:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         print('Keys:', data.keys())
+[?2004l[?2004h>         print('Drug name:', data.get('drug_name'))
+[?2004l[?2004h>         print('Set ID:', data.get('set_id'))
+[?2004l[?2004h>         print('Number of chunks:', len(data.get('chunks', [])))
+[?2004l[?2004h>         if data.get('chunks'):
+[?2004l[?2004h>             print('First chunk keys:', data['chunks'][0].keys())
+[?2004l[?2004h>             print('First chunk excerpt:', data['chunks'][0].get('text')[:200])
+[?2004l[?2004h>         break
+[?2004l[?2004h> "
+[?2004lKeys: dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+Drug name: Paxlovid
+Set ID: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+Number of chunks: 209
+Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+AttributeError: 'str' object has no attribute 'keys'
+[?2004hroot@19fe3c8dfb02:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         chunks = data.get('chunks', [])
+[?2004l[?2004h>         print('Type of chunks:', type(chunks))
+[?2004l[?2004h>         if chunks:
+[?2004l[?2004h>             print('Type of first chunk:', type(chunks[0]))
+[?2004l[?2004h>             print('First chunk:', chunks[0])
+[?2004l[?2004h>         break
+[?2004l[?2004h> "
+[?2004lType of chunks: <class 'list'>
+Type of first chunk: <class 'str'>
+First chunk: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PAXLOVID and 2) Determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring
+- Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed
+[?2004hroot@19fe3c8dfb02:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     data = json.loads(f.readline())
+[?2004l[?2004h>     for i, chunk in enumerate(data['chunks'][:5]):
+[?2004l[?2004h>         print(f'--- Chunk {i} ---')
+[?2004l[?2004h>         print(chunk[:300])
+[?2004l[?2004h> "
+[?2004l--- Chunk 0 ---
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medic
+--- Chunk 1 ---
+1 INDICATIONS AND USAGE
+PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high risk for progression to severe COVID-19, including hospitalization or death.
+--- Chunk 2 ---
+Limitations of Use
+PAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 .
+--- Chunk 3 ---
+2.1	Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for or
+--- Chunk 4 ---
+2.2	Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days.
+[?2004hroot@19fe3c8dfb02:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     data = json.loads(f.readline())
+[?2004l[?2004h>     print('Type of label_raw:', type(data.get('label_raw')))
+[?2004l[?2004h>     if isinstance(data.get('label_raw'), dict):
+[?2004l[?2004h>         print('label_raw keys:', data['label_raw'].keys())
+[?2004l[?2004h>     else:
+[?2004l[?2004h>         print('label_raw excerpt:', data['label_raw'][:500])
+[?2004l[?2004h> "
+[?2004lType of label_raw: <class 'str'>
+label_raw excerpt: ||PASSAGE_0000||
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PAXLOVID and 2) Determine if concomitant medications require a dose adjustmen
+[?2004hroot@19fe3c8dfb02:/workspace# python3 -c "
+[?2004l[?2004h> import json, re
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     data = json.loads(f.readline())
+[?2004l[?2004h>     raw = data['label_raw']
+[?2004l[?2004h>     passages = re.split(r'\|\|(PASSAGE_\d+)\|\|', raw)
+[?2004l[?2004h>     # The first element of split might be empty if it starts with the delimiter
+[?2004l[?2004h>     print('First 5 elements of split:', [p[:50] for p in passages[:10]])
+[?2004l[?2004h> "
+[?2004lFirst 5 elements of split: ['', 'PASSAGE_0000', '\nWARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLO', 'PASSAGE_0001', '\n1 INDICATIONS AND USAGE\nPAXLOVID is indicated for', 'PASSAGE_0002', '\nLimitations of Use\nPAXLOVID is not approved for u', 'PASSAGE_0003', '\n2.1\tImportant Dosage and Administration Informati', 'PASSAGE_0004']
+[?2004hroot@19fe3c8dfb02:/workspace# python3 -c "
+[?2004l[?2004h> import json, re
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     data = json.loads(f.readline())
+[?2004l[?2004h>     raw = data['label_raw']
+[?2004l[?2004h>     matches = re.findall(r'\|\|(PASSAGE_\d+)\|\|', raw)
+[?2004l[?2004h>     print('Number of PASSAGE_#### found:', len(matches))
+[?2004l[?2004h>     print('Number of chunks:', len(data['chunks']))
+[?2004l[?2004h>     # Let's check first 5 chunks vs raw passages
+[?2004l[?2004h>     for i in range(5):
+[?2004l[?2004h>         chunk = data['chunks'][i]
+[?2004l[?2004h>         # Find the passage text
+[?2004l[?2004h>         p_id = f'PASSAGE_{i:04d}'
+[?2004l[?2004h>         # Let's extract the text between ||PASSAGE_i|| and the next ||PASSAGE_j|| or end of string
+[?2004l[?2004h>         start_marker = f'||{p_id}||'
+[?2004l[?2004h>         next_p_id = f'PASSAGE_{i+1:04d}'
+[?2004l[?2004h>         end_marker = f'||{next_p_id}||'
+[?2004l[?2004h>         start_idx = raw.find(start_marker) + len(start_marker)
+[?2004l[?2004h>         end_idx = raw.find(end_marker) if i+1 < len(data['chunks']) else len(raw)
+[?2004l[?2004h>         p_text = raw[start_idx:end_idx].strip()
+[?2004l[?2004h>         print(f'Match {i}:', chunk.strip() == p_text)
+[?2004l[?2004h>         if chunk.strip() != p_text:
+[?2004l[?2004h>             print('Chunk:', repr(chunk[:100]))
+[?2004l[?2004h>             print('P_text:', repr(p_text[:100]))
+[?2004l[?2004h> "
+[?2004lNumber of PASSAGE_#### found: 209
+Number of chunks: 209
+Match 0: True
+Match 1: True
+Match 2: True
+Match 3: True
+Match 4: True
+[?2004hroot@19fe3c8dfb02:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/questions.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         print(json.dumps(json.loads(line), indent=2))
+[?2004l[?2004h> "
+[?2004l{
+  "drug_name": "Paxlovid",
+  "qid": "b2531657ba5c7a78",
+  "question": "What important drug interactions are noted for Paxlovid?",
+  "required_output_fields": [
+    "qid",
+    "status",
+    "answer",
+    "citations",
+    "structured_fields"
+  ],
+  "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+  "task_type": "factual"
+}
+{
+  "drug_name": "Paxlovid",
+  "qid": "6f12607a1ba14dd5",
+  "question": "Which medications should be avoided with Paxlovid?",
+  "required_output_fields": [
+    "qid",
+    "status",
+    "answer",
+    "citations",
+    "structured_fields"
+  ],
+  "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+  "task_type": "factual"
+}
+{
+  "drug_name": "Paxlovid",
+  "qid": "fbab4114f66e2dda",
+  "question": "What important warnings or precautions are associated with Paxlovid?",
+  "required_output_fields": [
+    "qid",
+    "status",
+    "answer",
+    "citations",
+    "structured_fields"
+  ],
+  "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+  "task_type": "factual"
+}
+{
+  "drug_name": "Paxlovid",
+  "qid": "2d63e0a82215867f",
+  "question": "What safety risks are listed for Paxlovid?",
+  "required_output_fields": [
+    "qid",
+    "status",
+    "answer",
+    "citations",
+    "structured_fields"
+  ],
+  "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+  "task_type": "factual"
+}
+{
+  "drug_name": "Paxlovid",
+  "qid": "cf74a5a8ac9b19de",
+  "question": "What are the contraindications for Paxlovid?",
+  "required_output_fields": [
+    "qid",
+    "status",
+    "answer",
+    "citations",
+    "structured_fields"
+  ],
+  "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+  "task_type": "factual"
+}
+{
+  "drug_name": "Paxlovid",
+  "qid": "c4dc176c4827f0ef",
+  "question": "Who should not take Paxlovid?",
+  "required_output_fields": [
+    "qid",
+    "status",
+    "answer",
+    "citations",
+    "structured_fields"
+  ],
+  "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+  "task_type": "factual"
+}
+{
+  "drug_name": "Paxlovid",
+  "qid": "000ecd1d6df50389",
+  "question": "What is the recommended dosage regimen of Paxlovid?",
+  "required_output_fields": [
+    "qid",
+    "status",
+    "answer",
+    "citations",
+    "structured_fields"
+  ],
+  "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+  "task_type": "factual"
+}
+{
+  "drug_name": "Paxlovid",
+  "qid": "b54c25890c1ae3a6",
+  "question": "How should Paxlovid be administered?",
+  "required_output_fields": [
+    "qid",
+    "status",
+    "answer",
+    "citations",
+    "structured_fields"
+  ],
+  "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+  "task_type": "factual"
+}
+[?2004hroot@19fe3c8dfb02:/workspace# find /workspace -maxdepth 3 -not -path '*/.*'
+[?2004l/workspace
+/workspace/data
+/workspace/data/public
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+[?2004hroot@19fe3c8dfb02:/workspace# cat << 'EOF' > search_label.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> import re
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data['set_id'] == '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a':
+[?2004l[?2004h>             label_data = data
+[?2004l[?2004h>             break
+[?2004l[?2004h> 
+[?2004l[?2004h> def search(pattern, case_insensitive=True):
+[?2004l[?2004h>     flags = re.IGNORECASE if case_insensitive else 0
+[?2004l[?2004h>     results = []
+[?2004l[?2004h>     for idx, chunk in enumerate(label_data['chunks']):
+[?2004l[?2004h>         if re.search(pattern, chunk, flags):
+[?2004l[?2004h>             results.append((idx, chunk))
+[?2004l[?2004h>     return results
+[?2004l[?2004h> 
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@19fe3c8dfb02:/workspace# python3 -i search_label.py
+[?2004l>>> print(len(search('interaction')))
+8
+>>> for idx, chunk in search('interaction'):
+...     print(f"=== PASSAGE_{idx:04d} ===")
+...     print(chunk[:200] + "...")
+... 
+=== PASSAGE_0000 ===
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potent...
+=== PASSAGE_0013 ===
+5.1	Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or ini...
+=== PASSAGE_0021 ===
+7.3	Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 ar...
+=== PASSAGE_0031 ===
+↑ rivaroxaban
+Increased bleeding risk with rivaroxaban. Avoid concomitant use.
+dabigatranSee Pharmacokinetics, Clinical Drug Interaction Studies (12.3)....
+=== PASSAGE_0133 ===
+Clinical Drug Interaction Studies
+Table 5 describes the effect of other drugs on the Cmax and AUC of nirmatrelvir.
+CarbamazepineCarbamazepine titrated up to 300 mg twice daily on Day 8 through Day 15 ...
+=== PASSAGE_0135 ===
+In Vitro Studies
+Cytochrome P450 (CYP) Enzymes:
+- Nirmatrelvir is a reversible and time-dependent inhibitor of CYP3A, but not an inhibitor CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, or CYP2D6. Nirmatrel...
+=== PASSAGE_0149 ===
+14.1	Efficacy in Subjects at High Risk of Progression to Severe COVID-19 (EPIC-HR)
+EPIC-HR (NCT04960202) was a Phase 2/3, randomized, double-blind, placebo-controlled trial in non-hospitalized symptom...
+=== PASSAGE_0173 ===
+Drug Interactions
+Inform patients that PAXLOVID may interact with certain drugs and is contraindicated for use with certain drugs; therefore, advise patients to report to their healthcare provider the...
+>>> print(label_data['chunks'][0])
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PAXLOVID and 2) Determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring
+- Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][13])
+5.1	Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A. Medications that induce CYP3A may decrease concentrations of PAXLOVID. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Loss of therapeutic effect of PAXLOVID and possible development of viral resistance.
+Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated with PAXLOVID. The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers.
+Prior to prescribing PAXLOVID, review all medications taken by the patient to assess potential drug-drug interactions and determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring (e.g., calcineurin inhibitors) . See Table 2 for clinically significant drug interactions, including contraindicated drugs. Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXLOVID.
+Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed .
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][21])
+7.3	Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXLOVID. The healthcare provider should consult other appropriate resources such as the prescribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor such as ritonavir.
+>>> print(len(search('avoid')))
+15
+>>> print(len(search('contraindicated')))
+30
+>>> print(len(search('contraindication')))
+1
+>>> for idx, chunk in search('contraindicated')[:10]:
+...     print(f"=== PASSAGE_{idx:04d} ===")
+...     print(chunk[:250] + "...")
+... 
+=== PASSAGE_0012 ===
+4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) ...
+=== PASSAGE_0013 ===
+5.1	Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in pat...
+=== PASSAGE_0019 ===
+7.1	Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID with drugs that are primarily metabolized ...
+=== PASSAGE_0021 ===
+7.3	Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered a comprehensive list ...
+=== PASSAGE_0022 ===
+↑ alfuzosin
+Co-administration contraindicated due to potential hypotension ....
+=== PASSAGE_0024 ===
+↑ ranolazine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions ....
+=== PASSAGE_0025 ===
+↑ antiarrhythmic
+Co-administration contraindicated due to potential for cardiac arrhythmias ....
+=== PASSAGE_0027 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+=== PASSAGE_0034 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+=== PASSAGE_0041 ===
+↑ colchicine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment ....
+>>> print(label_data['chunks'][12])
+4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.
+PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance. There are certain other drugs for which concomitant use with PAXLOVID should be avoided and/or dose adjustment, interruption, or therapeutic monitoring is recommended. Drugs listed in this section are a guide and not considered a comprehensive list of all drugs that may be contraindicated with PAXLOVID. The healthcare provider should consult other appropriate resources such as the prescribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor like PAXLOVID :
+- ➢ Drugs that are primarily metabolized by CYP3A for which elevated concentrations are associated with serious and/or life-threatening reactions
+- Alpha 1-adrenoreceptor antagonist: alfuzosin
+- Antianginal: ranolazine
+- Antiarrhythmic: amiodarone, dronedarone, flecainide, propafenone, quinidine
+- Anti-gout: colchicine (in patients with renal and/or hepatic impairment
+- Antipsychotics: lurasidone, pimozide
+- Benign prostatic hyperplasia agents: silodosin
+- Cardiovascular agents: eplerenone, ivabradine
+- Ergot derivatives: dihydroergotamine, ergotamine, methylergonovine
+- HMG-CoA reductase inhibitors: lovastatin, simvastatin (these drugs can be temporarily discontinued to allow PAXLOVID use
+- Immunosuppressants: voclosporin
+- Microsomal triglyceride transfer protein inhibitor: lomitapide
+- Migraine medications: eletriptan, ubrogepant
+- Mineralocorticoid receptor antagonists: finerenone
+- Opioid antagonists: naloxegol
+- PDE5 inhibitor: sildenafil (Revatio ® ) when used for pulmonary arterial hypertension (PAH)
+- Sedative/hypnotics: triazolam, oral midazolam
+- Serotonin receptor 1A agonist/serotonin receptor 2A antagonist: flibanserin
+- Vasopressin receptor antagonists: tolvaptan
+- ➢ Drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance. PAXLOVID cannot be started immediately after discontinuation of any of the following medications due to the delayed offset of the recently discontinued CYP3A inducer
+- Anticancer drugs: apalutamide , enzalutamide
+- Anticonvulsant: carbamazepine, phenobarbital, primidone, phenytoin
+- Antimycobacterials: rifampin, rifapentine
+- Cystic fibrosis transmembrane conductance regulator potentiators: lumacaftor/ivacaftor
+- Herbal products: St. John's Wort (
+>>> print(len(search('warning')))
+1
+>>> print(len(search('precaution')))
+0
+>>> for idx, chunk in enumerate(label_data['chunks']):
+...     if 'WARNING' in chunk or 'PRECAUTION' in chunk or chunk.startswith('5 '):
+...         print(f"{idx}: {chunk[:100]}...")
+... 
+0: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A i...
+>>> print('warnings:', [idx for idx, chunk in search('warnings')])
+warnings: []
+>>> print('precautions:', [idx for idx, chunk in search('precautions')])
+precautions: []
+>>> print('5\\.:', [idx for idx, chunk in search('5\\.')])
+5\.: [13, 14, 15, 16, 18, 115, 124, 127, 140, 141, 142, 143, 151, 175, 177, 184]
+>>> for idx in range(13, 19):
+...     print(f"{idx}: {label_data['chunks'][idx][:120]}")
+... 
+13: 5.1	Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a stron
+14: 5.2	Hypersensitivity Reactions
+Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Joh
+15: 5.3	Hepatotoxicity
+Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving
+16: 5.4	Risk of HIV-1 Resistance Development
+Because nirmatrelvir is co-administered with ritonavir, there may be a risk of 
+17: 6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Hy
+18: 6.1	Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction r
+>>> print(label_data['chunks'][14])
+5.2	Hypersensitivity Reactions
+Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported with PAXLOVID . If signs and symptoms of a clinically significant hypersensitivity reaction or anaphylaxis occur, immediately discontinue PAXLOVID and initiate appropriate medications and/or supportive care.
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][15])
+5.3	Hepatotoxicity
+Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir. Therefore, caution should be exercised when administering PAXLOVID to patients with pre-existing liver diseases, liver enzyme abnormalities, or hepatitis.
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][16])
+5.4	Risk of HIV-1 Resistance Development
+Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection .
+>>> print(label_data['chunks'][17])
+6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Hypersensitivity reactions
+>>> print(label_data['chunks'][18])
+6.1	Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The safety of PAXLOVID is based on two Phase 2/3 randomized, placebo-controlled trials in symptomatic adult subjects 18 years of age and older with a laboratory confirmed diagnosis of SARS-CoV-2 infection. Subjects in both studies received PAXLOVID (nirmatrelvir/ritonavir 300 mg/100 mg) or placebo every 12 hours for 5 days for the treatment of mild-to-moderate COVID-19 within 5 days of symptom onset :
+- Trial C4671005 (EPIC-HR) enrolled subjects who were at high risk for progression to severe disease.
+- Trial C4671002 (EPIC-SR) enrolled subjects who were at standard risk for progression to severe disease (previously unvaccinated subjects at standard risk or fully vaccinated subjects with at least 1 risk factor for progression to severe disease).
+Adverse reactions were those reported while subjects were on study medication and through 28 days after the last dose of study treatment.
+In Trial C4671005 (EPIC-HR), 1,038 subjects received PAXLOVID and 1,053 subjects received placebo. The most common adverse reactions (≥1% incidence in the PAXLOVID group and occurring at a greater frequency than in the placebo group) were dysgeusia (5% and <1%, respectively) and diarrhea (3% and 2%, respectively).
+Among vaccinated or unvaccinated subjects at standard risk or fully vaccinated subjects with at least 1 risk factor for progression to severe disease in Trial C4671002 (EPIC-SR), 540 subjects received PAXLOVID and 528 subjects received placebo. The adverse reactions observed were consistent with those observed in EPIC-HR.
+Trial C4671028 (EPIC-SRI) was a Phase 1, open-label trial that evaluated the effects of severe renal impairment on the pharmacokinetics, safety, and tolerability of PAXLOVID in non-hospitalized adult participants with COVID-19 and severe renal impairment. A total of 15 subjects with severe renal impairment were enrolled in this trial, with 12 subjects receiving intermittent hemodialysis and 3 subjects not on hemodialysis. Subjects received nirmatrelvir/ritonavir 300 mg/100 mg once on Day 1 followed by nirmatrelvir/ritonavir 150 mg/100 mg once daily from Days 2-5. The safety profile of PAXLOVID in subjects with severe renal impairment, including those requiring hemodialysis, was consistent with the safety profile observed in the Phase 2/3 randomized, placebo-controlled trials.
+Emergency Use Authorization Experience in Subjects with COVID-19
+The following adverse reactions have been identified during use of PAXLOVID under Emergency Use Authorization.
+Immune System Disorders: Anaphylaxis, hypersensitivity reactions
+Skin and Subcutaneous Tissue Disorders: Toxic epidermal necrolysis, Stevens-Johnson syndrome
+Nervous System Disorders: Headache
+Vascular Disorders: Hypertension
+Gastrointestinal Disorders: Abdominal pain, nausea, vomiting
+General Disorders and Administration Site Conditions: Malaise
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][19])
+7.1	Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID with drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or OATP1B1 may result in increased plasma concentrations of such drugs and increase the risk of adverse events. Co-administration of PAXLOVID with drugs highly dependent on CYP3A for clearance and for which elevated plasma concentrations are associated with serious and/or life-threatening events is contraindicated . Co-administration with other CYP3A substrates may require a dose adjustment or additional monitoring as shown in Table 2.
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][20])
+7.2	Potential for Other Drugs to Affect PAXLOVID
+Nirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A may decrease nirmatrelvir and ritonavir plasma concentrations and reduce PAXLOVID therapeutic effect .
+>>> print('dosage:', [idx for idx, chunk in search('dosage')])
+dosage: [3, 4, 5, 10, 11, 57, 60, 61, 76, 85, 88, 92, 93, 94, 97, 110, 111, 112, 118, 174]
+>>> print('administration:', [idx for idx, chunk in search('administration')])
+administration: [3, 18, 19, 22, 24, 25, 27, 29, 30, 33, 34, 37, 41, 45, 48, 49, 50, 51, 54, 55, 58, 59, 63, 68, 69, 72, 74, 77, 79, 80, 81, 83, 89, 90, 95, 97, 98, 99, 100, 104, 118, 128, 131, 132, 176, 184]
+>>> print('2\\.:', [idx for idx, chunk in search('2\\.')])
+2\.: [3, 4, 5, 10, 19, 31, 102, 116, 117, 118, 136, 137, 140, 144, 149, 153, 155, 176]
+>>> for idx in range(3, 12):
+...     print(f"=== PASSAGE_{idx:04d} ===")
+...     print(label_data['chunks'][idx][:250] + "...")
+... 
+=== PASSAGE_0003 ===
+2.1	Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAX...
+=== PASSAGE_0004 ===
+2.2	Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days....
+=== PASSAGE_0005 ===
+2.3 Dosage in Patients with Renal Impairment
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID. Providers should counsel patients about renal dosing instructions .
+No dosage adjustment is recommended in patients ...
+=== PASSAGE_0006 ===
+Days of Treatment
+Dose and Dose Frequency
+PAXLOVID should be administered at approximately the same time each day for 5 days.
+Moderate renal impairment (eGFR ≥30 to <60 mL/min)...
+=== PASSAGE_0007 ===
+Days 1-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily
+Severe renal impairment (eGFR <30 mL/min) including those requiring hemodialysis
+On days of hemodialysis, the PAXLOVID dose should be administered ...
+=== PASSAGE_0008 ===
+Day 1
+300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) once...
+=== PASSAGE_0009 ===
+Days 2-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) once daily...
+=== PASSAGE_0010 ===
+2.4	Use in Patients with Hepatic Impairment
+No dosage adjustment is needed in patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment.
+No pharmacokinetic or safety data are available regarding the use of nirmatrelv...
+=== PASSAGE_0011 ===
+3 DOSAGE FORMS AND STRENGTHS
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets .
+- Nirmatrelvir is supplied as oval, pink immediate-release, film-coated tablets debossed with "PFE" on one side and "3CL" on the other side. Each table...
+>>> print(label_data['chunks'][3])
+2.1	Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 150 mg;100 mg for patients with moderate renal impairment
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg (Day 1) and 150 mg;100 mg (Days 2-5) for patients with severe renal impairment
+Nirmatrelvir must be co-administered with ritonavir. Failure to correctly co-administer nirmatrelvir with ritonavir may result in plasma levels of nirmatrelvir that are insufficient to achieve the desired therapeutic effect.
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID . Completion of the full 5-day treatment course and continued isolation in accordance with public health recommendations are important to maximize viral clearance and minimize transmission of SARS-CoV-2.
+The 5-day treatment course of PAXLOVID should be initiated as soon as possible after a diagnosis of COVID-19 has been made, and within 5 days of symptom onset even if baseline COVID-19 symptoms are mild. Should a patient require hospitalization due to severe or critical COVID-19 after starting treatment with PAXLOVID, the patient should complete the full 5-day treatment course per the healthcare provider's discretion.
+If the patient misses a dose of PAXLOVID within 8 hours of the time it is usually taken, the patient should take it as soon as possible and resume the normal dosing schedule. If the patient misses a dose by more than 8 hours, the patient should not take the missed dose and instead take the next dose at the regularly scheduled time. The patient should not double the dose to make up for a missed dose.
+PAXLOVID (both nirmatrelvir and ritonavir tablets) can be taken with or without food . The tablets should be swallowed whole and not chewed, broken, or crushed.
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][4])
+2.2	Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days.
+>>> print(label_data['chunks'][5])
+2.3 Dosage in Patients with Renal Impairment
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID. Providers should counsel patients about renal dosing instructions .
+No dosage adjustment is recommended in patients with mild renal impairment estimated glomerular filtration rate (eGFR) ≥60 to <90 mL/min].
+In patients with moderate renal impairment (eGFR ≥30 to <60 mL/min) or with severe renal impairment (eGFR <30 mL/min) including those requiring hemodialysis, the dosage of PAXLOVID should be reduced as shown in Table 1. PAXLOVID should be administered at approximately the same time each day for 5 days. On days patients with severe renal impairment undergo hemodialysis, the PAXLOVID dose should be administered after hemodialysis .
+Table 1: Recommended Dose and Regimen for Patients with Renal Impairment
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][6])
+Days of Treatment
+Dose and Dose Frequency
+PAXLOVID should be administered at approximately the same time each day for 5 days.
+Moderate renal impairment (eGFR ≥30 to <60 mL/min)
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][7])
+Days 1-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily
+Severe renal impairment (eGFR <30 mL/min) including those requiring hemodialysis
+On days of hemodialysis, the PAXLOVID dose should be administered after hemodialysis.
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][8])
+Day 1
+300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) once
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][9])
+Days 2-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) once daily
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][10])
+2.4	Use in Patients with Hepatic Impairment
+No dosage adjustment is needed in patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment.
+No pharmacokinetic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pugh Class C) hepatic impairment; therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment .
+>>> exit()
+[?2004hroot@19fe3c8dfb02:/workspace# cat << 'EOF' > verify_quotes.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     data = json.loads(f.readline())
+[?2004l[?2004h>     chunks = data['chunks']
+[?2004l[?2004h> 
+[?2004l[?2004h> citations_to_check = [
+[?2004l[?2004h>     (0, "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events"),
+[?2004l[?2004h>     (13, "The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers."),
+[?2004l[?2004h>     (12, "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance."),
+[?2004l[?2004h>     (13, "Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A."),
+[?2004l[?2004h>     (14, "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported with PAXLOVID ."),
+[?2004l[?2004h>     (15, "Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir."),
+[?2004l[?2004h>     (16, "Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection ."),
+[?2004l[?2004h>     (18, "The most common adverse reactions (≥1% incidence in the PAXLOVID group and occurring at a greater frequency than in the placebo group) were dysgeusia (5% and <1%, respectively) and diarrhea (3% and 2%, respectively)."),
+[?2004l[?2004h>     (12, "PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product."),
+[?2004l[?2004h>     (10, "No pharmacokinetic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pugh Class C) hepatic impairment; therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment ."),
+[?2004l[?2004h>     (4, "The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days."),
+[?2004l[?2004h>     (7, "150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily"),
+[?2004l[?2004h>     (3, "PAXLOVID (both nirmatrelvir and ritonavir tablets) can be taken with or without food . The tablets should be swallowed whole and not chewed, broken, or crushed.")
+[?2004l[?2004h> ]
+[?2004l[?2004h> 
+[?2004l[?2004h> all_ok = True
+[?2004l[?2004h> for idx, quote in citations_to_check:
+[?2004l[?2004h>     passage_text = chunks[idx]
+[?2004l[?2004h>     # Clean up whitespace in both to avoid mismatch due to newlines/tabs
+[?2004l[?2004h>     p_clean = " ".join(passage_text.split())
+[?2004l[?2004h>     q_clean = " ".join(quote.split())
+[?2004l[?2004h>     if q_clean in p_clean:
+[?2004l[?2004h>         print(f"PASSAGE_{idx:04d}: Match OK")
+[?2004l[?2004h>     else:
+[?2004l[?2004h>         print(f"PASSAGE_{idx:04d}: MISMATCH!")
+[?2004l[?2004h>         print(f"  Expected: {repr(q_clean)}")
+[?2004l[?2004h>         print(f"  Found:    {repr(p_clean[:200])}...")
+[?2004l[?2004h>         all_ok = False
+[?2004l[?2004h> 
+[?2004l[?2004h> if all_ok:
+[?2004l[?2004h>     print("All quotes are valid exact substrings!")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@19fe3c8dfb02:/workspace# python3 verify_quotes.py
+[?2004lPASSAGE_0000: Match OK
+PASSAGE_0013: Match OK
+PASSAGE_0012: Match OK
+PASSAGE_0013: Match OK
+PASSAGE_0014: Match OK
+PASSAGE_0015: Match OK
+PASSAGE_0016: Match OK
+PASSAGE_0018: Match OK
+PASSAGE_0012: Match OK
+PASSAGE_0010: Match OK
+PASSAGE_0004: Match OK
+PASSAGE_0007: Match OK
+PASSAGE_0003: Match OK
+All quotes are valid exact substrings!
+[?2004hroot@19fe3c8dfb02:/workspace# cat << 'EOF' > generate_answers.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> # Load labels
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     label_data = json.loads(f.readline())
+[?2004l[?2004h>     chunks = label_data['chunks']
+[?2004l[?2004h>     set_id = label_data['set_id']
+[?2004l[?2004h> 
+[?2004l[?2004h> # Helper to find exact substring in chunk to ensure verbatim match
+[?2004l[?2004h> def get_exact_quote(chunk_idx, substring):
+[?2004l[?2004h>     chunk_text = chunks[chunk_idx]
+[?2004l   [?2004h>     # find the substring ignoring whitespace differences, then return the exact portion from chunk_text
+[?2004l[?2004h>     import re
+[?2004l[?2004h>     # escape special characters in substring, but allow any whitespace sequence to match any other
+[?2004l[?2004h>     words = substring.split()
+[?2004l[?2004h>     pattern = r'\s+'.join(re.escape(w) for w in words)
+[?2004l[?2004h>     match = re.search(pattern, chunk_text)
+[?2004lg[?2004h>     if match:
+[?2004l[?2004h>         return match.group(0)
+[?2004lor); 2) Hypersensitivity react[?2004h>     else:
+[?2004l[?2004h>         raise ValueError(f"Could not find substring in chunk {chunk_idx}")
+[?2004lermal necrol[?2004h> 
+[?2004l[?2004h> answers_data = {
+[?2004l[?2004h>     "answers": [
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "qid": "b2531657ba5c7a78",
+[?2004lsa[?2004h>             "status": "ANSWERED",
+[?2004li[?2004h>             "answer": "Paxlovid includes ritonavir, which is a strong CYP3A inhibitor. This can lead to increased plasma concentrations of concomitant medications metabolized by CYP3A, potentially resulting in severe, life-threatening, or fatal events. Conversely, medications that are strong CYP3A inducers can decrease Paxlovid concentrations, potentially leading to a loss of therapeutic effect and the development of viral resistance. Before prescribing Paxlovid, all medications should be reviewed to assess potential drug-drug interactions, and to determine if dose adjustment, interruption, and/or additional monitoring is needed. The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers.",
+[?2004l[?2004h>             "citations": [
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0000",
+[?2004l[?2004h>                     "section": "WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID",
+[?2004ln reactions (including toxic[?2004h>                     "supporting_quote": get_exact_quote(0, "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events")
+[?2004l[?2004h>                 },
+[?2004l[?2004h>                 {
+[?2004lHepa[?2004h>                     "set_id": set_id,
+[?2004ltotoxicity",
+                    "supp[?2004h>                     "passage_id": "PASSAGE_0013",
+[?2004l[?2004h>                     "section": "5.1 Risk of Serious Adverse Reactions Due to Drug Interactions",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(13, "The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers.")
+[?2004l[?2004h>                 }
+[?2004l[?2004h>             ],
+[?2004l[?2004h>             "structured_fields": {}
+[?2004lt[?2004h>         },
+[?2004lay be[?2004h>         {
+[?2004l[?2004h>             "qid": "6f12607a1ba14dd5",
+[?2004l[?2004h>             "status": "ANSWERED",
+[?2004l[?2004h>             "answer": "Medications that should be avoided (or are contraindicated) with Paxlovid include: drugs primarily metabolized by CYP3A for which elevated concentrations are associated with serious/life-threatening reactions (such as alfuzosin, ranolazine, amiodarone, dronedarone, flecainide, propafenone, quinidine, colchicine in renal/hepatic impairment, lurasidone, pimozide, silodosin, eplerenone, ivabradine, dihydroergotamine, ergotamine, methylergonovine, lovastatin, simvastatin, voclosporin, lomitapide, eletriptan, ubrogepant, finerenone, naloxegol, sildenafil for PAH, triazolam, oral midazolam, flibanserin, and tolvaptan), and strong CYP3A inducers where reduced Paxlovid concentrations may lead to loss of efficacy or resistance (such as apalutamide, enzalutamide, carbamazepine, phenobarbital, primidone, phenytoin, rifampin, rifapentine, lumacaftor/ivacaftor, and St. John's Wort).",
+[?2004l[?2004h>             "citations": [
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0012",
+[?2004lTri[?2004h>                     "section": "4 CONTRAINDICATIONS",
+[?2004lquote[?2004h>                     "supporting_quote": get_exact_quote(12, "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance.")
+[?2004l[?2004h>                 }
+[?2004lo[?2004h>             ],
+[?2004l_[?2004h>             "structured_fields": {}
+[?2004lin[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "qid": "fbab4114f66e2dda",
+[?2004l[?2004h>             "status": "ANSWERED",
+[?2004l[?2004h>             "answer": "Important warnings and precautions associated with Paxlovid include: 1) Risk of serious adverse reactions due to drug interactions (as Paxlovid contains ritonavir, a strong CYP3A inhibitor); 2) Hypersensitivity reactions, including anaphylaxis and serious skin reactions such as toxic epidermal necrolysis (TEN) and Stevens-Johnson syndrome; 3) Hepatotoxicity, including hepatic transaminase elevations, clinical hepatitis, and jaundice; and 4) Risk of HIV-1 resistance development in individuals with uncontrolled or undiagnosed HIV-1 infection due to the ritonavir component.",
+[?2004l[?2004h>             "citations": [
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0013",
+[?2004lini[?2004h>                     "section": "5.1 Risk of Serious Adverse Reactions Due to Drug Interactions",
+[?2004lilodosin, eplerenone, ivabra[?2004h>                     "supporting_quote": get_exact_quote(13, "Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A.")
+[?2004l[?2004h>                 },
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004lde, enzalutami[?2004h>                     "passage_id": "PASSAGE_0014",
+[?2004l[?2004h>                     "section": "5.2 Hypersensitivity Reactions",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(14, "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported with PAXLOVID .")
+[?2004l[?2004h>                 },
+[?2004l12, "P[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0015",
+[?2004l[?2004h>                     "section": "5.3 Hepatotoxicity",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(15, "Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir.")
+[?2004l[?2004h>                 },
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0016",
+[?2004l[?2004h>                     "section": "5.4 Risk of HIV-1 Resistance Development",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(16, "Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection .")
+[?2004l[?2004h>                 }
+[?2004l[?2004h>             ],
+[?2004l[?2004h>             "structured_fields": {}
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004lrment (C[?2004h>             "qid": "2d63e0a82215867f",
+[?2004l not [?2004h>             "status": "ANSWERED",
+[?2004lion du[?2004h>             "answer": "The safety risks listed for Paxlovid include drug-drug interactions (which can lead to serious, life-threatening, or fatal events), hypersensitivity reactions (including anaphylaxis, toxic epidermal necrolysis, and Stevens-Johnson syndrome), hepatotoxicity (hepatic transaminase elevations, clinical hepatitis, and jaundice), and risk of HIV-1 resistance development. In clinical trials, the most common adverse reactions (>=1% incidence and more frequent than placebo) were dysgeusia and diarrhea. Other post-authorization adverse reactions include headache, hypertension, abdominal pain, nausea, vomiting, and malaise.",
+[?2004l[?2004h>             "citations": [
+[?2004l_[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0018",
+[?2004l[?2004h>                     "section": "6.1 Clinical Trials Experience",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(18, "The most common adverse reactions (≥1% incidence in the PAXLOVID group and occurring at a greater frequency than in the placebo group) were dysgeusia (5% and <1%, respectively) and diarrhea (3% and 2%, respectively).")
+[?2004l[?2004h>                 },
+[?2004l[?2004h>                 {
+[?2004l     [?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0014",
+[?2004l[?2004h>                     "section": "5.2 Hypersensitivity Reactions",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(14, "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported with PAXLOVID .")
+[?2004l[?2004h>                 }
+[?2004l[?2004h>             ],
+[?2004l nirmat[?2004h>             "structured_fields": {}
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "qid": "cf74a5a8ac9b19de",
+[?2004l[?2004h>             "status": "ANSWERED",
+[?2004l[?2004h>             "answer": "Paxlovid is contraindicated in: 1) Patients with a history of clinically significant hypersensitivity reactions (e.g., toxic epidermal necrolysis, Stevens-Johnson syndrome) to its active ingredients (nirmatrelvir or ritonavir) or other components; 2) Concomitant use with drugs primarily metabolized by CYP3A for which elevated concentrations are associated with serious and/or life-threatening reactions (e.g., alfuzosin, ranolazine, amiodarone, dronedarone, flecainide, propafenone, quinidine, colchicine in renal/hepatic impairment, lurasidone, pimozide, silodosin, eplerenone, ivabradine, dihydroergotamine, ergotamine, methylergonovine, lovastatin, simvastatin, voclosporin, lomitapide, eletriptan, ubrogepant, finerenone, naloxegol, sildenafil for PAH, triazolam, oral midazolam, flibanserin, and tolvaptan); and 3) Concomitant use with strong CYP3A inducers where significantly reduced plasma concentrations of Paxlovid may cause loss of virologic response and possible resistance (e.g., apalutamide, enzalutamide, carbamazepine, phenobarbital, primidone, phenytoin, rifampin, rifapentine, lumacaftor/ivacaftor, and St. John's Wort).",
+[?2004l[?2004h>             "citations": [
+[?2004l[?2004h>                 {
+[?2004lne 1[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0012",
+[?2004l[?2004h>                     "section": "4 CONTRAINDICATIONS",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(12, "PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.")
+[?2004ld a[?2004h>                 }
+[?2004l[?2004h>             ],
+[?2004l after diagnosi[?2004h>             "structured_fields": {}
+[?2004ls[?2004h>         },
+[?2004l onse[?2004h>         {
+[?2004lt. If a do[?2004h>             "qid": "c4dc176c4827f0ef",
+[?2004l[?2004h>             "status": "ANSWERED",
+[?2004l[?2004h>             "answer": "Paxlovid should not be taken by: 1) Patients with a history of clinically significant hypersensitivity reactions (such as toxic epidermal necrolysis or Stevens-Johnson syndrome) to nirmatrelvir, ritonavir, or any other component of the product; 2) Patients taking any of the contraindicated medications that are highly dependent on CYP3A for clearance or are strong CYP3A inducers; and 3) Patients with severe hepatic impairment (Child-Pugh Class C), as Paxlovid is not recommended for this population due to a lack of pharmacokinetic or safety data.",
+[?2004l[?2004h>             "citations": [
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l                 "set_id"[?2004h>                     "passage_id": "PASSAGE_0012",
+[?2004l[?2004h>                     "section": "4 CONTRAINDICATIONS",
+[?2004l.2 Recommen[?2004h>                     "supporting_quote": get_exact_quote(12, "PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.")
+[?2004l[?2004h>                 },
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0010",
+[?2004l[?2004h>                     "section": "2.4 Use in Patients with Hepatic Impairment",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(10, "No pharmacokinetic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pugh Class C) hepatic impairment; therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment .")
+[?2004l[?2004h>                 }
+[?2004l[?2004h>             ],
+[?2004l[?2004h>             "structured_fields": {}
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "qid": "000ecd1d6df50389",
+[?2004l[?2004h>             "status": "ANSWERED",
+[?2004l[?2004h>             "answer": "The standard recommended dosage for Paxlovid is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) taken together orally twice daily (in the morning and at bedtime) for 5 days. For patients with moderate renal impairment (eGFR >=30 to <60 mL/min), the dose is reduced to 150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily for 5 days. For severe renal impairment (eGFR <30 mL/min), the dosage is 300 mg nirmatrelvir with 100 mg ritonavir on Day 1, followed by 150 mg nirmatrelvir with 100 mg ritonavir once daily on Days 2-5 (administered after hemodialysis on dialysis days). No dosage adjustment is needed for mild renal impairment or mild/moderate hepatic impairment. Paxlovid is not recommended in severe hepatic impairment or severe renal impairment without dose adjustment.",
+[?2004l[?2004h>             "citations": [
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0004",
+[?2004l[?2004h>                     "section": "2.2 Recommended Dosage",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(4, "The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days.")
+[?2004l[?2004h>                 },
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0007",
+[?2004l[?2004h>                     "section": "2.3 Dosage in Patients with Renal Impairment",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(7, "150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily")
+[?2004l[?2004h>                 }
+[?2004l[?2004h>             ],
+[?2004l[?2004h>             "structured_fields": {}
+[?2004l[?2004h>         },
+[?2004l[?2004h>         {
+[?2004l[?2004h>             "qid": "b54c25890c1ae3a6",
+[?2004l[?2004h>             "status": "ANSWERED",
+[?2004l[?2004h>             "answer": "Paxlovid consists of nirmatrelvir tablets co-packaged with ritonavir tablets, which must be taken together. The tablets can be taken with or without food. They must be swallowed whole and should not be chewed, broken, or crushed. Treatment should be initiated as soon as possible after diagnosis of COVID-19 and within 5 days of symptom onset. If a dose is missed within 8 hours of the usual time, it should be taken as soon as possible; if missed by more than 8 hours, the missed dose should be skipped and the next dose taken at the regular time (do not double the dose).",
+[?2004l[?2004h>             "citations": [
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0003",
+[?2004l[?2004h>                     "section": "2.1 Important Dosage and Administration Information",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(3, "PAXLOVID (both nirmatrelvir and ritonavir tablets) can be taken with or without food . The tablets should be swallowed whole and not chewed, broken, or crushed.")
+[?2004l[?2004h>                 },
+[?2004l[?2004h>                 {
+[?2004l[?2004h>                     "set_id": set_id,
+[?2004l[?2004h>                     "passage_id": "PASSAGE_0004",
+[?2004l[?2004h>                     "section": "2.2 Recommended Dosage",
+[?2004l[?2004h>                     "supporting_quote": get_exact_quote(4, "The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days.")
+[?2004l[?2004h>                 }
+[?2004l[?2004h>             ],
+[?2004l[?2004h>             "structured_fields": {}
+[?2004l[?2004h>         }
+[?2004l[?2004h>     ]
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # Write output to /workspace/answers.json
+[?2004l[?2004h> with open('/workspace/answers.json', 'w') as f:
+[?2004l[?2004h>     json.dump(answers_data, f, indent=2)
+[?2004l[?2004h> 
+[?2004l[?2004h> print("Answers successfully written to /workspace/answers.json!")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@19fe3c8dfb02:/workspace# python3 generate_answers.py
+[?2004lAnswers successfully written to /workspace/answers.json!
+[?2004hroot@19fe3c8dfb02:/workspace# cat << 'EOF' > validate_answers.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/answers.json') as f:
+[?2004l[?2004h>     data = json.load(f)
+[?2004l[?2004h> 
+[?2004l[?2004h> assert "answers" in data, "Missing 'answers' root key"
+[?2004l[?2004h> answers = data["answers"]
+[?2004l[?2004h> print(f"Found {len(answers)} answers")
+[?2004l[?2004h> assert len(answers) == 8, f"Expected exactly 8 answers, got {len(answers)}"
+[?2004l[?2004h> 
+[?2004l[?2004h> qids = set()
+[?2004l[?2004h> required_keys = {"qid", "status", "answer", "citations", "structured_fields"}
+[?2004l[?2004h> citation_keys = {"set_id", "passage_id", "section", "supporting_quote"}
+[?2004l[?2004h> 
+[?2004l[?2004h> for idx, ans in enumerate(answers):
+[?2004l[?2004h>     assert isinstance(ans, dict), f"Answer at index {idx} is not a dict"
+[?2004l[?2004h>     assert required_keys.issubset(ans.keys()), f"Answer {idx} missing keys: {required_keys - ans.keys()}"
+[?2004l[?2004h>     assert ans["status"] in {"ANSWERED", "NOT_FOUND"}, f"Invalid status {ans['status']}"
+[?2004l[?2004h>     assert isinstance(ans["answer"], str) and len(ans["answer"]) > 0, "Answer must be a non-empty string"
+[?2004l[?2004h>     assert isinstance(ans["citations"], list) and len(ans["citations"]) > 0, "Citations must be a non-empty list"
+[?2004l[?2004h>     assert isinstance(ans["structured_fields"], dict), "structured_fields must be a dict"
+[?2004l[?2004h>     
+[?2004l[?2004h>     qids.add(ans["qid"])
+[?2004l[?2004h>     
+[?2004l[?2004h>     for c_idx, cit in enumerate(ans["citations"]):
+[?2004l[?2004h>         assert citation_keys.issubset(cit.keys()), f"Citation {c_idx} in answer {idx} missing keys"
+[?2004l[?2004h>         assert cit["set_id"] == "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", f"Invalid set_id {cit['set_id']}"
+[?2004l[?2004h>         assert cit["passage_id"].startswith("PASSAGE_"), f"Invalid passage_id format {cit['passage_id']}"
+[?2004l[?2004h>         assert isinstance(cit["supporting_quote"], str) and len(cit["supporting_quote"]) > 0, "supporting_quote must be non-empty"
+[?2004l[?2004h> 
+[?2004l[?2004h> expected_qids = {
+[?2004l[?2004h>     "b2531657ba5c7a78",
+[?2004l[?2004h>     "6f12607a1ba14dd5",
+[?2004l[?2004h>     "fbab4114f66e2dda",
+[?2004l[?2004h>     "2d63e0a82215867f",
+[?2004l[?2004h>     "cf74a5a8ac9b19de",
+[?2004l[?2004h>     "c4dc176c4827f0ef",
+[?2004l[?2004h>     "000ecd1d6df50389",
+[?2004l[?2004h>     "b54c25890c1ae3a6"
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> assert qids == expected_qids, f"QID mismatch. Expected {expected_qids}, got {qids}"
+[?2004l[?2004h> print("Validation SUCCESS! All checks passed.")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@19fe3c8dfb02:/workspace# python3 validate_answers.py
+[?2004lFound 8 answers
+Validation SUCCESS! All checks passed.
+[?2004hroot@19fe3c8dfb02:/workspace# rm search_label.py verify_quotes.py generate_answers.py validate_answers.py
+[?2004l[?2004hroot@19fe3c8dfb02:/workspace# 

@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no control characters are present in the JSON. I will search for Section 4 (CONTRAINDICATIONS) in the Paxlovid label and print the first few lines of those passages.",
+  "plan": "I will run the Python command.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]\nfor i, c in enumerate(l['chunks']):\n    if re.search(r'^(4\\s+CONTRAINDICATIONS|CONTRAINDICATIONS)', c.strip(), re.IGNORECASE) or (i >= 12 and i <= 15):\n        print(f'PASSAGE_{i:04d}:', c.strip().split('\\n')[0][:80])\nf.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

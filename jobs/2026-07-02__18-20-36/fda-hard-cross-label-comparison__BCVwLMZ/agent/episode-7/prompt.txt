@@ -1,0 +1,26 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > verify_passages.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         l = json.loads(line)
+>         raw = l['label_raw']
+>         passages = re.findall(r'\|\|PASSAGE_(\d+)\|\|', raw)
+>         print(f"{l['drug_name']}: chunks count={len(l['chunks'])}, passage IDs in raw={len(passages)}, max ID={max(map(int, passages)) if passages else None}"
+)
+> EOF
+root@faa94ec9460f:/workspace# python3 verify_passages.py
+12HR Allergy Relief: chunks count=13, passage IDs in raw=13, max ID=12
+365 Whole Foods Market Loratadine: chunks count=15, passage IDs in raw=15, max ID=14
+Acamprosate Calcium: chunks count=59, passage IDs in raw=59, max ID=58
+Acclean Chlorhexidine Gluconate 0.12% Oral Rinse: chunks count=18, passage IDs in raw=18, max ID=17
+ACETAMINOPHEN with CODEINE: chunks count=15, passage IDs in raw=15, max ID=14
+AcetaZOLAMIDE: chunks count=22, passage IDs in raw=22, max ID=21
+ACETAZOLAMIDE EXTENDED-RELEASE: chunks count=20, passage IDs in raw=20, max ID=19
+Actoplus Met: chunks count=180, passage IDs in raw=180, max ID=179
+Acyclovir: chunks count=12, passage IDs in raw=12, max ID=11
+Acyclovir suspension: chunks count=46, passage IDs in raw=46, max ID=45
+root@faa94ec9460f:/workspace#

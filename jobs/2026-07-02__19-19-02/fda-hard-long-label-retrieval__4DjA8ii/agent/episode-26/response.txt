@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's print chunk 18, 19, 20 to see what else is in ADVERSE REACTIONS.",
+  "plan": "Print chunks 18, 19, 20.",
+  "commands": [
+    {
+      "keystrokes": "print(label_data['chunks'][18])\nprint('='*40)\nprint(label_data['chunks'][19])\nprint('='*40)\nprint(label_data['chunks'][20])\n",
+      "duration": 0.5
+    }
+  ]
+}

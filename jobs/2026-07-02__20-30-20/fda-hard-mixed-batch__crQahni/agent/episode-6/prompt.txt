@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         raw = data.get("label_raw", "")
+>         chunks = data.get("chunks", [])
+>         print(data["drug_name"], "raw has PASSAGE_:", "PASSAGE_" in raw)
+>         print(data["drug_name"], "chunks has PASSAGE_:", any("PASSAGE_" in str(c) for c in chunks))
+> '
+Paxlovid raw has PASSAGE_: True
+Paxlovid chunks has PASSAGE_: False
+Lopinavir-Ritonavir raw has PASSAGE_: True
+Lopinavir-Ritonavir chunks has PASSAGE_: False
+12HR Allergy Relief raw has PASSAGE_: True
+12HR Allergy Relief chunks has PASSAGE_: False
+Acamprosate Calcium raw has PASSAGE_: True
+Acamprosate Calcium chunks has PASSAGE_: False
+root@4b1b7b4fd079:/workspace#

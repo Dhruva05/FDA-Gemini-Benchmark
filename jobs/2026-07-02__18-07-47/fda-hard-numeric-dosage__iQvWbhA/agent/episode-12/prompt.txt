@@ -1,0 +1,14 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# grep -n -o "PASSAGE_[0-9]*" /workspace/data/public/labels.jsonl | head -n 10
+1:PASSAGE_0000
+1:PASSAGE_0001
+1:PASSAGE_0002
+1:PASSAGE_0003
+1:PASSAGE_0004
+1:PASSAGE_0005
+1:PASSAGE_0006
+1:PASSAGE_0007
+1:PASSAGE_0008
+1:PASSAGE_0009
+root@371ed25b9fd3:/workspace#

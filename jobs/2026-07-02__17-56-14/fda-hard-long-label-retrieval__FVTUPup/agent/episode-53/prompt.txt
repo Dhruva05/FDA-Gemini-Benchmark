@@ -1,0 +1,91 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 search.py "warnings and precautions"
+root@2635f56baf2a:/workspace# python3 search.py "5."
+=== PASSAGE_0013 ===
+5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications
+metabolized by CYP3A in patients already receiving PAXLOVID, may increase pla...
+
+=== PASSAGE_0014 ===
+5.2     Hypersensitivity Reactions
+Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported
+ with PAXLOVID . If signs and symptoms of a clinically significant hypersensitivity reaction or anaphylaxis o...
+
+=== PASSAGE_0015 ===
+5.3     Hepatotoxicity
+Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir. Therefore, caution should be exercised when adm
+inistering PAXLOVID to patients with pre-existing liver diseases, liver enzyme abnormalities, or hepatitis....
+
+=== PASSAGE_0016 ===
+5.4     Risk of HIV-1 Resistance Development
+Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncont
+rolled or undiagnosed HIV-1 infection ....
+
+=== PASSAGE_0018 ===
+6.1     Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The s...
+
+=== PASSAGE_0115 ===
+Ritonavir
+Ritonavir is chemically designated as 10-Hydroxy-2-methyl-5-(1-methylethyl)-1- 2-(1 methylethyl)-4-thiazolyl]-3,6-dioxo-8,11-bis(phenylmethyl)-2,4,7,12- tetraaz
+atridecan-13-oic acid, 5-thiazolylmethyl ester, 5S-(5R*,8R*,10R*,11R*)]. Its molecular formula is C37H48N6O5S2, and its molecular ...
+
+=== PASSAGE_0124 ===
+% drug-related material in feces
+35.3%Determined by 19F-NMR analysis following 300 mg nirmatrelvir oral suspension administered at 0 hr enhanced with 100 mg ritonavir at -12 hours, 0 hours, 12
+hours, and 24 hours.
+86.4%Determined by 14C analysis following 600 mg 14C-ritonavir oral solution (6 times ...
+
+=== PASSAGE_0127 ===
+3.29 (1.93, 5.40)
+AUCtau (µg*hr/mL)AUCtau=predicted area under the plasma concentration-time profile from time 0 to 12 hours for twice-daily dosing....
+
+=== PASSAGE_0140 ===
+Single Substitutions
+(EC50 value fold change in cell culture)
+T21I (1.1-4.8), S46F (ND), L50F (1.2-4.2), P108S (ND), T135I (ND), F140L (4.1), S144A (2.2-5.3), C160F (2.1), E166A (3.3), E166V (25‑288), L167F (1.9-2.5), T169
+I (ND), H172Y (15), A173V (0.9-2.3), V186A (ND), R188G (ND), A191V (0.7-1.5), ...
+
+=== PASSAGE_0141 ===
+≥2 Substitutions
+(EC50 value fold change in cell culture)
+T21I+S144A (9.4), T21I+E166V (83-250), T21I+A173V (3.1-8.9), T21I+T304I (3.0-7.9), L50F+E166V (34-175), L50F+T304I (5.9), T135I+T304I (3.8), F140L+A173V (10-17)
+, H172Y+P252L (ND), A173V+T304I (5.8-20), T21I+L50F+A193P+S301P (29), T21I+S144A+T...
+
+=== PASSAGE_0142 ===
+Single Substitutions
+(IC50/Ki value fold change in biochemical assay)
+Y54A/C (3.0-25), F140A/L/S (1.2-230), G143S (3.6-148), S144A/F/G/M/W/Y (1.2-76), S144D/E/H/Q/T/V (81-480), S144K/L/P/R (1,165->5,319), H164N (1.9-6.7), M165D/F/
+G/T (5.7-51), M165H/K/P/R/W (>384), M165Y (3,838), E166A/G/K/L/Q (4.5-...
+
+=== PASSAGE_0143 ===
+≥2 Substitutions
+(IC50/Ki value fold change in biochemical assay)
+T21I+S144A (20), T21I+E166V (120-11,000), T21I+A173V (15), L50F+E166V (100-4,500), T135I+T304I (5.1), F140L+A173V (95), S144A+T304I (28), E166V+L232R (5,700), P
+168del+A173V (170-536), H172Y+P252L (180), A173V+T304I (28), T21I+S144A+T3...
+
+=== PASSAGE_0151 ===
+-5.6 (-7.3, -4.0)
+COVID-19 Related Hospitalization Through Day 28, %...
+
+=== PASSAGE_0175 ===
+Moderate Renal Impairment
+To ensure appropriate dosing in patients with moderate renal impairment, instruct such patients that they will be taking one 150 mg nirmatrelvir tablet with one
+ 100 mg ritonavir tablet together twice daily for 5 days .
+Severe Renal Impairment (Including Those Requiring Hemo...
+
+=== PASSAGE_0177 ===
+This product’s labeling may have been updated. For the most recent prescribing information, please visit www.pfizer.com. For Medical Information about PAXLOVID,
+ please visit www.pfizermedinfo.com or call 1-800-438-1985....
+
+=== PASSAGE_0184 ===
+How should I store PAXLOVID?
+- Store PAXLOVID at room temperature between 68°F to 77°F (20°C to 25°C).
+Keep PAXLOVID and all medicines out of the reach of children.
+General information about the safe and effective use of PAXLOVID.
+Medicines are sometimes prescribed for purposes other than those list...
+
+root@2635f56baf2a:/workspace#

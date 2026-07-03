@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > diff_check.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         raw = label['label_raw']
+>         chunks = label['chunks']
+>         passages = re.findall(r'(PASSAGE_\d+)\?\?\n|PASSAGE_(\d+)\|\|\n(.*?)(?=(?:PASSAGE_\d+\|\|\n|$))', raw, re.DOTALL)
+>         # Wait, the regex might be slightly different. Let's do a simpler regex.
+>         passages = re.findall(r'(PASSAGE_\d+)\|\|\n(.*?)(?=(?:PASSAGE_\d+\|\|\n|$))', raw, re.DOTALL)
+>         pid, ptext = passages[0]
+>         ctext = chunks[0]
+>         print(f"ptext len: {len(ptext)}, ctext len: {len(ctext)}")
+>         print(f"ptext representation: {repr(ptext[:200])}")
+>         print(f"ctext representation: {repr(ctext[:200])}")
+>         break
+> EOF
+root@15b83e10b8d1:/workspace# python3 diff_check.py
+ptext len: 728, ctext len: 724
+ptext representation: 'WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\n- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater
+exposure of certain concomitant medications, resulting in potent'
+ctext representation: 'WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\n- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater
+exposure of certain concomitant medications, resulting in potent'
+root@15b83e10b8d1:/workspace#

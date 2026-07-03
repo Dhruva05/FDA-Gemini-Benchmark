@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 34 (char 35) | Content preview: '{\n  "analysis": "The questions are:\n1. QID: `b2531657ba5c7a78` - What important drug interactions ar'...
+
+Please fix these issues and provide a proper JSON response.

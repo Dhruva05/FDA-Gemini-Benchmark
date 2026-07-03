@@ -1,0 +1,10 @@
+{
+  "analysis": "This is extremely detailed and answers:\n- `000ecd1d6df50389`: \"What is the recommended dosage regimen of Paxlovid?\" (referencing chunk 4: 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together orally twice daily for 5 days. Or chunk 3/4/5/6/7/8/9 for renal impairment details).\n- `b54c25890c1ae3a6`: \"How should Paxlovid be administered?\" (referencing chunk 4: orally twice daily in the morning and at bedtime for 5 days. Or chunk 3/4/5/6/7/8/9: co-packaged for oral use, etc.).\n\nWait, let's search for 'administer' or 'administration' to make sure we didn't miss any other details about administration (such as with or without food, swallowing whole, etc.). Let's print chunk 3 and chunk 4 in full to see if they talk about food or swallowing.",
+  "plan": "Print chunk 3 and chunk 4 in full.",
+  "commands": [
+    {
+      "keystrokes": "print(label_data['chunks'][3])\nprint('='*40)\nprint(label_data['chunks'][4])\n",
+      "duration": 0.5
+    }
+  ]
+}

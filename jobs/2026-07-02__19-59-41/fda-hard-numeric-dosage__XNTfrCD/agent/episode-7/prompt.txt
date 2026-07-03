@@ -1,0 +1,24 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         chunks = data.get('chunks', [])
+>         print(data.get('drug_name'))
+>         for idx, chunk in enumerate(chunks[:5]):
+>             print(f'Index {idx}: {repr(chunk[:150])}')
+>         break
+> "
+Lopinavir-Ritonavir
+Index 0: '1 INDICATIONS AND USAGE\nLopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in
+a'
+Index 1: '2.1 General Administration Recommendations\nLopinavir\xa0and ritonavir oral solution must be taken with food.'
+Index 2: '2.2 Administering Oral Solution by Feeding Tube\nBecause lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recomm
+e'
+Index 3: '2.3 Dosage Recommendations in Adults\nLopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 an
+d'
+Index 4: 'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily\nTable 2. Recommended Dosage in Adults – Lopinavir and Ritonavir
+ T'
+root@3d44031eb234:/workspace#

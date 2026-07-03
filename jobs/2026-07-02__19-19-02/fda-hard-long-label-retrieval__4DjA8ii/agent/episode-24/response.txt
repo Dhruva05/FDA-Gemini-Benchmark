@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The WARNINGS AND PRECAUTIONS sections are:\n- `5.1 Risk of Serious Adverse Reactions Due to Drug Interactions` (Chunk 13)\n- `5.2 Hypersensitivity Reactions` (Chunk 14)\n- `5.3 Hepatotoxicity` (Chunk 15)\n- `5.4 Risk of HIV-1 Resistance Development` (Chunk 16)\n\nLet's print chunks 14, 15, and 16 fully to see what details they contain.",
+  "plan": "Print the full text of chunks 14, 15, and 16.",
+  "commands": [
+    {
+      "keystrokes": "print(label_data['chunks'][14])\nprint('='*40)\nprint(label_data['chunks'][15])\nprint('='*40)\nprint(label_data['chunks'][16])\n",
+      "duration": 0.5
+    }
+  ]
+}

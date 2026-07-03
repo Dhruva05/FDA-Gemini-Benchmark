@@ -1,0 +1,42 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print("drug_name:", data.get("drug_name"))
+>         print("set_id:", data.get("set_id"))
+>         print("Number of chunks:", len(data.get("chunks", [])))
+> '
+drug_name: 12HR Allergy Relief
+set_id: ea5d0e55-2191-4094-b082-24b317f95752
+Number of chunks: 13
+drug_name: 365 Whole Foods Market Loratadine
+set_id: bba4e7c8-db8e-4522-915c-48ee809e3bce
+Number of chunks: 15
+drug_name: Acamprosate Calcium
+set_id: ae6e79c0-a307-4888-b647-1b7be4cb9127
+Number of chunks: 59
+drug_name: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+set_id: 08c9d3dd-717b-0148-e054-00144ff8d46c
+Number of chunks: 18
+drug_name: ACETAMINOPHEN with CODEINE
+set_id: 36adb32c-638c-4d6e-b66a-1a1c35174ce6
+Number of chunks: 15
+drug_name: AcetaZOLAMIDE
+set_id: 6972d9c1-36ec-4246-bf7b-13206d5952c3
+Number of chunks: 22
+drug_name: ACETAZOLAMIDE EXTENDED-RELEASE
+set_id: 8e396b27-b44a-4aa9-805b-086395444b5f
+Number of chunks: 20
+drug_name: Actoplus Met
+set_id: 42e49120-6f3f-11db-9fe1-0800200c9a66
+Number of chunks: 180
+drug_name: Acyclovir
+set_id: dcc29902-1fe6-4713-947e-335503959464
+Number of chunks: 12
+drug_name: Acyclovir suspension
+set_id: 3efa1e5e-5a14-4724-a2ca-25702f10faed
+Number of chunks: 46
+root@2809f9ae2d53:/workspace#

@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > print_around.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         raw = label['label_raw']
+>         idx = raw.find('PASSAGE_0001')
+>         print(repr(raw[idx-50:idx+150]))
+>         break
+> EOF
+root@15b83e10b8d1:/workspace# python3 print_around.py
+'ndividual patient can be appropriately managed\n\n||PASSAGE_0001||\n1 INDICATIONS AND USAGE\nPAXLOVID is indicated for the treatment of mild-to-moderate corona
+virus disease 2019 (COVID-19) in adults who a'
+root@15b83e10b8d1:/workspace#

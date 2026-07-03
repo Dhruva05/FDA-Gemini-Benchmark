@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > inspect_labels.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         chunks = data.get('chunks', [])
+>         print('type of chunks:', type(chunks))
+>         if chunks:
+>             print('type of first chunk:', type(chunks[0]))
+>             print('first chunk sample:', str(chunks[0])[:300])
+> EOF
+root@b161fe3d96d1:/workspace# python3 inspect_labels.py
+type of chunks: <class 'list'>
+type of first chunk: <class 'str'>
+first chunk sample: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe,
+ life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medic
+root@b161fe3d96d1:/workspace#

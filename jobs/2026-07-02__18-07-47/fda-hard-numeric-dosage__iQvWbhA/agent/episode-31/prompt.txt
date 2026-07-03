@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); l=json.loads(f.readline()); print(l['chunks'][0])"
+1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in adults and pediatric patients 14 da
+ys and older.
+Limitations of Use:
+- Genotypic or phenotypic testing and/or treatment history should guide the use of lopinavir and ritonavir. The number of baseline lopinavir resistance-associat
+ed substitutions affects the virologic response to lopinavir and ritonavir
+Genotypic or phenotypic testing and/or treatment history should guide the use of lopinavir and ritonavir. The number of baseline lopinavir resistance-associated
+ substitutions affects the virologic response to lopinavir and ritonavir .
+root@371ed25b9fd3:/workspace#

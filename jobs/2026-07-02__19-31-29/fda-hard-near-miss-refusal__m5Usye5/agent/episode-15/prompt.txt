@@ -1,0 +1,16 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line
+][0]; [print(f'PASSAGE_{i:04d}:', repr(chunk[:150])) for i, chunk in enumerate(data['chunks']) if 'adverse reaction' in chunk.lower() or 'adverse event' in chun
+k.lower()]"
+PASSAGE_0007: '5.2 Suicidality and Depression\nIn controlled clinical trials of acamprosate calcium, adverse events of a suicidal nature (suicidal ideation, sui
+cide a'
+PASSAGE_0009: '6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the cli
+nical '
+PASSAGE_0010: 'Adverse Events Leading to Discontinuation\nIn placebo-controlled trials of 6 months or less, 8% of acamprosate calcium-treated patients discontin
+ued tr'
+PASSAGE_0027: 'Concomitant Therapies\nIn clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hypnot
+ics an'
+PASSAGE_0028: '6.2 Postmarketing Experience\nThe following adverse reactions have been identified during post approval use of acamprosate calcium. Because these
+ react'
+root@3646eb22abe5:/workspace#

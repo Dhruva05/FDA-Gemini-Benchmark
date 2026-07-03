@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 352 (char 353) | Content preview: '{\n  "analysis": "All questions have exactly the same keys. This means `structured_fields` is likely '...
+
+Please fix these issues and provide a proper JSON response.

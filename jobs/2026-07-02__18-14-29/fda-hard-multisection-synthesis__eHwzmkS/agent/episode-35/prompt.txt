@@ -1,0 +1,8 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; [print(f'{q["qid"]}: {q["question"]}') for q in [json.loads(line) for line in open('/workspace/data/publi
+c/questions.jsonl')]]"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'qid' is not defined. Did you mean: 'id'?
+root@a1980178bfd8:/workspace#

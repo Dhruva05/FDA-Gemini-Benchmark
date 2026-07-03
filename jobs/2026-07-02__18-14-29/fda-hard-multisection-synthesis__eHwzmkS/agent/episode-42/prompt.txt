@@ -1,0 +1,10 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]
+; print(l['chunks'][21][:1000] + '...'); f.close()"
+7.3     Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered
+ a comprehensive list of all possible drugs that may interact with PAXLOVID. The healthcare provider should consult other appropriate resources such as the pres
+cribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor such as rito
+navir....
+root@a1980178bfd8:/workspace#

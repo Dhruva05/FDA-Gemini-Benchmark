@@ -1,0 +1,73 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Lopinavir-Ritonavir":
+>             for idx, chunk in enumerate(data["chunks"]):
+>                 if "dosage regimen" in chunk.lower() or "recommended dosage" in chunk.lower() or "regimen" in chunk.lower():
+>                     print(f"PASSAGE_{idx:04d}: {chunk[:200]}")
+> '
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egi
+PASSAGE_0004: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine o
+PASSAGE_0006: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing
+PASSAGE_0039: Adverse Reactions in Pediatric Patients
+Lopinavir and ritonavir oral solution dosed up to 300/75 mg/m2 has been studied in 100 pediatric patients 6 months to 12 years of age. The adverse reaction prof
+PASSAGE_0049: 7.3 Established and Other Potentially Significant Drug Interactions
+Table 12 provides a listing of established or potentially clinically significant drug interactions. Alteration in dose or regimen ma
+PASSAGE_0066: ↓ lopinavir/ritonavir#
+Apalutamide is contraindicated due to potential for loss of virologic response and possible resistance to lopinavir and ritonavir or to the class of protease in
+hibitors .
+Avoid
+PASSAGE_0074: ↑ colchicine
+Contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment .
+For patients with normal renal or hepatic function:
+Treat
+PASSAGE_0091: ↑ vardenafil
+Sildenafil when used for the treatment of pulmonary arterial hypertension (Revatio®) is contraindicated due to the potential for sildenafil-associated adverse e
+vents, including visual abn
+PASSAGE_0098: Human Data
+Lopinavir and ritonavir was evaluated in 12 HIV-infected pregnant women in an open-label pharmacokinetic trial . No new trends in the safety profile were identi
+fied in pregnant women dosed
+PASSAGE_0102: 8.4 Pediatric Use
+The safety, efficacy, and pharmacokinetic profiles of lopinavir and ritonavir in pediatric patients below the age of 14 days have not been established. Lopinavi
+r and ritonavir should
+PASSAGE_0112: Pediatric Patients
+The 230/57.5 mg/m2 twice daily regimen without nevirapine and the 300/75 mg/m2 twice daily regimen with nevirapine provided lopinavir plasma concentrations simi
+lar to those obtained
+PASSAGE_0120: Drug Interactions
+Lopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit CYP2D6, CYP2C9, CYP2C19, CYP2E1, CYP2B6 or
+CYP1A2 at clinically r
+PASSAGE_0125: 3 Parallel group design
+4 Drug levels obtained at 8-16 hours post dose
+N/A = Not available.
+Table 17. Drug Interactions: Pharmacokinetic Parameters for Co-administered Drug in the Presence of
+Lopinavi
+PASSAGE_0140: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis
+Lopinavir and ritonavir combination was evaluated for carcinogenic potential by oral gavage administration to mice and rats for
+PASSAGE_0150: 13%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and othe
+PASSAGE_0156: 14.4 Pediatric Studies
+Study 1030 was an open-label, multicenter, dose-finding trial evaluating the pharmacokinetic profile, tolerability, safety and efficacy of lopinavir and ritonav
+ir oral solution
+PASSAGE_0159: 17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to acc
+root@3faa5da3ba91:/workspace#

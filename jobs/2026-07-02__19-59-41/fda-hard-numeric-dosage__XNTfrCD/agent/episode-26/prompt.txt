@@ -1,0 +1,103 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate':
+>             for i, chunk in enumerate(data['chunks']):
+>                 if i < 15:
+>                     print(f'=== PASSAGE_{i:04d} ===')
+>                     print(chunk)
+>             break
+> "
+=== PASSAGE_0000 ===
+WARNING: POSTTREATMENT ACUTE EXACERBATION OF HEPATITIS B
+Severe acute exacerbations of hepatitis B virus (HBV) have been reported in patients who are coinfected with HBV and HIV-1 and have discontinued products contai
+ning emtricitabine (FTC) and/or tenofovir disoproxil fumarate (TDF), two of the components of emtricitabine, rilpivirine and tenofovir disoproxil fumarate table
+ts.
+Closely monitor hepatic function with both clinical and laboratory follow-up for at least several months in patients who are coinfected with HIV-1 and HBV and d
+iscontinue emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets. If appropriate, initiation of anti-hepatitis B therapy may be warranted .
+=== PASSAGE_0001 ===
+1 INDICATIONS AND USAGE
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are indicated as a complete regimen for the treatment of HIV-1 infection in adults and pedi
+atric patients weighing at least 35 kg:
+- as initial therapy in those with no antiretroviral treatment history with HIV-1 RNA less than or equal to 100,000 copies/mL at the start of therapy or
+- to replace a stable antiretroviral regimen in those who are virologically suppressed (HIV-1 RNA less than 50 copies/mL) on a stable antiretroviral regimen for
+ at least 6 months with no treatment failure and no known substitutions associated with resistance to the individual components of emtricitabine, rilpivirine an
+d tenofovir disoproxil fumarate tablets
+Limitations of Use:
+- More rilpivirine-treated subjects with HIV-1 RNA greater than 100,000 copies/mL at the start of therapy experienced virologic failure (HIV-1 RNA ≥ 50 copies/m
+L) compared to rilpivirine-treated subjects with HIV-1 RNA less than or equal to 100,000 copies/mL
+=== PASSAGE_0002 ===
+2.1 Testing Prior to Initiation and During Treatment with Emtricitabine, Rilpivirine and Tenofovir Disoproxil Fumarate Tablets
+Prior to or when initiating emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, test patients for hepatitis B virus infection .
+Prior to initiation of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, and during treatment with emtricitabine, rilpivirine and tenofovir
+disoproxil fumarate tablets, on a clinically appropriate schedule, assess serum creatinine, estimated creatinine clearance, urine glucose and urine protein in a
+ll patients. In patients with chronic kidney disease, also assess serum phosphorus .
+=== PASSAGE_0003 ===
+2.2 Recommended Dosage
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are a three-drug fixed dose combination product containing 200 mg of emtricitabine (FTC), 2
+5 mg of rilpivirine (RPV), and 300 mg of tenofovir disoproxil fumarate (TDF). The recommended dosage of emtricitabine, rilpivirine and tenofovir disoproxil fuma
+rate tablets in adult and pediatric patients weighing at least 35 kg is one tablet taken orally once daily with food .
+=== PASSAGE_0004 ===
+2.3 Recommended Dosage During Pregnancy
+For pregnant patients who are already on emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets prior to pregnancy and are virologically suppresse
+d (HIV-1 RNA less than 50 copies per mL), one tablet of emtricitabine, rilpivirine and tenofovir disoproxil fumarate taken once daily may be continued. Lower ex
+posures of rilpivirine, a component of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, were observed during pregnancy, therefore viral loa
+d should be monitored closely .
+=== PASSAGE_0005 ===
+2.4 Not Recommended in Patients with Moderate or Severe Renal Impairment
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are not recommended in patients with moderate or severe renal impairment (estimated creatin
+ine clearance below 50 mL per minute) .
+=== PASSAGE_0006 ===
+2.5 Recommended Dosage with Rifabutin Coadministration
+If emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are coadministered with rifabutin, take an additional 25 mg tablet of rilpivirine (Edura
+nt®) with emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets once daily with a meal for the duration of the rifabutin coadministration .
+=== PASSAGE_0007 ===
+3 DOSAGE FORMS AND STRENGTHS
+Emtricitabine, Rilpivirine and Tenofovir Disoproxil Fumarate Tablets are available containing 200 mg of emtricitabine, 27.5 mg of rilpivirine hydrochloride equi
+valent to 25 mg of rilpivirine, and 300 mg of tenofovir disoproxil fumarate equivalent to 
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+e thoughts, suicide attempt, suicidal i
+deation) has been reported with RPV. Patients with severe depressive symptoms should seek immediate medical evaluation to assess the possibility that the sympto
+ms are related to emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, and if so, to determine whether the risks of continued therapy outweigh
+the benefits.
+During the Phase 3 trials in adults (N=1368) through 96 weeks, the incidence of depressive disorders (regardless of causality, severity) reported among RPV (n=6
+86) or efavirenz (EFV, n=682) was 9% and 8%, respectively. Most events were mild or moderate in severity. The incidence of Grades 3 and 4 depressive disorders (
+regardless of causality) was 1% for both RPV and EFV. The incidence of discontinuation due to depressive disorders among RPV or EFV was 1% in each arm. Suicidal
+ ideation was reported in 4 subjects in each arm while suicide attempt was reported in 2 subjects in the RPV arm.
+During the Phase 2 trial in pediatric subjects 12 to less than 18 years of age (N=36) receiving RPV through 48 weeks, the incidence of depressive disorders (reg
+ardless of causality, severity) was 19.4% (7/36). Most events were mild or moderate in severity. The incidence of Grade 3 and 4 depressive disorders (regardless
+ of causality) was 5.6% (2/36). None of the subjects discontinued due to depressive disorders. Suicidal ideation and suicide attempt were reported in 1 subject.
+=== PASSAGE_0013 ===
+5.5 New Onset or Worsening Renal Impairment
+Renal impairment, including cases of acute renal failure and Fanconi syndrome (renal tubular injury with severe hypophosphatemia), has been reported with the us
+e of TDF .
+Prior to initiation of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, and during treatment with emtricitabine, rilpivirine and tenofovir
+disoproxil fumarate tablets, on a clinically appropriate schedule, assess serum creatinine, estimated creatinine clearance, urine glucose, and urine protein in
+all patients. In patients with chronic kidney disease, also assess serum phosphorus.
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets should be avoided with concurrent or recent use of a nephrotoxic agent (e.g., high-dose or
+multiple nonsteroidal anti-inflammatory drugs NSAIDs]) . Cases of acute renal failure after initiation of high-dose or multiple NSAIDs have been reported in HIV
+-infected patients with risk factors for renal dysfunction who appeared stable on TDF. Some patients required hospitalization and renal replacement therapy. Alt
+ernatives to NSAIDs should be considered, if needed, in patients at risk for renal dysfunction.
+Persistent or worsening bone pain, pain in extremities, fractures, and/or muscular pain or weakness may be manifestations of proximal renal tubulopathy and shou
+ld prompt an evaluation of renal function in at-risk patients.
+Emtricitabine and TDF are principally eliminated by the kidney; however, RPV is not. Since emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets
+are a combination product and the dose of the individual components cannot be altered, emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are
+not recommended in patients with estimated creatinine clearance below 50 mL per minute .
+=== PASSAGE_0014 ===
+5.6 Bone Loss and Mineralization Defects
+In clinical trials in HIV-1-infected adults, TDF, a component of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, was associated with sligh
+tly greater decreases in bone mineral density (BMD) and increases in biochemical markers of bone metabolism, suggesting increased bone turnover relative to comp
+arators. Serum parathyroid hormone levels and 1,25 Vitamin D levels were also higher in subjects receiving TDF.
+Clinical trials evaluating TDF in pediatric and adolescent subjects were conducted. Under normal circumstances, BMD increases rapidly in pediatric patients. In
+HIV-1-infected subjects aged 2 years to less than 18 years, bone effects were similar to those observed in adult subjects and suggest increased bone turnover. T
+otal body BMD gain was less in the TDF-treated HIV-1-infected pediatric subjects as compared to the control groups. Similar trends were observed in chronic hepa
+titis B-infected adolescent subjects aged 12 years to less than 18 years. In all pediatric trials, skeletal growth (height) appeared to be unaffected.
+The effects of TDF-associated changes in BMD and biochemical markers on long-term bone health and future fracture risk are unknown. Assessment of BMD should be
+considered for adult and pediatric patients who have a history of pathologic bone fracture or other risk factors for osteoporosis or bone loss. Although the eff
+ect of supplementation with calcium and Vitamin D was not studied, such supplementation may be beneficial for all patients. If bone abnormalities are suspected,
+ then appropriate consultation should be obtained.
+root@3d44031eb234:/workspace#

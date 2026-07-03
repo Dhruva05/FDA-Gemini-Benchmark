@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The format of `label_raw` is: `||PASSAGE_0000||\n[text]\n\n||PASSAGE_0001||\n[text]` etc. Each passage starts with `||PASSAGE_####||`. So we can split by `||PASSAGE_` or similar to parse it easily! Wait, does `chunks` correspond exactly to these passages? Let's check if the index of elements in `chunks` matches the passage numbers in `label_raw`.",
+  "plan": "Let's check if `chunks` index matches the passage IDs.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    data = json.loads(next(f))\n    chunks = data[\"chunks\"]\n    raw = data[\"label_raw\"]\n    import re\n    passages = re.split(r\"\\|\\|(PASSAGE_\\d+)\\|\\|\\n?\", raw)\n    # The first element of passages might be empty if raw starts with ||\n    print(\"passages split length:\", len(passages))\n    # Let us reconstruct a dict of passage_id -> text\n    p_dict = {}\n    for i in range(1, len(passages), 2):\n        pid = passages[i]\n        ptext = passages[i+1].strip()\n        p_dict[pid] = ptext\n    print(\"Number of parsed passages:\", len(p_dict))\n    print(\"Matches chunks count?\", len(p_dict) == len(chunks))\n    for i, chunk in enumerate(chunks[:3]):\n        pid = f\"PASSAGE_{i:04d}\"\n        print(f\"Chunk {i} matches {pid}?\", chunk.strip() == p_dict.get(pid, \"\").strip())\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

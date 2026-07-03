@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at the output of `view_q3_full.py`. It printed the passages for `AcetaZOLAMIDE` but the first part (for `ACETAMINOPHEN with CODEINE`) was scrolled off. Let's write a python script to print the passages for `ACETAMINOPHEN with CODEINE` specifically.",
+  "plan": "I will write a python script to print the candidate passages for ACETAMINOPHEN with CODEINE.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); l={x['set_id']: x for x in (json.loads(line) for line in f)}; l1=l['36adb32c-638c-4d6e-b66a-1a1c35174ce6']; [print(f'PASSAGE_{i:04d}: {c}') for i, c in enumerate(l1['chunks']) if any(w in c.lower() for w in ['dosage', 'direction', 'take', 'tablet', 'dose', 'mg'])]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

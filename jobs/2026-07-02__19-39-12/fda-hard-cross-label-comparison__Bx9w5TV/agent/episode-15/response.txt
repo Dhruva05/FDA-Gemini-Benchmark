@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no raw newlines or control characters are in any string in my JSON response.",
+  "plan": "Let us find all files in `/workspace` to see if there are any templates, example answers, or test scripts.",
+  "commands": [
+    {
+      "keystrokes": "find /workspace -type f\n",
+      "duration": 0.5
+    }
+  ]
+}

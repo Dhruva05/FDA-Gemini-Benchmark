@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no control characters are present in the JSON. I will run the `env` command to check for any environment variables.",
+  "plan": "I will run the `env` command.",
+  "commands": [
+    {
+      "keystrokes": "env\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 101 (char 102) | Content preview: '{\n  "analysis": "No special python packages installed. Let\'s think: what could `structured_fields` b'...
+
+Please fix these issues and provide a proper JSON response.

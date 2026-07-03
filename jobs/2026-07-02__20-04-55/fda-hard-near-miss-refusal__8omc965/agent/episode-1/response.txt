@@ -1,0 +1,10 @@
+{
+  "analysis": "The README describes the labels. Now I need to see the questions in `/workspace/data/public/questions.jsonl`.",
+  "plan": "I will read `/workspace/data/public/questions.jsonl` to check the questions and their required fields.",
+  "commands": [
+    {
+      "keystrokes": "cat /workspace/data/public/questions.jsonl\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# cat << 'EOF' > generate_answers.py
+  "structured_fields"> import json
+>
+> answers_data = {
+>   "answers": [
+>     {
+      >       "qid": "near-miss-04f3afa658fdef",
+>       "status": "NOT_FOUND",
+  >       "answer": "The 12HR Allergy Relief label discusses warnings, including asking a doctor before use if you have kidney disease, but it does not provide
+a supported recommendation or requirement for pharmacogenomic testing.",
+>       "citations": [
+>         {
+>           "set_id": "ea5d0e55-2191-4094-b082-24b317f95752",
+>           "passage_id": "PASSAGE_0002",
+>           "section": "Warnings",
+>           "supporting_quote": "Ask a doctor before use if you have kidney disease."
+id": "P>         }
+>       ],
+>       "structured_fields": {
+>         "searched_topic": "warnings",
+>         "unsupported_topic": "pharmacogenomic testing requirement"
+>       }
+>     },
+n >     {
+>       "qid": "near-miss-0c6ec72416151f",
+>       "status": "NOT_FOUND",
+>       "answer": "The Acamprosate Calcium label discusses renal impairment under clinical pharmacology, use in specific populations, and dosage and administrat
+ion, but it does not provide a supported recommendation for severe hepatic impairment.",
+>       "citations": [
+>         {
+pe>           "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+>           "passage_id": "PASSAGE_0035",
+>           "section": "8.6 Renal Impairment",
+>           "supporting_quote": "Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of \u226430 mL/min) ."
+>         }
+>       ],
+>       "structured_fields": {
+>         "searched_topic": "renal impairment",
+>         "unsupported_topic": "severe hepatic impairment"
+>       }
+>     },
+>     {
+>       "qid": "near-miss-bd69d0bfb1fc7d",
+>       "status": "NOT_FOUND",
+>       "answer": "The Acamprosate Calcium label discusses pregnancy, stating that the drug should be used during pregnancy only if the potential benefit justif
+ies the potential risk to the fetus, but it does not provide a supported recommendation for breastfeeding dose adjustment.",
+>       "citations": [
+>         {
+>           "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+>           "passage_id": "PASSAGE_0030",
+>           "section": "8.1 Pregnancy",
+>           "supporting_quote": "There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be used during pregnancy only i
+f the potential benefit justifies the potential risk to the fetus."
+>         }
+>       ],
+>       "structured_fields": {
+>         "searched_topic": "pregnancy",
+>         "unsupported_topic": "breastfeeding dose adjustment"
+>       }
+>     },
+>     {
+>       "qid": "near-miss-d4ca1884aa8ab4",
+>       "status": "NOT_FOUND",
+>       "answer": "The Acamprosate Calcium label discusses adverse reactions observed during clinical trials and postmarketing experience, but it does not provi
+de a supported recommendation for a therapeutic drug monitoring target range.",
+>       "citations": [
+>         {
+>           "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+>           "passage_id": "PASSAGE_0009",
+>           "section": "6.1 Clinical Trials Experience",
+>           "supporting_quote": "Clinically significant serious adverse reactions associated with acamprosate calcium described elsewhere in labeling include su
+icidality and depression and acute kidney failure ."
+>         }
+>       ],
+>       "structured_fields": {
+>         "searched_topic": "adverse reactions",
+>         "unsupported_topic": "therapeutic drug monitoring target range"
+>       }
+>     },
+>     {
+>       "qid": "near-miss-52e5f8cac33c50",
+>       "status": "NOT_FOUND",
+>       "answer": "The Acamprosate Calcium label discusses use in the pediatric population, stating that safety and efficacy have not been established in this a
+ge group, but it does not provide a supported recommendation for a geriatric maximum cumulative lifetime dose.",
+>       "citations": [
+>         {
+>           "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127",
+>           "passage_id": "PASSAGE_0033",
+>           "section": "8.4 Pediatric Use",
+>           "supporting_quote": "The safety and efficacy of acamprosate calcium have not been established in the pediatric population."
+>         }
+>       ],
+>       "structured_fields": {
+>         "searched_topic": "pediatric",
+>         "unsupported_topic": "geriatric maximum cumulative lifetime dose"
+>       }
+>     },
+>     {
+>       "qid": "near-miss-5b5cb6a5249660",
+>       "status": "NOT_FOUND",
+>       "answer": "The Acclean Chlorhexidine Gluconate 0.12% Oral Rinse label discusses pregnancy, stating that adequate and well-controlled studies in pregnant
+ women have not been done, but it does not provide a supported recommendation for breastfeeding dose adjustment.",
+>       "citations": [
+>         {
+>           "set_id": "08c9d3dd-717b-0148-e054-00144ff8d46c",
+>           "passage_id": "PASSAGE_0006",
+>           "section": "Pregnancy Category B",
+>           "supporting_quote": "However, adequate and well-controlled studies in pregnant women have not been done. Because animal reproduction studies are not
+ always predictive of human response, this drug should be used during pregnancy only if clearly needed."
+>         }
+>       ],
+>       "structured_fields": {
+>         "searched_topic": "pregnancy",
+>         "unsupported_topic": "breastfeeding dose adjustment"
+>       }
+>     }
+>   ]
+> }
+>
+> # Save to answers.json
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(answers_data, f, indent=2)
+>
+> print("answers.json successfully generated and saved.")
+> EOF
+root@3646eb22abe5:/workspace# python3 generate_answers.py
+answers.json successfully generated and saved.
+root@3646eb22abe5:/workspace#

@@ -1,0 +1,9 @@
+Previous response had warnings:
+WARNINGS: - Extra text detected after JSON object
+
+New Terminal Output:
+
+>>> for idx in range(3, 12):
+...     print(f"=== PASSAGE_{idx:04d} ===")
+...     print(label_data['chunks'][idx][:250] + "...")
+...

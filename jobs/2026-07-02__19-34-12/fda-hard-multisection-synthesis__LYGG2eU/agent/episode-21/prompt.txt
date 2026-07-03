@@ -1,0 +1,41 @@
+Current Terminal Screen:
+navir.
+========================================
+root@15b83e10b8d1:/workspace# python3 print_passages.py 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a PASSAGE_0022 PASSAGE_0023 PASSAGE_0024 PASSAGE_0025 PASSAGE_0026 PA
+SSAGE_0027 PASSAGE_0028 PASSAGE_0029
+=== PASSAGE_0022 ===
+↑ alfuzosin
+Co-administration contraindicated due to potential hypotension .
+========================================
+=== PASSAGE_0023 ===
+↑ tamsulosin
+Avoid concomitant use with PAXLOVID.
+========================================
+=== PASSAGE_0024 ===
+↑ ranolazine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions .
+========================================
+=== PASSAGE_0025 ===
+↑ antiarrhythmic
+Co-administration contraindicated due to potential for cardiac arrhythmias .
+========================================
+=== PASSAGE_0026 ===
+↑ antiarrhythmic
+Caution is warranted and therapeutic concentration monitoring is recommended for antiarrhythmics if available.
+========================================
+=== PASSAGE_0027 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance .
+========================================
+=== PASSAGE_0028 ===
+Anticancer drugs
+abemaciclib, ceritinib,dasatinib, encorafenib,ibrutinib, ivosidenib, neratinib, nilotinib, venetoclax,vinblastine, vincristine
+========================================
+=== PASSAGE_0029 ===
+↑ anticancer drugs
+Avoid co-administration of encorafenib or ivosidenib due to potential risk of serious adverse events such as QT interval prolongation. Avoid use of neratinib, v
+enetoclax or ibrutinib.
+Co-administration of vincristine and vinblastine may lead to significant hematologic or gastrointestinal side effects.
+For further information, refer to individual product label for anticancer drug.
+========================================
+root@15b83e10b8d1:/workspace#

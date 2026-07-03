@@ -1,0 +1,132 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > search_lopinavir_max.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+> l = [label for label in labels if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85'][0]
+> for i, chunk in enumerate(l['chunks']):
+>     if any(kw in chunk.lower() for kw in ['maximum', 'exceed', 'limit', 'max']):
+>         print(f"PASSAGE_{i:04d}:")
+>         print(chunk[:300])
+>         print("-"*50)
+> EOF
+root@371ed25b9fd3:/workspace# python3 search_lopinavir_max.py
+PASSAGE_0000:
+1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in adults and pediatric patients 14 da
+ys and older.
+Limitations of Use:
+- Genotypic or phenotypic testing and/or treatment history should guide the use of
+--------------------------------------------------
+PASSAGE_0008:
+Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing or exceeding the recommended adult dose.
+Body surface area (BSA) can be calculated as follows:
+The l
+--------------------------------------------------
+PASSAGE_0034:
+Limit1
+Lopinavir and
+Ritonavir
+400/100 mgTwice Daily + d4T
++ 3TC
+(N=326)
+Nelfinavir
+750 mg Three Times Daily + d4T + 3TC
+(N=327)
+Lopinavir and Ritonavir
+Twice Daily + d4T + 3TC
+(N=100)
+Lopinavir and Ritonavir
+Once Daily + TDF
++ FTC
+(N=333)
+Lopinavir and Ritonavir
+Twice Daily
++ TDF
++ FTC
+(N=331)
+--------------------------------------------------
+PASSAGE_0037:
+Limit1
+Lopinavir and  Ritonavir
+400/100 mg Twice Daily + NVP + NRTIs (N=148)
+Investigator-Selected Protease Inhibitor(s) + NVP + NRTIs (N=140)
+Lopinavir and Ritonavir
+Twice Daily + NNRTI + NRTIs (N=127)
+Lopinavir and Ritonavir
+800/200 mg Once Daily + NRTIs (N=300)
+Lopinavir and Ritonavir
+400/100 mg
+--------------------------------------------------
+PASSAGE_0041:
+Limit1
+Lopinavir and Ritonavir
+Twice Daily + RTIs(N=100)
+--------------------------------------------------
+PASSAGE_0074:
+↑ colchicine
+Contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment .
+For patients with normal renal or hepatic function:
+Treatment of gout flares-co-administration of colchicine in patients on lopinavir and ritonavir
+:
+0.6 mg
+--------------------------------------------------
+PASSAGE_0076:
+↑ rifabutin and rifabutin metabolite
+Dosage reduction of rifabutin by at least 75% of the usual dose of 300 mg/day is recommended (i.e., a maximum dose of 150 mg every other day or three times per
+week). Increased monitoring for adverse reactions is warranted in patients receiving the combination. F
+--------------------------------------------------
+PASSAGE_0086:
+↑ rosuvastatin
+Contraindicated due to potential for myopathy including rhabdomyolysis .
+Use atorvastatin with caution and at the lowest necessary dose. Titrate rosuvastatin dose carefully and use the lowest necessary dose; do not exceed rosuvastati
+n 10 mg/day.
+Lomitapide is a sensitive substrate for
+--------------------------------------------------
+PASSAGE_0091:
+↑ vardenafil
+Sildenafil when used for the treatment of pulmonary arterial hypertension (Revatio®) is contraindicated due to the potential for sildenafil-associated adverse e
+vents, including visual abnormalities, hypotension, prolonged erection, and syncope .
+Do not use lopinavir and ritonavir with a
+--------------------------------------------------
+PASSAGE_0096:
+Risk Summary
+Available data from the Antiretroviral Pregnancy Registry show no difference in the risk of overall major birth defects compared to the background rate for majo
+r birth defects of 2.7% in the U.S. reference population of the Metropolitan Atlanta Congenital Defects Program (MACDP) . The e
+--------------------------------------------------
+PASSAGE_0098:
+Human Data
+Lopinavir and ritonavir was evaluated in 12 HIV-infected pregnant women in an open-label pharmacokinetic trial . No new trends in the safety profile were identi
+fied in pregnant women dosed with lopinavir and ritonavir compared to the safety described in non-pregnant adults, based on the r
+--------------------------------------------------
+PASSAGE_0105:
+10 OVERDOSAGE
+Overdoses with lopinavir and ritonavir oral solution have been reported. One of these reports described fatal cardiogenic shock in a 2.1 kg infant who received
+a single dose of 6.5 mL of lopinavir and ritonavir oral solution (520 mg lopinavir, approximately 10-fold above the recommende
+--------------------------------------------------
+PASSAGE_0108:
+12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo and active (moxifloxacin 400 mg once daily) controlled crossover study in 39 h
+ealthy adults. The maximum mean time-matched (95% upper confidence bound) differences in QTc
+--------------------------------------------------
+PASSAGE_0119:
+Hepatic Impairment
+Multiple dosing of lopinavir and ritonavir 400/100 mg twice daily to HIV-1 and HCV co-infected patients with mild to moderate hepatic impairment (n = 12) result
+ed in a 30% increase in lopinavir AUC and 20% increase in Cmax compared to HIV-1 infected subjects with normal hepatic fu
+--------------------------------------------------
+PASSAGE_0120:
+Drug Interactions
+Lopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit CYP2D6, CYP2C9, CYP2C19, CYP2E1, CYP2B6 or
+CYP1A2 at clinically relevant concentrations.
+Lopinavir and ritonavir has been shown in vivo to induce its own metabolism
+--------------------------------------------------
+PASSAGE_0156:
+14.4 Pediatric Studies
+Study 1030 was an open-label, multicenter, dose-finding trial evaluating the pharmacokinetic profile, tolerability, safety and efficacy of lopinavir and ritonav
+ir oral solution containing lopinavir 80 mg/mL and ritonavir 20 mg/mL at a dose of 300/75 mg/m2 twice daily plus 2 NR
+--------------------------------------------------
+root@371ed25b9fd3:/workspace#

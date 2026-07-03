@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > find_passage_string.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         for key, val in data.items():
+>             if isinstance(val, str) and 'PASSAGE_' in val:
+>                 print(f"Found in key '{key}': ...{val[val.index('PASSAGE_')-50:val.index('PASSAGE_')+150]}...")
+>             elif isinstance(val, list):
+>                 for idx, item in enumerate(val):
+>                     if isinstance(item, str) and 'PASSAGE_' in item:
+>                         print(f"Found in list key '{key}' index {idx}: ...{item[item.index('PASSAGE_')-50:item.index('PASSAGE_')+150]}...")
+> EOF
+root@b161fe3d96d1:/workspace# python3 find_passage_string.py
+Found in key 'label_raw': ......
+root@b161fe3d96d1:/workspace#

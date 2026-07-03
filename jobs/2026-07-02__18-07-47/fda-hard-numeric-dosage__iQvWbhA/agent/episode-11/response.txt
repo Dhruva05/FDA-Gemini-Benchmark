@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, `grep -o \"PASSAGE_[0-9]*\"` found matches! Let's check where they came from. Maybe they are in another line of `labels.jsonl`? Let's check which lines contain `PASSAGE_`.",
+  "plan": "Find which line of labels.jsonl contains 'PASSAGE_'.",
+  "commands": [
+    {
+      "keystrokes": "grep -n -o \"PASSAGE_[0-9]*\" /workspace/data/public/labels.jsonl | head -n 10\n",
+      "duration": 0.5
+    }
+  ]
+}

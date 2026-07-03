@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>     print(repr(data['chunks'][13]))"
+'5.1\tRisk of Serious Adverse Reactions Due to Drug Interactions\nInitiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiv
+ing medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentration
+s of medications metabolized by CYP3A. Medications that induce CYP3A may decrease concentrations of PAXLOVID. These interactions may lead to:\n- Clinically sign
+ificant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.\n- Loss of therap
+eutic effect of PAXLOVID and possible development of viral resistance.\nSevere, life-threatening, and/or fatal adverse reactions due to drug interactions have b
+een reported in patients treated with PAXLOVID. The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhib
+itors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers.\nPrior to prescribing PAXLOVID, review all medications taken by the patient to ass
+ess potential drug-drug interactions and determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring (e.g., calci
+neurin inhibitors) . See Table 2 for clinically significant drug interactions, including contraindicated drugs. Drugs listed in Table 2 are a guide and not cons
+idered a comprehensive list of all possible drugs that may interact with PAXLOVID.\nConsider the benefit of PAXLOVID treatment in reducing hospitalization and d
+eath, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed .'
+root@2635f56baf2a:/workspace#

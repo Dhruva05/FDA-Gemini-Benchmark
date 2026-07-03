@@ -1,0 +1,10 @@
+{
+  "analysis": "This is fantastic! Let's see the rest of the headers for Paxlovid. I will print from line 21 to 100 of `/tmp/headers.txt`.",
+  "plan": "I will run a shell command to view more headers of Paxlovid in `/tmp/headers.txt`.",
+  "commands": [
+    {
+      "keystrokes": "sed -n '21,100p' /tmp/headers.txt\n",
+      "duration": 0.5
+    }
+  ]
+}

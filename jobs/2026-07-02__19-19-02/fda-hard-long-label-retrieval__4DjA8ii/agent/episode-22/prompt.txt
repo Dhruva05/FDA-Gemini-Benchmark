@@ -1,0 +1,9 @@
+New Terminal Output:
+
+>>> print('warnings:', [idx for idx, chunk in search('warnings')])
+warnings: []
+>>> print('precautions:', [idx for idx, chunk in search('precautions')])
+precautions: []
+>>> print('5\\.:', [idx for idx, chunk in search('5\\.')])
+5\.: [13, 14, 15, 16, 18, 115, 124, 127, 140, 141, 142, 143, 151, 175, 177, 184]
+>>>

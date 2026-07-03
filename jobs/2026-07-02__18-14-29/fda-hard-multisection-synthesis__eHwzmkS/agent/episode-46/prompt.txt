@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = label
+s[0]
+> for i, c in enumerate(l['chunks']):
+>     if re.search(r'^(4\s+CONTRAINDICATIONS|CONTRAINDICATIONS)', c.strip(), re.IGNORECASE) or (i >= 12 and i <= 15):
+>         print(f'PASSAGE_{i:04d}:', c.strip().split('\n')[0][:80])
+> f.close()"
+PASSAGE_0012: 4 CONTRAINDICATIONS
+PASSAGE_0013: 5.1       Risk of Serious Adverse Reactions Due to Drug Interactions
+PASSAGE_0014: 5.2       Hypersensitivity Reactions
+PASSAGE_0015: 5.3       Hepatotoxicity
+root@a1980178bfd8:/workspace#

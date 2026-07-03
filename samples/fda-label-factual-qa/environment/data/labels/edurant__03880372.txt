@@ -1,0 +1,825 @@
+DRUG NAME: EDURANT
+SET ID: 03880372-2c68-45c6-a53a-f420c49541d6
+
+=== PASSAGE_0000 ===
+SECTION: 1.1 Treatment of HIV-1 in Treatment-Naïve Patients
+1.1 Treatment of HIV-1 in Treatment-Naïve Patients
+EDURANT and EDURANT PED, in combination with other antiretroviral agents, is indicated for the treatment of human immunodeficiency virus type 1 (HIV-1) infection in antiretroviral treatment-naïve patients 2 years of age and older and weighing at least 14 kg with plasma HIV-1 RNA less than or equal to 100,000 copies/mL at the start of therapy.
+
+=== PASSAGE_0001 ===
+SECTION: Limitations of Use
+Limitations of Use
+- More EDURANT treated subjects with HIV-1 RNA greater than 100,000 copies/mL at the start of therapy experienced virologic failure (HIV-1 RNA ≥50 copies/mL) compared to EDURANT treated subjects with HIV-1 RNA less than or equal to 100,000 copies/mL
+
+=== PASSAGE_0002 ===
+SECTION: 1.2 Treatment of HIV-1 in Combination with Cabotegravir
+1.2 Treatment of HIV-1 in Combination with Cabotegravir
+EDURANT is indicated in combination with VOCABRIA (cabotegravir) for short-term treatment of HIV-1 infection in adults and adolescents 12 years and older and weighing at least 35 kg who are virologically suppressed (HIV-1 RNA less than 50 copies/mL) on a stable antiretroviral regimen with no history of treatment failure and with no known or suspected resistance to either cabotegravir or rilpivirine, for use as
+:
+- ral lead-in to assess the tolerability of rilpivirine prior to administration of rilpivirine extended-release injectable suspension, a component of CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension).
+- ral therapy for patients who will miss planned injection dosing with CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension).
+
+=== PASSAGE_0003 ===
+SECTION: 2.1 Overview of Different Dosage Forms
+2.1 Overview of Different Dosage Forms
+EDURANT is available in two dosage forms:
+- EDURANT 25 mg film-coated tablets for adults and pediatric patients weighing at least 25 kg.
+- EDURANT PED 2.5 mg tablets for oral suspension should only be given to pediatric patients weighing at least 14 kg to less than 25 kg
+Do not substitute EDURANT tablets and EDURANT PED tablets for oral suspension on a milligram-per-milligram basis due to differing pharmacokinetic profiles. A difference in bioavailability between 1 × 25 mg film-coated tablet and 10 × 2.5 mg tablets for oral suspension was observed; therefore, they are NOT substitutable
+.
+Take EDURANT and EDURANT PED once daily with a meal in combination with other antiretrovirals
+.
+
+=== PASSAGE_0004 ===
+SECTION: 2.2 Recommended Dosage in Treatment-Naïve Adult Patients
+2.2 Recommended Dosage in Treatment-Naïve Adult Patients
+The recommended dosage of EDURANT in adult patients is one 25 mg tablet taken orally once daily with a meal
+.
+
+=== PASSAGE_0005 ===
+SECTION: 2.3 Recommended Dosage in Treatment-Naïve Pediatric Patients 2 Years of Age and Older and Weighing at least 14 kg
+2.3 Recommended Dosage in Treatment-Naïve Pediatric Patients 2 Years of Age and Older and Weighing at least 14 kg
+The recommended dosage of EDURANT and EDURANT PED in pediatric patients 2 years of age and older and weighing at least 14 kg is based on body weight . Both EDURANT and EDURANT PED should be taken orally once daily with a meal
+.
+
+=== PASSAGE_0006 ===
+SECTION: 2.4 Preparation and Administration Instructions for EDURANT PED Only
+2.4 Preparation and Administration Instructions for EDURANT PED Only
+Advise patients or caregivers of patients taking EDURANT PED to refer to the Instructions for Use to properly prepare and take the medication.
+EDURANT PED must be dispersed in drinking water and taken immediately with a meal. If not taken immediately, then the oral suspension should be discarded, and a new dose of medicine should be prepared. The patient should not chew or swallow EDURANT PED whole. The following instructions should be followed:
+- Place the tablets for oral suspension in a cup, add 5 mL (1 teaspoon) of drinking water at room temperature. Do not crush the tablets.
+- Swirl the cup carefully for 1–2 minutes to disperse the tablets. The oral suspension will start to look cloudy.
+- Take all the prepared oral suspension immediately or to aid in administration, the oral suspension can be further diluted with 5 mL (1 teaspoon) of drinking water, milk, orange juice or applesauce. Swirl and take all the medicine immediately. A spoon can be used if needed.
+- Make sure the entire dose is taken and no medicine is left in the cup. If required, add another 5 mL (1 teaspoon) of drinking water (or alternative beverage or soft food), swirl and drink immediately.
+
+=== PASSAGE_0007 ===
+SECTION: 2.5 Recommended Dosage During Pregnancy
+2.5 Recommended Dosage During Pregnancy
+For pregnant patients who are already on a stable EDURANT regimen prior to pregnancy and who are virologically suppressed (HIV-1 RNA less than 50 copies per mL) the recommended dosage in adults and pediatric patients weighing at least 25 kg is one 25 mg tablet once daily taken orally with a meal. Refer to Table 1 for dosing recommendations for pediatric patients
+.
+Lower exposures of rilpivirine were observed during pregnancy, therefore viral load should be monitored closely
+.
+
+=== PASSAGE_0008 ===
+SECTION: 2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg
+2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg
+Consult the prescribing information for CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) before initiating EDURANT to ensure therapy with CABENUVA is appropriate.
+
+=== PASSAGE_0009 ===
+SECTION: Oral Lead-In Dosing to Assess Tolerability of Rilpivirine
+Oral Lead-In Dosing to Assess Tolerability of Rilpivirine
+Oral lead-in should be used for approximately 1 month (at least 28 days) to assess the tolerability of rilpivirine prior to the initiation of CABENUVA. The recommended oral daily dose is one 25 mg tablet of EDURANT (rilpivirine) in combination with one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) orally once daily at approximately the same time each day with a meal
+.
+Because EDURANT is indicated in combination with VOCABRIA (cabotegravir), the prescribing information for VOCABRIA (cabotegravir) tablets should also be consulted.
+The last oral dose should be taken on the same day injections with CABENUVA are started.
+
+=== PASSAGE_0010 ===
+SECTION: Oral Dosing to Replace Planned Missed Injections of CABENUVA
+Oral Dosing to Replace Planned Missed Injections of CABENUVA
+
+=== PASSAGE_0011 ===
+SECTION: Planned Missed Injections for Patients on Monthly Dosing Schedule
+Planned Missed Injections for Patients on Monthly Dosing Schedule
+If a patient plans to miss a scheduled monthly injection of CABENUVA by more than 7 days, take daily oral therapy for up to 2 months to replace missed injection visits. The recommended oral daily dose is one 25 mg tablet of EDURANT and one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) at approximately the same time each day with a meal. The first dose of oral therapy should be initiated at approximately the same time as the planned missed injection and continued until the day injection dosing is restarted. For oral therapy with EDURANT and VOCABRIA of durations greater than 2 months, an alternative oral regimen is recommended, which may include EDURANT. See full prescribing information for CABENUVA to resume monthly injection dosing.
+
+=== PASSAGE_0012 ===
+SECTION: Planned Missed Injections for Patients on Every-2-Month Dosing Schedule
+Planned Missed Injections for Patients on Every-2-Month Dosing Schedule
+If a patient plans to miss a scheduled every-2-month injection of CABENUVA by more than 7 days, take daily oral therapy for a duration of up to 2 months to replace 1 missed scheduled every-2-month injection. The recommended oral daily dose is one 25 mg tablet of EDURANT and one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) at approximately the same time each day with a meal. The first dose of oral therapy should be initiated at approximately the same time as the planned missed injection and continued until the day injection dosing is restarted. For oral therapy with EDURANT and VOCABRIA of durations greater than 2 months, an alternative oral regimen is recommended, which may include EDURANT. See full prescribing information for CABENUVA to resume every-2-month injection dosing.
+
+=== PASSAGE_0013 ===
+SECTION: 2.7 Recommended Dosage with Rifabutin Coadministration
+2.7 Recommended Dosage with Rifabutin Coadministration
+If EDURANT is coadministered with rifabutin, the EDURANT dose should be increased to 50 mg (two 25 mg tablets) once daily, taken with a meal. When rifabutin coadministration is stopped, the EDURANT dose should be decreased to 25 mg once daily, taken with a meal
+.
+Note that use of CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) with rifabutin is contraindicated. Refer to CABENUVA labeling for additional detail.
+
+=== PASSAGE_0014 ===
+SECTION: 3 DOSAGE FORMS AND STRENGTHS
+3 DOSAGE FORMS AND STRENGTHS
+EDURANT 25 mg Film-Coated Tablets
+25 mg white to off-white, film-coated, round, biconvex, tablet of 6.4 mm, debossed with "TMC" on one side and "25" on the other side. Each tablet contains 27.5 mg of rilpivirine hydrochloride, which is equivalent to 25 mg of rilpivirine.
+
+=== PASSAGE_0015 ===
+SECTION: EDURANT PED 2.5 mg Tablets for Oral Suspension 2.5 mg white to almost white, round 6.5 mm tablet, debossed with "TMC" on one side and "PED" on the other side. Each tablet for oral suspension contains 2.75 mg of rilpivirine hydrochloride equivalent to 2.5 mg rilpivirine.
+EDURANT PED 2.5 mg Tablets for Oral Suspension 2.5 mg white to almost white, round 6.5 mm tablet, debossed with "TMC" on one side and "PED" on the other side. Each tablet for oral suspension contains 2.75 mg of rilpivirine hydrochloride equivalent to 2.5 mg rilpivirine.
+
+=== PASSAGE_0016 ===
+SECTION: 4 CONTRAINDICATIONS
+4 CONTRAINDICATIONS
+EDURANT and EDURANT PED are contraindicated for coadministration with the drugs in Table 2 for which significant decreases in rilpivirine plasma concentrations may occur due to CYP3A enzyme induction or gastric pH increase, which may result in loss of virologic response and possible resistance to EDURANT or EDURANT PED or to the class of NNRTIs
+.
+
+=== PASSAGE_0017 ===
+SECTION: 5.1 Skin and Hypersensitivity Reactions
+5.1 Skin and Hypersensitivity Reactions
+Severe skin and hypersensitivity reactions have been reported during the postmarketing experience, including cases of Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS), with rilpivirine-containing regimens. While some skin reactions were accompanied by constitutional symptoms such as fever, other skin reactions were associated with organ dysfunctions, including elevations in hepatic serum biochemistries. During the Phase 3 clinical trials, treatment-related rashes with at least Grade 2 severity were reported in 3% of subjects receiving EDURANT. No Grade 4 rash was reported. Overall, most rashes were Grade 1 or 2 and occurred in the first four to six weeks of therapy
+. Discontinue EDURANT or EDURANT PED immediately if signs or symptoms of severe skin or hypersensitivity reactions develop, including but not limited to, severe rash or rash accompanied by fever, blisters, mucosal involvement, conjunctivitis, facial edema, angioedema, hepatitis or eosinophilia. Clinical status including laboratory parameters should be monitored and appropriate therapy should be initiated.
+
+=== PASSAGE_0018 ===
+SECTION: 5.2 Hepatotoxicity
+5.2 Hepatotoxicity
+Hepatic adverse events have been reported in patients receiving a rilpivirine-containing regimen. Patients with underlying hepatitis B or C virus infection, or marked elevations in transaminases prior to treatment may be at increased risk for worsening or development of transaminase elevations with use of EDURANT or EDURANT PED. A few cases of hepatic toxicity have been reported in adult patients receiving a rilpivirine-containing regimen who had no pre-existing hepatic disease or other identifiable risk factors. Appropriate laboratory testing prior to initiating therapy and monitoring for hepatotoxicity during therapy with EDURANT or EDURANT PED is recommended in patients with underlying hepatic disease such as hepatitis B or C virus infection, or in patients with marked elevations in transaminases prior to treatment initiation. Liver enzyme monitoring should also be considered for patients without pre-existing hepatic dysfunction or other risk factors.
+
+=== PASSAGE_0019 ===
+SECTION: 5.3 Depressive Disorders
+5.3 Depressive Disorders
+The adverse reaction depressive disorders (depressed mood, depression, dysphoria, major depression, mood altered, negative thoughts, suicide attempt, suicidal ideation) has been reported with EDURANT. Patients with severe depressive symptoms should seek immediate medical evaluation to assess the possibility that the symptoms are related to EDURANT or EDURANT PED, and if so, to determine whether the risks of continued therapy outweigh the benefits.
+During the Phase 3 trials in adults (N=1368) through 96 weeks, the incidence of depressive disorders (regardless of causality, severity) reported among EDURANT (n=686) or efavirenz (n=682) was 9% and 8%, respectively. Most events were mild or moderate in severity. The incidence of Grade 3 and 4 depressive disorders (regardless of causality) was 1% for both EDURANT and efavirenz. The incidence of discontinuation due to depressive disorders among EDURANT or efavirenz was 1% in each arm. Suicidal ideation was reported in 4 subjects in each arm while suicide attempt was reported in 2 subjects in the EDURANT arm.
+During the Phase 2 trial in pediatric subjects 12 to less than 18 years of age (N=36) receiving EDURANT through 48 weeks, the incidence of depressive disorders (regardless of causality, severity) was 19.4% (7/36). Most events were mild or moderate in severity. The incidence of Grade 3 and 4 depressive disorders (regardless of causality) was 5.6% (2/36). None of the subjects discontinued due to depressive disorders. Suicidal ideation and suicide attempt were reported in 1 subject.
+
+=== PASSAGE_0020 ===
+SECTION: 5.4 Risk of Adverse Reactions or Loss of Virologic Response Due to Drug Interactions
+5.4 Risk of Adverse Reactions or Loss of Virologic Response Due to Drug Interactions
+The concomitant use of EDURANT or EDURANT PED and other drugs may result in potentially significant drug interactions, some of which may lead to
+:
+- Loss of therapeutic effect of EDURANT or EDURANT PED and possible development of resistance.
+In healthy subjects, 75 mg once daily and 300 mg once daily (3 times and 12 times the dose in EDURANT) have been shown to prolong the QTc interval of the electrocardiogram. Consider alternatives to EDURANT or EDURANT PED when coadministered with a drug that is known to have a risk of torsade de pointes
+.
+See
+Table 6 for steps to prevent or manage these possible and known significant drug interactions, including dosing recommendations. Consider the potential for drug interactions prior to and during EDURANT or EDURANT PED therapy and review concomitant medications during therapy.
+
+=== PASSAGE_0021 ===
+SECTION: 5.5 Immune Reconstitution Syndrome
+5.5 Immune Reconstitution Syndrome
+Immune reconstitution syndrome has been reported in patients treated with combination antiretroviral therapy, including EDURANT. During the initial phase of combination antiretroviral treatment, patients whose immune system responds may develop an inflammatory response to indolent or residual opportunistic infections (such as
+Mycobacterium avium infection, cytomegalovirus,
+Pneumocystis jirovecii pneumonia or tuberculosis), which may necessitate further evaluation and treatment.
+Autoimmune disorders (such as Graves' disease, polymyositis, Guillain-Barré syndrome, and autoimmune hepatitis) have also been reported to occur in the setting of immune reconstitution; however, the time to onset is more variable, and can occur many months after initiation of treatment.
+
+=== PASSAGE_0022 ===
+SECTION: 5.6 Different Formulations Are Not Substitutable
+5.6 Different Formulations Are Not Substitutable
+EDURANT and EDURANT PED have differing pharmacokinetic profiles and are not substitutable on a milligram-per-milligram basis. A difference in bioavailability between 1 × 25 mg film-coated tablet and 10 × 2.5 mg tablets for oral suspension was observed; therefore, they are not substitutable
+.
+When a pediatric patient weighs 25 kg or greater, they must switch from EDURANT PED tablets for oral suspension to one 25 mg EDURANT tablet daily
+.
+Incorrect dosing of a given formulation may result in underdosing and loss of therapeutic effect and possible development of resistance or possible clinically significant adverse reactions from greater exposure to rilpivirine.
+
+=== PASSAGE_0023 ===
+SECTION: 6 ADVERSE REACTIONS
+6 ADVERSE REACTIONS
+The following adverse reactions are discussed below and in other sections of the labeling:
+- Skin and Hypersensitivity Reactions
+- Hepatotoxicity
+- Depressive Disorders
+
+=== PASSAGE_0024 ===
+SECTION: 6.1 Clinical Trials Experience
+6.1 Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice.
+
+=== PASSAGE_0025 ===
+SECTION: Clinical Trials Experience in Adults
+Clinical Trials Experience in Adults
+The safety assessment is based on the Week 96 pooled data from 1368 patients in the Phase 3 controlled trials TMC278-C209 (ECHO) and TMC278-C215 (THRIVE) in antiretroviral treatment-naïve HIV-1 infected adult patients, 686 of whom received EDURANT (25 mg once daily)
+. The median duration of exposure for patients in the EDURANT arm and efavirenz arm was 104.3 and 104.1 weeks, respectively. Most adverse reactions occurred in the first 48 weeks of treatment. The proportion of subjects who discontinued treatment with EDURANT or efavirenz due to adverse reaction, regardless of severity, was 2% and 4%, respectively. The most common adverse reactions leading to discontinuation were psychiatric disorders: 10 (1%) subjects in the EDURANT arm and 11 (2%) subjects in the efavirenz arm. Rash led to discontinuation in 1 (<1%) subject in the EDURANT arm and 10 (2%) subjects in the efavirenz arm.
+
+=== PASSAGE_0026 ===
+SECTION: Common Adverse Reactions
+Common Adverse Reactions
+Adverse reactions of at least moderate intensity (≥Grade 2) reported in at least 2% of adult subjects are presented in Table 3. Selected laboratory abnormalities are included in Table 4.
+No new adverse reaction terms were identified in adult subjects in the Phase 3 TMC278-C209 and TMC278-C215 trials between 48 weeks and 96 weeks nor in the Phase 2b TMC278-C204 trial through 240 weeks. The incidence of adverse events in the Phase 2b TMC278-C204 trial was similar to the Phase 3 trials through 96 weeks.
+
+=== PASSAGE_0027 ===
+SECTION: Less Common Adverse Reactions
+Less Common Adverse Reactions
+Adverse reactions of at least moderate intensity (≥Grade 2) occurring in less than 2% of antiretroviral treatment-naïve subjects receiving EDURANT are listed below by System Organ Class. Some adverse events have been included because of investigator's assessment of potential causal relationship and were considered serious or have been reported in more than 1 subject treated with EDURANT.
+Gastrointestinal Disorders: diarrhea, abdominal discomfort
+Hepatobiliary Disorders: cholecystitis, cholelithiasis
+Metabolism and Nutrition Disorders: decreased appetite
+Nervous System Disorders: somnolence
+Psychiatric Disorders: sleep disorders, anxiety
+Renal and Urinary Disorders: glomerulonephritis membranous, glomerulonephritis mesangioproliferative, nephrolithiasis
+
+=== PASSAGE_0028 ===
+SECTION: Laboratory Abnormalities in Treatment-Naïve Subjects
+Laboratory Abnormalities in Treatment-Naïve Subjects
+The percentage of subjects treated with EDURANT or efavirenz in the Phase 3 trials with selected laboratory abnormalities (Grades 1 to 4), representing worst Grade toxicity are shown in Table 4.
+
+=== PASSAGE_0029 ===
+SECTION: Adrenal Function
+Adrenal Function
+In the pooled Phase 3 trials, at Week 96, there was an overall mean change from baseline in basal cortisol of -0.69 (-1.12, 0.27) micrograms/dL in the EDURANT group and of -0.02 (-0.48, 0.44) micrograms/dL in the efavirenz group.
+In the EDURANT group, 43/588 (7%) of subjects with a normal 250 micrograms ACTH stimulation test at baseline developed an abnormal 250 micrograms ACTH stimulation test (peak cortisol level <18.1 micrograms/dL) during the trial compared to 18/561 (3%) in the efavirenz group. Of the subjects who developed an abnormal 250 micrograms ACTH stimulation test during the trial, fourteen subjects in the EDURANT group and nine subjects in the efavirenz group had an abnormal 250 micrograms ACTH stimulation test at Week 96. Overall, there were no serious adverse events, deaths, or treatment discontinuations that could clearly be attributed to adrenal insufficiency. The clinical significance of the higher abnormal rate of 250 micrograms ACTH stimulation tests in the EDURANT group is not known.
+
+=== PASSAGE_0030 ===
+SECTION: Serum Creatinine
+Serum Creatinine
+In the pooled Phase 3 trials, an increase in serum creatinine was observed over the 96 weeks of treatment with EDURANT. Most of this increase occurred within the first four weeks of treatment, with a mean change of 0.1 mg/dL (range: -0.3 mg/dL to 0.6 mg/dL) observed after 96 weeks of treatment. In subjects who entered the trial with mild or moderate renal impairment, the serum creatinine increase observed was similar to that seen in subjects with normal renal function. These changes are not considered to be clinically relevant and no subject discontinued treatment due to increases in serum creatinine. Serum creatinine increases occurred regardless of the background N(t)RTI regimen.
+
+=== PASSAGE_0031 ===
+SECTION: Serum Lipids
+Serum Lipids
+Changes from baseline in total cholesterol, LDL-cholesterol, HDL-cholesterol and triglycerides are presented in Table 5. The clinical benefit of these findings has not been demonstrated.
+
+=== PASSAGE_0032 ===
+SECTION: Subjects Co-infected with Hepatitis B and/or Hepatitis C Virus
+Subjects Co-infected with Hepatitis B and/or Hepatitis C Virus
+In subjects co-infected with hepatitis B or C virus receiving EDURANT, the incidence of hepatic enzyme elevation was higher than in subjects receiving EDURANT who were not co-infected. This observation was the same in the efavirenz arm. The pharmacokinetic exposure of rilpivirine in co-infected subjects was comparable to that in subjects without co-infection.
+
+=== PASSAGE_0033 ===
+SECTION: Use in Combination with Cabotegravir
+Use in Combination with Cabotegravir
+Safety findings from Phase 3/3b trials in adults were similar when EDURANT was administered in combination with VOCABRIA (cabotegravir) or other antiretrovirals. See full prescribing information for VOCABRIA and CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) for additional information.
+
+=== PASSAGE_0034 ===
+SECTION: Pediatric Population (≥12 to less than 18 years of age)
+Pediatric Population (≥12 to less than 18 years of age)
+
+=== PASSAGE_0035 ===
+SECTION: Trial TMC278-C213 Cohort 1
+Trial TMC278-C213 Cohort 1
+The safety assessment is based on the Week 48 analysis of the single-arm, open-label, Phase 2 trial, TMC278-C213 Cohort 1, in which 36 antiretroviral treatment-naïve HIV-1 infected patients 12 to less than 18 years of age and weighing at least 32 kg received EDURANT (25 mg once daily) in combination with other antiretroviral agents
+. The median duration of exposure was 63.5 weeks. There were no patients who discontinued treatment due to adverse reactions. No new adverse reactions were identified compared to those seen in adults.
+Adverse reactions were reported in nineteen pediatric subjects (53%). Most adverse reactions were Grade 1 or 2. The most common adverse reactions reported in at least 2 subjects (regardless of severity) include headache (19%), depression (19%), somnolence (14%), nausea (11%), dizziness (8%), abdominal pain (8%), vomiting (6%) and rash (6%).
+Observed laboratory abnormalities were comparable to those in adults.
+
+=== PASSAGE_0036 ===
+SECTION: Adrenal Function
+Adrenal Function
+In trial TMC278-C213 Cohort 1, at Week 48, the overall mean change from baseline in basal cortisol showed an increase of 1.59 (0.24, 2.93) micrograms/dL.
+Six of 30 (20%) subjects with a normal 250 micrograms ACTH stimulation test at baseline developed an abnormal 250 micrograms ACTH stimulation test (peak cortisol level <18.1 micrograms/dL) during the trial. Three of these subjects had an abnormal 250 micrograms ACTH stimulation test at Week 48. Overall, there were no serious adverse events, deaths, or treatment discontinuations that could clearly be attributed to adrenal insufficiency. The clinical significance of the abnormal 250 micrograms ACTH stimulation tests is not known.
+
+=== PASSAGE_0037 ===
+SECTION: Trial 208580 [MOCHA]
+Trial 208580 [MOCHA]
+Based on data from the Week 16 analysis of the MOCHA trial in 15 adolescents (12 to less than 18 years of age and weighing ≥35 kg) receiving EDURANT (25 mg once daily) in addition to continuing background antiretroviral therapy, the safety profile during the oral lead-in period in adolescents was consistent with the safety profile established with EDURANT in adults.
+
+=== PASSAGE_0038 ===
+SECTION: Pediatric Population (≥2 to less than 12 years of age)
+Pediatric Population (≥2 to less than 12 years of age)
+Two clinical trials were conducted in pediatric subjects weighing at least 16 kg (5 to less than 12 years of age). A total of 18 and 26 pediatric subjects were enrolled in Trial TMC278-C213 and Trial TMC278HTX2002, respectively. Overall, the safety data in these pediatric studies were similar to those observed in adults. Safety results from the two trials are summarized below.
+
+=== PASSAGE_0039 ===
+SECTION: Trial TMC278-C213 Cohort 2
+Trial TMC278-C213 Cohort 2
+Cohort 2 of the single-arm, open-label Phase 2 trial, TMC278-C213 evaluated the safety of the EDURANT and EDURANT PED weight adjusted doses 25, 15 and 12.5 mg once daily in antiretroviral treatment-naïve HIV-1 infected patients (≥6 to <12 years of age and weighing at least 17 kg)
+. The median duration of exposure for patients in the Week 48 analysis (including post-Week 48 extension) was 69.5 (range 35 to 218) weeks.
+All adverse reactions were Grade 1 or 2. Adverse reactions reported in at least 2 subjects, regardless of grading, in Trial TMC278-C213 Cohort 2 were: decreased appetite (3/18, 17%), vomiting (2/18, 11%), ALT increased (2/18, 11%), AST increased (2/18, 11%), and rash (2/18, 11%). No adverse reactions led to discontinuation.
+
+=== PASSAGE_0040 ===
+SECTION: Adrenal Function
+Adrenal Function
+In trial TMC278-C213 Cohort 2, basal cortisol at baseline was normal (≥9 μg/dL) for 4/18 subjects, low for 13/18 subjects, and missing for 1/18 subjects.
+Among the 4 subjects with normal basal cortisol at baseline, 3 subjects had either normal basal cortisol levels (≥9 μg/dL) or normal cortisol levels 1 hour after ACTH stimulation (≥18.1 μg/dL) throughout the trial and/or at the last available visit (Week 24 and Week 72), and 1 subject had low basal cortisol at the last available assessment (Week 48) and no ACTH stimulation test was performed. Among the 13 subjects with low basal cortisol pre-dose at baseline, 2 subjects had low basal and ACTH stimulated cortisol values throughout the trial, including ACTH stimulated cortisol at baseline before starting treatment with rilpivirine. For both subjects, no adverse events suggestive for adrenal insufficiency were reported. The remaining 11 subjects had normal serum cortisol values after ACTH stimulation at baseline and/or during treatment.
+
+=== PASSAGE_0041 ===
+SECTION: Trial TMC278HTX2002
+Trial TMC278HTX2002
+The single arm, open-label Phase 2 trial, TMC278HTX2002, evaluated the safety of EDURANT and EDURANT PED weight-adjusted doses 25, 15 and 12.5 mg once daily in virologically suppressed HIV-1 infected patients (≥2 to <12 years of age and weighing at least 16 kg). The median duration of exposure for patients in the Week 48 analysis was 48.4 (range 47 to 52) weeks.
+All adverse reactions were Grade 1 or 2. Adverse reactions reported in at least 2 subjects, regardless of grading, in Trial TMC278HTX2002 were: vomiting (4/26, 15%), abdominal pain (3/26, 12%), nausea (2/26, 8%), ALT increased (3/26, 12%), AST increased (2/26, 8%), and decreased appetite (2/26, 8%). No adverse reactions led to discontinuation.
+
+=== PASSAGE_0042 ===
+SECTION: Adrenal Function
+Adrenal Function
+In trial TMC278HTX2002, 15/26 subjects had either normal basal cortisol (≥9 μg/dL) or normal cortisol 1 hour after ACTH stimulation (≥18.1 μg/dL), 9 had low basal cortisol on Day 1, and in 2 subjects the baseline value was missing.
+From the 19 subjects with low basal cortisol at Week 48, in 15 subjects, the Week 48 serum cortisol levels returned to normal (≥248 nmol/L) after repeat serum basal cortisol testing or was normal after ACTH stimulation testing (≥500 nmol/L). In 4 subjects, the serum cortisol levels remained low after repeat serum basal cortisol testing or after ACTH stimulation testing. At Week 48, 6 subjects had normal (basal) cortisol (≥9 ug/dL) and the Week 48 result was not available for 1 subject.
+
+=== PASSAGE_0043 ===
+SECTION: 6.2 Postmarketing Experience
+6.2 Postmarketing Experience
+Adverse reactions have been identified during postmarketing experience in patients receiving a rilpivirine containing regimen. Because these reactions are reported voluntarily from a population of unknown size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.
+Renal and Genitourinary Disorders: nephrotic syndrome
+Skin and Subcutaneous Tissue Disorders: Severe skin and hypersensitivity reactions including DRESS (Drug Reaction with Eosinophilia and Systemic Symptoms)
+
+=== PASSAGE_0044 ===
+SECTION: 7 DRUG INTERACTIONS
+7 DRUG INTERACTIONS
+Rilpivirine is primarily metabolized by cytochrome P450 (CYP)3A, and drugs that induce or inhibit CYP3A may thus affect the clearance of rilpivirine. Coadministration of EDURANT or EDURANT PED and drugs that induce CYP3A may result in decreased plasma concentrations of rilpivirine and loss of virologic response and possible resistance to rilpivirine or to the class of NNRTIs. Coadministration of EDURANT or EDURANT PED and drugs that inhibit CYP3A may result in increased plasma concentrations of rilpivirine. Coadministration of EDURANT or EDURANT PED with drugs that increase gastric pH may result in decreased plasma concentrations of rilpivirine and loss of virologic response and possible resistance to rilpivirine or to the class of NNRTIs.
+EDURANT or EDURANT PED at the recommended doses are not likely to have a clinically relevant effect on the exposure of drugs metabolized by CYP enzymes.
+Table 6 shows the established and other potentially significant drug interactions based on which alterations in dose or regimen of EDURANT or EDURANT PED and/or coadministered drug may be recommended. Drugs that are not recommended for coadministration with EDURANT or EDURANT PED are also included in Table 6
+.
+In addition to the drugs included in Table 6, the interaction between EDURANT and the following drugs was evaluated in clinical studies and no dose adjustment is needed for either drug
+: acetaminophen, atorvastatin, chlorzoxazone, cabotegravir, ethinylestradiol, norethindrone, raltegravir, sildenafil, simeprevir and tenofovir disoproxil fumarate. Rilpivirine did not have a clinically significant effect on the pharmacokinetics of digoxin or metformin. No clinically relevant drug-drug interaction is expected when EDURANT or EDURANT PED is coadministered with maraviroc, ribavirin or the NRTIs abacavir, emtricitabine, lamivudine, stavudine and zidovudine.
+
+=== PASSAGE_0045 ===
+SECTION: QT Prolonging Drugs
+QT Prolonging Drugs
+There is limited information available on the potential for a pharmacodynamic interaction between rilpivirine and drugs that prolong the QTc interval of the electrocardiogram. In a study of healthy subjects, 75 mg once daily and 300 mg once daily (3 times and 12 times the dose in EDURANT) have been shown to prolong the QTc interval of the electrocardiogram
+. Consider alternatives to EDURANT when coadministered with a drug with a known risk of torsade de pointes.
+
+=== PASSAGE_0046 ===
+SECTION: 8.1 Pregnancy
+8.1 Pregnancy
+Pregnancy Exposure Registry
+There is a pregnancy exposure registry that monitors pregnancy outcomes in women exposed to EDURANT during pregnancy. Healthcare providers are encouraged to register patients by calling the Antiretroviral Pregnancy Registry (APR) 1-800-258-4263.
+
+=== PASSAGE_0047 ===
+SECTION: Risk Summary
+Risk Summary
+Available data from the APR show no difference in the overall risk of birth defects for rilpivirine compared with the background rate for major birth defects of 2.7% in the Metropolitan Atlanta Congenital Defects Program (MACDP) reference population
+. The rate of miscarriage is not reported in the APR. The estimated background rate of miscarriage in clinically recognized pregnancies in the U.S. general population is 15% to 20%. The background risk for major birth defects and miscarriage for the indicated population is unknown. Methodologic limitations of the APR include the use of MACDP as the external comparator group. The MACDP population is not disease-specific, evaluates women and infants from a limited geographic area, and does not include outcomes for births that occurred at <20 weeks gestation. In a clinical trial, total rilpivirine exposures were generally lower during pregnancy compared to the postpartum period
+.
+In animal reproduction studies, no adverse developmental outcomes were observed when rilpivirine was administered orally at exposures up to 15 (rats) and 70 (rabbits) times the exposure in humans (≥12 years of age and weighing at least 32 kg) at the recommended dose of 25 mg once daily
+.
+
+=== PASSAGE_0048 ===
+SECTION: Dosing During Pregnancy and the Postpartum Period
+Dosing During Pregnancy and the Postpartum Period
+Based on the experience of HIV-1-infected pregnant women who completed a clinical trial through the postpartum period with a rilpivirine-based regimen, no dose adjustments are required for pregnant patients who are already on a stable EDURANT regimen prior to pregnancy and who are virologically suppressed (HIV-1 RNA less than 50 copies per mL)
+.
+Lower exposures of rilpivirine were observed during pregnancy, therefore viral load should be monitored closely
+.
+
+=== PASSAGE_0049 ===
+SECTION: Human Data
+Human Data
+Based on prospective reports to the APR of over 550 exposures to rilpivirine during the first trimester of pregnancy resulting in live births, there was no significant difference between the overall risk of birth defects with rilpivirine compared to the background birth defect rate of 2.7% in the U.S. reference population of the MACDP. The prevalence of birth defects in live births was 1.4% (95% CI: 0.6% to 2.8%) and 1.5% (95% CI: 0.3% to 4.3%) following first and second/third trimester exposure, respectively, to rilpivirine-containing regimens.
+Rilpivirine in combination with a background regimen was evaluated in a clinical trial of 19 HIV-1 infected pregnant women during the second and third trimesters and postpartum. Each of the women were on a rilpivirine-based regimen at the time of enrollment. Twelve subjects completed the trial through the postpartum period (6–12 weeks after delivery) and pregnancy outcomes are missing for six subjects. The exposure (C
+0hand AUC) of total rilpivirine was approximately 30 to 40% lower during pregnancy compared with postpartum (6 to 12 weeks). The protein binding of rilpivirine was similar (>99%) during second trimester, third trimester, and postpartum period. One subject discontinued the trial following spontaneous termination of the pregnancy at 25 weeks gestation due to suspected premature rupture of membranes. Among the 12 subjects who were virologically suppressed at baseline (less than 50 copies/mL), virologic response was preserved in 10 subjects (83.3%) through the third trimester visit and in 9 subjects (75%) through the 6–12 week postpartum visit. Virologic outcomes during the third trimester visit were missing for two subjects who were withdrawn (one subject was nonadherent to the study drug and one subject withdrew consent). Among the 10 infants with HIV test results available, born to 10 HIV-infected pregnant women, all had test results that were negative for HIV-1 at the time of delivery and up to 16 weeks postpartum. All 10 infants received antiretroviral prophylactic treatment with zidovudine. Rilpivirine was well tolerated during pregnancy and postpartum. There were no new safety findings compared with the known safety profile of rilpivirine in HIV–1-infected adults.
+
+=== PASSAGE_0050 ===
+SECTION: Animal Data
+Animal Data
+Rilpivirine was administered orally to pregnant rats (40, 120, or 400 mg per kg per day) and rabbits (5, 10, or 20 mg per kg per day) through organogenesis (on gestation Days 6 through 17, and 6 through 19, respectively). No significant toxicological effects were observed in embryo-fetal toxicity studies performed with rilpivirine in rats and rabbits at exposures 15 (rats) and 70 (rabbits) times higher than the exposure in humans (≥12 years of age and weighing >32 kg) at the recommended dose of 25 mg once daily. In a pre- and postnatal development study, rilpivirine was administered orally up to 400 mg/kg/day through lactation. No adverse effects were noted in the offspring at maternal exposures up to 63 times the exposure in humans (≥12 years of age and weighing >32 kg) at the recommended dose of 25 mg daily.
+
+=== PASSAGE_0051 ===
+SECTION: 8.2 Lactation
+8.2 Lactation
+Risk Summary
+Based on limited data after oral administration, rilpivirine is present in human breast milk. The data do not allow determination of the amount of rilpivirine that is transferred to milk. There are no data on the effects on a breastfed infant, or the effects on milk production. Rilpivirine is present in rat milk
+. Potential risks of breastfeeding include: (1) HIV transmission (in HIV-negative infants), (2) developing viral resistance (in HIV-positive infants), and (3) adverse reactions in a breastfed infant similar to those seen in adults.
+
+=== PASSAGE_0052 ===
+SECTION: Animal Data
+Animal Data
+Animal lactation studies with rilpivirine have not been conducted. However, rilpivirine was detected in the plasma of nursing pups on lactation day 7 in the rat pre- and postnatal development study.
+
+=== PASSAGE_0053 ===
+SECTION: 8.4 Pediatric Use
+8.4 Pediatric Use
+The safety and effectiveness of EDURANT and EDURANT PED has been established for the treatment of HIV-1 infection in treatment-naïve pediatric patients 2 years of age and older and weighing at least 14 kg. Use of EDURANT or EDURANT PED in this population is supported by three trials: TMC278-C213, TMC278HTX2002 and MOCHA.
+
+=== PASSAGE_0054 ===
+SECTION: Trial TMC278-C213
+Trial TMC278-C213
+TMC278-C213 was a single arm, open-label, Phase 2 trial in antiretroviral treatment-naïve HIV-1 infected pediatric subjects, and was divided into two Cohorts.
+- Cohort 1 evaluated the safety, efficacy and pharmacokinetics of EDURANT and enrolled 36 children aged 12 to less than 18 years of age and weighing at least 32 kg
+- Cohort 2 evaluated the safety, tolerability, antiviral activity and pharmacokinetics of EDURANT and EDURANT PED weight-adjusted doses 25, 15 and 12.5 mg daily, and enrolled 18 children aged 6 to less than 12 years of age and weighing at least 17 kg
+
+=== PASSAGE_0055 ===
+SECTION: Trial TMC278HTX2002
+Trial TMC278HTX2002
+The safety, tolerability, antiviral activity and pharmacokinetics of EDURANT and EDURANT PED weight-adjusted doses 25, 15 and 12.5 mg daily was evaluated in a single-arm, open-label Phase 2 trial in 26 HIV-1 infected pediatric subjects 2 to less than 12 years of age and weighing at least 16 kg. Trial TMC278HTX2002 supports the safety and effectiveness of EDURANT and EDURANT PED in treatment-naïve HIV-1 infected pediatric patients 2 to less than 6 years of age
+.
+
+=== PASSAGE_0056 ===
+SECTION: MOCHA Trial (NCT03497676)
+MOCHA Trial (NCT03497676)
+The safety, tolerability, and pharmacokinetics of oral and injectable cabotegravir and oral and injectable rilpivirine are being assessed in an ongoing Phase 1/2 multicenter, open-label, non- comparative study, MOCHA (IMPAACT 2017)
+. Refer to the VOCABRIA and CABENUVA prescribing information for additional information when EDURANT is used in combination with cabotegravir.
+The safety and effectivness of EDURANT in these pediatric subjects were similar to that seen in adults, and there were no significant changes on rilpivirine exposures
+.
+Safety and effectiveness in pediatric patients less than 2 years of age or weighing less than 14 kg have not been established. Treatment with EDURANT PED is not recommended in pediatric patients less than 2 years of age or weighing below 14 kg
+.
+
+=== PASSAGE_0057 ===
+SECTION: 8.5 Geriatric Use
+8.5 Geriatric Use
+Clinical studies of EDURANT did not include sufficient numbers of subjects aged 65 and over to determine whether they respond differently from younger subjects. In general, caution should be exercised in the administration and monitoring of EDURANT in elderly patients reflecting the greater frequency of decreased renal and hepatic function, and of concomitant disease or other drug therapy.
+
+=== PASSAGE_0058 ===
+SECTION: 8.6 Renal Impairment
+8.6 Renal Impairment
+No dose adjustment of EDURANT or EDURANT PED is required in patients with mild or moderate renal impairment. However, in patients with severe renal impairment or end-stage renal disease, EDURANT or EDURANT PED should be used with caution and with increased monitoring for adverse effects, as rilpivirine concentrations may be increased due to alteration of drug absorption, distribution, and metabolism secondary to renal dysfunction. As rilpivirine is highly bound to plasma proteins, it is unlikely that it will be significantly removed by hemodialysis or peritoneal dialysis
+.
+
+=== PASSAGE_0059 ===
+SECTION: 8.7 Hepatic Impairment
+8.7 Hepatic Impairment
+No dosage adjustment of EDURANT or EDURANT PED is required in patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment. EDURANT and EDURANT PED have not been studied in patients with severe hepatic impairment (Child-Pugh Class C)
+.
+
+=== PASSAGE_0060 ===
+SECTION: 10 OVERDOSAGE
+10 OVERDOSAGE
+There is no specific antidote for overdose with EDURANT or EDURANT PED. Human experience of overdose with EDURANT or EDURANT PED is limited. Treatment of overdose with EDURANT or EDURANT PED consists of general supportive measures including monitoring of vital signs and ECG (QT interval) as well as observation of the clinical status of the patient. It is advisable to contact a poison control center to obtain the latest recommendations for the management of an overdose. Since rilpivirine is highly bound to plasma protein, dialysis is unlikely to result in significant removal of the active substance.
+
+=== PASSAGE_0061 ===
+SECTION: 11 DESCRIPTION
+11 DESCRIPTION
+EDURANT
+® (rilpivirine) is a non-nucleoside reverse transcriptase inhibitor (NNRTI) of human immunodeficiency virus type 1 (HIV-1).
+The chemical name for rilpivirine hydrochloride is 4-4-4-(E)-2-cyanoethenyl]-2,6-dimethylphenyl]amino]-2-pyrimidinyl]amino]benzonitrile monohydrochloride. Its molecular formula is C
+22H
+18N
+6∙ HCl and its molecular weight is 402.88. Rilpivirine hydrochloride has the following structural formula:
+Rilpivirine hydrochloride is a white to almost white powder. Rilpivirine hydrochloride is practically insoluble in water over a wide pH range.
+EDURANT 25 mg tablets are available as a white to off-white, film-coated, round, biconvex, 6.4 mm tablet for oral administration. Each tablet contains 27.5 mg of rilpivirine hydrochloride, which is equivalent to 25 mg of rilpivirine. Each EDURANT 25 mg tablet also contains the inactive ingredients croscarmellose sodium, lactose monohydrate, magnesium stearate, polysorbate 20, povidone K30 and silicified microcrystalline cellulose. The tablet coating contains hypromellose 2910 6 mPa.s, lactose monohydrate, PEG 3000, titanium dioxide and triacetin.
+EDURANT PED 2.5 mg tablets for oral suspension are available as white to almost white, round 6.5 mm tablet, debossed with "TMC" on one side and "PED" on the other side. Each tablet for oral suspension contains 2.75 mg of rilpivirine hydrochloride equivalent to 2.5 mg rilpivirine. Each tablet for oral suspension also contains the inactive ingredients croscarmellose sodium, lactose monohydrate, mannitol, microcrystalline cellulose, polysorbate 20, povidone K30, sodium lauryl sulfate and sodium stearyl fumarate.
+
+=== PASSAGE_0062 ===
+SECTION: 12.1 Mechanism of Action
+12.1 Mechanism of Action
+Rilpivirine is an antiviral drug
+.
+
+=== PASSAGE_0063 ===
+SECTION: 12.2 Pharmacodynamics
+12.2 Pharmacodynamics
+Effects on Electrocardiogram
+The effect of EDURANT at the recommended dose of 25 mg once daily on the QTcF interval was evaluated in a randomized, placebo and active (moxifloxacin 400 mg once daily) controlled crossover study in 60 healthy adults, with 13 measurements over 24 hours at steady state. The maximum mean time-matched (95% upper confidence bound) differences in QTcF interval from placebo after baseline-correction was 2.0 (5.0) milliseconds (i.e., below the threshold of clinical concern).
+When doses of 75 mg once daily and 300 mg once daily of EDURANT (3 times and 12 times the dose in EDURANT) were studied in healthy adults, the maximum mean time-matched (95% upper confidence bound) differences in QTcF interval from placebo after baseline-correction were 10.7 (15.3) and 23.3 (28.4) milliseconds, respectively. Steady-state administration of EDURANT 75 mg once daily and 300 mg once daily resulted in a mean steady-state C
+maxapproximately 2.6-fold and 6.7-fold, respectively, higher than the mean C
+maxobserved with the recommended 25 mg once daily dose of EDURANT
+.
+
+=== PASSAGE_0064 ===
+SECTION: 12.3 Pharmacokinetics
+12.3 Pharmacokinetics
+Pharmacokinetics in Adults
+The pharmacokinetic properties of rilpivirine have been evaluated in adult healthy subjects and in adult antiretroviral treatment-naïve HIV-1-infected subjects. Exposure to rilpivirine was generally lower in HIV-1 infected subjects than in healthy subjects.
+
+=== PASSAGE_0065 ===
+SECTION: Absorption and Bioavailability
+Absorption and Bioavailability
+After oral administration, the maximum plasma concentration of rilpivirine is generally achieved within 4–5 hours. The absolute bioavailability of EDURANT and EDURANT PED is unknown.
+
+=== PASSAGE_0066 ===
+SECTION: Effects of Food on Oral Absorption
+Effects of Food on Oral Absorption
+The exposure to rilpivirine was approximately 40% lower when EDURANT was taken in a fasted condition as compared to a normal caloric meal (533 kcal) or high-fat high-caloric meal (928 kcal). When EDURANT was taken with only a protein-rich nutritional drink, exposures were 50% lower than when taken with a meal.
+Administration of the EDURANT PED 2.5 mg tablets dispersed in drinking water in fasted conditions or after yogurt consumption resulted in a 31% and 28% lower exposure, respectively, compared to administration in fed conditions (a meal containing 533 kcal) in adults.
+
+=== PASSAGE_0067 ===
+SECTION: Distribution
+Distribution
+Rilpivirine is approximately 99.7% bound to plasma proteins
+in vitro, primarily to albumin. The distribution of rilpivirine into compartments other than plasma (e.g., cerebrospinal fluid, genital tract secretions) has not been evaluated in humans.
+
+=== PASSAGE_0068 ===
+SECTION: Metabolism
+Metabolism
+In vitro experiments indicate that rilpivirine primarily undergoes oxidative metabolism mediated by the cytochrome P450 (CYP) 3A system.
+
+=== PASSAGE_0069 ===
+SECTION: Elimination
+Elimination
+The terminal elimination half-life of rilpivirine is approximately 50 hours. After single dose oral administration of
+14C-rilpivirine, on average 85% and 6.1% of the radioactivity could be retrieved in feces and urine, respectively. In feces, unchanged rilpivirine accounted for on average 25% of the administered dose. Only trace amounts of unchanged rilpivirine (<1% of dose) were detected in urine.
+
+=== PASSAGE_0070 ===
+SECTION: Pregnancy and Postpartum
+Pregnancy and Postpartum
+The exposure (C
+0hand AUC
+24h) to total rilpivirine after intake of rilpivirine 25 mg once daily as part of an antiretroviral regimen was 30 to 40% lower during pregnancy (similar for the second and third trimester), compared with postpartum . However, the exposure during pregnancy was not significantly different from exposures obtained in Phase 3 trials. Based on the exposure-response relationship for rilpivirine, this decrease is not considered clinically relevant in patients who are virollogically suppressed. The protein binding of rilpivirine was similar (>99%) during the second trimester, third trimester, and postpartum.
+
+=== PASSAGE_0071 ===
+SECTION: Pediatric Patients
+Pediatric Patients
+The pharmacokinetics of rilpivirine in HIV-1 infected pediatric patients 2 to less than 18 years of age and weighing at least 16 kg receiving the recommended weight-based dosing regimen of EDURANT and EDURANT PED were comparable or slightly higher than those obtained in treatment-naïve HIV-1 infected adult patients .
+
+=== PASSAGE_0072 ===
+SECTION: Renal Impairment
+Renal Impairment
+Pharmacokinetic analysis indicated that rilpivirine exposure was similar in HIV-1 infected subjects with mild renal impairment relative to HIV-1 infected subjects with normal renal function. No dose adjustment is required in patients with mild renal impairment. There is limited or no information regarding the pharmacokinetics of rilpivirine in patients with moderate or severe renal impairment or in patients with end-stage renal disease, and rilpivirine concentrations may be increased due to alteration of drug absorption, distribution, and metabolism secondary to renal dysfunction. The potential impact is not expected to be of clinical relevance for HIV-1-infected subjects with moderate renal impairment, and no dose adjustment is required in these patients. Rilpivirine should be used with caution and with increased monitoring for adverse effects in patients with severe renal impairment or end-stage renal disease. As rilpivirine is highly bound to plasma proteins, it is unlikely that it will be significantly removed by hemodialysis or peritoneal dialysis
+.
+
+=== PASSAGE_0073 ===
+SECTION: Hepatic Impairment
+Hepatic Impairment
+Rilpivirine is primarily metabolized and eliminated by the liver. In a study comparing 8 subjects with mild hepatic impairment (Child-Pugh score A) to 8 matched controls, and 8 subjects with moderate hepatic impairment (Child-Pugh score B) to 8 matched controls, the multiple dose exposure of rilpivirine was 47% higher in subjects with mild hepatic impairment and 5% higher in subjects with moderate hepatic impairment. EDURANT has not been studied in subjects with severe hepatic impairment (Child-Pugh score C)
+.
+
+=== PASSAGE_0074 ===
+SECTION: Sex, Race, Hepatitis B and/or Hepatitis C Virus Co-infection
+Sex, Race, Hepatitis B and/or Hepatitis C Virus Co-infection
+No clinically relevant differences in the pharmacokinetics of rilpivirine have been observed between sex, race and patients with hepatitis B and/or C-virus co-infection.
+
+=== PASSAGE_0075 ===
+SECTION: Drug Interactions
+Drug Interactions
+.
+Rilpivirine is primarily metabolized by cytochrome P450 (CYP)3A, and drugs that induce or inhibit CYP3A may thus affect the clearance of rilpivirine. Coadministration of EDURANT or EDURANT PED and drugs that induce CYP3A may result in decreased plasma concentrations of rilpivirine and loss of virologic response and possible resistance. Coadministration of EDURANT and EDURANT PED and drugs that inhibit CYP3A may result in increased plasma concentrations of rilpivirine. Coadministration of EDURANT and EDURANT PED with drugs that increase gastric pH may result in decreased plasma concentrations of rilpivirine and loss of virologic response and possible resistance to rilpivirine and to the class of NNRTIs.
+EDURANT and EDURANT PED at the recommended doses are not likely to have a clinically relevant effect on the exposure of medicinal products metabolized by CYP enzymes.
+Drug interaction studies were performed with EDURANT and other drugs likely to be coadministered or commonly used as probes for pharmacokinetic interactions. The effects of coadministration of other drugs on the C
+max, AUC, and C
+minvalues of rilpivirine are summarized in Table 11 (effect of other drugs on EDURANT). The effect of coadministration of EDURANT on the C
+max, AUC, and C
+minvalues of other drugs are summarized in Table 12 (effect of EDURANT on other drugs). For information regarding clinical recommendations,
+see
+Drug Interactions (7)
+].
+
+=== PASSAGE_0076 ===
+SECTION: 12.4 Microbiology
+12.4 Microbiology
+Mechanism of Action
+Rilpivirine is a diarylpyrimidine non-nucleoside reverse transcriptase inhibitor (NNRTI) of human immunodeficiency virus type 1 (HIV-1) and inhibits HIV-1 replication by non-competitive inhibition of HIV-1 reverse transcriptase (RT). Rilpivirine does not inhibit the human cellular DNA polymerases α, β and γ.
+
+=== PASSAGE_0077 ===
+SECTION: Antiviral Activity in Cell Culture
+Antiviral Activity in Cell Culture
+Rilpivirine exhibited activity against laboratory strains of wild-type HIV-1 in an acutely infected T-cell line with a median EC
+50value for HIV-1
+IIIBof 0.73 nM (0.27 ng/mL). Rilpivirine demonstrated limited activity in cell culture against HIV-2 with a median EC
+50value of 5220 nM (range 2510 to 10830 nM) (920 to 3970 ng/mL).
+Rilpivirine demonstrated antiviral activity against a broad panel of HIV-1 group M (subtype A, B, C, D, F, G, H) primary isolates with EC
+50values ranging from 0.07 to 1.01 nM (0.03 to 0.37 ng/mL) and was less active against group O primary isolates with EC
+50values ranging from 2.88 to 8.45 nM (1.06 to 3.10 ng/mL).
+The antiviral activity of rilpivirine was not antagonistic when combined with the NNRTIs efavirenz, etravirine or nevirapine; the N(t)RTIs abacavir, didanosine, emtricitabine, lamivudine, stavudine, tenofovir or zidovudine; the PIs amprenavir, atazanavir, darunavir, indinavir, lopinavir, nelfinavir, ritonavir, saquinavir or tipranavir; the fusion inhibitor enfuvirtide; the CCR5 co-receptor antagonist maraviroc, or the integrase strand transfer inhibitor raltegravir.
+
+=== PASSAGE_0078 ===
+SECTION: In Cell Culture
+In Cell Culture
+Rilpivirine-resistant strains were selected in cell culture starting from wild-type HIV-1 of different origins and subtypes as well as NNRTI resistant HIV-1. The frequently observed amino acid substitutions that emerged and conferred decreased phenotypic susceptibility to rilpivirine included: L100I, K101E, V106I and A, V108I, E138K and G, Q, R, V179F and I, Y181C and I, V189I, G190E, H221Y, F227C and M230I and L.
+
+=== PASSAGE_0079 ===
+SECTION: In Treatment-Naïve Adult Subjects
+In Treatment-Naïve Adult Subjects
+In the Week 96 pooled resistance analysis of the Phase 3 trials TMC278-C209 and TMC278-C215, the emergence of resistance was greater among subjects' viruses in the EDURANT arm compared to the efavirenz arm, and was dependent on baseline viral load. In the pooled resistance analysis, 58% (57/98) of the subjects who qualified for resistance analysis (resistance analysis subjects) in the EDURANT arm had virus with genotypic and/or phenotypic resistance to rilpivirine compared to 45% (25/56) of the resistance analysis subjects in the efavirenz arm who had genotypic and/or phenotypic resistance to efavirenz. Moreover, genotypic and/or phenotypic resistance to a background drug (emtricitabine, lamivudine, tenofovir, abacavir or zidovudine) emerged in viruses from 52% (51/98) of the resistance analysis subjects in the rilpivirine arm compared to 23% (13/56) in the efavirenz arm.
+Emerging NNRTI substitutions in the rilpivirine resistance analysis of subjects' viruses included V90I, K101E/P/T, E138K/A/Q/G, V179I/L, Y181C/I, V189I, H221Y, F227C/L and M230L, which were associated with a rilpivirine phenotypic fold change range of 2.6 – 621. The E138K substitution emerged most frequently during rilpivirine treatment commonly in combination with the M184I substitution. The emtricitabine and lamivudine resistance-associated substitutions M184I or V and NRTI resistance-associated substitutions (K65R/N, A62V, D67N/G, K70E, Y115F, T215S/T, or K219E/R) emerged more frequently in rilpivirine resistance analysis subjects compared to efavirenz resistance analysis subjects .
+NNRTI- and NRTI-resistance substitutions emerged less frequently in resistance analysis of viruses from subjects with baseline viral load of ≤100,000 copies/mL compared to viruses from subjects with baseline viral load of >100,000 copies/mL: 26% (14/54) compared to 74% (40/54) of NNRTI-resistance substitutions and 22% (11/50) compared to 78% (39/50) of NRTI-resistance substitutions. This difference was also observed for the individual emtricitabine/lamivudine and tenofovir resistance substitutions: 23% (11/47) compared to 77% (36/47) for M184I/V and 0% (0/8) compared to 100% (8/8) for K65R/N. Additionally, NNRTI- and NRTI-resistance substitutions emerged less frequently in the resistance analysis of viruses from subjects with baseline CD4+ cell counts ≥200 cells/mm
+3compared to viruses from subjects with baseline CD4+ cell counts <200 cells/mm
+3: 37% (20/54) compared to 63% (34/54) of NNRTI-resistance substitutions and 28% (14/50) compared to 72% (36/50) of NRTI-resistance substitutions.
+
+=== PASSAGE_0080 ===
+SECTION: Treatment--Naïve HIV-1-Infected Pediatric Subjects
+Treatment--Naïve HIV-1-Infected Pediatric Subjects
+In trial TMC278-C213 Cohort 1, a single-arm, open-label Phase 2 trial in antiretroviral treatment-naïve HIV-1-infected pediatric subjects ≥12 to less than 18 years
+, rilpivirine resistance-associated substitutions were observed in 62.5% (5/8) of subjects with virologic failure and post-baseline genotypic data at 48 weeks with 4 of 5 having ≥2.5-fold decrease in susceptibility to rilpivirine. In addition, 4 of the 5 subjects with rilpivirine resistance substitutions also had at least 1 treatment-emergent resistance substitution to nucleos(t)ide reverse transcriptase inhibitors.
+In trial TMC278-C213 Cohort 2, a single-arm, open-label Phase 2 trial in antiretroviral treatment-naïve HIV-1-infected pediatric subjects 6 to less than 12 years of age
+, 83% (5/6) of subjects with virologic failure (3 subjects failed ≤48 weeks and 3 subjects failed after 48 weeks) had treatment-emergent rilpivirine resistance-associated substitutions with 4 showing reduced rilpivirine susceptibility. Additionally, 4 of the virologic failures also had treatment-emergent resistance substitutions to nucleos(t)ide reverse transcriptase inhibitors.
+The emergent rilpivirine resistance-associated substitutions in pediatric patients are consistent with those seen in adults failing on a rilpivirine-containing regimen .
+
+=== PASSAGE_0081 ===
+SECTION: Site-Directed NNRTI Mutant Virus
+Site-Directed NNRTI Mutant Virus
+Cross-resistance has been observed among NNRTIs. The single NNRTI substitutions K101P, Y181I and Y181V conferred 52-fold, 15-fold and 12-fold decreased susceptibility to rilpivirine, respectively. The combination of E138K and M184I showed 6.7-fold reduced susceptibility to rilpivirine compared to 2.8-fold for E138K alone. The K103N substitution did not result in reduced susceptibility to rilpivirine by itself. However, the combination of K103N and L100I resulted in a 7-fold reduced susceptibility to rilpivirine. Combinations of 2 or 3 NNRTI resistance-associated substitutions had decreased susceptibility to rilpivirine (fold change range of 3.7 – 554) in 38% and 66% of mutants analyzed, respectively.
+
+=== PASSAGE_0082 ===
+SECTION: Treatment-Naïve HIV-1-Infected Adult Subjects
+Treatment-Naïve HIV-1-Infected Adult Subjects
+Considering all available cell culture and clinical data, any of the following amino acid substitutions, when present at baseline, are likely to decrease the antiviral activity of rilpivirine: K101E, K101P, E138A, E138G, E138K, E138R, E138Q, V179L, Y181C, Y181I, Y181V, Y188L, H221Y, F227C, M230I or M230L.
+Cross-resistance to efavirenz, etravirine and/or nevirapine is likely after virologic failure and development of rilpivirine resistance. In the Week 96 pooled analyses of the Phase 3 TMC278-C209 and TMC278-C215 clinical trials, 50 of the 87 (57%) rilpivirine resistance analysis subjects with post-baseline resistance data had virus with decreased susceptibility to rilpivirine (≥2.5-fold change). Of these, 86% (n=43/50) were resistant to efavirenz (≥3.3-fold change), 90% (n=45/50) were resistant to etravirine (≥3.2-fold change) and 62% (n=31/50) were resistant to nevirapine (≥6-fold change). In the efavirenz arm, 3 of the 21 (14%) efavirenz resistance analysis subjects' viruses were resistant to etravirine and rilpivirine, and 95% (n=20/21) were resistant to nevirapine. Virus from subjects experiencing virologic failure on EDURANT developed more NNRTI resistance-associated substitutions conferring more cross-resistance to the NNRTI class and had a higher likelihood of cross-resistance to all NNRTIs in the class compared to virus from subjects who failed on efavirenz.
+
+=== PASSAGE_0083 ===
+SECTION: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis and Mutagenesis
+Two-year carcinogenicity studies in mice and rats were conducted with rilpivirine. In rats, there were no drug related neoplasms at exposures 3 times those observed in humans (12 years of age and older and weighing greater than 32 kg) and ≥1.4 times relative to the predicted exposures in children (2 to less than 12 years of age, weighing at least 14 kg) at the recommended daily dose. In mice, rilpivirine was positive for hepatocellular neoplasms in both males and females. The observed hepatocellular findings in mice may be rodent-specific. At the lowest tested dose in the mouse carcinogenicity study, the systemic exposure to rilpivirine was 21 times that observed in humans (12 years of age and older and weighing greater than 32 kg) and ≥12 times relative to the predicted exposures in children (2 to less than 12 years of age, weighing at least 14 kg) at the recommended daily dose.
+Rilpivirine was not genotoxic in the bacterial reverse mutation assay, mouse lymphoma assay, or in the
+in vivorodent micronucleus assay.
+
+=== PASSAGE_0084 ===
+SECTION: Impairment of Fertility
+Impairment of Fertility
+In rat fertility and early embryonic development studies with rilpivirine, no effects on fertility were observed at rilpivirine exposures (AUC) greater than 36 times (male) and 40 times (female) the exposure in humans (12 years of age and older and weighing at least 32 kg) at the recommended daily dose of 25 mg.
+
+=== PASSAGE_0085 ===
+SECTION: 14.1 Treatment-Naïve Adult Subjects
+14.1 Treatment-Naïve Adult Subjects
+The evidence of efficacy of EDURANT is based on the analyses of 48- and 96-week data from 2 randomized, double-blinded, active controlled, Phase 3 trials TMC278-C209 (ECHO) and TMC278-C215 (THRIVE) in antiretroviral treatment-naïve adults. Antiretroviral treatment-naïve HIV-1 infected subjects enrolled in the Phase 3 trials had a plasma HIV-1 RNA ≥5000 copies/mL and were screened for susceptibility to N(t)RTIs and for absence of specific NNRTI resistance-associated substitutions (RASs). The Phase 3 trials were identical in design, apart from the background regimen (BR). In TMC278-C209, the BR was fixed to the N(t)RTIs, tenofovir disoproxil fumarate plus emtricitabine. In TMC278-C215, the BR consisted of 2 investigator-selected N(t)RTIs: tenofovir disoproxil fumarate plus emtricitabine or zidovudine plus lamivudine or abacavir plus lamivudine. In both trials, randomization was stratified by screening viral load. In TMC278-C215, randomization was also stratified by N(t)RTI BR.
+In the pooled analysis for TMC278-C209 and TMC278-C215, demographics and baseline characteristics were balanced between the EDURANT arm and the efavirenz arm. Table 14 displays selected demographic and baseline disease characteristics of the subjects in the EDURANT and efavirenz arms.
+Week 96 efficacy outcomes for subjects treated with EDURANT 25 mg once daily from the pooled analysis are shown in Table 15. The incidence of virologic failure was higher in the EDURANT arm than the efavirenz arm at Week 96. Virologic failures and discontinuations due to adverse events mostly occurred in the first 48 weeks of treatment. Regardless of HIV-1 RNA at the start of therapy, more EDURANT treated subjects with CD4+ cell count less than 200 cells/mm
+3 experienced virologic failure compared to EDURANT treated subjects with CD4+ cell count greater than or equal to 200 cells/mm
+3.
+At Week 96, the mean CD4+ cell count increase from baseline was 228 cells/mm
+3 for EDURANT-treated subjects and 219 cells/mm
+3 for efavirenz-treated subjects in the pooled analysis of the TMC278-C209 and TMC278-C215 trials.
+Study TMC278-C204 was a randomized, active-controlled, Phase 2b trial in antiretroviral treatment-naïve HIV-1-infected adult subjects consisting of 2 parts: an initial 96 weeks, partially-blinded dose-finding part EDURANT doses blinded] followed by a long-term, open-label part. After Week 96, subjects randomized to one of the 3 doses of EDURANT were switched to EDURANT 25 mg once daily. Subjects in the control arm received efavirenz 600 mg once daily in addition to a BR in both parts of the study. The BR consisted of 2 investigator-selected N(t)RTIs: zidovudine plus lamivudine or tenofovir disoproxil fumarate plus emtricitabine.
+Study TMC278-C204 enrolled 368 HIV-1-infected treatment-naïve adult subjects who had a plasma HIV-1 RNA ≥5000 copies/mL, previously received ≤2 weeks of treatment with an N(t)RTI or protease inhibitor, had no prior use of NNRTIs, and were screened for susceptibility to N(t)RTI and for absence of specific NNRTI RASs.
+At 96 weeks, the proportion of subjects with <50 HIV-1 RNA copies/mL receiving EDURANT 25 mg (N=93) compared to subjects receiving efavirenz (N=89) was 76% and 71%, respectively. The mean increase from baseline in CD4+ counts was 146 cells/mm
+3in subjects receiving EDURANT 25 mg and 160 cells/mm
+3in subjects receiving efavirenz.
+At 240 weeks, 60% (56/93) of subjects who originally received 25 mg once daily achieved HIV RNA <50 copies/mL compared to 57% (51/89) of subjects in the control group.
+
+=== PASSAGE_0086 ===
+SECTION: 14.2 Virologically-Suppressed Adults Treated in Combination with Cabotegravir
+14.2 Virologically-Suppressed Adults Treated in Combination with Cabotegravir
+The use of EDURANT in combination with VOCABRIA (cabotegravir) as an oral lead-in and in patients who miss planned injections with CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) was evaluated in two Phase 3 randomized, multicenter, active-controlled, parallel-arm, open-label, non-inferiority trials (Trial 201584: FLAIR NCT02938520], Trial 201585: ATLAS NCT2951052]), and one Phase 3b randomized, multicenter, parallel-group, open-label, non-inferiority trial (Trial 207966: ATLAS-2M NCT03299049]) in subjects who were virologically suppressed (HIV-1 RNA <50 copies/mL). See full prescribing information for VOCABRIA and CABENUVA for additional information.
+
+=== PASSAGE_0087 ===
+SECTION: 14.3 Treatment-Naïve Pediatric Subjects (≥12 to less than 18 Years of Age)
+14.3 Treatment-Naïve Pediatric Subjects (≥12 to less than 18 Years of Age)
+The pharmacokinetics, safety, tolerability and efficacy of EDURANT 25 mg once daily, in combination with an investigator-selected background regimen (BR) containing two NRTIs, was evaluated in trial TMC278-C213 Cohort 1, a single-arm, open-label Phase 2 trial in antiretroviral treatment-naïve HIV-1 infected pediatric subjects 12 to less than 18 years of age and weighing at least 32 kg. Thirty six (36) subjects were enrolled in the trial to complete at least 48 weeks of treatment. The 36 subjects had a median age of 14.5 years (range: 12 to 17 years), and were 56% female, 89% Black and 11% Asian.
+In the efficacy analysis, most subjects (75%; 28/36) had baseline HIV RNA <100,000 copies/mL. For these 28 subjects the median baseline plasma HIV-1 RNA was 44,250 (range: 2,060–92,600 copies/mL) and the median baseline CD4+ cell count was 445.5 cells/mm
+3(range: 123 to 983 cells/mm
+3).
+Among the subjects who had baseline HIV RNA ≤100,000, the proportion with HIV-1 RNA <50 copies/mL at Week 48 was 79% (22/28), versus 50% (4/8) in those with >100,000 copies/mL. The proportion of virologic failures among subjects with a baseline viral load ≤100,000 copies/mL was 21% (6/28), versus 38% (3/8) in those with >100,000 copies/mL. At Week 48, the mean increase in CD4+ cell count from baseline was 201.2 cells/mm
+3.
+
+=== PASSAGE_0088 ===
+SECTION: 14.4 Treatment-Naïve Pediatric Subjects (2 to less than 12 Years of Age)
+14.4 Treatment-Naïve Pediatric Subjects (2 to less than 12 Years of Age)
+The pharmacokinetics, safety, tolerability and efficacy of EDURANT and EDURANT PED weight-adjusted doses 25, 15 and 12.5 mg once daily in combination with an investigator-selected BR containing two NRTIs, was evaluated in trial TMC278-C213 Cohort 2, a single-arm, open-label Phase 2 trial in antiretroviral treatment-naïve HIV-1 infected pediatric subjects 6 to less than 12 years of age and weighing at least 17 kg. The Week 48 analysis included 18 subjects, 17 (94%) subjects completed the 48-week treatment period, and 1 (6%) subject discontinued the study early due to reaching a virologic endpoint. The 18 subjects had a median age of 9 years (range 6 to 11 years) and the median weight at baseline was 25 kg (range 17 to 51 kg). 89% were Black and 39% were female. The median baseline plasma viral load was 55,400 (range 567–149,000) copies/mL, and the median absolute baseline CD4+ cell count was 432.5 (range 12–2,068) cells/µL.
+The number of subjects with HIV-1 RNA <50 copies/mL at Week 48 was 13/18 (72%), while 3/18 (17%) subjects had HIV-1 RNA ≥50 copies/mL at Week 48
+. Two out of 18 (11%) participants in the 15 mg once daily (20 to ≤25 kg) dose-weight group had missing viral load data at Week 48 but remained on study. The viral load for these 2 subjects was <50 copies/mL, post-Week 48. The mean increase (SE) in CD4+ from baseline was 215.9 (62.42) cells/µL at Week 48.
+The safety and efficacy of EDURANT and EDURANT PED in treatment naïve pediatric subjects 2 to less than 6 years of age is supported by evidence from adequate and well-controlled studies of EDURANT in adults with additional population pharmacokinetic data from adults and pediatric subjects 6 years and older
+.
+
+=== PASSAGE_0089 ===
+SECTION: 16 HOW SUPPLIED/STORAGE AND HANDLING
+16 HOW SUPPLIED/STORAGE AND HANDLING
+EDURANT Tablets
+EDURANT
+® (rilpivirine) 25 mg tablets are supplied as white to off-white, film-coated, round, biconvex, 6.4 mm tablets. Each tablet contains 27.5 mg of rilpivirine hydrochloride, which is equivalent to 25 mg of rilpivirine. Each tablet is debossed with "TMC" on one side and "25" on the other side.
+EDURANT 25 mg tablets are packaged in bottles in the following configuration: 25 mg tablets-bottles of 30 (NDC 59676-278-01).
+Store EDURANT tablets in the original bottle in order to protect from light. Store EDURANT tablets at 20° to 25°C (68° to 77°F); with excursions permitted to 15° to 30°C (59° to 86°F) .
+
+=== PASSAGE_0090 ===
+SECTION: EDURANT PED Tablets for Oral Suspension
+EDURANT PED Tablets for Oral Suspension
+EDURANT
+® PED (rilpivirine) 2.5 mg tablets for oral suspension are supplied as white to almost white, round 6.5 mm tablets, debossed with "TMC" on one side and "PED" on the other side. Each tablet for oral suspension contains 2.75 mg rilpivirine hydrochloride equivalent to 2.5 mg rilpivirine.
+EDURANT PED 2.5 mg tablets for oral suspension are packaged in aluminum cold form film blister with integrated desiccant and an aluminum peelable lidding foil. Each blister contains 10 tablets with 9 blisters per carton (NDC 59676-280-90).
+Store EDURANT PED tablets for oral suspension in the original package in order to protect from light and moisture. Store at 20° to 25°C (68° to 77°F); with excursions permitted to 15° to 30°C (59° to 86°F) .
+
+=== PASSAGE_0091 ===
+SECTION: 17 PATIENT COUNSELING INFORMATION
+17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Patient Information and Instructions for Use).
+
+=== PASSAGE_0092 ===
+SECTION: Severe Skin and Hypersensitivity Reactions
+Severe Skin and Hypersensitivity Reactions
+Advise patients to immediately contact their healthcare provider if they develop a rash. Instruct patients to immediately stop taking EDURANT or EDURANT PED and seek medical attention if they develop a rash associated with any of the following symptoms as it may be a sign of more serious reactions such as DRESS severe hypersensitivity: fever, blisters, mucosal involvement, eye inflammation (conjunctivitis), severe allergic reaction causing a swelling of the face, eyes, lips, mouth, tongue or throat, which may lead to difficulty swallowing or breathing, and any signs and symptoms of liver problems as it may be a sign of a more serious reaction. Advise patients that if severe rash occurs, they will be closely monitored, laboratory tests will be performed and appropriate therapy will be initiated
+.
+
+=== PASSAGE_0093 ===
+SECTION: Hepatotoxicity
+Hepatotoxicity
+Inform patients that hepatotoxicity has been reported with EDURANT. Inform patients that laboratory monitoring for hepatotoxicity during therapy with EDURANT or EDURANT PED is recommended, especially for patients with underlying liver disease such as hepatitis B or C virus infection
+.
+
+=== PASSAGE_0094 ===
+SECTION: Depressive Disorders
+Depressive Disorders
+Inform patients that depressive disorders (depressed mood, depression, dysphoria, major depression, mood altered, negative thoughts, suicide attempt, suicidal ideation) have been reported with EDURANT. Advise patients to seek immediate medical evaluation if they experience depressive symptoms
+.
+
+=== PASSAGE_0095 ===
+SECTION: Drug Interactions
+Drug Interactions
+EDURANT or EDURANT PED may interact with many drugs; therefore, advise patients to report to their healthcare provider the use of any other prescription or nonprescription medication or herbal products, including St. John's wort
+.
+For patients concomitantly receiving rifabutin, the EDURANT dose should be increased to 50 mg once daily, taken with a meal. When rifabutin coadministration is stopped, the EDURANT dose should be decreased to 25 mg once daily, taken with a meal
+.
+
+=== PASSAGE_0096 ===
+SECTION: Immune Reconstitution Syndrome
+Immune Reconstitution Syndrome
+Advise patients to inform their healthcare provider immediately of any signs or symptoms of infection as inflammation from previous infection may occur soon after combination antiretroviral therapy, including when EDURANT or EDURANT PED is started
+.
+
+=== PASSAGE_0097 ===
+SECTION: EDURANT Tablets and EDURANT PED Tablets for Oral Suspension Are Not Substitutable
+EDURANT Tablets and EDURANT PED Tablets for Oral Suspension Are Not Substitutable
+Advise patients that EDURANT and EDURANT PED have differing pharmacokinetic profiles and are not substitutable on a milligram-per-milligram basis. Advise patients or their care providers that patients switching from EDURANT PED tablets for oral suspension to EDURANT tablets must adjust the dose
+.
+To avoid a dosing error from using the wrong formulation of EDURANT, strongly advise patients and caregivers to visually inspect the tablets to verify the correct formulation each time the prescription is filled
+.
+
+=== PASSAGE_0098 ===
+SECTION: Administration Instructions
+Administration Instructions
+Advise patients to take EDURANT or EDURANT PED with a meal once a day as prescribed. A protein drink or yogurt alone does not replace a meal
+. EDURANT and EDURANT PED must always be used in combination with other antiretroviral drugs. Advise patients not to alter the dose of EDURANT or EDURANT PED or discontinue therapy without consulting their physician.
+Inform patients and caregivers that EDURANT PED tablets for oral suspension should be dispersed in drinking water and should not be crushed, chewed, or swallowed whole
+.
+If the patient misses a dose of EDURANT or EDURANT PED within 12 hours of the time it is usually taken, advise the patient to take EDURANT or EDURANT PED with a meal as soon as possible and then take the next dose of EDURANT or EDURANT PED at the regularly scheduled time. If a patient misses a dose of EDURANT or EDURANT PED by more than 12 hours, advise the patient to not take the missed dose, but resume the usual dosing schedule. Inform the patient that he or she should not take more or less than the prescribed dose of EDURANT or EDURANT PED at any one time.
+
+=== PASSAGE_0099 ===
+SECTION: Pregnancy Registry
+Pregnancy Registry
+Advise patients that there is a pregnancy exposure registry that monitors pregnancy outcomes in women exposed to EDURANT during pregnancy
+.
+
+=== PASSAGE_0100 ===
+SECTION: Lactation
+Lactation
+Inform individuals with HIV-1 infection that the potential risks of breastfeeding include: (1) HIV-1 transmission (in HIV-1-negative infants), (2) developing viral resistance (in HIV-1-positive infants), and (3) adverse reactions in a breastfed infant similar to those seen in adults
+.
+
+=== PASSAGE_0101 ===
+SECTION: Manufactured for:
+Manufactured for:
+Janssen Products, LP
+Horsham, PA 19044, USA
+For patent information: www.janssenpatents.com
+© Johnson & Johnson and its affiliates 2011, 2024
+
+=== PASSAGE_0102 ===
+SECTION: What are EDURANT and EDURANT PED?
+What are EDURANT and EDURANT PED?
+- EDURANT and EDURANT PED are prescription medicines that are used with other human immunodeficiency virus-1 (HIV-1) medicines to treat HIV-1 infection in people 2 years of age and older and who weigh at least 31 pounds (lbs) or 14 kilograms (kg) who:
+- have never taken HIV-1 medicines before, and
+- have an amount of HIV-1 in their blood (this is called 'viral load') that is no more than 100,000 copies/mL.
+- EDURANT is also used with oral VOCABRIA (cabotegravir) for short term treatment of HIV-1 infection in people 12 years of age and older and who weigh at least 77 lbs (35 kg) when their healthcare provider determines that they meet certain requirements.
+- carbamazepine
+- phenobarbital
+- rifampin
+- dexamethasone (more than a single dose treatment)
+- esomeprazole
+- meprazole
+- rabeprazole
+- xcarbazepine
+- phenytoin
+- rifapentine
+- St. John's wort (
+- lansoprazole
+- pantoprazole
+- have ever had a severe skin rash or an allergic reaction to medicines that contain rilpivirine
+- have or had liver problems, including hepatitis B or C virus infection
+- have kidney problems
+- have ever had a mental health problem
+- are pregnant or plan to become pregnant. It is not known if EDURANT or EDURANT PED will harm your unborn baby. Tell your healthcare provider if you become pregnant during treatment with EDURANT or EDURANT PED.
+- Pregnancy Registry: There is a pregnancy registry for women who take EDURANT during pregnancy. The purpose of this registry is to collect information about the health of you and your baby. Talk with your healthcare provider about how you can take part in this registry.
+- are breastfeeding or plan to breastfeed. EDURANT or EDURANT PED can pass into your breast milk. Talk with your healthcare provider about the following risks of breastfeeding during treatment with EDURANT or EDURANT PED:
+- The HIV-1 virus may pass to your baby if your baby does not have the HIV-1 infection.
+- The HIV-1 virus may become harder to treat if your baby has HIV-1 infection.
+- Your baby may get side effects from EDURANT or EDURANT PED.
+- You can ask your healthcare provider or pharmacist for a list of medicines that interact with EDURANT or EDURANT PED.
+- Do not start taking a new medicine without telling your healthcare provider . Your healthcare provider can tell you if it is safe to take EDURANT or EDURANT PED with other medicines.
+- Take EDURANT or EDURANT PED exactly as your healthcare provider tells you to.
+- Take EDURANT or EDURANT PED 1 time each day with a meal. A protein drink or yogurt alone does not replace a meal.
+- EDURANT and EDURANT PED must be used with other HIV-1 medicines.
+- Do not change your dose or stop taking EDURANT or EDURANT PED without first talking with your healthcare provider.
+- Stay under the care of your healthcare provider during treatment with EDURANT or EDURANT PED.
+- EDURANT PED tablets for oral suspension provided in a blister package are not the same as EDURANT tablets provided in a bottle and cannot be substituted for each other. Contact your pharmacist or healthcare provider if you did not receive the correct dosage form. Your child's healthcare provider will prescribe EDURANT or EDURANT PED based on your child's weight.
+- EDURANT PED tablets for oral suspension must be dispersed in drinking water. Do not crush, chew, or swallow whole EDURANT PED tablets for oral suspension.
+- If you take an H 2 receptor antagonist (such as famotidine, cimetidine, nizatidine, or ranitidine), you should take these medicines at least 12 hours before or at least 4 hours after you take EDURANT or EDURANT PED.
+- If you take antacids, or other products that contain aluminum, calcium carbonate, or magnesium hydroxide, you should take these medicines at least 2 hours before or at least 4 hours after you take EDURANT or EDURANT PED.
+- Do not miss a dose of EDURANT or EDURANT PED.
+- If you miss a dose of EDURANT or EDURANT PED within 12 hours of the time you usually take it, take your dose of EDURANT or EDURANT PED with a meal as soon as possible. Then, take your next dose of EDURANT or EDURANT PED at the regularly scheduled time. If you miss a dose of EDURANT or EDURANT PED by more than 12 hours of the time you usually take it, wait and then take the next dose of EDURANT or EDURANT PED at the regularly scheduled time.
+- Do not take more than your prescribed dose to make up for a missed dose or take less than your prescribed dose.
+- If you take too much EDURANT or EDURANT PED, call your healthcare provider or go to the nearest hospital emergency room right away.
+- When your supply of EDURANT or EDURANT PED starts to run low, get more from your healthcare provider or pharmacy. It is important not to run out of EDURANT or EDURANT PED. The amount of HIV in your blood may increase if the medicine is stopped even for a short time.
+- When your healthcare provider prescribes use of EDURANT with oral VOCABRIA (cabotegravir):
+- Take EDURANT and oral VOCABRIA (cabotegravir) 1 time a day at about the same time each day with a meal.
+- You will receive treatment with EDURANT tablets in combination with VOCABRIA tablets for one month (at least 28 days) before you receive the long-acting medicine called CABENUVA (cabotegravir; rilpivirine extended-release injectable suspensions) for the first time. This will allow your healthcare provider to assess how well you tolerate these medicines.
+- Your final dose of EDURANT and VOCABRIA tablets should be taken on the same day you receive your first CABENUVA injections.
+- If you miss or plan to miss a scheduled monthly or every 2 months injection of CABENUVA by more than 7 days, call your healthcare provider right away to discuss your treatment options.
+- Severe skin rash and allergic reactions. Call your healthcare provider right away if you develop a rash with EDURANT or EDURANT PED. In some cases, rash and allergic reaction may need to be treated in a hospital. Stop taking EDURANT or EDURANT PED and get medical help right away if you develop a rash with any of the following signs or symptoms :
+- fever
+- tiredness
+- difficulty breathing or swallowing
+- skin blisters
+- swelling of the face, lips, mouth, tongue, or throat
+- generally ill feeling
+- muscle or joint aches
+- blisters or mouth sores
+- redness or swelling of the eyes (conjunctivitis)
+- Liver problems. People with a history of hepatitis B or C virus infection or who have certain liver function test changes may have an increased risk of developing new or worsening changes in certain liver tests during treatment with EDURANT or EDURANT PED. Liver problems have also happened in people without a history of problems or other risk factors. Your healthcare provider may need to do tests to check your liver function before and during treatment with EDURANT or EDURANT PED. Call your healthcare provider right away if you develop any of the following signs or symptoms of liver problems:
+- your skin or the white part of your eyes turns yellow (jaundice)
+- light colored stools (bowel movements)
+- pain, aching, or tenderness on the right side of the stomach area
+- loss of appetite
+- dark or "tea colored" urine
+- nausea or vomiting
+- Depression or mood changes. Call your healthcare provider right away if you have any of the following symptoms:
+- feeling sad or hopeless
+- feeling anxious or restless
+- have thoughts of hurting yourself (suicide) or have tried to hurt yourself
+- Changes in your immune system (Immune Reconstitution Syndrome) can happen when you start taking HIV medicines. Your immune system may get stronger and begin to fight infections that have been hidden in your body for a long time. Tell your healthcare provider right away if you start having any new symptoms after starting your HIV-1 medicine.
+- Store EDURANT or EDURANT PED at room temperature between 68°F to 77°F (20°C to 25°C).
+- Keep EDURANT tablets in the original bottle to protect from light.
+- Keep EDURANT PED tablets in the original package to protect from light and moisture.
+
+=== PASSAGE_0103 ===
+SECTION: INSTRUCTIONS FOR USE
+INSTRUCTIONS FOR USE
+- Take EDURANT PED exactly as your healthcare provider tells you.
+- EDURANT PED tablets for oral suspension are provided in a blister package. Each time you receive your child's prescription, check to make sure that you received EDURANT PED tablets.
+- EDURANT PED tablets for oral suspension provided in a blister package are not the same as EDURANT tablets provided in a bottle and cannot be substituted for each other. Contact your pharmacist or healthcare provider if you did not receive the correct dosage form.
+- Your child's healthcare provider will tell you how many EDURANT PED tablets you will need for your child's dose based on their weight.
+- Take EDURANT PED 1 time each day. EDURANT PED tablets must be dispersed in drinking water and must be taken with a meal .
+- Do not crush, chew or swallow whole EDURANT PED tablets.
+- EDURANT PED tablets
+- a small clean empty cup
+- a teaspoon
+- room temperature drinking water
+- Count the number of tablets you need for the prescribed dose and tear each unit from the blister pack along the dotted line.
+- For each unit, peel back the foil gently in the direction of the arrow to remove the tablet.
+- Do not push the tablets out of the foil as they may break.
+- Gently place the tablets in a small cup. Do not crush the tablets.
+- Add 5 mL (1 teaspoon) of room temperature drinking water to the cup.
+- Swirl the cup carefully for 1 to 2 minutes to disperse the tablets. The mixture will start to look cloudy.
+- Give all the prepared medicine right away r add another 5 mL (1 teaspoon) of drinking water, milk, orange juice or applesauce to help take the medicine. Swirl the mixture and give all of the medicine right away. A spoon can be used to give the prepared medicine if needed.
+- Make sure the entire dose is taken and no medicine is left in the cup. If there is medicine left in the cup, add another 5 mL (1 teaspoon) of drinking water, milk, orange juice or applesauce. Swirl and give all of the prepared medicine right away.
+- Wash the cup and teaspoon thoroughly with water and make sure they are clean and dry before preparing the next daily dose.
+- Store EDURANT PED at room temperature between 68°F to 77°F (20°C to 25°C).
+- Keep EDURANT PED tablets in the original package to protect from light and moisture.
+
+=== PASSAGE_0104 ===
+SECTION: 25 mg
+25 mg
+Each tablet contains 27.5 mg of rilpivirine
+hydrochloride, which is equivalent to 25 mg
+of rilpivirine.
+ALERT: Find out about
+medicines that should NOT be
+taken with EDURANT
+®from
+your healthcare provider.
+
+=== PASSAGE_0105 ===
+SECTION: 2.5 mg
+2.5 mg
+90 tablets
+9 blister cards, 10 tablets each
+Attention: EDURANT PED is NOT a substitute for EDURANT
+DISPERSE IN DRINKING WATER
+Do not crush, chew, or swallow whole, see Instructions for Use

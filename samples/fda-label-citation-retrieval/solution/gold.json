@@ -1,0 +1,802 @@
+{
+  "questions": [
+    {
+      "answer": "The onset or exacerbation of migraine or severe headache with focal neurological symptoms requires discontinuation of progestin-only contraceptives to evaluate the underlying cause, as these symptoms may indicate serious health risks that are not fully defined in relation to progestin use.",
+      "citations": [
+        null,
+        null
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "11. Headache",
+          "text": "The onset or exacerbation of migraine or development of severe headache with focal neurological symptoms which is recurrent or persistent requires discontinuation of progestin-only contraceptives and evaluation of the cause."
+        },
+        {
+          "section_label": null,
+          "section_title": "WARNINGS",
+          "text": "Cigarette smoking increases the risk of serious cardiovascular disease. Women who use oral contraceptives should be strongly advised not to smoke.\nSHAROBEL \u2122 does not contain estrogen and, therefore, this insert does not discuss the serious health risks that have been associated with the estrogen component of combined oral contraceptives (COCs). The healthcare professional is referred to the prescribing information of combined oral contraceptives for a discussion of those risks. The relationship between progestin-only oral contraceptives and these risks is not fully defined. The healthcare professional should remain alert to the earliest manifestation of symptoms of any serious disease and discontinue oral contraceptive therapy when appropriate."
+        }
+      ],
+      "drug_name": "SHAROBEL",
+      "question": "Why should progestin-only contraceptives like SHAROBEL be discontinued if a patient develops severe headaches with focal neurological symptoms?",
+      "question_id": "4c661df7d431bd3c",
+      "question_type": "multihop",
+      "references": [
+        "11. Headache",
+        "WARNINGS"
+      ],
+      "set_id": "a96f5194-ad2a-4783-a9a9-22a288caff25"
+    },
+    {
+      "answer": "- Interstitial lung disease (ILD): Occurs in 1.1% of patients. Withhold erlotinib for acute onset of new or progressive unexplained pulmonary symptoms, such as dyspnea, cough and fever. Discontinue erlotinib if ILD is diagnosed. \n- Renal failure: Monitor renal function and electrolytes, particularly in patients at risk of dehydration. Withhold erlotinib for severe renal toxicity. \n- Hepatotoxicity: Occurs with or without hepatic impairment, including hepatic failure and hepatorenal syndrome: Monitor periodic liver testing. Withhold or discontinue erlotinib for severe or worsening liver tests. \n- Gastrointestinal perforations: Discontinue erlotinib. \n- Bullous and exfoliative skin disorders: Discontinue erlotinib. \n- Cerebrovascular accident (CVA): The risk of CVA is increased in patients with pancreatic cancer. \n- Microangiopathic hemolytic anemia (MAHA): The risk of MAHA is increased in patients with pancreatic cancer. \n- Ocular disorders: Discontinue erlotinib for corneal perforation, ulceration or persistent severe keratitis. \n- Hemorrhage in patients taking warfarin: Regularly monitor INR in patients taking warfarin or other coumarin-derivative anticoagulants. \n- Embryo-fetal toxicity: Can cause fetal harm. Advise females of reproductive potential of the potential risk to the fetus and to use effective contraception.",
+      "citations": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8",
+        "5.9",
+        "5.10",
+        "8.1",
+        "8.3"
+      ],
+      "context": [
+        {
+          "section_label": "5.1",
+          "section_title": "5.1 Interstitial Lung Disease (ILD)",
+          "text": "Cases of serious ILD, including fatal cases, can occur with erlotinib treatment. The overall incidence of ILD in approximately 32,000 erlotinib-treated patients in uncontrolled studies and studies with concurrent chemotherapy was approximately 1.1%. In patients with ILD, the onset of symptoms was between 5 days to more than 9 months (median 39 days) after initiating erlotinib therapy.\nWithhold erlotinib for acute onset of new or progressive unexplained pulmonary symptoms such as dyspnea, cough, and fever pending diagnostic evaluation. If ILD is confirmed, permanently discontinue erlotinib ."
+        },
+        {
+          "section_label": "5.2",
+          "section_title": "5.2 Renal Failure",
+          "text": "Hepatorenal syndrome, severe acute renal failure including fatal cases, and renal insufficiency can occur with erlotinib treatment. Renal failure may arise from exacerbation of underlying baseline hepatic impairment or severe dehydration. The pooled incidence of severe renal impairment in the 3 monotherapy lung cancer studies was 0.5% in the erlotinib arms and 0.8% in the control arms. The incidence of renal impairment in the pancreatic cancer study was 1.4% in the erlotinib plus gemcitabine arm and 0.4% in the control arm. Withhold erlotinib in patients developing severe renal impairment until renal toxicity is resolved. Perform periodic monitoring of renal function and serum electrolytes during erlotinib treatment ."
+        },
+        {
+          "section_label": "5.3",
+          "section_title": "5.3 Hepatotoxicity with or without Hepatic Impairment",
+          "text": "Hepatic failure and hepatorenal syndrome, including fatal cases, can occur with erlotinib treatment in patients with normal hepatic function; the risk of hepatic toxicity is increased in patients with baseline hepatic impairment. In clinical studies where patients with moderate to severe hepatic impairment were excluded, the pooled incidence of hepatic failure in the 3 monotherapy lung cancer studies was 0.4% in the erlotinibarms and 0% in the control arms. The incidence of hepatic failure in the pancreatic cancer study was 0.4% in the erlotinib plus gemcitabine arm and 0.4% in the control arm. In a pharmacokinetic study in 15 patients with moderate hepatic impairment (Child-Pugh B) associated with significant liver tumor burden, 10 of these 15 patients died within 30 days of the last erlotinibdose. One patient died from hepatorenal syndrome, 1 patient died from rapidly progressing liver failure and the remaining 8 patients died from progressive disease. Six out of the 10 patients who died had baseline total bilirubin > 3 x ULN.\nPerform periodic liver testing (transaminases, bilirubin, and alkaline phosphatase) during treatment with erlotinib. Increased frequency of monitoring of liver function is required for patients with pre-existing hepatic impairment or biliary obstruction. Withhold erlotinib in patients without pre-existing hepatic impairment for total bilirubin levels greater than 3 times the upper limit of normal or transaminases greater than 5 times the upper limit of normal. Withhold erlotinibin patients with pre-existing hepatic impairment or biliary obstruction for doubling of bilirubin or tripling of transaminases values over baseline. Discontinue erlotinibin patients whose abnormal liver tests meeting the above criteria do not improve significantly or resolve within three weeks ."
+        },
+        {
+          "section_label": "5.4",
+          "section_title": "5.4 Gastrointestinal Perforation",
+          "text": "Gastrointestinal perforation, including fatal cases, can occur with erlotinibtreatment. Patients receiving concomitant anti-angiogenic agents, corticosteroids, NSAIDs, or taxane-based chemotherapy, or who have prior history of peptic ulceration or diverticular disease may be at increased risk of perforation . The pooled incidence of gastrointestinal perforation in the 3 monotherapy lung cancer studies was 0.2% in the erlotinibarms and 0.1% in the control arms. The incidence of gastrointestinal perforation in the pancreatic cancer study was 0.4% in the erlotinibplus gemcitabine arm and 0% in the control arm. Permanently discontinue erlotinibin patients who develop gastrointestinal perforation ."
+        },
+        {
+          "section_label": "5.5",
+          "section_title": "5.5 Bullous and Exfoliative Skin Disorders",
+          "text": "Bullous, blistering and exfoliative skin conditions, including cases suggestive of Stevens-Johnson syndrome/toxic epidermal necrolysis, which in some cases were fatal, can occur with erlotinibtreatment . The pooled incidence of bullous and exfoliative skin disorders in the 3 monotherapy lung cancer studies was 1.2% in the erlotinibarms and 0% in the control arms. The incidence of bullous and exfoliative skin disorders in the pancreatic cancer study was 0.4% in the erlotinibplus gemcitabine arm and 0% in the control arm. Discontinue erlotinibtreatment if the patient develops severe bullous, blistering or exfoliating conditions ."
+        },
+        {
+          "section_label": "5.6",
+          "section_title": "5.6 Cerebrovascular Accident",
+          "text": "In the pancreatic carcinoma trial, seven patients in the erlotinib /gemcitabine group developed cerebrovascular accidents (incidence: 2.5%). One of these was hemorrhagic and was the only fatal event. In comparison, in the placebo/gemcitabine group there were no cerebrovascular accidents. The pooled incidence of cerebrovascular accident in the 3 monotherapy lung cancer studies was 0.6% in the erlotinib arms and not higher than that observed in the control arms."
+        },
+        {
+          "section_label": "5.7",
+          "section_title": "5.7 Microangiopathic Hemolytic Anemia with Thrombocytopenia",
+          "text": "The pooled incidence of microangiopathic hemolytic anemia with thrombocytopenia in the 3 monotherapy lung cancer studies was 0% in the erlotinib arms and 0.1% in the control arms. The incidence of microangiopathic hemolytic anemia with thrombocytopenia in the pancreatic cancer study was 1.4% in the erlotinib plus gemcitabine arm and 0% in the control arm."
+        },
+        {
+          "section_label": "5.8",
+          "section_title": "5.8 Ocular Disorders",
+          "text": "Decreased tear production, abnormal eyelash growth, keratoconjunctivitis sicca or keratitis can occur with erlotinib treatment and can lead to corneal perforation or ulceration . The pooled incidence of ocular disorders in the 3 monotherapy lung cancer studies was 17.8% in the erlotinib arms and 4% in the control arms. The incidence of ocular disorders in the pancreatic cancer study was 12.8% in the erlotinib plus gemcitabine arm and 11.4% in the control arm. Interrupt or discontinue erlotinib therapy if patients present with acute or worsening ocular disorders such as eye pain ."
+        },
+        {
+          "section_label": "5.9",
+          "section_title": "5.9 Hemorrhage in Patients Taking Warfarin",
+          "text": "Severe and fatal hemorrhage associated with International Normalized Ratio (INR) elevations can occur when erlotinib and warfarin are administered concurrently. Regularly monitor prothrombin time and INR during erlotinib treatment in patients taking warfarin or other coumarin-derivative anticoagulants ."
+        },
+        {
+          "section_label": "5.10",
+          "section_title": "5.10 Embryo-fetal Toxicity",
+          "text": "Based on animal data and its mechanism of action, erlotinib can cause fetal harm when administered to a pregnant woman. When given during organogenesis, erlotinib administration resulted in embryo-fetal lethality and abortion in rabbits at exposures approximately 3 times the exposure at the recommended human daily dose of 150 mg. Advise pregnant women of the potential risk to a fetus.\nAdvise females of reproductive potential to use effective contraception during therapy and for one month after the last dose of erlotinib ."
+        },
+        {
+          "section_label": "8.1",
+          "section_title": "8.1 Pregnancy",
+          "text": "Risk Summary\nBased on animal data and its mechanism of action, erlotinib can cause fetal harm when administered to a pregnant woman. Limited available data on use of erlotinib in pregnant women are not sufficient to inform a risk of major birth defects or miscarriage. When given during organogenesis, erlotinib administration resulted in embryo-fetal lethality and abortion in rabbits at exposures approximately 3 times the exposure at the recommended human daily dose of 150 mg. Advise pregnant women of the potential risk to a fetus.\nIn the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2 to 4% and 15 to 20%, respectively."
+        },
+        {
+          "section_label": "8.1",
+          "section_title": "8.1 Pregnancy",
+          "text": "Animal Data\nErlotinib has been shown to cause maternal toxicity resulting in embryo-fetal lethality and abortion in rabbits when given during the period of organogenesis at doses that result in plasma drug concentrations approximately 3 times those achieved at the recommended dose in humans (AUCs at 150 mg daily dose). During the same period, there was no increase in the incidence of embryo-fetal lethality or abortion in rabbits or rats at doses resulting in exposures approximately equal to those in humans at the recommended daily dose. In an independent fertility study female rats treated with 30 mg/m2/day or 60 mg/m2/day (0.3 or 0.7 times the recommended daily dose, on a mg/m2 basis) of erlotinib had an increase in early resorptions that resulted in a decrease in the number of live fetuses.\nNo teratogenic effects were observed in rabbits or rats dosed with erlotinib during organogenesis at doses up to 600 mg/m2/day in the rabbit (3 times the plasma drug concentration seen in humans at 150 mg/day) and up to 60 mg/m2/day in the rat (0.7 times the recommended dose of 150 mg/day on a mg/m2 basis)."
+        },
+        {
+          "section_label": "8.3",
+          "section_title": "8.3 Females and Males of Reproductive Potential",
+          "text": "Females\nErlotinib can cause fetal harm when administered to a pregnant woman . Advise females of reproductive potential to use effective contraception during treatment with erlotinib and for one month after the last dose of erlotinib."
+        }
+      ],
+      "drug_name": "ERLOTINIB HYDROCHLORIDE",
+      "question": "What important warnings or precautions are associated with ERLOTINIB HYDROCHLORIDE?",
+      "question_id": "8547c32761488413",
+      "question_type": "factual",
+      "references": [
+        "5 WARNINGS AND PRECAUTIONS"
+      ],
+      "set_id": "ab6f3cb3-34a8-4492-a5d7-fb6b055a2d6b"
+    },
+    {
+      "answer": "- Elevated transaminases (ALT or AST): Transaminases (ALT and AST) should be assessed prior to initiating SYMDEKO, every 3 months during the first year of treatment, and annually thereafter. In patients with a history of transaminase elevations, more frequent monitoring should be considered. Dosing should be interrupted in patients with significant elevations of transaminases, e.g., patients with ALT or AST >5 \u00d7 upper limit of normal (ULN), or ALT or AST >3 \u00d7 ULN with bilirubin >2 \u00d7 ULN. Following resolution of transaminase elevations, consider the benefits and risks of resuming treatment. \n- Hypersensitivity reactions: Anaphylaxis has been reported with SYMDEKO in the postmarketing setting. Initiate appropriate therapy in the event of a hypersensitivity reaction. \n- Use with CYP3A inducers: Concomitant use with strong CYP3A inducers (e.g., rifampin, St. John's wort) substantially decrease exposure of ivacaftor and may decrease the exposure of tezacaftor, which may reduce therapeutic effectiveness. Therefore, co-administration is not recommended. \n- Cataracts: Non-congenital lens opacities/cataracts have been reported in pediatric patients treated with SYMDEKO. Baseline and follow-up examinations are recommended in pediatric patients initiating SYMDEKO treatment.",
+      "citations": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "6",
+        "7.1",
+        "8.4",
+        "12.3"
+      ],
+      "context": [
+        {
+          "section_label": "5.1",
+          "section_title": "5.1\tTransaminase (AST/ALT) Elevations",
+          "text": "Elevated transaminases have been observed in patients with CF treated with SYMDEKO, as well as with ivacaftor monotherapy. Assessments of transaminases (ALT and AST) are recommended for all patients prior to initiating SYMDEKO, every 3 months during the first year of treatment, and annually thereafter. For patients with a history of transaminase elevations more frequent monitoring should be considered. In the event of significant elevations of transaminases, e.g., patients with ALT or AST >5 \u00d7 upper limit of normal (ULN), or ALT or AST >3 \u00d7 ULN with bilirubin >2 \u00d7 ULN, dosing should be interrupted and laboratory tests closely followed until the abnormalities resolve. Following the resolution of transaminase elevations consider the benefits and risks of resuming treatment ."
+        },
+        {
+          "section_label": "5.2",
+          "section_title": "5.2\tHypersensitivity Reactions, Including Anaphylaxis",
+          "text": "Hypersensitivity reactions, including cases of anaphylaxis, have been reported in the postmarketing setting . If signs or symptoms of serious hypersensitivity reactions develop during treatment, discontinue SYMDEKO and institute appropriate therapy. Consider the benefits and risks for the individual patient to determine whether to resume treatment with SYMDEKO."
+        },
+        {
+          "section_label": "5.3",
+          "section_title": "5.3\tConcomitant Use with CYP3A Inducers",
+          "text": "Exposure to ivacaftor is significantly decreased and exposure to tezacaftor may be reduced by the concomitant use of CYP3A inducers, which may reduce the therapeutic effectiveness of SYMDEKO. Therefore, co-administration with strong CYP3A inducers is not recommended ."
+        },
+        {
+          "section_label": "5.4",
+          "section_title": "5.4\tCataracts",
+          "text": "Cases of non-congenital lens opacities have been reported in pediatric patients treated with SYMDEKO, as well as with ivacaftor monotherapy. Although other risk factors were present in some cases (such as corticosteroid use, exposure to radiation), a possible risk attributable to treatment with SYMDEKO cannot be excluded. Baseline and follow-up ophthalmological examinations are recommended in pediatric patients initiating treatment with SYMDEKO ."
+        },
+        {
+          "section_label": "6",
+          "section_title": "6 ADVERSE REACTIONS",
+          "text": "The following adverse reactions are discussed in greater detail in other sections of the label:\n- Transaminase Elevations\n- Hypersensitivity Reactions, Including Anaphylaxis\n- Cataracts"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice.\nThe overall safety profile of SYMDEKO is based on data from 1001 patients in three double-blind, placebo-controlled, clinical trials: two parallel-group trials of 12 and 24-week duration and one cross-over design trial of 8 weeks duration. Eligible patients were also able to participate in an open-label extension safety study (up to 96 weeks of SYMDEKO). In the three placebo-controlled trials (Trials 1, 2, and 3), a total of 496 patients with CF aged 12 years and older received at least one dose of SYMDEKO. The proportion of patients who discontinued study drug prematurely due to adverse reactions was 1.6% for SYMDEKO-treated patients and 2.0% for placebo-treated patients. Serious adverse reactions, whether considered drug-related or not by the investigators, that occurred more frequently in SYMDEKO-treated patients compared to placebo included distal intestinal obstruction syndrome, 3 (0.6%) SYMDEKO-treated patients vs. 0 placebo. There were no deaths in the placebo-controlled trials, and one death in the open-label extension study due to respiratory failure and influenza infection in a patient who had discontinued SYMDEKO seven weeks prior.\nThe safety profile of SYMDEKO was generally similar across all subgroups of patients, including analysis by age, sex, baseline percent predicted FEV1 (ppFEV1), and geographic regions.\nTable 5 shows adverse reactions occurring in \u22653% of SYMDEKO-treated patients that also occurred at a higher rate than in the placebo-treated patients in the 12- and 24-week placebo-controlled, parallel-group trials (Trials 1 and 3).\nThe safety data from the following trials are similar to that observed in Trials 1 and 3:\n- an 8-week randomized, double-blind, placebo-controlled crossover study in 244 patients with CF aged 12 years and older who were heterozygous for the\n- a 24-week open-label study in 70 patients with CF aged 6 to less than 12 years who were either homozygous for the"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "Transaminase elevations\nDuring the placebo-controlled trials in patients aged 12 years and older, the incidence of maximum transaminase (ALT or AST) >8, >5, and >3 \u00d7 the upper limit of normal (ULN) was similar between SYMDEKO-treated patients and placebo-treated patients; 0.2%, 1.0%, and 3.4% in SYMDEKO-treated patients, and 0.4%, 1.0%, and 3.4% in placebo-treated patients. One patient (0.2%) on SYMDEKO and 2 patients (0.4%) on placebo permanently discontinued treatment for elevated transaminases. No SYMDEKO-treated patients experienced a transaminase elevation >3 \u00d7 ULN associated with elevated total bilirubin >2 \u00d7 ULN.\nDuring the 24-week, open-label study in patients aged 6 to less than 12 years (Trial 4), the incidence of maximum transaminase (ALT or AST) >8, >5, and >3 \u00d7 ULN were 1.4%, 4.3%, and 10.0%, respectively. No SYMDEKO-treated patients experienced a transaminase elevation >3 \u00d7 ULN associated with elevated total bilirubin >2 \u00d7 ULN or discontinued SYMDEKO treatment due to transaminase elevations."
+        },
+        {
+          "section_label": "6.2",
+          "section_title": "6.2 \tPostmarketing Experience",
+          "text": "The following adverse reactions have been identified during post approval use of SYMDEKO. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.\nImmune System Disorders: anaphylaxis\nSkin: rash"
+        },
+        {
+          "section_label": "7.1",
+          "section_title": "7.1\tInducers of CYP3A",
+          "text": "Tezacaftor and ivacaftor are substrates of CYP3A (ivacaftor is a sensitive substrate of CYP3A). Concomitant use of CYP3A inducers may result in reduced exposures and thus reduced SYMDEKO efficacy. Co-administration of ivacaftor with rifampin, a strong CYP3A inducer, significantly decreased ivacaftor exposure (area under the curve AUC]) by 89%. Tezacaftor exposures can also be expected to decrease significantly during co-administration with strong CYP3A inducers. Therefore, co-administration of SYMDEKO with strong CYP3A inducers is not recommended .\nExamples of strong CYP3A inducers include:\n- rifampin, rifabutin, phenobarbital, carbamazepine, phenytoin, and St. John's wort (Hypericum perforatum)"
+        },
+        {
+          "section_label": "8.4",
+          "section_title": "8.4 Pediatric Use",
+          "text": "The safety and effectiveness of SYMDEKO for the treatment of CF have been established in pediatric patients aged 6 to less than 18 years who are homozygous for the F508del mutation or who have at least one mutation in the CFTR gene that is responsive to tezacaftor/ivacaftor based on in vitro data and/or clinical evidence .\nClinical trials included the following patients with CF:\n- 12 to less than 18 years of age who are homozygous for the\n- 12 to less than 18 years of age who are heterozygous for the\n- 6 to less than 12 years of age who are either homozygous for the\nThe effectiveness of SYMDEKO in patients aged 6 to less than 12 years was extrapolated from patients aged 12 years and older with support from population pharmacokinetic analyses showing similar tezacaftor and ivacaftor exposure levels in patients aged 6 to less than 12 years and in patients aged 12 years and older . Safety of SYMDEKO in this population was derived from a 24-week, open-label, clinical trial in 70 patients aged 6 to less than 12 years (mean age at screening 8.1 years) administered either tezacaftor 50 mg/ivacaftor 75 mg and ivacaftor 75 mg or tezacaftor 100 mg/ivacaftor 150 mg and ivacaftor 150 mg, 12 hours apart (Trial 4). The safety profile for patients in this trial was similar to that observed in Trials 1 and 3 .\nThe safety and effectiveness of SYMDEKO in patients with CF younger than 6 years of age have not been studied."
+        },
+        {
+          "section_label": "8.4",
+          "section_title": "8.4 Pediatric Use",
+          "text": "Juvenile Animal Toxicity Data\nFindings of cataracts were observed in juvenile rats dosed from postnatal Day 7 through 35 with ivacaftor dose levels of 10 mg/kg/day and higher (0.25 times the MRHD based on systemic exposure of ivacaftor and its metabolites). This finding has not been observed in older animals."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "The pharmacokinetics of tezacaftor and ivacaftor are similar between healthy adult volunteers and patients with CF. Following once-daily dosing of tezacaftor and twice-daily dosing of ivacaftor in patients with CF, plasma concentrations of tezacaftor and ivacaftor reach steady-state within 8 days and within 3 to 5 days, respectively, after starting treatment. At steady-state, the accumulation ratio is approximately 1.5 for tezacaftor and 2.2 for ivacaftor. Exposures of tezacaftor (administered alone or in combination with ivacaftor) increase in an approximately dose-proportional manner with increasing doses from 10 mg to 300 mg once daily.\nKey pharmacokinetic parameters for tezacaftor and ivacaftor at steady state are shown in Table 7."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Absorption\nAfter a single dose in healthy subjects in the fed state, tezacaftor was absorbed with a median (range) time to maximum concentration (tmax) of approximately 4 hours (2 to 6 hours). The median (range) tmax of ivacaftor was approximately 6 hours (3 to 10 hours) in the fed state.\nWhen a single dose of tezacaftor/ivacaftor was administered with fat-containing foods, tezacaftor exposure was similar and ivacaftor exposure was approximately 3 times higher than when taken in a fasting state."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Distribution\nTezacaftor is approximately 99% bound to plasma proteins, primarily to albumin. Ivacaftor is approximately 99% bound to plasma proteins, primarily to alpha 1-acid glycoprotein and albumin. After oral administration of tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours in patients with CF in the fed state, the mean (\u00b1SD) for apparent volume of distribution of tezacaftor and ivacaftor was 271 (157) L and 206 (82.9) L, respectively. Neither tezacaftor nor ivacaftor partition preferentially into human red blood cells."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Elimination\nAfter oral administration of tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours in patients with CF in the fed state, the mean (\u00b1SD) for apparent clearance values of tezacaftor and ivacaftor were 1.31 (0.41) and 15.7 (6.38) L/h, respectively. After steady-state dosing of tezacaftor in combination with ivacaftor in patients with CF, the effective half-lives of tezacaftor and ivacaftor were approximately 15 (3.44) and 13.7 (6.06) hours, respectively."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Metabolism\nTezacaftor is metabolized extensively in humans. In vitro data suggested that tezacaftor is metabolized mainly by CYP3A4 and CYP3A5. Following oral administration of a single dose of 100 mg 14C-tezacaftor to healthy male subjects, M1, M2, and M5 were the three major circulating metabolites of tezacaftor in humans. M1 has the similar potency to that of tezacaftor and is considered pharmacologically active. M2 is much less pharmacologically active than tezacaftor or M1, and M5 is not considered pharmacologically active. Another minor circulating metabolite, M3, is formed by direct glucuronidation of tezacaftor.\nIvacaftor is also metabolized extensively in humans. In vitro and in vivo data indicate that ivacaftor is metabolized primarily by CYP3A4 and CYP3A5. M1 and M6 are the two major metabolites of ivacaftor in humans. M1 has approximately one-sixth the potency of ivacaftor and is considered pharmacologically active. M6 is not considered pharmacologically active."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Excretion\nFollowing oral administration of 14C-tezacaftor, the majority of the dose (72%) was excreted in the feces (unchanged or as the M2 metabolite) and about 14% was recovered in urine (mostly as M2 metabolite), resulting in a mean overall recovery of 86% up to 21 days after the dose. Less than 1% of the administrated dose was excreted in urine as unchanged tezacaftor, showing that renal excretion is not the major pathway of tezacaftor elimination in humans.\nFollowing oral administration of ivacaftor alone, the majority of ivacaftor (87.8%) is eliminated in the feces after metabolic conversion. There was minimal elimination of ivacaftor and its metabolites in urine (only 6.6% of total radioactivity was recovered in the urine), and there was negligible urinary excretion of ivacaftor as unchanged drug."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Specific Populations\nBased on population PK analyses, the PK exposure parameters of tezacaftor/ivacaftor in children and adolescents (ages 6 to <18 years) are similar to the AUCss range observed in adults when given in combination."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric patients aged 6 to less than 12 years"
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric patients aged 12 to less than 18 years\nFollowing oral administration of SYMDEKO tablets, tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours, the mean (\u00b1SD) AUCss for tezacaftor and ivacaftor was 97.1 (35.8) mcg\u2219h/mL and 11.4 (5.50) mcg\u2219h/mL, respectively, similar to the mean AUCss in adult patients administered SYMDEKO tablets, tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Hepatic Impairment\nFollowing multiple doses of tezacaftor and ivacaftor for 10 days, patients with moderately impaired hepatic function (Child-Pugh Class B, score 7-9) had an approximately 36% increase in AUC and a 10% increase in Cmax for tezacaftor, and a 1.5-fold increase in ivacaftor AUC compared with healthy subjects matched for demographics. In a separate study, patients with moderately impaired hepatic function (Child-Pugh Class B, score 7-9) had similar ivacaftor Cmax, but an approximately 2.0-fold increase in ivacaftor AUC0-\u221e compared with healthy subjects matched for demographics.\nPharmacokinetic studies have not been conducted in patients with mild (Child-Pugh Class A, score 5-6) or severe hepatic impairment (Child-Pugh Class C, score 10-15) receiving SYMDEKO. The magnitude of increase in exposure in patients with severe hepatic impairment is unknown but is expected to be higher than that observed in patients with moderate hepatic impairment ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Renal Impairment\nSYMDEKO has not been studied in patients with moderate or severe renal impairment (creatinine clearance \u226430 mL/min) or in patients with end-stage renal disease. In a human pharmacokinetic study with tezacaftor alone, there was minimal elimination of tezacaftor and its metabolites in urine (only 13.7% of total radioactivity was recovered in the urine with 0.79% as unchanged drug).\nIn a human pharmacokinetic study with ivacaftor alone, there was minimal elimination of ivacaftor and its metabolites in urine (only 6.6% of total radioactivity was recovered in the urine).\nIn population pharmacokinetic analysis, data from 665 patients on tezacaftor or tezacaftor in combination with ivacaftor in clinical trials indicated that mild renal impairment (N=147; eGFR 60 to less than 90 mL/min/1.73 m2) and moderate renal impairment (N=7; eGFR 30 to less than 60 mL/min/1.73 m2) did not affect the clearance of tezacaftor significantly ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Male and Female Patients\nThe pharmacokinetic parameters of tezacaftor and ivacaftor are similar in males and females."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Drug Interactions Studies\nDrug interaction studies were performed with SYMDEKO and other drugs likely to be co-administered or drugs commonly used as probes for pharmacokinetic interaction studies ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Potential for Tezacaftor/Ivacaftor to Affect Other Drugs\nClinical studies (with rosiglitazone and desipramine \u2013 see Table 9) showed that ivacaftor is not an inhibitor of CYP2C8 or CYP2D6. Based on in vitro results, ivacaftor has the potential to inhibit CYP3A and P-gp, and may also inhibit CYP2C9. In vitro, ivacaftor was not an inducer of CYP isozymes. Ivacaftor is not an inhibitor of transporters OATP1B1, OATP1B3, OCT1, OCT2, OAT1, or OAT3.\nBased on in vitro results, tezacaftor has a low potential to inhibit CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, and CYP3A4. Tezacaftor has a low potential to induce CYP3A, but it is not an inducer of CYP1A2 and CYP2B6. Tezacaftor has a low potential to inhibit transporters P-gp, BCRP, OATP1B3, OCT2, OAT1, or OAT3.\nClinical studies with midazolam showed that SYMDEKO is not an inhibitor of CYP3A. Co-administration of SYMDEKO with digoxin, a sensitive P-gp substrate, increased digoxin exposure by 1.3-fold. Co-administration of SYMDEKO with an ethinyl estradiol/ norethindrone oral contraceptive had no significant effect on the exposures of the hormonal contraceptives. Co-administration of SYMDEKO with pitavastatin, an OATP1B1 substrate, had no clinically relevant effect on the exposure of pitavastatin.\nThe effects of tezacaftor and ivacaftor (or ivacaftor alone) on the exposure of co-administered drugs are shown in Table 9 ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Potential for Other Drugs to Affect Tezacaftor/Ivacaftor\nIn vitro studies showed that ivacaftor and tezacaftor were substrates of CYP3A enzymes (i.e., CYP3A4 and CYP3A5). Exposure to ivacaftor and tezacaftor will be reduced by concomitant CYP3A inducers and increased by concomitant CYP3A inhibitors.\nIn vitro studies showed that tezacaftor is a substrate for the uptake transporter OATP1B1, and efflux transporters P-gp and BCRP. Tezacaftor is not a substrate for OATP1B3. In vitro studies showed that ivacaftor is not a substrate for OATP1B1, OATP1B3, or P-gp.\nThe effects of co-administered drugs on the exposure of tezacaftor and ivacaftor (or ivacaftor alone) are shown in Table 10 ."
+        }
+      ],
+      "drug_name": "SYMDEKO",
+      "question": "What important warnings or precautions are associated with SYMDEKO?",
+      "question_id": "a2356cd29e77ae23",
+      "question_type": "factual",
+      "references": [
+        "5 WARNINGS AND PRECAUTIONS"
+      ],
+      "set_id": "302ae804-37db-44fd-ac2f-3dbdeda9aa4b"
+    },
+    {
+      "answer": "One tablet must be taken every day at the same time, with continuous administration and no interruption between pill packs.",
+      "citations": [
+        ""
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "DOSAGE AND ADMINISTRATION",
+          "text": "To achieve maximum contraceptive effectiveness, SHAROBEL\u2122 must be taken exactly as directed. One tablet is taken every day, at the same time. Administration is continuous, with no interruption between pill packs. See Detailed Patient Labeling for detailed instruction."
+        }
+      ],
+      "drug_name": "SHAROBEL",
+      "question": "What is the recommended administration schedule for SHAROBEL\u2122 tablets?",
+      "question_id": "f1a6997222fd3656",
+      "question_type": "factual",
+      "references": [
+        "DOSAGE AND ADMINISTRATION"
+      ],
+      "set_id": "a96f5194-ad2a-4783-a9a9-22a288caff25"
+    },
+    {
+      "answer": "- Interstitial lung disease (ILD): Occurs in 1.1% of patients. Withhold erlotinib for acute onset of new or progressive unexplained pulmonary symptoms, such as dyspnea, cough and fever. Discontinue erlotinib if ILD is diagnosed. \n- Renal failure: Monitor renal function and electrolytes, particularly in patients at risk of dehydration. Withhold erlotinib for severe renal toxicity. \n- Hepatotoxicity: Occurs with or without hepatic impairment, including hepatic failure and hepatorenal syndrome: Monitor periodic liver testing. Withhold or discontinue erlotinib for severe or worsening liver tests. \n- Gastrointestinal perforations: Discontinue erlotinib. \n- Bullous and exfoliative skin disorders: Discontinue erlotinib. \n- Cerebrovascular accident (CVA): The risk of CVA is increased in patients with pancreatic cancer. \n- Microangiopathic hemolytic anemia (MAHA): The risk of MAHA is increased in patients with pancreatic cancer. \n- Ocular disorders: Discontinue erlotinib for corneal perforation, ulceration or persistent severe keratitis. \n- Hemorrhage in patients taking warfarin: Regularly monitor INR in patients taking warfarin or other coumarin-derivative anticoagulants. \n- Embryo-fetal toxicity: Can cause fetal harm. Advise females of reproductive potential of the potential risk to the fetus and to use effective contraception.",
+      "citations": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8",
+        "5.9",
+        "5.10",
+        "8.1",
+        "8.3"
+      ],
+      "context": [
+        {
+          "section_label": "5.1",
+          "section_title": "5.1 Interstitial Lung Disease (ILD)",
+          "text": "Cases of serious ILD, including fatal cases, can occur with erlotinib treatment. The overall incidence of ILD in approximately 32,000 erlotinib-treated patients in uncontrolled studies and studies with concurrent chemotherapy was approximately 1.1%. In patients with ILD, the onset of symptoms was between 5 days to more than 9 months (median 39 days) after initiating erlotinib therapy.\nWithhold erlotinib for acute onset of new or progressive unexplained pulmonary symptoms such as dyspnea, cough, and fever pending diagnostic evaluation. If ILD is confirmed, permanently discontinue erlotinib ."
+        },
+        {
+          "section_label": "5.2",
+          "section_title": "5.2 Renal Failure",
+          "text": "Hepatorenal syndrome, severe acute renal failure including fatal cases, and renal insufficiency can occur with erlotinib treatment. Renal failure may arise from exacerbation of underlying baseline hepatic impairment or severe dehydration. The pooled incidence of severe renal impairment in the 3 monotherapy lung cancer studies was 0.5% in the erlotinib arms and 0.8% in the control arms. The incidence of renal impairment in the pancreatic cancer study was 1.4% in the erlotinib plus gemcitabine arm and 0.4% in the control arm. Withhold erlotinib in patients developing severe renal impairment until renal toxicity is resolved. Perform periodic monitoring of renal function and serum electrolytes during erlotinib treatment ."
+        },
+        {
+          "section_label": "5.3",
+          "section_title": "5.3 Hepatotoxicity with or without Hepatic Impairment",
+          "text": "Hepatic failure and hepatorenal syndrome, including fatal cases, can occur with erlotinib treatment in patients with normal hepatic function; the risk of hepatic toxicity is increased in patients with baseline hepatic impairment. In clinical studies where patients with moderate to severe hepatic impairment were excluded, the pooled incidence of hepatic failure in the 3 monotherapy lung cancer studies was 0.4% in the erlotinibarms and 0% in the control arms. The incidence of hepatic failure in the pancreatic cancer study was 0.4% in the erlotinib plus gemcitabine arm and 0.4% in the control arm. In a pharmacokinetic study in 15 patients with moderate hepatic impairment (Child-Pugh B) associated with significant liver tumor burden, 10 of these 15 patients died within 30 days of the last erlotinibdose. One patient died from hepatorenal syndrome, 1 patient died from rapidly progressing liver failure and the remaining 8 patients died from progressive disease. Six out of the 10 patients who died had baseline total bilirubin > 3 x ULN.\nPerform periodic liver testing (transaminases, bilirubin, and alkaline phosphatase) during treatment with erlotinib. Increased frequency of monitoring of liver function is required for patients with pre-existing hepatic impairment or biliary obstruction. Withhold erlotinib in patients without pre-existing hepatic impairment for total bilirubin levels greater than 3 times the upper limit of normal or transaminases greater than 5 times the upper limit of normal. Withhold erlotinibin patients with pre-existing hepatic impairment or biliary obstruction for doubling of bilirubin or tripling of transaminases values over baseline. Discontinue erlotinibin patients whose abnormal liver tests meeting the above criteria do not improve significantly or resolve within three weeks ."
+        },
+        {
+          "section_label": "5.4",
+          "section_title": "5.4 Gastrointestinal Perforation",
+          "text": "Gastrointestinal perforation, including fatal cases, can occur with erlotinibtreatment. Patients receiving concomitant anti-angiogenic agents, corticosteroids, NSAIDs, or taxane-based chemotherapy, or who have prior history of peptic ulceration or diverticular disease may be at increased risk of perforation . The pooled incidence of gastrointestinal perforation in the 3 monotherapy lung cancer studies was 0.2% in the erlotinibarms and 0.1% in the control arms. The incidence of gastrointestinal perforation in the pancreatic cancer study was 0.4% in the erlotinibplus gemcitabine arm and 0% in the control arm. Permanently discontinue erlotinibin patients who develop gastrointestinal perforation ."
+        },
+        {
+          "section_label": "5.5",
+          "section_title": "5.5 Bullous and Exfoliative Skin Disorders",
+          "text": "Bullous, blistering and exfoliative skin conditions, including cases suggestive of Stevens-Johnson syndrome/toxic epidermal necrolysis, which in some cases were fatal, can occur with erlotinibtreatment . The pooled incidence of bullous and exfoliative skin disorders in the 3 monotherapy lung cancer studies was 1.2% in the erlotinibarms and 0% in the control arms. The incidence of bullous and exfoliative skin disorders in the pancreatic cancer study was 0.4% in the erlotinibplus gemcitabine arm and 0% in the control arm. Discontinue erlotinibtreatment if the patient develops severe bullous, blistering or exfoliating conditions ."
+        },
+        {
+          "section_label": "5.6",
+          "section_title": "5.6 Cerebrovascular Accident",
+          "text": "In the pancreatic carcinoma trial, seven patients in the erlotinib /gemcitabine group developed cerebrovascular accidents (incidence: 2.5%). One of these was hemorrhagic and was the only fatal event. In comparison, in the placebo/gemcitabine group there were no cerebrovascular accidents. The pooled incidence of cerebrovascular accident in the 3 monotherapy lung cancer studies was 0.6% in the erlotinib arms and not higher than that observed in the control arms."
+        },
+        {
+          "section_label": "5.7",
+          "section_title": "5.7 Microangiopathic Hemolytic Anemia with Thrombocytopenia",
+          "text": "The pooled incidence of microangiopathic hemolytic anemia with thrombocytopenia in the 3 monotherapy lung cancer studies was 0% in the erlotinib arms and 0.1% in the control arms. The incidence of microangiopathic hemolytic anemia with thrombocytopenia in the pancreatic cancer study was 1.4% in the erlotinib plus gemcitabine arm and 0% in the control arm."
+        },
+        {
+          "section_label": "5.8",
+          "section_title": "5.8 Ocular Disorders",
+          "text": "Decreased tear production, abnormal eyelash growth, keratoconjunctivitis sicca or keratitis can occur with erlotinib treatment and can lead to corneal perforation or ulceration . The pooled incidence of ocular disorders in the 3 monotherapy lung cancer studies was 17.8% in the erlotinib arms and 4% in the control arms. The incidence of ocular disorders in the pancreatic cancer study was 12.8% in the erlotinib plus gemcitabine arm and 11.4% in the control arm. Interrupt or discontinue erlotinib therapy if patients present with acute or worsening ocular disorders such as eye pain ."
+        },
+        {
+          "section_label": "5.9",
+          "section_title": "5.9 Hemorrhage in Patients Taking Warfarin",
+          "text": "Severe and fatal hemorrhage associated with International Normalized Ratio (INR) elevations can occur when erlotinib and warfarin are administered concurrently. Regularly monitor prothrombin time and INR during erlotinib treatment in patients taking warfarin or other coumarin-derivative anticoagulants ."
+        },
+        {
+          "section_label": "5.10",
+          "section_title": "5.10 Embryo-fetal Toxicity",
+          "text": "Based on animal data and its mechanism of action, erlotinib can cause fetal harm when administered to a pregnant woman. When given during organogenesis, erlotinib administration resulted in embryo-fetal lethality and abortion in rabbits at exposures approximately 3 times the exposure at the recommended human daily dose of 150 mg. Advise pregnant women of the potential risk to a fetus.\nAdvise females of reproductive potential to use effective contraception during therapy and for one month after the last dose of erlotinib ."
+        },
+        {
+          "section_label": "8.1",
+          "section_title": "8.1 Pregnancy",
+          "text": "Risk Summary\nBased on animal data and its mechanism of action, erlotinib can cause fetal harm when administered to a pregnant woman. Limited available data on use of erlotinib in pregnant women are not sufficient to inform a risk of major birth defects or miscarriage. When given during organogenesis, erlotinib administration resulted in embryo-fetal lethality and abortion in rabbits at exposures approximately 3 times the exposure at the recommended human daily dose of 150 mg. Advise pregnant women of the potential risk to a fetus.\nIn the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2 to 4% and 15 to 20%, respectively."
+        },
+        {
+          "section_label": "8.1",
+          "section_title": "8.1 Pregnancy",
+          "text": "Animal Data\nErlotinib has been shown to cause maternal toxicity resulting in embryo-fetal lethality and abortion in rabbits when given during the period of organogenesis at doses that result in plasma drug concentrations approximately 3 times those achieved at the recommended dose in humans (AUCs at 150 mg daily dose). During the same period, there was no increase in the incidence of embryo-fetal lethality or abortion in rabbits or rats at doses resulting in exposures approximately equal to those in humans at the recommended daily dose. In an independent fertility study female rats treated with 30 mg/m2/day or 60 mg/m2/day (0.3 or 0.7 times the recommended daily dose, on a mg/m2 basis) of erlotinib had an increase in early resorptions that resulted in a decrease in the number of live fetuses.\nNo teratogenic effects were observed in rabbits or rats dosed with erlotinib during organogenesis at doses up to 600 mg/m2/day in the rabbit (3 times the plasma drug concentration seen in humans at 150 mg/day) and up to 60 mg/m2/day in the rat (0.7 times the recommended dose of 150 mg/day on a mg/m2 basis)."
+        },
+        {
+          "section_label": "8.3",
+          "section_title": "8.3 Females and Males of Reproductive Potential",
+          "text": "Females\nErlotinib can cause fetal harm when administered to a pregnant woman . Advise females of reproductive potential to use effective contraception during treatment with erlotinib and for one month after the last dose of erlotinib."
+        }
+      ],
+      "drug_name": "ERLOTINIB HYDROCHLORIDE",
+      "question": "What safety risks are listed for ERLOTINIB HYDROCHLORIDE?",
+      "question_id": "86e6f9c97badb426",
+      "question_type": "factual",
+      "references": [
+        "5 WARNINGS AND PRECAUTIONS"
+      ],
+      "set_id": "ab6f3cb3-34a8-4492-a5d7-fb6b055a2d6b"
+    },
+    {
+      "answer": "- Elevated transaminases (ALT or AST): Transaminases (ALT and AST) should be assessed prior to initiating SYMDEKO, every 3 months during the first year of treatment, and annually thereafter. In patients with a history of transaminase elevations, more frequent monitoring should be considered. Dosing should be interrupted in patients with significant elevations of transaminases, e.g., patients with ALT or AST >5 \u00d7 upper limit of normal (ULN), or ALT or AST >3 \u00d7 ULN with bilirubin >2 \u00d7 ULN. Following resolution of transaminase elevations, consider the benefits and risks of resuming treatment. \n- Hypersensitivity reactions: Anaphylaxis has been reported with SYMDEKO in the postmarketing setting. Initiate appropriate therapy in the event of a hypersensitivity reaction. \n- Use with CYP3A inducers: Concomitant use with strong CYP3A inducers (e.g., rifampin, St. John's wort) substantially decrease exposure of ivacaftor and may decrease the exposure of tezacaftor, which may reduce therapeutic effectiveness. Therefore, co-administration is not recommended. \n- Cataracts: Non-congenital lens opacities/cataracts have been reported in pediatric patients treated with SYMDEKO. Baseline and follow-up examinations are recommended in pediatric patients initiating SYMDEKO treatment.",
+      "citations": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "6",
+        "7.1",
+        "8.4",
+        "12.3"
+      ],
+      "context": [
+        {
+          "section_label": "5.1",
+          "section_title": "5.1\tTransaminase (AST/ALT) Elevations",
+          "text": "Elevated transaminases have been observed in patients with CF treated with SYMDEKO, as well as with ivacaftor monotherapy. Assessments of transaminases (ALT and AST) are recommended for all patients prior to initiating SYMDEKO, every 3 months during the first year of treatment, and annually thereafter. For patients with a history of transaminase elevations more frequent monitoring should be considered. In the event of significant elevations of transaminases, e.g., patients with ALT or AST >5 \u00d7 upper limit of normal (ULN), or ALT or AST >3 \u00d7 ULN with bilirubin >2 \u00d7 ULN, dosing should be interrupted and laboratory tests closely followed until the abnormalities resolve. Following the resolution of transaminase elevations consider the benefits and risks of resuming treatment ."
+        },
+        {
+          "section_label": "5.2",
+          "section_title": "5.2\tHypersensitivity Reactions, Including Anaphylaxis",
+          "text": "Hypersensitivity reactions, including cases of anaphylaxis, have been reported in the postmarketing setting . If signs or symptoms of serious hypersensitivity reactions develop during treatment, discontinue SYMDEKO and institute appropriate therapy. Consider the benefits and risks for the individual patient to determine whether to resume treatment with SYMDEKO."
+        },
+        {
+          "section_label": "5.3",
+          "section_title": "5.3\tConcomitant Use with CYP3A Inducers",
+          "text": "Exposure to ivacaftor is significantly decreased and exposure to tezacaftor may be reduced by the concomitant use of CYP3A inducers, which may reduce the therapeutic effectiveness of SYMDEKO. Therefore, co-administration with strong CYP3A inducers is not recommended ."
+        },
+        {
+          "section_label": "5.4",
+          "section_title": "5.4\tCataracts",
+          "text": "Cases of non-congenital lens opacities have been reported in pediatric patients treated with SYMDEKO, as well as with ivacaftor monotherapy. Although other risk factors were present in some cases (such as corticosteroid use, exposure to radiation), a possible risk attributable to treatment with SYMDEKO cannot be excluded. Baseline and follow-up ophthalmological examinations are recommended in pediatric patients initiating treatment with SYMDEKO ."
+        },
+        {
+          "section_label": "6",
+          "section_title": "6 ADVERSE REACTIONS",
+          "text": "The following adverse reactions are discussed in greater detail in other sections of the label:\n- Transaminase Elevations\n- Hypersensitivity Reactions, Including Anaphylaxis\n- Cataracts"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice.\nThe overall safety profile of SYMDEKO is based on data from 1001 patients in three double-blind, placebo-controlled, clinical trials: two parallel-group trials of 12 and 24-week duration and one cross-over design trial of 8 weeks duration. Eligible patients were also able to participate in an open-label extension safety study (up to 96 weeks of SYMDEKO). In the three placebo-controlled trials (Trials 1, 2, and 3), a total of 496 patients with CF aged 12 years and older received at least one dose of SYMDEKO. The proportion of patients who discontinued study drug prematurely due to adverse reactions was 1.6% for SYMDEKO-treated patients and 2.0% for placebo-treated patients. Serious adverse reactions, whether considered drug-related or not by the investigators, that occurred more frequently in SYMDEKO-treated patients compared to placebo included distal intestinal obstruction syndrome, 3 (0.6%) SYMDEKO-treated patients vs. 0 placebo. There were no deaths in the placebo-controlled trials, and one death in the open-label extension study due to respiratory failure and influenza infection in a patient who had discontinued SYMDEKO seven weeks prior.\nThe safety profile of SYMDEKO was generally similar across all subgroups of patients, including analysis by age, sex, baseline percent predicted FEV1 (ppFEV1), and geographic regions.\nTable 5 shows adverse reactions occurring in \u22653% of SYMDEKO-treated patients that also occurred at a higher rate than in the placebo-treated patients in the 12- and 24-week placebo-controlled, parallel-group trials (Trials 1 and 3).\nThe safety data from the following trials are similar to that observed in Trials 1 and 3:\n- an 8-week randomized, double-blind, placebo-controlled crossover study in 244 patients with CF aged 12 years and older who were heterozygous for the\n- a 24-week open-label study in 70 patients with CF aged 6 to less than 12 years who were either homozygous for the"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "Transaminase elevations\nDuring the placebo-controlled trials in patients aged 12 years and older, the incidence of maximum transaminase (ALT or AST) >8, >5, and >3 \u00d7 the upper limit of normal (ULN) was similar between SYMDEKO-treated patients and placebo-treated patients; 0.2%, 1.0%, and 3.4% in SYMDEKO-treated patients, and 0.4%, 1.0%, and 3.4% in placebo-treated patients. One patient (0.2%) on SYMDEKO and 2 patients (0.4%) on placebo permanently discontinued treatment for elevated transaminases. No SYMDEKO-treated patients experienced a transaminase elevation >3 \u00d7 ULN associated with elevated total bilirubin >2 \u00d7 ULN.\nDuring the 24-week, open-label study in patients aged 6 to less than 12 years (Trial 4), the incidence of maximum transaminase (ALT or AST) >8, >5, and >3 \u00d7 ULN were 1.4%, 4.3%, and 10.0%, respectively. No SYMDEKO-treated patients experienced a transaminase elevation >3 \u00d7 ULN associated with elevated total bilirubin >2 \u00d7 ULN or discontinued SYMDEKO treatment due to transaminase elevations."
+        },
+        {
+          "section_label": "6.2",
+          "section_title": "6.2 \tPostmarketing Experience",
+          "text": "The following adverse reactions have been identified during post approval use of SYMDEKO. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.\nImmune System Disorders: anaphylaxis\nSkin: rash"
+        },
+        {
+          "section_label": "7.1",
+          "section_title": "7.1\tInducers of CYP3A",
+          "text": "Tezacaftor and ivacaftor are substrates of CYP3A (ivacaftor is a sensitive substrate of CYP3A). Concomitant use of CYP3A inducers may result in reduced exposures and thus reduced SYMDEKO efficacy. Co-administration of ivacaftor with rifampin, a strong CYP3A inducer, significantly decreased ivacaftor exposure (area under the curve AUC]) by 89%. Tezacaftor exposures can also be expected to decrease significantly during co-administration with strong CYP3A inducers. Therefore, co-administration of SYMDEKO with strong CYP3A inducers is not recommended .\nExamples of strong CYP3A inducers include:\n- rifampin, rifabutin, phenobarbital, carbamazepine, phenytoin, and St. John's wort (Hypericum perforatum)"
+        },
+        {
+          "section_label": "8.4",
+          "section_title": "8.4 Pediatric Use",
+          "text": "The safety and effectiveness of SYMDEKO for the treatment of CF have been established in pediatric patients aged 6 to less than 18 years who are homozygous for the F508del mutation or who have at least one mutation in the CFTR gene that is responsive to tezacaftor/ivacaftor based on in vitro data and/or clinical evidence .\nClinical trials included the following patients with CF:\n- 12 to less than 18 years of age who are homozygous for the\n- 12 to less than 18 years of age who are heterozygous for the\n- 6 to less than 12 years of age who are either homozygous for the\nThe effectiveness of SYMDEKO in patients aged 6 to less than 12 years was extrapolated from patients aged 12 years and older with support from population pharmacokinetic analyses showing similar tezacaftor and ivacaftor exposure levels in patients aged 6 to less than 12 years and in patients aged 12 years and older . Safety of SYMDEKO in this population was derived from a 24-week, open-label, clinical trial in 70 patients aged 6 to less than 12 years (mean age at screening 8.1 years) administered either tezacaftor 50 mg/ivacaftor 75 mg and ivacaftor 75 mg or tezacaftor 100 mg/ivacaftor 150 mg and ivacaftor 150 mg, 12 hours apart (Trial 4). The safety profile for patients in this trial was similar to that observed in Trials 1 and 3 .\nThe safety and effectiveness of SYMDEKO in patients with CF younger than 6 years of age have not been studied."
+        },
+        {
+          "section_label": "8.4",
+          "section_title": "8.4 Pediatric Use",
+          "text": "Juvenile Animal Toxicity Data\nFindings of cataracts were observed in juvenile rats dosed from postnatal Day 7 through 35 with ivacaftor dose levels of 10 mg/kg/day and higher (0.25 times the MRHD based on systemic exposure of ivacaftor and its metabolites). This finding has not been observed in older animals."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "The pharmacokinetics of tezacaftor and ivacaftor are similar between healthy adult volunteers and patients with CF. Following once-daily dosing of tezacaftor and twice-daily dosing of ivacaftor in patients with CF, plasma concentrations of tezacaftor and ivacaftor reach steady-state within 8 days and within 3 to 5 days, respectively, after starting treatment. At steady-state, the accumulation ratio is approximately 1.5 for tezacaftor and 2.2 for ivacaftor. Exposures of tezacaftor (administered alone or in combination with ivacaftor) increase in an approximately dose-proportional manner with increasing doses from 10 mg to 300 mg once daily.\nKey pharmacokinetic parameters for tezacaftor and ivacaftor at steady state are shown in Table 7."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Absorption\nAfter a single dose in healthy subjects in the fed state, tezacaftor was absorbed with a median (range) time to maximum concentration (tmax) of approximately 4 hours (2 to 6 hours). The median (range) tmax of ivacaftor was approximately 6 hours (3 to 10 hours) in the fed state.\nWhen a single dose of tezacaftor/ivacaftor was administered with fat-containing foods, tezacaftor exposure was similar and ivacaftor exposure was approximately 3 times higher than when taken in a fasting state."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Distribution\nTezacaftor is approximately 99% bound to plasma proteins, primarily to albumin. Ivacaftor is approximately 99% bound to plasma proteins, primarily to alpha 1-acid glycoprotein and albumin. After oral administration of tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours in patients with CF in the fed state, the mean (\u00b1SD) for apparent volume of distribution of tezacaftor and ivacaftor was 271 (157) L and 206 (82.9) L, respectively. Neither tezacaftor nor ivacaftor partition preferentially into human red blood cells."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Elimination\nAfter oral administration of tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours in patients with CF in the fed state, the mean (\u00b1SD) for apparent clearance values of tezacaftor and ivacaftor were 1.31 (0.41) and 15.7 (6.38) L/h, respectively. After steady-state dosing of tezacaftor in combination with ivacaftor in patients with CF, the effective half-lives of tezacaftor and ivacaftor were approximately 15 (3.44) and 13.7 (6.06) hours, respectively."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Metabolism\nTezacaftor is metabolized extensively in humans. In vitro data suggested that tezacaftor is metabolized mainly by CYP3A4 and CYP3A5. Following oral administration of a single dose of 100 mg 14C-tezacaftor to healthy male subjects, M1, M2, and M5 were the three major circulating metabolites of tezacaftor in humans. M1 has the similar potency to that of tezacaftor and is considered pharmacologically active. M2 is much less pharmacologically active than tezacaftor or M1, and M5 is not considered pharmacologically active. Another minor circulating metabolite, M3, is formed by direct glucuronidation of tezacaftor.\nIvacaftor is also metabolized extensively in humans. In vitro and in vivo data indicate that ivacaftor is metabolized primarily by CYP3A4 and CYP3A5. M1 and M6 are the two major metabolites of ivacaftor in humans. M1 has approximately one-sixth the potency of ivacaftor and is considered pharmacologically active. M6 is not considered pharmacologically active."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Excretion\nFollowing oral administration of 14C-tezacaftor, the majority of the dose (72%) was excreted in the feces (unchanged or as the M2 metabolite) and about 14% was recovered in urine (mostly as M2 metabolite), resulting in a mean overall recovery of 86% up to 21 days after the dose. Less than 1% of the administrated dose was excreted in urine as unchanged tezacaftor, showing that renal excretion is not the major pathway of tezacaftor elimination in humans.\nFollowing oral administration of ivacaftor alone, the majority of ivacaftor (87.8%) is eliminated in the feces after metabolic conversion. There was minimal elimination of ivacaftor and its metabolites in urine (only 6.6% of total radioactivity was recovered in the urine), and there was negligible urinary excretion of ivacaftor as unchanged drug."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Specific Populations\nBased on population PK analyses, the PK exposure parameters of tezacaftor/ivacaftor in children and adolescents (ages 6 to <18 years) are similar to the AUCss range observed in adults when given in combination."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric patients aged 6 to less than 12 years"
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric patients aged 12 to less than 18 years\nFollowing oral administration of SYMDEKO tablets, tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours, the mean (\u00b1SD) AUCss for tezacaftor and ivacaftor was 97.1 (35.8) mcg\u2219h/mL and 11.4 (5.50) mcg\u2219h/mL, respectively, similar to the mean AUCss in adult patients administered SYMDEKO tablets, tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Hepatic Impairment\nFollowing multiple doses of tezacaftor and ivacaftor for 10 days, patients with moderately impaired hepatic function (Child-Pugh Class B, score 7-9) had an approximately 36% increase in AUC and a 10% increase in Cmax for tezacaftor, and a 1.5-fold increase in ivacaftor AUC compared with healthy subjects matched for demographics. In a separate study, patients with moderately impaired hepatic function (Child-Pugh Class B, score 7-9) had similar ivacaftor Cmax, but an approximately 2.0-fold increase in ivacaftor AUC0-\u221e compared with healthy subjects matched for demographics.\nPharmacokinetic studies have not been conducted in patients with mild (Child-Pugh Class A, score 5-6) or severe hepatic impairment (Child-Pugh Class C, score 10-15) receiving SYMDEKO. The magnitude of increase in exposure in patients with severe hepatic impairment is unknown but is expected to be higher than that observed in patients with moderate hepatic impairment ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Renal Impairment\nSYMDEKO has not been studied in patients with moderate or severe renal impairment (creatinine clearance \u226430 mL/min) or in patients with end-stage renal disease. In a human pharmacokinetic study with tezacaftor alone, there was minimal elimination of tezacaftor and its metabolites in urine (only 13.7% of total radioactivity was recovered in the urine with 0.79% as unchanged drug).\nIn a human pharmacokinetic study with ivacaftor alone, there was minimal elimination of ivacaftor and its metabolites in urine (only 6.6% of total radioactivity was recovered in the urine).\nIn population pharmacokinetic analysis, data from 665 patients on tezacaftor or tezacaftor in combination with ivacaftor in clinical trials indicated that mild renal impairment (N=147; eGFR 60 to less than 90 mL/min/1.73 m2) and moderate renal impairment (N=7; eGFR 30 to less than 60 mL/min/1.73 m2) did not affect the clearance of tezacaftor significantly ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Male and Female Patients\nThe pharmacokinetic parameters of tezacaftor and ivacaftor are similar in males and females."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Drug Interactions Studies\nDrug interaction studies were performed with SYMDEKO and other drugs likely to be co-administered or drugs commonly used as probes for pharmacokinetic interaction studies ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Potential for Tezacaftor/Ivacaftor to Affect Other Drugs\nClinical studies (with rosiglitazone and desipramine \u2013 see Table 9) showed that ivacaftor is not an inhibitor of CYP2C8 or CYP2D6. Based on in vitro results, ivacaftor has the potential to inhibit CYP3A and P-gp, and may also inhibit CYP2C9. In vitro, ivacaftor was not an inducer of CYP isozymes. Ivacaftor is not an inhibitor of transporters OATP1B1, OATP1B3, OCT1, OCT2, OAT1, or OAT3.\nBased on in vitro results, tezacaftor has a low potential to inhibit CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, and CYP3A4. Tezacaftor has a low potential to induce CYP3A, but it is not an inducer of CYP1A2 and CYP2B6. Tezacaftor has a low potential to inhibit transporters P-gp, BCRP, OATP1B3, OCT2, OAT1, or OAT3.\nClinical studies with midazolam showed that SYMDEKO is not an inhibitor of CYP3A. Co-administration of SYMDEKO with digoxin, a sensitive P-gp substrate, increased digoxin exposure by 1.3-fold. Co-administration of SYMDEKO with an ethinyl estradiol/ norethindrone oral contraceptive had no significant effect on the exposures of the hormonal contraceptives. Co-administration of SYMDEKO with pitavastatin, an OATP1B1 substrate, had no clinically relevant effect on the exposure of pitavastatin.\nThe effects of tezacaftor and ivacaftor (or ivacaftor alone) on the exposure of co-administered drugs are shown in Table 9 ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Potential for Other Drugs to Affect Tezacaftor/Ivacaftor\nIn vitro studies showed that ivacaftor and tezacaftor were substrates of CYP3A enzymes (i.e., CYP3A4 and CYP3A5). Exposure to ivacaftor and tezacaftor will be reduced by concomitant CYP3A inducers and increased by concomitant CYP3A inhibitors.\nIn vitro studies showed that tezacaftor is a substrate for the uptake transporter OATP1B1, and efflux transporters P-gp and BCRP. Tezacaftor is not a substrate for OATP1B3. In vitro studies showed that ivacaftor is not a substrate for OATP1B1, OATP1B3, or P-gp.\nThe effects of co-administered drugs on the exposure of tezacaftor and ivacaftor (or ivacaftor alone) are shown in Table 10 ."
+        }
+      ],
+      "drug_name": "SYMDEKO",
+      "question": "What safety risks are listed for SYMDEKO?",
+      "question_id": "13c273472daead37",
+      "question_type": "factual",
+      "references": [
+        "5 WARNINGS AND PRECAUTIONS"
+      ],
+      "set_id": "302ae804-37db-44fd-ac2f-3dbdeda9aa4b"
+    },
+    {
+      "answer": "Women who use oral contraceptives should be strongly advised not to smoke due to increased risk of serious cardiovascular disease.",
+      "citations": [
+        ""
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "WARNINGS",
+          "text": "Cigarette smoking increases the risk of serious cardiovascular disease. Women who use oral contraceptives should be strongly advised not to smoke.\nSHAROBEL \u2122 does not contain estrogen and, therefore, this insert does not discuss the serious health risks that have been associated with the estrogen component of combined oral contraceptives (COCs). The healthcare professional is referred to the prescribing information of combined oral contraceptives for a discussion of those risks. The relationship between progestin-only oral contraceptives and these risks is not fully defined. The healthcare professional should remain alert to the earliest manifestation of symptoms of any serious disease and discontinue oral contraceptive therapy when appropriate."
+        }
+      ],
+      "drug_name": "SHAROBEL",
+      "question": "What is the recommendation for women using oral contraceptives and smoking in relation to SHAROBEL\u2122?",
+      "question_id": "190721bf5636800a",
+      "question_type": "factual",
+      "references": [
+        "WARNINGS"
+      ],
+      "set_id": "a96f5194-ad2a-4783-a9a9-22a288caff25"
+    },
+    {
+      "answer": "- CYP3A4 inhibitors or a combined CYP3A4 and CYP1A2 inhibitor increase erlotinib plasma concentrations. Avoid concomitant use. If not possible, reduce erlotinib dose. \n- CYP3A4 inducers decrease erlotinib plasma concentrations. Avoid concomitant use. If not possible, increase erlotinib dose. \n- Cigarette smoking and CYP1A2 inducers decrease erlotinib plasma concentrations. Avoid concomitant use. If not possible, increase erlotinib dose. \n- Drugs that increase gastric pH decrease erlotinib plasma concentrations. For proton pump inhibitors avoid concomitant use if possible. For H-2 receptor antagonists, take erlotinib 10 hours after H-2 receptor antagonist dosing. For use with antacids, separate dosing by several hours.",
+      "citations": [
+        "2.4",
+        "7"
+      ],
+      "context": [
+        {
+          "section_label": "2.4",
+          "section_title": "2.4 Dose Modifications",
+          "text": "Adverse Reactions\n\u2020 \u00a0For additional information see Warnings and Precautions (5).\n* Reduce erlotinib tablets by 50 mg decrements when restarting therapy following withholding treatment for a dose-limiting toxicity that has resolved to baseline or grade \u2264 1.\n\u2021 \u00a0For additional information see Drug Interactions (7).\n\u00a7 \u00a0For additional information see Clinical Pharmacology (12.3)."
+        },
+        {
+          "section_label": "7",
+          "section_title": "7 DRUG INTERACTIONS",
+          "text": "CYP3A4 Inhibitors\nCo-administration of erlotinib with a strong CYP3A4 inhibitor or a combined CYP3A4 and CYP1A2 inhibitor increased erlotinib exposure. Erlotinib is metabolized primarily by CYP3A4 and to a lesser extent by CYP1A2. Increased erlotinib exposure may increase the risk of exposure-related toxicity .\nAvoid co-administering erlotinib with strong CYP3A4 inhibitors (e.g., boceprevir, clarithromycin, conivaptan, indinavir, itraconazole, ketoconazole, lopinavir/ritonavir, nefazodone, nelfinavir, posaconazole, ritonavir, saquinavir, telithromycin, voriconazole, grapefruit or grapefruit juice) or a combined CYP3A4 and CYP1A2 inhibitor (e.g., ciprofloxacin). Reduce the erlotinib dosage when co-administering with a strong CYP3A4 inhibitor or a combined CYP3A4 and CYP1A2 inhibitor if co-administration is unavoidable ."
+        },
+        {
+          "section_label": "7",
+          "section_title": "7 DRUG INTERACTIONS",
+          "text": "CYP3A4 Inducers\nPre-treatment with a CYP3A4 inducer prior to erlotinib decreased erlotinib exposure . Increase the erlotinib dosage if co-administration with CYP3A4 inducers (e.g., carbamazepine, phenytoin, rifampin, rifabutin, rifapentine, phenobarbital and St. John's wort) is unavoidable ."
+        },
+        {
+          "section_label": "7",
+          "section_title": "7 DRUG INTERACTIONS",
+          "text": "CYP1A2 Inducers and Cigarette Smoking\nCigarette smoking decreased erlotinib exposure. Avoid smoking tobacco (CYP1A2 inducer) and avoid concomitant use of erlotinib with moderate CYP1A2 inducers (e.g., teriflunomide, rifampin, or phenytoin). Increase the erlotinib dosage in patients that smoke tobacco or when co-administration with moderate CYP1A2 inducers is unavoidable ."
+        },
+        {
+          "section_label": "7",
+          "section_title": "7 DRUG INTERACTIONS",
+          "text": "Drugs the Increase Gastric pH\nCo-administration of erlotinib with proton pump inhibitors (e.g., omeprazole) and H-2 receptor antagonists (e.g., ranitidine) decreased erlotinib exposure . For proton pump inhibitors, avoid concomitant use if possible. For H-2 receptor antagonists and antacids, modify the dosing schedule . Increasing the dose of erlotinib when co-administered with gastric PH elevating agents is not likely to compensate for the loss of exposure."
+        },
+        {
+          "section_label": "7",
+          "section_title": "7 DRUG INTERACTIONS",
+          "text": "Anticoagulants\nInteraction with coumarin-derived anticoagulants, including warfarin, leading to increased International Normalized Ratio (INR) and bleeding adverse reactions, which in some cases were fatal, have been reported in patients receiving erlotinib. Regularly monitor prothrombin time or INR in patients taking coumarin-derived anticoagulants. Dose modification of erlotinib is not recommended ."
+        }
+      ],
+      "drug_name": "ERLOTINIB HYDROCHLORIDE",
+      "question": "What important drug interactions are noted for ERLOTINIB HYDROCHLORIDE?",
+      "question_id": "017775054c56f02f",
+      "question_type": "factual",
+      "references": [
+        "7 DRUG INTERACTIONS"
+      ],
+      "set_id": "ab6f3cb3-34a8-4492-a5d7-fb6b055a2d6b"
+    },
+    {
+      "answer": "- Pediatric patients aged 6 to less than 12 years weighing less than 30 kg: one tablet (containing tezacaftor 50 mg/ivacaftor 75 mg) in the morning and one tablet (containing ivacaftor 75 mg) in the evening, approximately 12 hours apart. SYMDEKO should be taken with fat-containing food. \n- Adults and pediatric patients aged 12 years and older or pediatric patients aged 6 to less than 12 years weighing 30 kg or more: one tablet (containing tezacaftor 100 mg/ivacaftor 150 mg) in the morning and one tablet (containing ivacaftor 150 mg) in the evening, approximately 12 hours apart. SYMDEKO should be taken with fat-containing food. \n- Reduce dosage in patients with moderate and severe hepatic impairment. \n- See full prescribing information for dosage modifications due to drug interactions with SYMDEKO.",
+      "citations": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "7.2",
+        "8.6",
+        "12.3"
+      ],
+      "context": [
+        {
+          "section_label": "2.1",
+          "section_title": "2.1\tGeneral Dosage Information",
+          "text": "Swallow the tablets whole.\nSYMDEKO should be taken with fat-containing food, such as food recommended in standard nutritional guidelines. Examples of meals or snacks that contain fat are those prepared with butter or oils or those containing eggs, cheeses, nuts, whole milk, or meats, etc. ."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2 \tRecommended Dosage in Adults, Adolescents, and Children Aged 6 Years and Older",
+          "text": "Adults, adolescents, and children aged 6 years and older should be dosed according to Table 1. The morning and the evening doses should be taken approximately 12 hours apart."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2 \tRecommended Dosage in Adults, Adolescents, and Children Aged 6 Years and Older",
+          "text": "Information for Missed Doses:\nIf 6 hours or less have passed since the missed morning or evening dose, the patient should take the missed dose as soon as possible and continue on the original schedule. If more than 6 hours have passed since the missed morning or evening dose, the patient should not take the missed dose. The next scheduled dose can be taken at the usual time. More than one dose should not be taken at the same time."
+        },
+        {
+          "section_label": "2.3",
+          "section_title": "2.3\tRecommended Dosage for Patients with Hepatic Impairment",
+          "text": "For dosage adjustment for patients with hepatic impairment, refer to Table 2.\nStudies have not been conducted in patients with severe hepatic impairment (Child-Pugh Class C), but exposure of tezacaftor and ivacaftor is expected to be higher than in patients with moderate hepatic impairment. Therefore, SYMDEKO should be used with caution at an adjusted dosage after weighing the risks and benefits of treatment in these patients ."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4\tDosage Adjustment for Patients Taking Drugs that are CYP3A Inhibitors",
+          "text": "The dosing regimen of SYMDEKO should be adjusted when co-administered with moderate and strong CYP3A inhibitors."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4\tDosage Adjustment for Patients Taking Drugs that are CYP3A Inhibitors",
+          "text": "Moderate CYP3A inhibitors:\nWhen co-administered with moderate CYP3A inhibitors (e.g., fluconazole, erythromycin), the dosing regimen should be adjusted as in Table 3 ."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4\tDosage Adjustment for Patients Taking Drugs that are CYP3A Inhibitors",
+          "text": "Strong CYP3A inhibitors:\nWhen co-administered with strong CYP3A inhibitors (e.g., ketoconazole, itraconazole, posaconazole, voriconazole, telithromycin, and clarithromycin), the dosing regimen should be adjusted as in Table 4 .\nFood or drink containing grapefruit should be avoided during treatment with SYMDEKO ."
+        },
+        {
+          "section_label": "7.2",
+          "section_title": "7.2\tInhibitors of CYP3A",
+          "text": "Co-administration with itraconazole, a strong CYP3A inhibitor, increased tezacaftor exposure (AUC) by 4.0-fold and ivacaftor by 15.6-fold. When co-administered with strong CYP3A inhibitors, the dosing regimen of SYMDEKO should be adjusted .\nExamples of strong CYP3A inhibitors include:\n- ketoconazole, itraconazole, posaconazole, and voriconazole\n- telithromycin and clarithromycin\nCo-administration of fluconazole increased ivacaftor exposure (AUC) by 3.0-fold. Simulation suggested co-administration with fluconazole, a moderate CYP3A inhibitor, may increase tezacaftor exposure (AUC) by approximately 2.0-fold. When co-administered with moderate CYP3A inhibitors, the dosing regimen of SYMDEKO should be adjusted .\nExamples of moderate CYP3A inhibitors include:\n- fluconazole\n- erythromycin\nCo-administration of SYMDEKO with grapefruit juice, which contains one or more components that moderately inhibit CYP3A, may increase exposure of tezacaftor and ivacaftor; therefore, food or drink containing grapefruit should be avoided during treatment with SYMDEKO ."
+        },
+        {
+          "section_label": "8.6",
+          "section_title": "8.6\tHepatic Impairment",
+          "text": "No dosage adjustment is necessary for patients with mild hepatic impairment (Child-Pugh Class A). A reduced dosage of SYMDEKO is recommended in patients with moderate hepatic impairment (Child-Pugh Class B). There is no experience in patients with severe hepatic impairment (Child-Pugh Class C), but tezacaftor/ivacaftor exposure is expected to be higher than in patients with moderate hepatic impairment. Therefore, use with caution at a reduced dosage in patients with severe hepatic impairment after weighing the risks and benefits of treatment ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "The pharmacokinetics of tezacaftor and ivacaftor are similar between healthy adult volunteers and patients with CF. Following once-daily dosing of tezacaftor and twice-daily dosing of ivacaftor in patients with CF, plasma concentrations of tezacaftor and ivacaftor reach steady-state within 8 days and within 3 to 5 days, respectively, after starting treatment. At steady-state, the accumulation ratio is approximately 1.5 for tezacaftor and 2.2 for ivacaftor. Exposures of tezacaftor (administered alone or in combination with ivacaftor) increase in an approximately dose-proportional manner with increasing doses from 10 mg to 300 mg once daily.\nKey pharmacokinetic parameters for tezacaftor and ivacaftor at steady state are shown in Table 7."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Absorption\nAfter a single dose in healthy subjects in the fed state, tezacaftor was absorbed with a median (range) time to maximum concentration (tmax) of approximately 4 hours (2 to 6 hours). The median (range) tmax of ivacaftor was approximately 6 hours (3 to 10 hours) in the fed state.\nWhen a single dose of tezacaftor/ivacaftor was administered with fat-containing foods, tezacaftor exposure was similar and ivacaftor exposure was approximately 3 times higher than when taken in a fasting state."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Distribution\nTezacaftor is approximately 99% bound to plasma proteins, primarily to albumin. Ivacaftor is approximately 99% bound to plasma proteins, primarily to alpha 1-acid glycoprotein and albumin. After oral administration of tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours in patients with CF in the fed state, the mean (\u00b1SD) for apparent volume of distribution of tezacaftor and ivacaftor was 271 (157) L and 206 (82.9) L, respectively. Neither tezacaftor nor ivacaftor partition preferentially into human red blood cells."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Elimination\nAfter oral administration of tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours in patients with CF in the fed state, the mean (\u00b1SD) for apparent clearance values of tezacaftor and ivacaftor were 1.31 (0.41) and 15.7 (6.38) L/h, respectively. After steady-state dosing of tezacaftor in combination with ivacaftor in patients with CF, the effective half-lives of tezacaftor and ivacaftor were approximately 15 (3.44) and 13.7 (6.06) hours, respectively."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Metabolism\nTezacaftor is metabolized extensively in humans. In vitro data suggested that tezacaftor is metabolized mainly by CYP3A4 and CYP3A5. Following oral administration of a single dose of 100 mg 14C-tezacaftor to healthy male subjects, M1, M2, and M5 were the three major circulating metabolites of tezacaftor in humans. M1 has the similar potency to that of tezacaftor and is considered pharmacologically active. M2 is much less pharmacologically active than tezacaftor or M1, and M5 is not considered pharmacologically active. Another minor circulating metabolite, M3, is formed by direct glucuronidation of tezacaftor.\nIvacaftor is also metabolized extensively in humans. In vitro and in vivo data indicate that ivacaftor is metabolized primarily by CYP3A4 and CYP3A5. M1 and M6 are the two major metabolites of ivacaftor in humans. M1 has approximately one-sixth the potency of ivacaftor and is considered pharmacologically active. M6 is not considered pharmacologically active."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Excretion\nFollowing oral administration of 14C-tezacaftor, the majority of the dose (72%) was excreted in the feces (unchanged or as the M2 metabolite) and about 14% was recovered in urine (mostly as M2 metabolite), resulting in a mean overall recovery of 86% up to 21 days after the dose. Less than 1% of the administrated dose was excreted in urine as unchanged tezacaftor, showing that renal excretion is not the major pathway of tezacaftor elimination in humans.\nFollowing oral administration of ivacaftor alone, the majority of ivacaftor (87.8%) is eliminated in the feces after metabolic conversion. There was minimal elimination of ivacaftor and its metabolites in urine (only 6.6% of total radioactivity was recovered in the urine), and there was negligible urinary excretion of ivacaftor as unchanged drug."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Specific Populations\nBased on population PK analyses, the PK exposure parameters of tezacaftor/ivacaftor in children and adolescents (ages 6 to <18 years) are similar to the AUCss range observed in adults when given in combination."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric patients aged 6 to less than 12 years"
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric patients aged 12 to less than 18 years\nFollowing oral administration of SYMDEKO tablets, tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours, the mean (\u00b1SD) AUCss for tezacaftor and ivacaftor was 97.1 (35.8) mcg\u2219h/mL and 11.4 (5.50) mcg\u2219h/mL, respectively, similar to the mean AUCss in adult patients administered SYMDEKO tablets, tezacaftor 100 mg once daily/ivacaftor 150 mg every 12 hours."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Hepatic Impairment\nFollowing multiple doses of tezacaftor and ivacaftor for 10 days, patients with moderately impaired hepatic function (Child-Pugh Class B, score 7-9) had an approximately 36% increase in AUC and a 10% increase in Cmax for tezacaftor, and a 1.5-fold increase in ivacaftor AUC compared with healthy subjects matched for demographics. In a separate study, patients with moderately impaired hepatic function (Child-Pugh Class B, score 7-9) had similar ivacaftor Cmax, but an approximately 2.0-fold increase in ivacaftor AUC0-\u221e compared with healthy subjects matched for demographics.\nPharmacokinetic studies have not been conducted in patients with mild (Child-Pugh Class A, score 5-6) or severe hepatic impairment (Child-Pugh Class C, score 10-15) receiving SYMDEKO. The magnitude of increase in exposure in patients with severe hepatic impairment is unknown but is expected to be higher than that observed in patients with moderate hepatic impairment ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Renal Impairment\nSYMDEKO has not been studied in patients with moderate or severe renal impairment (creatinine clearance \u226430 mL/min) or in patients with end-stage renal disease. In a human pharmacokinetic study with tezacaftor alone, there was minimal elimination of tezacaftor and its metabolites in urine (only 13.7% of total radioactivity was recovered in the urine with 0.79% as unchanged drug).\nIn a human pharmacokinetic study with ivacaftor alone, there was minimal elimination of ivacaftor and its metabolites in urine (only 6.6% of total radioactivity was recovered in the urine).\nIn population pharmacokinetic analysis, data from 665 patients on tezacaftor or tezacaftor in combination with ivacaftor in clinical trials indicated that mild renal impairment (N=147; eGFR 60 to less than 90 mL/min/1.73 m2) and moderate renal impairment (N=7; eGFR 30 to less than 60 mL/min/1.73 m2) did not affect the clearance of tezacaftor significantly ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Male and Female Patients\nThe pharmacokinetic parameters of tezacaftor and ivacaftor are similar in males and females."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Drug Interactions Studies\nDrug interaction studies were performed with SYMDEKO and other drugs likely to be co-administered or drugs commonly used as probes for pharmacokinetic interaction studies ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Potential for Tezacaftor/Ivacaftor to Affect Other Drugs\nClinical studies (with rosiglitazone and desipramine \u2013 see Table 9) showed that ivacaftor is not an inhibitor of CYP2C8 or CYP2D6. Based on in vitro results, ivacaftor has the potential to inhibit CYP3A and P-gp, and may also inhibit CYP2C9. In vitro, ivacaftor was not an inducer of CYP isozymes. Ivacaftor is not an inhibitor of transporters OATP1B1, OATP1B3, OCT1, OCT2, OAT1, or OAT3.\nBased on in vitro results, tezacaftor has a low potential to inhibit CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, and CYP3A4. Tezacaftor has a low potential to induce CYP3A, but it is not an inducer of CYP1A2 and CYP2B6. Tezacaftor has a low potential to inhibit transporters P-gp, BCRP, OATP1B3, OCT2, OAT1, or OAT3.\nClinical studies with midazolam showed that SYMDEKO is not an inhibitor of CYP3A. Co-administration of SYMDEKO with digoxin, a sensitive P-gp substrate, increased digoxin exposure by 1.3-fold. Co-administration of SYMDEKO with an ethinyl estradiol/ norethindrone oral contraceptive had no significant effect on the exposures of the hormonal contraceptives. Co-administration of SYMDEKO with pitavastatin, an OATP1B1 substrate, had no clinically relevant effect on the exposure of pitavastatin.\nThe effects of tezacaftor and ivacaftor (or ivacaftor alone) on the exposure of co-administered drugs are shown in Table 9 ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Potential for Other Drugs to Affect Tezacaftor/Ivacaftor\nIn vitro studies showed that ivacaftor and tezacaftor were substrates of CYP3A enzymes (i.e., CYP3A4 and CYP3A5). Exposure to ivacaftor and tezacaftor will be reduced by concomitant CYP3A inducers and increased by concomitant CYP3A inhibitors.\nIn vitro studies showed that tezacaftor is a substrate for the uptake transporter OATP1B1, and efflux transporters P-gp and BCRP. Tezacaftor is not a substrate for OATP1B3. In vitro studies showed that ivacaftor is not a substrate for OATP1B1, OATP1B3, or P-gp.\nThe effects of co-administered drugs on the exposure of tezacaftor and ivacaftor (or ivacaftor alone) are shown in Table 10 ."
+        }
+      ],
+      "drug_name": "SYMDEKO",
+      "question": "How should SYMDEKO be administered?",
+      "question_id": "7d2efbc4667c7c41",
+      "question_type": "factual",
+      "references": [
+        "2 DOSAGE AND ADMINISTRATION"
+      ],
+      "set_id": "302ae804-37db-44fd-ac2f-3dbdeda9aa4b"
+    },
+    {
+      "answer": "SHAROBEL is used to prevent pregnancy.",
+      "citations": [
+        ""
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "HOW SUPPLIED",
+          "text": "SHAROBEL \u2122 (Norethindrone Tablets, USP)\nThis product (like all oral contraceptives) is used to prevent pregnancy. It does not protect against HIV infection (AIDS) or other sexually transmitted diseases."
+        }
+      ],
+      "drug_name": "SHAROBEL",
+      "question": "What is the primary use of SHAROBEL (Norethindrone Tablets, USP)?",
+      "question_id": "c764f432912d70f8",
+      "question_type": "factual",
+      "references": [
+        "HOW SUPPLIED"
+      ],
+      "set_id": "a96f5194-ad2a-4783-a9a9-22a288caff25"
+    }
+  ],
+  "seed": 20260701,
+  "source_data": {
+    "debug_subset": "qa_toy.jsonl",
+    "final_eval_inputs": [
+      "labels.jsonl",
+      "qa.jsonl"
+    ],
+    "private_field_policy": "Verifier-only QA scoring fields are not exposed to agents.",
+    "source_files": [
+      {
+        "description": "FDA drug-label documents with raw label text and chunked sections.",
+        "path": "labels.jsonl",
+        "role": "primary label corpus used to build public label files"
+      },
+      {
+        "description": "QA records with public question metadata and verifier-only scoring fields.",
+        "path": "qa.jsonl",
+        "role": "primary QA corpus used to select questions and private verifier scoring data"
+      },
+      {
+        "description": "small debug subset used for inspection and smoke testing the source format.",
+        "path": "qa_toy.jsonl",
+        "role": "debug subset only; not used for final sampled benchmark tasks"
+      }
+    ]
+  },
+  "task_name": "fda-label-citation-retrieval",
+  "task_type": "citation"
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, the snippet around PASSAGE printed empty string? Ah, let's look at `idx`. If `idx` is found, maybe `data[\"label_raw\"]` is a dictionary or something else? Wait, let's print the type of `data[\"label_raw\"]` first.",
+  "plan": "Let's print the type and structure of `data[\"label_raw\"]`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    data = json.loads(next(f))\n    print(\"Type of label_raw:\", type(data[\"label_raw\"]))\n    if isinstance(data[\"label_raw\"], dict):\n        print(\"Keys of label_raw:\", list(data[\"label_raw\"].keys()))\n        for k, v in list(data[\"label_raw\"].items())[:5]:\n            print(k, type(v), str(v)[:100])\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

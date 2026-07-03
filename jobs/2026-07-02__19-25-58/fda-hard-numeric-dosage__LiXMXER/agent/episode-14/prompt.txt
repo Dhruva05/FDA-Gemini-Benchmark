@@ -1,0 +1,15 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# find /workspace -maxdepth 3
+/workspace
+/workspace/find_dosage_chunks.py
+/workspace/search_chunks.py
+/workspace/find_dosage_chunks_2.py
+/workspace/print_lopinavir.py
+/workspace/inspect_labels.py
+/workspace/data
+/workspace/data/public
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+root@af996c5fe492:/workspace#

@@ -1,0 +1,63 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > inspect_12hr.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         if label['set_id'] == 'ea5d0e55-2191-4094-b082-24b317f95752':
+>             print("label_raw:")
+>             print(label['label_raw'][:1000])
+>             print("-" * 40)
+>             for i, chunk in enumerate(label['chunks']):
+>                 print(f"{i}: {repr(chunk)}")
+> EOF
+root@c7da805c5eb1:/workspace# python3 inspect_12hr.py
+label_raw:
+||PASSAGE_0000||
+Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+
+||PASSAGE_0001||
+Do not use if you have ever had an allergic reaction to this product or any of its ingredients.
+
+||PASSAGE_0002||
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+
+||PASSAGE_0003||
+- do not take more than directed
+- do not take at the same time as aluminum or magnesium antacids
+- do not take with fruit juices
+
+||PASSAGE_0004||
+Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek medical help right away.
+
+||PASSAGE_0005||
+If pregnant or breast-feeding, ask a health professional before use.
+
+||PASSAGE_0006||
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+
+||PASSAGE_0007||
+adults and children 12 years of age and
+----------------------------------------
+0: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, watery eyes\n- itching
+of the nose or throat'
+1: 'Do not use\xa0if you have ever had an allergic reaction to this product or any of its ingredients.'
+2: 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.'
+3: '- do not take more than directed\n- do not take at the same time as aluminum or magnesium antacids\n- do not take with fruit juices'
+4: 'Stop use and ask a doctor if an allergic reaction to this product occurs.\xa0 Seek medical help right away.'
+5: 'If pregnant or breast-feeding,\xa0ask a health professional before use.'
+6: 'Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).'
+7: 'adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours'
+8: 'do not use\nadults 65 years of age and older'
+9: '- store between 20-25°C (68-77°F)\n- protect from excessive moisture\n- retain carton for complete product information and warnings'
+10: 'colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, iron oxide yellow, lactose monohydrate, macrogol, magnesi
+um stearate, microcrystalline cellulose, pregelatinized starch, titanium dioxide'
+11: 'Antihistamine\nIndoor/Outdoor Relief of:'
+12: 'Actual Size\nCOMPARE TO ALLEGRA® 12 HOUR ALLERGY active ingredient*'
+root@c7da805c5eb1:/workspace#

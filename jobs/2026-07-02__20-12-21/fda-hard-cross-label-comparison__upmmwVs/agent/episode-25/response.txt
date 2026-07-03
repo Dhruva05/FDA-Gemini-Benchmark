@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, for 365 Whole Foods Market Loratadine (`bba4e7c8-db8e-4522-915c-48ee809e3bce`), where are the dosing instructions? Let's check `label_raw` for this label. Is there more text in `label_raw` that was not split into chunks, or are there chunks missing, or is there some information we missed? Let's check `label_raw` of this label.",
+  "plan": "I will write a python script to inspect the `label_raw` of `bba4e7c8-db8e-4522-915c-48ee809e3bce`.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_label_raw.py\nimport json\nwith open('/workspace/data/public/labels.jsonl', 'r') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['set_id'] == 'bba4e7c8-db8e-4522-915c-48ee809e3bce':\n            print(data['label_raw'])\n            break\nEOF\npython3 print_label_raw.py\n",
+      "duration": 1.0
+    }
+  ]
+}

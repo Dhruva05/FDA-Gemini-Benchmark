@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 308 (char 309) | Content preview: '{\n  "analysis": "Ah! The chunks are a list of strings! Wait, how do we get the `passage_id` (e.g., `'...
+
+Please fix these issues and provide a proper JSON response.

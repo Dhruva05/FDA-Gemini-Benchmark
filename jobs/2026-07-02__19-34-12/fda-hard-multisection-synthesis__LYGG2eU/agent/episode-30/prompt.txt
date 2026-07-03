@@ -1,0 +1,44 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# python3 print_passages.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 PASSAGE_0001 PASSAGE_0002 PASSAGE_0003 PASSAGE_0012
+=== PASSAGE_0001 ===
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+========================================
+=== PASSAGE_0002 ===
+2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be us
+ed for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+========================================
+=== PASSAGE_0003 ===
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V
+, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V,
+V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+========================================
+=== PASSAGE_0012 ===
+2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-associated resistance substitutions.
+- Once daily lopinavir and ritonavir dosing is not recommended in pregnancy
+Once daily lopinavir and ritonavir dosing is not recommended in pregnancy .
+- There are insufficient data to recommend dosing in pregnant women with any documented lopinavir-associated resistance substitutions.
+There are insufficient data to recommend dosing in pregnant women with any documented lopinavir-associated resistance substitutions.
+- No dosage adjustment of lopinavir and ritonavir is required for patients during the postpartum period.
+No dosage adjustment of lopinavir and ritonavir is required for patients during the postpartum period.
+- Avoid use of lopinavir and ritonavir oral solution in pregnant women
+Avoid use of lopinavir and ritonavir oral solution in pregnant women .
+========================================
+root@15b83e10b8d1:/workspace#

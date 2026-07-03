@@ -1,0 +1,43 @@
+New Terminal Output:
+
+>>> print(labels[1]['chunks'][159])
+17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to accurate administration of their dose to minimize the risk of accidental overdose or underdose of lopinavir and ri
+tonavir.
+- Advise patients and caregivers that the oral solution should be administered using the calibrated dosing cup (supplied) or oral dosing syringe.
+- Advise caregivers to inform their healthcare provider if the child’s weight changes in order to make sure that the child’s lopinavir and ritonavir dose is adj
+usted as needed.
+- Inform patients and caregivers that lopinavir and ritonavir oral solution should be taken with food to enhance absorption.
+- Advise patients to remain under the care of a healthcare provider while using lopinavir and ritonavir and to take lopinavir and ritonavir in combination with
+other antiretroviral drugs as prescribed.
+- Advise patients not to alter the dose or discontinue therapy without consulting with their healthcare provider. If a dose of lopinavir and ritonavir is missed
+ patients should take the dose as soon as possible and then return to their normal schedule. However, if a dose is skipped the patient should not double the nex
+t dose.
+- Inform patients that it is important to take lopinavir and ritonavir on a regular dosing schedule as directed and to avoid missing doses as that can result in
+ development of resistance.
+- Inform patients that there may be a greater chance of developing diarrhea with the once daily regimen as compared with the twice daily regimen.
+- Inform patients that lopinavir and ritonavir is not a cure for HIV-1 infection and that they may continue to experience illnesses associated with HIV-1 infect
+ion, including opportunistic infections.
+>>> print(labels[1]['chunks'][187][:1500])
+1 Prescribing Information
+- 1 Medication Guide and Instructions for Use 1 Medication Guide and Instructions for Use
+Step 1: Remove the lopinavir and ritonavir oral solution bottle, bottle adapter, and oral syringe from the carton.
+Step 2: Open the bottle by pressing downward firmly on the child-resistant cap and twisting it in the direction of the arrow in the figure (counter-clockwise).
+Do not throw away the child-resistant cap.
+Step 3: Check the dose in milliliters (mL) as prescribed by your doctor. Find this number on the oral syringe.
+Step 5: Remove bottle cap and insert bottle adapter into bottle opening.
+Insert the oral syringe tip into the upright bottle through the opening of the bottle adapter until it is firmly in place.
+Step 6: With the oral syringe in place, turn the bottle upside down. Pull the plunger to withdraw the dose prescribed by your doctor (the amount of oral solutio
+n in Step 3).
+Step 9: Check that the correct dose was drawn up into the oral syringe.
+Measure the dosage from the base of the plunger.
+If the dose is not correct, insert the oral syringe tip firmly into the bottle adapter. Fully push in the plunger so that the oral solution flows back into the
+bottle.
+Step 10: Take the dose of lopinavir and ritonavir oral solution.
+- Swallow the lopinavir and ritonavir oral solution directly from the oral syringe.
+Swallow the lopinavir and ritonavir oral solution directly from the oral syringe.
+- Place the tip of the oral syringe in your mouth, point towards
+>>>

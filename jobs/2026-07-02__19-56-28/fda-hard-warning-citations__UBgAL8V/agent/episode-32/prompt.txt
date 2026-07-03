@@ -1,0 +1,39 @@
+New Terminal Output:
+
+root@7ddc515b1a59:/workspace# python3 -c "
+> import json
+> with open('/workspace/answers.json') as f:
+>     data = json.load(f)
+>
+> print('Answers count:', len(data['answers']))
+> qids = [ans['qid'] for ans in data['answers']]
+> print('QIDs:', qids)
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     expected_qids = [json.loads(line)['qid'] for line in f]
+> print('Expected QIDs:', expected_qids)
+> assert set(qids) == set(expected_qids), 'QID mismatch!'
+> assert len(qids) == len(expected_qids), 'Duplicate or missing QIDs!'
+>
+> for i, ans in enumerate(data['answers']):
+>     assert 'qid' in ans
+>     assert 'status' in ans
+>     assert 'answer' in ans
+>     assert 'citations' in ans
+>     assert 'structured_fields' in ans
+>     print(f'Answer {i} (QID {ans["qid"]}): status={ans["status"]}, citations_count={len(ans["citations"])}')
+>     for cit in ans['citations']:
+>         assert 'set_id' in cit
+>         assert 'passage_id' in cit
+>         assert 'section' in cit
+>         assert 'supporting_quote' in cit
+> "
+Answers count: 8
+QIDs: ['b2531657ba5c7a78', '6f12607a1ba14dd5', 'daef650b92e56473', 'a0576a26f2a2eeac', '9be5515bc3064979', '18078efe9380c8dc', 'fbab4114f66e2dda', '2d63e0a82215
+867f']
+Expected QIDs: ['b2531657ba5c7a78', '6f12607a1ba14dd5', 'daef650b92e56473', 'a0576a26f2a2eeac', '9be5515bc3064979', '18078efe9380c8dc', 'fbab4114f66e2dda', '2d6
+3e0a82215867f']
+Traceback (most recent call last):
+  File "<string>", line 22, in <module>
+NameError: name 'qid' is not defined. Did you mean: 'qids'?
+root@7ddc515b1a59:/workspace#

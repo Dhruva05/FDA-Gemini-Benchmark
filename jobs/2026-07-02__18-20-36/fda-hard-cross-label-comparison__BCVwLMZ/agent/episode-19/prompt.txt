@@ -1,0 +1,120 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > print_questions_candidates.py
+> with open('all_candidate_passages.txt') as f:
+>     lines = f.readlines()
+>
+> # Let's print sections of this file
+> current_q = ""
+> for line in lines:
+>     if line.startswith("=== QUESTION:"):
+>         current_q = line.strip()
+>         print(current_q)
+>     elif line.startswith("  Label:"):
+>         print(line.strip())
+>     elif "PASSAGE_" in line:
+>         # only print first few characters or if it's very short
+>         print("   ", line.strip()[:180])
+> EOF
+root@faa94ec9460f:/workspace# python3 print_questions_candidates.py
+=== QUESTION: 12HR Allergy Relief vs 365 Whole Foods Market Loratadine (cross-0df97f1e2f1e4c) ===
+Label: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752)
+    PASSAGE_0002: 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.'
+    PASSAGE_0003: '- do not take more than directed\n- do not take at the same time as aluminum or magnesium antacids\n- do not take with fruit juices'
+    PASSAGE_0006: 'Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).'
+    PASSAGE_0007: 'adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours'
+Label: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce)
+    PASSAGE_0002: 'liver or kidney disease. Your doctor should determine if you need a different dose.'
+    PASSAGE_0003: 'do not take more than directed. Taking more than directed may cause drowsiness.'
+    PASSAGE_0006: 'In case of overdose, get medical help or contact a Poison Control Center (1-800-222-1222) right away.'
+    PASSAGE_0011: 'Loratadine\n                     \n                     Tablets USP, 10mg\nIndoor & Outdoor\nAllergies\n*WHEN TAKEN AS DIRECTED. SEE DRUG FAC
+TS PANEL.'
+    PASSAGE_0012: 'MARKET\nAntihistamine\nAllergy Relief\nLoratadine\nTablets USP, 10mg\n**Compare to the Active Ingredient in Claritin®'
+    PASSAGE_0014: 'ACTUAL SIZE\n*WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL.'
+=== QUESTION: Acamprosate Calcium vs Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (cross-e9a79ba825959d) ===
+Label: Acamprosate Calcium (ae6e79c0-a307-4888-b647-1b7be4cb9127)
+    PASSAGE_0000: '1 INDICATIONS AND USAGE\nAcamprosate calcium delayed-release tablets are indicated for the maintenance of abstinence from alcohol in patients
+ with alcohol dependence
+    PASSAGE_0001: '2 DOSAGE AND ADMINISTRATION\nThe recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should tota
+l 666 mg) taken three ti
+    PASSAGE_0002: '2.1 Dosage in Renal Impairment\nFor patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one
+ 333 mg tablet taken thr
+    PASSAGE_0003: '3 DOSAGE FORMS AND STRENGTHS\nAcamprosate calcium delayed-release tablets, 333 mg are white to off-white, round, biconvex, enteric-coated tab
+lets debossed with “435”
+    PASSAGE_0005: '4.2 Severe Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/
+min) .'
+    PASSAGE_0006: '5.1 Renal Impairment\nTreatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min)
+ requires a dose reducti
+    PASSAGE_0026: '39 (2%)\n†*includes events coded as “fracture” by sponsor;\n††**includes events coded as “nervousness” by sponsor 1 includes 258 patients tre
+ated with acamprosate ca
+    PASSAGE_0032: '8.3 Nursing Mothers\nIn animal studies, acamprosate was excreted in the milk of lactating rats dosed orally with acamprosate calcium. The con
+centration of acamprosat
+    PASSAGE_0034: '8.5 Geriatric Use\nForty-one of the 4234 patients in double-blind, placebo-controlled, clinical trials of acamprosate calcium were 65 years o
+f age or older, while no
+    PASSAGE_0035: '8.6 Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+    PASSAGE_0036: '10 OVERDOSAGE\nIn all reported cases of acute overdosage with acamprosate calcium (total reported doses of up to 56 grams of acamprosate calc
+ium), the only symptom t
+    PASSAGE_0040: '12.3\tAbsorption\nThe absolute bioavailability of acamprosate calcium after oral administration is about 11%. Steady-state plasma concentrati
+ons of acamprosate are r
+    PASSAGE_0041: 'The volume of distribution for acamprosate following intravenous administration is estimated to be 72 to 109 liters (approximately 1 L/kg). P
+lasma protein binding of
+    PASSAGE_0043: 'After oral dosing of 2 x 333 mg of acamprosate calcium, the terminal half-life ranges from approximately 20 to 33 hours. Following oral admin
+istration of acamprosate
+    PASSAGE_0045: 'Acamprosate had no 
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+azone 15 mg andmetformin HCl 850 mg tablets\nEach
+film-coated tablet conta
+=== QUESTION: Acyclovir vs Acyclovir suspension (cross-893c71f570b542) ===
+Label: Acyclovir (dcc29902-1fe6-4713-947e-335503959464)
+    PASSAGE_0007: 'Overdoses involving ingestion of up to 20 g have been reported. Adverse events\nthat have been reported in association with overdosage includ
+e agitation, coma,\nseiz
+    PASSAGE_0009: 'every 12 hours\nFor patients who require hemodialysis, the mean plasma half-life\nof acyclovir during hemodialysis is approximately 5 hours.
+This results in a 60%\nd
+    PASSAGE_0010: 'Acyclovir oral suspension, USP (off-white, artificial\nbanana-flavored) containing 200 mg acyclovir in each teaspoonful (5 mL) – Bottle\nof 1
+ pint (473 mL)\nNDC 5486
+    PASSAGE_0011: 'MG #19296\nRelabeling of "Additional Barcode" by:Physicians Total Care, Inc.Tulsa, OK\xa0\xa0\xa0\xa0 74146'
+Label: Acyclovir suspension (3efa1e5e-5a14-4724-a2ca-25702f10faed)
+    PASSAGE_0001: 'Pharmacokinetics\nThe\xa0pharmacokinetics\xa0of\xa0acyclovir\xa0after\xa0oral\xa0administration\xa0have\xa0been\xa0evaluated in\xa0healthy\xa
+0volunteers\xa0and\xa0in
+    PASSAGE_0002: 'Table\xa01.\xa0Acyclovir\xa0Pharmacokinetic\xa0Characteristics\xa0(Range)\n*Bioavailability\xa0decreases\xa0with\xa0increasing\xa0dose.\nIn\x
+a0one\xa0multiple-dose,\
+    PASSAGE_0005: 'Pediatrics\nIn\xa0general,\xa0the\xa0pharmacokinetics\xa0of\xa0acyclovir\xa0in\xa0pediatric\xa0patients\xa0is\xa0similar\xa0to\xa0that of\xa0
+adults.\xa0Mean\xa0half-
+    PASSAGE_0006: 'Drug\xa0Interactions\nCoadministration\xa0of\xa0probenecid\xa0with\xa0intravenous\xa0acyclovir\xa0has\xa0been\xa0shown\xa0to increase\xa0the\
+xa0mean\xa0acyclovir\xa0
+    PASSAGE_0008: 'Recurrent\xa0Genital\xa0Herpes\nDouble-blind, placebo-controlled studies in patients with frequent recurrences (6 or more episodes per year)
+have shown that orally a
+    PASSAGE_0024: 'Acyclovir concentrations have been documented in breast milk in 2 women following oral administration of acyclovir and ranged from 0.6 to 4.1
+ times corresponding pla
+    PASSAGE_0027: 'Short-Term\xa0Administration\nThe most frequent adverse events reported during clinical trials of treatment of genital herpes with acyclovir
+200 mg administered oral
+    PASSAGE_0028: 'Long-Term\xa0Administration\nThe most frequent adverse events reported in a clinical trial for the prevention of recurrences with continuous
+administration of 400 mg
+    PASSAGE_0029: 'Herpes\xa0Zoster\nThe most frequent adverse event reported during 3 clinical trials of treatment of herpes zoster (shingles) with 800 mg of o
+ral acyclovir 5 times da
+    PASSAGE_0030: 'Chickenpox\nThe most frequent adverse event reported during 3 clinical trials of treatment of chickenpox with oral acyclovir at doses of 10 t
+o 20 mg/kg 4 times daily
+    PASSAGE_0032: 'Overdoses\xa0involving\xa0ingestion\xa0of\xa0up\xa0to\xa0100\xa0capsules\xa0(20\xa0g)\xa0have\xa0been\xa0reported.\xa0Adverse\xa0events that\
+xa0have\xa0been\xa0repor
+    PASSAGE_0033: 'Acute\xa0Treatment\xa0of\xa0Herpes\xa0Zoster\n800\xa0mg\xa0every\xa04\xa0hours\xa0orally,\xa05\xa0times\xa0daily\xa0for\xa07\xa0to\xa010\xa0d
+ays.'
+    PASSAGE_0034: 'Treatment\xa0of\xa0Initial\xa0Genital\xa0Herpes\n200\xa0mg\xa0every\xa04\xa0hours,\xa05\xa0times\xa0daily\xa0for 10\xa0days.'
+    PASSAGE_0035: 'Chronic\xa0Suppressive\xa0Therapy\xa0for\xa0Recurrent\xa0Disease\n400 mg 2 times daily for up to 12 months, followed by re-evaluation. Altern
+ative regimens have incl
+    PASSAGE_0036: 'Intermittent\xa0Therapy\n200\xa0mg\xa0every\xa04\xa0hours,\xa05\xa0times\xa0daily\xa0for\xa05\xa0days.\xa0Therapy\xa0should\xa0be initiated\x
+a0at\xa0the\xa0earliest\
+    PASSAGE_0037: 'Treatment\xa0of\xa0Chickenpox\nChildren\xa0(2\xa0years\xa0of\xa0age\xa0and\xa0older)\n20 mg/kg per dose orally 4 times daily (80 mg/kg/day) f
+or 5 days. Children over
+    PASSAGE_0038: 'Adults\xa0and\xa0Children\xa0over\xa040\xa0kg\n800\xa0mg\xa04\xa0times\xa0daily\xa0for\xa05\xa0days.\nIntravenous\xa0acyclovir\xa0is\xa0indic
+ated\xa0for\xa0the\xa0tr
+    PASSAGE_0039: 'Hemodialysis\nFor patients who require hemodialysis, the mean plasma half-life of acyclovir during hemodialysis is approximately 5 hours. Thi
+s results in a 60% decre
+    PASSAGE_0040: 'Peritoneal\xa0Dialysis\nNo\xa0supplemental\xa0dose\xa0appears\xa0to\xa0be\xa0necessary\xa0after\xa0adjustment\xa0of\xa0the\xa0dosing interval
+.'
+    PASSAGE_0041: 'Bioequivalence\xa0of\xa0Dosage\xa0Forms\nAcyclovir Oral Suspension\xa0was\xa0shown\xa0to\xa0be\xa0bioequivalent\xa0to Acyclovir\xa0Capsules\x
+a0(n\xa0=\xa020)\xa0and\
+    PASSAGE_0042: 'Acyclovir Oral Suspension, USP\xa0contains\xa0200\xa0mg of acyclovir, USP in\xa0each teaspoonful\xa0(5\xa0mL). The white to off white, banana
+ flavored suspension is
+    PASSAGE_0043: '1 pint bottle\xa0(473\xa0mL)\nStor\ne\xa0at\xa015°\xa0to\xa025°C\xa0(59°\xa0to\xa077°F). Protect from light.\nFor more information, go to www
+.novadozpharma.com or ca
+root@faa94ec9460f:/workspace#

@@ -1,0 +1,9 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# python3 -c "import json; data=[json.loads(line) for line in open('/workspace/data/public/labels.jsonl')]; print(type(data[0]['labe
+l_raw'])); print(data[0]['label_raw'].keys() if isinstance(data[0]['label_raw'], dict) else data[0]['label_raw'][:100])"
+<class 'str'>
+||PASSAGE_0000||
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir,
+root@1ce871952c8c:/workspace#

@@ -1,0 +1,32 @@
+version = "1.0"
+
+[task]
+name = "abundant/fda-hard-warning-citations"
+description = "Extract clinically relevant warnings, precautions, risks, and safety qualifiers with multiple citations."
+keywords = ["fda", "drug-labels", "rag", "long-context", "citations", "refusal", "clinical", "heterogeneous-data"]
+
+[[task.authors]]
+name = "Abundant"
+email = ""
+
+[metadata]
+author_name = "Abundant"
+author_email = ""
+difficulty = "hard"
+category = "clinical-regulatory-rag"
+tags = ["fda", "drug-labels", "rag", "long-context", "citations", "refusal", "clinical", "heterogeneous-data"]
+
+[verifier]
+timeout_sec = 900.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 1
+memory_mb = 4096
+storage_mb = 10240
+
+[environment.env]
+GEMINI_CLI_TRUST_WORKSPACE = "true"

@@ -1,0 +1,748 @@
+{
+  "aggregate_score": 0.760261,
+  "binary_pass": false,
+  "critical_errors": [],
+  "fractional_reward": 0.760261,
+  "num_answered": 8,
+  "num_missing": 0,
+  "num_questions": 8,
+  "num_schema_errors": 0,
+  "overall_fractional_score": 0.760261,
+  "pass_threshold": 0.85,
+  "passed": false,
+  "per_question": [
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.708",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "b2531657ba5c7a78",
+      "score": 0.814583,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.708",
+          "score": 0.708333
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.583333
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.708333,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.583333,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.650",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "6f12607a1ba14dd5",
+      "score": 0.7775,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.650",
+          "score": 0.65
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.65,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.650",
+        "structured field dose does not match expected value",
+        "structured field unit does not match expected value",
+        "structured field frequency does not match expected value",
+        "structured field population does not match expected value"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "daef650b92e56473",
+      "score": 0.7175,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.650",
+          "score": 0.65
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "structured field dose does not match expected value; structured field unit does not match expected value; structured field frequency does not match expected value; structured field population does not match expected value",
+          "score": 0.2
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.65,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.2,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [],
+      "expected_status": "ANSWERED",
+      "passed": true,
+      "qid": "a0576a26f2a2eeac",
+      "score": 0.959167,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 0.883333
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "",
+          "score": 1.0
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.883333,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 1.0,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.475",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "9be5515bc3064979",
+      "score": 0.66625,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.475",
+          "score": 0.475
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.25
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.475,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.25,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.592",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "18078efe9380c8dc",
+      "score": 0.740417,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.592",
+          "score": 0.591667
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.416667
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.591667,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.416667,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.592",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "fbab4114f66e2dda",
+      "score": 0.740417,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.592",
+          "score": 0.591667
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.416667
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.591667,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.416667,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.475",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "2d63e0a82215867f",
+      "score": 0.66625,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.475",
+          "score": 0.475
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.25
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.475,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.25,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    }
+  ],
+  "question_scores": [
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.708",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "b2531657ba5c7a78",
+      "score": 0.814583,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.708",
+          "score": 0.708333
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.583333
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.708333,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.583333,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.650",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "6f12607a1ba14dd5",
+      "score": 0.7775,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.650",
+          "score": 0.65
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.65,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.650",
+        "structured field dose does not match expected value",
+        "structured field unit does not match expected value",
+        "structured field frequency does not match expected value",
+        "structured field population does not match expected value"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "daef650b92e56473",
+      "score": 0.7175,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.650",
+          "score": 0.65
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "structured field dose does not match expected value; structured field unit does not match expected value; structured field frequency does not match expected value; structured field population does not match expected value",
+          "score": 0.2
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.65,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.2,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [],
+      "expected_status": "ANSWERED",
+      "passed": true,
+      "qid": "a0576a26f2a2eeac",
+      "score": 0.959167,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 0.883333
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "",
+          "score": 1.0
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.883333,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 1.0,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.475",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "9be5515bc3064979",
+      "score": 0.66625,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.475",
+          "score": 0.475
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.25
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.475,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.25,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.592",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "18078efe9380c8dc",
+      "score": 0.740417,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.592",
+          "score": 0.591667
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.416667
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.591667,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.416667,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.592",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "fbab4114f66e2dda",
+      "score": 0.740417,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.592",
+          "score": 0.591667
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.416667
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.591667,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.416667,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.475",
+        "answer omits expected clinical qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "2d63e0a82215867f",
+      "score": 0.66625,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.475",
+          "score": 0.475
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "answer omits expected clinical qualifiers",
+          "score": 0.25
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.475,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.25,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    }
+  ],
+  "reward": 0.760261,
+  "schema_errors": [],
+  "task_name": "fda-hard-warning-citations",
+  "weights": {
+    "answer_content": 0.35,
+    "citation_support": 0.25,
+    "clinical_qualifiers": 0.2,
+    "qid_present": 0.05,
+    "refusal_behavior": 0.1,
+    "schema": 0.05
+  }
+}

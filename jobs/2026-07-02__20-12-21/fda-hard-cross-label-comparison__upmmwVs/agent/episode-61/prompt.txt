@@ -1,0 +1,41 @@
+Current Terminal Screen:
+>                 "set_id": "dcc29902-1fe6-4713-947e-335503959464",
+>                 "passage_id": "PASSAGE_0008",
+>                 "section": "Dosage and Administration",
+>                 "supporting_quote": "800 mg every 4 hours orally, 5 times daily for 7 to 10\ndays. 200 mg every 4 hours, 5 times daily for 10 days."
+>             },
+>             {
+>                 "set_id": "3efa1e5e-5a14-4724-a2ca-25702f10faed",
+>                 "passage_id": "PASSAGE_0033",
+>                 "section": "Dosage and Administration",
+>                 "supporting_quote": "800 mg every 4 hours orally, 5 times daily for 7 to 10 days."
+>             }
+>         ],
+>         "structured_fields": {
+>             "comparison": {
+>                 "dcc29902-1fe6-4713-947e-335503959464": {
+>                     "dose_or_strength": "varies by indication (e.g., 200 mg, 400 mg, 800 mg, 20 mg/kg)",
+>                     "route": "oral",
+>                     "frequency": "varies by indication (e.g., 2 to 5 times daily)",
+>                     "population": "adults and children (2 years of age and older for chickenpox)",
+>                     "maximum_daily_dose": "4000 mg daily (for herpes zoster)"
+>                 },
+>                 "3efa1e5e-5a14-4724-a2ca-25702f10faed": {
+>                     "dose_or_strength": "varies by indication (e.g., 200 mg, 400 mg, 800 mg, 20 mg/kg)",
+>                     "route": "oral (suspension contains 200 mg per 5 mL teaspoonful)",
+>                     "frequency": "varies by indication (e.g., 2 to 5 times daily)",
+>                     "population": "adults and children (2 years of age and older for chickenpox)",
+>                     "maximum_daily_dose": "4000 mg daily (for herpes zoster)"
+>                 }
+>             }
+>         }
+>     }
+> ]
+>
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump({"answers": answers}, f, indent=2)
+> print("Answers written successfully!")
+> EOF
+root@7e48d58e23f3:/workspace# python3 create_answers.py
+Answers written successfully!
+root@7e48d58e23f3:/workspace#

@@ -1,0 +1,23 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Lopinavir-Ritonavir":
+>             for idx in range(9, 12):
+>                 print(f"--- PASSAGE_{idx:04d} ---")
+>                 print(data["chunks"][idx])
+> '
+--- PASSAGE_0009 ---
+Based on Weight (mg/kg)
+Concomitant Therapy: Efavirenz, Nevirapine, or Nelfinavir
+--- PASSAGE_0010 ---
+Dosing recommendations using oral solution
+Table 6 provides the dosing recommendations for pediatric patients older than 6 months to less than 18 years of age based on body weight or body surface area fo
+r lopinavir and ritonavir oral solution when given in combination with efavirenz, nevirapine, or nelfinavir:
+--- PASSAGE_0011 ---
+Frequency
+> 6 months to < 18 years
+root@3faa5da3ba91:/workspace#

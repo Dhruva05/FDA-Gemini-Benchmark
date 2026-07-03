@@ -1,0 +1,51 @@
+New Terminal Output:
+
+root@19fe3c8dfb02:/workspace# cat << 'EOF' > validate_answers.py
+> import json
+>
+> with open('/workspace/answers.json') as f:
+>     data = json.load(f)
+>
+> assert "answers" in data, "Missing 'answers' root key"
+> answers = data["answers"]
+> print(f"Found {len(answers)} answers")
+> assert len(answers) == 8, f"Expected exactly 8 answers, got {len(answers)}"
+>
+> qids = set()
+> required_keys = {"qid", "status", "answer", "citations", "structured_fields"}
+> citation_keys = {"set_id", "passage_id", "section", "supporting_quote"}
+>
+> for idx, ans in enumerate(answers):
+>     assert isinstance(ans, dict), f"Answer at index {idx} is not a dict"
+>     assert required_keys.issubset(ans.keys()), f"Answer {idx} missing keys: {required_keys - ans.keys()}"
+>     assert ans["status"] in {"ANSWERED", "NOT_FOUND"}, f"Invalid status {ans['status']}"
+>     assert isinstance(ans["answer"], str) and len(ans["answer"]) > 0, "Answer must be a non-empty string"
+>     assert isinstance(ans["citations"], list) and len(ans["citations"]) > 0, "Citations must be a non-empty list"
+>     assert isinstance(ans["structured_fields"], dict), "structured_fields must be a dict"
+>
+>     qids.add(ans["qid"])
+>
+>     for c_idx, cit in enumerate(ans["citations"]):
+>         assert citation_keys.issubset(cit.keys()), f"Citation {c_idx} in answer {idx} missing keys"
+>         assert cit["set_id"] == "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", f"Invalid set_id {cit['set_id']}"
+>         assert cit["passage_id"].startswith("PASSAGE_"), f"Invalid passage_id format {cit['passage_id']}"
+>         assert isinstance(cit["supporting_quote"], str) and len(cit["supporting_quote"]) > 0, "supporting_quote must be non-empty"
+>
+> expected_qids = {
+>     "b2531657ba5c7a78",
+>     "6f12607a1ba14dd5",
+>     "fbab4114f66e2dda",
+>     "2d63e0a82215867f",
+>     "cf74a5a8ac9b19de",
+>     "c4dc176c4827f0ef",
+>     "000ecd1d6df50389",
+>     "b54c25890c1ae3a6"
+> }
+>
+> assert qids == expected_qids, f"QID mismatch. Expected {expected_qids}, got {qids}"
+> print("Validation SUCCESS! All checks passed.")
+> EOF
+root@19fe3c8dfb02:/workspace# python3 validate_answers.py
+Found 8 answers
+Validation SUCCESS! All checks passed.
+root@19fe3c8dfb02:/workspace#

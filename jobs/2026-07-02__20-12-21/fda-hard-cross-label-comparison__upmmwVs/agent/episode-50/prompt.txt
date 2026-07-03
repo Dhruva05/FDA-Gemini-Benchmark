@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 112 (char 113) | Content preview: '{\n  "analysis": "Excellent! For ACETAZOLAMIDE EXTENDED-RELEASE (`8e396b27-b44a-4aa9-805b-086395444b5'...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,35 @@
+New Terminal Output:
+
+>>> for idx, chunk in search('interaction'):
+...     print(f"=== PASSAGE_{idx:04d} ===")
+...     print(chunk[:200] + "...")
+...
+=== PASSAGE_0000 ===
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potent...
+=== PASSAGE_0013 ===
+5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or ini...
+=== PASSAGE_0021 ===
+7.3     Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 ar...
+=== PASSAGE_0031 ===
+↑ rivaroxaban
+Increased bleeding risk with rivaroxaban. Avoid concomitant use.
+dabigatranSee Pharmacokinetics, Clinical Drug Interaction Studies (12.3)....
+=== PASSAGE_0133 ===
+Clinical Drug Interaction Studies
+Table 5 describes the effect of other drugs on the Cmax and AUC of nirmatrelvir.
+CarbamazepineCarbamazepine titrated up to 300 mg twice daily on Day 8 through Day 15 ...
+=== PASSAGE_0135 ===
+In Vitro Studies
+Cytochrome P450 (CYP) Enzymes:
+- Nirmatrelvir is a reversible and time-dependent inhibitor of CYP3A, but not an inhibitor CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, or CYP2D6. Nirmatrel...
+=== PASSAGE_0149 ===
+14.1    Efficacy in Subjects at High Risk of Progression to Severe COVID-19 (EPIC-HR)
+EPIC-HR (NCT04960202) was a Phase 2/3, randomized, double-blind, placebo-controlled trial in non-hospitalized symptom...
+=== PASSAGE_0173 ===
+Drug Interactions
+Inform patients that PAXLOVID may interact with certain drugs and is contraindicated for use with certain drugs; therefore, advise patients to report to their h
+ealthcare provider the...
+>>>

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 148 (char 149) | Content preview: '{\n  "analysis": "Let\'s read more of the Lenalidomide chunks, especially chunks 9 to 25, which contai'...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 172 (char 173) | Content preview: '{\n  "analysis": "Ah! In Section 2, there is no mention of tablets! The dosage recommendations in Sec'...
+
+Please fix these issues and provide a proper JSON response.

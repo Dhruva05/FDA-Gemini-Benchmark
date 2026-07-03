@@ -1,0 +1,159 @@
+New Terminal Output:
+
+root@19fe3c8dfb02:/workspace# cat << 'EOF' > generate_answers.py
+> import json
+>
+> # Load labels
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     label_data = json.loads(f.readline())
+>     chunks = label_data['chunks']
+>     set_id = label_data['set_id']
+>
+> # Helper to find exact substring in chunk to ensure verbatim match
+> def get_exact_quote(chunk_idx, substring):
+>     chunk_text = chunks[chunk_idx]
+   >     # find the substring ignoring whitespace differences, then return the exact portion from chunk_text
+>     import re
+>     # escape special characters in substring, but allow any whitespace sequence to match any other
+>     words = substring.split()
+>     pattern = r'\s+'.join(re.escape(w) for w in words)
+>     match = re.search(pattern, chunk_text)
+g>     if match:
+>         return match.group(0)
+or); 2) Hypersensitivity react>     else:
+>         raise ValueError(f"Could not find substring in chunk {chunk_idx}")
+ermal necrol>
+> answers_data = {
+>     "answers": [
+>         {
+>             "qid": "b2531657ba5c7a78",
+sa>             "status": "ANSWERED",
+i>             "answer": "Paxlovid includes ritonavir, which is a strong CYP3A inhibitor. This can lead to increased plasma concentrations of concomitant medica
+tions metabolized by CYP3A, potentially resulting in severe, life-threatening, or fatal events. Conversely, medications that are strong CYP3A inducers can decre
+ase Paxlovid concentrations, potentially leading to a loss of therapeutic effect and the development of viral resistance. Before prescribing Paxlovid, all medic
+ations should be reviewed to assess potential drug-drug interactions, and to determine if dose adjustment, interruption, and/or additional monitoring is needed.
+ The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followe
+d by calcium channel blockers.",
+>             "citations": [
+>                 {
+>                     "set_id": set_id,
+>                     "passage_id": "PASSAGE_0000",
+>                     "section": "WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID",
+n reactions (including toxic>                     "supporting_quote": get_exact_quote(0, "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead
+to greater exposure of certain concomitant medications, resulting in potentially severe, life-threatening, or fatal events")
+>                 },
+>                 {
+Hepa>                     "set_id": set_id,
+totoxicity",
+                    "supp>                     "passage_id": "PASSAGE_0013",
+>                     "section": "5.1 Risk of Serious Adverse Reactions Due to Drug Interactions",
+>                     "supporting_quote": get_exact_quote(13, "The most commonly reported concomitant medications resulting in serious adverse reactions were ca
+lcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers.")
+>                 }
+>             ],
+>             "structured_fields": {}
+t>         },
+ay be>         {
+>             "qid": "6f12607a1ba14dd5",
+>             "status": "ANSWERED",
+>             "answer": "Medications that should be avoided (or are contraindicated) with Paxlovid include: drugs primarily metabolized by CYP3A for which eleva
+ted concentrations are associated with serious/life-threatening reactions (such as alfuzosin, ranolazine, amiodarone, dronedarone, flecainide, propafenone, quin
+idine, colchicine in renal/hepatic impairment, lurasidone, pimozide, silodosin, eplerenone, ivabradine, dihydroergotamine, ergotamine, methylergonovine, lovasta
+tin, simvastatin, voclosporin, lomitapide, eletriptan, ubrogepant, finerenone, naloxegol, sildenafil for PAH, triazolam, oral midazolam, flibanserin, and tolvap
+tan), and strong CYP3A inducers where reduced Paxlovid concentrations may lead to loss of efficacy or resistance (such as apalutamide, enzalutamide, carbamazepi
+ne, phenobarbital, primidone, phenytoin, rifampin, rifapentine, lumacaftor/ivacaftor, and St. John's Wort).",
+>             "citations": [
+>                 {
+>                     "set_id": set_id,
+>                     "passage_id": "PASSAGE_0012",
+Tri>                     "section": "4 CONTRAINDICATIONS",
+quote>                     "supporting_quote": get_exact_quote(12, "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which
+ elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirm
+atrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance.")
+>                 }
+o>             ],
+_>             "structured_fields": {}
+in>         },
+>         {
+>             "qid": "fbab4114f66e2dda",
+>             "status": "ANSWERED",
+>             "answer": "Important warnings and precautions a
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+ "section": "4 CONTRAINDICATIONS",
+.2 Recommen>                     "supporting_quote": get_exact_quote(12, "PAXLOVID is contraindicated in patients with a history of clinically significant hyper
+sensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other com
+ponents of the product.")
+>                 },
+>                 {
+>                     "set_id": set_id,
+>                     "passage_id": "PASSAGE_0010",
+>                     "section": "2.4 Use in Patients with Hepatic Impairment",
+>                     "supporting_quote": get_exact_quote(10, "No pharmacokinetic or safety data are available regarding the use of nirmatrelvir or ritonavir in
+ subjects with severe (Child-Pugh Class C) hepatic impairment; therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment .")
+>                 }
+>             ],
+>             "structured_fields": {}
+>         },
+>         {
+>             "qid": "000ecd1d6df50389",
+>             "status": "ANSWERED",
+>             "answer": "The standard recommended dosage for Paxlovid is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) take
+n together orally twice daily (in the morning and at bedtime) for 5 days. For patients with moderate renal impairment (eGFR >=30 to <60 mL/min), the dose is red
+uced to 150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily for 5 days. For severe renal impairment (eGFR <30 mL/min),
+ the dosage is 300 mg nirmatrelvir with 100 mg ritonavir on Day 1, followed by 150 mg nirmatrelvir with 100 mg ritonavir once daily on Days 2-5 (administered af
+ter hemodialysis on dialysis days). No dosage adjustment is needed for mild renal impairment or mild/moderate hepatic impairment. Paxlovid is not recommended in
+ severe hepatic impairment or severe renal impairment without dose adjustment.",
+>             "citations": [
+>                 {
+>                     "set_id": set_id,
+>                     "passage_id": "PASSAGE_0004",
+>                     "section": "2.2 Recommended Dosage",
+>                     "supporting_quote": get_exact_quote(4, "The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritona
+vir (one 100 mg tablet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days.")
+>                 },
+>                 {
+>                     "set_id": set_id,
+>                     "passage_id": "PASSAGE_0007",
+>                     "section": "2.3 Dosage in Patients with Renal Impairment",
+>                     "supporting_quote": get_exact_quote(7, "150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily")
+>                 }
+>             ],
+>             "structured_fields": {}
+>         },
+>         {
+>             "qid": "b54c25890c1ae3a6",
+>             "status": "ANSWERED",
+>             "answer": "Paxlovid consists of nirmatrelvir tablets co-packaged with ritonavir tablets, which must be taken together. The tablets can be taken wi
+th or without food. They must be swallowed whole and should not be chewed, broken, or crushed. Treatment should be initiated as soon as possible after diagnosis
+ of COVID-19 and within 5 days of symptom onset. If a dose is missed within 8 hours of the usual time, it should be taken as soon as possible; if missed by more
+ than 8 hours, the missed dose should be skipped and the next dose taken at the regular time (do not double the dose).",
+>             "citations": [
+>                 {
+>                     "set_id": set_id,
+>                     "passage_id": "PASSAGE_0003",
+>                     "section": "2.1 Important Dosage and Administration Information",
+>                     "supporting_quote": get_exact_quote(3, "PAXLOVID (both nirmatrelvir and ritonavir tablets) can be taken with or without food . The tablets
+ should be swallowed whole and not chewed, broken, or crushed.")
+>                 },
+>                 {
+>                     "set_id": set_id,
+>                     "passage_id": "PASSAGE_0004",
+>                     "section": "2.2 Recommended Dosage",
+>                     "supporting_quote": get_exact_quote(4, "The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritona
+vir (one 100 mg tablet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days.")
+>                 }
+>             ],
+>             "structured_fields": {}
+>         }
+>     ]
+> }
+>
+> # Write output to /workspace/answers.json
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(answers_data, f, indent=2)
+>
+> print("Answers successfully written to /workspace/answers.json!")
+> EOF
+root@19fe3c8dfb02:/workspace# python3 generate_answers.py
+Answers successfully written to /workspace/answers.json!
+root@19fe3c8dfb02:/workspace#

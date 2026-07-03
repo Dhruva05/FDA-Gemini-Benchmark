@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! So the passages themselves might actually contain `PASSAGE_####` inside them, or maybe the chunks are key-value pairs or structured differently? Let's check how many times `PASSAGE_` occurs, and let's print the entire raw content of the first chunk or search for `PASSAGE_` in the first chunk.",
+  "plan": "I will run a python script to inspect the exact content of `chunks` and check if they contain `PASSAGE_` or how they are structured.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    data = json.loads(f.readline())\n    chunks = data['chunks']\n    print('First 3 chunks with full text:')\n    for i in range(3):\n        print(f'Chunk {i}: {repr(chunks[i])}')\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > print_details.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in [json.loads(line) for line in f]}
+>
+> def search_drug_chunks(set_id, keywords):
+>     print("="*100)
+>     print(f"Drug: {labels[set_id]['drug_name']} ({set_id})")
+>     print("="*100)
+>     for i, chunk in enumerate(labels[set_id]['chunks']):
+>         if any(kw.lower() in chunk.lower() for kw in keywords):
+>             print(f"PASSAGE_{i:04d}:")
+>             print(chunk)
+>             print("-"*50)
+>
+> # Let's search for Dosage and Administration sections
+> # Typically section 2 is DOSAGE AND ADMINISTRATION
+> EOF
+root@371ed25b9fd3:/workspace#

@@ -1,0 +1,24 @@
+New Terminal Output:
+
+root@19fe3c8dfb02:/workspace# cat << 'EOF' > search_label.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['set_id'] == '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a':
+>             label_data = data
+>             break
+>
+> def search(pattern, case_insensitive=True):
+>     flags = re.IGNORECASE if case_insensitive else 0
+>     results = []
+>     for idx, chunk in enumerate(label_data['chunks']):
+>         if re.search(pattern, chunk, flags):
+>             results.append((idx, chunk))
+>     return results
+>
+> EOF
+root@19fe3c8dfb02:/workspace# python3 -i search_label.py
+>>>

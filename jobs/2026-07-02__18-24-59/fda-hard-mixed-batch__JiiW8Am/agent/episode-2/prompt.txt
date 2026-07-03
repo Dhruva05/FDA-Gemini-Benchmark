@@ -1,0 +1,32 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# cat /workspace/data/public/questions.jsonl
+{"drug_name": "Paxlovid", "qid": "b2531657ba5c7a78", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid", "
+status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "6f12607a1ba14dd5", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "status
+", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "mixed-2a90a3df19df68", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid
+", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "mixed-7c14643ec4356a", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "st
+atus", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "daef650b92e56473", "question": "How should Lopinavir-Ritonavir be administered?", "required_output_fields": ["qid",
+ "status", "answer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured_fields.frequen
+cy", "structured_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85
+", "task_type": "numeric"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "a0576a26f2a2eeac", "question": "What is the recommended dosage regimen of Lopinavir-Ritonavir?", "required_output_f
+ields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.dose", "structured_fields.unit", "structured_fields.route", "structured
+_fields.frequency", "structured_fields.population", "structured_fields.max_daily_dose", "structured_fields.citation_passages"], "set_id": "4b1caefa-e6a2-42f3-91
+94-6dc1dd9e6d85", "task_type": "numeric"}
+{"drug_name": "12HR Allergy Relief", "qid": "near-miss-04f3afa658fdef", "question": "The 12HR Allergy Relief label discusses warnings. Does it provide a support
+ed recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_out
+put_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id":
+ "ea5d0e55-2191-4094-b082-24b317f95752", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-0c6ec72416151f", "question": "The Acamprosate Calcium label discusses renal impairment. Does it provide a
+ supported recommendation for severe hepatic impairment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_outpu
+t_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "
+ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Paxlovid", "qid": "mixed-eead76662cb6bf", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid
+", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "multihop"}
+{"drug_name": "Paxlovid", "qid": "mixed-97331106c3870d", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "st
+atus", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "multihop"}
+root@c3dfb07a1d45:/workspace#

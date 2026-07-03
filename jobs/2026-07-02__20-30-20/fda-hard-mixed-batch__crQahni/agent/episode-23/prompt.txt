@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Lopinavir-Ritonavir":
+>             print("PASSAGE_0004:", repr(data["chunks"][4]))
+>             print("PASSAGE_0005:", repr(data["chunks"][5]))
+> '
+PASSAGE_0004: 'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily\nTable 2. Recommended Dosage in Adults – Lopinavir and Rito
+navir Twice Daily Regimen'
+PASSAGE_0005: 'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL)\xa0twice daily\nThe dose of lopinavir and ritonavir must be increased w
+hen administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage recommendations for twice daily dosing when lopinavir and
+ritonavir is taken in combination with these agents.'
+root@4b1b7b4fd079:/workspace#

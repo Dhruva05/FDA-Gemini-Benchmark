@@ -1,0 +1,41 @@
+New Terminal Output:
+root@0ef79956d710:/workspace# ls -la /workspace/data/public
+total 104
+drwxr-xr-x 2 root root  4096 Jul  2 20:59 .
+drwxr-xr-x 3 root root  4096 Jul  2 20:40 ..
+-rw-r--r-- 1 root root   598 Jul  2 20:40 README.md
+-rw-r--r-- 1 root root 86307 Jul  2 20:40 labels.jsonl
+-rw-r--r-- 1 root root  3338 Jul  2 20:40 questions.jsonl
+root@0ef79956d710:/workspace# cat /workspace/data/public/README.md
+        # Public FDA Label Data
+
+        This directory contains only public task inputs for `fda-hard-near-miss-refusal`.
+
+        - `labels.jsonl` has full FDA label rows with `label_raw` and `chunks`.
+        - `questions.jsonl` has 6 public questions.
+        - Gold answers, references, citations, and curated context are not included here.
+
+        Labels included:
+        - 12HR Allergy Relief (`ea5d0e55-2191-4094-b082-24b317f95752`)
+- Acamprosate Calcium (`ae6e79c0-a307-4888-b647-1b7be4cb9127`)
+- Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (`08c9d3dd-717b-0148-e054-00144ff8d46c`)
+root@0ef79956d710:/workspace#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

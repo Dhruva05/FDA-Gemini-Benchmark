@@ -1,0 +1,17 @@
+New Terminal Output:
+
+...
+13: 5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a stron
+14: 5.2 Hypersensitivity Reactions
+Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Joh
+15: 5.3 Hepatotoxicity
+Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving
+16: 5.4 Risk of HIV-1 Resistance Development
+Because nirmatrelvir is co-administered with ritonavir, there may be a risk of
+17: 6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Hy
+18: 6.1 Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction r
+>>>

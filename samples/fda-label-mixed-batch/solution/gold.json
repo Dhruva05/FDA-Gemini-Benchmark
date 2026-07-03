@@ -1,0 +1,594 @@
+{
+  "questions": [
+    {
+      "answer": "- Edema and severe fluid retention have occurred. Weigh patients regularly and manage unexpected rapid weight gain by drug interruption and diuretics. \n- Cytopenias, particularly anemia, neutropenia, and thrombocytopenia, have occurred. Manage with dose reduction, dose interruption, or discontinuation of treatment. Perform complete blood counts weekly for the first month, biweekly for the second month, and periodically thereafter. \n- Severe congestive heart failure and left ventricular dysfunction have been reported, particularly in patients with comorbidities and risk factors. Monitor and treat patients with cardiac disease or risk factors for cardiac failure. (\n- Severe hepatotoxicity, including fatalities may occur. Assess liver function before initiation of treatment and monthly thereafter or as clinically indicated. Monitor liver function when combined with chemotherapy known to be associated with liver dysfunction. \n- Grade 3/4 hemorrhage has been reported in clinical studies in patients with newly diagnosed CML and with GIST. GI tumor sites may be the source of GI bleeds in GIST. \n- Gastrointestinal (GI) perforations, some fatal, have been reported. \n- Cardiogenic shock/left ventricular dysfunction has been associated with the initiation of Gleevec in patients with conditions associated with high eosinophil levels (e.g., HES, MDS/MPD, and ASM). \n- Bullous dermatologic reactions (e.g., erythema multiforme and Stevens-Johnson syndrome) have been reported with the use of Gleevec. \n- Hypothyroidism has been reported in thyroidectomy patients undergoing levothyroxine replacement. Closely monitor TSH levels in such patients. \n- Fetal harm can occur when administered to a pregnant woman. Apprise women of the potential harm to the fetus, and to use effective contraception. \n- Growth retardation occurring in children and pre-adolescents receiving Gleevec has been reported. Close monitoring of growth in children under Gleevec treatment is recommended. \n- Tumor Lysis Syndrome. Close monitoring is recommended. \n- Reports of motor vehicle accidents have been received in patients receiving Gleevec. Caution patients about driving a car or operating machinery. \n- Renal Toxicity. A decline in renal function may occur in patients receiving Gleevec. Evaluate renal function at baseline and during therapy, with attention to risk factors for renal dysfunction.",
+      "citations": [
+        "5.1",
+        "5.2",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8",
+        "5.9",
+        "5.10",
+        "5.11",
+        "5.12",
+        "5.13",
+        "5.14",
+        "6.1",
+        "6.2",
+        "8.1"
+      ],
+      "context": [
+        {
+          "section_label": "5.1",
+          "section_title": "5.1\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tFluid Retention and Edema",
+          "text": "Gleevec is often associated with edema and occasionally serious fluid retention . Weigh and monitor patients regularly for signs and symptoms of fluid retention. Investigate unexpected rapid weight gain carefully and provide appropriate treatment. The probability of edema was increased with higher Gleevec dose and age greater than 65 years in the CML studies. Severe superficial edema was reported in 1.5% of newly diagnosed CML patients taking Gleevec, and in 2% to 6% of other adult CML patients taking Gleevec. In addition, other severe fluid retention (e.g., pleural effusion, pericardial effusion, pulmonary edema, and ascites) reactions were reported in 1.3% of newly diagnosed CML patients taking Gleevec, and in 2% to 6% of other adult CML patients taking Gleevec. Severe fluid retention was reported in 9% to 13.1% of patients taking Gleevec for GIST . In a randomized trial in patients with newly diagnosed Ph+ CML in chronic phase comparing Gleevec and nilotinib, severe (Grade 3 or 4) fluid retention occurred in 2.5% of patients receiving Gleevec and in 3.9% of patients receiving nilotinib 300 mg twice daily. Effusions (including pleural effusion, pericardial effusion, ascites) or pulmonary edema were observed in 2.1% (none were Grade 3 or 4) of patients in the Gleevec arm and 2.2% (0.7% Grade 3 or 4) of patients in the nilotinib 300 mg twice daily arm."
+        },
+        {
+          "section_label": "5.2",
+          "section_title": "5.2\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tHematologic Toxicity",
+          "text": "Treatment with Gleevec is associated with anemia, neutropenia, and thrombocytopenia. Perform complete blood counts weekly for the first month, biweekly for the second month, and periodically thereafter as clinically indicated (for example, every 2 to 3 months). In CML, the occurrence of these cytopenias is dependent on the stage of disease and is more frequent in patients with accelerated phase CML or blast crisis than in patients with chronic phase CML. In pediatric CML patients the most frequent toxicities observed were Grade 3 or 4 cytopenias, including neutropenia, thrombocytopenia, and anemia. These generally occur within the first several months of therapy ."
+        },
+        {
+          "section_label": "5.4",
+          "section_title": "5.4\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tHepatotoxicity",
+          "text": "Hepatotoxicity, occasionally severe, may occur with Gleevec . Cases of fatal liver failure and severe liver injury requiring liver transplants have been reported with both short-term and long-term use of Gleevec. Monitor liver function (transaminases, bilirubin, and alkaline phosphatase) before initiation of treatment and monthly, or as clinically indicated. Manage laboratory abnormalities with Gleevec interruption and/or dose reduction . When Gleevec is combined with chemotherapy, liver toxicity in the form of transaminase elevation and hyperbilirubinemia has been observed. Additionally, there have been reports of acute liver failure. Monitoring of hepatic function is recommended."
+        },
+        {
+          "section_label": "5.5",
+          "section_title": "5.5\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tHemorrhage",
+          "text": "In a trial of Gleevec versus IFN+Ara-C in patients with the newly diagnosed CML, 1.8% of patients had Grade 3/4 hemorrhage. In the Phase 3 unresectable or metastatic GIST studies, 211 patients (12.9%) reported Grade 3/4 hemorrhage at any site. In the Phase 2 unresectable or metastatic GIST study, 7 patients (5%) had a total of 8 CTC Grade 3/4 hemorrhages; gastrointestinal (GI) (3 patients), intra-tumoral (3 patients) or both (1 patient). Gastrointestinal tumor sites may have been the source of GI hemorrhages. In a randomized trial in patients with newly diagnosed Ph+ CML in chronic phase comparing Gleevec and nilotinib, GI hemorrhage occurred in 1.4% of patients in the Gleevec arm, and in 2.9% of patients in the nilotinib 300 mg twice daily\u00a0arm. None of these events were Grade 3 or 4 in the Gleevec arm; 0.7% were Grade 3 or 4 in the nilotinib 300 mg twice daily\u00a0arm. In addition, gastric antral vascular ectasia has been reported in postmarketing experience."
+        },
+        {
+          "section_label": "5.6",
+          "section_title": "5.6\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tGastrointestinal Disorders",
+          "text": "Gleevec is sometimes associated with GI irritation. Gleevec should be taken with food and a large glass of water to minimize this problem. There have been rare reports, including fatalities, of GI perforation."
+        },
+        {
+          "section_label": "5.7",
+          "section_title": "5.7\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tHypereosinophilic Cardiac Toxicity",
+          "text": "In patients with hypereosinophilic syndrome with occult infiltration of HES cells within the myocardium, cases of cardiogenic shock/left ventricular dysfunction have been associated with HES cell degranulation upon the initiation of Gleevec therapy. The condition was reported to be reversible with the administration of systemic steroids, circulatory support measures and temporarily withholding Gleevec.\nMyelodysplastic/myeloproliferative disease and systemic mastocytosis may be associated with high eosinophil levels. Consider performing an echocardiogram and determining serum troponin in patients with HES/CEL, and in patients with MDS/MPD or ASM associated with high eosinophil levels. If either is abnormal, consider prophylactic use of systemic steroids (1-2 mg/kg) for one to two weeks concomitantly with Gleevec at the initiation of therapy."
+        },
+        {
+          "section_label": "5.8",
+          "section_title": "5.8\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tDermatologic Toxicities",
+          "text": "Bullous dermatologic reactions, including erythema multiforme and Stevens-Johnson syndrome, have been reported with use of Gleevec. In some cases of bullous dermatologic reactions, including erythema multiforme and Stevens-Johnson syndrome reported during postmarketing surveillance, a recurrent dermatologic reaction was observed upon rechallenge. Several foreign postmarketing reports have described cases in which patients tolerated the reintroduction of Gleevec therapy after resolution or improvement of the bullous reaction. In these instances, Gleevec was resumed at a dose lower than that at which the reaction occurred and some patients also received concomitant treatment with corticosteroids or antihistamines."
+        },
+        {
+          "section_label": "5.9",
+          "section_title": "5.9\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tHypothyroidism",
+          "text": "Clinical cases of hypothyroidism have been reported in thyroidectomy patients undergoing levothyroxine replacement during treatment with Gleevec. Monitor TSH levels in such patients."
+        },
+        {
+          "section_label": "5.10",
+          "section_title": "5.10\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tEmbryo-Fetal Toxicity",
+          "text": "Gleevec can cause fetal harm when administered to a pregnant woman. Imatinib mesylate was teratogenic in rats when administered during organogenesis at doses approximately equal to the maximum human dose of 800 mg/day based on body surface area (BSA). Significant post-implantation loss was seen in female rats administered imatinib mesylate at doses approximately one-half the maximum human dose of 800 mg/day based on BSA. Advise sexually active female patients of reproductive potential to use effective contraception (methods that result in less than 1% pregnancy rates) when using Gleevec and for 14 days after stopping Gleevec. If this drug is used during pregnancy or if the patient becomes pregnant while taking this drug, apprise the patient of the potential hazard to a fetus ."
+        },
+        {
+          "section_label": "5.11",
+          "section_title": "5.11\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tGrowth Retardation in Children and Adolescents",
+          "text": "Growth retardation has been reported in children and pre-adolescents receiving Gleevec. The long-term effects of prolonged treatment with Gleevec on growth in children are unknown. Therefore, monitor growth in children under Gleevec treatment ."
+        },
+        {
+          "section_label": "5.12",
+          "section_title": "5.12\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tTumor Lysis Syndrome",
+          "text": "Cases of Tumor Lysis Syndrome (TLS), including fatal cases, have been reported in patients with CML, GIST, ALL, and eosinophilic leukemia receiving Gleevec. The patients at risk of TLS are those with tumors having a high proliferative rate or high tumor burden prior to treatment. Monitor these patients closely and take appropriate precautions. Due to possible occurrence of TLS, correct clinically significant dehydration and treat high uric acid levels prior to initiation of Gleevec."
+        },
+        {
+          "section_label": "5.13",
+          "section_title": "5.13\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tImpairments Related to Driving and Using Machinery",
+          "text": "Motor vehicle accidents have been reported in patients receiving Gleevec. Advise patients that they may experience side effects, such as dizziness, blurred vision, or somnolence during treatment with Gleevec. Recommend caution when driving a car or operating machinery."
+        },
+        {
+          "section_label": "5.14",
+          "section_title": "5.14\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tRenal Toxicity",
+          "text": "A decline in renal function may occur in patients receiving Gleevec. Median estimated glomerular filtration rate (eGFR) values in patients on Gleevec 400 mg daily for newly-diagnosed CML (four randomized trials) and malignant GIST (one single-arm trial) declined from a baseline value of 85 mL/min/1.73 m2 (N = 1190) to 75 mL/min/1.73 m2 at 12 months (N = 1082) and 69 mL/min/1.73 m2 at 60 months (N = 549). Evaluate renal function prior to initiating Gleevec and monitor during therapy, with attention to risk factors for renal dysfunction, such as preexisting renal impairment, diabetes mellitus, hypertension, and congestive heart failure."
+        },
+        {
+          "section_label": "5.14",
+          "section_title": "6",
+          "text": "The following serious adverse reactions\u00a0are described elsewhere in the labeling:\n- Fluid Retention and Edema\n- Hematologic Toxicity\n- Congestive Heart Failure and Left Ventricular Dysfunction\n- Hepatotoxicity\n- Hemorrhage\n- Gastrointestinal Disorders\n- Hypereosinophilic Cardiac Toxicity\n- Dermatologic Toxicities\n- Hypothyroidism\n- Growth Retardation in Children and Adolescents\n- Tumor Lysis Syndrome\n- Impairments Related to Driving and Using Machinery\n- Renal Toxicity"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Chronic Myeloid Leukemia\nThe majority of Gleevec-treated patients experienced adverse reactions at some time. Gleevec was discontinued due to drug-related adverse reactions in 2.4% of patients receiving Gleevec in the randomized trial of newly diagnosed patients with Ph+ CML in chronic phase comparing Gleevec versus IFN+Ara-C, and in 12.5% of patients receiving Gleevec in the randomized trial of newly diagnosed patients with Ph+ CML in chronic phase comparing Gleevec and nilotinib. Gleevec was discontinued due to drug-related adverse reactions in 4% of patients in chronic phase after failure of interferon-alpha therapy, in 4% of patients in accelerated phase and in 5% of patients in blast crisis.\nThe most frequently reported drug-related adverse reactions were edema, nausea and vomiting, muscle cramps, musculoskeletal pain, diarrhea and rash (Table 2 and Table 3 for newly diagnosed CML, Table 4 for other CML patients). Edema was most frequently periorbital or in lower limbs and was managed with diuretics, other supportive measures, or by reducing the dose of Gleevec . The frequency of severe superficial edema was 1.5%-6%.\nA variety of adverse reactions represent local or general fluid retention, including pleural effusion, ascites, pulmonary edema, and rapid weight gain with or without superficial edema. These reactions appear to be dose related, were more common in the blast crisis and accelerated phase studies (where the dose was 600 mg/day), and are more common in the elderly. These reactions were usually managed by interrupting Gleevec treatment and using diuretics or other appropriate supportive care measures. These reactions may be serious or life threatening.\nAdverse reactions, regardless of relationship to study drug, that were reported in at least 10% of the Gleevec-treated patients are shown in Tables 2, 3, and 4."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Hematologic and Biochemistry Laboratory Abnormalities\nCytopenias, and particularly neutropenia and thrombocytopenia, were a consistent finding in all studies, with a higher frequency at doses greater than or equal to 750 mg (Phase 1 study). The occurrence of cytopenias in CML patients was also dependent on the stage of the disease.\nIn patients with newly diagnosed CML, cytopenias were less frequent than in the other CML patients . The frequency of Grade 3 or 4 neutropenia and thrombocytopenia was between 2-\u00a0and 3-fold higher in blast crisis and accelerated phase compared to chronic phase . The median duration of the neutropenic and thrombocytopenic episodes varied from 2 to 3 weeks, and from 2 to 4 weeks, respectively.\nThese reactions can usually be managed with either a reduction of the dose or an interruption of treatment with Gleevec, but may require permanent discontinuation of treatment."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Hepatotoxicity\nSevere elevation of transaminases or bilirubin occurred in approximately 5% of CML patients and were usually managed with dose reduction or interruption (the median duration of these episodes was approximately 1 week). Treatment was discontinued permanently because of liver laboratory abnormalities in less than 1.0% of CML patients. One patient, who was taking acetaminophen regularly for fever, died of acute liver failure. In the Phase 2 GIST trial, Grade 3 or 4 SGPT (ALT) elevations were observed in 6.8% of patients and Grade 3 or 4 SGOT (AST) elevations were observed in 4.8% of patients. Bilirubin elevation was observed in 2.7% of patients."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Single-Agent Therapy\nThe overall safety profile of pediatric patients treated with Gleevec in 93 children studied was similar to that found in studies with adult patients, except that musculoskeletal pain was less frequent (20.5%) and peripheral edema was not reported. Nausea and vomiting were the most commonly reported individual adverse reactions with an incidence similar to that seen in adult patients. Most patients experienced adverse reactions at some time during the study. The incidence of Grade 3/4 events across all types of adverse reactions was 75%; the events with the highest Grade 3/4 incidence in CML pediatric patients were mainly related to myelosuppression."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "In Combination with Multi-Agent Chemotherapy\nPediatric and young adult patients with very high risk ALL, defined as those with an expected 5 year event-free survival (EFS) less than 45%, were enrolled after induction therapy on a multicenter, non-randomized cooperative group pilot protocol. The study population included patients with a median age of 10 years (1 to 21 years), 61% of whom were male, 75% were white, 7% were black, and 6% were Asian/Pacific Islander. Patients with Ph+ ALL (n = 92) were assigned to receive Gleevec and treated in 5 successive cohorts. Gleevec exposure was systematically increased in successive cohorts by earlier introduction and more prolonged duration.\nThe safety of Gleevec given in combination with intensive chemotherapy was evaluated by comparing the incidence of Grade 3 and 4 adverse events, neutropenia (less than 750/mcL) and thrombocytopenia (less than 75,000/mcL) in the 92 patients with Ph+ ALL compared to 65 patients with Ph- ALL enrolled on the trial who did not receive Gleevec. The safety was also evaluated comparing the incidence of adverse events in cycles of therapy administered with or without Gleevec. The protocol included up to 18 cycles of therapy. Patients were exposed to a cumulative total of 1425 cycles of therapy, 778 with Gleevec, and 647 without Gleevec. The adverse events that were reported with a 5% or greater incidence in patients with Ph+ ALL compared to Ph- ALL or with a 1% or greater incidence in cycles of therapy that included Gleevec are presented in Table 8."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Adverse Reactions in Other Subpopulations\nIn older patients (greater than or equal to 65 years old), with the exception of edema, where it was more frequent, there was no evidence of an increase in the incidence or severity of adverse reactions. In women there was an increase in the frequency of neutropenia, as well as Grade 1/2 superficial edema, headache, nausea, rigors, vomiting, rash, and fatigue. No differences were seen that were related to race but the subsets were too small for proper evaluation."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Acute Lymphoblastic Leukemia\nThe adverse reactions were similar for Ph+ ALL as for Ph+ CML. The most frequently reported drug-related adverse reactions reported in the Ph+ ALL studies were mild nausea and vomiting, diarrhea, myalgia, muscle cramps, and rash. Superficial edema was a common finding in all studies and were described primarily as periorbital or lower limb edemas. These edemas were reported as Grade 3/4 events in 6.3% of the patients and may be managed with diuretics, other supportive measures, or in some patients by reducing the dose of Gleevec."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Myelodysplastic/Myeloproliferative Diseases\nAdverse reactions, regardless of relationship to study drug, that were reported in at least 10% of the patients treated with Gleevec for MDS/MPD in the Phase\u00a02 study, are shown in Table 9."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Aggressive Systemic Mastocytosis\nAll aggressive systemic mastocytosis (ASM) patients experienced at least one adverse reaction at some time. The most frequently reported adverse reactions were diarrhea, nausea, ascites, muscle cramps, dyspnea, fatigue, peripheral edema, anemia, pruritus, rash, and lower respiratory tract infection. None of the 5 patients in the Phase 2 study with ASM discontinued Gleevec due to drug-related adverse reactions or abnormal laboratory values."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Hypereosinophilic Syndrome and Chronic Eosinophilic Leukemia\nThe safety profile in the HES/CEL patient population does not appear to be different from the safety profile of Gleevec observed in other hematologic malignancy populations, such as Ph+ CML. All patients experienced at least one adverse reaction, the most common being GI, cutaneous and musculoskeletal disorders. Hematological abnormalities were also frequent, with instances of CTC Grade 3 leukopenia, neutropenia, lymphopenia, and anemia."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Dermatofibrosarcoma Protuberans\nAdverse reactions, regardless of relationship to study drug, that were reported in at least 10% of the 12 patients treated with Gleevec for DFSP in the Phase 2 study are shown in Table 10.\nClinically relevant or severe laboratory abnormalities in the 12 patients treated with Gleevec for DFSP in the Phase\u00a02 study are presented in Table 11."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Unresectable and/or Malignant Metastatic GIST\nIn the Phase 3 trials, the majority of Gleevec-treated patients experienced adverse reactions at some time. The most frequently reported adverse reactions were edema, fatigue, nausea, abdominal pain, diarrhea, rash, vomiting, myalgia, anemia, and anorexia. Drug was discontinued for adverse reactions in a total of 89 patients (5.4%). Superficial edema, most frequently periorbital or lower extremity edema was managed with diuretics, other supportive measures, or by reducing the dose of Gleevec . Severe (CTC Grade 3/4) edema was observed in 182 patients (11.1%).\nAdverse reactions, regardless of relationship to study drug, that were reported in at least 10% of the patients treated with Gleevec are shown in Table 12.\nOverall the incidence of all grades of adverse reactions and the incidence of severe adverse reactions (CTC Grade 3 and above) were similar between the two treatment arms except for edema, which was reported more frequently in the 800 mg group.\nClinically relevant or severe abnormalities of routine hematologic or biochemistry laboratory values were not reported or evaluated in the Phase 3 GIST trials. Severe abnormal laboratory values reported in the Phase 2 GIST trial are presented in Table 13."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Adjuvant Treatment of GIST\nIn Study 1, the majority of both Gleevec and placebo-treated patients experienced at least one adverse reaction at some time. The most frequently reported adverse reactions were similar to those reported in other clinical studies in other patient populations and include diarrhea, fatigue, nausea, edema, decreased hemoglobin, rash, vomiting, and abdominal pain. No new adverse reactions were reported in the adjuvant GIST-treatment setting that had not been previously reported in other patient populations, including patients with unresectable and/or malignant metastatic GIST. Drug was discontinued for adverse reactions in 57 patients (17%) and 11 patients (3%) of the Gleevec and placebo-treated patients, respectively. Edema, GI disturbances (nausea, vomiting, abdominal distention, and diarrhea), fatigue, low hemoglobin, and rash were the most frequently reported adverse reactions at the time of discontinuation.\nIn Study 2, discontinuation of therapy due to adverse reactions occurred in 15 patients (8%) and 27 patients (14%) of the Gleevec 12-month, and 36-month treatment arms, respectively. As in previous trials the most common adverse reactions were diarrhea, fatigue, nausea, edema, decreased hemoglobin, rash, vomiting, and abdominal pain.\nAdverse reactions, regardless of relationship to study drug, that were reported in at least 5% of the patients treated with Gleevec are shown in Table 14 (Study 1) and Table 15 (Study 2). There were no deaths attributable to Gleevec treatment in either trial."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\u00a0\u00a0\u00a0\u00a0\u00a0Clinical Trials Experience",
+          "text": "Adverse Reactions from Multiple Clinical Trials\nCardiac Disorders:\nEstimated 1%-10%: palpitations, pericardial effusion\nEstimated 0.1%-1%: congestive cardiac failure, tachycardia, pulmonary edema\nEstimated 0.01%-0.1%: arrhythmia, atrial fibrillation, cardiac arrest, myocardial infarction, angina pectoris\nVascular Disorders:\nEstimated 1%-10%: flushing, hemorrhage\nEstimated 0.1%-1%: hypertension, hypotension, peripheral coldness, Raynaud\u2019s phenomenon, hematoma, subdural hematoma\nInvestigations:\nEstimated 1%-10%: blood creatine phosphokinase (CPK) increased, blood amylase increased\nEstimated 0.1%-1%: blood lactate dehydrogenase (LDH) increased\nSkin and Subcutaneous Tissue Disorders:\nEstimated 1%-10%: dry skin, alopecia, face edema, erythema, photosensitivity reaction, nail disorder, purpura\nEstimated 0.1%-1%: exfoliative dermatitis, bullous eruption, psoriasis, rash pustular, contusion, sweating increased, urticaria, ecchymosis, increased tendency to bruise, hypotrichosis, skin hypopigmentation, skin hyperpigmentation, onychoclasis, folliculitis, petechiae, erythema multiforme, panniculitis (including erythema nodosum)\nEstimated 0.01%-0.1%: vesicular rash, Stevens-Johnson syndrome, acute generalized exanthematous pustulosis, acute febrile neutrophilic dermatosis (Sweet\u2019s syndrome), nail discoloration, angioneurotic edema, leucocytoclastic vasculitis\nGastrointestinal Disorders:\nEstimated 1%-10%: abdominal distention, gastroesophageal reflux, dry mouth, gastritis\nEstimated 0.1%-1%: gastric ulcer, stomatitis, mouth ulceration, eructation, melena, esophagitis, ascites, hematemesis, chelitis, dysphagia, pancreatitis\nEstimated 0.01%-0.1%: colitis, ileus, inflammatory bowel disease\nGeneral Disorders and Administration-Site Conditions:\nEstimated 1%-10%: weakness, anasarca, chills\nEstimated 0.1%-1%: malaise\nBlood and Lymphatic System Disorders:\nEstimated 1%-10%: pancytopenia, febrile neutropenia, lymphopenia, eosinophilia\nEstimated 0.1%-1%: thrombocythemia, bone marrow depression, lymphadenopathy\nEstimated 0.01%-0.1%: hemolytic anemia, aplastic anemia\nHepatobiliary Disorders:\nEstimated 0.1%-1%: hepatitis, jaundice\nEstimated 0.01%-0.1%: hepatic failure and hepatic necrosis1\nImmune System Disorders:\nEstimated 0.01%-0.1%: angioedema\nInfections and Infestations:\nEstimated 0.1%-1%: sepsis, herpes simplex, herpes zoster, cellulitis, urinary tract infection, gastroenteritis\nEstimated 0.01%-0.1%: fungal infection\nMetabolism and Nutrition Disorders:\nEstimated 1%-10%: weight decreased, decreased appetite\nEstimated 0.1%-1%: dehydration, gout, increased appetite, hyperuricemia, hypercalcemia, hyperglycemia, hyponatremia, hyperkalemia, hypomagnesemia\nMusculoskeletal and Connective Tissue Disorders:\nEstimated 1%-10%: joint swelling\nEstimated 0.1%-1%: joint and muscle stiffness, muscular weakness, arthritis\nNervous System/Psychiatric Disorders:\nEstimated 1%-10%: paresthesia, hypesthesia\nEstimated 0.1%-1%: syncope, peripheral neuropathy, somnolence, migraine, memory impairment, libido decreased, sciatica, restless leg syndrome, tremor\nEstimated 0.01%-0.1%: increased intracranial pressure1, confusional state, convulsions, optic neuritis\nRenal and Urinary Disorders:\nEstimated 0.1%-1%: renal failure acute, urinary frequency increased, hematuria, renal pain\nReproductive System and Breast Disorders:\nEstimated 0.1%-1%: breast enlargement, menorrhagia, sexual dysfunction, gynecomastia, erectile dysfunction, menstruation irregular, nipple pain, scrotal edema\nRespiratory, Thoracic and Mediastinal Disorders:\nEstimated 1%-10%: epistaxis\nEstimated 0.1%-1%: pleural effusion\nEstimated 0.01%-0.1%: interstitial pneumonitis, pulmonary fibrosis, pleuritic pain, pulmonary hypertension, pulmonary hemorrhage\nEndocrine Disorders:\nEstimated 0.1%-1%: hypothyroidism, hyperthyroidism\nEye, Ear, and Labyrinth Disorders:\nEstimated 1%-10%: conjunctivitis, vision blurred, orbital edema, conjunctival hemorrhage, dry eye\nEstimated 0.1%-1%: vertigo, tinnitus, eye irritation, eye pain, scleral hemorrhage, retinal hemorrhage, blepharitis, macular edema, hearing loss, cataract\nEstimated 0.01%-0.1%: papilledema1, glaucoma 1Including some fatalities."
+        },
+        {
+          "section_label": "6.2",
+          "section_title": "6.2\u00a0\u00a0\u00a0\u00a0\u00a0Postmarketing Experience",
+          "text": "The following additional adverse reactions have been identified during post approval use of Gleevec. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.\nBlood and Lymphatic System Disorders: thrombotic microangiopathy\nCardiac Disorders: pericarditis, cardiac tamponade1\nEye Disorders: vitreous hemorrhage\nGastrointestinal Disorders: ileus/intestinal obstruction, tumor hemorrhage/tumor necrosis, GI perforation1\n, diverticulitis, gastric antral vascular ectasia\nInfections: hepatitis B virus reactivation1\nMusculoskeletal and Connective Tissue Disorders: osteonecrosis, rhabdomyolysis/myopathy, growth retardation in children, musculoskeletal pain upon treatment discontinuation (including myalgia, pain in extremity, arthalgia, bone pain)\nNervous System Disorders: cerebral edema1\nReproduction Disorders: hemorrhagic corpus luteum/hemorrhagic ovarian cyst\nRespiratory, Thoracic and Mediastinal Disorders: acute respiratory failure1, interstitial lung disease\nSkin and Subcutaneous Tissue Disorders: lichenoid keratosis, lichen planus, toxic epidermal necrolysis, palmar-plantar erythrodysesthesia syndrome, drug rash with eosinophilia and systemic symptoms (DRESS), pseudoporphyria, pemphigus\nVascular Disorders: thrombosis/embolism, anaphylactic shock 1Including some fatalities."
+        },
+        {
+          "section_label": "8.1",
+          "section_title": "8.1\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tPregnancy",
+          "text": "Risk Summary\nGleevec can cause fetal harm when administered to a pregnant woman based on human and animal data. There are no clinical studies regarding use of Gleevec in pregnant women. There have been postmarket reports of spontaneous abortions and congenital anomalies from women who have been exposed to Gleevec during pregnancy. Reproductive studies in rats have demonstrated that imatinib mesylate induced teratogenicity and increased incidence of congenital abnormalities following prenatal exposure to imatinib mesylate at doses equal to the highest recommended human dose of 800 mg/day based on BSA. Advise women to avoid pregnancy when taking Gleevec. If this drug is used during pregnancy, or if the patient becomes pregnant while taking this drug, apprise the patient of the potential hazard to the fetus.\nThe background risk of major birth defects and miscarriage for the indicated population is not known; however, in the U.S. general population, the estimated background risk of major birth defects of clinically recognized pregnancies is 2% to 4% and of miscarriage is 15% to 20%."
+        },
+        {
+          "section_label": "8.1",
+          "section_title": "8.1\n\t\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\t\tPregnancy",
+          "text": "Animal Data\nIn embryo-fetal development studies in rats and rabbits, pregnant animals received oral doses of imatinib mesylate up to 100 mg/kg/day and 60 mg/kg/day, respectively, during the period of organogenesis.\nIn rats, imatinib mesylate was teratogenic at 100 mg/kg/day (approximately equal to the maximum human dose of 800 mg/day based on BSA), the number of fetuses with encephalocoele and exencephaly was higher than historical control values and these findings were associated with missing or underdeveloped cranial bones. Lower mean fetal body weights were associated with retarded skeletal ossifications.\nIn rabbits, at doses 1.5 times higher than the maximum human dose of 800 mg/day based on BSA, no effects on the reproductive parameters with respect to implantation sites, number of live fetuses, sex ratio or fetal weight were observed. The examinations of the fetuses did not reveal any drug related morphological changes.\nIn a pre- and postnatal development study in rats, pregnant rats received oral doses of imatinib mesylate during gestation (organogenesis) and lactation up to 45 mg/kg/day. Five animals developed a red vaginal discharge in the 45 mg/kg/day group on Days 14 or 15 of gestation, the significance of which is unknown since all females produced viable litters and none had increased post-implantation loss. Other maternal effects noted only at the dose of 45 mg/kg/day (approximately one-half the maximum human dose of 800 mg/day based on BSA) included an increased number of stillborn pups and pups dying between postpartum Days 0 and 4. In the F1 offspring at this same dose level, mean body weights were reduced from birth until terminal sacrifice and the number of litters achieving criterion for preputial separation was slightly decreased. There were no other significant effects in developmental parameters or behavioral testing. F1 fertility was not affected but reproductive effects were noted at 45 mg/kg/day, including an increased number of resorptions and a decreased number of viable fetuses. The no-observed-effect level (NOEL) for both maternal animals and the F1 generation was 15 mg/kg/day."
+        }
+      ],
+      "drug_name": "Gleevec",
+      "question": "What important warnings or precautions are associated with Gleevec?",
+      "question_id": "8deb7244393e0d52",
+      "question_type": "factual",
+      "references": [
+        "5\n                  \n\t\t\t\t\t\t\t\u00a0\u00a0\u00a0\u00a0\u00a0\n\t\t\t\t\t\t\tWARNINGS AND PRECAUTIONS"
+      ],
+      "set_id": "211ef2da-2868-4a77-8055-1cb2cd78e24b"
+    },
+    {
+      "answer": "\u2022\nCerebrovascular Adverse Reactions in Elderly Patients with Dementia-Related Psychosis:Increased incidence of cerebrovascular adverse reactions (e.g., stroke, transient ischemic attack, including fatalities)\n\n\u2022\nNeuroleptic Malignant Syndrome:Manage with immediate discontinuation and close monitoring\n\n\u2022\nTardive Dyskinesia:Discontinue if clinically appropriate\n\n\u2022\nMetabolic Changes:Atypical antipsychotic drugs have been associated with metabolic changes that include hyperglycemia/diabetes mellitus,\u00a0 \u00a0 \u00a0 dyslipidemia, and body weight gain\n\no\nHyperglycemia/Diabetes Mellitus:Monitor glucose regularly in patients with and at risk for diabetes\n\no\nDyslipidemia:Undesirable alterations in lipid levels have been\u00a0 \u00a0 observed in patients treated with atypical antipsychotics\n\no\nWeight Gain:Weight gain has been observed with atypical antipsychotic use. Monitor weight\n\n\u2022\nPathological Gambling and Other Compulsive Behaviors:Consider dose reduction or discontinuation\n\n\u2022\nOrthostatic Hypotension:Monitor heart rate and blood pressure and warn patients with known cardiovascular or cerebrovascular disease, and risk of dehydration or syncope\n\n\u2022\nLeukopenia, Neutropenia, and Agranulocytosis:have been reported with antipsychotics including aripiprazole oral solution. Patients with a history of a clinically significant low white blood cell count (WBC) or a drug-induced leukopenia/neutropenia should have their complete blood count (CBC) monitored frequently during the first few months of therapy and discontinuation of aripiprazole oral solution should be considered at the first sign of a clinically significant decline in WBC in the absence of other causative factors\n\n\u2022\nSeizures/Convulsions:Use cautiously in patients with a history of seizures or with conditions that lower the seizure threshold\n\n\u2022\nPotential for Cognitive and Motor Impairment:Use caution when operating machinery\n\n\u2022\nSuicide:The possibility of a suicide attempt is inherent in schizophrenia and bipolar disorder. Closely supervise high-risk patients",
+      "citations": [
+        "5.2",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8",
+        "5.10",
+        "5.11",
+        "5.12",
+        "5.14"
+      ],
+      "context": [
+        {
+          "section_label": "5.2",
+          "section_title": "5.2 Cerebrovascular Adverse Events, Including Stroke",
+          "text": "In placebo-controlled clinical studies (two flexible dose and one fixed dose study) of dementia-related psychosis, there was an increased incidence of cerebrovascular adverse events (e.g., stroke, transient ischemic attack), including fatalities, in aripiprazole -treated patients (mean age: 84 years; range: 78 to 88 years). In the fixed-dose study, there was a statistically significant dose response relationship for cerebrovascular adverse events in patients treated with aripiprazole. Aripiprazole is not approved for the treatment of patients with dementia-related psychosis\n."
+        },
+        {
+          "section_label": "5.4",
+          "section_title": "5.4 Neuroleptic Malignant Syndrome (NMS)",
+          "text": "A potentially fatal symptom complex sometimes referred to as Neuroleptic Malignant Syndrome (NMS) may occur with administration of antipsychotic drugs, including aripiprazole. Rare cases of NMS occurred during aripiprazole treatment in the worldwide clinical database. Clinical manifestations of NMS are hyperpyrexia, muscle rigidity, altered mental status, and evidence of autonomic instability (irregular pulse or blood pressure, tachycardia, diaphoresis, and cardiac dysrhythmia). Additional signs may include elevated creatine phosphokinase, myoglobinuria (rhabdomyolysis), and acute renal failure.\nThe diagnostic evaluation of patients with this syndrome is complicated. In arriving at a diagnosis, it is important to exclude cases where the clinical presentation includes both serious medical illness (e.g., pneumonia, systemic infection) and untreated or inadequately treated extrapyramidal signs and symptoms (EPS). Other important considerations in the differential diagnosis include central anticholinergic toxicity, heat stroke, drug fever, and primary central nervous system pathology.\nThe management of NMS should include: 1) immediate discontinuation of antipsychotic drugs and other drugs not essential to concurrent therapy; 2) intensive symptomatic treatment and medical monitoring; and 3) treatment of any concomitant serious medical problems for which specific treatments are available. There is no general agreement about specific pharmacological treatment regimens for uncomplicated NMS.\nIf a patient requires antipsychotic drug treatment after recovery from NMS, the potential reintroduction of drug therapy should be carefully considered. The patient should be carefully monitored, since recurrences of NMS have been reported."
+        },
+        {
+          "section_label": "5.5",
+          "section_title": "5.5 Tardive Dyskinesia",
+          "text": "A syndrome of potentially irreversible, involuntary, dyskinetic movements may develop in patients treated with antipsychotic drugs. Although the prevalence of the syndrome appears to be highest among the elderly, especially elderly women, it is impossible to rely upon prevalence estimates to predict, at the inception of antipsychotic treatment, which patients are likely to develop the syndrome. Whether antipsychotic drug products differ in their potential to cause tardive dyskinesia is unknown.\nThe risk of developing tardive dyskinesia and the likelihood that it will become irreversible are believed to increase as the duration of treatment and the total cumulative dose of antipsychotic drugs administered to the patient increase. However, the syndrome can develop, although much less commonly, after relatively brief treatment periods at low doses.\nTardive dyskinesia may remit, partially or completely, if antipsychotic treatment is withdrawn. Antipsychotic treatment, itself, however, may suppress (or partially suppress) the signs and symptoms of the syndrome and, thereby, may possibly mask the underlying process. The effect that symptomatic suppression has upon the long-term course of the syndrome is unknown.\nGiven these considerations, aripiprazole should be prescribed in a manner that is most likely to minimize the occurrence of tardive dyskinesia. Chronic antipsychotic treatment should generally be reserved for patients who suffer from a chronic illness that (1) is known to respond to antipsychotic drugs and (2) for whom alternative, equally effective, but potentially less harmful treatments are not available or appropriate. In patients who do require chronic treatment, the smallest dose and the shortest duration of treatment producing a satisfactory clinical response should be sought. The need for continued treatment should be reassessed periodically.\nIf signs and symptoms of tardive dyskinesia appear in a patient on aripiprazole, drug discontinuation should be considered. However, some patients may require treatment with aripiprazole despite the presence of the syndrome."
+        },
+        {
+          "section_label": "5.6",
+          "section_title": "5.6 Metabolic Changes",
+          "text": "Atypical antipsychotic drugs have been associated with metabolic changes that include hyperglycemia/diabetes mellitus, dyslipidemia, and body weight gain. While all drugs in the class have been shown to produce some metabolic changes, each drug has its own specific risk profile.\nHyperglycemia/Diabetes Mellitus\nHyperglycemia, in some cases extreme and associated with ketoacidosis or hyperosmolar coma or death, has been reported in patients treated with atypical antipsychotics. There have been reports of hyperglycemia in patients treated with aripiprazole\n. Assessment of the relationship between atypical antipsychotic use and glucose abnormalities is complicated by the possibility of an increased background risk of diabetes mellitus in patients with schizophrenia and the increasing incidence of diabetes mellitus in the general population. Given these confounders, the relationship between atypical antipsychotic use and hyperglycemia-related adverse events is not completely understood. However, epidemiological studies suggest an increased risk of hyperglycemia-related adverse reactions in patients treated with the atypical antipsychotics. Because aripiprazole was not marketed at the time these studies were performed, it is not known if aripiprazole is associated with this increased risk. Precise risk estimates for hyperglycemia-related adverse reactions in patients treated with atypical antipsychotics are not available.\nPatients with an established diagnosis of diabetes mellitus who are started on atypical antipsychotics should be monitored regularly for worsening of glucose control. Patients with risk factors for diabetes mellitus (e.g., obesity, family history of diabetes) who are starting treatment with atypical antipsychotics should undergo fasting blood glucose testing at the beginning of treatment and periodically during treatment. Any patient treated with atypical antipsychotics should be monitored for symptoms of hyperglycemia including polydipsia, polyuria, polyphagia, and weakness. Patients who develop symptoms of hyperglycemia during treatment with atypical antipsychotics should undergo fasting blood glucose testing. In some cases, hyperglycemia has resolved when the atypical antipsychotic was discontinued; however, some patients required continuation of anti-diabetic treatment despite discontinuation of the suspect drug.\nAdults\nIn an analysis of 13 placebo-controlled monotherapy trials in adults, primarily with schizophrenia or bipolar disorder, the mean change in fasting glucose in aripiprazole-treated patients (+4.4 mg/dL; median exposure 25 days; N=1057) was not significantly different than in placebo-treated patients (+2.5 mg/dL; median exposure 22 days; N=799). Table 6 shows the proportion of aripiprazole-treated patients with normal and borderline fasting glucose at baseline (median exposure 25 days) that had treatment-emergent high fasting glucose measurements compared to placebo-treated patients (median exposure 22 days).\nTable 6:\u00a0 Changes in Fasting Glucose From Placebo-Controlled Monotherapy Trials in Adult Patients\nAt 24 weeks, the mean change in fasting glucose in aripiprazole-treated patients was not significantly different than in placebo-treated patients +2.2 mg/dL (n=42) and +9.6 mg/dL (n=28), respectively].\nPediatric Patients and Adolescents\nIn an analysis of two placebo-controlled trials in adolescents with schizophrenia (13 to 17 years) and pediatric patients with bipolar disorder (10 to 17 years), the mean change in fasting glucose in aripiprazole-treated patients (+4.8 mg/dL; with a median exposure of 43 days; N=259) was not significantly different than in placebo-treated patients (+1.7 mg/dL; with a median exposure of 42 days; N=123).\nIn an analysis of two placebo-controlled trials in pediatric and adolescent patients with irritability associated with autistic disorder (6 to 17 years) with median exposure of 56 days, the mean change in fasting glucose in aripiprazole-treated patients (\u20130.2 mg/dL; N=83) was not significantly different than in placebo-treated patients (\u20130.6 mg/dL; N=33).\nIn an analysis of two placebo-controlled trials in pediatric and adolescent patients with Tourette\u2019s disorder (6 to 18 years) with median exposure of 57 days, the mean change in fasting glucose in aripiprazole-treated patients (0.79 mg/dL; N=90) was not significantly different than in placebo-treated patients (\u20131.66 mg/dL; N=58).\nTable 8 shows the proportion of patients with changes in fasting glucose levels from the pooled adolescent schizophrenia and pediatric bipolar patients (median exposure of 42 to 43 days), from two placebo-controlled trials in pediatric patients (6 to 17 years) with irritability associated with autistic disorder (median exposure of 56 days), and from the two placebo-controlled trials in pediatric patients (6 to 18 year) with Tourette\u2019s Disorder (median exposure 57 days).\nTable 8: Changes in Fasting Glucose From Placebo-Controlled Trials in Pediatric and Adolescent Patients\nAt 12 weeks in the pooled adolescent schizophrenia and pediatric bipolar disorder trials, the mean change in fasting glucose in aripiprazole-treated patients was not significantly different than in placebo-treated patients +2.4 mg/dL (n=81) and\u00a0 +0.1 mg/dL (n=15), respectively].\nDyslipidemia\nUndesirable alterations in lipids have been observed in patients treated with atypical antipsychotics.\nThere were no significant differences between aripiprazole- and placebo-treated patients in the proportion with changes from normal to clinically significant levels for fasting/nonfasting total cholesterol, fasting triglycerides, fasting LDLs, and fasting/nonfasting HDLs. Analyses of patients with at least 12 or 24 weeks of exposure were limited by small numbers of patients.\nAdults\nTable 9 shows the proportion of adult patients, primarily from pooled schizophrenia and bipolar disorder monotherapy placebo-controlled trials, with changes in total cholesterol (pooled from 17 trials; median exposure 21 to 25 days), fasting triglycerides (pooled from eight trials; median exposure 42 days), fasting LDL cholesterol (pooled from eight trials; median exposure 39 to 45 days, except for placebo-treated patients with baseline normal fasting LDL measurements, who had median treatment exposure of 24 days) and HDL cholesterol (pooled from nine trials; median exposure 40 to 42 days).\nTable 9: Changes in Blood Lipid Parameters From Placebo-Controlled Monotherapy Trials in Adults\nIn monotherapy trials in adults, the proportion of patients at 12 weeks and 24 weeks with changes from Normal to High in total cholesterol (fasting/nonfasting), fasting triglycerides, and fasting LDL cholesterol were similar between aripiprazole- and placebo-treated patients: at 12 weeks, Total Cholesterol (fasting/nonfasting), 1/71 (1.4%) vs. 3/74 (4.1%); Fasting Triglycerides, 8/62 (12.9%) vs. 5/37 (13.5%); Fasting LDL Cholesterol, 0/34 (0%) vs. 1/25\u00a0 (4.0%), respectively; and at 24 weeks, Total Cholesterol (fasting/nonfasting), 1/42 (2.4%) vs. 3/37 (8.1%); Fasting Triglycerides, 5/34 (14.7%) vs. 5/20 (25%); Fasting LDL Cholesterol, 0/22 (0%) vs. 1/18 (5.6%), respectively.\nPediatric Patients and Adolescents\nTable 11 shows the proportion of adolescents with schizophrenia (13 to 17 years) and pediatric patients with bipolar disorder (10 to 17 years) with changes in total cholesterol and HDL cholesterol (pooled from two placebo-controlled trials; median exposure 42 to 43 days) and fasting triglycerides (pooled from two placebo-controlled trials; median exposure 42 to\u00a0 \u00a044 days).\nTable 11:\u00a0 Changes in Blood Lipid Parameters From Placebo-Controlled Monotherapy Trials in Pediatric and Adolescent Patients in Schizophrenia and Bipolar Disorder\nIn monotherapy trials of adolescents with schizophrenia and pediatric patients with bipolar disorder, the proportion of patients at 12 weeks and 24 weeks with changes from Normal to High in total cholesterol (fasting/nonfasting), fasting triglycerides, and fasting LDL cholesterol were similar between aripiprazole- and placebo-treated patients: at 12 weeks, Total Cholesterol (fasting/nonfasting), 0/57 (0%) vs. 0/15 (0%); Fasting Triglycerides, 2/72 (2.8%) vs. 1/14 (7.1%), respectively; and at 24 weeks, Total Cholesterol (fasting/nonfasting), 0/36 (0%) vs. 0/12 (0%); Fasting Triglycerides, 1/47 (2.1%) vs. 1/10 (10.0%), respectively.\nTable 12 shows the proportion of patients with changes in total cholesterol (fasting/nonfasting) and fasting triglycerides (median exposure 56 days) and HDL cholesterol (median exposure 55 to 56 days) from two placebo-controlled trials in pediatric patients (6 to 17 years) with irritability associated with autistic disorder.\nTable 12: Changes in Blood Lipid Parameters From Placebo-Controlled Trials in Pediatric Patients with Autistic Disorder\nTable 13 shows the proportion of patients with changes in total cholesterol (fasting/nonfasting) and fasting triglycerides (median exposure 57 days) and HDL cholesterol (median exposure 57 days) from two placebo-controlled trials in pediatric patients (6 to 18 years) with Tourette\u2019s Disorder.\nTable 13: Changes in Blood Lipid Parameters From Placebo-Controlled Trials in Pediatric Patients with Tourette\u2019s Disorder\nWeight Gain\nWeight gain has been observed with atypical antipsychotic use. Clinical monitoring of weight is recommended.\nAdults\nIn an analysis of 13 placebo-controlled monotherapy trials, primarily from pooled schizophrenia and bipolar disorder, with a median exposure of 21 to 25 days, the mean change in body weight in aripiprazole-treated patients was +0.3 kg (N=1673) compared to \u20130.1 kg (N=1100) in placebo-controlled patients. At 24 weeks, the mean change from baseline in body weight in aripiprazole-treated patients was \u20131.5 kg (n=73) compared to \u20130.2 kg (n=46) in placebo-treated patients.\nTable 14 shows the percentage of adult patients with weight gain \u22657% of body weight by indication.\nTable 14: Percentage of Patients From Placebo-Controlled Trials in Adult Patients with Weight Gain \u22657% of Body Weight\nPediatric Patients and Adolescents\nIn an analysis of two placebo-controlled trials in adolescents with schizophrenia (13 to 17 years) and pediatric patients with bipolar disorder (10 to 17 years) with median exposure of 42 to 43 days, the mean change in body weight in aripiprazole-treated patients was +1.6 kg (N=381) compared to +0.3 kg (N=187) in placebo-treated patients. At 24 weeks, the mean change from baseline in body weight in aripiprazole-treated patients was +5.8 kg (n=62) compared to +1.4 kg (n=13) in placebo-treated patients.\nIn two short-term, placebo-controlled trials in patients (6 to 17 years) with irritability associated with autistic disorder with median exposure of 56 days, the mean change in body weight in aripiprazole-treated patients was +1.6 kg (n=209) compared to +0.4 kg (n=98) in placebo-treated patients.\nIn two short-term, placebo-controlled trials in patients (6 to 18 years) with Tourette\u2019s Disorder with median exposure of 57 days, the mean change in body weight in aripiprazole -treated patients was +1.5 kg (n=105) compared to +0.4 kg (n=66) in placebo-treated patients.\nTable 15 shows the percentage of pediatric and adolescent patients with weight gain \u22657% of body weight by indication.\nTable 15:\u00a0 \u00a0Percentage of Patients From Placebo-Controlled Monotherapy Trials in Pediatric and Adolescent Patients with Weight Gain \u22657% of Body Weight\nIn an open-label trial that enrolled patients from the two placebo-controlled trials of adolescents with schizophrenia (13 to 17 years) and pediatric patients with bipolar disorder (10 to 17 years), 73.2% of patients (238/325) completed 26 weeks of therapy with aripiprazole. After 26 weeks, 32.8% of patients gained \u22657% of their body weight, not adjusted for normal growth. To adjust for normal growth, z-scores were derived (measured in standard deviations SD]), which normalize for the natural growth of pediatric patients and adolescents by comparisons to age- and gender-matched population standards. A z-score change <0.5 SD is considered not clinically significant. After 26 weeks, the mean change in z-score was 0.09 SD.\nIn an open-label trial that enrolled patients from two short-term, placebo-controlled trials, patients (6 to 17 years) with irritability associated with autistic disorder, as well as\nde novopatients, 60.3% (199/330) completed one year of therapy with aripiprazole. The mean change in weight z-score was 0.26 SDs for patients receiving >9 months of treatment.\nWhen treating pediatric patients for any indication, weight gain should be monitored and assessed against that expected for normal growth."
+        },
+        {
+          "section_label": "5.7",
+          "section_title": "5.7 Pathological Gambling and Other Compulsive Behaviors",
+          "text": "Post-marketing case reports suggest that patients can experience intense urges, particularly for gambling, and the inability to control these urges while taking aripiprazole. Other compulsive urges, reported less frequently, include: sexual urges, shopping, eating or binge eating, and other impulsive or compulsive behaviors. Because patients may not recognize these behaviors as abnormal, it is important for prescribers to ask patients or their caregivers specifically about the development of new or intense gambling urges, compulsive sexual urges, compulsive shopping, binge or compulsive eating, or other urges while being treated with aripiprazole. It should be noted that impulse-control symptoms can be associated with the underlying disorder. In some cases, although not all, urges were reported to have stopped when the dose was reduced or the medication was discontinued. Compulsive behaviors may result in harm to the patient and others if not recognized. Consider dose reduction or stopping the medication if a patient develops such urges."
+        },
+        {
+          "section_label": "5.8",
+          "section_title": "5.8 Orthostatic Hypotension",
+          "text": "Aripiprazole may cause orthostatic hypotension, perhaps due to its \u03b1\n1-adrenergic receptor antagonism. The incidence of orthostatic hypotension-associated events from short-term, placebo-controlled trials of adult patients on oral aripiprazole (n=2467) included (aripiprazole incidence, placebo incidence) orthostatic hypotension (1%, 0.3%), postural dizziness (0.5%, 0.3%), and syncope (0.5%, 0.4%); of pediatric patients 6 to 18 years of age (n=732) on oral aripiprazole included orthostatic hypotension (0.5%, 0%), postural dizziness (0.4%, 0%), and syncope (0.2%, 0%)\n.\nThe incidence of a significant orthostatic change in blood pressure (defined as a decrease in systolic blood pressure \u226520 mmHg accompanied by an increase in heart rate \u2265 25 bpm when comparing standing to supine values) for aripiprazole was not meaningfully different from placebo (aripiprazole incidence, placebo incidence): in adult oral aripiprazole-treated patients (4%, 2%), in pediatric oral aripiprazole-treated patients aged 6 to 18 years (0.4%, 1%).\nAripiprazole should be used with caution in patients with known cardiovascular disease (history of myocardial infarction or ischemic heart disease, heart failure or conduction abnormalities), cerebrovascular disease, or conditions which would predispose patients to hypotension (dehydration, hypovolemia, and treatment with antihypertensive medications)\n."
+        },
+        {
+          "section_label": "5.10",
+          "section_title": "5.10 Leukopenia, Neutropenia, and Agranulocytosis",
+          "text": "In clinical trials and/or postmarketing experience, events of leukopenia and neutropenia have been reported temporally related to antipsychotic agents, including aripiprazole. Agranulocytosis has also been reported.\nPossible risk factors for leukopenia/neutropenia include pre-existing low white blood cell count (WBC)/absolute neutrophil count (ANC) and history of drug-induced leukopenia/neutropenia. In patients with a history of a clinically significant low WBC/ANC or drug-induced leukopenia/neutropenia, perform a complete blood count (CBC) frequently during the first few months of therapy. In such patients, consider discontinuation of aripiprazole at the first sign of a clinically significant decline in WBC in the absence of other causative factors.\nMonitor patients with clinically significant neutropenia for fever or other symptoms or signs of infection and treat promptly if such symptoms or signs occur. Discontinue aripiprazole in patients with severe neutropenia (absolute neutrophil count <1000/mm\n3) and follow their WBC counts until recovery."
+        },
+        {
+          "section_label": "5.11",
+          "section_title": "5.11 Seizures/Convulsions",
+          "text": "In short-term, placebo-controlled trials, patients with a history of seizures excluded seizures/convulsions occurred in 0.1% (3/2467) of undiagnosed adult patients treated with oral aripiprazole, in 0.1% (1/732) of pediatric patients (6 to 18 years).\nAs with other antipsychotic drugs, aripiprazole should be used cautiously in patients with a history of seizures or with conditions that lower the seizure threshold. Conditions that lower the seizure threshold may be more prevalent in a population of 65 years or older."
+        },
+        {
+          "section_label": "5.12",
+          "section_title": "5.12 Potential for Cognitive and Motor Impairment",
+          "text": "Aripiprazole, like other antipsychotics, may have the potential to impair judgment, thinking, or motor skills. For example, in short-term, placebo-controlled trials, somnolence (including sedation) was reported as follows (aripiprazole incidence, placebo incidence): in adult patients (n=2467) treated with oral aripiprazole (11%, 6%), in pediatric patients ages 6 to 17 (n=611) (24%, 6%). Somnolence (including sedation) led to discontinuation in 0.3% (8/2467) of adult patients and 3% (20/732) of pediatric patients (6 to 18 years) on oral aripiprazole in short-term, placebo-controlled trials.\nDespite the relatively modest increased incidence of these events compared to placebo, patients should be cautioned about operating hazardous machinery, including automobiles, until they are reasonably certain that therapy with aripiprazole does not affect them adversely."
+        },
+        {
+          "section_label": "5.14",
+          "section_title": "5.14 Suicide",
+          "text": "The possibility of a suicide attempt is inherent in psychotic illnesses, bipolar disorder, and close supervision of high-risk patients should accompany drug therapy. Prescriptions for aripiprazole should be written for the smallest quantity consistent with good patient management in order to reduce the risk of overdose\n."
+        }
+      ],
+      "drug_name": "Aripiprazole",
+      "question": "What safety risks are listed for Aripiprazole?",
+      "question_id": "739131cb82d5b99f",
+      "question_type": "factual",
+      "references": [
+        "5 WARNINGS AND PRECAUTIONS"
+      ],
+      "set_id": "da47ad78-e62c-4bf3-9b53-d8cc246bcfb6"
+    },
+    {
+      "answer": "- Assess metabolic requirements by determining daily caloric intake (DCI) prior to calculating the dose of DOJOLVI. \n- For patients receiving another medium-chain triglyceride product, discontinue prior to the first dose of DOJOLVI. \n- The recommended target daily dosage of DOJOLVI is up to 35% of the patient's total prescribed DCI divided into at least four doses and mixed thoroughly into semi-solid food/liquid or medical food/formula at mealtimes or with snacks. \n- See the full prescribing information for instructions on how to calculate the volume per dose; initiate and titrate the dosage to achieve the target; and prepare and administer DOJOLVI.",
+      "citations": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4"
+      ],
+      "context": [
+        {
+          "section_label": "2.1",
+          "section_title": "2.1\tImportant Recommendations Prior to DOJOLVI Treatment",
+          "text": "All patients treated with DOJOLVI should be under the care of a clinical specialist knowledgeable in appropriate disease-related dietary management based upon current nutritional recommendations.\nAssess the metabolic requirements of the patient by determining their daily caloric intake (DCI) prior to calculating the dose of DOJOLVI.\nFor patients receiving another medium-chain triglyceride (MCT) product, discontinue prior to the first dose of DOJOLVI."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2\tRecommended Dosage",
+          "text": "The recommended target daily dosage of DOJOLVI is up to 35% of the patient's total prescribed DCI divided into at least four doses and administered by mixing thoroughly into semi-solid food/liquid or medical food/formula at mealtimes or with snacks.\nIn order to reach a target daily dosage, patients may require an increase in their total fat intake.\nThe neonatal population may require higher fat intake and therefore an increased amount of DOJOLVI. Consider current nutritional recommendations when dosing the neonatal population."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2\tRecommended Dosage",
+          "text": "Total Daily Dosage Calculation\nThe target daily dosage from DOJOLVI (%) is converted to a volume of DOJOLVI (mL) to be administered using the following calculation:\n- Caloric value of DOJOLVI = 8.3 kcal/mL\n- Round the total daily dosage to the nearest whole milliliter.\n- Divide the total daily dosage into at least four approximately equal individual doses."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2\tRecommended Dosage",
+          "text": "Missed Doses\nIf a dose is missed, take the next dose as soon as possible with subsequent doses taken at 3 to 4-hour intervals. Skip the missed dose if it will not be possible to take all doses in a day."
+        },
+        {
+          "section_label": "2.3",
+          "section_title": "2.3 Dosage Initiation and Titration",
+          "text": "For patients not currently taking an MCT product\nInitiate DOJOLVI at a total daily dosage of approximately 10% DCI divided into at least four times per day. Increase to the recommended total daily dosage by approximately 5% DCI every 2 to 3 days until the target dosage of up to 35% DCI is achieved."
+        },
+        {
+          "section_label": "2.3",
+          "section_title": "2.3 Dosage Initiation and Titration",
+          "text": "For patients switching from another MCT product\nDiscontinue use of MCT products before starting DOJOLVI.\nInitiate DOJOLVI at the last tolerated daily dosage (mL) of MCT divided into at least four times per day. Increase the total daily dosage by approximately 5% DCI every 2 to 3 days until the target dosage of up to 35% DCI is achieved."
+        },
+        {
+          "section_label": "2.3",
+          "section_title": "2.3 Dosage Initiation and Titration",
+          "text": "Tolerability\n- Consider more frequent smaller doses if a patient has difficulty tolerating 1/4 of the total daily dosage at one time based on gastrointestinal adverse reactions\n- Monitor the patient's total caloric intake during dosage titration, especially in a patient with gastrointestinal adverse reactions, and adjust all components of the diet as needed.\n- If a patient experiences gastrointestinal adverse reaction(s), consider dosage reduction until the gastrointestinal symptoms resolve\n- If a patient is unable to achieve the target daily dosage of up to 35% DCI during dosage titration, maintain the patient at the maximum tolerated dosage."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4 Preparation and Administration Instructions",
+          "text": "Administer DOJOLVI by mixing thoroughly with semi-solid food/liquid (oral administration) or medical food/formula (feeding tube administration). Do not administer DOJOLVI alone to avoid gastrointestinal upset and feeding tube degradation .\nPrepare or administer DOJOLVI using containers, oral syringes, or measuring cups made of compatible materials such as stainless steel, glass, high density polyethylene (HDPE), polypropylene, low density polyethylene, polyurethane, and silicone.\nDo not prepare or administer DOJOLVI using containers, oral syringes, or measuring cups made of polystyrene or polyvinyl chloride (PVC) plastics.\nRegularly monitor the containers, dosing components, or utensils that are in contact with DOJOLVI to ensure proper functioning and integrity."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4 Preparation and Administration Instructions",
+          "text": "Oral Preparation and Administration\n- Use an oral syringe or measuring cup made of compatible materials as listed above to withdraw the prescribed volume of DOJOLVI from the bottle.\n- DOJOLVI can be mixed with soft food or liquid such as:\n- plain or artificially sweetened fat free yogurt\n- fat free milk, formula, or cottage cheese\n- whole grain hot cereal\n- fat free low carbohydrate pudding, smoothies, applesauce, or baby food\n- Add the prescribed amount of DOJOLVI to a clean bowl, cup, or container, made of the compatible materials as listed above, which contains an appropriate amount of semi-solid food or liquid that takes into consideration the age, size, and fluid needs of the patient to ensure administration of the full dose.\n- Mix DOJOLVI thoroughly into the food or liquid.\n- Any unused mixture may be stored for up to 24 hours in refrigerated conditions.\n- If not used within 24 hours, discard DOJOLVI mixture in the trash. Do not pour down the sink. Do not save for later ."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4 Preparation and Administration Instructions",
+          "text": "Feeding Tube Preparation and Administration\nDOJOLVI is administered as an oral or enteral bolus medication. Do not add DOJOLVI to the feeding bag, as the feeding equipment may degrade over time.\nDOJOLVI can be administered via oral or enteral feeding tubes manufactured of silicone or polyurethane. Do not use feeding tubes manufactured of polyvinyl chloride (PVC). Feeding device performance and functionality can degrade over time depending on usage and environmental conditions. Regularly monitor the feeding tube to ensure proper functioning and integrity .\n- Use an oral syringe or measuring cup made of compatible materials as listed above to withdraw the prescribed volume of DOJOLVI from the bottle.\n- Add the prescribed amount of DOJOLVI to a clean bowl, cup, or container, made of compatible materials as listed above, which contains an amount of medical food or formula that takes into consideration the age, size, and fluid needs of the patient in order to ensure administration of the full dose.\n- Mix DOJOLVI thoroughly into the medical food or formula prior to administering via feeding tube, y-connector, or feeding tube extension set made of silicone or polyurethane.\n- Draw up the entire amount of the DOJOLVI mixture into a slip tip syringe.\n- Remove the residual air from the syringe and connect the syringe directly into the feeding tube port.\n- Push the syringe contents into the feeding tube port using steady pressure until empty.\n- Flush the feeding tubes with between 5 mL to 30 mL of water. Flush volume should be modified based on specific patient needs and in cases of fluid restriction.\n- Discard any unused DOJOLVI mixture in the trash. Do not pour down the sink. Do not save for later use."
+        }
+      ],
+      "drug_name": "DOJOLVI",
+      "question": "What is the recommended dosage regimen of DOJOLVI?",
+      "question_id": "35831321fd8697bf",
+      "question_type": "factual",
+      "references": [
+        "2 DOSAGE AND ADMINISTRATION"
+      ],
+      "set_id": "4cfeb8bd-143e-4dd7-bc34-b0bcda02460d"
+    },
+    {
+      "answer": "- Most common adverse reactions (incidence \u2265 5% and more often than placebo) are upper respiratory tract infection, urinary tract infection, and headache. \n- Peripheral edema was reported more commonly in patients treated with the combination of saxagliptin tablets and a thiazolidinedione (TZD) than in patients treated with the combination of placebo and TZD. \nTo report SUSPECTED ADVERSE REACTIONS, contact\nMylan at 1-877-446-3679 (1-877-4-INFO-RX)\nor FDA at 1-800-FDA-1088 or www.fda.gov/medwatch.",
+      "citations": [
+        "6.1"
+      ],
+      "context": [
+        {
+          "section_label": "6",
+          "section_title": "6 ADVERSE REACTIONS",
+          "text": "The following serious adverse reactions are described below or elsewhere in the prescribing information:\n- Pancreatitis\n- Heart Failure\n- Hypoglycemia with Concomitant Use of Insulin or Insulin Secretagogues\n- Hypersensitivity Reactions\n- Severe and disabling arthralgia\n- Bullous pemphigoid"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "The data in Table 1 are derived from a pool of 5 placebo-controlled clinical trials . These data shown in the table reflect exposure of 882 patients to saxagliptin tablets and a mean duration of exposure to saxagliptin tablets of 21 weeks. The mean age of these patients was 55 years, 1.4% were 75 years of age or older and 48.4% were male. The population was 67.5% White, 4.6% Black or African American, 17.4% Asian, 10.5% other races and 9.8% were of Hispanic or Latino ethnicity. At baseline, the population had type 2 diabetes mellitus for an average of 5.2 years and a mean HbA1c of 8.2%. Baseline estimated renal function was normal or mildly impaired (eGFR \u2265 60 mL/min/1.73 m2) in 91% of these patients.\nTable 1 shows common adverse reactions, excluding hypoglycemia, associated with the use of saxagliptin tablets. These adverse reactions occurred more commonly on saxagliptin tablets than on placebo and occurred in at least 5% of patients treated with saxagliptin tablets."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "5.9\nIn patients treated with saxagliptin tablets 2.5 mg, headache (6.5%) was the only adverse reaction reported at a rate \u2265 5% and more commonly than in patients treated with placebo.\nIn the add-on to TZD trial, the incidence of peripheral edema was higher for saxagliptin tablets 5 mg versus placebo (8.1% and 4.3%, respectively). The incidence of peripheral edema for saxagliptin tablets 2.5 mg was 3.1%. None of the reported adverse reactions of peripheral edema resulted in trial drug discontinuation. Rates of peripheral edema for saxagliptin tablets 2.5 mg and saxagliptin tablets 5 mg versus placebo were 3.6% and 2% versus 3% given as monotherapy, 2.1% and 2.1% versus 2.2% given as add-on therapy to metformin HCl, and 2.4% and 1.2% versus 2.2% given as add-on therapy to glyburide.\nThe incidence rate of fractures was 1.0 and 0.6 per 100 patient-years, respectively, for saxagliptin tablets (pooled analysis of 2.5 mg, 5 mg, and 10 mg) and placebo. The 10 mg dosage is not an approved dosage. The incidence rate of fracture events in patients who received saxagliptin tablets did not increase over time. Causality has not been established and nonclinical studies have not demonstrated adverse effects of saxagliptin tablets on bone.\nAn event of thrombocytopenia, consistent with a diagnosis of idiopathic thrombocytopenic purpura, was observed in the clinical program. The relationship of this event to saxagliptin tablets is not known.\nDiscontinuation of therapy due to adverse reactions occurred in 2.2%, 3.3%, and 1.8% of patients receiving saxagliptin tablets 2.5 mg, saxagliptin tablets 5 mg, and placebo, respectively. The most common adverse reactions (reported in at least 2 patients treated with saxagliptin tablets 2.5 mg or at least 2 patients treated with saxagliptin tablets 5 mg) associated with premature discontinuation of therapy included lymphopenia (0.1% and 0.5% versus 0%, respectively), rash (0.2% and 0.3% versus 0.3%), blood creatinine increased (0.3% and 0% versus 0%), and blood creatine phosphokinase increased (0.1% and 0.2% versus 0%)."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "In the add-on to insulin trial , the incidence of adverse reactions, including serious adverse reactions and discontinuations due to adverse reactions, was similar between saxagliptin tablets and placebo, except for confirmed hypoglycemia ."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "Adverse reactions of hypoglycemia were based on all reports of hypoglycemia. A concurrent glucose measurement was not required or was normal in some patients. Therefore, it is not possible to conclusively determine that all these reports reflect true hypoglycemia.\nIn the add-on to glyburide trial, the overall incidence of reported hypoglycemia was higher for saxagliptin tablets 2.5 mg and saxagliptin tablets 5 mg (13.3% and 14.6%) versus placebo (10.1%). The incidence of confirmed hypoglycemia in this trial, defined as symptoms of hypoglycemia accompanied by a fingerstick glucose value of \u2264 50 mg/dL, was 2.4% and 0.8% for saxagliptin tablets 2.5 mg and saxagliptin tablets 5 mg and 0.7% for placebo . The incidence of reported hypoglycemia for saxagliptin tablets 2.5 mg and saxagliptin tablets 5 mg versus placebo given as monotherapy was 4% and 5.6% versus 4.1%, respectively, 7.8% and 5.8% versus 5% given as add-on therapy to metformin HCl, and 4.1% and 2.7% versus 3.8% given as add-on therapy to TZD. The incidence of reported hypoglycemia was 3.4% in treatment-naive patients given saxagliptin tablets 5 mg plus metformin HCl and 4% in patients given metformin HCl alone.\nIn the active-controlled trial comparing add-on therapy with saxagliptin tablets 5 mg to glipizide in patients inadequately controlled on metformin HCl alone, the incidence of reported hypoglycemia was 3% (19 events in 13 patients) with saxagliptin tablets 5 mg versus 36.3% (750 events in 156 patients) with glipizide. Confirmed symptomatic hypoglycemia (accompanying fingerstick blood glucose \u2264 50 mg/dL) was reported in none of the saxagliptin tablet-treated patients and in 35 glipizide-treated patients (8.1%) (p < 0.0001).\nIn the add-on to insulin trial, the overall incidence of reported hypoglycemia was 18.4% for saxagliptin tablets 5 mg and 19.9% for placebo. However, the incidence of confirmed symptomatic hypoglycemia (accompanying fingerstick blood glucose \u2264 50 mg/dL) was higher with saxagliptin tablets 5 mg (5.3%) versus placebo (3.3%).\nIn the add-on to metformin HCl plus sulfonylurea trial, the overall incidence of reported hypoglycemia was 10.1% for saxagliptin tablets 5 mg and 6.3% for placebo. Confirmed hypoglycemia was reported in 1.6% of the saxagliptin tablet-treated patients and in none of the placebo-treated patients ."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "Hypersensitivity reactions, such as urticaria and facial edema in the 5-trial pooled analysis up to Week 24 were reported in 1.5%, 1.5%, and 0.4% of patients who received saxagliptin tablets 2.5 mg, saxagliptin tablets 5 mg, and placebo, respectively. None of these events in patients who received saxagliptin tablets required hospitalization or were reported as life-threatening by the investigators. One saxagliptin tablet-treated patient in this pooled analysis discontinued due to generalized urticaria and facial edema."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "In the SAVOR trial, adverse reactions related to renal impairment, including laboratory changes (i.e., doubling of serum creatinine compared with baseline and serum creatinine > 6 mg/dL), were reported in 5.8% (483/8280) of saxagliptin tablet-treated patients and 5.1% (422/8212) of placebo-treated patients. The most frequently reported adverse reactions included renal impairment (2.1% vs. 1.9%), acute renal failure (1.4% vs. 1.2%), and renal failure (0.8% vs. 0.9%), in the saxagliptin tablets versus placebo groups, respectively. From baseline to the end of treatment, there was a mean decrease in eGFR of 2.5 mL/min/1.73 m2 for saxagliptin tablet-treated patients and a mean decrease of 2.4 mL/min/1.73 m2 for placebo-treated patients. More patients randomized to saxagliptin tablets (421/5227, 8.1%) compared to patients randomized to placebo (344/5073, 6.8%) had downward shifts in eGFR from > 50 mL/min/1.73 m2 (i.e., normal or mild renal impairment) to \u2264 50 mL/min/1.73 m2 (i.e., moderate or severe renal impairment). The proportions of patients with renal adverse reactions increased with worsening baseline renal function and increased age, regardless of treatment assignment."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "In the unblinded, controlled, clinical trial database for saxagliptin tablets to date, there have been 6 (0.12%) reports of tuberculosis among the 4959 saxagliptin tablet-treated patients (1.1 per 1000 patient-years) compared to no reports of tuberculosis among the 2868 comparator-treated patients. Two of these six cases were confirmed with laboratory testing. The remaining cases had limited information or had presumptive diagnoses of tuberculosis. None of the six cases occurred in the United States or in Western Europe. One case occurred in Canada in a patient originally from Indonesia who had recently visited Indonesia. The duration of treatment with saxagliptin tablets until report of tuberculosis ranged from 144 to 929 days. Post-treatment lymphocyte counts were consistently within the reference range for four cases. One patient had lymphopenia prior to initiation of saxagliptin tablets that remained stable throughout saxagliptin tablet treatment. The final patient had an isolated lymphocyte count below normal approximately four months prior to the report of tuberculosis. There have been no spontaneous reports of tuberculosis associated with saxagliptin tablet use. Causality has not been estimated and there are too few cases to date to determine whether tuberculosis is related to saxagliptin tablet use.\nThere has been one case of a potential opportunistic infection in the unblinded, controlled clinical trial database to date in a saxagliptin tablet-treated patient who developed suspected foodborne fatal salmonella sepsis after approximately 600 days of saxagliptin tablet therapy. There have been no spontaneous reports of opportunistic infections associated with saxagliptin tablet use."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1\tClinical Trials Experience",
+          "text": "No clinically meaningful changes in vital signs have been observed in patients treated with saxagliptin tablets."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "Absolute Lymphocyte Counts",
+          "text": "There was a dose-related mean decrease in absolute lymphocyte count observed with saxagliptin tablets. From a baseline mean absolute lymphocyte count of approximately 2200 cells/microL, mean decreases of approximately 100 and 120 cells/microL with saxagliptin tablets 5 mg and 10 mg, respectively, relative to placebo were observed at 24 weeks in a pooled analysis of five placebo-controlled clinical trials. Similar effects were observed when saxagliptin tablets 5 mg were given in initial combination with metformin HCl compared to metformin HCl alone. There was no difference observed for saxagliptin tablets 2.5 mg relative to placebo. The proportion of patients who were reported to have a lymphocyte count \u2264 750 cells/microL was 0.5%, 1.5%, 1.4%, and 0.4% in the saxagliptin tablets 2.5 mg, 5 mg, 10 mg, and placebo groups, respectively. In most patients, recurrence was not observed with repeated exposure to saxagliptin tablets although some patients had recurrent decreases upon rechallenge that led to discontinuation of saxagliptin tablets. The decreases in lymphocyte count were not associated with clinically relevant adverse reactions. The 10 mg dosage is not an approved dosage.\nIn the SAVOR trial mean decreases of approximately 84 cells/microL with saxagliptin tablets relative to placebo was observed. The proportion of patients who experienced a decrease in lymphocyte counts to a count of \u2264 750 cells/microL was 1.6% (136/8280) and 1.0% (78/8212) on saxagliptin tablets and placebo, respectively.\nThe clinical significance of this decrease in lymphocyte count relative to placebo is not known. When clinically indicated, such as in settings of unusual or prolonged infection, lymphocyte count should be measured. The effect of saxagliptin tablets on lymphocyte counts in patients with lymphocyte abnormalities (e.g., human immunodeficiency virus) is unknown."
+        }
+      ],
+      "drug_name": "Saxagliptin",
+      "question": "What adverse reactions have been reported for Saxagliptin?",
+      "question_id": "07ca0b446e87521d",
+      "question_type": "factual",
+      "references": [
+        "6 ADVERSE REACTIONS"
+      ],
+      "set_id": "6e8d8c4f-96eb-4b64-9c8c-4a5448a23a78"
+    },
+    {
+      "answer": "Nifedipine decreases peripheral vascular resistance, which can lead to significant drops in blood pressure, especially in patients already on antihypertensive therapy, necessitating careful monitoring during initial administration and titration.",
+      "citations": [
+        null,
+        null
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "-",
+          "text": "Because nifedipine decreases peripheral vascular resistance, careful monitoring of blood pressure during the initial administration and titration of Nifediac CC\u00ae Extended-release Tablets USP is suggested. Close observation is especially recommended for patients already taking medications that are known to lower blood pressure .\nThis product contains FD&C Yellow No. 5 (tartrazine) which may cause allergic-type reactions (including bronchial asthma) in certain susceptible persons. Although the overall incidence of FD&C Yellow No. 5 (tartrazine) sensitivity in the general population is low, it is frequently seen in patients who also have aspirin hypersensitivity."
+        },
+        {
+          "section_label": null,
+          "section_title": "Hemodynamics",
+          "text": "Like other slow-channel blockers, nifedipine exerts a negative inotropic effect on isolated myocardial tissue. This is rarely, if ever, seen in intact animals or man, probably because of reflex responses to its vasodilating effects. In man, nifedipine decreases peripheral vascular resistance which leads to a fall in systolic and diastolic pressures, usually minimal in normotensive volunteers (less than 5 to 10 mm Hg systolic), but sometimes larger. With nifedipine extended-release tablets, these decreases in blood pressure are not accompanied by any significant change in heart rate. Hemodynamic studies of the immediate-release nifedipine formulation in patients with normal ventricular function have generally found a small increase in cardiac index without major effects on ejection fraction, left ventricular end-diastolic pressure (LVEDP) or volume (LVEDV). In patients with impaired ventricular function, most acute studies have shown some increase in ejection fraction and reduction in left ventricular filling pressure."
+        }
+      ],
+      "drug_name": "Nifediac CC",
+      "question": "Why should Nifediac CC\u00ae Extended-release Tablets be used cautiously in patients taking other blood pressure-lowering medications?",
+      "question_id": "cfc17e2708ae22c7",
+      "question_type": "multihop",
+      "references": [
+        "-",
+        "Hemodynamics"
+      ],
+      "set_id": "fa952140-c9f6-472d-a04f-96c44fe9bca8"
+    },
+    {
+      "answer": "Verifying pregnancy status is essential to prevent potential harm to the fetus, while advising against breastfeeding is necessary due to the risk of serious adverse reactions in breastfed infants from ERIVEDGE.",
+      "citations": [
+        "8.2",
+        "2.1"
+      ],
+      "context": [
+        {
+          "section_label": "8.2",
+          "section_title": "8.2 Lactation",
+          "text": "No data are available regarding the presence of vismodegib in human milk, the effects of the drug on the breastfed child, or the effects of the drug on milk production. Because of the potential for serious adverse reactions in breastfed infants from ERIVEDGE, advise women that breastfeeding is not recommended during therapy with ERIVEDGE and for 24 months after the final dose."
+        },
+        {
+          "section_label": "2.1",
+          "section_title": "2.1\tImportant Safety Information",
+          "text": "Verify pregnancy status of females of reproductive potential within 7 days prior to initiating ERIVEDGE ."
+        }
+      ],
+      "drug_name": "ERIVEDGE",
+      "question": "Why is it crucial to verify pregnancy status before starting ERIVEDGE in women of reproductive potential while also advising against breastfeeding during and after treatment?",
+      "question_id": "899ed79b8912519b",
+      "question_type": "multihop",
+      "references": [
+        "8.2 Lactation",
+        "2.1\tImportant Safety Information"
+      ],
+      "set_id": "eb368bb6-80e3-4df9-8a85-91df0a2ada6a"
+    },
+    {
+      "answer": "HIV-1-infected mothers should avoid breastfeeding while receiving lamivudine to prevent the risk of postnatal HIV-1 transmission to infants, and pediatric patients receiving lamivudine oral solution have shown lower virologic suppression rates and increased risk of viral resistance, indicating the need for careful monitoring.",
+      "citations": [
+        "8.2",
+        "5.5"
+      ],
+      "context": [
+        {
+          "section_label": "8.2",
+          "section_title": "8.2 Lactation",
+          "text": "Risk Summary\nThe Centers for Disease Control and Prevention recommends that HIV-1-infected mothers in the United States not breastfeed their infants to avoid risking postnatal transmission of HIV-1 infection. Lamivudine is present in human milk. There is no information on the effects of lamivudine on the breastfed infant or the effects of the drugs on milk production. Because of the potential for (1) HIV-1 transmission (in HIV-negative infants), (2) developing viral resistance (in HIV-positive infants), and (3) adverse reactions in a breastfed infant, instruct mothers not to breastfeed if they are receiving lamivudine."
+        },
+        {
+          "section_label": "5.5",
+          "section_title": "5.5 Lower Virologic Suppression Rates and Increased Risk of Viral Resistance with Oral Solution",
+          "text": "Pediatric subjects who received lamivudine oral solution (at weight band-based doses approximating 8 mg per kg per day) concomitantly with other antiretroviral oral solutions at any time in the ARROW trial had lower rates of virologic suppression, lower plasma lamivudine exposure, and developed viral resistance more frequently than those receiving lamivudine tablets\n.\nLamivudine scored tablet is the preferred formulation for HIV-1-infected pediatric patients who weigh at least 14 kg and for whom a solid dosage form is appropriate. An all-tablet regimen should be used when possible to avoid a potential interaction with sorbitol\n.\nConsider more frequent monitoring of HIV-1 viral load when treating with lamivudine oral solution"
+        }
+      ],
+      "drug_name": "lamivudine",
+      "question": "Why should HIV-1-infected mothers avoid breastfeeding while receiving lamivudine, particularly in light of its use in pediatric patients?",
+      "question_id": "1d76aa504be07852",
+      "question_type": "multihop",
+      "references": [
+        "8.2 Lactation",
+        "5.5 Lower Virologic Suppression Rates and Increased Risk of Viral Resistance with Oral Solution"
+      ],
+      "set_id": "ef9977cb-ec91-46d7-b769-d26decfd6fe7"
+    },
+    {
+      "answer": "Cevimeline can increase airway resistance and bronchial secretions, which poses risks for patients with pulmonary disease, while its unknown excretion in breast milk raises concerns for nursing infants.",
+      "citations": [
+        null,
+        null
+      ],
+      "context": [
+        {
+          "section_label": null,
+          "section_title": "Nursing Mothers",
+          "text": "It is not known whether this drug is secreted in human milk. Because many drugs are excreted in human milk, and because of the potential for serious adverse reactions in nursing infants from Cevimeline Hydrochloride Capsules, a decision should be made whether to discontinue nursing or discontinue the drug, taking into account the importance of the drug to the mother."
+        },
+        {
+          "section_label": null,
+          "section_title": "Pulmonary Disease:",
+          "text": "Cevimeline can potentially increase airway resistance, bronchial smooth muscle tone, and bronchial secretions. Cevimeline should be administered with caution and with close medical supervision to patients with controlled asthma, chronic bronchitis, or chronic obstructive pulmonary disease."
+        }
+      ],
+      "drug_name": "cevimeline hydrochloride",
+      "question": "Why should Cevimeline be used with caution in patients with pulmonary disease who are also nursing?",
+      "question_id": "6acdb9ab4fa3321a",
+      "question_type": "multihop",
+      "references": [
+        "Nursing Mothers",
+        "Pulmonary Disease:"
+      ],
+      "set_id": "d7432a48-1142-431e-997f-8419dc724824"
+    },
+    {
+      "answer": "Information not found!",
+      "citations": [],
+      "context": [],
+      "drug_name": "Guardian Loratadine",
+      "question": "What INR value indicates the initiation of Guardian Loratadine therapy in individuals with severe hepatic impairment?",
+      "question_id": "6765cb9daa9ecf8d",
+      "question_type": "refusal",
+      "references": [],
+      "set_id": "af8cdd37-8fd0-4651-ae03-36c7d4863301"
+    },
+    {
+      "answer": "Information not found!",
+      "citations": [],
+      "context": [],
+      "drug_name": "Sandimmune",
+      "question": "What is the INR cutoff for commencing Sandimmune therapy in patients experiencing severe hepatic impairment?",
+      "question_id": "dc22aa2ba20c74fa",
+      "question_type": "refusal",
+      "references": [],
+      "set_id": "5e5926a7-1de0-4b54-a5c0-286b6200ff82"
+    },
+    {
+      "answer": "Information not found!",
+      "citations": [],
+      "context": [],
+      "drug_name": "Eszopiclone",
+      "question": "What therapeutic purpose does Eszopiclone serve in relation to inflammatory markers among G6PD deficient patients?",
+      "question_id": "2332e9b9b4f206d5",
+      "question_type": "refusal",
+      "references": [],
+      "set_id": "52ab8ee9-a04d-4e27-b0f4-eb050f144715"
+    },
+    {
+      "answer": "Information not found!",
+      "citations": [],
+      "context": [],
+      "drug_name": "ORLISTAT",
+      "question": "Are dose modifications of ORLISTAT indicated for individuals with G6PD deficiency experiencing abnormal platelet levels?",
+      "question_id": "541f5d9c6e2bd551",
+      "question_type": "refusal",
+      "references": [],
+      "set_id": "f81dfaeb-46d5-47ce-9ef6-19259f5ac61c"
+    }
+  ],
+  "seed": 20260701,
+  "source_data": {
+    "debug_subset": "qa_toy.jsonl",
+    "final_eval_inputs": [
+      "labels.jsonl",
+      "qa.jsonl"
+    ],
+    "private_field_policy": "Verifier-only QA scoring fields are not exposed to agents.",
+    "source_files": [
+      {
+        "description": "FDA drug-label documents with raw label text and chunked sections.",
+        "path": "labels.jsonl",
+        "role": "primary label corpus used to build public label files"
+      },
+      {
+        "description": "QA records with public question metadata and verifier-only scoring fields.",
+        "path": "qa.jsonl",
+        "role": "primary QA corpus used to select questions and private verifier scoring data"
+      },
+      {
+        "description": "small debug subset used for inspection and smoke testing the source format.",
+        "path": "qa_toy.jsonl",
+        "role": "debug subset only; not used for final sampled benchmark tasks"
+      }
+    ]
+  },
+  "task_name": "fda-label-mixed-batch",
+  "task_type": "mixed"
+}

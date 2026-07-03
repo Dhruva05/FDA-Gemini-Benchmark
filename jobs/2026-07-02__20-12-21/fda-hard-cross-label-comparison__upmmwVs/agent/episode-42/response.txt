@@ -1,0 +1,11 @@
+{
+  "analysis": "Excellent! Question 1 is fully clear.
+Let's print Question 2 block in full.",
+  "plan": "I will run a python script to print Question 2 block in full from `clean_dosing_structured.txt`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nwith open('clean_dosing_structured.txt') as f:\n    text = f.read()\nblocks = text.split('=== QUESTION ')\nfor b in blocks:\n    if b.startswith('2:'):\n        print('=== QUESTION ' + b)\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no raw newlines or control characters are in any string in my JSON response.",
+  "plan": "Let us run a python script to search for keywords across all questions' labels to identify if they have dosing instructions or if some are completely missing them, indicating refusal (NOT_FOUND).",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nquestions = []\nwith open(\"/workspace/data/public/questions.jsonl\") as f:\n    for line in f:\n        questions.append(json.loads(line))\n\nlabels = {}\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        labels[data[\"set_id\"]] = data\n\nfor q in questions:\n    print(\"=\"*60)\n    print(\"QID:\", q[\"qid\"])\n    print(\"Drugs:\", q[\"drug_name\"])\n    for sid in q[\"comparison_set_ids\"]:\n        label = labels[sid]\n        print(f\"  Label: {label[\"drug_name\"]} ({sid})\")\n        matches = []\n        for idx, chunk in enumerate(label[\"chunks\"]):\n            if \"direction\" in chunk.lower() or \"dosage\" in chunk.lower() or \"dose\" in chunk.lower() or \"take\" in chunk.lower():\n                matches.append((idx, chunk))\n        print(f\"    Found {len(matches)} potential chunks out of {len(label[\"chunks\"])}\")\n        for idx, m in matches[:3]:\n            print(f\"      PASSAGE_{idx:04d}: {repr(m)[:120]}\")\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

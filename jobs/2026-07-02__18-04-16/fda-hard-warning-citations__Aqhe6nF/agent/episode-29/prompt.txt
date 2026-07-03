@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     pax = json.loads(f.readline())
+> for idx, chunk in enumerate(pax['chunks']):
+>     if chunk.startswith('5.') or 'WARNINGS AND PRECAUTIONS' in chunk:
+>         print(f'PASSAGE_{idx:04d}: {repr(chunk[:150])}')
+> "
+PASSAGE_0013: '5.1\tRisk of Serious Adverse Reactions Due to Drug Interactions\nInitiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in p
+atients'
+PASSAGE_0014: '5.2\tHypersensitivity Reactions\nAnaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and oth
+er hype'
+PASSAGE_0015: '5.3\tHepatotoxicity\nHepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir. Therefore,
+caution'
+PASSAGE_0016: '5.4\tRisk of HIV-1 Resistance Development\nBecause nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resist
+ance to'
+root@23e2e6a1b566:/workspace#

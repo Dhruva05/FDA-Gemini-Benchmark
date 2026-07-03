@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, the python script didn't print anything! That means \"PASSAGE\" is NOT in any key other than \"label_raw\"? Or wait, let's check if `PASSAGE` is in `label_raw`.",
+  "plan": "Let's search for \"PASSAGE\" in `label_raw` of the first label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    data = json.loads(next(f))\n    print(\"PASSAGE in label_raw:\", \"PASSAGE\" in data[\"label_raw\"])\n    if \"PASSAGE\" in data[\"label_raw\"]:\n        idx = data[\"label_raw\"].find(\"PASSAGE\")\n        print(\"Snippet around PASSAGE:\", repr(data[\"label_raw\"][idx-50:idx+150]))\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

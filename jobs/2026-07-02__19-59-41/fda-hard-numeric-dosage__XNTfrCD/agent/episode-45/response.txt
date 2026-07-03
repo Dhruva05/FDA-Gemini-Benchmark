@@ -1,0 +1,10 @@
+{
+  "analysis": "The previous JSON was invalid due to unescaped control characters. I fixed it. Now I will write a python script to display the exact text of the relevant passages for each drug so we can copy supporting quotes perfectly.",
+  "plan": "Write a python script `get_exact_passages.py` to print exact passages.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > get_exact_passages.py\nimport json\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        drug = data['drug_name']\n        print(\"=\"*80)\n        print(drug)\n        print(\"=\"*80)\n        if drug == 'Lopinavir-Ritonavir':\n            # Passage 1, 2, 3, 4, 5, 7\n            for i in [1, 2, 3, 4, 5, 7]:\n                print(f\"PASSAGE_{i:04d}:\")\n                print(repr(data['chunks'][i]))\n        elif drug == 'Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate':\n            # Passage 2, 3\n            for i in [2, 3]:\n                print(f\"PASSAGE_{i:04d}:\")\n                print(repr(data['chunks'][i]))\n        elif drug == 'CELECOXIB':\n            # Passage 8, 9, 10, 11, 12, 13\n            for i in [8, 9, 10, 11, 12, 13]:\n                print(f\"PASSAGE_{i:04d}:\")\n                print(repr(data['chunks'][i]))\n        elif drug == 'Lenalidomide':\n            # Passage 9, 10, 15, 19, 22, 32:\n            for i in [9, 10, 15, 19, 22, 32]:\n                print(f\"PASSAGE_{i:04d}:\")\n                print(repr(data['chunks'][i]))\nEOF\npython3 get_exact_passages.py\n",
+      "duration": 1.0
+    }
+  ]
+}

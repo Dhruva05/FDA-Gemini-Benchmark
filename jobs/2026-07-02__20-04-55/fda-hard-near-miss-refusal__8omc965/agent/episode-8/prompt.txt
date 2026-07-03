@@ -1,0 +1,37 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > verify_passages.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         drug_name = label['drug_name']
+>         chunks = label['chunks']
+>         raw = label['label_raw']
+>
+>         # Let's split raw by ||PASSAGE_####||
+>         parts = re.split(r'\|\|PASSAGE_\d{4}\|\|', raw)
+>         # The first part might be empty if raw starts with ||PASSAGE_0000||
+>         if parts[0] == '':
+>             parts = parts[1:]
+>         # Strip each part
+>         parts = [p.strip() for p in parts]
+>         chunks_stripped = [c.strip() for c in chunks]
+>
+>         print(f"{drug_name}: chunks length = {len(chunks)}, parts length = {len(parts)}")
+>         mismatches = 0
+>         for i in range(min(len(chunks_stripped), len(parts))):
+>             if chunks_stripped[i] != parts[i]:
+>                 mismatches += 1
+>         print(f"  Mismatches: {mismatches}")
+> EOF
+root@0ef79956d710:/workspace# python3 verify_passages.py
+12HR Allergy Relief: chunks length = 13, parts length = 13
+  Mismatches: 0
+Acamprosate Calcium: chunks length = 59, parts length = 59
+  Mismatches: 0
+Acclean Chlorhexidine Gluconate 0.12% Oral Rinse: chunks length = 18, parts length = 18
+  Mismatches: 0
+root@0ef79956d710:/workspace#

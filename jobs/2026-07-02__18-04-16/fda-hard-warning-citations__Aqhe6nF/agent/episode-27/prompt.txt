@@ -1,0 +1,50 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+>             lop = data
+>             break
+> for idx in range(20, 26):
+>     print(f'=== PASSAGE_{idx:04d} ===')
+>     print(lop['chunks'][idx])
+> "
+=== PASSAGE_0020 ===
+5.7 Diabetes Mellitus/Hyperglycemia
+New onset diabetes mellitus, exacerbation of pre-existing diabetes mellitus, and hyperglycemia have been reported during post-marketing surveillance in HIV-1 in
+fected patients receiving protease inhibitor therapy. Some patients required either initiation or dose adjustments of insulin or oral hypoglycemic agents for tr
+eatment of these events. In some cases, diabetic ketoacidosis has occurred. In those patients who discontinued protease inhibitor therapy, hyperglycemia persist
+ed in some cases. Because these events have been reported voluntarily during clinical practice, estimates of frequency cannot be made and a causal relationship
+between protease inhibitor therapy and these events has not been established. Consider monitoring for hyperglycemia, new onset diabetes mellitus or an exacerbat
+ion of diabetes mellitus in patients treated with lopinavir and ritonavir.
+=== PASSAGE_0021 ===
+5.8 Immune Reconstitution Syndrome
+Immune reconstitution syndrome has been reported in patients treated with combination antiretroviral therapy, including lopinavir and ritonavir. During the init
+ial phase of combination antiretroviral treatment, patients whose immune system responds may develop an inflammatory response to indolent or residual opportunis
+tic infections (such as Mycobacterium avium infection, cytomegalovirus, Pneumocystis jirovecii pneumonia PCP], or tuberculosis) which may necessitate further ev
+aluation and treatment.
+Autoimmune disorders (such as Graves’ disease, polymyositis, and Guillain-Barré syndrome) have also been reported to occur in the setting of immune reconstituti
+on, however, the time to onset is more variable, and can occur many months after initiation of treatment.
+=== PASSAGE_0022 ===
+5.9 Lipid Elevations
+Treatment with lopinavir and ritonavir has resulted in large increases in the concentration of total cholesterol and triglycerides . Triglyceride and cholestero
+l testing should be performed prior to initiating lopinavir and ritonavir therapy and at periodic intervals during therapy. Lipid disorders should be managed as
+ clinically appropriate, taking into account any potential drug-drug interactions with lopinavir and ritonavir and HMG-CoA reductase inhibitors .
+=== PASSAGE_0023 ===
+5.10 Fat Redistribution
+Redistribution/accumulation of body fat including central obesity, dorsocervical fat enlargement (buffalo hump), peripheral wasting, facial wasting, breast enla
+rgement, and "cushingoid appearance" have been observed in patients receiving antiretroviral therapy. The mechanism and long-term consequences of these events a
+re currently unknown. A causal relationship has not been established.
+=== PASSAGE_0024 ===
+5.11 Patients with Hemophilia
+Increased bleeding, including spontaneous skin hematomas and hemarthrosis have been reported in patients with hemophilia type A and B treated with protease inhi
+bitors. In some patients additional factor VIII was given. In more than half of the reported cases, treatment with protease inhibitors was continued or reintrod
+uced. A causal relationship between protease inhibitor therapy and these events has not been established.
+=== PASSAGE_0025 ===
+5.12 Resistance/Cross-resistance
+Because the potential for HIV cross-resistance among protease inhibitors has not been fully explored in lopinavir and ritonavir-treated patients, it is unknown
+what effect therapy with lopinavir and ritonavir will have on the activity of subsequently administered protease inhibitors .
+root@23e2e6a1b566:/workspace#

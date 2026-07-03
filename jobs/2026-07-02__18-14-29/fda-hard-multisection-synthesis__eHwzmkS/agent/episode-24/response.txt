@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no control characters are present in the JSON. I will run a python command to print the `qid` and `required_output_fields` of each question in `questions.jsonl`.",
+  "plan": "I will run the Python command.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; [print(q['qid'], q.get('required_output_fields')) for q in [json.loads(line) for line in open('/workspace/data/public/questions.jsonl')]]\"\n",
+      "duration": 0.5
+    }
+  ]
+}

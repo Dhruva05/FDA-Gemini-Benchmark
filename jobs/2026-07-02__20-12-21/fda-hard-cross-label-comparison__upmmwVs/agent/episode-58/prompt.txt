@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 102 (char 103) | Content preview: '{\n  "analysis": "Excellent! For Acyclovir suspension (`3efa1e5e-5a14-4724-a2ca-25702f10faed`), we ha'...
+
+Please fix these issues and provide a proper JSON response.

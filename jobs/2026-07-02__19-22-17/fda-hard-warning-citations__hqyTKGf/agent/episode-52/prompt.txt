@@ -1,0 +1,5 @@
+New Terminal Output:
+
+}root@b9fc21343844:/workspace# python3 -m json.tool /workspace/answers.json > /dev/null && echo 'JSON is valid!'
+JSON is valid!
+root@b9fc21343844:/workspace#

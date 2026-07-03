@@ -1,0 +1,10 @@
+{
+  "analysis": "Aha! Each passage starts with `||PASSAGE_####||` in `label_raw`, and then the text. This matches perfectly with the `chunks` list! Let's verify if `chunks[i]` is exactly the text of `PASSAGE_####` where `####` is formatted as `{:04d}` (e.g. `PASSAGE_0000`, `PASSAGE_0001`, etc.). Let's write a python script to verify this hypothesis.",
+  "plan": "I will run a python script to check if the text in `chunks[i]` matches the passage text in `label_raw`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); \nfor line in f:\n    obj = json.loads(line)\n    raw = obj['label_raw']\n    chunks = obj['chunks']\n    for i, chunk in enumerate(chunks):\n        pid = f'PASSAGE_{i:04d}'\n        tag = f'||{pid}||'\n        if tag not in raw:\n            print(f'Error: {pid} not in raw for {obj[\"drug_name\"]}')\n            break\n    else:\n        print(f'Success for {obj[\"drug_name\"]}')\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "analysis": "No explicit maximum daily dose statement exists in the CELECOXIB chunks. This means the maximum daily dose is either the highest recommended dose for any indication (which is 400 mg daily, or 600 mg on Day 1 for acute pain/dysmenorrhea), or we can state 400 mg. Let's think: what is the maximum recommended daily dose of CELECOXIB? Let's check the dosage sections again:
+- Osteoarthritis: 200 mg per day.
+- Rheumatoid Arthritis: up to 200 mg twice daily (which is 400 mg per day).
+- Ankylosing Spondylitis: up to 400 mg daily.
+- Acute Pain & Primary Dysmenorrhea: 400 mg initially + 200 mg on day 1 (total 600 mg on day 1), then 200 mg twice daily (400 mg per day).
+So the maximum daily dose for ongoing treatment is 400 mg (or 600 mg on Day 1). Let's state `400 mg` as the max daily dose, or `400` as the value and `mg` as the unit.
+
+Wait, let's look at the fourth drug: Lenalidomide.
+Let's see what the questions are:
+- `85c49de5de841cb9`: \"What is the recommended dosage regimen of Lenalidomide?\"
+- `0d262ce5d03f7c38`: \"How should Lenalidomide be administered?\"
+
+Let's look at the dosage recommendations for Lenalidomide:
+- Multiple Myeloma (MM) combination therapy: 25 mg orally once daily on Days 1 to 21 of repeated 28-day cycles in combination with dexamethasone.
+- MM maintenance therapy: 10 mg once daily continuously on Days 1 to 28 of repeated 28-day cycles.
+- Myelodysplastic Syndromes (MDS): 10 mg daily continuously.
+- Mantle Cell Lymphoma (M MCL): 25 mg/day orally on Days 1 to 21 of repeated 28-day cycles.
+- Follicular Lymphoma (FL) or Marginal Zone Lymphoma (MZL): 20 mg orally once daily on Days 1 to 21 of repeated 28-day cycles.
+
+So the starting doses are 25 mg, 10 mg, or 20 mg, depending on the indication.
+What about the maximum daily dose of Lenalidomide?
+Is there a maximum daily dose mentioned in the label?
+Let's search for \"maximum\" or \"max\" or \"limit\" in the Lenalidomide chunks.",
+  "plan": "I will run a python script to search for 'maximum' or 'max' in Lenalidomide chunks to find any explicit maximum daily dose statement.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'Lenalidomide':\n            for i, chunk in enumerate(data['chunks']):\n                if 'maximum' in chunk.lower() or 'max' in chunk.lower():\n                    print(f'PASSAGE_{i:04d}: {chunk[:200]}...')\n            break\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

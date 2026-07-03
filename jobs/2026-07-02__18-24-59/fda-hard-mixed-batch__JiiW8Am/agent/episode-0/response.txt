@@ -1,0 +1,14 @@
+{
+  "analysis": "We need to understand the task and inspect the files in `/workspace/data/public/`.",
+  "plan": "I will run `ls -la /workspace/data/public` and read the README.md to get started.",
+  "commands": [
+    {
+      "keystrokes": "ls -la /workspace/data/public\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "cat /workspace/data/public/README.md\n",
+      "duration": 0.5
+    }
+  ]
+}

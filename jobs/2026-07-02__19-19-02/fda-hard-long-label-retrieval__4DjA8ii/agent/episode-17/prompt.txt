@@ -1,0 +1,38 @@
+New Terminal Output:
+
+...
+=== PASSAGE_0012 ===
+4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Jo
+hnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) ...
+=== PASSAGE_0013 ===
+5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications
+metabolized by CYP3A in pat...
+=== PASSAGE_0019 ===
+7.1     Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID w
+ith drugs that are primarily metabolized ...
+=== PASSAGE_0021 ===
+7.3     Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered
+ a comprehensive list ...
+=== PASSAGE_0022 ===
+↑ alfuzosin
+Co-administration contraindicated due to potential hypotension ....
+=== PASSAGE_0024 ===
+↑ ranolazine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions ....
+=== PASSAGE_0025 ===
+↑ antiarrhythmic
+Co-administration contraindicated due to potential for cardiac arrhythmias ....
+=== PASSAGE_0027 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+=== PASSAGE_0034 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+=== PASSAGE_0041 ===
+↑ colchicine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment ....
+>>>

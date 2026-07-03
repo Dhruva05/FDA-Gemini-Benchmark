@@ -1,0 +1,135 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > print_lenalidomide_admin_full.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lenalidomide':
+>             for idx in [32, 111, 126, 133]:
+>                 print(f"=== CHUNK {idx} (PASSAGE_{idx:04d}) ===")
+>                 print(data['chunks'][idx])
+>                 print()
+>             break
+> EOF
+root@af996c5fe492:/workspace# python3 print_lenalidomide_admin_full.py
+=== CHUNK 32 (PASSAGE_0032) ===
+2.7 Administration
+Advise patients to take lenalidomide orally at about the same time each day, either with or without food. Advise patients to swallow lenalidomide capsules whole
+ with water and not to open, break, or chew them.
+
+=== CHUNK 111 (PASSAGE_0111) ===
+16.3 Handling and Disposal
+Care should be exercised in the handling of lenalidomide capsules. Lenalidomide capsules should not be opened or broken. If powder from lenalidomide capsules co
+ntacts the skin, wash the skin immediately and thoroughly with soap and water. If lenalidomide capsules contacts the mucous membranes, flush thoroughly with wat
+er.
+Procedures for the proper handling and disposal of anticancer drugs should be considered. Several guidelines on the subject have been published.1
+Dispense no more than a 28-day supply.
+
+=== CHUNK 126 (PASSAGE_0126) ===
+Dosing Instructions
+Inform patients how to take lenalidomide
+- Lenalidomide should be taken once daily at about the same time each day,
+Lenalidomide should be taken once daily at about the same time each day,
+- Lenalidomide may be taken either with or without food.
+Lenalidomide may be taken either with or without food.
+- The capsules should not be opened, broken, or chewed. Lenalidomide should be swallowed whole with water.
+The capsules should not be opened, broken, or chewed. Lenalidomide should be swallowed whole with water.
+Instruct patients that if they miss a dose of lenalidomide, they may still take it up to 12 hours after the time they would normally take it. If more than 12 ho
+urs have elapsed, they should be instructed to skip the dose for that day. The next day, they should take lenalidomide at the usual time. Warn patients to not t
+ake 2 doses to make up for the one that they missed.
+Manufactured by:
+
+=== CHUNK 133 (PASSAGE_0133) ===
+How should I take lenalidomide?
+- Take lenalidomide exactly as prescribed and follow all the instructions of the Lenalidomide REMS program
+Take lenalidomide exactly as prescribed and follow all the instructions of the Lenalidomide REMS program
+- Swallow lenalidomide capsules whole with water 1 time a day.
+Swallow lenalidomide capsules whole with water 1 time a day. Do not open, break, or chew your capsules.
+Lenalidomide capsules may be taken with or without food.
+- Take lenalidomide capsules at about the same time each day.
+Take lenalidomide capsules at about the same time each day.
+- Do not open or break lenalidomide capsules or handle them any more than needed.
+Do not open or break lenalidomide capsules or handle them any more than needed.
+- If powder from the lenalidomide capsule comes in contact with your skin, wash the skin right away with soap and water.
+If powder from the lenalidomide capsule comes in contact with your skin, wash the skin right away with soap and water.
+- If powder from the lenalidomide capsule comes in contact with the inside of your eyes, nose, or mouth, flush well with water.
+If powder from the lenalidomide capsule comes in contact with the inside of your eyes, nose, or mouth, flush well with water.
+- If you miss a dose of lenalidomide capsules and it has been less than 12 hours since your regular time, take it as soon as you remember. If it has been more t
+han 12 hours, just skip your missed dose.
+If you miss a dose of lenalidomide capsules and it has been less than 12 hours since your regular time, take it as soon as you remember. If it has been more tha
+n 12 hours, just skip your missed dose. Do not take 2 doses at the same time.
+- If you take too much lenalidomide, call your healthcare provider right away.
+If you take too much lenalidomide, call your healthcare provider right away.
+What should I avoid while taking lenalidomide?
+- See "What is the most important information I should know about lenalidomide?"
+See "What is the most important information I should know about lenalidomide?"
+Females: Do not get pregnant and do not breastfeed while taking lenalidomide.
+Males: Do not donate sperm while taking lenalidomide, during any breaks (interruptions) in your treatment, and for up to 4 weeks after stopping lenalidomide.
+Do not share lenalidomide with other people. It may cause birth defects and other serious problems.
+Do not donate blood while you take lenalidomide, during any breaks (interruptions) in your treatment, and for 4 weeks after stopping lenalidomide. If someone wh
+o is pregnant gets your donated blood, her baby may be exposed to lenalidomide and may be born with birth defects.
+What are the possible side effects of lenalidomide?
+Lenalidomide can cause serious side effects, including:
+- See "What is the most important information I should know about lenalidomide?"
+See "What is the most important information I should know about lenalidomide?"
+Increased risk of death in people who have chronic lymphocytic leukemia (CLL). People with CLL who take lenalidomide have an increased risk of death compared wi
+th people who take the medicine chlorambucil. Lenalidomide may cause you to have serious heart problems that can lead to death, including atrial fibrillation, h
+eart attack, or heart failure. You should not take lenalidomide if you have CLL unless you are participating in a controlled clinical trial.
+Risk of new cancers (malignancies). An increase in new (second) cancers has happened in patients who received lenalidomide and melphalan, or a blood stem cell t
+ransplant, including certain blood cancers, such as acute myelogenous leukemia (AML), and myelodysplastic syndrome (MDS) and certain other types of cancers of t
+he skin and other organs. Talk with your healthcare provider about your risk of developing new cancers if you take lenalidomide. Your healthcare provider will c
+heck you for new cancers during your treatment with lenalidomide.
+Severe liver problems, including liver failure and death. Your healthcare provider should do blood tests to check your liver function during your treatment with
+ lenalidomide. Tell your healthcare provider right away if you develop any of the following symptoms of liver problems:
+- yellowing of your skin or the white part of your eyes (jaundice)
+- dark or brown (tea-colored) urine
+- pain on the upper right side of your stomach area (abdomen)
+- bleeding or bruising more easily than normal
+- feeling very tired
+•
+Severe skin reactions and severe allergic reactions can happen with lenalidomide and may cause death.
+Call your healthcare provider right away if you develop any of the following signs or symptoms during treatment with lenalidomide:
+- a red, itchy, skin rash
+- peeling of your skin or blisters
+- severe itching
+- fever
+Get emergency medical help right away if you develop any of the following signs or symptoms during treatment with lenalidomide:
+- swelling of your lips, mouth, tongue, or throat
+- trouble breathing or swallowing
+- raised red areas on your skin (hives)
+- a very fast heartbeat
+- you feel dizzy or faint
+Tumor lysis syndrome (TLS). TLS is caused by the fast breakdown of cancer cells. TLS can cause kidney failure and the need for dialysis treatment, abnormal hear
+t rhythm, seizure and sometimes death. Your healthcare provider may do blood tests to check you for TLS.
+Worsening of your tumor (tumor flare reaction) can happen with lenalidomide and may cause death. Tell your healthcare provider if you get any of these symptoms
+of tumor flare reaction during treatment with lenalidomide: tender swollen lymph nodes, low grade fever, pain, or rash.
+Your healthcare provider may tell you to decrease your dose, temporarily stop or permanently stop taking lenalidomide if you develop certain serious side effect
+s during treatment with lenalidomide.
+Thyroid problems. Your healthcare provider may check your thyroid function before you start taking lenalidomide and during treatment with lenalidomide.
+Risk of Early Death in MCL. In people who have Mantle Cell Lymphoma (MCL), there may be a risk of dying sooner (early death) when taking lenalidomide. Talk with
+ your healthcare provider about any concerns and possible risk factors.
+The most common side effects of lenalidomide include:
+- diarrhea
+- rash
+- nausea
+- constipation
+- tiredness or weakness
+- fever
+- itching
+- swelling of your arms, hands, legs, feet and skin
+- sleep problems (insomnia)
+- headache
+- muscle cramps or spasms
+- shortness of breath
+- cough, sore throat, and other symptoms of a cold
+- upper respiratory tract infection or bronchitis
+- inflammation of the stomach and intestine ("stomach flu")
+- nose bleed
+- shaking or trembling (tremor)
+- joint aches
+- pain in your back or stomach-area (abdomen)
+These are not all the possible side effects of lenalidomide.Call your doctor for medical advice about side effects. You may report side effects to the FDA at 1-
+800-FDA-1088.
+
+root@af996c5fe492:/workspace#

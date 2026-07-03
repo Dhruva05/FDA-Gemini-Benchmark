@@ -1,0 +1,29 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# cat << 'EOF' > explore.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print(f"Drug: {data['drug_name']}, Set ID: {data['set_id']}, Chunks count: {len(data['chunks'])}")
+>         if data['chunks']:
+>             print("First chunk type:", type(data['chunks'][0]))
+>             print("First chunk:", repr(data['chunks'][0])[:500])
+> EOF
+root@3646eb22abe5:/workspace# python3 explore.py
+Drug: 12HR Allergy Relief, Set ID: ea5d0e55-2191-4094-b082-24b317f95752, Chunks count: 13
+First chunk type: <class 'str'>
+First chunk: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, watery eyes\n
+- itching of the nose or throat'
+Drug: Acamprosate Calcium, Set ID: ae6e79c0-a307-4888-b647-1b7be4cb9127, Chunks count: 59
+First chunk type: <class 'str'>
+First chunk: '1 INDICATIONS AND USAGE\nAcamprosate calcium delayed-release tablets are indicated for the maintenance of abstinence from alcohol in patients with
+ alcohol dependence who are abstinent at treatment initiation. Treatment with acamprosate calcium delayed-release tablets should be part of a comprehensive mana
+gement program that includes psychosocial support.\nThe efficacy of acamprosate calcium delayed-release tablets in promoting abstinence has not been demonstrate
+d in subjects who have not underg
+Drug: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse, Set ID: 08c9d3dd-717b-0148-e054-00144ff8d46c, Chunks count: 18
+First chunk type: <class 'str'>
+First chunk: 'untitled\nACCLEAN is an oral rinse containing 0.12% chlorhexidine gluconate (1,1’-hexamethylene bis 5-(p-chlorphenyl) biguanide]di-D-gluconate) in
+ a base containing water, 11.6% alcohol, glycerin, PEG-40 sorbitan diisostearate, flavor, sodium saccharin and FD&C Blue No. 1. Chlorhexidine gluconate product
+is a near neutral solution (pH range 5-7). Chlorhexidine gluconate is a salt of chlorhexidine and gluconic acid. Its chemical structure is:'
+root@3646eb22abe5:/workspace#

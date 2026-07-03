@@ -1,0 +1,77 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > parse_details.py
+> with open('details.txt') as f:
+>     content = f.read()
+>
+> questions_blocks = content.split("=" * 80)
+> for block in questions_blocks:
+>     if "QID:" in block:
+>         lines = block.strip().split('\n')
+>         qid_line = [l for l in lines if "QID:" in l][0]
+>         print("=" * 40)
+>         print(qid_line)
+>         # Print the first 2-3 lines of the question
+>         for l in lines[:4]:
+>             print(l)
+>         print("--- Passages found in block ---")
+>         # Find PASSAGE lines
+>         passages = []
+>         curr_passage = None
+>         for l in lines:
+>             if l.startswith("--- PASSAGE_"):
+>                 if curr_passage:
+>                     passages.append(curr_passage)
+>                 curr_passage = {"id": l, "text": []}
+>             elif curr_passage is not None:
+>                 curr_passage["text"].append(l)
+>         if curr_passage:
+>             passages.append(curr_passage)
+>
+>         for p in passages:
+>             text_joined = "\n".join(p["text"]).strip()
+>             print(f"{p['id']} (len: {len(text_joined)})")
+>             # Print first 2 lines and last 2 lines or just first 300 chars
+>             print(text_joined[:400])
+>             if len(text_joined) > 400:
+>                 print("... [TRUNCATED] ...")
+>             print("-" * 20)
+> EOF
+root@c7da805c5eb1:/workspace# python3 parse_details.py
+========================================
+QID: near-miss-04f3afa658fdef
+QID: near-miss-04f3afa658fdef
+QUESTION: The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND
+ if the label does not support it, and cite the section you searched.
+--- Passages found in block ---
+========================================
+QID: near-miss-0c6ec72416151f
+QID: near-miss-0c6ec72416151f
+QUESTION: The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND i
+f the label does not support it, and cite the section you searched.
+--- Passages found in block ---
+========================================
+QID: near-miss-bd69d0bfb1fc7d
+QID: near-miss-bd69d0bfb1fc7d
+QUESTION: The Acamprosate Calcium label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adjustment? Answer NOT_FOUND if t
+he label does not support it, and cite the section you searched.
+--- Passages found in block ---
+========================================
+QID: near-miss-d4ca1884aa8ab4
+QID: near-miss-d4ca1884aa8ab4
+QUESTION: The Acamprosate Calcium label discusses adverse reactions. Does it provide a supported recommendation for therapeutic drug monitoring target range? An
+swer NOT_FOUND if the label does not support it, and cite the section you searched.
+--- Passages found in block ---
+========================================
+QID: near-miss-52e5f8cac33c50
+QID: near-miss-52e5f8cac33c50
+QUESTION: The Acamprosate Calcium label discusses pediatric. Does it provide a supported recommendation for geriatric maximum cumulative lifetime dose? Answer N
+OT_FOUND if the label does not support it, and cite the section you searched.
+--- Passages found in block ---
+========================================
+QID: near-miss-5b5cb6a5249660
+QID: near-miss-5b5cb6a5249660
+QUESTION: The Acclean Chlorhexidine Gluconate 0.12% Oral Rinse label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adju
+stment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.
+--- Passages found in block ---
+root@c7da805c5eb1:/workspace#

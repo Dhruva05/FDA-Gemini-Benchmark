@@ -1,0 +1,14 @@
+{
+  "analysis": "I am in the interactive python shell. Let's run some searches.",
+  "plan": "I will run search('Paxlovid', 'drug interaction') and search('Paxlovid', '7 DRUG INTERACTIONS') to see the sections.",
+  "commands": [
+    {
+      "keystrokes": "search('Paxlovid', '7 DRUG INTERACTIONS')\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "search('Paxlovid', 'WARNING: SIGNIFICANT DRUG')\n",
+      "duration": 0.5
+    }
+  ]
+}

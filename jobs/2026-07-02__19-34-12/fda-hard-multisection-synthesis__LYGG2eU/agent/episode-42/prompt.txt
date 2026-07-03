@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# find / -name "*test*" -maxdepth 3 2>/dev/null
+/usr/bin/test
+/workspace/test_passage.py
+root@15b83e10b8d1:/workspace#

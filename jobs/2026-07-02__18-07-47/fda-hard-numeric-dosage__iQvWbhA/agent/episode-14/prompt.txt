@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# python3 -c "import json
+> l = json.loads(open('/workspace/data/public/labels.jsonl').readline())
+> def find_val(d, val, path=''):
+>     if isinstance(d, dict):
+>         for k, v in d.items():
+>             find_val(v, val, f'{path}.{k}' if path else k)
+>     elif isinstance(d, list):
+>         for i, v in enumerate(d):
+>             find_val(v, val, f'{path}[{i}]')
+>     elif isinstance(d, str):
+>         if val in d:
+>             print(f'Found in {path}: {d[:100]}...')
+> find_val(l, 'PASSAGE_0000')"
+Found in label_raw: ||PASSAGE_0000||
+1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with ot...
+root@371ed25b9fd3:/workspace#

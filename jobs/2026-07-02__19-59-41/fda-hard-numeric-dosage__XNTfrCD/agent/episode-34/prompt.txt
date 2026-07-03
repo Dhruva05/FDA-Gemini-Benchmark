@@ -1,0 +1,75 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lenalidomide':
+>             for i in range(25, 36):
+>                 print(f'=== PASSAGE_{i:04d} ===')
+>                 print(data['chunks'][i])
+>             break
+> "
+=== PASSAGE_0025 ===
+OR
+Falls below 1,000/mcL with an associated temperature at least 38.5°C
+=== PASSAGE_0026 ===
+Falls below 500/mcL
+If patient starting dose was 20 mg daily, resume lenalidomide at 5 mg less than the previous dose. Do not dose below 5 mg daily.
+If patient starting dose was 10 mg daily, resume at 5 mg less than previous dose. Do not dose below 2.5 mg daily.
+=== PASSAGE_0027 ===
+2.5 Dosage Modifications for Non-Hematologic Adverse Reactions
+For non-hematologic Grade 3/4 toxicities judged to be related to lenalidomide, hold treatment and restart at the physician's discretion at next lower dose level
+ when toxicity has resolved to Grade 2 or below.
+Permanently discontinue lenalidomide for angioedema, anaphylaxis, Grade 4 rash, skin exfoliation, bullae, or any other severe dermatologic reactions .
+=== PASSAGE_0028 ===
+2.6 Recommended Dosage for Patients with Renal Impairment
+The recommendations for dosing patients with renal impairment are shown in the following table .
+=== PASSAGE_0029 ===
+Renal Function
+
+                                       (Cockcroft-Gault)
+Dose in Lenalidomide Combination Therapy for MM and MCL
+Dose in Lenalidomide Combination Therapy for FL and MZL
+Dose in Lenalidomide Maintenance Therapy Following Auto-HSCT for MM and for MDS
+=== PASSAGE_0030 ===
+5 mg once daily
+CLcr below 30 mL/min (not requiring dialysis)
+=== PASSAGE_0031 ===
+CLcr below 30 mL/min (requiring dialysis)
+5 mg once daily. On dialysis days, administer the dose following dialysis.
+5 mg once daily. On dialysis days, administer the dose following dialysis.
+2.5 mg once daily. On dialysis days, administer the dose following dialysis.
+Lenalidomide Combination Therapy for MM: For CLcr of 30 to 60 mL/min, consider escalating the dose to 15 mg after 2 cycles if the patient tolerates the 10 mg do
+se of lenalidomide without dose-limiting toxicity.
+Lenalidomide Maintenance Therapy Following Auto-HSCT for MM and for MCL and MDS: Base subsequent lenalidomide dose increase or decrease on individual patient tr
+eatment tolerance .
+Lenalidomide Combination Therapy for FL or for MZL: For patients with CLcr of 30 to 60 mL/min, after 2 cycles, the lenalidomide dose may be increased to 15 mg o
+rally if the patient has tolerated therapy.
+=== PASSAGE_0032 ===
+2.7 Administration
+Advise patients to take lenalidomide orally at about the same time each day, either with or without food. Advise patients to swallow lenalidomide capsules whole
+ with water and not to open, break, or chew them.
+=== PASSAGE_0033 ===
+3 DOSAGE FORMS AND STRENGTHS
+Capsules:
+2.5 mg: Hard gelatin capsule with blue-green opaque cap and white opaque body; imprinted with “Biocon Logo” on the cap and “2.5 mg” on the body with black ink.
+5 mg: Hard gelatin capsule with white opaque cap and white opaque body; imprinted with “Biocon Logo” on the cap and “5 mg” on the body with black ink.
+10 mg: Hard gelatin capsule with blue-green opaque cap and pale yellow opaque body; imprinted with “Biocon Logo” on the cap and “10 mg” on the body with black i
+nk.
+15 mg: Hard gelatin capsule with powder blue opaque cap and white opaque body; imprinted with “Biocon Logo” on the cap and “15 mg” on the body with black ink.
+20 mg: Hard gelatin capsule with blue-green opaque cap and powder blue opaque body; imprinted with “Biocon Logo” on the cap and “20 mg” on the body with black i
+nk.
+25 mg: Hard gelatin capsule with white opaque body and white opaque cap imprinted with “Biocon Logo” on the cap and “25 mg” on the body with black ink.
+=== PASSAGE_0034 ===
+4.1 Pregnancy
+Lenalidomide can cause fetal harm when administered to a pregnant female. Limb abnormalities were seen in the offspring of monkeys that were dosed with lenalido
+mide during organogenesis. This effect was seen at all doses tested. Due to the results of this developmental monkey study, and lenalidomide's structural simila
+rities to thalidomide, a known human teratogen, lenalidomide is contraindicated in females who are pregnant . If this drug is used during pregnancy or if the pa
+tient becomes pregnant while taking this drug, the patient should be apprised of the potential risk to a fetus .
+=== PASSAGE_0035 ===
+4.2 Severe Hypersensitivity Reactions
+Lenalidomide is contraindicated in patients who have demonstrated severe hypersensitivity (e.g., angioedema, Stevens-Johnson syndrome, toxic epidermal necrolysi
+s) to lenalidomide .
+root@3d44031eb234:/workspace#

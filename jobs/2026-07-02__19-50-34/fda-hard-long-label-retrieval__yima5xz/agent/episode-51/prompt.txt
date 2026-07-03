@@ -1,0 +1,63 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > validate_answers.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {json.loads(line)['set_id']: json.loads(line) for line in f}
+>
+> with open('/workspace/answers.json') as f:
+>     answers_data = json.load(f)
+>
+> assert 'answers' in answers_data, "Missing 'answers' key"
+> answers = answers_data['answers']
+>
+> qids_expected = {q['qid'] for q in questions}
+> qids_actual = {a['qid'] for a in answers}
+>
+> assert qids_expected == qids_actual, f"Mismatch in QIDs. Expected: {qids_expected}, Actual: {qids_actual}"
+> assert len(answers) == len(questions), "Mismatch in length"
+>
+> for ans in answers:
+>     qid = ans['qid']
+>     status = ans.get('status')
+>     assert status in ['ANSWERED', 'NOT_FOUND'], f"Invalid status for {qid}: {status}"
+>
+>     for field in ['qid', 'status', 'answer', 'citations', 'structured_fields']:
+>         assert field in ans, f"Missing field '{field}' in answer {qid}"
+>
+>     citations = ans['citations']
+>     for cit in citations:
+>         for field in ['set_id', 'passage_id', 'section', 'supporting_quote']:
+>             assert field in cit, f"Missing field '{field}' in citation for {qid}"
+>
+>         set_id = cit['set_id']
+>         passage_id = cit['passage_id']
+>         quote = cit['supporting_quote']
+>
+>         assert set_id in labels, f"Unknown set_id {set_id} in citation for {qid}"
+>         label = labels[set_id]
+>
+>         m = re.match(r'^PASSAGE_(\d{4})$', passage_id)
+>         assert m, f"Invalid passage_id format: {passage_id} in citation for {qid}"
+>         idx = int(m.group(1))
+>
+>         assert idx < len(label['chunks']), f"Passage ID {passage_id} out of bounds for label {set_id} in citation for {qid}"
+>         chunk = label['chunks'][idx]
+>
+>         assert quote in chunk, f"Quote '{quote}' not found in passage {passage_id} for {qid}"
+>
+> print("All validations PASSED successfully!")
+> EOF
+root@b161fe3d96d1:/workspace# python3 validate_answers.py
+Traceback (most recent call last):
+  File "/workspace/validate_answers.py", line 49, in <module>
+    assert quote in chunk, f"Quote '{quote}' not found in passage {passage_id} for {qid}"
+           ^^^^^^^^^^^^^^
+AssertionError: Quote 'Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A... may
+ increase plasma concentrations of medications metabolized by CYP3A.' not found in passage PASSAGE_0013 for fbab4114f66e2dda
+root@b161fe3d96d1:/workspace#

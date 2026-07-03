@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! PASSAGE_0044 contains \"hepatic\"? Let's print the entire PASSAGE_0044 of Acamprosate Calcium.",
+  "plan": "I will print the full text of PASSAGE_0044 for Acamprosate Calcium.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"drug_name\"] == \"Acamprosate Calcium\":\n            print(data[\"chunks\"][44])\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

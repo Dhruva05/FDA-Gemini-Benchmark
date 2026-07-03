@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# python3 print_passages.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 PASSAGE_0106
+=== PASSAGE_0106 ===
+11 DESCRIPTION
+Lopinavir and Ritonavir Oral Solution USP is a co-formulation of lopinavir and ritonavir. Lopinavir is an inhibitor of the HIV-1 protease. As co-formulated in l
+opinavir and ritonavir, ritonavir inhibits the CYP3A-mediated metabolism of lopinavir, thereby providing increased plasma levels of lopinavir.
+Lopinavir is chemically designated as 1S-1R*,(R*), 3R*, 4R*]]-N-4-(2,6-dimethylphenoxy)acetyl]amino]-3-hydroxy-5-phenyl-1-(phenylmethyl)pentyl]tetrahydro-alpha-
+(1-methylethyl)-2-oxo-1(2H)-pyrimidineacetamide. Its molecular formula is C37H48N4O5, and its molecular weight is 628.80.  Lopinavir is a white to light tan pow
+der. It is freely soluble in methanol and ethanol, soluble in isopropanol and practically insoluble in water. Lopinavir has the following structural formula:
+Ritonavir is chemically designated as 10-hydroxy-2-methyl-5-(1-methylethyl)-1-2-(1-methylethyl)-4-thiazolyl]-3,6-dioxo-8,11-bis(phenylmethyl)-2,4,7,12-tetraazat
+ridecan-13-oic acid, 5-thiazolylmethyl ester, 5S-(5R*,8R*,10R*,11R*)].  Its molecular formula is C37H48N6O5S2, and its molecular weight is 720.95.  Ritonavir is
+ a white to light tan powder. It is freely soluble in methanol and ethanol, soluble in isopropanol and practically insoluble in water. Ritonavir has the followi
+ng structural formula:
+Lopinavir and ritonavir oral solution is available for oral administration as 80 mg lopinavir and 20 mg ritonavir per milliliter with the following inactive ing
+redients: bubble gum flavor, ethanol, glycerin, high fructose corn syrup, malic acid, polyoxyl 40 hydrogenated castor oil, povidone, propylene glycol, sodium hy
+droxide, sucralose, and water.
+Lopinavir and ritonavir oral solution contains approximately 42% (v/v) ethanol and approximately 15% (w/v) propylene glycol.
+========================================
+root@15b83e10b8d1:/workspace#

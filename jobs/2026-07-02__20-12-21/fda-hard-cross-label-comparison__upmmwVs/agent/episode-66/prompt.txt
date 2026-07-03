@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# rm -f explore_labels.py test_passage_id.py dump_labels.py display_questions.py extract_dosing.py get_full_chunks.py get_dosing_inf
+o.py print_all_chunks.py print_label_raw.py dump_all_labels_for_questions.py parse_all_questions.py read_details.py extract_by_question.py extract_specific_dosi
+ng.py print_q_dosing.py read_structured.py create_answers.py all_questions_chunks.txt all_details.txt clean_dosing.txt clean_dosing_structured.txt q*_details.tx
+t
+root@7e48d58e23f3:/workspace# ls -la /workspace
+total 24
+drwxr-xr-x 1 root root  4096 Jul  3 00:30 .
+drwxr-xr-x 1 root root  4096 Jul  3 00:12 ..
+-rw-r--r-- 1 root root 11297 Jul  3 00:17 answers.json
+drwxr-xr-x 3 root root  4096 Jul  2 20:40 data
+root@7e48d58e23f3:/workspace#

@@ -1,0 +1,8 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# python3 -c "import json; l = json.loads(open('/workspace/data/public/labels.jsonl').readline()); [print(f'PASSAGE_{i:04d}:\n{l["ch
+unks"][i]}\n' + '-'*50) for i in range(3, 12)]"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+NameError: name 'chunks' is not defined
+root@371ed25b9fd3:/workspace#

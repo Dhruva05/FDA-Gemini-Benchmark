@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The `label_raw` contains passages separated by markers like `||PASSAGE_0000||`! This is very clear! Let's see if the number of chunks matches the number of passages.",
+  "plan": "I will write a python script to verify if each passage starts with `||PASSAGE_####||`, parse the passages, and check if the chunks correspond to the text of the passages.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json, re\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        raw = data[\"label_raw\"]\n        passages = re.split(r\"\\|\\|(PASSAGE_\\d+)\\|\\|\", raw)\n        # passages[0] should be empty or whitespace\n        # passages[1] is PASSAGE_0000, passages[2] is the text, etc.\n        header = passages[0]\n        parsed_passages = {}\n        for i in range(1, len(passages), 2):\n            pid = passages[i]\n            text = passages[i+1].strip()\n            parsed_passages[pid] = text\n        print(data[\"drug_name\"], \"chunks length:\", len(data[\"chunks\"]), \"parsed passages length:\", len(parsed_passages))\n        # Check if they match\n        match = True\n        for i, chunk in enumerate(data[\"chunks\"]):\n            pid = f\"PASSAGE_{i:04d}\"\n            if pid not in parsed_passages:\n                match = False\n                print(f\"  Missing {pid} in parsed passages!\")\n                break\n            if chunk.strip() != parsed_passages[pid]:\n                match = False\n                print(f\"  Mismatch at {pid}!\")\n                print(\"Chunk:\", repr(chunk.strip()[:100]))\n                print(\"Parsed:\", repr(parsed_passages[pid][:100]))\n                break\n        if match:\n            print(f\"  All {len(data[\"chunks\"])} chunks match PASSAGE_0000 to PASSAGE_{len(data[\"chunks\"])-1:04d} exactly!\")\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > find_dosage.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in [json.loads(line) for line in f]}
+>
+> for set_id, label in labels.items():
+>     print("="*80)
+>     print(f"DRUG: {label['drug_name']} ({set_id})")
+>     print("="*80)
+>     # Let's find chunks whose heading or text contains 'DOSAGE AND ADMINISTRATION'
+>     for chunk in label['chunks']:
+>         text = chunk.get('text', '')
+>         heading = chunk.get('heading', '')
+>         passage_id = chunk.get('passage_id', '')
+>         # Let's check if 'dosage' or 'administration' is in heading or text
+>         if any(re.search(r'dosage|administration', str(x), re.IGNORECASE) for x in [heading, passage_id]):
+>             print(f"Passage ID: {passage_id} | Heading: {heading}")
+>             # print first 200 chars
+>             print(text[:300].replace('\n', ' '))
+>             print("-"*40)
+> EOF
+root@371ed25b9fd3:/workspace# python3 find_dosage.py > dosage_headings.txt
+Traceback (most recent call last):
+  File "/workspace/find_dosage.py", line 13, in <module>
+    text = chunk.get('text', '')
+           ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+root@371ed25b9fd3:/workspace# head -n 50 dosage_headings.txt
+================================================================================
+DRUG: Lopinavir-Ritonavir (4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85)
+================================================================================
+root@371ed25b9fd3:/workspace#

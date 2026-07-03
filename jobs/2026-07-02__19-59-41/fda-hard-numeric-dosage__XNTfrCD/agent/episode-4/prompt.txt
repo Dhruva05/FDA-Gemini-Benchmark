@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         chunks = data.get('chunks', [])
+>         print(data.get('drug_name'), len(chunks))
+>         if chunks:
+>             print('chunk keys:', chunks[0].keys())
+>             print('sample chunk:', chunks[0])
+> "
+Lopinavir-Ritonavir 188
+Traceback (most recent call last):
+  File "<string>", line 9, in <module>
+AttributeError: 'str' object has no attribute 'keys'
+root@3d44031eb234:/workspace#

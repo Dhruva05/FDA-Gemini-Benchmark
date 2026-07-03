@@ -1,0 +1,57 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > check_passages_mapping.py
+> import json
+> import re
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         raw = data.get('label_raw', '')
+>         chunks = data.get('chunks', [])
+>         passages = re.findall(r'\|\|PASSAGE_(\d{4})\|\|', raw)
+>         print('All passage IDs found in raw:', passages[:10], '...', passages[-10:])
+>         print('Count of passage IDs:', len(passages))
+>         parts = re.split(r'(\|\|PASSAGE_\d{4}\|\|)', raw)
+>         print('Length of parts list:', len(parts))
+>         mapped = {}
+>         for i in range(len(chunks)):
+>             chunk_stripped = chunks[i].strip()
+>             found = False
+>             for j in range(1, len(parts), 2):
+>                 pid = parts[j].replace('||', '')
+>                 content = parts[j+1].strip()
+>                 if chunk_stripped == content:
+>                     mapped[i] = pid
+>                     found = True
+>                     break
+>             if not found:
+>                 for j in range(1, len(parts), 2):
+>                     pid = parts[j].replace('||', '')
+>                     content = parts[j+1].strip()
+>                     if chunk_stripped in content or content in chunk_stripped:
+>                         mapped[i] = (pid, 'partial')
+>                         found = True
+>                         break
+>             if not found:
+>                 mapped[i] = None
+>         print('Mapping for first 10 chunks:')
+>         for i in range(10):
+>             print(f'Chunk {i}: {mapped.get(i)}')
+> EOF
+root@b161fe3d96d1:/workspace# python3 check_passages_mapping.py
+All passage IDs found in raw: ['0000', '0001', '0002', '0003', '0004', '0005', '0006', '0007', '0008', '0009'] ... ['0199', '0200', '0201', '0202', '0203', '020
+4', '0205', '0206', '0207', '0208']
+Count of passage IDs: 209
+Length of parts list: 419
+Mapping for first 10 chunks:
+Chunk 0: PASSAGE_0000
+Chunk 1: PASSAGE_0001
+Chunk 2: PASSAGE_0002
+Chunk 3: PASSAGE_0003
+Chunk 4: PASSAGE_0004
+Chunk 5: PASSAGE_0005
+Chunk 6: PASSAGE_0006
+Chunk 7: PASSAGE_0007
+Chunk 8: PASSAGE_0008
+Chunk 9: PASSAGE_0009
+root@b161fe3d96d1:/workspace#

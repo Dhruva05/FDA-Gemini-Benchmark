@@ -1,0 +1,11 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# find . -maxdepth 3
+.
+./explore.py
+./data
+./data/public
+./data/public/README.md
+./data/public/questions.jsonl
+./data/public/labels.jsonl
+root@3646eb22abe5:/workspace#

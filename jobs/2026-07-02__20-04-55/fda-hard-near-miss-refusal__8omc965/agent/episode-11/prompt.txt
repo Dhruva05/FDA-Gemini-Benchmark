@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Expecting ',' delimiter: line 6 column 1133 (char 1491) | Content preview: '{\n  "analysis": "Let\'s write a python script to inspect all chunks for each label in full, so we can'...
+
+Please fix these issues and provide a proper JSON response.

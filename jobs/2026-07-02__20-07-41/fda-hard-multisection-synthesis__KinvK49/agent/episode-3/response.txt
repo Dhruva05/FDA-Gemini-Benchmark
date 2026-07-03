@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! Let's see the structure of a single chunk in `chunks`. Is it a string or a dictionary?",
+  "plan": "I will run a python script to inspect the type of the elements in `chunks` and see if they have keys like `passage_id`, `text`, `section` etc.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); line=f.readline(); data=json.loads(line); print(type(data['chunks'][0])); print(data['chunks'][0])\"\n",
+      "duration": 0.5
+    }
+  ]
+}

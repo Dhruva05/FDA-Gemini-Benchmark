@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a parsing error because of single quotes or nested quotes in the analysis block. I will avoid using single or double quote nesting in the analysis and plan blocks.",
+  "plan": "I will run a python script to inspect the headings of Paxlovid chunks to find relevant passages for Warnings, Contraindications, and Drug Interactions.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        obj = json.loads(line)\n        if obj['drug_name'] == 'Paxlovid':\n            for i, chunk in enumerate(obj['chunks']):\n                if i < 20 or any(x in chunk for x in ['5.1', '5.2', '5.3', '5.4', '6.1', '7.1', 'CONTRAINDICATIONS']):\n                    print(f'PASSAGE_{i:04d}: {chunk[:150]}...')\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

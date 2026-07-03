@@ -1,0 +1,10 @@
+{
+  "analysis": "Excellent! For ACETAZOLAMIDE EXTENDED-RELEASE (8e396b27-b44a-4aa9-805b-086395444b5f):\n- Dose or strength: 500 mg capsules (PASSAGE_0017 / PASSAGE_0019).\n- Route: oral (implied by \"capsules\").\n- Frequency: twice daily (1 capsule in the morning and 1 in the evening) for glaucoma (PASSAGE_0017). For Acute Mountain Sickness: 500 mg to 1000 mg daily in divided doses (PASSAGE_0018).\n- Population: adults and children 12 years of age and older (safety and effectiveness not established in pediatric patients below 12 years in PASSAGE_0013).\n- Maximum daily dose: 1 g (2 capsules) daily for glaucoma (dosage in excess of 2 capsules does not produce increased effect, PASSAGE_0017), or 1000 mg daily for Acute Mountain Sickness (PASSAGE_0018).\n\nFor Actoplus Met (42e49120-6f3f-11db-9fe1-0800200c9a66):\n- Dose or strength: 15 mg pioglitazone and 850 mg metformin hydrochloride (HCl) per tablet (PASSAGE_0004 / PASSAGE_0179). Starting dose based on current regimen (PASSAGE_0005).\n- Route: oral (implied by \"tablets\", \"take with meals\", PASSAGE_0004).\n- Frequency: start based on regimen, take with meals (PASSAGE_0004). If divided dose is used, up to three times a day (PASSAGE_0006).\n- Population: adults with type 2 diabetes (PASSAGE_0175). Not recommended for use in children under 18 (PASSAGE_0175).\n- Maximum daily dose: three tablets per day (totaling 45 mg pioglitazone and 2,550 mg metformin HCl) (PASSAGE_0006). For concomitant use with gemfibrozil or other strong CYP2C8 inhibitors, maximum is 1 tablet once daily (PASSAGE_0009).\n\nNow let's check Question 5:\n`Acyclovir vs Acyclovir suspension`\nLet's view its candidates.",
+  "plan": "I will write a python script to view the candidate passages for Question 5.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > view_q5.py\nwith open('full_candidates.txt') as f:\n    text = f.read()\nparts = text.split(\"==================== QUESTION:\")\nfor p in parts:\n    if \"cross-893c71f570b542\" in p:\n        print(p)\nEOF\npython3 view_q5.py\n",
+      "duration": 1.0
+    }
+  ]
+}

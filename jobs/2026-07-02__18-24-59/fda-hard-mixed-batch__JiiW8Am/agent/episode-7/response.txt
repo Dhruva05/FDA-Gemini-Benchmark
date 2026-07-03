@@ -1,0 +1,10 @@
+{
+  "analysis": "So `label_raw` is divided by `||PASSAGE_####||\\n`. Let's verify if there is any section name or header in these passages. Wait, in some labels, sections are indicated inside the passages, e.g., \"Uses\" or \"1 INDICATIONS AND USAGE\". Let's write a script to parse the `label_raw` into structured passages with section headers if possible, or see if we can extract section headers. Let's inspect the first few passages of Acamprosate Calcium or Paxlovid to see if they have section headers.",
+  "plan": "I will inspect the first few passages of Acamprosate Calcium to understand section headers.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        obj = json.loads(line)\n        if obj[\"drug_name\"] == \"Acamprosate Calcium\":\n            print(obj[\"label_raw\"][:1500])\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

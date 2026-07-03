@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at `365 Whole Foods Market Loratadine` (bba4e7c8-db8e-4522-915c-48ee809e3bce). Why is there no passage with directions? Wait, let's print all passages of `bba4e7c8-db8e-4522-915c-48ee809e3bce` and search for \"children\" or \"tablet\" or \"10 mg\" or \"24 hours\" to see if we missed any chunks or if some chunks were omitted. Ah, let's write a python script to search for \"10\" or \"adults\" or any other words in `bba4e7c8-db8e-4522-915c-48ee809e3bce`.",
+  "plan": "I will write a python script to inspect all chunks of `bba4e7c8-db8e-4522-915c-48ee809e3bce` to see if there is any dosing/directions chunk, or if it is missing.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_q1_l2.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        l = json.loads(line)\n        if l['set_id'] == 'bba4e7c8-db8e-4522-915c-48ee809e3bce':\n            for i, chunk in enumerate(l['chunks']):\n                print(f\"PASSAGE_{i:04d}: {repr(chunk)}\")\nEOF\npython3 print_q1_l2.py\n",
+      "duration": 1.0
+    }
+  ]
+}

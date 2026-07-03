@@ -1,0 +1,7 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); [print(obj['drug_name'], obj['set_id']) for obj in (json.l
+oads(line) for line in f)]"
+Paxlovid 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+Lopinavir-Ritonavir 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85
+root@b9fc21343844:/workspace#

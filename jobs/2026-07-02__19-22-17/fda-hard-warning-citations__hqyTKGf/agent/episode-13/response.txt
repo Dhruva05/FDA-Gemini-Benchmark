@@ -1,0 +1,10 @@
+{
+  "analysis": "Excellent! The mapping is indeed 1-to-1: `chunks[i]` corresponds to `PASSAGE_{i:04d}`.",
+  "plan": "Now let's look at the questions and design a script that can help us answer them accurately. Let's see what the questions are again.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; [print(json.loads(line)['question']) for line in open('/workspace/data/public/questions.jsonl')]\"\n",
+      "duration": 0.5
+    }
+  ]
+}

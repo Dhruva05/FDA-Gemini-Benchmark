@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 53 (char 54) | Content preview: '{\n  "analysis": "So `PASSAGE_0021` introduces Table 2.\nWait, let\'s look at the next few passages (`P'...
+
+Please fix these issues and provide a proper JSON response.

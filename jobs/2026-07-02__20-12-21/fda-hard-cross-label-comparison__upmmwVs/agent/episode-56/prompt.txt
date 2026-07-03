@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 76 (char 77) | Content preview: '{\n  "analysis": "Aha! For Acyclovir (`dcc29902-1fe6-4713-947e-335503959464`):\n- `PASSAGE_0008`: \\"80'...
+
+Please fix these issues and provide a proper JSON response.

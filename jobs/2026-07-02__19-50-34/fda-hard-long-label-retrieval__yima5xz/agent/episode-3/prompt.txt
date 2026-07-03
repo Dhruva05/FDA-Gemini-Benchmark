@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 6 column 35 (char 744) | Content preview: '{\n  "analysis": "Wait, the questions.jsonl file contains 8 questions, but let\'s check if there are a'...
+
+Please fix these issues and provide a proper JSON response.

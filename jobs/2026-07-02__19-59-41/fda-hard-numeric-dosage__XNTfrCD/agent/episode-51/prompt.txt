@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 135 (char 136) | Content preview: '{\n  "analysis": "The script executed successfully! All quotes and passage IDs were verified against '...
+
+Please fix these issues and provide a proper JSON response.

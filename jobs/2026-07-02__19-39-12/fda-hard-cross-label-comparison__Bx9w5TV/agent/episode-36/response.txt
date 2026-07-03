@@ -1,0 +1,11 @@
+{
+  "analysis": "Wait, let's look at PASSAGE_0009 of Actoplus Met: 'The maximum recommended dosage of ACTOPLUS MET is one tablet (15 mg of pioglitazone and 850 mg of metformin HCl) once daily when used in combination with gemfibrozil...'
+Wait, is there another passage with the general maximum recommended dosage? Let's search for \"maximum recommended dosage\" or \"maximum daily dose\" in Actoplus Met. Let's write a python script to search for \"maximum recommended dosage\" or \"maximum dosage\" or \"maximum\" in Actoplus Met.",
+  "plan": "Let's run a python script to search for maximum dosage information in Actoplus Met.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"set_id\"] == \"42e49120-6f3f-11db-9fe1-0800200c9a66\":\n            for i, c in enumerate(data[\"chunks\"]):\n                if \"maximum recommended dosage\" in c.lower() or \"maximum dosage\" in c.lower() or \"maximum dose\" in c.lower():\n                    print(f\"PASSAGE_{i:04d}: {repr(c)}\")\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

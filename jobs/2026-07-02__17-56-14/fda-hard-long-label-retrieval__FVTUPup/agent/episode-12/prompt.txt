@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     for line in f:
+>         q = json.loads(line)
+>         print(q.get('qid'), q.get('question'), q.keys())
+> "
+b2531657ba5c7a78 What important drug interactions are noted for Paxlovid? dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_t
+ype'])
+6f12607a1ba14dd5 Which medications should be avoided with Paxlovid? dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+fbab4114f66e2dda What important warnings or precautions are associated with Paxlovid? dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_
+id', 'task_type'])
+2d63e0a82215867f What safety risks are listed for Paxlovid? dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+cf74a5a8ac9b19de What are the contraindications for Paxlovid? dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+c4dc176c4827f0ef Who should not take Paxlovid? dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+000ecd1d6df50389 What is the recommended dosage regimen of Paxlovid? dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type']
+)
+b54c25890c1ae3a6 How should Paxlovid be administered? dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+root@2635f56baf2a:/workspace#

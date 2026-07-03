@@ -1,0 +1,14 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+>             has_tablet = any('tablet' in chunk.lower() for chunk in data['chunks'])
+>             print('Lopinavir-Ritonavir has tablet:', has_tablet)
+>             break
+> "
+Lopinavir-Ritonavir has tablet: True
+root@3d44031eb234:/workspace#

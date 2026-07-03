@@ -1,0 +1,5 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 314 (char 315) | Content preview: '{\n  "analysis": "This is very interesting! Lopinavir and ritonavir oral solution must be taken with '...
+WARNINGS: - Extra text detected after JSON object
+
+Please fix these issues and provide a proper JSON response.

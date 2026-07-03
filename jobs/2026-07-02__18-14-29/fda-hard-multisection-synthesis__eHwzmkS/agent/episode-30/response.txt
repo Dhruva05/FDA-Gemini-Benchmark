@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no control characters are present in the JSON. I will write a python script `search_all.py` to search for relevant passages for each of the 8 questions and display potential matches.",
+  "plan": "I will create a python script `search_all.py` using `cat << 'EOF'` and run it.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > search_all.py\nimport json, re\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = {l['set_id']: l for l in [json.loads(line) for line in f]}\n\nwith open('/workspace/data/public/questions.jsonl') as f:\n    questions = [json.loads(line) for line in f]\n\nfor q in questions:\n    print(f\"QID: {q['qid']} | Drug: {q['drug_name']} | Question: {q['question']}\")\n    set_id = q['set_id']\n    label = labels[set_id]\n    \n    keywords = []\n    q_lower = q['question'].lower()\n    if 'interaction' in q_lower:\n        keywords = ['interaction', 'contraindication']\n    elif 'avoid' in q_lower:\n        keywords = ['avoid', 'contraindication', 'interaction']\n    elif 'administer' in q_lower:\n        keywords = ['administration', 'dosage', 'how to']\n    elif 'dosage' in q_lower or 'dose' in q_lower:\n        keywords = ['dosage', 'administration', 'regimen']\n    elif 'safety' in q_lower or 'risk' in q_lower:\n        keywords = ['warning', 'precaution', 'adverse', 'risk', 'safety']\n    elif 'warning' in q_lower or 'precaution' in q_lower:\n        keywords = ['warning', 'precaution']\n\n    print(\"Matches:\")\n    for i, chunk in enumerate(label['chunks']):\n        for kw in keywords:\n            if re.search(r'\\b' + kw + r'\\b', chunk, re.IGNORECASE):\n                first_line = chunk.strip().split('\\n')[0]\n                if len(first_line) < 100:\n                    print(f\"  PASSAGE_{i:04d}: {first_line}\")\n                break\n    print()\nEOF\npython3 search_all.py\n",
+      "duration": 1.5
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at the label of Acyclovir (dcc29902-1fe6-4713-947e-335503959464). It has 12 chunks (0 to 11). Let's write a python script to inspect all 12 chunks of Acyclovir (dcc29902-1fe6-4713-947e-335503959464) in detail, because it seems some of them are quite short or we need to find if there are any dosing instructions.",
+  "plan": "I will write a python script to print all 12 passages of dcc29902-1fe6-4713-947e-335503959464.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > view_acyclovir_raw.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        l = json.loads(line)\n        if l['set_id'] == 'dcc29902-1fe6-4713-947e-335503959464':\n            for i, c in enumerate(l['chunks']):\n                print(f\"PASSAGE_{i:04d}: {repr(c)}\")\nEOF\npython3 view_acyclovir_raw.py\n",
+      "duration": 1.0
+    }
+  ]
+}

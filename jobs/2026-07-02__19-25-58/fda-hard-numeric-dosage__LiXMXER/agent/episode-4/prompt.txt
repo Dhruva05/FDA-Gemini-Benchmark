@@ -1,0 +1,40 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > inspect_labels.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for i, line in enumerate(f):
+>         data = json.loads(line)
+>         print(f"Line {i}: drug_name={data.get('drug_name')}, set_id={data.get('set_id')}")
+>         chunks = data['chunks']
+>         print(f"  Type of chunks: {type(chunks)}, length: {len(chunks)}")
+>         if len(chunks) > 0:
+>             print(f"  First chunk type: {type(chunks[0])}")
+>             print(f"  First chunk (first 200 chars): {str(chunks[0])[:200]}")
+> EOF
+root@af996c5fe492:/workspace# python3 inspect_labels.py
+Line 0: drug_name=Lopinavir-Ritonavir, set_id=4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85
+  Type of chunks: <class 'list'>, length: 188
+  First chunk type: <class 'str'>
+  First chunk (first 200 chars): 1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in adults and pediatric patients 14 da
+ys and older.
+Li
+Line 1: drug_name=Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate, set_id=d9a4185e-43fa-4aeb-9b0f-8db01b166038
+  Type of chunks: <class 'list'>, length: 167
+  First chunk type: <class 'str'>
+  First chunk (first 200 chars): WARNING: POSTTREATMENT ACUTE EXACERBATION OF HEPATITIS B
+Severe acute exacerbations of hepatitis B virus (HBV) have been reported in patients who are coinfected with HBV and HIV-1 and have discontinue
+Line 2: drug_name=CELECOXIB, set_id=27f17ae7-939b-402e-9498-3b6611104089
+  Type of chunks: <class 'list'>, length: 153
+  First chunk type: <class 'str'>
+  First chunk (first 200 chars): WARNING: RISK OF SERIOUS CARDIOVASCULAR AND GASTROINTESTINAL EVENTS
+Cardiovascular Thrombotic Events
+- Nonsteroidal anti-inflammatory drugs (NSAIDs) cause an increased risk of serious cardiovascular t
+Line 3: drug_name=Lenalidomide, set_id=ed7a3099-ce31-4865-b212-358d9ff6261b
+  Type of chunks: <class 'list'>, length: 143
+  First chunk type: <class 'str'>
+  First chunk (first 200 chars): WARNING: EMBRYO-FETAL TOXICITY, HEMATOLOGIC TOXICITY, and VENOUS and ARTERIAL THROMBOEMBOLISM
+Embryo-Fetal Toxicity
+Do not use lenalidomide during pregnancy. Lenalidomide, a thalidomide analogue, caus
+root@af996c5fe492:/workspace#

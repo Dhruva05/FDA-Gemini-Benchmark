@@ -1,0 +1,7 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0009
+=== PASSAGE_0009 ===
+Days 2-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) once daily
+root@2635f56baf2a:/workspace#

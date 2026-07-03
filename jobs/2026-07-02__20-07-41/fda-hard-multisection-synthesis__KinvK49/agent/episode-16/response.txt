@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a control character error. I will make sure not to include any literal control characters or unescaped newlines in the JSON strings.",
+  "plan": "I will run the env command to check for any environment variables.",
+  "commands": [
+    {
+      "keystrokes": "env\n",
+      "duration": 0.5
+    }
+  ]
+}

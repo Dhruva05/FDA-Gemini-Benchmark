@@ -1,0 +1,115 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > print_raw_labels.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print("="*80)
+>         print("Drug:", label['drug_name'])
+>         print(label['label_raw'][:2000])
+> EOF
+root@0ef79956d710:/workspace# python3 print_raw_labels.py
+================================================================================
+Drug: 12HR Allergy Relief
+||PASSAGE_0000||
+Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+
+||PASSAGE_0001||
+Do not use if you have ever had an allergic reaction to this product or any of its ingredients.
+
+||PASSAGE_0002||
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+
+||PASSAGE_0003||
+- do not take more than directed
+- do not take at the same time as aluminum or magnesium antacids
+- do not take with fruit juices
+
+||PASSAGE_0004||
+Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek medical help right away.
+
+||PASSAGE_0005||
+If pregnant or breast-feeding, ask a health professional before use.
+
+||PASSAGE_0006||
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+
+||PASSAGE_0007||
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+
+||PASSAGE_0008||
+do not use
+adults 65 years of age and older
+
+||PASSAGE_0009||
+- store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete product information and warnings
+
+||PASSAGE_0010||
+colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, iron oxide yellow, lactose monohydrate, macrogol, magnesium st
+earate, microcrystalline cellulose, pregelatinized starch, titanium dioxide
+
+||PASSAGE_0011||
+Antihistamine
+Indoor/Outdoor Relief of:
+
+||PASSAGE_0012||
+Actual Size
+COMPARE TO ALLEGRA® 12 HOUR ALLERGY active ingredient*
+================================================================================
+Drug: Acamprosate Calcium
+||PASSAGE_0000||
+1 INDICATIONS AND USAGE
+Acamprosate calcium delayed-release tablets are indicated for the maintenance of abstinence from alcohol in patients with alcohol dependence who are abstinent a
+t treatment initiation. Treatment with acamprosate calcium delayed-release tablets should be part of a comprehensive management program that includes psychosoci
+al support.
+The efficacy of acamprosate calcium delayed-release tablets in promoting abstinence has not been demonstrated in subjects who have not undergone detoxification
+and not achieved alcohol abstinence prior to beginning acamprosate calcium delayed-release tablets treatment. The efficacy of acamprosate calcium delayed-releas
+e tablets in promoting abstinence from alcohol in polysubstance abusers has not been adequately assessed.
+
+||PASSAGE_0001||
+2 DOSAGE AND ADMINISTRATION
+The recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should total 666 mg) taken three times daily. A lower dose
+may be effective in some patients.
+Although dosing may be done without regard to meals, dosing with meals was employed during clinical trials and is suggested in those patients who regularly eat
+three meals daily.
+Treatment with acamprosate calcium delayed-release tablets should be initiated as soon as possible after the period of alcohol withdrawal, when the patient has
+achieved abstinence, and should be maintained if the patient relapses. Acamprosate calcium delayed-release tablets should be used as part of a comprehensive psy
+chosocial treatment program.
+
+||PASSAGE_0002||
+2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommend
+ed. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+
+||PASSAGE_0003||
+3 DOSAGE FORMS AND STRENGTHS
+Acamprosate calcium delayed-
+================================================================================
+Drug: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+||PASSAGE_0000||
+untitled
+ACCLEAN is an oral rinse containing 0.12% chlorhexidine gluconate (1,1’-hexamethylene bis 5-(p-chlorphenyl) biguanide]di-D-gluconate) in a base containing water
+, 11.6% alcohol, glycerin, PEG-40 sorbitan diisostearate, flavor, sodium saccharin and FD&C Blue No. 1. Chlorhexidine gluconate product is a near neutral soluti
+on (pH range 5-7). Chlorhexidine gluconate is a salt of chlorhexidine and gluconic acid. Its chemical structure is:
+
+||PASSAGE_0001||
+ACCLEAN chlorhexidine gluconate oral rinse provides antimicrobial activity during oral rinsing. The clinical significance of chlorhexidine gluconate oral rinse’
+s antimicrobial activities is not clear. Microbiological sampling of plaque has shown a general reduction of counts of certain assayed bacteria, both aerobic an
+d anaerobic, ranging from 54–97% through six months use.
+Use of chlorhexidine gluconate oral rinse in a six month clinical study did not result in any significant changes in bacterial resistance, overgrowth of potenti
+ally opportunistic organisms or other adverse changes in the oral microbial ecosystem. Three months after chlorhexidine gluconate oral rinse use was discontinue
+d, the number of bacteria in plaque had returned to baseline levels and resistance of plaque bacteria to chlorhexidine gluconate was equal to that at baseline.
+Pharmacokinetics: Pharmacokinetic studies with chlorhexidine gluconate oral rinse indicate approximately 30% of the active ingredient, chlorhexidine gluconate,
+is retained in the oral cavity following rinsing. This retained drug is slowly released into the oral fluids. Studies conducted on human subjects and animals de
+monstrate chlorhexidine gluconate is poorly absorbed from the gastrointestinal tract. The mean plasma level of chlorhexidine gluconate reached a peak of 0
+.206 mcg/g in humans 30 minutes after they ingested a 300-mg dose of the drug. Detectable levels of chlorhexidine gluconate were not present in the plasma of th
+ese subjects 12 hours after
+root@0ef79956d710:/workspace#

@@ -1,0 +1,57 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > parse_lopinavir.py
+> with open('Lopinavir-Ritonavir_chunks.txt') as f:
+>     text = f.read()
+>     print(text[:3000])
+> EOF
+root@af996c5fe492:/workspace# python3 parse_lopinavir.py
+=== CHUNK 0 (PASSAGE_0000) ===
+1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in adults and pediatric patients 14 da
+ys and older.
+Limitations of Use:
+- Genotypic or phenotypic testing and/or treatment history should guide the use of lopinavir and ritonavir. The number of baseline lopinavir resistance-associat
+ed substitutions affects the virologic response to lopinavir and ritonavir
+Genotypic or phenotypic testing and/or treatment history should guide the use of lopinavir and ritonavir. The number of baseline lopinavir resistance-associated
+ substitutions affects the virologic response to lopinavir and ritonavir .
+
+=== CHUNK 1 (PASSAGE_0001) ===
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+
+=== CHUNK 2 (PASSAGE_0002) ===
+2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be us
+ed for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+
+=== CHUNK 3 (PASSAGE_0003) ===
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V
+, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V,
+V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+
+=== CHUNK 4 (PASSAGE_0004) ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+
+=== CHUNK 5 (PASSAGE_0005) ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage rec
+ommendations for tw
+root@af996c5fe492:/workspace#

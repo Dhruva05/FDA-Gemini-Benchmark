@@ -1,0 +1,96 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# python3 search_labels.py 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a "contraindicated"
+=== Searching in Paxlovid (8a99d6d6-fd9e-45bb-b1bf-48c7f761232a) for ['contraindicated'] ===
+PASSAGE_0012 (Heading: 4 CONTRAINDICATIONS):
+  PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic
+  PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are
+----------------------------------------
+PASSAGE_0013 (Heading: 5.1      Risk of Serious Adverse Reactions Due to Drug ):
+  Prior to prescribing PAXLOVID, review all medications taken by the patient to assess potential drug-drug interactions an
+----------------------------------------
+PASSAGE_0019 (Heading: 7.1      Potential for PAXLOVID to Affect Other Drugs):
+  PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and
+----------------------------------------
+PASSAGE_0021 (Heading: 7.3      Established and Other Potentially Significant ):
+  Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed i
+----------------------------------------
+PASSAGE_0022 (Heading: ↑ alfuzosin):
+  Co-administration contraindicated due to potential hypotension .
+----------------------------------------
+PASSAGE_0024 (Heading: ↑ ranolazine):
+  Co-administration contraindicated due to potential for serious and/or life-threatening reactions .
+----------------------------------------
+PASSAGE_0025 (Heading: ↑ antiarrhythmic):
+  Co-administration contraindicated due to potential for cardiac arrhythmias .
+----------------------------------------
+PASSAGE_0027 (Heading: ↓ nirmatrelvir/ritonavir):
+  Co-administration contraindicated due to potential loss of virologic response and possible resistance .
+----------------------------------------
+PASSAGE_0034 (Heading: ↓ nirmatrelvir/ritonavir):
+  Co-administration contraindicated due to potential loss of virologic response and possible resistance .
+----------------------------------------
+PASSAGE_0041 (Heading: ↑ colchicine):
+  Co-administration contraindicated due to potential for serious and/or life-threatening reactions in patients with renal
+----------------------------------------
+PASSAGE_0045 (Heading: ↓ nirmatrelvir/ritonavir):
+  Co-administration contraindicated due to potential loss of virologic response and possible resistance. Alternate antimyc
+----------------------------------------
+PASSAGE_0048 (Heading: ↑ lurasidone↑ pimozide):
+  Co-administration contraindicated due to serious and/or life-threatening reactions such as cardiac arrhythmias .
+----------------------------------------
+PASSAGE_0051 (Heading: ↑ silodosin):
+  Co-administration contraindicated due to potential for postural hypotension .
+----------------------------------------
+PASSAGE_0054 (Heading: ↑ eplerenone):
+  Co-administration with eplerenone is contraindicated due to potential for hyperkalemia .
+----------------------------------------
+PASSAGE_0055 (Heading: ↑ ivabradine):
+  Co-administration with ivabradine is contraindicated due to potential for bradycardia or conduction disturbances .
+----------------------------------------
+PASSAGE_0059 (Heading: ↓ nirmatrelvir/ritonavir):
+  Co-administration contraindicated due to potential loss of virologic response and possible resistance .
+----------------------------------------
+PASSAGE_0063 (Heading: ↑ dihydroergotamine↑ ergotamine↑ methylergonovine):
+  Co-administration contraindicated due to potential for acute ergot toxicity characterized by vasospasm and ischemia of t
+----------------------------------------
+PASSAGE_0068 (Heading: ↓ nirmatrelvir/ritonavir):
+  Co-administration contraindicated due to potential loss of virologic response and possible resistance .
+----------------------------------------
+PASSAGE_0069 (Heading: ↑ lovastatin↑ simvastatin):
+  Co-administration contraindicated due to potential for myopathy including rhabdomyolysis .
+----------------------------------------
+PASSAGE_0072 (Heading: ↑ voclosporin):
+  Co-administration contraindicated due to potential for acute and/or chronic nephrotoxicity .
+----------------------------------------
+PASSAGE_0079 (Heading: ↑ lomitapide):
+  Co-administration contraindicated due to potential for hepatotoxicity and gastrointestinal adverse reactions .
+----------------------------------------
+PASSAGE_0080 (Heading: ↑ eletriptan):
+  Co-administration of eletriptan within at least 72 hours of PAXLOVID is contraindicated due to potential for serious adv
+----------------------------------------
+PASSAGE_0081 (Heading: ↑ ubrogepant):
+  Co-administration of ubrogepant with PAXLOVID is contraindicated due to potential for serious adverse reactions .
+----------------------------------------
+PASSAGE_0083 (Heading: ↑ finerenone):
+  Co-administration contraindicated due to potential for serious adverse reactions including hyperkalemia, hypotension, an
+----------------------------------------
+PASSAGE_0089 (Heading: ↑ naloxegol):
+  Co-administration contraindicated due to the potential for opioid withdrawal symptoms .
+----------------------------------------
+PASSAGE_0090 (Heading: ↑ sildenafil):
+  Co-administration of sildenafil with PAXLOVID is contraindicated for use in pulmonary hypertension due to the potential
+----------------------------------------
+PASSAGE_0095 (Heading: ↑ triazolam↑ midazolam):
+  Co-administration contraindicated due to potential for extreme sedation and respiratory depression .
+----------------------------------------
+PASSAGE_0098 (Heading: ↑ flibanserin):
+  Co-administration contraindicated due to potential for hypotension, syncope, and CNS depression .
+----------------------------------------
+PASSAGE_0099 (Heading: ↑ tolvaptan):
+  Co-administration contraindicated due to potential for dehydration, hypovolemia and hyperkalemia .
+----------------------------------------
+PASSAGE_0173 (Heading: Drug Interactions):
+  Inform patients that PAXLOVID may interact with certain drugs and is contraindicated for use with certain drugs; therefo
+----------------------------------------
+root@15b83e10b8d1:/workspace#

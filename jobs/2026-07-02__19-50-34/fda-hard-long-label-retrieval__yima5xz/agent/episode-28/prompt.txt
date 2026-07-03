@@ -1,0 +1,55 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# sed -n '50,100p' outline.txt
+049: ↑ quetiapine
+050: ↑ clozapine
+051: ↑ silodosin
+052: ↑ calcium channel blocker
+053: ↑ digoxin
+054: ↑ eplerenone
+055: ↑ ivabradine
+056: aliskiren,ticagrelor,vorapaxar
+057: ↑ cilostazol
+058: ↑ corticosteroid
+059: ↓ nirmatrelvir/ritonavir
+060: ↑ ivacaftor↑ elexacaftor/tezacaftor/ivacaftor
+061: ↑ saxagliptin
+062: ↑ bosentan↓ nirmatrelvir/ritonavir
+063: ↑ dihydroergotamine↑ ergotamine↑ methylergonovine
+064: ↑ antiviral
+065: glecaprevir/pibrentasvir
+066: ombitasvir/paritaprevir/ ritonavir and dasabuvir
+067: sofosbuvir/velpatasvir/ voxilaprevir
+068: ↓ nirmatrelvir/ritonavir
+069: ↑ lovastatin↑ simvastatin
+070: ↑ atorvastatin
+071: ↓ ethinyl estradiol
+072: ↑ voclosporin
+073: Immunosuppressants
+074: ↑ cyclosporine↑ tacrolimus
+075: ↑ everolimus↑ sirolimus
+076: ↑ tofacitinib
+077: ↑ upadacitinib
+078: ↑ salmeterol
+079: ↑ lomitapide
+080: ↑ eletriptan
+081: ↑ ubrogepant
+082: ↑ rimegepant
+083: ↑ finerenone
+084: ↑ darifenacin
+085: ↑ fentanyl↑ hydrocodone↑ oxycodone↑ meperidine
+086: ↓ methadone
+087: ↑ suvorexant
+088: aripiprazole,brexpiprazole,cariprazine,iloperidone,lumateperone,pimavanserin
+089: ↑ naloxegol
+090: ↑ sildenafil
+091: ↑ tadalafil
+092: ↑ riociguat
+093: ↑ avanafil
+094: ↑ sildenafil↑ tadalafil↑ vardenafil
+095: ↑ triazolam↑ midazolam
+096: ↑ sedative/hypnotic
+097: ↑ midazolam
+098: ↑ flibanserin
+099: ↑ tolvaptan
+root@b161fe3d96d1:/workspace#

@@ -1,0 +1,12 @@
+{
+  "analysis": "Wait, the task description says:\n"
+              "\"Each citation must use a `set_id` from the relevant label and a real `PASSAGE_####` passage ID from that same label.\"\n"
+              "How are passage IDs represented in the chunks? Let's check if the list of chunks has indices or if there is another field, or if the index corresponds to passage ID, e.g. chunk 0 is `PASSAGE_0000`? Or maybe the strings inside `chunks` contain passage IDs? Or maybe the passage ID is just formatting, e.g. `PASSAGE_0000`, `PASSAGE_0001` based on the index of the chunk in the list? Let's print the first few chunks of the first label to see if they have passage IDs embedded, or if they are just raw text.",
+  "plan": "Print the first 5 chunks of the first label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); l=json.loads(f.readline()); [print(f'Chunk {i}: {c[:150]}...') for i, c in enumerate(l['chunks'][:5])]\"\n",
+      "duration": 0.5
+    }
+  ]
+}

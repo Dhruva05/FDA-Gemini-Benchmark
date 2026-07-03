@@ -1,0 +1,24 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > inspect_chunks.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         l = json.loads(line)
+>         print(f"set_id: {l['set_id']}")
+>         print("Type of chunks:", type(l['chunks']))
+>         if isinstance(l['chunks'], list):
+>             print("Length of chunks:", len(l['chunks']))
+>             print("First chunk type:", type(l['chunks'][0]))
+>             print("First chunk:", repr(l['chunks'][0][:500]))
+>         break
+> EOF
+root@faa94ec9460f:/workspace# python3 inspect_chunks.py
+set_id: ea5d0e55-2191-4094-b082-24b317f95752
+Type of chunks: <class 'list'>
+Length of chunks: 13
+First chunk type: <class 'str'>
+First chunk: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, watery eyes\n
+- itching of the nose or throat'
+root@faa94ec9460f:/workspace#

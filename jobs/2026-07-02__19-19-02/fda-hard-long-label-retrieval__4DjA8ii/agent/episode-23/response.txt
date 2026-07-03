@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's press Enter to run.",
+  "plan": "Press Enter to run the loop.",
+  "commands": [
+    {
+      "keystrokes": "\n",
+      "duration": 0.5
+    }
+  ]
+}

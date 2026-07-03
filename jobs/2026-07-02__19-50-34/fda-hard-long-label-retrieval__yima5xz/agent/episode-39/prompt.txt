@@ -1,0 +1,13 @@
+New Terminal Output:
+
+therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment .root@b161fe3d96d1:/workspace# cat chunk_110.txt
+8.6 Renal Impairment
+Renal impairment increases nirmatrelvir exposure, which may increase the risk of PAXLOVID adverse reactions. No dosage adjustment is recommended in patients wit
+h mild renal impairment (eGFR ≥60 to <90 mL/min). Reduce the PAXLOVID dosage in patients with moderate renal impairment (eGFR ≥30 to <60 mL/min). Reduce the PAX
+LOVID dose and dose frequency in patients with severe renal impairment (eGFR <30 mL/min), including those requiring hemodialysis. On days when patients undergo
+hemodialysis, the PAXLOVID dose should be administered after hemodialysis . Prescriptions should specify the numeric dose of each active ingredient within PAXLO
+VID. Providers should counsel patients about renal dosing instructions .root@b161fe3d96d1:/workspace# cat chunk_111.txt
+8.7 Hepatic Impairment
+No dosage adjustment of PAXLOVID is recommended for patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment. No pharmacokine
+tic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pugh Class C) hepatic impairment, therefore, PAXL
+OVID is not recommended for use in patients with severe (Child-Pugh Class C) hepatic impairment .root@b161fe3d96d1:/workspace#

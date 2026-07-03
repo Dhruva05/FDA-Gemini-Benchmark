@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > find_passage.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print(label['drug_name'])
+>         # Let's search inside the dictionary for any keys or string values containing 'PASSAGE'
+>         def search_dict(obj, path=""):
+>             if isinstance(obj, dict):
+>                 for k, v in obj.items():
+>                     if 'PASSAGE' in str(k):
+>                         print(f"Found in key: {path}.{k}")
+>                     search_dict(v, f"{path}.{k}")
+>             elif isinstance(obj, list):
+>                 for i, v in enumerate(obj):
+>                     if isinstance(v, str) and 'PASSAGE' in v:
+>                         print(f"Found in list element {path}[{i}]: {v[:100]}...")
+>                     else:
+>                         search_dict(v, f"{path}[{i}]")
+>         search_dict(label)
+>         break
+> EOF
+root@15b83e10b8d1:/workspace# python3 find_passage.py
+Paxlovid
+root@15b83e10b8d1:/workspace#

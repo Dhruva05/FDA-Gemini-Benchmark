@@ -1,0 +1,11 @@
+New Terminal Output:
+
+>>> print(labels[1]['chunks'][19])
+5.6 PR Interval Prolongation
+Lopinavir and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atrioventricular block have been reported. Lopinavir and rito
+navir should be used with caution in patients with underlying structural heart disease, pre-existing conduction system abnormalities, ischemic heart disease or
+cardiomyopathies, as these patients may be at increased risk for developing cardiac conduction abnormalities.
+The impact on the PR interval of co-administration of lopinavir and ritonavir with other drugs that prolong the PR interval (including calcium channel blockers,
+ beta-adrenergic blockers, digoxin and atazanavir) has not been evaluated. As a result, co-administration of lopinavir and ritonavir with these drugs should be
+undertaken with caution, particularly with those drugs metabolized by CYP3A. Clinical monitoring is recommended .
+>>>

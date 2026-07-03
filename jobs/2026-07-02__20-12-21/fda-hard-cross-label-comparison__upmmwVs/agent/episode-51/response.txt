@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! PASSAGE_0009 of Actoplus Met states: \"The maximum recommended dosage of ACTOPLUS MET is one tablet (15 mg of pioglitazone and 850 mg of metformin HCl) once daily when used in combination with gemfibrozil or other strong CYP2C8 inhibitors .\" Wait, let's look at other chunks in Actoplus Met to see what the general maximum dose is. We saw `PASSAGE_0005` or other chunks might have the standard recommended starting/maximum doses.",
+  "plan": "I will run a python command to print chunks 4, 5, 6, 7, 8 of Actoplus Met to see the general dosing guidelines.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print('=== PASSAGE', i, '===', c) for d in (json.loads(l) for l in f) if d['set_id']=='42e49120-6f3f-11db-9fe1-0800200c9a66' for i, c in enumerate(d['chunks']) if i in [4, 5, 6, 7, 8]]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

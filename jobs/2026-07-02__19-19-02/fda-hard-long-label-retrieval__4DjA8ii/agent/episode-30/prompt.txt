@@ -1,0 +1,41 @@
+New Terminal Output:
+
+...
+=== PASSAGE_0003 ===
+2.1     Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAX...
+=== PASSAGE_0004 ===
+2.2     Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together oral
+ly twice daily in the morning and at bedtime for 5 days....
+=== PASSAGE_0005 ===
+2.3 Dosage in Patients with Renal Impairment
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID. Providers should counsel patients about renal dosing instructions .
+No dosage adjustment is recommended in patients ...
+=== PASSAGE_0006 ===
+Days of Treatment
+Dose and Dose Frequency
+PAXLOVID should be administered at approximately the same time each day for 5 days.
+Moderate renal impairment (eGFR ≥30 to <60 mL/min)...
+=== PASSAGE_0007 ===
+Days 1-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily
+Severe renal impairment (eGFR <30 mL/min) including those requiring hemodialysis
+On days of hemodialysis, the PAXLOVID dose should be administered ...
+=== PASSAGE_0008 ===
+Day 1
+300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) once...
+=== PASSAGE_0009 ===
+Days 2-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) once daily...
+=== PASSAGE_0010 ===
+2.4     Use in Patients with Hepatic Impairment
+No dosage adjustment is needed in patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment.
+No pharmacokinetic or safety data are available regarding the use of nirmatrelv...
+=== PASSAGE_0011 ===
+3 DOSAGE FORMS AND STRENGTHS
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets .
+- Nirmatrelvir is supplied as oval, pink immediate-release, film-coated tablets debossed with "PFE" on one side and "3CL" on the other side. Each table...
+>>>

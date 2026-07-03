@@ -1,0 +1,7 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# find /workspace/data -type f
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+root@7e48d58e23f3:/workspace#

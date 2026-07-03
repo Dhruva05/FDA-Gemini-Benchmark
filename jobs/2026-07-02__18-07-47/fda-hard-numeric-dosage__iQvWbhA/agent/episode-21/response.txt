@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a syntax error. I will make sure my JSON is fully valid. I will run the python script to print the CELECOXIB passages.",
+  "plan": "Write and run print_celecoxib_passages.py to find CELECOXIB dosage details.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_celecoxib_passages.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == '27f17ae7-939b-402e-9498-3b6611104089'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if any(kw in chunk for kw in ['2 DOSAGE AND ADMINISTRATION', '2.1', '2.2', '2.3', '2.4', '2.5', '2.6']):\n        print(f\"PASSAGE_{i:04d}:\")\n        print(chunk)\n        print(\"-\"*50)\nEOF\npython3 print_celecoxib_passages.py\n",
+      "duration": 1.0
+    }
+  ]
+}

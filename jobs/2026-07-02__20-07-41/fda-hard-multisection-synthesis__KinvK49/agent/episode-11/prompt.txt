@@ -1,0 +1,23 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# python3 -c "import json, re; data=[json.loads(line) for line in open('/workspace/data/public/labels.jsonl')]
+> for d in data:
+>     raw = d['label_raw']
+>     parts = re.split(r'\|\|(PASSAGE_\d+)\|\|', raw)
+>     pairs = {}
+>     for idx in range(1, len(parts), 2):
+>         pid = parts[idx]
+>         ptext = parts[idx+1].strip()
+>         pairs[pid] = ptext
+>     chunks = [c.strip() for c in d['chunks']]
+>     print(d['drug_name'], len(chunks), len(pairs))
+>     matched = 0
+>     for c in chunks:
+>         if c in pairs.values(): matched += 1
+>     print('Matched chunks:', matched)
+> "
+Paxlovid 209 209
+Matched chunks: 209
+Lopinavir-Ritonavir 188 188
+Matched chunks: 188
+root@1ce871952c8c:/workspace#

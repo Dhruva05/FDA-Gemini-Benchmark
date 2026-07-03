@@ -1,0 +1,14 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     data = json.loads(f.readline())
+>     print("Keys:", list(data.keys()))
+>     for k in ["set_id", "drug_name"]:
+>         print(k, ":", data[k])
+> '
+Keys: ['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']
+set_id : 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+drug_name : Paxlovid
+root@4b1b7b4fd079:/workspace#

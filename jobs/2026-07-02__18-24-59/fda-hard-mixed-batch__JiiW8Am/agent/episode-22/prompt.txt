@@ -1,0 +1,5 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# echo "Let us look at the exact questions for Lopinavir-Ritonavir:"
+Let us look at the exact questions for Lopinavir-Ritonavir:
+root@c3dfb07a1d45:/workspace#

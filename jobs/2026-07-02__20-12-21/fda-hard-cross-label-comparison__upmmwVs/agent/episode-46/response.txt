@@ -1,0 +1,25 @@
+{
+  "analysis": "Aha! Both labels indeed have explicit dosing instructions!
+For ACETAMINOPHEN with CODEINE (`36adb32c-638c-4d6e-b66a-1a1c35174ce6`):
+- `PASSAGE_0011`: \"Dosage should be adjusted according to severity of pain and response of the patient. Take (1 - 2) ta...\"
+Let's print the full text of `PASSAGE_0011` for ACETAMINOPHEN with CODEINE.
+
+For AcetaZOLAMIDE (`6972d9c1-36ec-4246-bf7b-13206d5952c3`):
+- `PASSAGE_0014`: Glaucoma dosing
+- `PASSAGE_0015`: Epilepsy dosing
+- `PASSAGE_0016`: Congestive Heart Failure dosing
+- `PASSAGE_0017`: Drug-Induced Edema dosing
+- `PASSAGE_0018`: Acute Mountain Sickness dosing
+Let's print all of these passages to see which one is the main or representative one, or we can use any of them.",
+  "plan": "I will run a python command to print the full text of PASSAGE_0011 for ACETAMINOPHEN with CODEINE and PASSAGE_0014, 0015, 0016, 0017, 0018 for AcetaZOLAMIDE.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print('=== PASSAGE', i, '===\\n', c) for d in (json.loads(l) for l in f) if d['set_id']=='36adb32c-638c-4d6e-b66a-1a1c35174ce6' for i, c in enumerate(d['chunks']) if i == 11]\"\n",
+      "duration": 1.0
+    },
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print('=== PASSAGE', i, '===\\n', c) for d in (json.loads(l) for l in f) if d['set_id']=='6972d9c1-36ec-4246-bf7b-13206d5952c3' for i, c in enumerate(d['chunks']) if i in [14, 15, 16, 17, 18]]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

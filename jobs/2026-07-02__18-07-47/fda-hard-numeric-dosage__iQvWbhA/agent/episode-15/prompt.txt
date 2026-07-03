@@ -1,0 +1,71 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > test_chunks.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         l = json.loads(line)
+>         print(f"Drug: {l['drug_name']}")
+>         # Let's split label_raw by ||PASSAGE_####||
+>         import re
+>         parts = re.split(r'\|\|PASSAGE_\d+\|\|', l['label_raw'])
+>         # The first part might be empty if it starts with a passage tag
+>         parts = [p.strip() for p in parts if p.strip()]
+>         print(f"Number of parts from split: {len(parts)}, chunks: {len(l['chunks'])}")
+>         # Let's compare first few
+>         for i in range(min(5, len(parts), len(l['chunks']))):
+>             p_clean = parts[i].replace('\n', ' ')[:50]
+>             c_clean = l['chunks'][i].replace('\n', ' ')[:50]
+>             print(f"  Part {i}: {p_clean}")
+>             print(f"  Chunk {i}: {c_clean}")
+> EOF
+root@371ed25b9fd3:/workspace# python3 test_chunks.py
+Drug: Lopinavir-Ritonavir
+Number of parts from split: 188, chunks: 188
+  Part 0: 1 INDICATIONS AND USAGE Lopinavir and ritonavir is
+  Chunk 0: 1 INDICATIONS AND USAGE Lopinavir and ritonavir is
+  Part 1: 2.1 General Administration Recommendations Lopinav
+  Chunk 1: 2.1 General Administration Recommendations Lopinav
+  Part 2: 2.2 Administering Oral Solution by Feeding Tube Be
+  Chunk 2: 2.2 Administering Oral Solution by Feeding Tube Be
+  Part 3: 2.3 Dosage Recommendations in Adults Lopinavir and
+  Chunk 3: 2.3 Dosage Recommendations in Adults Lopinavir and
+  Part 4: Recommended Dosage 80 mg/20 mg per mL Oral Solutio
+  Chunk 4: Recommended Dosage 80 mg/20 mg per mL Oral Solutio
+Drug: Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate
+Number of parts from split: 167, chunks: 167
+  Part 0: WARNING: POSTTREATMENT ACUTE EXACERBATION OF HEPAT
+  Chunk 0: WARNING: POSTTREATMENT ACUTE EXACERBATION OF HEPAT
+  Part 1: 1 INDICATIONS AND USAGE Emtricitabine, rilpivirine
+  Chunk 1: 1 INDICATIONS AND USAGE Emtricitabine, rilpivirine
+  Part 2: 2.1 Testing Prior to Initiation and During Treatme
+  Chunk 2: 2.1 Testing Prior to Initiation and During Treatme
+  Part 3: 2.2 Recommended Dosage Emtricitabine, rilpivirine
+  Chunk 3: 2.2 Recommended Dosage Emtricitabine, rilpivirine
+  Part 4: 2.3 Recommended Dosage During Pregnancy For pregna
+  Chunk 4: 2.3 Recommended Dosage During Pregnancy For pregna
+Drug: CELECOXIB
+Number of parts from split: 153, chunks: 153
+  Part 0: WARNING: RISK OF SERIOUS CARDIOVASCULAR AND GASTRO
+  Chunk 0: WARNING: RISK OF SERIOUS CARDIOVASCULAR AND GASTRO
+  Part 1: Gastrointestinal Bleeding, Ulceration, and Perfora
+  Chunk 1: Gastrointestinal Bleeding, Ulceration, and Perfora
+  Part 2: 1.1 Osteoarthritis (OA) For the management of the
+  Chunk 2: 1.1 Osteoarthritis (OA) For the management of the
+  Part 3: 1.2 Rheumatoid Arthritis (RA) For the management o
+  Chunk 3: 1.2 Rheumatoid Arthritis (RA) For the management o
+  Part 4: 1.3 Juvenile Rheumatoid Arthritis (JRA) For the ma
+  Chunk 4: 1.3 Juvenile Rheumatoid Arthritis (JRA) For the ma
+Drug: Lenalidomide
+Number of parts from split: 143, chunks: 143
+  Part 0: WARNING: EMBRYO-FETAL TOXICITY, HEMATOLOGIC TOXICI
+  Chunk 0: WARNING: EMBRYO-FETAL TOXICITY, HEMATOLOGIC TOXICI
+  Part 1: Hematologic Toxicity (Neutropenia and Thrombocytop
+  Chunk 1: Hematologic Toxicity (Neutropenia and Thrombocytop
+  Part 2: Venous and Arterial Thromboembolism Lenalidomide h
+  Chunk 2: Venous and Arterial Thromboembolism Lenalidomide h
+  Part 3: 1.1 Multiple Myeloma Lenalidomide in combination w
+  Chunk 3: 1.1 Multiple Myeloma Lenalidomide in combination w
+  Part 4: 1.2 Myelodysplastic Syndromes Lenalidomide is indi
+  Chunk 4: 1.2 Myelodysplastic Syndromes Lenalidomide is indi
+root@371ed25b9fd3:/workspace#

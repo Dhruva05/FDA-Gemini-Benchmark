@@ -1,0 +1,56 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > find_passages.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {label['set_id']: label for label in f}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print("=" * 80)
+>     print(f"QID: {q['qid']}")
+>     print(f"Drug Name: {q['drug_name']}")
+>     print(f"Question: {q['question']}")
+>     set_id = q['set_id']
+>     label = labels[set_id]
+>     print(f"Total chunks: {len(label['chunks'])}")
+>
+>     # Based on the question, let's look for keywords
+>     # e.g., for renal impairment: "renal", "kidney", "hepatic", "liver"
+>     # for pregnancy: "pregnancy", "pregnant", "breastfeeding", "lactation", "milk"
+>     # for pediatric: "pediatric", "children", "geriatric", "elderly"
+>     # etc.
+>     q_lower = q['question'].lower()
+>     print("Candidate chunks:")
+>     for idx, chunk in enumerate(label['chunks']):
+>         passage_id = f"PASSAGE_{idx:04d}"
+>         # Let's print chunks that contain relevant terms
+>         # We can also just print all chunks if there are few (e.g. 12HR Allergy has only 13, Acclean has 18)
+>         if len(label['chunks']) <= 20:
+>             print(f"  {passage_id}: {repr(chunk[:100])}...")
+>         else:
+>             # Filter for Acamprosate Calcium (59 chunks)
+>             # Let's see which keywords to filter
+>             keywords = []
+>             if "renal" in q_lower or "hepatic" in q_lower:
+>                 keywords = ["renal", "kidney", "hepatic", "liver"]
+>             elif "pregnancy" in q_lower or "breastfeeding" in q_lower:
+>                 keywords = ["pregnan", "breast", "lactat", "milk"]
+>             elif "adverse" in q_lower or "monitoring" in q_lower:
+>                 keywords = ["adverse", "monitoring", "reaction"]
+>             elif "pediatric" in q_lower or "geriatric" in q_lower:
+>                 keywords = ["pediatric", "geriatric", "child", "elderly", "age"]
+>
+>             if any(kw in chunk.lower() for kw in keywords):
+>                 print(f"  {passage_id}: {repr(chunk[:150])}...")
+> EOF
+root@c7da805c5eb1:/workspace# python3 find_passages.py
+Traceback (most recent call last):
+  File "/workspace/find_passages.py", line 4, in <module>
+    labels = {label['set_id']: label for label in f}
+              ~~~~~^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+root@c7da805c5eb1:/workspace#

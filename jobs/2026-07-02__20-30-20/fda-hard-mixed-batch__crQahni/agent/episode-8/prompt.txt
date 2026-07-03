@@ -1,0 +1,44 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json, re
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         raw = data["label_raw"]
+>         passages = re.split(r"\|\|(PASSAGE_\d+)\|\|", raw)
+>         # passages[0] should be empty or whitespace
+>         # passages[1] is PASSAGE_0000, passages[2] is the text, etc.
+>         header = passages[0]
+>         parsed_passages = {}
+>         for i in range(1, len(passages), 2):
+>             pid = passages[i]
+>             text = passages[i+1].strip()
+>             parsed_passages[pid] = text
+>         print(data["drug_name"], "chunks length:", len(data["chunks"]), "parsed passages length:", len(parsed_passages))
+>         # Check if they match
+>         match = True
+>         for i, chunk in enumerate(data["chunks"]):
+>             pid = f"PASSAGE_{i:04d}"
+>             if pid not in parsed_passages:
+>                 match = False
+>                 print(f"  Missing {pid} in parsed passages!")
+>                 break
+>             if chunk.strip() != parsed_passages[pid]:
+>                 match = False
+>                 print(f"  Mismatch at {pid}!")
+>                 print("Chunk:", repr(chunk.strip()[:100]))
+>                 print("Parsed:", repr(parsed_passages[pid][:100]))
+>                 break
+>         if match:
+>             print(f"  All {len(data["chunks"])} chunks match PASSAGE_0000 to PASSAGE_{len(data["chunks"])-1:04d} exactly!")
+> '
+Paxlovid chunks length: 209 parsed passages length: 209
+  All 209 chunks match PASSAGE_0000 to PASSAGE_0208 exactly!
+Lopinavir-Ritonavir chunks length: 188 parsed passages length: 188
+  All 188 chunks match PASSAGE_0000 to PASSAGE_0187 exactly!
+12HR Allergy Relief chunks length: 13 parsed passages length: 13
+  All 13 chunks match PASSAGE_0000 to PASSAGE_0012 exactly!
+Acamprosate Calcium chunks length: 59 parsed passages length: 59
+  All 59 chunks match PASSAGE_0000 to PASSAGE_0058 exactly!
+root@4b1b7b4fd079:/workspace#

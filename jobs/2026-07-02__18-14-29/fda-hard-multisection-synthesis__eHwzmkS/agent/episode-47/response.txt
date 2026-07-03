@@ -1,0 +1,49 @@
+{
+  "analysis": "This is incredibly rich.
+`PASSAGE_0012` lists:
+1. Hypersensitivity reactions (TEN, Stevens-Johnson syndrome) to active ingredients or components.
+2. Drugs contraindicated because they are primarily metabolized by CYP3A and elevated concentrations are associated with serious/life-threatening reactions:
+   - Alpha 1-adrenoreceptor antagonist: alfuzosin
+   - Antianginal: ranolazine
+   - Antiarrhythmic: amiodarone, dronedarone, flecainide, propafenone, quinidine
+   - Anti-gout: colchicine (in patients with renal and/or hepatic impairment)
+   - Antipsychotics: lurasidone, pimozide
+   - Benign prostatic hyperplasia agents: silodosin
+   - Cardiovascular agents: eplerenone, ivabradine
+   - Ergot derivatives: dihydroergotamine, ergotamine, methylergonovine
+   - HMG-CoA reductase inhibitors: lovastatin, simvastatin (temporarily discontinued)
+   - Immunosuppressants: voclosporin
+   - Microsomal triglyceride transfer protein inhibitor: lomitapide
+   - Migraine medications: eletriptan, ubrogepant
+   - Mineralocorticoid receptor antagonists: finerenone
+   - Opioid antagonists: naloxegol
+   - PDE5 inhibitor: sildenafil (Revatio) when used for pulmonary arterial hypertension (PAH)
+   - Sedative/hypnotics: triazolam, oral midazolam
+   - Serotonin receptor 1A agonist/serotonin receptor 2A antagonist: flibanserin
+   - Vasopressin receptor antagonists: tolvaptan
+3. Drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with potential for loss of virologic response and possible resistance:
+   - Anticancer drugs: apalutamide, enzalutamide
+   - Anticonvulsant: carbamazepine, phenobarbital, primidone, phenytoin
+   - Antimycobacterials: rifampin, rifapentine
+   - Cystic fibrosis transmembrane conductance regulator potentiators: lumacaftor/ivacaftor
+   - Herbal products: St. John's Wort
+
+This answers Q2 (`6f12607a1ba14dd5`: \"Which medications should be avoided with Paxlovid?\") and part of Q1 (`b2531657ba5c7a78`: \"What important drug interactions are noted for Paxlovid?\").
+Wait! Let's check what other drug interactions are noted for Paxlovid.
+Section 7 (Drug Interactions) contains more details on established and other potentially significant drug interactions (Table 2).
+Let's see if we can summarize the main drug interactions:
+1. Ritonavir is a strong CYP3A inhibitor, which can increase exposure of concomitant medications metabolized by CYP3A, potentially leading to severe, life-threatening, or fatal events.
+2. Nirmatrelvir and ritonavir are CYP3A substrates, so CYP3A inducers can decrease their concentrations and reduce therapeutic effect.
+3. Paxlovid is also an inhibitor of CYP2D6, P-gp, and OATP1B1.
+Let's cite `PASSAGE_0000`, `PASSAGE_0012`, `PASSAGE_0019`, `PASSAGE_0020`, `PASSAGE_0021` for Q1 and Q2.
+
+Wait! Let's check Q7 (`fbab4114f66e2dda`: \"What important warnings or precautions are associated with Paxlovid?\") and Q8 (`2d63e0a82215867f`: \"What safety risks are listed for Paxlovid?\").
+Let's print the headers of Section 5 (Warnings and Precautions) of Paxlovid to see what warnings or precautions and safety risks are listed.",
+  "plan": "I will run a python script to list all passages in Paxlovid that are in Section 5 (Warnings and Precautions).",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]\nfor i, c in enumerate(l['chunks']):\n    if re.match(r'^5\\.', c.strip()):\n        print(f'PASSAGE_{i:04d}:', c.strip().split('\\n')[0][:80])\nf.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

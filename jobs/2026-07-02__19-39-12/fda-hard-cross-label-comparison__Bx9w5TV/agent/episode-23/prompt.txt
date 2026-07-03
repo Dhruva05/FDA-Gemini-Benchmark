@@ -1,0 +1,96 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> questions = []
+> with open("/workspace/data/public/questions.jsonl") as f:
+>     for line in f:
+>         questions.append(json.loads(line))
+>
+> labels = {}
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         labels[data["set_id"]] = data
+>
+> for q in questions:
+>     print("="*60)
+>     print("QID:", q["qid"])
+>     print("Drugs:", q["drug_name"])
+>     for sid in q["comparison_set_ids"]:
+>         label = labels[sid]
+>         print(f"  Label: {label["drug_name"]} ({sid})")
+>         matches = []
+>         for idx, chunk in enumerate(label["chunks"]):
+>             if "direction" in chunk.lower() or "dosage" in chunk.lower() or "dose" in chunk.lower() or "take" in chunk.lower():
+>                 matches.append((idx, chunk))
+>         print(f"    Found {len(matches)} potential chunks out of {len(label["chunks"])}")
+>         for idx, m in matches[:3]:
+>             print(f"      PASSAGE_{idx:04d}: {repr(m)[:120]}")
+> '
+============================================================
+QID: cross-0df97f1e2f1e4c
+Drugs: 12HR Allergy Relief vs 365 Whole Foods Market Loratadine
+  Label: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752)
+    Found 4 potential chunks out of 13
+      PASSAGE_0002: 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.'
+      PASSAGE_0003: '- do not take more than directed\n- do not take at the same time as aluminum or magnesium antacids\n- do not take with
+      PASSAGE_0006: 'Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-8
+  Label: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce)
+    Found 5 potential chunks out of 15
+      PASSAGE_0002: 'liver or kidney disease. Your doctor should determine if you need a different dose.'
+      PASSAGE_0003: 'do not take more than directed. Taking more than directed may cause drowsiness.'
+      PASSAGE_0006: 'In case of overdose, get medical help or contact a Poison Control Center (1-800-222-1222) right away.'
+============================================================
+QID: cross-e9a79ba825959d
+Drugs: Acamprosate Calcium vs Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+  Label: Acamprosate Calcium (ae6e79c0-a307-4888-b647-1b7be4cb9127)
+    Found 17 potential chunks out of 59
+      PASSAGE_0001: '2 DOSAGE AND ADMINISTRATION\nThe recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets
+      PASSAGE_0002: '2.1 Dosage in Renal Impairment\nFor patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min),
+      PASSAGE_0003: '3 DOSAGE FORMS AND STRENGTHS\nAcamprosate calcium delayed-release tablets, 333 mg are white to off-white, round, biconv
+  Label: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (08c9d3dd-717b-0148-e054-00144ff8d46c)
+    Found 6 potential chunks out of 18
+      PASSAGE_0001: 'ACCLEAN chlorhexidine gluconate oral rinse provides antimicrobial activity during oral rinsing. The clinical significan
+      PASSAGE_0006: 'Pregnancy Category B Reproduction studies have been performed in rats and rabbits at chlorhexidine gluconate doses up t
+      PASSAGE_0007: "It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human milk, caution sho
+============================================================
+QID: cross-7421ed8b98b8f9
+Drugs: ACETAMINOPHEN with CODEINE vs AcetaZOLAMIDE
+  Label: ACETAMINOPHEN with CODEINE (36adb32c-638c-4d6e-b66a-1a1c35174ce6)
+    Found 8 potential chunks out of 15
+      PASSAGE_0000: 'BOXED WARNING\nHepatotoxicity:\nAcetaminophen has been associated with cases of acute liver failure, at times resulting
+      PASSAGE_0003: 'This product combines the analgesic effects of a centrally acting analgesic, codeine, with a peripherally acting analge
+      PASSAGE_0006: 'The most frequently reported adverse reactions are drowsiness, lightheadedness, dizziness, sedation, shortness of breat
+  Label: AcetaZOLAMIDE (6972d9c1-36ec-4246-bf7b-13206d5952c3)
+    Found 12 potential chunks out of 22
+      PASSAGE_0001: 'AcetaZOLAMIDE is a potent carbonic anhydrase inhibitor, effective in the control of fluid secretion (e.g., some types o
+      PASSAGE_0004: 'Fatalities have occurred, although rarely, due to severe reactions to sulfonamides including Stevens-Johnson syndrome,
+      PASSAGE_0005: 'Increasing the dose does not increase the diuresis and may increase the incidence of drowsiness and/or paresthesia. Inc
+============================================================
+QID: cross-a4153187ea298f
+Drugs: ACETAZOLAMIDE EXTENDED-RELEASE vs Actoplus Met
+  Label: ACETAZOLAMIDE EXTENDED-RELEASE (8e396b27-b44a-4aa9-805b-086395444b5f)
+    Found 10 potential chunks out of 20
+      PASSAGE_0001: 'Acetazolamide is a potent carbonic anhydrase inhibitor, effective in the control of fluid secretion (e.g., some types o
+      PASSAGE_0004: 'Fatalities have occurred, although rarely, due to severe reactions to sulfonamides including Stevens-Johnson syndrome,
+      PASSAGE_0005: 'Increasing the dose does not increase the diuresis and may increase the incidence of drowsiness and/or paresthesia. Inc
+  Label: Actoplus Met (42e49120-6f3f-11db-9fe1-0800200c9a66)
+    Found 67 potential chunks out of 180
+      PASSAGE_0000: 'WARNING: CONGESTIVE HEART FAILURE and LACTIC ACIDOSIS\nCongestive Heart Failure\n- Thiazolidinediones, including piogli
+      PASSAGE_0001: 'Lactic Acidosis\n- Postmarketing cases of metformin-associated lactic acidosis have resulted in death, hypothermia, hyp
+      PASSAGE_0004: '2 DOSAGE AND ADMINISTRATION\n- Obtain liver tests (serum alanine and aspartate aminotransferases, alkaline phosphatase,
+============================================================
+QID: cross-893c71f570b542
+Drugs: Acyclovir vs Acyclovir suspension
+  Label: Acyclovir (dcc29902-1fe6-4713-947e-335503959464)
+    Found 6 potential chunks out of 12
+      PASSAGE_0001: 'The pharmacokinetics of acyclovir after oral administration have\nbeen evaluated in healthy volunteers and in immunocom
+      PASSAGE_0005: 'Dosage adjustment is recommended when administering acyclovir to\npatients with renal impairment . Caution should also
+      PASSAGE_0006: 'The most frequent adverse events reported during clinical trials\nof treatment of genital herpes with acyclovir 200 mg
+  Label: Acyclovir suspension (3efa1e5e-5a14-4724-a2ca-25702f10faed)
+    Found 17 potential chunks out of 46
+      PASSAGE_0002: 'Table\xa01.\xa0Acyclovir\xa0Pharmacokinetic\xa0Characteristics\xa0(Range)\n*Bioavailability\xa0decreases\xa0with\xa0inc
+      PASSAGE_0003: 'Adults With\xa0Impaired\xa0Renal\xa0Function\nThe\xa0half-life\xa0and\xa0total\xa0body clearance\xa0of\xa0acyclovir\xa0
+      PASSAGE_0004: 'Geriatrics\nAcyclovir\xa0plasma\xa0concentrations\xa0are\xa0higher\xa0in\xa0geriatric\xa0patients\xa0compared\xa0with y
+root@2809f9ae2d53:/workspace#

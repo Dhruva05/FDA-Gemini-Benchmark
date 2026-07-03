@@ -1,0 +1,10 @@
+{
+  "analysis": "I need to ensure no control characters are present in the JSON. I will run a python script to list all passages in the Lopinavir-Ritonavir label that start with '5' or 'WARNINGS'.",
+  "plan": "I will run the Python command.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[1]; print(l['drug_name']); [print(f'PASSAGE_{i:04d}:', c.strip().split('\\n')[0]) for i, c in enumerate(l['chunks']) if re.match(r'^(5|WARNINGS)', c.strip())]; f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

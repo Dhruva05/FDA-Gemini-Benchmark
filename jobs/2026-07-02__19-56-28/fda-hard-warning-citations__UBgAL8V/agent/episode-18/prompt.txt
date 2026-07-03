@@ -1,0 +1,29 @@
+New Terminal Output:
+
+>>> [print(f'PASSAGE_{i:04d}:', c[:120].replace('\n', ' ')) for i, c in enumerate(labels[0]['chunks'][21:45], start=21)]
+PASSAGE_0021: 7.3       Established and Other Potentially Significant Drug Interactions Table 2 provides a listing of clinically significant
+PASSAGE_0022: ↑ alfuzosin Co-administration contraindicated due to potential hypotension .
+PASSAGE_0023: ↑ tamsulosin Avoid concomitant use with PAXLOVID.
+PASSAGE_0024: ↑ ranolazine Co-administration contraindicated due to potential for serious and/or life-threatening reactions .
+PASSAGE_0025: ↑ antiarrhythmic Co-administration contraindicated due to potential for cardiac arrhythmias .
+PASSAGE_0026: ↑ antiarrhythmic Caution is warranted and therapeutic concentration monitoring is recommended for antiarrhythmics if ava
+PASSAGE_0027: ↓ nirmatrelvir/ritonavir Co-administration contraindicated due to potential loss of virologic response and possible resi
+PASSAGE_0028: Anticancer drugs abemaciclib, ceritinib,dasatinib, encorafenib,ibrutinib, ivosidenib, neratinib, nilotinib, venetoclax,v
+PASSAGE_0029: ↑ anticancer drugs Avoid co-administration of encorafenib or ivosidenib due to potential risk of serious adverse events
+PASSAGE_0030: ↑↓ warfarin Closely monitor international normalized ratio (INR) if co-administration with warfarin is necessary.
+PASSAGE_0031: ↑ rivaroxaban Increased bleeding risk with rivaroxaban. Avoid concomitant use. dabigatranSee Pharmacokinetics, Clinical
+PASSAGE_0032: ↑ dabigatran Increased bleeding risk with dabigatran. Depending on dabigatran indication and renal function, reduce dose
+PASSAGE_0033: ↑ apixaban Combined P-gp and strong CYP3A inhibitors increase blood levels of apixaban and increase the risk of bleeding
+PASSAGE_0034: ↓ nirmatrelvir/ritonavir Co-administration contraindicated due to potential loss of virologic response and possible resi
+PASSAGE_0035: ↑ anticonvulsant A dose decrease may be needed for clonazepam when co-administered with PAXLOVID and clinical monitoring
+PASSAGE_0036: ↓ bupropion and active metabolite hydroxy-bupropion Monitor for an adequate clinical response to bupropion.
+PASSAGE_0037: ↑ trazodone Adverse reactions of nausea, dizziness, hypotension, and syncope have been observed following co-administrat
+PASSAGE_0038: ↓ voriconazole Avoid concomitant use of voriconazole.
+PASSAGE_0039: ↑ ketoconazole↑ isavuconazonium sulfate↑ itraconazole Refer to ketoconazole, isavuconazonium sulfate, and itraconazole p
+PASSAGE_0040: ↑ nirmatrelvir/ritonavir A nirmatrelvir/ritonavir dose reduction is not needed.
+PASSAGE_0041: ↑ colchicine Co-administration contraindicated due to potential for serious and/or life-threatening reactions in patient
+PASSAGE_0042: ↑ protease inhibitor For further information, refer to the respective protease inhibitors' prescribing information. Pati
+PASSAGE_0043: efavirenz,maraviroc,nevirapine,zidovudine,bictegravir/ emtricitabine/ tenofovir ↑ efavirenz↑ maraviroc↑ nevirapine↓ zido
+PASSAGE_0044: ↑ clarithromycin↑ erythromycin Refer to the respective prescribing information for anti-infective dose adjustment.
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>>

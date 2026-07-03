@@ -1,0 +1,5 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# echo "Searching label text for Lopinavir-Ritonavir dosage"
+Searching label text for Lopinavir-Ritonavir dosage
+root@c3dfb07a1d45:/workspace#

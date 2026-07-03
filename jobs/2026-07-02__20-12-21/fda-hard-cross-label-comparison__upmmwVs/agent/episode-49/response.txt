@@ -1,0 +1,23 @@
+{
+  "analysis": "Excellent! For ACETAZOLAMIDE EXTENDED-RELEASE (`8e396b27-b44a-4aa9-805b-086395444b5f`), we have:
+- `PASSAGE_0017`: Glaucoma dosing: \"The recommended dosage is 1 capsule (500 mg) two times a day. Usually 1 capsule is administered in the morning and 1 capsule in the evening...\"
+- `PASSAGE_0018`: Acute Mountain Sickness dosing: \"Dosage is 500 mg to 1000 mg daily, in divided doses using tablets or extended-release capsules...\"
+
+For Actoplus Met (`42e49120-6f3f-11db-9fe1-0800200c9a66`):
+- `PASSAGE_0004`: Obtain liver tests...
+- `PASSAGE_0005`: Recommended Starting Dosage Based on Current Regimen...
+- `PASSAGE_0009`: \"The maximum recommended dosage of ACTOPLUS MET is one tablet (15 mg of pioglitazone and 850 mg of metformin HCl) twice daily...\" (Actually, wait, let's print PASSAGE_0009 in full to verify).
+
+Let's do a quick print of these passages.",
+  "plan": "I will run a python command to print the full text of PASSAGE_0017 and 0018 for ACETAZOLAMIDE EXTENDED-RELEASE and PASSAGE_0009 for Actoplus Met.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print('=== PASSAGE', i, '===', c) for d in (json.loads(l) for l in f) if d['set_id']=='8e396b27-b44a-4aa9-805b-086395444b5f' for i, c in enumerate(d['chunks']) if i in [17, 18]]\"\n",
+      "duration": 1.0
+    },
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print('=== PASSAGE', i, '===', c) for d in (json.loads(l) for l in f) if d['set_id']=='42e49120-6f3f-11db-9fe1-0800200c9a66' for i, c in enumerate(d['chunks']) if i == 9]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

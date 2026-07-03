@@ -1,0 +1,7 @@
+New Terminal Output:
+
+>>> print(len(search('warning')))
+1
+>>> print(len(search('precaution')))
+0
+>>>

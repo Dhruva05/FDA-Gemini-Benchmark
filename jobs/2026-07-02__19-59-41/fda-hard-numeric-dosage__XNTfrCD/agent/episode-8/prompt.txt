@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print(data.keys())
+>         if 'chunks' in data:
+>             print(type(data['chunks']))
+>             if isinstance(data['chunks'], list):
+>                 print(len(data['chunks']))
+>                 print(data['chunks'][0][:100])
+>         break
+> "
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+<class 'list'>
+188
+1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretrovira
+root@3d44031eb234:/workspace#

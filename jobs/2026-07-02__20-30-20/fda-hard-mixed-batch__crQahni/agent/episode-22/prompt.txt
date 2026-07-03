@@ -1,0 +1,94 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Lopinavir-Ritonavir":
+>             for i, chunk in enumerate(data["chunks"]):
+>                 if "max" in chunk.lower() or "limit" in chunk.lower() or "daily" in chunk.lower():
+>                     if "dose" in chunk.lower():
+>                         print(f"PASSAGE_{i:04d}: {chunk[:200]}...")
+> '
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine o...
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral...
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing ...
+PASSAGE_0028: Adverse Reactions in Adults
+The safety of lopinavir and ritonavir has been investigated in about 2,600 patients in Phase II-IV clinical trials, of which about 700 have received a dose of 8
+00/200 mg (6...
+PASSAGE_0053: ↑ indinavir
+Decrease indinavir dose to 600 mg twice daily, when co-administered with lopinavir and ritonavir 400/100 mg twice daily. Lopinavir and ritonavir once daily has
+not been studied in combinat...
+PASSAGE_0056: ↑ saquinavir
+The saquinavir dose is 1000 mg twice daily, when co-administered with lopinavir and ritonavir 400/100 mg twice daily. Lopinavir and ritonavir once daily has not
+ been studied in combinatio...
+PASSAGE_0059: ↓ lopinavir
+Increase the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administered with efavirenz or nevirapine. Lopinavi
+r and ritonavir once daily i...
+PASSAGE_0066: ↓ lopinavir/ritonavir#
+Apalutamide is contraindicated due to potential for loss of virologic response and possible resistance to lopinavir and ritonavir or to the class of protease in
+hibitors .
+Avoid ...
+PASSAGE_0074: ↑ colchicine
+Contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment .
+For patients with normal renal or hepatic function:
+Treat...
+PASSAGE_0076: ↑ rifabutin and rifabutin metabolite
+Dosage reduction of rifabutin by at least 75% of the usual dose of 300 mg/day is recommended (i.e., a maximum dose of 150 mg every other day or three times per
+wee...
+PASSAGE_0091: ↑ vardenafil
+Sildenafil when used for the treatment of pulmonary arterial hypertension (Revatio®) is contraindicated due to the potential for sildenafil-associated adverse e
+vents, including visual abn...
+PASSAGE_0096: Risk Summary
+Available data from the Antiretroviral Pregnancy Registry show no difference in the risk of overall major birth defects compared to the background rate for majo
+r birth defects of 2.7% in ...
+PASSAGE_0097: Clinical Considerations
+Dose Adjustments During Pregnancy and the Postpartum Period
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-assoc...
+PASSAGE_0098: Human Data
+Lopinavir and ritonavir was evaluated in 12 HIV-infected pregnant women in an open-label pharmacokinetic trial . No new trends in the safety profile were identi
+fied in pregnant women dosed ...
+PASSAGE_0099: Animal Data
+Embryonic and fetal developmental toxicities (early resorption, decreased fetal viability, decreased fetal body weight, increased incidence of skeletal variatio
+ns and skeletal ossification...
+PASSAGE_0102: 8.4 Pediatric Use
+The safety, efficacy, and pharmacokinetic profiles of lopinavir and ritonavir in pediatric patients below the age of 14 days have not been established. Lopinavi
+r and ritonavir should...
+PASSAGE_0105: 10 OVERDOSAGE
+Overdoses with lopinavir and ritonavir oral solution have been reported. One of these reports described fatal cardiogenic shock in a 2.1 kg infant who received
+a single dose of 6.5 mL of...
+PASSAGE_0108: 12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo and active (moxifloxacin 400 mg once daily) controlled crossover study...
+PASSAGE_0120: Drug Interactions
+Lopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit CYP2D6, CYP2C9, CYP2C19, CYP2E1, CYP2B6 or
+CYP1A2 at clinically r...
+PASSAGE_0140: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis
+Lopinavir and ritonavir combination was evaluated for carcinogenic potential by oral gavage administration to mice and rats for...
+PASSAGE_0142: Impairment of Fertility
+Lopinavir in combination with ritonavir at a 2:1 ratio produced no effects on fertility in male and female rats at levels of 10/5, 30/15 or 100/50 mg/kg/day. Ba
+sed on AUC measu...
+PASSAGE_0155: 14.3 Other Studies Supporting Approval in Adult Patients
+Study 720:
+Lopinavir and Ritonavir
+twice daily + stavudine + lamivudine
+Study 765:
+Lopinavir and Ritonavir
+twice daily + nevirapine + NRTIs
+Stu...
+PASSAGE_0156: 14.4 Pediatric Studies
+Study 1030 was an open-label, multicenter, dose-finding trial evaluating the pharmacokinetic profile, tolerability, safety and efficacy of lopinavir and ritonav
+ir oral solution ...
+PASSAGE_0159: 17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to acc...
+root@4b1b7b4fd079:/workspace#

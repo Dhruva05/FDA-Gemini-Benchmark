@@ -1,0 +1,41 @@
+Current Terminal Screen:
+Acetazolamide modifies phenytoin metabolism with increased serum levels of phenytoin. This may increase or enhance the occurrence of osteomalacia in some patien
+ts receiving chronic phenytoin therapy. Caution is advised in patients receiving chronic concomitant therapy. By decreasing the gastrointestinal absorption of p
+rimidone, acetazolamide may decrease serum concentrations of primidone and its metabolites, with a consequent possible decrease in anticonvulsant effect. Cautio
+n is advised when beginning, discontinuing, or changing the dose of acetazolamide in patients receiving primidone.
+Because of possible additive effects with other carbonic anhydrase inhibitors, concomitant use is not advisable.
+Acetazolamide may increase the effects of other folic acid antagonists.
+Acetazolamide decreases urinary excretion of amphetamine and may enhance the magnitude and duration of their effect.
+Acetazolamide reduces urinary excretion of quinidine and may enhance its effect.
+Acetazolamide may prevent the urinary antiseptic effect of methenamine. Acetazolamide increases lithium excretion and the lithium may be decreased.
+Acetazolamide and sodium bicarbonate used concurrently increases the risk of renal calculus formation.
+Acetazolamide may elevate cyclosporine levels.
+PASSAGE_0010: Long-term studies in animals to evaluate the carcinogenic potential of acetazolamide have not been conducted. In a bacterial mutagenicity assay, a
+cetazolamide was not mutagenic when evaluated with and without metabolic activation.
+The drug had no effect on fertility when administered in the diet to male and female rats at a daily intake of up to 4 times the recommended human dose of 1000
+mg in a 50 kg individual.
+PASSAGE_0013: The safety and effectiveness of acetazolamide extended-release capsules in pediatric patients below the age of 12 years have not been established.
+ Growth retardation has been reported in children receiving long-term therapy, believed secondary to chronic acidosis.
+PASSAGE_0014: Metabolic acidosis, which can be severe, may occur in the elderly with reduced renal function.
+In general, dose selection for an elderly patient should be cautious, usually starting at the low end of the dosing range, reflecting the greater frequency of d
+ecreased hepatic, renal, or cardiac function, and concomitant disease or other drug therapy.
+PASSAGE_0016: No specific antidote is known. Treatment should be symptomatic and supportive. Electrolyte imbalance, development of an acidotic state, and centra
+l nervous system effects might be expected to occur. Serum electrolyte levels (particularly potassium) and blood pH levels should be monitored. Supportive measu
+res are required to restore electrolyte and pH balance. The acidotic state can usually be corrected by the administration of bicarbonate.
+Despite its high intraerythrocytic distribution and plasma protein binding properties, acetazolamide may be dialyzable. This may be particularly important in th
+e management of acetazolamide overdosage when complicated by the presence of renal failure.
+PASSAGE_0017: Glaucoma
+The recommended dosage is 1 capsule (500 mg) two times a day. Usually 1 capsule is administered in the morning and 1 capsule in the evening. It may be necessary
+ to adjust the dose, but it has usually been found that dosage in excess of 2 capsules (1 g) does not produce an increased effect. The dosage should be adjusted
+ with careful individual attention both to symptomatology and intraocular tension. In all cases, continuous supervision by a physician is advisable.
+In those unusual instances where adequate control is not obtained by the twice-a-day administration of acetazolamide extended-release capsules, the desired cont
+rol may be established by means of acetazolamide (tablets or parenteral). Use tablets or parenteral in accordance with the more frequent dosage schedules recomm
+ended for these dosage forms, such as 250 mg every four hours, or an initial dose of 500 mg followed by 250 mg or 125 mg every four hours, depending on the case
+ in question.
+PASSAGE_0018: Acute Mountain Sickness
+Dosage is 500 mg to 1000 mg daily, in divided doses using tablets or extended-release capsules as appropriate. In circumstances of rapid ascent, such as in resc
+ue or military operations, the higher dose level of 1000 mg is recommended. It is preferable to initiate dosing 24 to 48 hours before ascent and to continue for
+ 48 hours while at high altitude, or longer as necessary to control symptoms.
+PASSAGE_0019: Product: 50090-5608
+NDC: 50090-5608-0 30 CAPSULE in a BOTTLE
+root@faa94ec9460f:/workspace#

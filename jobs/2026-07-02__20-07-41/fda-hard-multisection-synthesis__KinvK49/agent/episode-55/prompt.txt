@@ -1,0 +1,77 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# cat << 'EOF' > validate_answers.py
+> import json
+>
+> # Load questions
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+> qids = {q['qid']: q for q in questions}
+>
+> # Load answers
+> with open('/workspace/answers.json') as f:
+>     data = json.load(f)
+>
+> assert "answers" in data, "Missing 'answers' key"
+> answers = data["answers"]
+>
+> print(f"Number of questions: {len(questions)}")
+> print(f"Number of answers: {len(answers)}")
+>
+> assert len(answers) == len(questions), "Mismatch in number of answers"
+>
+> for idx, ans in enumerate(answers):
+>     print(f"\nChecking answer {idx+1} for qid {ans['qid']}:")
+>     assert "qid" in ans, "Missing qid"
+>     assert ans["qid"] in qids, f"Unknown qid {ans['qid']}"
+>     q = qids[ans["qid"]]
+>
+>     assert "status" in ans, "Missing status"
+>     assert ans["status"] in ["ANSWERED", "NOT_FOUND"], f"Invalid status {ans['status']}"
+>
+>     assert "answer" in ans, "Missing answer"
+>     assert isinstance(ans["answer"], str), "answer must be a string"
+>
+>     assert "citations" in ans, "Missing citations"
+>     assert isinstance(ans["citations"], list), "citations must be a list"
+>
+>     for cit in ans["citations"]:
+>         assert "set_id" in cit, "Missing set_id in citation"
+>         assert cit["set_id"] == q["set_id"], f"Mismatch set_id: expected {q['set_id']}, got {cit['set_id']}"
+>
+>         assert "passage_id" in cit, "Missing passage_id in citation"
+>         assert isinstance(cit["passage_id"], str) and cit["passage_id"].startswith("PASSAGE_"), f"Invalid passage_id {cit['passage_id']}"
+>
+>         assert "section" in cit, "Missing section in citation"
+>         assert cit["section"] is None or isinstance(cit["section"], str), "section must be string or null"
+>
+>         assert "supporting_quote" in cit, "Missing supporting_quote in citation"
+>         assert isinstance(cit["supporting_quote"], str), "supporting_quote must be string"
+>
+>     assert "structured_fields" in ans, "Missing structured_fields"
+>     assert isinstance(ans["structured_fields"], dict), "structured_fields must be a dict"
+>
+> print("\nAll validation checks passed successfully!")
+> EOF
+root@1ce871952c8c:/workspace# python3 validate_answers.py
+Number of questions: 8
+Number of answers: 8
+
+Checking answer 1 for qid b2531657ba5c7a78:
+
+Checking answer 2 for qid 6f12607a1ba14dd5:
+
+Checking answer 3 for qid daef650b92e56473:
+
+Checking answer 4 for qid a0576a26f2a2eeac:
+
+Checking answer 5 for qid 9be5515bc3064979:
+
+Checking answer 6 for qid 18078efe9380c8dc:
+
+Checking answer 7 for qid fbab4114f66e2dda:
+
+Checking answer 8 for qid 2d63e0a82215867f:
+
+All validation checks passed successfully!
+root@1ce871952c8c:/workspace#

@@ -1,0 +1,27 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > inspect_selected_chunks.py
+> import json
+> selected = [0, 3, 4, 12, 13, 14, 15, 16, 176, 179]
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         chunks = data.get('chunks', [])
+>         for idx in selected:
+>             if idx < len(chunks):
+>                 with open(f'chunk_{idx:03d}.txt', 'w') as out:
+>                     out.write(chunks[idx])
+> EOF
+root@b161fe3d96d1:/workspace# python3 inspect_selected_chunks.py
+root@b161fe3d96d1:/workspace# ls -la chunk_*.txt
+-rw-r--r-- 1 root root  724 Jul  2 23:52 chunk_000.txt
+-rw-r--r-- 1 root root 2022 Jul  2 23:52 chunk_003.txt
+-rw-r--r-- 1 root root  239 Jul  2 23:52 chunk_004.txt
+-rw-r--r-- 1 root root 3093 Jul  2 23:52 chunk_012.txt
+-rw-r--r-- 1 root root 1711 Jul  2 23:52 chunk_013.txt
+-rw-r--r-- 1 root root  399 Jul  2 23:52 chunk_014.txt
+-rw-r--r-- 1 root root  286 Jul  2 23:52 chunk_015.txt
+-rw-r--r-- 1 root root  240 Jul  2 23:52 chunk_016.txt
+-rw-r--r-- 1 root root  872 Jul  2 23:52 chunk_176.txt
+-rw-r--r-- 1 root root  585 Jul  2 23:52 chunk_179.txt
+root@b161fe3d96d1:/workspace#

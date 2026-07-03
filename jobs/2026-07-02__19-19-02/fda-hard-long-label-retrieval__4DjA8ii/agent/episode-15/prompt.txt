@@ -1,0 +1,9 @@
+New Terminal Output:
+
+>>> print(len(search('avoid')))
+15
+>>> print(len(search('contraindicated')))
+30
+>>> print(len(search('contraindication')))
+1
+>>>

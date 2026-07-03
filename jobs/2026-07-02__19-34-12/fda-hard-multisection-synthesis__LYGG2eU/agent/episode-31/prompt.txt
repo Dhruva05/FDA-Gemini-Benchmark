@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# python3 print_passages.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 PASSAGE_0004 PASSAGE_0005 PASSAGE_0006
+=== PASSAGE_0004 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+========================================
+=== PASSAGE_0005 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage rec
+ommendations for twice daily dosing when lopinavir and ritonavir is taken in combination with these agents.
+========================================
+=== PASSAGE_0006 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+========================================
+root@15b83e10b8d1:/workspace#

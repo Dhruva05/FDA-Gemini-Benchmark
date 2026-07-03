@@ -1,0 +1,81 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# cat << 'EOF' > validate_answers.py
+> import json
+>
+> # Load labels
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     label_data = json.loads(f.readline())
+>
+> # Load questions
+> questions = []
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     for line in f:
+>         questions.append(json.loads(line))
+>
+> # Load answers
+> with open('/workspace/answers.json') as f:
+>     answers_data = json.load(f)
+>
+> print("Keys in answers_data:", answers_data.keys())
+> answers = answers_data.get("answers", [])
+> print(f"Number of answers: {len(answers)}")
+>
+> qids_q = {q['qid'] for q in questions}
+> qids_a = {a['qid'] for a in answers}
+>
+> print("Questions QIDs:", qids_q)
+> print("Answers QIDs:", qids_a)
+> assert qids_q == qids_a, f"Mismatch in QIDs! Missing: {qids_q - qids_a}, Extra: {qids_a - qids_q}"
+>
+> for a in answers:
+>     print(f"Checking QID: {a['qid']}")
+>     assert "status" in a, "Missing status"
+>     assert a["status"] in ["ANSWERED", "NOT_FOUND"], f"Invalid status: {a['status']}"
+>     assert "answer" in a, "Missing answer"
+>     assert "citations" in a, "Missing citations"
+>     assert "structured_fields" in a, "Missing structured_fields"
+>
+>     for cit in a["citations"]:
+>         assert "set_id" in cit, "Citation missing set_id"
+>         assert "passage_id" in cit, "Citation missing passage_id"
+>         assert "section" in cit, "Citation missing section"
+>         assert "supporting_quote" in cit, "Citation missing supporting_quote"
+>
+>         # Check if passage_id is valid
+>         pid = cit["passage_id"]
+>         import re
+>         m = re.match(r'PASSAGE_(\d+)', pid)
+>         assert m, f"Invalid passage_id format: {pid}"
+>         idx = int(m.group(1))
+>         assert idx < len(label_data['chunks']), f"passage_id index out of range: {pid}"
+>
+>         # Check supporting quote
+>         quote = cit["supporting_quote"]
+>         chunk = label_data['chunks'][idx]
+>         assert quote in chunk, f"Supporting quote '{quote}' not found in chunk {pid}!"
+>
+> print("All validations passed successfully!")
+> EOF
+root@2635f56baf2a:/workspace# python3 validate_answers.py
+Keys in answers_data: dict_keys(['answers'])
+Number of answers: 8
+Questions QIDs: {'2d63e0a82215867f', '6f12607a1ba14dd5', 'b2531657ba5c7a78', 'b54c25890c1ae3a6', '000ecd1d6df50389', 'cf74a5a8ac9b19de', 'c4dc176c4827f0ef', 'fb
+ab4114f66e2dda'}
+Answers QIDs: {'2d63e0a82215867f', '6f12607a1ba14dd5', 'b2531657ba5c7a78', 'b54c25890c1ae3a6', '000ecd1d6df50389', 'cf74a5a8ac9b19de', 'c4dc176c4827f0ef', 'fbab
+4114f66e2dda'}
+Checking QID: b2531657ba5c7a78
+Checking QID: 6f12607a1ba14dd5
+Checking QID: fbab4114f66e2dda
+Checking QID: 2d63e0a82215867f
+Checking QID: cf74a5a8ac9b19de
+Checking QID: c4dc176c4827f0ef
+Checking QID: 000ecd1d6df50389
+Traceback (most recent call last):
+  File "/workspace/validate_answers.py", line 53, in <module>
+    assert quote in chunk, f"Supporting quote '{quote}' not found in chunk {pid}!"
+           ^^^^^^^^^^^^^^
+AssertionError: Supporting quote 'Days 1-5 150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily Severe renal impairment
+ (eGFR <30 mL/min) including those requiring hemodialysis On days of hemodialysis, the PAXLOVID dose should be administered after hemodialysis.' not found in ch
+unk PASSAGE_0007!
+root@2635f56baf2a:/workspace#

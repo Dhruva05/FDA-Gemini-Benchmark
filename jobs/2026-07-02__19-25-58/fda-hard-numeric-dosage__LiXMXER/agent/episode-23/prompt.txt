@@ -1,0 +1,43 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > parse_emtricitabine.py
+> with open('Emtricitabine_Rilpivirine_Tenofovir_Disoproxil_Fumarate_chunks.txt') as f:
+>     text = f.read()
+>     print(text[:3000])
+> EOF
+root@af996c5fe492:/workspace# python3 parse_emtricitabine.py
+=== CHUNK 0 (PASSAGE_0000) ===
+WARNING: POSTTREATMENT ACUTE EXACERBATION OF HEPATITIS B
+Severe acute exacerbations of hepatitis B virus (HBV) have been reported in patients who are coinfected with HBV and HIV-1 and have discontinued products contai
+ning emtricitabine (FTC) and/or tenofovir disoproxil fumarate (TDF), two of the components of emtricitabine, rilpivirine and tenofovir disoproxil fumarate table
+ts.
+Closely monitor hepatic function with both clinical and laboratory follow-up for at least several months in patients who are coinfected with HIV-1 and HBV and d
+iscontinue emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets. If appropriate, initiation of anti-hepatitis B therapy may be warranted .
+
+=== CHUNK 1 (PASSAGE_0001) ===
+1 INDICATIONS AND USAGE
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are indicated as a complete regimen for the treatment of HIV-1 infection in adults and pedi
+atric patients weighing at least 35 kg:
+- as initial therapy in those with no antiretroviral treatment history with HIV-1 RNA less than or equal to 100,000 copies/mL at the start of therapy or
+- to replace a stable antiretroviral regimen in those who are virologically suppressed (HIV-1 RNA less than 50 copies/mL) on a stable antiretroviral regimen for
+ at least 6 months with no treatment failure and no known substitutions associated with resistance to the individual components of emtricitabine, rilpivirine an
+d tenofovir disoproxil fumarate tablets
+Limitations of Use:
+- More rilpivirine-treated subjects with HIV-1 RNA greater than 100,000 copies/mL at the start of therapy experienced virologic failure (HIV-1 RNA ≥ 50 copies/m
+L) compared to rilpivirine-treated subjects with HIV-1 RNA less than or equal to 100,000 copies/mL
+
+=== CHUNK 2 (PASSAGE_0002) ===
+2.1 Testing Prior to Initiation and During Treatment with Emtricitabine, Rilpivirine and Tenofovir Disoproxil Fumarate Tablets
+Prior to or when initiating emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, test patients for hepatitis B virus infection .
+Prior to initiation of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, and during treatment with emtricitabine, rilpivirine and tenofovir
+disoproxil fumarate tablets, on a clinically appropriate schedule, assess serum creatinine, estimated creatinine clearance, urine glucose and urine protein in a
+ll patients. In patients with chronic kidney disease, also assess serum phosphorus .
+
+=== CHUNK 3 (PASSAGE_0003) ===
+2.2 Recommended Dosage
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are a three-drug fixed dose combination product containing 200 mg of emtricitabine (FTC), 2
+5 mg of rilpivirine (RPV), and 300 mg of tenofovir disoproxil fumarate (TDF). The recommended dosage of emtricitabine, rilpivirine and tenofovir disoproxil fuma
+rate tablets in adult and pediatric patients weighing at least 35 kg is one tablet taken orally once daily with food .
+
+=== CHUNK 4 (PASSAGE
+root@af996c5fe492:/workspace#

@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Expecting ',' delimiter: line 3 column 15 (char 225) | Content preview: '{\n  "analysis": "Great. Now let\'s print all chunks for Lopinavir-Ritonavir from 0 to 15 to make sure'...
+
+Please fix these issues and provide a proper JSON response.

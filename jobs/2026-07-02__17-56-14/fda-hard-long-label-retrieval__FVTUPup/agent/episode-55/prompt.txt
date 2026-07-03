@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0014
+=== PASSAGE_0014 ===
+5.2     Hypersensitivity Reactions
+Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported
+ with PAXLOVID . If signs and symptoms of a clinically significant hypersensitivity reaction or anaphylaxis occur, immediately discontinue PAXLOVID and initiate
+ appropriate medications and/or supportive care.
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0015
+=== PASSAGE_0015 ===
+5.3     Hepatotoxicity
+Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir. Therefore, caution should be exercised when adm
+inistering PAXLOVID to patients with pre-existing liver diseases, liver enzyme abnormalities, or hepatitis.
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0016
+=== PASSAGE_0016 ===
+5.4     Risk of HIV-1 Resistance Development
+Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncont
+rolled or undiagnosed HIV-1 infection .
+root@2635f56baf2a:/workspace#

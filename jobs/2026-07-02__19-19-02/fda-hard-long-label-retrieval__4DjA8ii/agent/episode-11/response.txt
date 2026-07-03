@@ -1,0 +1,10 @@
+{
+  "analysis": "The interactive Python shell is running with the `search_label.py` loaded. Let's run searches to answer each of the 8 questions.",
+  "plan": "Let's search for keywords related to each question.",
+  "commands": [
+    {
+      "keystrokes": "print(len(search('interaction')))\n",
+      "duration": 0.5
+    }
+  ]
+}

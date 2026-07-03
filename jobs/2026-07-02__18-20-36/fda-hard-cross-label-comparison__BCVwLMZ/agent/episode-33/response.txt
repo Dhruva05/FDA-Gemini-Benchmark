@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's write a python script to print ALL passages of `dcc29902-1fe6-4713-947e-335503959464` but without cutting off. We can write them to a file and grep or read them in small batches.",
+  "plan": "I will write a python script to write all 12 passages of dcc29902-1fe6-4713-947e-335503959464 to a file, and then print passages 0 to 4.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_acyclovir_all.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    l = {x['set_id']: x for x in (json.loads(line) for line in f)}\nl1 = l['dcc29902-1fe6-4713-947e-335503959464']\nfor i, c in enumerate(l1['chunks']):\n    print(f\"--- PASSAGE_{i:04d} ---\")\n    print(c)\nEOF\npython3 print_acyclovir_all.py > acyclovir_all.txt\nhead -n 50 acyclovir_all.txt\n",
+      "duration": 1.0
+    }
+  ]
+}

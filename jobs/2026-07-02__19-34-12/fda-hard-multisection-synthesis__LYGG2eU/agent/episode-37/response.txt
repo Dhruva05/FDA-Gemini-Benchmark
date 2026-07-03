@@ -1,0 +1,11 @@
+{
+  "analysis": "Yes! The product is indeed \"Lopinavir and Ritonavir Oral Solution USP\". Let's print PASSAGE_0106 in full to understand the description.",
+  "plan": "I will run the print script to print PASSAGE_0106 for Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passages.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 PASSAGE_0106\n",
+      "duration": 1.0
+    }
+  ],
+  "task_complete": false
+}

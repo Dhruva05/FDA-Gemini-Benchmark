@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "12HR Allergy Relief":
+>             print(json.dumps({k: v for k, v in data.items() if k != "chunks"}, indent=2))
+> '
+{
+  "drug_id": "12hr_allergy_relief",
+  "drug_name": "12HR Allergy Relief",
+  "label_raw": "||PASSAGE_0000||\nUses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n-
+itchy, watery eyes\n- itching of the nose or throat\n\n||PASSAGE_0001||\nDo not use\u00a0if you have ever had an allergic reaction to this product or any of its
+ ingredients.\n\n||PASSAGE_0002||\nAsk a doctor before use if you have kidney disease.\u00a0 Your doctor should determine if you need a different dose.\n\n||PAS
+SAGE_0003||\n- do not take more than directed\n- do not take at the same time as aluminum or magnesium antacids\n- do not take with fruit juices\n\n||PASSAGE_00
+04||\nStop use and ask a doctor if an allergic reaction to this product occurs.\u00a0 Seek medical help right away.\n\n||PASSAGE_0005||\nIf pregnant or breast-f
+eeding,\u00a0ask a health professional before use.\n\n||PASSAGE_0006||\nKeep out of reach of children. In case of overdose, get medical help or contact a Poison
+ Control Center right away (1-800-222-1222).\n\n||PASSAGE_0007||\nadults and children 12 years of age and over take one 60 mg tablet with water every 12 hours;
+do not take more than 2 tablets in 24 hours\n\n||PASSAGE_0008||\ndo not use\nadults 65 years of age and older\n\n||PASSAGE_0009||\n- store between 20-25\u00b0C
+(68-77\u00b0F)\n- protect from excessive moisture\n- retain carton for complete product information and warnings\n\n||PASSAGE_0010||\ncolloidal silicon dioxide,
+ croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, iron oxide yellow, lactose monohydrate, macrogol, magnesium stearate, microcrystalline c
+ellulose, pregelatinized starch, titanium dioxide\n\n||PASSAGE_0011||\nAntihistamine\nIndoor/Outdoor Relief of:\n\n||PASSAGE_0012||\nActual Size\nCOMPARE TO ALL
+EGRA\u00ae 12 HOUR ALLERGY active ingredient*",
+  "set_id": "ea5d0e55-2191-4094-b082-24b317f95752"
+}
+root@3faa5da3ba91:/workspace#

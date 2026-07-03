@@ -1,0 +1,119 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > search_celecoxib_dose.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'CELECOXIB':
+>             for idx, chunk in enumerate(data['chunks']):
+>                 if 'dosage' in chunk.lower() or 'dose' in chunk.lower():
+>                     print(f"Chunk {idx} (PASSAGE_{idx:04d}): {repr(chunk[:150])}")
+>             break
+> EOF
+root@af996c5fe492:/workspace# python3 search_celecoxib_dose.py
+Chunk 8 (PASSAGE_0008): '2.1 General Dosing Instructions\nCarefully consider the potential benefits and risks of celecoxib capsules and other treatment options
+before deciding '
+Chunk 9 (PASSAGE_0009): '2.2 Osteoarthritis\nFor OA, the dosage is 200 mg per day administered as a single dose or as 100 mg twice daily.'
+Chunk 10 (PASSAGE_0010): '2.3 Rheumatoid Arthritis\nFor RA, the dosage is 100 mg to 200 mg twice daily.'
+Chunk 11 (PASSAGE_0011): '2.4 Juvenile Rheumatoid Arthritis\nFor JRA, the dosage for pediatric patients (age 2 years and older) is based on weight. For patients
+ ≥10 kg to \uf0a325 kg'
+Chunk 12 (PASSAGE_0012): '2.5 Ankylosing Spondylitis\nFor AS, the dosage of celecoxib capsules is 200 mg daily in single (once per day) or divided (twice per da
+y) doses. If no e'
+Chunk 13 (PASSAGE_0013): '2.6 Management of Acute Pain and Treatment of Primary Dysmenorrhea\nFor management of Acute Pain and Treatment of Primary Dysmenorrhea
+, the dosage is 4'
+Chunk 14 (PASSAGE_0014): '2.7 Special Populations\nHepatic\n                           Impairment\nIn patients with moderate hepatic impairment (Child-Pugh Clas
+s B), reduce the do'
+Chunk 15 (PASSAGE_0015): 'Poor Metabolizers of CYP2C9 Substrates\nIn adult patients who are known or suspected to be poor CYP2C9 metabolizers based on genotype
+or previous histo'
+Chunk 16 (PASSAGE_0016): '3 DOSAGE FORMS AND STRENGTHS\nCelecoxib capsules:\n50 mg\xa0 white\xa0to\xa0off\xa0white\xa0colored\xa0granules\xa0filled\xa0in\xa0siz
+e\xa02\xa0hard\xa0gelatin\xa0white\xa0capsule,\xa0axially\xa0print'
+Chunk 18 (PASSAGE_0018): '5.1 Cardiovascular Thrombotic Events\nClinical trials of several cyclooxygenase-2 (COX-2) selective and nonselective NSAIDs of up to t
+hree years durati'
+Chunk 20 (PASSAGE_0020): '5.2 Gastrointestinal Bleeding, Ulceration, and Perforation\nNSAIDs, including celecoxib cause serious gastrointestinal (GI) adverse ev
+ents including in'
+Chunk 23 (PASSAGE_0023): "5.5 Heart Failure and Edema\nThe Coxib and traditional NSAID Trialists' Collaboration meta-analysis of randomized controlled trials de
+monstrated an app"
+Chunk 24 (PASSAGE_0024): '5.6 Renal Toxicity and Hyperkalemia\nRenal Toxicity\nLong-term administration of NSAIDs has resulted in renal papillary necrosis and o
+ther renal injury.'
+Chunk 31 (PASSAGE_0031): 'Oligohydramnios/Neonatal Renal Impairment\nUse of NSAIDs, including celecoxib, at about 20 weeks gestation or later in pregnancy may c
+ause fetal renal '
+Chunk 37 (PASSAGE_0037): '6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed
+ in the clinical '
+Chunk 50 (PASSAGE_0050): 'Juvenile Rheumatoid Arthritis Study\nIn a 12-week, double-blind, active-controlled study, 242 JRA patients 2 years to 17 years of age
+were treated with'
+Chunk 51 (PASSAGE_0051): 'Other Pre-Approval Studies\nAdverse Events from Ankylosing Spondylitis Studies:A total of 378 patients were treated with celecoxib cap
+sules in placebo-'
+Chunk 65 (PASSAGE_0065): 'Aspirin\nClinical Impact:\nControlled clinical studies showed that the concomitant use of NSAIDs and analgesic doses of aspirin does n
+ot produce any gre'
+Chunk 73 (PASSAGE_0073): 'CYP2C9 Inhibitors or Inducers\nClinical Impact:\nCelecoxib metabolism is predominantly mediated via cytochrome P450 (CYP) 2C9 in the l
+iver. Co-administr'
+Chunk 74 (PASSAGE_0074): 'CYP2D6 substrates\nClinical Impact:\nIn vitrostudies indicate that celecoxib, although not a substrate, is an inhibitor of CYP2D6. The
+refore, there is a'
+Chunk 76 (PASSAGE_0076): '8.1 Pregnancy\nRisk Summary\nUse of NSAIDs, including celecoxib capsules, can cause premature closure of the fetal ductus arteriosus a
+nd fetal renal dys'
+Chunk 78 (PASSAGE_0078): 'Oligohydramnios/Neonatal Renal Impairment\nUse of NSAIDs at about 20 weeks gestation or later in pregnancy has been associated with ca
+ses of fetal rena'
+Chunk 79 (PASSAGE_0079): 'Fetal/Neonatal Adverse Reactions\nPremature Closure of Fetal Ductus Arteriosus:\nAvoid use of NSAIDs in women at about 30 weeks gestat
+ion and later in p'
+Chunk 81 (PASSAGE_0081): 'Human Data\nThe available data do not establish the presence or absence of developmental toxicity related to the use of celecoxib caps
+ules.\nPremature C'
+Chunk 82 (PASSAGE_0082): 'Animal Data\nCelecoxib at oral doses ≥150 mg/kg/day (approximately 2 times the human exposure at 200 mg twice daily as measured by AUC
+[... output limited to 10000 bytes; 69 interior bytes omitted ...]
+y limited to lethargy, drowsiness, nausea, vomiting, and e
+pigastric pain, w'
+Chunk 93 (PASSAGE_0093): '12.2 Pharmacodynamics\nPlatelets\nIn clinical trials using normal volunteers, celecoxib capsules at single doses up to 800 mg and mult
+iple doses of 600 '
+Chunk 95 (PASSAGE_0095): '12.3 Pharmacokinetics\nCelecoxib exhibits dose-proportional increase in exposure after oral administration up to 200 mg twice daily an
+d less than propo'
+Chunk 96 (PASSAGE_0096): 'Absorption\nPeak plasma levels of celecoxib occur approximately 3 hours after an oral dose. Under fasting conditions, both peak plasma
+ levels (C\nmax) a'
+Chunk 97 (PASSAGE_0097): 'Food Effects\nWhen celecoxib capsules were taken with a high fat meal, peak plasma levels were delayed for about 1 to 2 hours with an
+increase in total'
+Chunk 98 (PASSAGE_0098): 'Distribution\nIn healthy subjects, celecoxib is highly protein bound (~97%) within the clinical dose range. In vitro studies indicate
+that celecoxib bi'
+Chunk 100 (PASSAGE_0100): 'Excretion\nCelecoxib is eliminated predominantly by hepatic metabolism with little (<3%) unchanged drug recovered in the urine and fe
+ces. Following a s'
+Chunk 101 (PASSAGE_0101): 'Geriatric\nAt steady state, elderly subjects (over 65 years old) had a 40% higher C\nmaxand a 50% higher AUC compared to the young su
+bjects. In elderly '
+Chunk 104 (PASSAGE_0104): 'Hepatic Impairment\nA pharmacokinetic study in subjects with mild (Child-Pugh Class A) and moderate (Child-Pugh Class B) hepatic impa
+irment has shown t'
+Chunk 112 (PASSAGE_0112): '13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\nCarcinogenesis\nCelecoxib was not carcinogenic in Sprague-Dawley rats give
+n oral doses up to '
+Chunk 114 (PASSAGE_0114): 'Impairment of Fertility\nCelecoxib had no effect on male or female fertility or male reproductive function in rats at oral doses up t
+o 600 mg/kg/day (a'
+Chunk 115 (PASSAGE_0115): '13.2 Animal Toxicology\nAn increase in the incidence of background findings of spermatocele with or without secondary changes such as
+ epididymal hyposp'
+Chunk 116 (PASSAGE_0116): '14.1 Osteoarthritis\nCelecoxib capsules have demonstrated significant reduction in joint pain compared to placebo. Celecoxib capsules
+ were evaluated fo'
+Chunk 117 (PASSAGE_0117): '14.2 Rheumatoid Arthritis\nCelecoxib capsules have demonstrated significant reduction in joint tenderness/pain and joint swelling com
+pared to placebo. '
+Chunk 119 (PASSAGE_0119): '14.4 Ankylosing Spondylitis\nCelecoxib capsules were evaluated in AS patients in two placebo- and active-controlled clinical trials o
+f 6 and 12 weeks d'
+Chunk 120 (PASSAGE_0120): '14.5 Analgesia, Including Primary Dysmenorrhea\nIn acute analgesic models of post-oral surgery pain, post-orthopedic surgical pain, a
+nd primary dysmeno'
+Chunk 122 (PASSAGE_0122): 'Design\nThe PRECISION trial was a double-blind randomized controlled trial of cardiovascular safety in OA and RA patients with or at
+high risk for card'
+Chunk 123 (PASSAGE_0123): 'Results\nAmong subjects with OA, only 0.2% (17/7259) escalated celecoxib to the 200 mg twice daily dose, whereas 54.7% (3946/7208) es
+calated ibuprofen '
+Chunk 124 (PASSAGE_0124): 'Primary Endpoint\nThe trial had two prespecified analysis populations:\n- Intent-to-treat population (ITT): Comprised of all randomiz
+ed subjects followe'
+Chunk 129 (PASSAGE_0129): 'Ambulatory Blood Pressure Monitoring (ABPM) Substudy\nIn the PRECISION-ABPM substudy, among the total of 444 analyzable patients at M
+onth 4, celecoxib '
+Chunk 130 (PASSAGE_0130): '14.7 Special Studies\nAdenomatous Polyp Prevention Studies\n(NCT00005094 and NCT00141193)\nCardiovascular safety was evaluated in two
+ randomized, double-'
+Chunk 131 (PASSAGE_0131): 'Celecoxib Long-Term Arthritis Safety Study (CLASS)\nThis was a prospective, long-term, safety outcome study conducted post-marketing
+in approximately 5'
+Chunk 132 (PASSAGE_0132): 'Endoscopic Studies\nThe correlation between findings of short-term endoscopic studies with celecoxib capsules and the relative incide
+nce of clinically '
+Chunk 136 (PASSAGE_0136): 'Gastrointestinal Bleeding, Ulceration, and Perforation\nAdvise patients to report symptoms of ulcerations and bleeding, including epi
+gastric pain, dysp'
+Chunk 144 (PASSAGE_0144): 'Use of NSAIDS and Low-Dose Aspirin\nInform patients not to use low-dose aspirin concomitantly with celecoxib capsules until they talk
+ to their healthca'
+Chunk 145 (PASSAGE_0145): 'Medication Guide for Nonsteroidal Anti-inflammatory Drugs (NSAIDs)\nWhat is the most important information I should know about medici
+nes called Non-Ste'
+Chunk 151 (PASSAGE_0151): 'Other information about NSAIDs\n- Aspirin is an NSAID but it does not increase the chance of a heart attack. Aspirin can cause bleedi
+ng in the brain, s'
+Chunk 152 (PASSAGE_0152): 'DRUG: CELECOXIB\nGENERIC: CELECOXIB\nDOSAGE: CAPSULE\nADMINSTRATION: ORAL\nNDC: 70518-2233-0\nNDC: 70518-2233-1\nNDC: 70518-2233-2\nC
+OLOR: white\nSHAPE: CAPSU'
+root@af996c5fe492:/workspace#

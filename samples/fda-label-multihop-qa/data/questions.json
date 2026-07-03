@@ -1,0 +1,58 @@
+[
+  {
+    "drug_name": "LAMPIT",
+    "question": "What risks should be communicated to pregnant women regarding the use of LAMPIT for Chagas disease treatment during organogenesis?",
+    "question_id": "1d735c9c9780ebea",
+    "question_type": "multihop",
+    "set_id": "90d09714-a8b1-4696-8ada-f99dc54d0721"
+  },
+  {
+    "drug_name": "Gastrografin",
+    "question": "What precautions should be taken when administering Gastrografin to nursing mothers and young children?",
+    "question_id": "3cdf0b5cec5c6d24",
+    "question_type": "multihop",
+    "set_id": "8c2340e4-2b42-45dc-8fac-9960e8172547"
+  },
+  {
+    "drug_name": "Afeditab",
+    "question": "What should a nursing mother consider when taking Afeditab\u00ae CR, given its potential for dose-dependent peripheral edema?",
+    "question_id": "b5e7075815e89dc0",
+    "question_type": "multihop",
+    "set_id": "323351d8-de18-4cd6-9497-c2d5e8666414"
+  },
+  {
+    "drug_name": "LAMPIT",
+    "question": "Why must LAMPIT be administered under close medical supervision in patients with End Stage Renal Disease who also consume alcohol?",
+    "question_id": "a5827467adc0fc81",
+    "question_type": "multihop",
+    "set_id": "90d09714-a8b1-4696-8ada-f99dc54d0721"
+  },
+  {
+    "drug_name": "Gastrografin",
+    "question": "Why should thyroid function tests be performed before administering Gastrografin to patients with hyperthyroidism?",
+    "question_id": "acb65491fd5ede93",
+    "question_type": "multihop",
+    "set_id": "8c2340e4-2b42-45dc-8fac-9960e8172547"
+  },
+  {
+    "drug_name": "Afeditab",
+    "question": "What precautions should be taken when administering Afeditab\u00ae CR to elderly patients who are also on antihypertensive medications?",
+    "question_id": "7e378745d57dacec",
+    "question_type": "multihop",
+    "set_id": "323351d8-de18-4cd6-9497-c2d5e8666414"
+  },
+  {
+    "drug_name": "LAMPIT",
+    "question": "Why must LAMPIT be administered under close medical supervision in patients with porphyria despite being indicated for treating Chagas disease in children?",
+    "question_id": "58b99352bb4d2c8c",
+    "question_type": "multihop",
+    "set_id": "90d09714-a8b1-4696-8ada-f99dc54d0721"
+  },
+  {
+    "drug_name": "Afeditab",
+    "question": "How does Afeditab\u00ae CR's indication for hypertension relate to its hemodynamic effects on patients with impaired ventricular function?",
+    "question_id": "3f905c7ce3d6b057",
+    "question_type": "multihop",
+    "set_id": "323351d8-de18-4cd6-9497-c2d5e8666414"
+  }
+]

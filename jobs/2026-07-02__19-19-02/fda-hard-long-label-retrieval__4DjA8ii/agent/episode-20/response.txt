@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, did it find anything? Let's check if there are matches. Let's hit Enter.",
+  "plan": "Press Enter to execute the loop or print the output.",
+  "commands": [
+    {
+      "keystrokes": "\n",
+      "duration": 0.5
+    }
+  ]
+}

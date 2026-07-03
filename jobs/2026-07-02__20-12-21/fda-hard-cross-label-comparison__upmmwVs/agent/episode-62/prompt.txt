@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; f=open('/workspace/answers.json'); data=json.load(f); print('Valid JSON!'); print('Keys in answers:', lis
+t(data.keys())); print('Number of answers:', len(data['answers']))"
+bash: !': event not found
+root@7e48d58e23f3:/workspace#

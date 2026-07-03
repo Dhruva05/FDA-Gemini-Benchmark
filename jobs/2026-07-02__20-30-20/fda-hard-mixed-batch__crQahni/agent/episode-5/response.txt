@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's see if the chunks are in a specific format or if there are passage IDs inside `label_raw` or if we should check how passage IDs are defined. Let's write a python script to search for any occurrences of \"PASSAGE_\" or similar in the label_raw or chunks.",
+  "plan": "I will run a python script to search for \"PASSAGE_\" in the label_raw and chunks of the first label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        raw = data.get(\"label_raw\", \"\")\n        chunks = data.get(\"chunks\", [])\n        print(data[\"drug_name\"], \"raw has PASSAGE_:\", \"PASSAGE_\" in raw)\n        print(data[\"drug_name\"], \"chunks has PASSAGE_:\", any(\"PASSAGE_\" in str(c) for c in chunks))\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

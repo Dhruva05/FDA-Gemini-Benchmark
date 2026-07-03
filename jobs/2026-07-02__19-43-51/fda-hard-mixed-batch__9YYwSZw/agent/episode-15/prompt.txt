@@ -1,0 +1,31 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Acamprosate Calcium":
+>             print(data["chunks"][44])
+> '
+Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a geriatric population. However, since renal function diminishes in elderly patients and
+acamprosate is excreted unchanged in urine, acamprosate plasma concentrations are likely to be higher in the elderly population compared to younger adults.
+Pediatrics:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a pediatric population.
+Renal Impairment:
+Peak plasma concentrations after administration of a single dose of 2 x 333 mg acamprosate calcium tablets to patients with moderate or severe renal impairment
+were about 2-fold and 4-fold higher, respectively, compared to healthy subjects. Similarly, elimination half-life was about 1.8-fold and 2.6-fold longer, respec
+tively, compared to healthy subjects. There is a linear relationship between creatinine clearance values and total apparent plasma clearance, renal clearance an
+d plasma half-life of acamprosate. A dose of 1 x 333 mg acamprosate calcium, three times daily, is recommended in patients with moderate renal impairment (creat
+inine clearance of 30 to 50 mL/min, .
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+Hepatic Impairment:
+Acamprosate is not metabolized by the liver and the pharmacokinetics of acamprosate calcium are not altered in patients with mild to moderate hepatic impairment
+ (groups A and B of the Child-Pugh classification). No adjustment of dosage is recommended in such patients.
+Alcohol-dependent subjects:
+A cross-study comparison of acamprosate calcium at doses of 2 x 333 mg three times daily indicated similar pharmacokinetics between alcohol-dependent subjects a
+nd healthy subjects.
+root@3faa5da3ba91:/workspace#

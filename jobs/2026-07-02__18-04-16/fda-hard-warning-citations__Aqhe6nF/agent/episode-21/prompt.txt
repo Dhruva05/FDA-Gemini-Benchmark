@@ -1,0 +1,61 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+>             lop = data
+>             break
+> for idx in [1, 2, 3, 159]:
+>     print(f'=== PASSAGE_{idx:04d} ===')
+>     print(lop['chunks'][idx])
+> "
+=== PASSAGE_0001 ===
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+=== PASSAGE_0002 ===
+2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be us
+ed for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+=== PASSAGE_0003 ===
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V
+, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V,
+V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+=== PASSAGE_0159 ===
+17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to accurate administration of their dose to minimize the risk of accidental overdose or underdose of lopinavir and ri
+tonavir.
+- Advise patients and caregivers that the oral solution should be administered using the calibrated dosing cup (supplied) or oral dosing syringe.
+- Advise caregivers to inform their healthcare provider if the child’s weight changes in order to make sure that the child’s lopinavir and ritonavir dose is adj
+usted as needed.
+- Inform patients and caregivers that lopinavir and ritonavir oral solution should be taken with food to enhance absorption.
+- Advise patients to remain under the care of a healthcare provider while using lopinavir and ritonavir and to take lopinavir and ritonavir in combination with
+other antiretroviral drugs as prescribed.
+- Advise patients not to alter the dose or discontinue therapy without consulting with their healthcare provider. If a dose of lopinavir and ritonavir is missed
+ patients should take the dose as soon as possible and then return to their normal schedule. However, if a dose is skipped the patient should not double the nex
+t dose.
+- Inform patients that it is important to take lopinavir and ritonavir on a regular dosing schedule as directed and to avoid missing doses as that can result in
+ development of resistance.
+- Inform patients that there may be a greater chance of developing diarrhea with the once daily regimen as compared with the twice daily regimen.
+- Inform patients that lopinavir and ritonavir is not a cure for HIV-1 infection and that they may continue to experience illnesses associated with HIV-1 infect
+ion, including opportunistic infections.
+root@23e2e6a1b566:/workspace#

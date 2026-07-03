@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "import json; [print(obj.keys()) for obj in (json.loads(line) for line in open('/workspace/data/public/questions.jsonl'
+))]"
+dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+dict_keys(['drug_name', 'qid', 'question', 'required_output_fields', 'set_id', 'task_type'])
+root@b9fc21343844:/workspace#

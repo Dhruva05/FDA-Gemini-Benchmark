@@ -1,0 +1,7 @@
+New Terminal Output:
+
+>>> print(label_data['chunks'][17])
+6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Hypersensitivity reactions
+>>>

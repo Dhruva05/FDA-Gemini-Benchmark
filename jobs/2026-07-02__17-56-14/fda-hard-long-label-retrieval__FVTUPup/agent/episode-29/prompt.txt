@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 84 (char 85) | Content preview: '{\n  "analysis": "Yes, all 8 questions have exactly the same `required_output_fields`.\nWait, let\'s se'...
+
+Please fix these issues and provide a proper JSON response.

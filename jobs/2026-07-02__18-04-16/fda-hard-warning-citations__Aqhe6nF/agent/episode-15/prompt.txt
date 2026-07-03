@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     pax = json.loads(f.readline())
+> for idx, chunk in enumerate(pax['chunks']):
+>     if any(h in chunk for h in ['7 DRUG INTERACTIONS', '5.1 ', '7.1', '7.2', '7.3']):
+>         print(f'PASSAGE_{idx:04d} (len={len(chunk)}): {repr(chunk[:150])}')
+> "
+PASSAGE_0019 (len=736): '7.1\tPotential for PAXLOVID to Affect Other Drugs\nPAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, a
+nd an inhibitor o'
+PASSAGE_0020 (len=235): '7.2\tPotential for Other Drugs to Affect PAXLOVID\nNirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A
+may decrease nirm'
+PASSAGE_0021 (len=554): '7.3\tEstablished and Other Potentially Significant Drug Interactions\nTable 2 provides a listing of clinically significant drug interac
+tions, including '
+PASSAGE_0143 (len=457): '≥2 Substitutions\n(IC50/Ki value fold change in biochemical assay)\nT21I+S144A (20), T21I+E166V (120-11,000), T21I+A173V (15), L50F+E16
+6V (100-4,500), T'
+PASSAGE_0151 (len=68): '-5.6 (-7.3, -4.0)\nCOVID-19 Related Hospitalization Through Day 28, %'
+root@23e2e6a1b566:/workspace#

@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# python3 -c "import json; d=[json.loads(line) for line in open('/workspace/data/public/labels.jsonl') if 'Lopinavir' in line][0]; p
+rint('=== PASSAGE_0001 ===\\n', d['chunks'][1], '\\n=== PASSAGE_0002 ===\\n', d['chunks'][2])"
+=== PASSAGE_0001 ===
+ 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+=== PASSAGE_0002 ===
+ 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be us
+ed for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+root@1ce871952c8c:/workspace#

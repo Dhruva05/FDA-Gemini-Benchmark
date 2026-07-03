@@ -1,0 +1,108 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > print_celecoxib_passages.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+> l = [label for label in labels if label['set_id'] == '27f17ae7-939b-402e-9498-3b6611104089'][0]
+> for i, chunk in enumerate(l['chunks']):
+>     if any(kw in chunk for kw in ['2 DOSAGE AND ADMINISTRATION', '2.1', '2.2', '2.3', '2.4', '2.5', '2.6']):
+>         print(f"PASSAGE_{i:04d}:")
+>         print(chunk)
+>         print("-"*50)
+> EOF
+root@371ed25b9fd3:/workspace# python3 print_celecoxib_passages.py
+PASSAGE_0008:
+2.1 General Dosing Instructions
+Carefully consider the potential benefits and risks of celecoxib capsules and other treatment options before deciding to use celecoxib capsules. Use the lowest
+effective dosage for the shortest duration consistent with individual patient treatment goals .
+These doses can be given without regard to timing of meals.
+--------------------------------------------------
+PASSAGE_0009:
+2.2 Osteoarthritis
+For OA, the dosage is 200 mg per day administered as a single dose or as 100 mg twice daily.
+--------------------------------------------------
+PASSAGE_0010:
+2.3 Rheumatoid Arthritis
+For RA, the dosage is 100 mg to 200 mg twice daily.
+--------------------------------------------------
+PASSAGE_0011:
+2.4 Juvenile Rheumatoid Arthritis
+For JRA, the dosage for pediatric patients (age 2 years and older) is based on weight. For patients ≥10 kg to 25 kg the recommended dose is 50 mg twice daily.
+For patients >25 kg the recommended dose is 100 mg twice daily.
+For patients who have difficulty swallowing capsules, the contents of a celecoxib capsule can be added to applesauce. The entire capsule contents are carefully
+emptied onto a level teaspoon of cool or room temperature applesauce and ingested immediately with water. The sprinkled capsule contents on applesauce are stabl
+e for up to 6 hours under refrigerated conditions (2°C to 8°C/35°F to 45°F).
+--------------------------------------------------
+PASSAGE_0012:
+2.5 Ankylosing Spondylitis
+For AS, the dosage of celecoxib capsules is 200 mg daily in single (once per day) or divided (twice per day) doses. If no effect is observed after 6 weeks, a tr
+ial of 400 mg daily may be worthwhile. If no effect is observed after 6 weeks on 400 mg daily, a response is not likely and consideration should be given to alt
+ernate treatment options.
+--------------------------------------------------
+PASSAGE_0013:
+2.6 Management of Acute Pain and Treatment of Primary Dysmenorrhea
+For management of Acute Pain and Treatment of Primary Dysmenorrhea, the dosage is 400 mg initially, followed by an additional 200 mg dose if needed on the first
+ day. On subsequent days, the recommended dose is 200 mg twice daily as needed.
+--------------------------------------------------
+PASSAGE_0020:
+5.2 Gastrointestinal Bleeding, Ulceration, and Perforation
+NSAIDs, including celecoxib cause serious gastrointestinal (GI) adverse events including inflammation, bleeding, ulceration, and perforation of the esophagus, s
+tomach, small intestine, or large intestine, which can be fatal. These serious adverse events can occur at any time, with or without warning symptoms, in patien
+ts treated with celecoxib capsules. Only one in five patients who develop a serious upper GI adverse event on NSAID therapy is symptomatic. Upper GI ulcers, gro
+ss bleeding, or perforation caused by NSAIDs occurred in approximately 1% of patients treated for 3 to 6 months, and in about 2% to 4% of patients treated for o
+ne year. However, even short-term NSAID therapy is not without risk.
+Risk Factors for GI Bleeding, Ulceration, and Perforation
+Patients with a prior history of peptic ulcer disease and/or GI bleeding who used NSAIDs had a greater than 10-fold increased risk for developing a GI bleed com
+pared to patients without these risk factors. Other factors that increase the risk of GI bleeding in patients treated with NSAIDs include longer duration of NSA
+ID therapy; concomitant use of oral corticosteroids, antiplatelet drugs (such as aspirin), anticoagulants; or selective serotonin reuptake inhibitors (SSRIs); s
+moking; use of alcohol; older age; and poor general health status. Most postmarketing reports of fatal GI events occurred in elderly or debilitated patients. Ad
+ditionally, patients with advanced liver disease and/or coagulopathy are at increased risk for GI bleeding.
+Complicated and symptomatic ulcer rates were 0.78% at nine months for all patients in the CLASS trial, and 2.19% for the subgroup on low-dose ASA. Patients 65 y
+ears of age and older had an incidence of 1.40% at nine months, 3.06% when also taking ASA .
+Strategies to Minimize the GI Risks in NSAID-treated patients:
+- Use the lowest effective dosage for the shortest possible duration.
+- Avoid administration of more than one NSAID at a time.
+- Avoid use in patients at higher risk unless benefits are expect
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+ed to take concomitant low-dose (  325 mg/day) aspirin (ASA) for cardiovascular prophylaxis (ASA subgroups: celecoxib capsules, n = 882; diclofenac,
+n = 445; ibuprofen, n = 412). Differences in the incidence of complicated ulcers between celecoxib capsules and the combined group of ibuprofen and diclofenac w
+ere not statistically significant.
+Patients on celecoxib capsules and concomitant low-dose ASA (N=882) experienced 4-fold higher rates of complicated ulcers compared to those not on ASA (N=3105).
+ The Kaplan-Meier rate for complicated ulcers at 9 months was 1.12% versus 0.32% for those on low-dose ASA and those not on ASA, respectively .
+The estimated cumulative rates at 9 months of complicated and symptomatic ulcers for patients treated with celecoxib capsules 400 mg twice daily are described i
+n Table 7. Table 7 also displays results for patients less than or greater than 65 years of age. The difference in rates between celecoxib capsules alone and ce
+lecoxib capsules with ASA groups may be due to the higher risk for GI events in ASA users.
+Table 7: Complicated and Symptomatic Ulcer Rates in Patients Taking Celecoxib Capsules 400 mg Twice Daily (Kaplan-Meier Rates at 9 months %]) Based on Risk Fact
+ors
+In a small number of patients with a history of ulcer disease, the complicated and symptomatic ulcer rates in patients taking celecoxib capsules alone or celeco
+xib capsules with ASA were, respectively, 2.56% (n=243) and 6.85% (n=91) at 48 weeks. These results are to be expected in patients with a prior history of ulcer
+ disease .
+Cardiovascular safety outcomes were also evaluated in the CLASS trial. Kaplan-Meier cumulative rates for investigator-reported serious cardiovascular thromboemb
+olic adverse events (including MI, pulmonary embolism, deep venous thrombosis, unstable angina, transient ischemic attacks, and ischemic cerebrovascular acciden
+ts) demonstrated no differences between the celecoxib, diclofenac, or ibuprofen treatment groups. The cumulative rates in all patients at nine months for celeco
+xib, diclofenac, and ibuprofen were 1.2%, 1.4%, and 1.1%, respectively. The cumulative rates in non-ASA users at nine months in each of the three treatment grou
+ps were less than 1%. The cumulative rates for myocardial infarction in non-ASA users at nine months in each of the three treatment groups were less than 0.2%.
+There was no placebo group in the CLASS trial, which limits the ability to determine whether the three drugs tested had no increased risk of CV events or if the
+y all increased the risk to a similar degree. In the CLASS study, the Kaplan-Meier cumulative rates at 9 months of peripheral edema in patients on celecoxib cap
+sules 400 mg twice daily (4-fold and 2-fold the recommended OA and RA doses, respectively), ibuprofen 800 mg three times daily and diclofenac 75 mg twice daily
+were 4.5%, 6.9% and 4.7%, respectively. The rates of hypertension from the CLASS trial in the celecoxib capsules, ibuprofen and diclofenac-treated patients were
+ 2.4%, 4.2% and 2.5%, respectively.
+--------------------------------------------------
+PASSAGE_0132:
+Endoscopic Studies
+The correlation between findings of short-term endoscopic studies with celecoxib capsules and the relative incidence of clinically significant serious upper GI
+events with long-term use has not been established. Serious clinically significant upper GI bleeding has been observed in patients receiving celecoxib capsules
+in controlled and open-labeled trials .
+A randomized, double-blind study in 430 RA patients was conducted in which an endoscopic examination was performed at 6 months. The incidence of endoscopic ulce
+rs in patients taking celecoxib capsules 200 mg twice daily was 4% vs. 15% for patients taking diclofenac SR 75 mg twice daily. However, celecoxib capsules was
+not statistically different than diclofenac for clinically relevant GI outcomes in the CLASS trial
+The incidence of endoscopic ulcers was studied in two 12-week, placebo-controlled studies in 2157 OA and RA patients in whom baseline endoscopies revealed no ul
+cers. There was no dose relationship for the incidence of gastroduodenal ulcers and the dose of celecoxib capsules (50 mg to 400 mg twice daily). The incidence
+for naproxen 500 mg twice daily was 16.2% and 17.6% in the two studies, for placebo was 2.0% and 2.3%, and for all doses of celecoxib capsules the incidence ran
+ged between 2.7%-5.9%. There have been no large, clinical outcome studies to compare clinically relevant GI outcomes with celecoxib and naproxen.
+In the endoscopic studies, approximately 11% of patients were taking aspirin (  325 mg/day). In the celecoxib capsule groups, the endoscopic ulcer rate appeared
+ to be higher in aspirin users than in non-users. However, the increased rate of ulcers in these aspirin users was less than the endoscopic ulcer rates observed
+ in the active comparator groups, with or without aspirin.
+--------------------------------------------------
+root@371ed25b9fd3:/workspace#

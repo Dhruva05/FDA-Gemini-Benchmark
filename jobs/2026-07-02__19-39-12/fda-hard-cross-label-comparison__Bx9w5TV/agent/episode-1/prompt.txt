@@ -1,0 +1,55 @@
+New Terminal Output:
+root@2809f9ae2d53:/workspace# ls -la /workspace/data/public
+total 480
+drwxr-xr-x 2 root root   4096 Jul  2 20:59 .
+drwxr-xr-x 3 root root   4096 Jul  2 20:40 ..
+-rw-r--r-- 1 root root   1054 Jul  2 20:40 README.md
+-rw-r--r-- 1 root root 473503 Jul  2 20:40 labels.jsonl
+-rw-r--r-- 1 root root   3433 Jul  2 20:40 questions.jsonl
+root@2809f9ae2d53:/workspace# cat /workspace/data/public/README.md
+        # Public FDA Label Data
+
+        This directory contains only public task inputs for `fda-hard-cross-label-comparison`.
+
+        - `labels.jsonl` has full FDA label rows with `label_raw` and `chunks`.
+        - `questions.jsonl` has 5 public questions.
+        - Gold answers, references, citations, and curated context are not included here.
+
+        Labels included:
+        - 12HR Allergy Relief (`ea5d0e55-2191-4094-b082-24b317f95752`)
+- 365 Whole Foods Market Loratadine (`bba4e7c8-db8e-4522-915c-48ee809e3bce`)
+- Acamprosate Calcium (`ae6e79c0-a307-4888-b647-1b7be4cb9127`)
+- Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (`08c9d3dd-717b-0148-e054-00144ff8d46c`)
+- ACETAMINOPHEN with CODEINE (`36adb32c-638c-4d6e-b66a-1a1c35174ce6`)
+- AcetaZOLAMIDE (`6972d9c1-36ec-4246-bf7b-13206d5952c3`)
+- ACETAZOLAMIDE EXTENDED-RELEASE (`8e396b27-b44a-4aa9-805b-086395444b5f`)
+- Actoplus Met (`42e49120-6f3f-11db-9fe1-0800200c9a66`)
+- Acyclovir (`dcc29902-1fe6-4713-947e-335503959464`)
+- Acyclovir suspension (`3efa1e5e-5a14-4724-a2ca-25702f10faed`)
+root@2809f9ae2d53:/workspace# cat /workspace/data/public/questions.jsonl
+{"comparison_set_ids": ["ea5d0e55-2191-4094-b082-24b317f95752", "bba4e7c8-db8e-4522-915c-48ee809e3bce"], "drug_name": "12HR Allergy Relief vs 365 Whole Foods Ma
+rket Loratadine", "qid": "cross-0df97f1e2f1e4c", "question": "Compare the dosing instructions for 12HR Allergy Relief and 365 Whole Foods Market Loratadine. For
+ each label, report dose or strength, route, frequency, population, and maximum daily dose if stated. Cite one passage from each label.", "required_output_field
+s": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.comparison"], "set_id": "comparison:ea5d0e55-2191-4094-b082-24b317f95752:bb
+a4e7c8-db8e-4522-915c-48ee809e3bce", "task_type": "mixed"}
+{"comparison_set_ids": ["ae6e79c0-a307-4888-b647-1b7be4cb9127", "08c9d3dd-717b-0148-e054-00144ff8d46c"], "drug_name": "Acamprosate Calcium vs Acclean Chlorhexid
+ine Gluconate 0.12% Oral Rinse", "qid": "cross-e9a79ba825959d", "question": "Compare the dosing instructions for Acamprosate Calcium and Acclean Chlorhexidine G
+luconate 0.12% Oral Rinse. For each label, report dose or strength, route, frequency, population, and maximum daily dose if stated. Cite one passage from each l
+abel.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.comparison"], "set_id": "comparison:ae6e79c0-
+a307-4888-b647-1b7be4cb9127:08c9d3dd-717b-0148-e054-00144ff8d46c", "task_type": "mixed"}
+{"comparison_set_ids": ["36adb32c-638c-4d6e-b66a-1a1c35174ce6", "6972d9c1-36ec-4246-bf7b-13206d5952c3"], "drug_name": "ACETAMINOPHEN with CODEINE vs AcetaZOLAMI
+DE", "qid": "cross-7421ed8b98b8f9", "question": "Compare the dosing instructions for ACETAMINOPHEN with CODEINE and AcetaZOLAMIDE. For each label, report dose o
+r strength, route, frequency, population, and maximum daily dose if stated. Cite one passage from each label.", "required_output_fields": ["qid", "status", "ans
+wer", "citations", "structured_fields", "structured_fields.comparison"], "set_id": "comparison:36adb32c-638c-4d6e-b66a-1a1c35174ce6:6972d9c1-36ec-4246-bf7b-1320
+6d5952c3", "task_type": "mixed"}
+{"comparison_set_ids": ["8e396b27-b44a-4aa9-805b-086395444b5f", "42e49120-6f3f-11db-9fe1-0800200c9a66"], "drug_name": "ACETAZOLAMIDE EXTENDED-RELEASE vs Actoplu
+s Met", "qid": "cross-a4153187ea298f", "question": "Compare the dosing instructions for ACETAZOLAMIDE EXTENDED-RELEASE and Actoplus Met. For each label, report
+dose or strength, route, frequency, population, and maximum daily dose if stated. Cite one passage from each label.", "required_output_fields": ["qid", "status"
+, "answer", "citations", "structured_fields", "structured_fields.comparison"], "set_id": "comparison:8e396b27-b44a-4aa9-805b-086395444b5f:42e49120-6f3f-11db-9fe
+1-0800200c9a66", "task_type": "mixed"}
+{"comparison_set_ids": ["dcc29902-1fe6-4713-947e-335503959464", "3efa1e5e-5a14-4724-a2ca-25702f10faed"], "drug_name": "Acyclovir vs Acyclovir suspension", "qid"
+: "cross-893c71f570b542", "question": "Compare the dosing instructions for Acyclovir and Acyclovir suspension. For each label, report dose or strength, route, f
+requency, population, and maximum daily dose if stated. Cite one passage from each label.", "required_output_fields": ["qid", "status", "answer", "citations", "
+structured_fields", "structured_fields.comparison"], "set_id": "comparison:dcc29902-1fe6-4713-947e-335503959464:3efa1e5e-5a14-4724-a2ca-25702f10faed", "task_typ
+e": "mixed"}
+root@2809f9ae2d53:/workspace#

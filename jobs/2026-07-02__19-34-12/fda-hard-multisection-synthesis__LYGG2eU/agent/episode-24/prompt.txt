@@ -1,0 +1,41 @@
+Current Terminal Screen:
+PASSAGE_0016 (Heading: 5.4      Risk of HIV-1 Resistance Development):
+  5.4   Risk of HIV-1 Resistance Development
+----------------------------------------
+PASSAGE_0018 (Heading: 6.1      Clinical Trials Experience):
+  Trial C4671028 (EPIC-SRI) was a Phase 1, open-label trial that evaluated the effects of severe renal impairment on the p
+----------------------------------------
+PASSAGE_0115 (Heading: Ritonavir):
+  Ritonavir is chemically designated as 10-Hydroxy-2-methyl-5-(1-methylethyl)-1- 2-(1 methylethyl)-4-thiazolyl]-3,6-dioxo-
+----------------------------------------
+PASSAGE_0124 (Heading: % drug-related material in feces):
+  35.3%Determined by 19F-NMR analysis following 300 mg nirmatrelvir oral suspension administered at 0 hr enhanced with 100
+----------------------------------------
+PASSAGE_0127 (Heading: 3.29 (1.93, 5.40)):
+  3.29 (1.93, 5.40)
+----------------------------------------
+PASSAGE_0140 (Heading: Single Substitutions):
+  T21I (1.1-4.8), S46F (ND), L50F (1.2-4.2), P108S (ND), T135I (ND), F140L (4.1), S144A (2.2-5.3), C160F (2.1), E166A (3.3
+----------------------------------------
+PASSAGE_0141 (Heading: ≥2 Substitutions):
+  T21I+S144A (9.4), T21I+E166V (83-250), T21I+A173V (3.1-8.9), T21I+T304I (3.0-7.9), L50F+E166V (34-175), L50F+T304I (5.9)
+----------------------------------------
+PASSAGE_0142 (Heading: Single Substitutions):
+  Y54A/C (3.0-25), F140A/L/S (1.2-230), G143S (3.6-148), S144A/F/G/M/W/Y (1.2-76), S144D/E/H/Q/T/V (81-480), S144K/L/P/R (
+----------------------------------------
+PASSAGE_0143 (Heading: ≥2 Substitutions):
+  T21I+S144A (20), T21I+E166V (120-11,000), T21I+A173V (15), L50F+E166V (100-4,500), T135I+T304I (5.1), F140L+A173V (95),
+----------------------------------------
+PASSAGE_0151 (Heading: -5.6 (-7.3, -4.0)):
+  -5.6 (-7.3, -4.0)
+----------------------------------------
+PASSAGE_0175 (Heading: Moderate Renal Impairment):
+  To ensure appropriate dosing in patients with severe renal impairment, including those requiring hemodialysis, instruct
+----------------------------------------
+PASSAGE_0177 (Heading: This product’s labeling may have been updated. For):
+  This product’s labeling may have been updated. For the most recent prescribing information, please visit www.pfizer.com.
+----------------------------------------
+PASSAGE_0184 (Heading: How should I store PAXLOVID?):
+  LAB-1524-4.0For more information, go to www.pfizer.com or call 1-800-438-1985.
+----------------------------------------
+root@15b83e10b8d1:/workspace#

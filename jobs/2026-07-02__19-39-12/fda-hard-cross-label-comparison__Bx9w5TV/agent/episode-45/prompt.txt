@@ -1,0 +1,73 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+>
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     labels = {}
+>     for line in f:
+>         data = json.loads(line)
+>         labels[data["set_id"]] = data
+>
+> with open("/workspace/answers.json") as f:
+>     answers_data = json.load(f)
+>
+> for a in answers_data["answers"]:
+>     qid = a["qid"]
+>     status = a["status"]
+>     print(f"Checking {qid} ({status})...")
+>     for cit in a["citations"]:
+>         sid = cit["set_id"]
+>         pid = cit["passage_id"]
+>         quote = cit["supporting_quote"]
+>         if sid not in labels:
+>             print(f"  ERROR: set_id {sid} not found in labels!")
+>             continue
+>         label = labels[sid]
+>         import re
+>         match = re.match(r"PASSAGE_(\d+)", pid)
+>         if not match:
+>             print(f"  ERROR: invalid passage_id format {pid}!")
+>             continue
+>         idx = int(match.group(1))
+>         if idx >= len(label["chunks"]):
+>             print(f"  ERROR: passage index {idx} out of range for {sid}!")
+>             continue
+>         chunk = label["chunks"][idx]
+>         if quote not in chunk:
+>             print(f"  ERROR: quote {repr(quote)} not found in passage {pid}!")
+>             print(f"    Passage content: {repr(chunk)}")
+>         else:
+>             print(f"  Citation OK: {pid} on {sid}")
+> '
+Checking cross-0df97f1e2f1e4c (NOT_FOUND)...
+Checking cross-e9a79ba825959d (ANSWERED)...
+  ERROR: quote 'The recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should total 666 mg) three times a day (tot
+al daily dose of 1998 mg).' not found in passage PASSAGE_0001!
+    Passage content: '2 DOSAGE AND ADMINISTRATION\nThe recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should t
+otal 666 mg) taken three times daily. A lower dose may be effective in some patients.\nAlthough dosing may be done without regard to meals, dosing with meals wa
+s employed during clinical trials and is suggested in those patients who regularly eat three meals daily.\nTreatment with acamprosate calcium delayed-release ta
+blets should be initiated as soon as possible after the period of alcohol withdrawal, when the patient has achieved abstinence, and should be maintained if the
+patient relapses. Acamprosate calcium delayed-release tablets should be used as part of a comprehensive psychosocial treatment program.'
+  Citation OK: PASSAGE_0012 on 08c9d3dd-717b-0148-e054-00144ff8d46c
+Checking cross-7421ed8b98b8f9 (ANSWERED)...
+  Citation OK: PASSAGE_0011 on 36adb32c-638c-4d6e-b66a-1a1c35174ce6
+  Citation OK: PASSAGE_0014 on 6972d9c1-36ec-4246-bf7b-13206d5952c3
+Checking cross-a4153187ea298f (ANSWERED)...
+  Citation OK: PASSAGE_0017 on 8e396b27-b44a-4aa9-805b-086395444b5f
+  Citation OK: PASSAGE_0006 on 42e49120-6f3f-11db-9fe1-0800200c9a66
+Checking cross-893c71f570b542 (ANSWERED)...
+  ERROR: quote '800 mg every 4 hours orally, 5 times daily for 7 to 10 days.' not found in passage PASSAGE_0008!
+    Passage content: '800 mg every 4 hours orally, 5 times daily for 7 to 10\ndays.\n200 mg every 4 hours, 5 times daily for 10 days.\n400 mg 2 times daily for
+up to 12 months, followed by\nre-evaluation. Alternative regimens have included doses ranging from 200 mg 3\ntimes daily to 200 mg 5 times daily.\nThe frequency
+ and severity of episodes of untreated genital herpes may change\nover time. After 1 year of therapy, the frequency and severity of the patient’s\ngenital herpe
+s infection should be re-evaluated to assess the need for\ncontinuation of therapy with acyclovir oral suspension.\n200 mg every 4 hours, 5 times daily for 5 da
+ys. Therapy should be\ninitiated at the earliest sign or symptom (prodrome) of recurrence.\n20 mg/kg per dose orally 4 times daily\n(80 mg/kg per day) for 5 day
+s. Children over 40 kg should receive the adult dose\nfor chickenpox.\n800 mg 4 times daily for 5 days.\nIntravenous acyclovir oral suspension is indicated for
+the treatment of\nvaricellazoster infections in immunocompromised patients.\nWhen therapy is indicated, it should be initiated at the earliest sign or\nsymptom
+of chickenpox. There is no information about the efficacy of therapy\ninitiated more than 24 hours after onset of signs and symptoms.\nIn patients with renal im
+pairment, the dose of acyclovir oral\nsuspension should be modified as shown in Table 3:'
+  ERROR: quote '800 mg every 4 hours orally, 5 times daily for 7 to 10 days.' not found in passage PASSAGE_0033!
+    Passage content: 'Acute\xa0Treatment\xa0of\xa0Herpes\xa0Zoster\n800\xa0mg\xa0every\xa04\xa0hours\xa0orally,\xa05\xa0times\xa0daily\xa0for\xa07\xa0to\xa010\x
+a0days.'
+root@2809f9ae2d53:/workspace#

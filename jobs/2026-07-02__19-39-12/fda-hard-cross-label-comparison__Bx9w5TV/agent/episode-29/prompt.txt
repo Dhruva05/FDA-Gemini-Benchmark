@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 189 (char 190) | Content preview: '{\n  "analysis": "The output got truncated because it was very large, but we can print chunks of each'...
+
+Please fix these issues and provide a proper JSON response.

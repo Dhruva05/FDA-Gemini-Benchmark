@@ -1,0 +1,39 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json, re
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         print("drug:", obj["drug_name"])
+>         passages = re.findall(r"PASSAGE_\d+", obj["label_raw"])
+>         print("num passages in label_raw:", len(passages))
+>         print("first few passages found:", passages[:10])
+>         print("num chunks:", len(obj["chunks"]))
+>         print("-"*40)
+> '
+drug: Paxlovid
+num passages in label_raw: 209
+first few passages found: ['PASSAGE_0000', 'PASSAGE_0001', 'PASSAGE_0002', 'PASSAGE_0003', 'PASSAGE_0004', 'PASSAGE_0005', 'PASSAGE_0006', 'PASSAGE_0007', 'PASS
+AGE_0008', 'PASSAGE_0009']
+num chunks: 209
+----------------------------------------
+drug: Lopinavir-Ritonavir
+num passages in label_raw: 188
+first few passages found: ['PASSAGE_0000', 'PASSAGE_0001', 'PASSAGE_0002', 'PASSAGE_0003', 'PASSAGE_0004', 'PASSAGE_0005', 'PASSAGE_0006', 'PASSAGE_0007', 'PASS
+AGE_0008', 'PASSAGE_0009']
+num chunks: 188
+----------------------------------------
+drug: 12HR Allergy Relief
+num passages in label_raw: 13
+first few passages found: ['PASSAGE_0000', 'PASSAGE_0001', 'PASSAGE_0002', 'PASSAGE_0003', 'PASSAGE_0004', 'PASSAGE_0005', 'PASSAGE_0006', 'PASSAGE_0007', 'PASS
+AGE_0008', 'PASSAGE_0009']
+num chunks: 13
+----------------------------------------
+drug: Acamprosate Calcium
+num passages in label_raw: 59
+first few passages found: ['PASSAGE_0000', 'PASSAGE_0001', 'PASSAGE_0002', 'PASSAGE_0003', 'PASSAGE_0004', 'PASSAGE_0005', 'PASSAGE_0006', 'PASSAGE_0007', 'PASS
+AGE_0008', 'PASSAGE_0009']
+num chunks: 59
+----------------------------------------
+root@c3dfb07a1d45:/workspace#

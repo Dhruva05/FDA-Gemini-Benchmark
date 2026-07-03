@@ -1,0 +1,10 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# find /root /home -type f 2>/dev/null || true
+/root/.bashrc
+/root/.profile
+/root/.config/asciinema/install-id
+/home/ubuntu/.bashrc
+/home/ubuntu/.profile
+/home/ubuntu/.bash_logout
+root@1ce871952c8c:/workspace#

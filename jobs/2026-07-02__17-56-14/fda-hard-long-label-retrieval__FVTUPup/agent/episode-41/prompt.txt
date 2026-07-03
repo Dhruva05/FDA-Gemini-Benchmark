@@ -1,0 +1,54 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 search.py "severe renal"
+=== PASSAGE_0003 ===
+2.1     Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for or...
+
+=== PASSAGE_0005 ===
+2.3 Dosage in Patients with Renal Impairment
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID. Providers should counsel patients about renal dosing instructions .
+No dosage adjustment is recommended in patients with mild renal impairment estimated glomerular fi...
+
+=== PASSAGE_0007 ===
+Days 1-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily
+Severe renal impairment (eGFR <30 mL/min) including those requiring hemodialysis
+On days of hemodialysis, the PAXLOVID dose should be administered after hemodialysis....
+
+=== PASSAGE_0018 ===
+6.1     Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The s...
+
+=== PASSAGE_0110 ===
+8.6 Renal Impairment
+Renal impairment increases nirmatrelvir exposure, which may increase the risk of PAXLOVID adverse reactions. No dosage adjustment is recommended in patients wit
+h mild renal impairment (eGFR ≥60 to <90 mL/min). Reduce the PAXLOVID dosage in patients with moderate renal impairment...
+
+=== PASSAGE_0131 ===
+Patients with Renal Impairment
+The pharmacokinetics of nirmatrelvir in subjects with renal impairment following administration of a single oral dose of nirmatrelvir 100 mg (0.33 times the app
+roved recommended dose) co-administered with ritonavir 100 mg were determined. Compared to healthy controls w...
+
+=== PASSAGE_0175 ===
+Moderate Renal Impairment
+To ensure appropriate dosing in patients with moderate renal impairment, instruct such patients that they will be taking one 150 mg nirmatrelvir tablet with one
+ 100 mg ritonavir tablet together twice daily for 5 days .
+Severe Renal Impairment (Including Those Requiring Hemo...
+
+root@2635f56baf2a:/workspace# python3 search.py "severe hepatic"
+=== PASSAGE_0010 ===
+2.4     Use in Patients with Hepatic Impairment
+No dosage adjustment is needed in patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment.
+No pharmacokinetic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pug...
+
+=== PASSAGE_0132 ===
+Patients with Hepatic Impairment
+The pharmacokinetics of nirmatrelvir were similar in patients with moderate (Child-Pugh Class B) hepatic impairment compared to healthy subjects following admin
+istration of a single oral dose of nirmatrelvir 100 mg (0.33 times the approved recommended dose) co-admini...
+
+root@2635f56baf2a:/workspace#

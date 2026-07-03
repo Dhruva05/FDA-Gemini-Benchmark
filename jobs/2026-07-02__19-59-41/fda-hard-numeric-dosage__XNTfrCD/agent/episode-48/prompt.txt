@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate':
+>             print('PASSAGE_0002:', repr(data['chunks'][2]))
+>             print('PASSAGE_0003:', repr(data['chunks'][3]))
+>             break
+> "
+PASSAGE_0002: '2.1 Testing Prior to Initiation and During Treatment with Emtricitabine, Rilpivirine and Tenofovir Disoproxil Fumarate Tablets\nPrior to or when
+initiating emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, test patients for hepatitis B virus infection .\nPrior to initiation of emtrici
+tabine, rilpivirine and tenofovir disoproxil fumarate tablets, and during treatment with emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, o
+n a clinically appropriate schedule, assess serum creatinine, estimated creatinine clearance, urine glucose and urine protein in all patients. In patients with
+chronic kidney disease, also assess serum phosphorus .'
+PASSAGE_0003: '2.2 Recommended Dosage\nEmtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are a three-drug fixed dose combination product cont
+aining 200 mg of emtricitabine (FTC), 25 mg of rilpivirine (RPV), and 300 mg of tenofovir disoproxil fumarate (TDF). The recommended dosage of emtricitabine, ri
+lpivirine and tenofovir disoproxil fumarate tablets in adult and pediatric patients weighing at least 35 kg is one tablet taken orally once daily with food .'
+root@3d44031eb234:/workspace#

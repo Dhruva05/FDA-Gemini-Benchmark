@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 351 (char 352) | Content preview: '{\n  "analysis": "Okay, there are no other files in the workspace. Let\'s think: what is inside `struc'...
+
+Please fix these issues and provide a proper JSON response.

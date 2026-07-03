@@ -1,0 +1,10 @@
+{
+  "analysis": "Let's print the entire `PASSAGE_0028` to see what the common adverse reactions in adults are.",
+  "plan": "I will run a python script to print the full text of `PASSAGE_0028` of Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; print(labels[1]['chunks'][28]); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

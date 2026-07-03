@@ -1,0 +1,5 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 119 (char 120) | Content preview: '{\n  "analysis": "This is extremely helpful! The search tool successfully found several passages cont'...
+WARNINGS: - Extra text detected after JSON object
+
+Please fix these issues and provide a proper JSON response.

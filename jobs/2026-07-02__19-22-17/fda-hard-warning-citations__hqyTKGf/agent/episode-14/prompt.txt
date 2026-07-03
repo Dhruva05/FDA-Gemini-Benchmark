@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# python3 -c "import json; [print(json.loads(line)['question']) for line in open('/workspace/data/public/questions.jsonl')]"
+What important drug interactions are noted for Paxlovid?
+Which medications should be avoided with Paxlovid?
+How should Lopinavir-Ritonavir be administered?
+What is the recommended dosage regimen of Lopinavir-Ritonavir?
+What safety risks are listed for Lopinavir-Ritonavir?
+What important warnings or precautions are associated with Lopinavir-Ritonavir?
+What important warnings or precautions are associated with Paxlovid?
+What safety risks are listed for Paxlovid?
+root@b9fc21343844:/workspace#

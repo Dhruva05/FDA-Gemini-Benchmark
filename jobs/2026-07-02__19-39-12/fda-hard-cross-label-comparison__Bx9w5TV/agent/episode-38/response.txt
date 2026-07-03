@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at PASSAGE_0007 of Actoplus Met. Let's print chunks 6, 7, and 8 of Actoplus Met to see if they specify the standard maximum recommended dosage (without gemfibrozil).",
+  "plan": "Let us run a python script to inspect chunks 6, 7, and 8 of Actoplus Met.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"set_id\"] == \"42e49120-6f3f-11db-9fe1-0800200c9a66\":\n            for i in [6, 7, 8]:\n                print(f\"Actoplus Met PASSAGE_{i:04d}: {repr(data[\"chunks\"][i])}\")\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

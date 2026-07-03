@@ -1,0 +1,166 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > print_details.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {label['set_id']: label for line in f for label in [json.loads(line)]}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> def print_question_details(qid):
+>     q = next(x for x in questions if x['qid'] == qid)
+>     label = labels[q['set_id']]
+>     print("=" * 80)
+>     print(f"QID: {qid}")
+>     print(f"QUESTION: {q['question']}")
+>     print("=" * 80)
+>
+>     # Print all chunks with their indices
+>     for idx, chunk in enumerate(label['chunks']):
+>         passage_id = f"PASSAGE_{idx:04d}"
+>         # If the chunk seems relevant, print it in full
+>         q_lower = q['question'].lower()
+>         # Let's define relevance based on question
+>         is_relevant = False
+>         if qid == "near-miss-04f3afa658fdef":
+>             is_relevant = "warning" in chunk.lower() or "pharmacogenomic" in chunk.lower() or "test" in chunk.lower() or idx in [1, 2, 4, 5, 6]
+>         elif qid == "near-miss-0c6ec72416151f":
+>             is_relevant = "renal" in chunk.lower() or "hepatic" in chunk.lower() or "liver" in chunk.lower() or "impairment" in chunk.lower()
+>         elif qid == "near-miss-bd69d0bfb1fc7d":
+>             is_relevant = "pregnan" in chunk.lower() or "breast" in chunk.lower() or "lactat" in chunk.lower() or "milk" in chunk.lower() or "dose" in chunk.l
+ower()
+>         elif qid == "near-miss-d4ca1884aa8ab4":
+>             is_relevant = "adverse" in chunk.lower() or "reaction" in chunk.lower() or "monitor" in chunk.lower()
+>         elif qid == "near-miss-52e5f8cac33c50":
+>             is_relevant = "pediatric" in chunk.lower() or "geriatric" in chunk.lower() or "child" in chunk.lower() or "elder" in chunk.lower() or "lifetime" i
+n chunk.lower() or "cumulative" in chunk.lower()
+>         elif qid == "near-miss-5b5cb6a5249660":
+>             is_relevant = "pregnan" in chunk.lower() or "breast" in chunk.lower() or "lactat" in chunk.lower() or "milk" in chunk.lower() or "dose" in chunk.l
+ower()
+>
+>         if is_relevant:
+>             print(f"--- {passage_id} ---")
+>             print(chunk)
+>             print()
+>
+> for q in questions:
+>     print_question_details(q['qid'])
+>
+> EOF
+root@c7da805c5eb1:/workspace# python3 print_details.py > details.txt
+root@c7da805c5eb1:/workspace# head -n 100 details.txt
+================================================================================
+QID: near-miss-04f3afa658fdef
+QUESTION: The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND
+ if the label does not support it, and cite the section you searched.
+================================================================================
+--- PASSAGE_0001 ---
+Do not use if you have ever had an allergic reaction to this product or any of its ingredients.
+
+--- PASSAGE_0002 ---
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+
+--- PASSAGE_0004 ---
+Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek medical help right away.
+
+--- PASSAGE_0005 ---
+If pregnant or breast-feeding, ask a health professional before use.
+
+--- PASSAGE_0006 ---
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+
+--- PASSAGE_0009 ---
+- store between 20-25°C (68-77°F)
+- protect from excessive moisture
+- retain carton for complete product information and warnings
+
+================================================================================
+QID: near-miss-0c6ec72416151f
+QUESTION: The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND i
+f the label does not support it, and cite the section you searched.
+================================================================================
+--- PASSAGE_0002 ---
+2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommend
+ed. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+
+--- PASSAGE_0005 ---
+4.2 Severe Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+
+--- PASSAGE_0006 ---
+5.1 Renal Impairment
+Treatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose reduction . Acamprosate
+calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+
+--- PASSAGE_0027 ---
+Concomitant Therap
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+ach ul
+cer, cholecystitis, colitis, duodenal ulcer, mouth ulceration, carcinoma of liver.
+Endocrine System –
+Rare: goiter, hypothyroidism.
+Hemic and Lymphatic System –
+Infrequent: anemia, ecchymosis, eosinophilia, lymphocytosis, thrombocytopenia; Rare: leukopenia, lymphadenopathy, monocytosis.
+Metabolic and Nutritional Disorders –
+Frequent – peripheral edema, weight gain; Infrequent: weight loss, hyperglycemia, SGOT increased, SGPT increased, gout, thirst, hyperuricemia, diabetes mellitus
+, avitaminosis, bilirubinemia; Rare: alkaline phosphatase increased, creatinine increased, hyponatremia, lactic dehydrogenase increased.
+Musculoskeletal System –
+Frequent – myalgia, arthralgia; Infrequent: leg cramps; Rare: rheumatoid arthritis, myopathy.
+Nervous System –
+Frequent –somnolence, libido decreased, amnesia, thinking abnormal, tremor, vasodilatation, hypertension; Infrequent: convulsion, confusion, libido increased, v
+ertigo, withdrawal syndrome, apathy, suicidal ideation, neuralgia, hostility, agitation, neurosis, abnormal dreams, hallucinations, hypesthesia; Rare: alcohol c
+raving, psychosis, hyperkinesia, twitching, depersonalization, increased salivation, paranoid reaction, torticollis, encephalopathy, manic reaction.
+Respiratory System –
+Frequent: rhinitis, cough increased, dyspnea, pharyngitis, bronchitis; Infrequent: asthma, epistaxis, pneumonia; Rare: laryngismus, pulmonary embolus.
+Skin and Appendages –
+Frequent: rash; Infrequent: acne, eczema, alopecia, maculopapular rash, dry skin, urticaria, exfoliative dermatitis, vesiculobullous rash; Rare: psoriasis.
+Special Senses –
+Frequent: abnormal vision, taste perversion; Infrequent: tinnitus, amblyopia, deafness; Rare: ophthalmitis, diplopia, photophobia.
+Urogenital System –
+Frequent: impotence; Infrequent – metrorrhagia, urinary frequency, urinary tract infection, sexual function abnormal, urinary incontinence, vaginitis; Rare: kid
+ney calculus, abnormal ejaculation, hematuria, menorrhagia, nocturia, polyuria, urinary urgency.
+
+--- PASSAGE_0031 ---
+8.2 Labor and Delivery
+The potential for acamprosate calcium to affect the duration of labor and delivery is unknown.
+
+--- PASSAGE_0034 ---
+8.5 Geriatric Use
+Forty-one of the 4234 patients in double-blind, placebo-controlled, clinical trials of acamprosate calcium were 65 years of age or older, while none were 75 yea
+rs of age or over. There were too few patients in the ≥65 age group to evaluate any differences in safety or effectiveness for geriatric patients compared to yo
+unger patients.
+This drug is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug may be greater in patients with impaired renal funct
+ion. Because elderly patients are more likely to have decreased renal function, care should be taken in dose selection, and it may be useful to monitor renal fu
+nction .
+
+--- PASSAGE_0035 ---
+8.6 Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+
+--- PASSAGE_0044 ---
+Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a geriatric population. However, since renal function diminishes in elderly patients and
+acamprosate is excreted unchanged in urine, acamprosate plasma concentrations are likely to be higher in the elderly population compared to younger adults.
+Pediatrics:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a pediatric population.
+Renal Impairment:
+Peak plasma concentrations after administration of a single dose of 2 x 333 mg acamprosate calcium tablets to patients with moderate or severe renal impairment
+were about 2-fold and 4-fold higher, respectively, compared to healthy subjects. Similarly, elimination half-life was about 1.8-fold and 2.6-fold longer, respec
+tively, compared to healthy subjects. There is a linear relationship between creatinine clearance values and total apparent plasma clearance, renal clearance an
+d plasma half-life of acamprosate. A dose of 1 x 333 mg acamprosate calcium, three times daily, is recommended in patients with moderate renal impairment (creat
+inine clearance of 30 to 50 mL/min, .
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+Hepatic Impairment:
+Acamprosate is not metabolized by the liver and the pharmacokinetics of acamprosate calcium are not altered in patients with mild to moderate hepatic impairment
+ (groups A and B of the Child-Pugh classification). No adjustment of dosage is recommended in such patients.
+Alcohol-dependent subjects:
+A cross-study comparison of acamprosate calcium at doses of 2 x 333 mg three times daily indicated similar pharmacokinetics between alcohol-dependent subjects a
+nd healthy subjects.
+
+--- PASSAGE_0046 ---
+root@c7da805c5eb1:/workspace#

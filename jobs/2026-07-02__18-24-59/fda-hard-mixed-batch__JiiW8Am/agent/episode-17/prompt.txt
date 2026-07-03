@@ -1,0 +1,38 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj["drug_name"] == "Acamprosate Calcium":
+>             for i in range(max(0, 44-10), min(len(obj["chunks"]), 44+5)):
+>                 print(f"PASSAGE_{i:04d}: {obj["chunks"][i][:100]}")
+> '
+PASSAGE_0034: 8.5 Geriatric Use
+Forty-one of the 4234 patients in double-blind, placebo-controlled, clinical trial
+PASSAGE_0035: 8.6 Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment
+PASSAGE_0036: 10 OVERDOSAGE
+In all reported cases of acute overdosage with acamprosate calcium (total reported dos
+PASSAGE_0037: 11 DESCRIPTION
+Acamprosate calcium delayed-release tablets are supplied as an enteric-coated tablet
+PASSAGE_0038: 12.1 Mechanism of Action
+The mechanism of action of acamprosate in maintenance of alcohol abstinence
+PASSAGE_0039: 12.2 Pharmacodynamics
+Pharmacodynamic studies have shown that acamprosate calcium reduces alcohol in
+PASSAGE_0040: 12.3      Absorption
+The absolute bioavailability of acamprosate calcium after oral administration is abo
+PASSAGE_0041: The volume of distribution for acamprosate following intravenous administration is estimated to be 7
+PASSAGE_0042: Acamprosate does not undergo metabolism.
+PASSAGE_0043: After oral dosing of 2 x 333 mg of acamprosate calcium, the terminal half-life ranges from approxima
+PASSAGE_0044: Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between mal
+PASSAGE_0045: Acamprosate had no inducing potential on the cytochrome CYP1A2 and 3A4 systems, and in vitro inhibit
+PASSAGE_0046: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Dietary administration of acamprosate calc
+PASSAGE_0047: 14 CLINICAL STUDIES
+The efficacy of acamprosate calcium in the maintenance of abstinence was support
+PASSAGE_0048: 16 HOW SUPPLIED/STORAGE AND HANDLING
+Acamprosate calcium delayed-release tablets, 333 mg are white t
+root@c3dfb07a1d45:/workspace#

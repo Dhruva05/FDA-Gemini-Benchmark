@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# find /workspace -type f
+/workspace/inspect_chunks.py
+/workspace/parse_labels.py
+/workspace/inspect_raw.py
+/workspace/print_questions.py
+/workspace/inspect_chunks_2.py
+/workspace/verify_passages.py
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+root@faa94ec9460f:/workspace#

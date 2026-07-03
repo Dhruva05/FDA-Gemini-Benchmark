@@ -1,0 +1,39 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lenalidomide':
+>             for i, chunk in enumerate(data['chunks']):
+>                 if 'maximum' in chunk.lower() or 'max' in chunk.lower():
+>                     print(f'PASSAGE_{i:04d}: {chunk[:200]}...')
+>             break
+> "
+PASSAGE_0056: 6.1 Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to ra...
+PASSAGE_0066: 7.1 Digoxin
+When digoxin was co-administered with multiple doses of lenalidomide (10 mg/day) the digoxin Cmax and AUCinf were increased by 14%. Periodically monitor digoxin
+ plasma levels, in accordanc...
+PASSAGE_0071: Animal data
+In an embryo-fetal developmental toxicity study in monkeys, teratogenicity, including thalidomide-like limb defects, occurred in offspring when pregnant monkeys
+ received oral lenalidomide ...
+PASSAGE_0083: 12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lenalidomide on the QTc interval was evaluated in 60 healthy male subjects in a thorough QT study. At a dose two times the maximum recomme...
+PASSAGE_0084: 12.3 Pharmacokinetics
+Absorption
+Following single and multiple doses of lenalidomide in patients with MM or MDS, the maximum plasma concentrations occurred between 0.5 and 6 hours post-dose. Th
+e singl...
+PASSAGE_0090: Drug Interactions
+Co-administration of a single dose or multiple doses of dexamethasone (40 mg) had no clinically relevant effect on the multiple dose pharmacokinetics of lenalid
+omide (25 mg).
+Co-admi...
+PASSAGE_0092: 14.1 Multiple Myeloma
+Randomized, Open-Label Clinical Trial in Patients with Newly Diagnosed MM:
+A randomized multicenter, open-label, 3-arm trial of 1,623 patients, was conducted to compare the effic...
+PASSAGE_0103: 14.4 Follicular and Marginal Zone Lymphoma
+The efficacy of lenalidomide with rituximab in patients with relapsed or refractory follicular and marginal zone lymphoma was evaluated in the AUGMENT (NCT01...
+root@3d44031eb234:/workspace#

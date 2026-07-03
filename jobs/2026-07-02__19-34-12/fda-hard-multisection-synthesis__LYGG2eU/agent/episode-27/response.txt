@@ -1,0 +1,11 @@
+{
+  "analysis": "Let's print PASSAGE_0017 and look at PASSAGE_0018 (or search for postmarketing adverse reactions if any).",
+  "plan": "I will run the print script to print PASSAGE_0017 and the first part of PASSAGE_0018.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passages.py 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a PASSAGE_0017 PASSAGE_0018\n",
+      "duration": 1.0
+    }
+  ],
+  "task_complete": false
+}

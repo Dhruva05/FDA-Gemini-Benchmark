@@ -1,0 +1,39 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > test_passages.py
+> import json
+> import re
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         raw = data.get('label_raw', '')
+>         chunks = data.get('chunks', [])
+>         print('Length of chunks:', len(chunks))
+>         parts = re.split(r'\|\|PASSAGE_\d{4}\|\|', raw)
+>         print('Length of split parts:', len(parts))
+>         for idx in range(min(5, len(chunks))):
+>             print(f'Chunk {idx} length: {len(chunks[idx])}')
+>             print(f'Part {idx} length: {len(parts[idx])}')
+>             c_strip = chunks[idx].strip()
+>             p_strip = parts[idx].strip()
+>             print(f'Match? {c_strip == p_strip}')
+> EOF
+root@b161fe3d96d1:/workspace# python3 test_passages.py
+Length of chunks: 209
+Length of split parts: 210
+Chunk 0 length: 724
+Part 0 length: 0
+Match? False
+Chunk 1 length: 222
+Part 1 length: 727
+Match? False
+Chunk 2 length: 125
+Part 2 length: 225
+Match? False
+Chunk 3 length: 2022
+Part 3 length: 128
+Match? False
+Chunk 4 length: 239
+Part 4 length: 2025
+Match? False
+root@b161fe3d96d1:/workspace#

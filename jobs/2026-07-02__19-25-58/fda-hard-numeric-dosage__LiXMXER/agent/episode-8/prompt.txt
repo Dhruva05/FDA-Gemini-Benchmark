@@ -1,0 +1,31 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > find_dosage_chunks.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         drug_name = data['drug_name']
+>         print('='*40)
+>         print(f'Drug: {drug_name}')
+>         print('='*40)
+>         for idx, chunk in enumerate(data['chunks']):
+>             if any(h in chunk for h in ['DOSAGE AND ADMINISTRATION', 'Dosage and Administration']):
+>                 print(f'Chunk {idx} (PASSAGE_{idx:04d}): {chunk[:100]}...')
+> EOF
+root@af996c5fe492:/workspace# python3 find_dosage_chunks.py
+========================================
+Drug: Lopinavir-Ritonavir
+========================================
+========================================
+Drug: Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate
+========================================
+========================================
+Drug: CELECOXIB
+========================================
+========================================
+Drug: Lenalidomide
+========================================
+Chunk 98 (PASSAGE_0098): 14.2 Myelodysplastic Syndromes (MDS) with a Deletion 5q Cytogenetic Abnormality
+The efficacy and saf...
+root@af996c5fe492:/workspace#

@@ -1,0 +1,6 @@
+{
+  "analysis": "Yes, I am sure the task is complete. All answers are generated and validated, and they perfectly match the required schema and constraints.",
+  "plan": "I will return the final JSON with task_complete set to true.",
+  "commands": [],
+  "task_complete": true
+}

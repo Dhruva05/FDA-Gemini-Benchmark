@@ -1,0 +1,10 @@
+{
+  "analysis": "This is extremely clear and structured! Let's print the rest of the headers for Lopinavir-Ritonavir (from line 311 to 400).",
+  "plan": "I will run a shell command to view the remaining headers of Lopinavir-Ritonavir in `/tmp/headers.txt`.",
+  "commands": [
+    {
+      "keystrokes": "sed -n '311,400p' /tmp/headers.txt\n",
+      "duration": 0.5
+    }
+  ]
+}

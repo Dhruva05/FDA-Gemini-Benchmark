@@ -1,0 +1,16 @@
+{
+  "analysis": "Ah!
+So:
+- For patients with severe renal impairment (eGFR <30 mL/min), including those requiring hemodialysis, the dose is actually reduced (to 150 mg nirmatrelvir / 100 mg ritonavir twice daily?). Wait, let's look at Table 1 in full to see what the dose is for severe renal impairment. Is there a `PASSAGE_0006` or `PASSAGE_0008`? Let's print them to make sure.",
+  "plan": "I will print PASSAGE_0006 and PASSAGE_0008 to see the complete Table 1 details.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0006\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0008\n",
+      "duration": 0.5
+    }
+  ]
+}

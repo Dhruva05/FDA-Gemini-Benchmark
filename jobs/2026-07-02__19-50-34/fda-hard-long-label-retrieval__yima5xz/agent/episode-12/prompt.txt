@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > search_passage.py
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     text = f.read()
+>     print('PASSAGE_ count:', text.count('PASSAGE_'))
+>     print('passage_ count:', text.lower().count('passage_'))
+> EOF
+root@b161fe3d96d1:/workspace# python3 search_passage.py
+PASSAGE_ count: 209
+passage_ count: 209
+root@b161fe3d96d1:/workspace#

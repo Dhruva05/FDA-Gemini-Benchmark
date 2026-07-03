@@ -1,0 +1,70 @@
+New Terminal Output:
+
+root@19fe3c8dfb02:/workspace# cat << 'EOF' > verify_quotes.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>     chunks = data['chunks']
+>
+> citations_to_check = [
+>     (0, "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentiall
+y severe, life-threatening, or fatal events"),
+>     (13, "The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporin
+e), followed by calcium channel blockers."),
+>     (12, "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and
+/or life-threatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be assoc
+iated with the potential for loss of virologic response and possible resistance."),
+>     (13, "Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of
+medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A."),
+>     (14, "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have b
+een reported with PAXLOVID ."),
+>     (15, "Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir."),
+>     (16, "Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals
+ with uncontrolled or undiagnosed HIV-1 infection ."),
+>     (18, "The most common adverse reactions (≥1% incidence in the PAXLOVID group and occurring at a greater frequency than in the placebo group) were dysgeusi
+a (5% and <1%, respectively) and diarrhea (3% and 2%, respectively)."),
+>     (12, "PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) o
+r Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product."),
+>     (10, "No pharmacokinetic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pugh Class C) hepatic
+impairment; therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment ."),
+>     (4, "The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken to
+gether orally twice daily in the morning and at bedtime for 5 days."),
+>     (7, "150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily"),
+>     (3, "PAXLOVID (both nirmatrelvir and ritonavir tablets) can be taken with or without food . The tablets should be swallowed whole and not chewed, broken,
+or crushed.")
+> ]
+>
+> all_ok = True
+> for idx, quote in citations_to_check:
+>     passage_text = chunks[idx]
+>     # Clean up whitespace in both to avoid mismatch due to newlines/tabs
+>     p_clean = " ".join(passage_text.split())
+>     q_clean = " ".join(quote.split())
+>     if q_clean in p_clean:
+>         print(f"PASSAGE_{idx:04d}: Match OK")
+>     else:
+>         print(f"PASSAGE_{idx:04d}: MISMATCH!")
+>         print(f"  Expected: {repr(q_clean)}")
+>         print(f"  Found:    {repr(p_clean[:200])}...")
+>         all_ok = False
+>
+> if all_ok:
+>     print("All quotes are valid exact substrings!")
+> EOF
+root@19fe3c8dfb02:/workspace# python3 verify_quotes.py
+PASSAGE_0000: Match OK
+PASSAGE_0013: Match OK
+PASSAGE_0012: Match OK
+PASSAGE_0013: Match OK
+PASSAGE_0014: Match OK
+PASSAGE_0015: Match OK
+PASSAGE_0016: Match OK
+PASSAGE_0018: Match OK
+PASSAGE_0012: Match OK
+PASSAGE_0010: Match OK
+PASSAGE_0004: Match OK
+PASSAGE_0007: Match OK
+PASSAGE_0003: Match OK
+All quotes are valid exact substrings!
+root@19fe3c8dfb02:/workspace#

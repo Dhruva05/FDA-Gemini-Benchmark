@@ -1,0 +1,33 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'CELECOXIB':
+>             for i, chunk in enumerate(data['chunks']):
+>                 if 'maximum' in chunk.lower() or 'max' in chunk.lower():
+>                     print(f'PASSAGE_{i:04d}: {chunk[:200]}...')
+>             break
+> "
+PASSAGE_0078: Oligohydramnios/Neonatal Renal Impairment
+Use of NSAIDs at about 20 weeks gestation or later in pregnancy has been associated with cases of fetal renal dysfunction leading to oligohydramnios, and in s..
+.
+PASSAGE_0096: Absorption
+Peak plasma levels of celecoxib occur approximately 3 hours after an oral dose. Under fasting conditions, both peak plasma levels (C
+max) and area under the curve (AUC) are roughly dose-pro...
+PASSAGE_0097: Food Effects
+When celecoxib capsules were taken with a high fat meal, peak plasma levels were delayed for about 1 to 2 hours with an increase in total absorption (AUC) of 10
+% to 20%. Under fasting con...
+PASSAGE_0101: Geriatric
+At steady state, elderly subjects (over 65 years old) had a 40% higher C
+maxand a 50% higher AUC compared to the young subjects. In elderly females, celecoxib C
+maxand AUC are higher than th...
+PASSAGE_0118: 14.3 Juvenile Rheumatoid Arthritis(NCT00652925)
+In a 12-week, randomized, double-blind active-controlled, parallel-group, multicenter, non-inferiority study, patients from 2 years to 17 years of age w...
+PASSAGE_0124: Primary Endpoint
+The trial had two prespecified analysis populations:
+- Intent-to-treat population (ITT): Comprised of all randomized subjects followed for a maximum of 30 months
+- Modified Intent-to-...
+root@3d44031eb234:/workspace#

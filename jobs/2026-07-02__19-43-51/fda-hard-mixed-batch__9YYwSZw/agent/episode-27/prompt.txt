@@ -1,0 +1,70 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Paxlovid":
+>             for idx, chunk in enumerate(data["chunks"]):
+>                 if idx >= 12 and idx <= 35:
+>                     print(f"PASSAGE_{idx:04d}: {chunk[:200]}")
+> '
+PASSAGE_0012: 4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Jo
+hnson syndrome] to i
+PASSAGE_0013: 5.1       Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or ini
+PASSAGE_0014: 5.2       Hypersensitivity Reactions
+Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported
+ with PAX
+PASSAGE_0015: 5.3       Hepatotoxicity
+Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir. Therefore, caution should be exercised when adm
+inistering PAXLOVID t
+PASSAGE_0016: 5.4       Risk of HIV-1 Resistance Development
+Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncon
+PASSAGE_0017: 6 ADVERSE REACTIONS
+The following clinically significant adverse reactions are described elsewhere in the labeling:
+- Hypersensitivity reactions
+PASSAGE_0018: 6.1       Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to ra
+PASSAGE_0019: 7.1       Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of P
+PASSAGE_0020: 7.2       Potential for Other Drugs to Affect PAXLOVID
+Nirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A may decrease nirmatrelvir and ritonavir plasma concentrations and r
+PASSAGE_0021: 7.3       Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 ar
+PASSAGE_0022: ↑ alfuzosin
+Co-administration contraindicated due to potential hypotension .
+PASSAGE_0023: ↑ tamsulosin
+Avoid concomitant use with PAXLOVID.
+PASSAGE_0024: ↑ ranolazine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions .
+PASSAGE_0025: ↑ antiarrhythmic
+Co-administration contraindicated due to potential for cardiac arrhythmias .
+PASSAGE_0026: ↑ antiarrhythmic
+Caution is warranted and therapeutic concentration monitoring is recommended for antiarrhythmics if available.
+PASSAGE_0027: ↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance .
+PASSAGE_0028: Anticancer drugs
+abemaciclib, ceritinib,dasatinib, encorafenib,ibrutinib, ivosidenib, neratinib, nilotinib, venetoclax,vinblastine, vincristine
+PASSAGE_0029: ↑ anticancer drugs
+Avoid co-administration of encorafenib or ivosidenib due to potential risk of serious adverse events such as QT interval prolongation. Avoid use of neratinib, v
+enetoclax or ibrutini
+PASSAGE_0030: ↑↓ warfarin
+Closely monitor international normalized ratio (INR) if co-administration with warfarin is necessary.
+PASSAGE_0031: ↑ rivaroxaban
+Increased bleeding risk with rivaroxaban. Avoid concomitant use.
+dabigatranSee Pharmacokinetics, Clinical Drug Interaction Studies (12.3).
+PASSAGE_0032: ↑ dabigatran
+Increased bleeding risk with dabigatran. Depending on dabigatran indication and renal function, reduce dose of dabigatran or avoid concomitant use. Refer to the
+ dabigatran product label f
+PASSAGE_0033: ↑ apixaban
+Combined P-gp and strong CYP3A inhibitors increase blood levels of apixaban and increase the risk of bleeding. Dosing recommendations for co-administration of a
+pixaban with PAXLOVID depend
+PASSAGE_0034: ↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance .
+PASSAGE_0035: ↑ anticonvulsant
+A dose decrease may be needed for clonazepam when co-administered with PAXLOVID and clinical monitoring is recommended.
+root@3faa5da3ba91:/workspace#

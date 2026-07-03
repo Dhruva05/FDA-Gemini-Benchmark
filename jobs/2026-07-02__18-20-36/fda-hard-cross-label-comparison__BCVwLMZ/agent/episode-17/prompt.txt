@@ -1,0 +1,71 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > print_all_details.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print(f"=== {q['drug_name']} ({q['qid']}) ===")
+>     for set_id in q['comparison_set_ids']:
+>         l = labels[set_id]
+>         print(f"  Label: {l['drug_name']} ({set_id})")
+>         found = False
+>         for i, chunk in enumerate(l['chunks']):
+>             lower = chunk.lower()
+>             if any(t in lower for t in ['directions', 'dosage and administration', 'dosage &', 'recommended dose', 'usual dose']):
+>                 print(f"    PASSAGE_{i:04d}: {repr(chunk[:300])}")
+>                 found = True
+>         if not found:
+>             print("    NO DIRECT DOSAGE/DIRECTIONS FOUND!")
+>     print("-" * 80)
+> EOF
+root@faa94ec9460f:/workspace# python3 print_all_details.py
+=== 12HR Allergy Relief vs 365 Whole Foods Market Loratadine (cross-0df97f1e2f1e4c) ===
+  Label: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752)
+    NO DIRECT DOSAGE/DIRECTIONS FOUND!
+  Label: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce)
+    NO DIRECT DOSAGE/DIRECTIONS FOUND!
+--------------------------------------------------------------------------------
+=== Acamprosate Calcium vs Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (cross-e9a79ba825959d) ===
+  Label: Acamprosate Calcium (ae6e79c0-a307-4888-b647-1b7be4cb9127)
+    PASSAGE_0001: '2 DOSAGE AND ADMINISTRATION\nThe recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should tota
+l 666 mg) taken three times daily. A lower dose may be effective in some patients.\nAlthough dosing may be done without regard to meals, dosing with meals was e
+m'
+    PASSAGE_0027: 'Concomitant Therapies\nIn clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hy
+pnotics and sedatives (including benzodiazepines), or non-opioid analgesics was similar to that of subjects taking placebo with these concomitant medications. P
+'
+  Label: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (08c9d3dd-717b-0148-e054-00144ff8d46c)
+    PASSAGE_0016: 'REF 112-6720\nDIRECTIONS FOR USE: Swish one tablespoon (15ml) in mouth undiluted for 30 seconds, then\nspit out. Use after breakfast and befo
+re bedtime. Or, use as prescribed.\nNOTE: to minimize medicinal taste, do not rinse with water immediately after use.'
+--------------------------------------------------------------------------------
+=== ACETAMINOPHEN with CODEINE vs AcetaZOLAMIDE (cross-7421ed8b98b8f9) ===
+  Label: ACETAMINOPHEN with CODEINE (36adb32c-638c-4d6e-b66a-1a1c35174ce6)
+    PASSAGE_0008: 'General:\nAcetaminophen and codeine phosphate tablets should be prescribed with caution in certain special-risk patients, such as the elderly
+ or debilitated, and those with severe impairment of renal or hepatic function, head injuries, elevated intracranial pressure, acute abdominal conditions, hypot
+'
+    PASSAGE_0011: 'Dosage should be adjusted according to severity of pain and response of the patient.\nTake (1 - 2) tablets orally every 6-8 hours as needed.\
+nThe usual dose of codeine phosphate in children is 0.5 mg/kg.\nDoses may be repeated up to every 4 hours.\nThe prescriber must determine the number of tablets
+per'
+  Label: AcetaZOLAMIDE (6972d9c1-36ec-4246-bf7b-13206d5952c3)
+    NO DIRECT DOSAGE/DIRECTIONS FOUND!
+--------------------------------------------------------------------------------
+=== ACETAZOLAMIDE EXTENDED-RELEASE vs Actoplus Met (cross-a4153187ea298f) ===
+  Label: ACETAZOLAMIDE EXTENDED-RELEASE (8e396b27-b44a-4aa9-805b-086395444b5f)
+    NO DIRECT DOSAGE/DIRECTIONS FOUND!
+  Label: Actoplus Met (42e49120-6f3f-11db-9fe1-0800200c9a66)
+    PASSAGE_0004: '2 DOSAGE AND ADMINISTRATION\n- Obtain liver tests (serum alanine and aspartate aminotransferases, alkaline phosphatase, and total bilirubin)
+prior to initiating ACTOPLUS MET\n- ACTOPLUS MET contains 15 mg of pioglitazone and 850 mg of metformin hydrochloride (HCl) in each tablet.\n- Take ACTOPLUS MET
+ w'
+--------------------------------------------------------------------------------
+=== Acyclovir vs Acyclovir suspension (cross-893c71f570b542) ===
+  Label: Acyclovir (dcc29902-1fe6-4713-947e-335503959464)
+    NO DIRECT DOSAGE/DIRECTIONS FOUND!
+  Label: Acyclovir suspension (3efa1e5e-5a14-4724-a2ca-25702f10faed)
+    NO DIRECT DOSAGE/DIRECTIONS FOUND!
+--------------------------------------------------------------------------------
+root@faa94ec9460f:/workspace#

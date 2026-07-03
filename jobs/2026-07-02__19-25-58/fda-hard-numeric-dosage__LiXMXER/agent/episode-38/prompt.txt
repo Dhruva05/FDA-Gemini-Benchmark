@@ -1,0 +1,61 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > find_lenalidomide_admin.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lenalidomide':
+>             for idx, chunk in enumerate(data['chunks']):
+>                 if any(w in chunk.lower() for w in ['administer', 'swallow', 'capsule', 'food', 'with water', 'whole']):
+>                     print(f"Chunk {idx} (PASSAGE_{idx:04d}): {repr(chunk[:150])}")
+>             break
+> EOF
+root@af996c5fe492:/workspace# python3 find_lenalidomide_admin.py
+Chunk 31 (PASSAGE_0031): 'CLcr below 30 mL/min (requiring dialysis)\n5 mg once daily. On dialysis days, administer the dose following dialysis.\n5 mg once daily
+. On dialysis days'
+Chunk 32 (PASSAGE_0032): '2.7 Administration\nAdvise patients to take lenalidomide orally at about the same time each day, either with or without food. Advise p
+atients to swallo'
+Chunk 33 (PASSAGE_0033): '3 DOSAGE FORMS AND STRENGTHS\nCapsules:\n2.5 mg: Hard gelatin capsule with blue-green opaque cap and white opaque body; imprinted with
+ “Biocon Logo” on '
+Chunk 34 (PASSAGE_0034): '4.1 Pregnancy\nLenalidomide can cause fetal harm when administered to a pregnant female. Limb abnormalities were seen in the offspring
+ of monkeys that '
+Chunk 41 (PASSAGE_0041): '5.3 Hematologic Toxicity\nLenalidomide can cause significant neutropenia and thrombocytopenia. Monitor patients with neutropenia for s
+igns of infection'
+Chunk 66 (PASSAGE_0066): '7.1 Digoxin\nWhen digoxin was co-administered with multiple doses of lenalidomide (10 mg/day) the digoxin Cmax and AUCinf were increas
+ed by 14%. Period'
+Chunk 70 (PASSAGE_0070): 'Risk Summary\nBased on the mechanism of action\xa0\xa0and findings from animal studies\xa0,\xa0lenalidomide can cause embryo-fetal har
+m when administered to a preg'
+Chunk 73 (PASSAGE_0073): '8.3 Females and Males of Reproductive Potential\nPregnancy Testing\nLenalidomide can cause fetal harm when administered during pregnan
+cy\xa0. Verify the pr'
+Chunk 79 (PASSAGE_0079): '10 OVERDOSAGE\nThere is no specific experience in the management of lenalidomide overdose in patients with MM, MDS, MCL, FL, or MZL. I
+n dose-ranging st'
+Chunk 81 (PASSAGE_0081): '3-(7-amino-3-oxo-1H-isoindol-2-yl) piperidine-2,6-dione\nThe molecular formula for lenalidomide is C13H13N3O3, and the gram molecular
+weight is 259.27.'
+Chunk 84 (PASSAGE_0084): '12.3 Pharmacokinetics\nAbsorption\nFollowing single and multiple doses of lenalidomide in patients with MM or MDS, the maximum plasma
+concentrations occ'
+Chunk 89 (PASSAGE_0089): 'Specific Populations\nRenal Impairment: \xa0Eight subjects with mild renal impairment (creatinine clearance (CLcr) 50 to 79 mL/min cal
+culated using Cockcr'
+Chunk 96 (PASSAGE_0096): '[0.72, 1.13]\nDate of Unblinding in Maintenance Study 1 and 2 = 17 December 2009 and 7 July 2010, respectively.\nAuto-HSCT = autologou
+s hematopoietic st'
+Chunk 103 (PASSAGE_0103): '14.4 Follicular and Marginal Zone Lymphoma\nThe efficacy of lenalidomide with rituximab in patients with relapsed or refractory folli
+cular and marginal'
+Chunk 109 (PASSAGE_0109): '16.1 How Supplied\nHard gelatin capsule with blue-green opaque cap and white opaque body; imprinted with “Biocon Logo” on the cap and
+ “2.5 mg” on the b'
+Chunk 111 (PASSAGE_0111): '16.3 Handling and Disposal\nCare should be exercised in the handling of lenalidomide capsules. Lenalidomide capsules should not be op
+ened or broken. If'
+Chunk 126 (PASSAGE_0126): 'Dosing Instructions\nInform patients how to take lenalidomide\n- Lenalidomide should be taken once daily at about the same time each
+day,\nLenalidomide s'
+Chunk 130 (PASSAGE_0130): 'While taking lenalidomide\n- During any breaks (interruptions) in your treatment with lenalidomide\nDuring any breaks (interruptions)
+ in your treatment '
+Chunk 133 (PASSAGE_0133): 'How should I take lenalidomide?\n- Take lenalidomide exactly as prescribed and follow all the instructions of the Lenalidomide REMS p
+rogram\nTake lenali'
+Chunk 134 (PASSAGE_0134): 'How should I store lenalidomide capsules?\n•Store lenalidomide capsules at room temperature between 68°F to 77°F (20°C to 25°C).\n•Re
+turn any unused len'
+Chunk 137 (PASSAGE_0137): 'Lenalidomide Capsules, 2.5 mg - 28 Count Bottle'
+Chunk 138 (PASSAGE_0138): 'Lenalidomide Capsules, 5 mg - 28 Count Bottle'
+Chunk 139 (PASSAGE_0139): 'Lenalidomide Capsules, 10 mg - 28 Count Bottle'
+Chunk 140 (PASSAGE_0140): 'Lenalidomide Capsules, 15 mg - 21 Count Bottle'
+Chunk 141 (PASSAGE_0141): 'Lenalidomide Capsules, 20 mg - 21 Count Bottle'
+Chunk 142 (PASSAGE_0142): 'Lenalidomide Capsules, 25 mg - 21 Count Bottle'
+root@af996c5fe492:/workspace#

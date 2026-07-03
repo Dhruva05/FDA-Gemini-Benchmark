@@ -1,0 +1,27 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# cat << 'EOF' > dump_all_dosage.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         drug_name = data['drug_name']
+>         print("="*100)
+>         print(f"{drug_name} ({data['set_id']})")
+>         print("="*100)
+>         for idx, chunk in enumerate(data['chunks']):
+>             lines = chunk.strip().split('\n')
+>             first_line = lines[0] if lines else ''
+>             # If section starts with 2 (like 2, 2.1, 2.2, etc.) or contains dosage/administration in first few lines
+>             is_sec2 = False
+>             if first_line.startswith('2') and (len(first_line) == 1 or first_line[1] in ' .0123456789'):
+>                 is_sec2 = True
+>             elif any(kw in chunk.lower()[:200] for kw in ['dosage and administration', 'dosage', 'administration']):
+>                 is_sec2 = True
+>
+>             if is_sec2:
+>                 print(f"PASSAGE_{idx:04d}:\n{chunk}\n{'-'*80}")
+> EOF
+root@3d44031eb234:/workspace# python3 dump_all_dosage.py > /workspace/all_dosage_sections.txt
+root@3d44031eb234:/workspace#

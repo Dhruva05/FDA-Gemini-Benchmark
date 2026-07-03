@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a parsing error because of single quotes or nested quotes in the analysis block. I'll make sure to escape or avoid single/double quote nesting issues in the JSON keys and values.",
+  "plan": "I will run a python script to list the headings of relevant passages containing keywords like WARNING, PRECAUTION, etc.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        obj = json.loads(line)\n        print('===', obj['drug_name'], '===')\n        for i, chunk in enumerate(obj['chunks']):\n            if any(h in chunk.upper() for h in ['WARNING', 'PRECAUTION', 'DRUG INTERACTION', 'CONTRAINDICATION', 'DOSAGE', 'ADMINISTRATION', 'AVOID']):\n                lines = chunk.strip().split('\\n')\n                print(f'  PASSAGE_{i:04d}: {lines[0]}')\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

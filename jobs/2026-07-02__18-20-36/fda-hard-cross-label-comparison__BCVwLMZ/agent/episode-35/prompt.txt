@@ -1,0 +1,41 @@
+Current Terminal Screen:
+for 5 days. In the third trial, doses of 10, 15, or 20 mg/kg were administered 4
+times daily for 5 to 7 days. Treatment with acyclovir shortened the time to 50%
+healing; reduced the maximum number of lesions; reduced the median number of
+vesicles; decreased the median number of residual lesions on day 28; and
+decreased the proportion of patients with fever, anorexia, and lethargy by day
+2. Treatment with acyclovir did not affect varicella-zoster virus-specific
+humoral or cellular immune responses at 1 month or 1 year following treatment.
+--- PASSAGE_0002 ---
+Acyclovir oral suspension, USP is indicated for the acute
+treatment of herpes zoster (shingles).
+Acyclovir oral suspension, USP is indicated for the treatment of
+initial episodes and the management of recurrent episodes of genital
+herpes.
+Acyclovir oral suspension, USP is indicated for the treatment of
+chickenpox (varicella).
+--- PASSAGE_0003 ---
+Acyclovir is contraindicated for patients who develop hypersensitivity to
+acyclovir or valacyclovir.
+--- PASSAGE_0004 ---
+Acyclovir is intended for oral ingestion only. Renal failure, in
+some cases resulting in death, has been observed with acyclovir therapy .
+Thrombotic thrombocytopenic purpura/hemolytic uremic syndrome (TTP/HUS),
+which has resulted in death, has occurred in immunocompromised patients
+receiving acyclovir therapy.
+--- PASSAGE_0005 ---
+Dosage adjustment is recommended when administering acyclovir to
+patients with renal impairment . Caution should also be exercised when administering
+acyclovir to patients receiving potentially nephrotoxic agents since this may
+increase the risk of renal dysfunction and/or the risk of reversible central
+nervous system symptoms such as those that have been reported in patients
+treated with intravenous acyclovir. Adequate hydration should be
+maintained.
+Patients are instructed to consult with their physician if they
+experience severe or troublesome adverse reactions, they become pregnant or
+intend to become pregnant, they intend to breastfeed while taking orally
+administered acyclovir, or they have any other questions.
+Patients should be advised to maintain adequate hydration.
+There are no data on treatment initiated more than 72 hours after
+onset of the zoster rash. Patients should be advised to initiate treatment as
+root@faa94ec9460f:/workspace#

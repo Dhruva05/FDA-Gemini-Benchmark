@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a control character error. I will make sure not to include any literal control characters or unescaped newlines in the JSON strings.",
+  "plan": "I will run a python script to print the text of PASSAGE_0012 for Paxlovid.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; d=[json.loads(line) for line in open('/workspace/data/public/labels.jsonl') if 'Paxlovid' in line][0]; print(d['chunks'][12])\"\n",
+      "duration": 1.0
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "analysis": "Excellent. For Question 4 (`a0576a26f2a2eeac`, Lopinavir-Ritonavir, \"What is the recommended dosage regimen of Lopinavir-Ritonavir?\"), we can write an answer based on:\n- In adults, Lopinavir-Ritonavir can be given once daily or twice daily (`PASSAGE_0003`):\n  - Once daily regimen: 800 mg/200 mg (10 mL of 80 mg/20 mg per mL oral solution) once daily (`PASSAGE_0004`). Once daily dosing is not recommended in patients with three or more lopinavir resistance-associated substitutions, in combination with certain drugs (carbamazepine, phenobarbital, phenytoin, efavirenz, nevirapine, nelfinavir), in pediatric patients < 18, or in pregnant women (`PASSAGE_0003`).\n  - Twice daily regimen: 400 mg/100 mg (5 mL of 80 mg/20 mg per mL oral solution) twice daily (`PASSAGE_0005`).\n  - Concomitant therapy with efavirenz, nevirapine, or nelfinavir: Increase dose to 520 mg/130 mg (6.5 mL) twice daily (`PASSAGE_0005`, `PASSAGE_0006`).\n- In pregnant women with no documented lopinavir-associated resistance substitutions, the recommended dosage is 400/100 mg twice daily (`PASSAGE_0012`). Once daily dosing is not recommended in pregnancy. Avoid use of lopinavir and ritonavir oral solution in pregnant women (`PASSAGE_0012`). No postpartum dosage adjustment is required.\n- In pediatric patients, once daily dosing is not recommended (`PASSAGE_0007`). Lopinavir-Ritonavir oral solution is not recommended in neonates before a postmenstrual age of 42 weeks and a postnatal age of at least 14 days has been attained (`PASSAGE_0007`). Dosing is calculated based on weight or BSA to avoid underdosing (`PASSAGE_0008`).\n\nWe can cite:\n- `PASSAGE_0003` (for adult dosing regimens and once-daily contraindications / recommendations under Section 2.3).\n- `PASSAGE_0004` (for Table 1/2 once daily dosage of 800 mg/200 mg under Section 2.3).\n- `PASSAGE_0005` (for twice daily dosage of 400 mg/100 mg and adjustment with efavirenz/nevirapine/nelfinavir under Section 2.3).\n- `PASSAGE_0006` (for increased dose of 520 mg/130 mg twice daily under Section 2.3).\n- `PASSAGE_0007` (for pediatric dosing restrictions and neonate recommendations under Section 2.4).\n- `PASSAGE_0012` (for pregnancy dosing recommendations under Section 2.5).\n\nLet's check the section names:\n- `PASSAGE_0003`: \"2.3 Dosage Recommendations in Adults\"\n- `PASSAGE_0004`: \"2.3 Dosage Recommendations in Adults\"\n- `PASSAGE_0005`: \"2.3 Dosage Recommendations in Adults\"\n- `PASSAGE_0006`: \"2.3 Dosage Recommendations in Adults\"\n- `PASSAGE_0007`: \"2.4 Dosage Recommendations in Pediatric Patients\"\n- `PASSAGE_0012`: \"2.5 Dosage Recommendations in Pregnancy\"\n\nNow let's look at Question 5:\n`drug_name`: \"Lopinavir-Ritonavir\"\n`qid`: \"9be5515bc3064979\"\n`question`: \"What safety risks are listed for Lopinavir-Ritonavir?\"\n`set_id`: \"4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85\"\n\nWait, what safety risks are listed in the warnings and precautions of Lopinavir-Ritonavir? Let's check `PASSAGE_0014` to `PASSAGE_0024`. These are under Section 5 (WARNINGS AND PRECAUTIONS):\n- `PASSAGE_0014` \"5.1 Risk of Serious Adverse Reactions Due to Drug Interactions\"\n- `PASSAGE_0015` \"5.2 Toxicity in Preterm Neonates\" (due to ethanol and propylene glycol excipients)\n- `PASSAGE_0016` \"5.3 Pancreatitis\"\n- `PASSAGE_0017` \"5.4 Hepatotoxicity\"\n- `PASSAGE_0018` \"5.5 QT Interval Prolongation\"\n- `PASSAGE_0019` \"5.6 PR Interval Prolongation\"\n- `PASSAGE_0020` \"5.7 Diabetes Mellitus/Hyperglycemia\"\n- `PASSAGE_0021` \"5.8 Immune Reconstitution Syndrome\"\n- `PASSAGE_0022` \"5.9 Lipid Elevations\"\n- `PASSAGE_0023` \"5.10 Fat Redistribution\"\n- `PASSAGE_0024` \"5.11 Patients with Hemophilia\"\n\nLet's print some of these chunks to make sure we have accurate, short quotes and understand the details.",
+  "plan": "I will print the full text of chunks 14, 15, 16, 17, 18 of Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "print(labels[1]['chunks'][14])\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "print(labels[1]['chunks'][15])\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "print(labels[1]['chunks'][16])\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "print(labels[1]['chunks'][17])\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "print(labels[1]['chunks'][18])\n",
+      "duration": 0.5
+    }
+  ]
+}

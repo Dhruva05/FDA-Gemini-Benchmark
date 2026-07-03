@@ -1,0 +1,79 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 search.py "food"
+=== PASSAGE_0003 ===
+2.1     Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for or...
+
+=== PASSAGE_0120 ===
+Food effect
+Test/reference (fed/fasted) ratios of adjusted geometric means (90% CI) AUCinf and Cmax for nirmatrelvir were 119.67 (108.75, 131.68) and 161.01 (139.05, 186.44
+), respectively.Following a single oral dose of nirmatrelvir 300 mg boosted ritonavir 100 mg at -12 hours, 0 hours and 12 hours,...
+
+=== PASSAGE_0128 ===
+Effect of Food
+No clinically significant differences in the pharmacokinetics of nirmatrelvir were observed following administration of a high fat meal (800-1,000 calories; 50%
+ fat) to healthy subjects....
+
+=== PASSAGE_0176 ===
+Administration Instructions
+Inform patients to take PAXLOVID with or without food at approximately the same time each day as instructed. Advise patients to swallow all tablets for PAXLOVID
+ whole and not to chew, break, or crush the tablets. Alert the patient of the importance of completing the full ...
+
+=== PASSAGE_0183 ===
+1 white ritonavir tablet together
+(Pink part of the blister card).
+- Do not remove your PAXLOVID tablets from the blister card before you are ready to take your dose.
+- If you are taking PAXLOVID tablets twice daily ( Figure A or Figure B ), take your first dose of PAXLOVID in the morning or at bedt...
+
+=== PASSAGE_0184 ===
+How should I store PAXLOVID?
+- Store PAXLOVID at room temperature between 68°F to 77°F (20°C to 25°C).
+Keep PAXLOVID and all medicines out of the reach of children.
+General information about the safe and effective use of PAXLOVID.
+Medicines are sometimes prescribed for purposes other than those list...
+
+root@2635f56baf2a:/workspace# python3 search.py "swallow"
+=== PASSAGE_0003 ===
+2.1     Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for or...
+
+=== PASSAGE_0174 ===
+Hypersensitivity Reactions
+Inform patients that anaphylaxis, serious skin reactions, and other hypersensitivity reactions have been reported, even following a single dose of PAXLOVID. Adv
+ise them to immediately discontinue the drug and to inform their healthcare provider at the first sign of a skin ...
+
+=== PASSAGE_0176 ===
+Administration Instructions
+Inform patients to take PAXLOVID with or without food at approximately the same time each day as instructed. Advise patients to swallow all tablets for PAXLOVID
+ whole and not to chew, break, or crush the tablets. Alert the patient of the importance of completing the full ...
+
+=== PASSAGE_0183 ===
+1 white ritonavir tablet together
+(Pink part of the blister card).
+- Do not remove your PAXLOVID tablets from the blister card before you are ready to take your dose.
+- If you are taking PAXLOVID tablets twice daily ( Figure A or Figure B ), take your first dose of PAXLOVID in the morning or at bedt...
+
+root@2635f56baf2a:/workspace# python3 search.py "missed"
+=== PASSAGE_0003 ===
+2.1     Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available:
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 300 mg;100 mg
+- PAXLOVID (nirmatrelvir; ritonavir) co-packaged for or...
+
+=== PASSAGE_0176 ===
+Administration Instructions
+Inform patients to take PAXLOVID with or without food at approximately the same time each day as instructed. Advise patients to swallow all tablets for PAXLOVID
+ whole and not to chew, break, or crush the tablets. Alert the patient of the importance of completing the full ...
+
+=== PASSAGE_0183 ===
+1 white ritonavir tablet together
+(Pink part of the blister card).
+- Do not remove your PAXLOVID tablets from the blister card before you are ready to take your dose.
+- If you are taking PAXLOVID tablets twice daily ( Figure A or Figure B ), take your first dose of PAXLOVID in the morning or at bedt...
+
+root@2635f56baf2a:/workspace#

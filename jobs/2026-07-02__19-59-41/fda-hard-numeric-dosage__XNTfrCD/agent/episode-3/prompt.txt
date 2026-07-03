@@ -1,0 +1,15 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for i, line in enumerate(f):
+>         data = json.loads(line)
+>         print(data.keys(), data.get('drug_name'), data.get('set_id'))
+> "
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']) Lopinavir-Ritonavir 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']) Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate d9a4185e-43fa-4aeb-9b0f-8db01b166
+038
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']) CELECOXIB 27f17ae7-939b-402e-9498-3b6611104089
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']) Lenalidomide ed7a3099-ce31-4865-b212-358d9ff6261b
+root@3d44031eb234:/workspace#

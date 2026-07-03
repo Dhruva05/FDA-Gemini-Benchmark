@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 44 (char 45) | Content preview: '{\n  "analysis": "This is extremely important!\nLet\'s look at the errors:\n1. For Acamprosate Calcium ('...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,363 @@
+DRUG NAME: DOJOLVI
+SET ID: 4cfeb8bd-143e-4dd7-bc34-b0bcda02460d
+
+=== PASSAGE_0000 ===
+SECTION: 1 INDICATIONS AND USAGE
+1 INDICATIONS AND USAGE
+DOJOLVI is indicated as a source of calories and fatty acids for the treatment of adult and pediatric patients with molecularly confirmed long-chain fatty acid oxidation disorders (LC-FAOD).
+
+=== PASSAGE_0001 ===
+SECTION: 2.1 Important Recommendations Prior to DOJOLVI Treatment
+2.1	Important Recommendations Prior to DOJOLVI Treatment
+All patients treated with DOJOLVI should be under the care of a clinical specialist knowledgeable in appropriate disease-related dietary management based upon current nutritional recommendations.
+Assess the metabolic requirements of the patient by determining their daily caloric intake (DCI) prior to calculating the dose of DOJOLVI.
+For patients receiving another medium-chain triglyceride (MCT) product, discontinue prior to the first dose of DOJOLVI.
+
+=== PASSAGE_0002 ===
+SECTION: 2.2 Recommended Dosage
+2.2	Recommended Dosage
+The recommended target daily dosage of DOJOLVI is up to 35% of the patient's total prescribed DCI divided into at least four doses and administered by mixing thoroughly into semi-solid food/liquid or medical food/formula at mealtimes or with snacks.
+In order to reach a target daily dosage, patients may require an increase in their total fat intake.
+The neonatal population may require higher fat intake and therefore an increased amount of DOJOLVI. Consider current nutritional recommendations when dosing the neonatal population.
+
+=== PASSAGE_0003 ===
+SECTION: Total Daily Dosage Calculation
+Total Daily Dosage Calculation
+The target daily dosage from DOJOLVI (%) is converted to a volume of DOJOLVI (mL) to be administered using the following calculation:
+- Caloric value of DOJOLVI = 8.3 kcal/mL
+- Round the total daily dosage to the nearest whole milliliter.
+- Divide the total daily dosage into at least four approximately equal individual doses.
+
+=== PASSAGE_0004 ===
+SECTION: Missed Doses
+Missed Doses
+If a dose is missed, take the next dose as soon as possible with subsequent doses taken at 3 to 4-hour intervals. Skip the missed dose if it will not be possible to take all doses in a day.
+
+=== PASSAGE_0005 ===
+SECTION: 2.3 Dosage Initiation and Titration
+2.3 Dosage Initiation and Titration
+For patients not currently taking an MCT product
+Initiate DOJOLVI at a total daily dosage of approximately 10% DCI divided into at least four times per day. Increase to the recommended total daily dosage by approximately 5% DCI every 2 to 3 days until the target dosage of up to 35% DCI is achieved.
+
+=== PASSAGE_0006 ===
+SECTION: For patients switching from another MCT product
+For patients switching from another MCT product
+Discontinue use of MCT products before starting DOJOLVI.
+Initiate DOJOLVI at the last tolerated daily dosage (mL) of MCT divided into at least four times per day. Increase the total daily dosage by approximately 5% DCI every 2 to 3 days until the target dosage of up to 35% DCI is achieved.
+
+=== PASSAGE_0007 ===
+SECTION: Tolerability
+Tolerability
+- Consider more frequent smaller doses if a patient has difficulty tolerating 1/4 of the total daily dosage at one time based on gastrointestinal adverse reactions
+- Monitor the patient's total caloric intake during dosage titration, especially in a patient with gastrointestinal adverse reactions, and adjust all components of the diet as needed.
+- If a patient experiences gastrointestinal adverse reaction(s), consider dosage reduction until the gastrointestinal symptoms resolve
+- If a patient is unable to achieve the target daily dosage of up to 35% DCI during dosage titration, maintain the patient at the maximum tolerated dosage.
+
+=== PASSAGE_0008 ===
+SECTION: 2.4 Preparation and Administration Instructions
+2.4 Preparation and Administration Instructions
+Administer DOJOLVI by mixing thoroughly with semi-solid food/liquid (oral administration) or medical food/formula (feeding tube administration). Do not administer DOJOLVI alone to avoid gastrointestinal upset and feeding tube degradation .
+Prepare or administer DOJOLVI using containers, oral syringes, or measuring cups made of compatible materials such as stainless steel, glass, high density polyethylene (HDPE), polypropylene, low density polyethylene, polyurethane, and silicone.
+Do not prepare or administer DOJOLVI using containers, oral syringes, or measuring cups made of polystyrene or polyvinyl chloride (PVC) plastics.
+Regularly monitor the containers, dosing components, or utensils that are in contact with DOJOLVI to ensure proper functioning and integrity.
+
+=== PASSAGE_0009 ===
+SECTION: Oral Preparation and Administration
+Oral Preparation and Administration
+- Use an oral syringe or measuring cup made of compatible materials as listed above to withdraw the prescribed volume of DOJOLVI from the bottle.
+- DOJOLVI can be mixed with soft food or liquid such as:
+- plain or artificially sweetened fat free yogurt
+- fat free milk, formula, or cottage cheese
+- whole grain hot cereal
+- fat free low carbohydrate pudding, smoothies, applesauce, or baby food
+- Add the prescribed amount of DOJOLVI to a clean bowl, cup, or container, made of the compatible materials as listed above, which contains an appropriate amount of semi-solid food or liquid that takes into consideration the age, size, and fluid needs of the patient to ensure administration of the full dose.
+- Mix DOJOLVI thoroughly into the food or liquid.
+- Any unused mixture may be stored for up to 24 hours in refrigerated conditions.
+- If not used within 24 hours, discard DOJOLVI mixture in the trash. Do not pour down the sink. Do not save for later .
+
+=== PASSAGE_0010 ===
+SECTION: Feeding Tube Preparation and Administration
+Feeding Tube Preparation and Administration
+DOJOLVI is administered as an oral or enteral bolus medication. Do not add DOJOLVI to the feeding bag, as the feeding equipment may degrade over time.
+DOJOLVI can be administered via oral or enteral feeding tubes manufactured of silicone or polyurethane. Do not use feeding tubes manufactured of polyvinyl chloride (PVC). Feeding device performance and functionality can degrade over time depending on usage and environmental conditions. Regularly monitor the feeding tube to ensure proper functioning and integrity .
+- Use an oral syringe or measuring cup made of compatible materials as listed above to withdraw the prescribed volume of DOJOLVI from the bottle.
+- Add the prescribed amount of DOJOLVI to a clean bowl, cup, or container, made of compatible materials as listed above, which contains an amount of medical food or formula that takes into consideration the age, size, and fluid needs of the patient in order to ensure administration of the full dose.
+- Mix DOJOLVI thoroughly into the medical food or formula prior to administering via feeding tube, y-connector, or feeding tube extension set made of silicone or polyurethane.
+- Draw up the entire amount of the DOJOLVI mixture into a slip tip syringe.
+- Remove the residual air from the syringe and connect the syringe directly into the feeding tube port.
+- Push the syringe contents into the feeding tube port using steady pressure until empty.
+- Flush the feeding tubes with between 5 mL to 30 mL of water. Flush volume should be modified based on specific patient needs and in cases of fluid restriction.
+- Discard any unused DOJOLVI mixture in the trash. Do not pour down the sink. Do not save for later use.
+
+=== PASSAGE_0011 ===
+SECTION: 3 DOSAGE FORMS AND STRENGTHS
+3 DOSAGE FORMS AND STRENGTHS
+Oral liquid: clear, colorless to light yellow liquid supplied in a 500 mL bottle containing 100% w/w of triheptanoin.
+
+=== PASSAGE_0012 ===
+SECTION: 4 CONTRAINDICATIONS
+4 CONTRAINDICATIONS
+None.
+
+=== PASSAGE_0013 ===
+SECTION: 5.1 Feeding Tube Dysfunction
+5.1 Feeding Tube Dysfunction
+Feeding tube performance and functionality can degrade over time depending on usage and environmental conditions. In clinical trials, feeding tube dysfunction was reported in patients receiving triheptanoin. The contribution of DOJOLVI cannot be ruled out. Do not administer DOJOLVI in feeding tubes manufactured of polyvinyl chloride (PVC) . Regularly monitor the feeding tube to ensure proper functioning and integrity.
+
+=== PASSAGE_0014 ===
+SECTION: 5.2 Intestinal Malabsorption in Patients with Pancreatic Insufficiency
+5.2 Intestinal Malabsorption in Patients with Pancreatic Insufficiency
+Pancreatic enzymes hydrolyze triheptanoin and release heptanoate as medium-chain fatty acids in the small intestine. Low or absent pancreatic enzymes may result in reduced absorption of heptanoate subsequently leading to insufficient supplementation of medium-chain fatty acids. Avoid administration of DOJOLVI in patients with pancreatic insufficiency.
+
+=== PASSAGE_0015 ===
+SECTION: 6.1 Clinical Trial Experience
+6.1 Clinical Trial Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The safety population included 79 patients with LC-FAOD exposed to DOJOLVI in two studies: one open-label 78-week study of DOJOLVI in 29 patients (Study 1) followed by an open-label extension study (Study 2). Twenty-four patients from Study 1 continued into Study 2. Patients ranged from 4 months to 63 years of age and the population was 52% male. Of the 79 patients, 87% were White, 5% were Black or African-American, 4% were Asian, and 4% other. The daily dosage of DOJOLVI ranged between 12% and 41% DCI (which corresponds to 0.7 g/kg/day to 6.0 g/kg/day for pediatric patients and 0.5 g/kg/day to 1.3 g/kg/day for adult patients) for a mean duration of 23 months.
+The most common adverse reactions to DOJOLVI reported in the pooled safety population of Study 1 and Study 2 were gastrointestinal (GI)-related, and included abdominal pain (abdominal discomfort, abdominal distension, abdominal pain, abdominal pain upper, GI pain) 60%], diarrhea 44%], vomiting 44%], and nausea 14%].
+
+=== PASSAGE_0016 ===
+SECTION: Gastrointestinal (GI) Adverse Reactions
+Gastrointestinal (GI) Adverse Reactions
+In Study 1 and Study 2, median time to onset of a first occurrence of a GI adverse reaction was 7.3 weeks. GI adverse reactions led to dose reductions in 35% and 12% of patients in Study 1 and Study 2, respectively.
+In Study 3, a 4-month double-blind randomized controlled study, commonly reported adverse reactions with triheptanoin were similar to those reported in Study 1 and Study 2.
+
+=== PASSAGE_0017 ===
+SECTION: 7.1 Pancreatic Lipase Inhibitors
+7.1 Pancreatic Lipase Inhibitors
+Co-administration of triheptanoin with a pancreatic lipase inhibitor (e.g., orlistat) may reduce exposure to the triheptanoin metabolite, heptanoate, and reduce the clinical effect of triheptanoin . Avoid co-administration of DOJOLVI with pancreatic lipase inhibitors.
+
+=== PASSAGE_0018 ===
+SECTION: 8.1 Pregnancy
+8.1 Pregnancy
+Risk Summary
+There are no available data on triheptanoin use in pregnant women to evaluate for a drug-associated risk of major birth defects, miscarriage, or adverse maternal or fetal outcomes. In animal reproduction studies conducted in pregnant rats and rabbits administered triheptanoin during the period of organogenesis, the primary toxicological effect (reduced body weight gain) was considered to be specific to decreased food consumption related to taste aversion in animals, and therefore is not relevant to clinical use in the intended populations.
+There is a pregnancy safety study for DOJOLVI. If a patient becomes pregnant while receiving DOJOLVI, healthcare providers should report DOJOLVI exposure by calling Ultragenyx Pharmaceutical Inc. at 1-888-756-8657.
+The background risk of major birth defects and miscarriage for the indicated population is unknown. All pregnancies have a background risk of birth defect, loss or other adverse outcomes. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2 to 4% and 15 to 20%, respectively.
+
+=== PASSAGE_0019 ===
+SECTION: Animal Data
+Animal Data
+Embryofetal developmental studies have been conducted with triheptanoin in rats and rabbits following oral administration of 10% (3.2 g/kg), 30% (9.7 g/kg) and 50% (16 g/kg) DCI in rats and 10% (1.2 g/kg), 20% (2.3 g/kg) and 30% (3.5 g/kg) DCI in rabbits during the period of organogenesis. Reduced body weight gain, associated with decreased food consumption, was observed in pregnant rats and rabbits following administration of triheptanoin food mixture and was attributed to taste aversion. The NOAEL for this maternal toxicity (lack of body weight gain) was 10% DCI for both rats and rabbits. Administration of dietary triheptanoin to pregnant rats at doses approximately 2 times above, and pregnant rabbits approximately equal to the targeted clinical dose of 35% DCI resulted in increased incidence of skeletal malformations and decreased litter weights in both species and reduced number of viable litters in rabbits. The adverse effects on rat and rabbit embryofetal development were associated with the reduced body weight gain observed in pregnant animals. The NOAEL for embryofetal development toxicity was 30% and 20% DCI for rats and rabbits, respectively. In a pre- and postnatal developmental study in rats, reduced birthweights and delayed sexual maturation in pups were observed at 50% DCI and were considered secondary to the reductions in body weight gain in pregnant rats.
+
+=== PASSAGE_0020 ===
+SECTION: 8.2 Lactation
+8.2 Lactation
+Risk Summary
+There are no data on the presence of triheptanoin or its metabolites in human or animal milk, the effects on the breastfed infant, or the effects on milk production. Medium-chain triglycerides and other fatty acids are normal components of breastmilk and the composition of breastmilk varies within feedings, over stages of lactation, and between mothers and populations due to maternal factors including genetics, environment, and diet. The developmental and health benefits of breastfeeding should be considered along with the clinical need for DOJOLVI and any potential adverse effect on the breastfed infant from DOJOLVI or from the underlying maternal condition.
+
+=== PASSAGE_0021 ===
+SECTION: 8.4 Pediatric Use
+8.4 Pediatric Use
+The safety and effectiveness of DOJOLVI have been established in pediatric patients .
+
+=== PASSAGE_0022 ===
+SECTION: 8.5 Geriatric Use
+8.5 Geriatric Use
+Clinical studies of DOJOLVI did not include patients 65 years of age and older to determine if they respond differently from younger adult patients.
+
+=== PASSAGE_0023 ===
+SECTION: 11 DESCRIPTION
+11 DESCRIPTION
+DOJOLVI (triheptanoin) is a synthetic medium odd-chain (C7) triglyceride supplied as a colorless to light yellow clear oral liquid. The chemical name of triheptanoin is heptanoic acid, 1,1',1''-(1,2,3-propanetriyl) ester. The empirical formula is C24H44O6 and its molecular weight is 428.6 g/mol. The chemical structure is:
+The caloric value of triheptanoin is 8.3 kcal/mL. The fat content is 0.96 g/mL.
+
+=== PASSAGE_0024 ===
+SECTION: 12.1 Mechanism of Action
+12.1 Mechanism of Action
+Triheptanoin is a medium-chain triglyceride consisting of three odd-chain 7-carbon length fatty acids (heptanoate) that provide a source of calories and fatty acids to bypass the long-chain FAOD enzyme deficiencies for energy production and replacement.
+
+=== PASSAGE_0025 ===
+SECTION: 12.2 Pharmacodynamics
+12.2 Pharmacodynamics
+No formal pharmacodynamic studies have been conducted with DOJOLVI.
+
+=== PASSAGE_0026 ===
+SECTION: 12.3 Pharmacokinetics
+12.3 Pharmacokinetics
+Following oral administration, triheptanoin is extensively hydrolyzed to heptanoate and glycerol by pancreatic lipases in the intestines. The exposure of triheptanoin in the human plasma is minimal. Pharmacokinetics of heptanoate exhibits high inter-patient variability. Heptanoate exposure increases greater than dose-proportional in the dose range between triheptanoin 0.3 and 0.4 g/kg.
+
+=== PASSAGE_0027 ===
+SECTION: Absorption
+Absorption
+The pharmacokinetics of heptanoate in healthy adult subjects following an oral administration of DOJOLVI mixed with food are summarized in Table 1.
+
+=== PASSAGE_0028 ===
+SECTION: Distribution
+Distribution
+The plasma protein binding of heptanoate is approximately 80% and is independent of total concentration.
+
+=== PASSAGE_0029 ===
+SECTION: Elimination
+Elimination
+After a single dose of either 0.3 g/kg or 0.4 g/kg triheptanoin to healthy subjects, the mean apparent clearance (CL/F) of heptanoate was 6.05 and 4.31 L/hr/kg, respectively. Half-life (t1/2) of heptanoate could not be determined due to multiple peak concentrations of heptanoate observed.
+
+=== PASSAGE_0030 ===
+SECTION: Metabolism
+Metabolism
+Heptanoate, formed by hydrolysis of triheptanoin, can be metabolized to beta-hydroxypentanoate (BHP) and beta-hydroxybutyrate (BHB) in the liver.
+
+=== PASSAGE_0031 ===
+SECTION: Excretion
+Excretion
+After single or multiple repeat doses of triheptanoin to healthy subjects, triheptanoin and its metabolites were minimally excreted in urine.
+
+=== PASSAGE_0032 ===
+SECTION: In Vitro Studies
+In Vitro Studies
+Heptanoate is not an inhibitor of CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, CYP2D6, or CYP3A4. Heptanoate and BHP are not CYP substrates nor UGT substrates. Heptanoate increases the unbound fraction of valproic acid by approximately 2-fold.
+
+=== PASSAGE_0033 ===
+SECTION: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis
+Nonclinical animal studies evaluating long-term administration of triheptanoin have not been conducted to assess the carcinogenic potential of the drug. In a published chronic 9-month dietary study conducted in rats, daily administration of triheptanoin at dose levels up to 1.14 g/kg was associated with atrophy or hyperplasia of the intestinal villa. In a chronic 9-month dietary study conducted in juvenile minipigs, treatment with triheptanoin at dose levels up to 10 g/kg was well tolerated with no changes in histopathology suggestive of any carcinogenic potential.
+Published studies with structurally similar triglycerides (i.e., MCTs) were also evaluated. In a 2-year dietary study of rats fed tricaprylin (C8 MCT) at dose levels up to 9.5 g/kg (approximately 1.2 times the anticipated maximum clinical dose), there were increased incidences of pancreatic and forestomach hyperplasia and adenomas but not carcinomas. Chronic administration of a diet containing approximately 17% MCT was not shown to promote effects on colon tumor incidence in an azomethane-induced colon tumorigenicity rat model.
+
+=== PASSAGE_0034 ===
+SECTION: Mutagenesis
+Mutagenesis
+Triheptanoin was not genotoxic in a battery of genotoxicity tests including the in vitro bacterial reverse mutation in S. typhimurium and E. coli, in vitro mammalian chromosomal aberration test in human peripheral blood lymphocytes and the in vivo mammalian erythrocyte micronucleus test in rat bone marrow.
+
+=== PASSAGE_0035 ===
+SECTION: Impairment of Fertility
+Impairment of Fertility
+Triheptanoin had no effect on fertility or any other parameters of mating performance in rats exposed to repeat dietary administration at dose levels equivalent to up to 50% daily caloric intake (16 g/kg) that resulted in systemic drug exposure (AUC) of heptanoate approximately equal to the maximum recommended human dose.
+
+=== PASSAGE_0036 ===
+SECTION: 14 CLINICAL STUDIES
+14 CLINICAL STUDIES
+The efficacy of triheptanoin as a source of calories and fatty acids was evaluated in Study 3 (NCT01379625), a 4-month double-blind randomized controlled study comparing triheptanoin (7-carbon chain fatty acid) with trioctanoin (8-carbon chain fatty acid). The study enrolled 32 adult and pediatric patients with a confirmed diagnosis of LC-FAOD and evidence of at least one significant episode of rhabdomyolysis and at least two of the following diagnostic criteria: disease specific elevation of acylcarnitines on a newborn blood spot or in plasma, low enzyme activity in cultured fibroblasts, or one or more known pathogenic mutations in CPT2, ACADVL, HADHA, or HADHB.
+The dosage of study drug was titrated to a protocol-specified target of 20% DCI (actual mean daily dose achieved was 16% for triheptanoin and 14% for trioctanoin). The recommended target dosage of DOJOLVI is up to 35% of DCI . Patients ranged in age from 7 years to 64 years (median 24 years) and 12 were male. Of the 32 patients, 100% were White and 3% were Hispanic.
+Baseline cardiovascular function in both groups was normal and within test/retest variability normally observed in repeated echocardiograms. After 4 months, patients in both groups had similar mean changes from baseline in left ventricular ejection fraction and wall mass on resting echocardiogram and similar maximal heart rates on treadmill ergometry.
+Five patients experienced 7 events of rhabdomyolysis in the triheptanoin group and 4 patients experienced 7 events of rhabdomyolysis in the trioctanoin group.
+No differences were observed between triheptanoin and trioctanoin groups in blood markers of metabolism including glucose, insulin, lactate, total serum, ketones, acylcarnitines, and serum-free fatty acid concentrations.
+
+=== PASSAGE_0037 ===
+SECTION: 16 HOW SUPPLIED/STORAGE AND HANDLING
+16 HOW SUPPLIED/STORAGE AND HANDLING
+DOJOLVI (triheptanoin) oral liquid is supplied in a glass bottle as follows:
+
+=== PASSAGE_0038 ===
+SECTION: Store at 20° to 25°C (68° to 77°F); excursions permitted to 15° to 30°C (59° to 86°F) . Do not freeze.
+Store at 20° to 25°C (68° to 77°F); excursions permitted to 15° to 30°C (59° to 86°F) . Do not freeze.
+DOJOLVI can be used for up to 9 months after opening but not beyond the expiration date on the bottle.
+Do not dose or store using materials made of polystyrene or polyvinyl chloride (PVC) containers .
+Pharmacist: Dispense only in glass or HDPE bottles.
+
+=== PASSAGE_0039 ===
+SECTION: 17 PATIENT COUNSELING INFORMATION
+17 PATIENT COUNSELING INFORMATION
+Advise the patient and/or caregiver to read the FDA-approved patient labeling (Patient Information and Instructions for Use).
+
+=== PASSAGE_0040 ===
+SECTION: Preparation and Administration
+Preparation and Administration
+Instruct the patient or caregiver:
+- To read the
+- Before administration, to mix DOJOLVI thoroughly into semi-solid food/liquid (oral) or medical food/formula (feeding tube) at mealtimes or with snacks.
+- To not prepare or administer DOJOLVI using containers, oral syringes, or measuring cups made of polystyrene or polyvinyl chloride (PVC) plastics.
+- That if a dose is missed, to take the next dose as soon as possible with subsequent doses taken at 3 to 4-hour intervals. Skip the missed dose if it will not be possible to take all doses in a day
+
+=== PASSAGE_0041 ===
+SECTION: Storage
+Storage
+Instruct the patient or caregiver to store DOJOLVI at room temperature in the bottle in which it was dispensed .
+
+=== PASSAGE_0042 ===
+SECTION: Feeding Tube Dysfunction
+Feeding Tube Dysfunction
+Advise the patient or caregiver to regularly monitor the feeding tube for proper functioning and integrity and report to the healthcare provider if any issues are identified .
+
+=== PASSAGE_0043 ===
+SECTION: Intestinal Malabsorption in Patients with Pancreatic Insufficiency
+Intestinal Malabsorption in Patients with Pancreatic Insufficiency
+Inform the patient or caregiver that pancreatic insufficiency may reduce the clinical effect of DOJOLVI. Any known pancreatic insufficiency should be reported to the healthcare provider .
+
+=== PASSAGE_0044 ===
+SECTION: Pregnancy
+Pregnancy
+Advise a patient who is exposed to DOJOLVI during pregnancy that there is a pregnancy safety study that monitors pregnancy outcomes. Encourage the patient to report the pregnancy to Ultragenyx Pharmaceutical Inc. at 1-888-756-8657 .
+
+=== PASSAGE_0045 ===
+SECTION: Manufactured for: Ultragenyx Pharmaceutical Inc.60 Leveroni CourtNovato, CA 94949
+Manufactured for: Ultragenyx Pharmaceutical Inc.60 Leveroni CourtNovato, CA 94949
+
+=== PASSAGE_0046 ===
+SECTION: PATIENT INFORMATION
+PATIENT INFORMATION
+- are pregnant or plan to become pregnant. It is not known if DOJOLVI will harm your unborn baby. Pregnancy Safety Study. There is a pregnancy safety study for women who take DOJOLVI during pregnancy. The purpose of this study is to collect information about your health and your baby's health. You can talk to your healthcare provider or contact 1-888-756-8657 to enroll in this study or get more information.
+- are breastfeeding or plan to breastfeed. It is not known if DOJOLVI passes into breast milk. Talk to your healthcare provider about the best way to feed your baby if you take DOJOLVI.
+- are taking a pancreatic lipase inhibitor, such as orlistat, as it may affect how well DOJOLVI works.
+- See the detailed " at the end of this Patient Information Leaflet for instructions about how to mix and take DOJOLVI by mouth in soft food or drink or how to mix and give DOJOLVI in medical food or formula through feeding tubes .
+- Take DOJOLVI exactly as your healthcare provider tells you.
+- Your healthcare provider may start you on a low dose of DOJOLVI and slowly increase your dose to help avoid side effects. If you are taking another medium chain triglyceride (MCT) product, stop taking the MCT before starting DOJOLVI.
+- Do not mix or give DOJOLVI using containers, oral syringes, or measuring cups made of polystyrene (a type of plastic that can be solid or foam) or polyvinyl chloride (PVC), a solid plastic material.
+- Take DOJOLVI at least 4 times a day with meals or snacks, and always mix well with soft food or drink or medical food or formula before taking.
+- Feeding tube problems. Feeding tubes may not work as well or stop working over time when taking DOJOLVI. Do not use DOJOLVI in feeding tubes made of polyvinyl chloride (PVC). Check the feeding tube to make sure it is working properly and not breaking down.
+- Intestinal absorption problems in patients with pancreatic insufficiency. If you have pancreatic insufficiency, consult with your healthcare provider as it may affect how well DOJOLVI works.
+- The most common side effects of DOJOLVI include:
+- stomach (abdominal) pain
+- diarrhea
+- vomiting
+- nausea
+- Store DOJOLVI at room temperature between 68°F to 77°F.
+- Do not freeze DOJOLVI.
+- When the bottle of DOJOLVI has been opened, use within 9 months or by the expiration date on the bottle, whichever comes first.
+- Do not store DOJOLVI in containers made of polystyrene or polyvinyl chloride (PVC).
+
+=== PASSAGE_0047 ===
+SECTION: This Instructions for Use contains information on how to take DOJOLVI. Read this Instructions for Use before you start taking DOJOLVI and each time you get a refill. There may be new information. This Instructions for Use does not take the place of talking to your healthcare provider about your medical condition or treatment.
+This Instructions for Use contains information on how to take DOJOLVI. Read this Instructions for Use before you start taking DOJOLVI and each time you get a refill. There may be new information. This Instructions for Use does not take the place of talking to your healthcare provider about your medical condition or treatment.
+Important Information You Need to Know Before Taking or Giving DOJOLVI:
+- Use an oral syringe or measuring cup to measure your prescribed dose. Ask your healthcare provider or pharmacist to show you how to measure your prescribed dose.
+- Mix or give DOJOLVI using containers, oral syringes, or measuring cups made of materials such as stainless steel, glass, or high density polyethylene (HDPE), polypropylene, low density polyethylene, polyurethane, and silicone (types of plastic materials).
+- After use, rinse materials and containers well with cold water and wipe dry.
+- Do not mix or give DOJOLVI using containers, oral syringes, or measuring cups made of polystyrene (a type of plastic that can be solid or foam) or polyvinyl chloride (PVC), a solid plastic material.
+- Take DOJOLVI at least 4 times a day with meals or snacks, and always mix well with soft food or drink or medical food or formula before taking.
+- If you take DOJOLVI by mouth, mix well with soft food or drink such as:
+- plain or artificially sweetened fat free yogurt
+- fat free milk, formula, or cottage cheese
+- whole grain hot cereal
+- fat free low carbohydrate pudding, smoothies, applesauce, or baby food
+- If you give DOJOLVI by feeding tube, mix well with medical food or formula.
+- Your healthcare provider should advise you on how to maintain a proper diet when taking DOJOLVI.
+- If you miss a dose, take the next dose as soon as possible. Take the following doses 3 to 4 hours apart. If it is not possible to take all the doses for the day, skip the missed dose.
+Taking DOJOLVI by mouth:
+- Use an oral syringe or measuring cup made of the materials listed above to measure the prescribed amount of DOJOLVI from the bottle.
+- Add the prescribed amount of DOJOLVI to a clean bowl, cup, or container, made of the materials listed above, containing the appropriate amount of soft food or drink as instructed by your healthcare provider.
+- Mix DOJOLVI well into the soft food or liquid and swallow the mixture.
+- Do not take DOJOLVI alone to avoid stomach upset.
+- You can store any unused DOJOLVI mixture for up to 24 hours in the refrigerator.
+- If not used within 24 hours, throw away (dispose of) the DOJOLVI mixture in the trash. Do not pour down the sink. Do not save for later .
+- Check the items used to take DOJOLVI often to make sure they are working properly and are not breaking down.
+Giving DOJOLVI by feeding tube:
+- You can give DOJOLVI by a feeding tube.
+- Mix DOJOLVI with medical food or formula before giving by a feeding tube, y-connector, or feeding tube extension set.
+- Only give DOJOLVI in a feeding tube made of silicone or polyurethane.
+- Do not give DOJOLVI in a feeding tube made of polyvinyl chloride (PVC), a type of plastic.
+- Do not give DOJOLVI alone to avoid stomach upset and to avoid breakdown of the feeding tube.
+- Do not add DOJOLVI to the feeding bag because the feeding equipment may break down over time.
+- Use an oral syringe or measuring cup made of the materials listed above to measure the prescribed amount of DOJOLVI from the bottle.
+- Add the prescribed amount of DOJOLVI to a clean bowl, cup, or container, made of the materials listed above, containing the appropriate amount of medical food or formula as instructed by your healthcare provider.
+- Mix DOJOLVI well into the medical food or formula and draw up the entire amount of the mixture into a slip tip syringe.
+- Remove the air from the syringe and connect the syringe directly into the feeding tube port.
+- Push the contents of the syringe (DOJOLVI mixture) into the feeding tube port using steady pressure until empty.
+- Draw up about 5 mL to 30 mL of water with the slip tip syringe and flush the feeding tube feeding port with the water.
+- Throw away (dispose of) any unused DOJOLVI mixture in the trash. Do not pour down the sink. Do not save for later use.
+- Check the feeding tube and other items used to give DOJOLVI often to make sure they are working properly and are not breaking down.
+
+=== PASSAGE_0048 ===
+SECTION: How should I store DOJOLVI?
+How should I store DOJOLVI?
+- Store DOJOLVI at room temperature between 68°F to 77°F (20°C to 25°C).
+- Do not freeze DOJOLVI.
+- When the bottle of DOJOLVI has been opened, use within 9 months or by the expiration date on the bottle, whichever comes first.
+- Do not store DOJOLVI in containers made of polystyrene or polyvinyl chloride (PVC).
+Keep DOJOLVI and all medicines out of the reach of children.
+This Instructions for Use has been approved by the U.S. Food and Drug Administration.
+Revised: 10/2023
+
+=== PASSAGE_0049 ===
+SECTION: NDC 69794-050-50DOJOLVITRIHEPTANOINOral liquid, 100% w/wRx only500 mL1 bottle
+NDC 69794-050-50DOJOLVITRIHEPTANOINOral liquid, 100% w/wRx only500 mL1 bottle

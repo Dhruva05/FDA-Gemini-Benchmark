@@ -1,0 +1,9 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for i, line in enumerate(f):
+>         d = json.loads(line)
+>         print(i, d['drug_name'], d['set_id'])"
+0 Paxlovid 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+root@2635f56baf2a:/workspace#

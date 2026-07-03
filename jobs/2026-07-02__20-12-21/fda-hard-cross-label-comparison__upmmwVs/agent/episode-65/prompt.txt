@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; data=json.load(open('/workspace/answers.json')); print(json.dumps(data['answers'][0]['citations'], indent
+=2))"
+[
+  {
+    "set_id": "ea5d0e55-2191-4094-b082-24b317f95752",
+    "passage_id": "PASSAGE_0007",
+    "section": "Directions",
+    "supporting_quote": "adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hou
+rs"
+  },
+  {
+    "set_id": "bba4e7c8-db8e-4522-915c-48ee809e3bce",
+    "passage_id": "PASSAGE_0011",
+    "section": "Description",
+    "supporting_quote": "Loratadine\n\n                     Tablets USP, 10mg\nIndoor & Outdoor\nAllergies\n*WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL."
+  }
+]
+root@7e48d58e23f3:/workspace#

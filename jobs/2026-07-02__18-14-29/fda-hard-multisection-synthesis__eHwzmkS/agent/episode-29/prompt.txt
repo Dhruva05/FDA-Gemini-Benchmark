@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# cat << 'EOF' > search.py
+> import json, re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+>
+> def search_label(label_idx, query_regex):
+>     label = labels[label_idx]
+>     print(f"=== Search in {label['drug_name']} for '{query_regex}' ===")
+>     for i, chunk in enumerate(label['chunks']):
+>         if re.search(query_regex, chunk, re.IGNORECASE):
+>             first_line = chunk.strip().split('\n')[0]
+>             print(f"  PASSAGE_{i:04d}: {first_line[:80]}")
+>
+> search_label(0, 'drug interaction')
+> EOF
+root@a1980178bfd8:/workspace# python3 search.py
+=== Search in Paxlovid for 'drug interaction' ===
+  PASSAGE_0000: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+  PASSAGE_0013: 5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+  PASSAGE_0021: 7.3     Established and Other Potentially Significant Drug Interactions
+  PASSAGE_0031: ↑ rivaroxaban
+  PASSAGE_0133: Clinical Drug Interaction Studies
+  PASSAGE_0149: 14.1    Efficacy in Subjects at High Risk of Progression to Severe COVID-19 (EPIC-H
+  PASSAGE_0173: Drug Interactions
+root@a1980178bfd8:/workspace#

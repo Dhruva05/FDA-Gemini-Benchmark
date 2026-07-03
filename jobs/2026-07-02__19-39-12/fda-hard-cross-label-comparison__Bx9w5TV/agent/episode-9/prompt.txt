@@ -1,0 +1,14 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     data = json.loads(next(f))
+>     print("Type of label_raw:", type(data["label_raw"]))
+>     if isinstance(data["label_raw"], dict):
+>         print("Keys of label_raw:", list(data["label_raw"].keys()))
+>         for k, v in list(data["label_raw"].items())[:5]:
+>             print(k, type(v), str(v)[:100])
+> '
+Type of label_raw: <class 'str'>
+root@2809f9ae2d53:/workspace#

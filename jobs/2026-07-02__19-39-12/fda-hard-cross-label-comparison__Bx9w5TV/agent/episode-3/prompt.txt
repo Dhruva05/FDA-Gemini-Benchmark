@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     first_line = json.loads(next(f))
+>     print("Chunks type:", type(first_line["chunks"]))
+>     print("First chunk type:", type(first_line["chunks"][0]))
+>     print("First chunk snippet:", str(first_line["chunks"][0])[:200])
+> '
+Chunks type: <class 'list'>
+First chunk type: <class 'str'>
+First chunk snippet: Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+root@2809f9ae2d53:/workspace#

@@ -1,0 +1,66 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Lopinavir-Ritonavir":
+>             for i, chunk in enumerate(data["chunks"]):
+>                 if "table 1" in chunk.lower() or "table 2" in chunk.lower() or "table 3" in chunk.lower():
+>                     print(f"PASSAGE_{i:04d}: {chunk[:200]}...")
+> '
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egi...
+PASSAGE_0004: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen...
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine o...
+PASSAGE_0014: 5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medicat...
+PASSAGE_0040: Laboratory Abnormalities in Pediatric Patients
+The percentages of pediatric patients treated with combination therapy including lopinavir and ritonavir with Grade 3-4 laboratory abnormalities are pres...
+PASSAGE_0047: 7.1 Potential for Lopinavir and Ritonavir to Affect Other Drugs
+Lopinavir and ritonavir is an inhibitor of CYP3A and may increase plasma concentrations of agents that are primarily metabolized by CYP3...
+PASSAGE_0049: 7.3 Established and Other Potentially Significant Drug Interactions
+Table 12 provides a listing of established or potentially clinically significant drug interactions. Alteration in dose or regimen ma...
+PASSAGE_0109: 12.3 Pharmacokinetics
+The pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic parameters of lopinavir are summarized in Table 14. Und
+er fed conditions,...
+PASSAGE_0110: b. Changes in AUC values
+Table 14. Steady-State Pharmacokinetic Parameters of Lopinavir, Mean ± SD
+a. 19 HIV-1 subjects, lopinavir and ritonavir 400/100 mg twice daily...
+PASSAGE_0112: Pediatric Patients
+The 230/57.5 mg/m2 twice daily regimen without nevirapine and the 300/75 mg/m2 twice daily regimen with nevirapine provided lopinavir plasma concentrations simi
+lar to those obtained...
+PASSAGE_0120: Drug Interactions
+Lopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit CYP2D6, CYP2C9, CYP2C19, CYP2E1, CYP2B6 or
+CYP1A2 at clinically r...
+PASSAGE_0136: Cross-resistance - Nonclinical Studies
+Varying degrees of cross-resistance have been observed among HIV-1 protease inhibitors. The antiviral activity in cell culture of lopinavir against clinical iso
+l...
+PASSAGE_0138: 1/4 (25%)
+2 43% indinavir, 42% nelfinavir, 10% ritonavir, 15% saquinavir.
+3 41% indinavir, 38% nelfinavir, 4% ritonavir, 16% saquinavir.
+4 86% indinavir, 54% nelfinavir, 80% ritonavir, 70% saquinavir....
+PASSAGE_0143: 14.1 Adult Patients without Prior Antiretroviral Therapy
+Study 863:
+Lopinavir and Ritonavir
+Capsules twice daily + stavudine + lamivudine compared to nelfinavir three times daily + stavudine + lamivud...
+PASSAGE_0144: 8%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and other...
+PASSAGE_0145: 89
+2 Patients achieved HIV-1 RNA < 50 copies/mL at Week 48.
+Through 48 weeks of therapy, the mean increase from baseline in CD4+ cell count was 207 cells/mm3 for the lopinavir and ritonavir arm and 19...
+PASSAGE_0148: 14.2 Adult Patients with Prior Antiretroviral Therapy
+Study 888:
+Lopinavir and Ritonavir
+Capsules twice daily + nevirapine + NRTIs compared to investigator-selected protease inhibitor(s) + nevirapine ...
+PASSAGE_0150: 13%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and othe...
+root@4b1b7b4fd079:/workspace#

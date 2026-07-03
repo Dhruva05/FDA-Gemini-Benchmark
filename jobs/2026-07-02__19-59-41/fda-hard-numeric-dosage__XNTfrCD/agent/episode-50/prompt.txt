@@ -1,0 +1,41 @@
+Current Terminal Screen:
+>         "status": "ANSWERED",
+>         "answer": "Lenalidomide should be taken orally at about the same time each day, either with or without food. Patients should be advised to swallow len
+alidomide capsules whole with water and not to open, break, or chew them.",
+>         "citations": [
+>             {
+>                 "set_id": "ed7a3099-ce31-4865-b212-358d9ff6261b",
+>                 "passage_id": "PASSAGE_0032",
+>                 "section": "2.7",
+>                 "supporting_quote": "Advise patients to take lenalidomide orally at about the same time each day, either with or without food. Advise patients
+ to swallow lenalidomide capsules whole with water and not to open, break, or chew them."
+>             }
+>         ],
+>         "structured_fields": {
+>             "dose": "10-25",
+>             "unit": "mg",
+>             "route": "oral",
+>             "frequency": "once daily",
+>             "population": "adults",
+>             "max_daily_dose": "25 mg",
+>             "citation_passages": ["PASSAGE_0032"]
+>         }
+>     }
+> ]
+>
+> for ans in raw_answers:
+>     for cit in ans["citations"]:
+>         verify_and_clean_quote(cit["set_id"], cit["passage_id"], cit["supporting_quote"])
+>
+> print("All quotes and passages verified successfully!")
+>
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump({"answers": raw_answers}, f, indent=2)
+> print("Written to /workspace/answers.json")
+> EOF
+root@3d44031eb234:/workspace# python3 generate_answers.py
+WARNING: Space mismatch in quote: 'Lopinavir and ritonavir oral solution must be taken with food.'
+WARNING: Space mismatch in quote: '400 mg/100 mg (5 mL) twice daily'
+All quotes and passages verified successfully!
+Written to /workspace/answers.json
+root@3d44031eb234:/workspace#

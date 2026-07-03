@@ -1,0 +1,14 @@
+{
+  "analysis": "Aha! For Acyclovir (`dcc29902-1fe6-4713-947e-335503959464`):
+- `PASSAGE_0008`: \"800 mg every 4 hours orally, 5 times daily for 7 to 10 days. 200 mg every 4 hours, 5 times daily for...\"
+Let's print `PASSAGE_0008` in full for Acyclovir!
+
+And for Acyclovir suspension (`3efa1e5e-5a14-4724-a2ca-25702f10faed`), let's see which chunks have the dosing instructions. Let's list all chunks of Acyclovir suspension to see where the dosing instructions are.",
+  "plan": "I will run a python command to print the titles/first few words of all chunks of Acyclovir suspension (`3efa1e5e-5a14-4724-a2ca-25702f10faed`).",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print(i, c[:100].replace('\\n', ' ')) for d in (json.loads(l) for l in f) if d['set_id']=='3efa1e5e-5a14-4724-a2ca-25702f10faed' for i, c in enumerate(d['chunks'])]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

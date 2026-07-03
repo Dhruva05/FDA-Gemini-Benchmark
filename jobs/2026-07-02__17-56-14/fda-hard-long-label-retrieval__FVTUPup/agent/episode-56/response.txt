@@ -1,0 +1,14 @@
+{
+  "analysis": "I will escape all newlines and control characters carefully. I want to search for passages containing 'adverse reactions' or 'most common' to find the common safety risks and adverse events of Paxlovid (Question 4).",
+  "plan": "I will run the search.py script with keywords 'adverse reactions' and 'most common'.",
+  "commands": [
+    {
+      "keystrokes": "python3 search.py \"adverse reactions\"\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 search.py \"most common\"\n",
+      "duration": 0.5
+    }
+  ]
+}

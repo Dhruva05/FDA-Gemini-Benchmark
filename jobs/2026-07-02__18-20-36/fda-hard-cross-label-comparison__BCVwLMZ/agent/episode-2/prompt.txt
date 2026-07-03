@@ -1,0 +1,25 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > parse_labels.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+>
+> print(f"Loaded {len(labels)} labels")
+> for l in labels:
+>     print(f"set_id: {l['set_id']}, drug_name: {l.get('drug_name')}")
+> EOF
+root@faa94ec9460f:/workspace# python3 parse_labels.py
+Loaded 10 labels
+set_id: ea5d0e55-2191-4094-b082-24b317f95752, drug_name: 12HR Allergy Relief
+set_id: bba4e7c8-db8e-4522-915c-48ee809e3bce, drug_name: 365 Whole Foods Market Loratadine
+set_id: ae6e79c0-a307-4888-b647-1b7be4cb9127, drug_name: Acamprosate Calcium
+set_id: 08c9d3dd-717b-0148-e054-00144ff8d46c, drug_name: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+set_id: 36adb32c-638c-4d6e-b66a-1a1c35174ce6, drug_name: ACETAMINOPHEN with CODEINE
+set_id: 6972d9c1-36ec-4246-bf7b-13206d5952c3, drug_name: AcetaZOLAMIDE
+set_id: 8e396b27-b44a-4aa9-805b-086395444b5f, drug_name: ACETAZOLAMIDE EXTENDED-RELEASE
+set_id: 42e49120-6f3f-11db-9fe1-0800200c9a66, drug_name: Actoplus Met
+set_id: dcc29902-1fe6-4713-947e-335503959464, drug_name: Acyclovir
+set_id: 3efa1e5e-5a14-4724-a2ca-25702f10faed, drug_name: Acyclovir suspension
+root@faa94ec9460f:/workspace#

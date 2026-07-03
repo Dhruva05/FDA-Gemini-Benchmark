@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at more passages under \"DOSAGE AND ADMINISTRATION\" or \"Dosage\" in Lopinavir-Ritonavir. Let's see if there are passages between PASSAGE_0001 and PASSAGE_0015.",
+  "plan": "I will run a python script to print the titles and first 150 characters of PASSAGE_0000 through PASSAGE_0015 of Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"drug_name\"] == \"Lopinavir-Ritonavir\":\n            for i in range(16):\n                print(f\"PASSAGE_{i:04d}: {data[\"chunks\"][i][:150]}...\")\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > print_clean.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {label['set_id']: label for line in f for label in [json.loads(line)]}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print("=" * 80)
+>     print(f"QID: {q['qid']}")
+>     print(f"DRUG: {q['drug_name']}")
+>     print(f"QUESTION: {q['question']}")
+>     print("-" * 80)
+>     label = labels[q['set_id']]
+>
+>     # Let's see which chunks are relevant to the searched_topic in the question
+>     # Let's print ALL chunks for that label, but nicely formatted with their indices
+>     for idx, chunk in enumerate(label['chunks']):
+>         passage_id = f"PASSAGE_{idx:04d}"
+>         # Check if the chunk text is relevant to the question keywords
+>         # Let's print any chunk that contains any keyword from the question
+>         # or just print all chunks if there are fewer than 20
+>         q_words = [w.strip("?,.()") for w in q['question'].lower().split()]
+>         # We want to find chunks that discuss the searched topic
+>         # Let's print chunks that contain "kidney", "renal", "hepatic", "pregnancy", "pediatric", "adverse", "warning"
+>         keywords = ["kidney", "renal", "hepatic", "pregnancy", "pregnant", "breastfeeding", "pediatric", "geriatric", "adverse", "warning", "pharmacogenomic",
+ "monitoring"]
+>         if len(label['chunks']) <= 20 or any(kw in chunk.lower() for kw in keywords):
+>             print(f"[{passage_id}]")
+>             print(chunk)
+>             print("." * 40)
+> EOF
+root@c7da805c5eb1:/workspace# python3 print_clean.py > clean_details.txt
+root@c7da805c5eb1:/workspace#

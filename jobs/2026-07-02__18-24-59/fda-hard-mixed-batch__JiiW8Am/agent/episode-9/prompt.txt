@@ -1,0 +1,46 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/questions.jsonl") as f:
+>     for i, line in enumerate(f):
+>         q = json.loads(line)
+>         print(f"{i}: {q.get("qid")} | {q.get("drug_name")} | {q.get("task_type")}")
+>         print(f"  Question: {q.get("question")}")
+>         print(f"  Fields: {q.get("required_output_fields")}")
+> '
+0: b2531657ba5c7a78 | Paxlovid | factual
+  Question: What important drug interactions are noted for Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+1: 6f12607a1ba14dd5 | Paxlovid | factual
+  Question: Which medications should be avoided with Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+2: mixed-2a90a3df19df68 | Paxlovid | factual
+  Question: What important drug interactions are noted for Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+3: mixed-7c14643ec4356a | Paxlovid | factual
+  Question: Which medications should be avoided with Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+4: daef650b92e56473 | Lopinavir-Ritonavir | numeric
+  Question: How should Lopinavir-Ritonavir be administered?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structur
+ed_fields.frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+5: a0576a26f2a2eeac | Lopinavir-Ritonavir | numeric
+  Question: What is the recommended dosage regimen of Lopinavir-Ritonavir?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.dose', 'structured_fields.unit', 'structured_fields.route', 'structur
+ed_fields.frequency', 'structured_fields.population', 'structured_fields.max_daily_dose', 'structured_fields.citation_passages']
+6: near-miss-04f3afa658fdef | 12HR Allergy Relief | refusal
+  Question: The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOU
+ND if the label does not support it, and cite the section you searched.
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+7: near-miss-0c6ec72416151f | Acamprosate Calcium | refusal
+  Question: The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND
+ if the label does not support it, and cite the section you searched.
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.searched_topic', 'structured_fields.unsupported_topic']
+8: mixed-eead76662cb6bf | Paxlovid | multihop
+  Question: What important drug interactions are noted for Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+9: mixed-97331106c3870d | Paxlovid | multihop
+  Question: Which medications should be avoided with Paxlovid?
+  Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+root@c3dfb07a1d45:/workspace#

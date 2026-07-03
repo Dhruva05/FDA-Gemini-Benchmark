@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 45 (char 46) | Content preview: '{\n  "analysis": "The search for \'5.\' returned:\n- `PASSAGE_0013` (5.1 Risk of Serious Adverse Reactio'...
+
+Please fix these issues and provide a proper JSON response.

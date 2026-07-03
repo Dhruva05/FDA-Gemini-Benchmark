@@ -1,0 +1,32 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# cat << 'EOF' > print_passage.py
+> import json
+> import sys
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>
+> chunks = data['chunks']
+>
+> if len(sys.argv) > 1:
+>     pid_str = sys.argv[1].upper()
+>     # Extract number
+>     import re
+>     m = re.search(r'\d+', pid_str)
+>     if m:
+>         idx = int(m.group(0))
+>         if idx < len(chunks):
+>             print(f"=== PASSAGE_{idx:04d} ===")
+>             print(chunks[idx])
+>         else:
+>             print("Index out of range")
+>     else:
+>         print("No number found")
+> EOF
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0004
+=== PASSAGE_0004 ===
+2.2     Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with all 3 tablets taken together oral
+ly twice daily in the morning and at bedtime for 5 days.
+root@2635f56baf2a:/workspace#

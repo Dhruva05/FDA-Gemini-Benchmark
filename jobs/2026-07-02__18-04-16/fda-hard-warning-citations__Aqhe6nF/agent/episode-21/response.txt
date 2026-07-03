@@ -1,0 +1,11 @@
+{
+  "analysis": "This is great! Let's check PASSAGE_0004, PASSAGE_0005, and PASSAGE_0006 to see what the recommended dosage is for adults.
+Let's print PASSAGE_0004, PASSAGE_0005, PASSAGE_0006.",
+  "plan": "I will print the text of PASSAGE_0004, PASSAGE_0005, and PASSAGE_0006 from Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'Lopinavir-Ritonavir':\n            lop = data\n            break\nfor idx in [4, 5, 6]:\n    print(f'=== PASSAGE_{idx:04d} ===')\n    print(lop['chunks'][idx])\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+Current Terminal Screen:
+Specific Populations
+Renal Impairment:  Eight subjects with mild renal impairment (creatinine clearance (CLcr) 50 to 79 mL/min calculated using Cockcroft-Gault), 9 subjects with mod
+erate renal impairment (CLcr 30 to 49 mL/min), 4 subjects with severe renal impairment (CLcr < 30 mL/min), and 6 patien
+--------------------------------------------------
+PASSAGE_0090:
+Drug Interactions
+Co-administration of a single dose or multiple doses of dexamethasone (40 mg) had no clinically relevant effect on the multiple dose pharmacokinetics of lenalid
+omide (25 mg).
+Co-administration of lenalidomide (25 mg) after multiple doses of a P-gp inhibitor such as quinidine (600 m
+--------------------------------------------------
+PASSAGE_0092:
+14.1 Multiple Myeloma
+Randomized, Open-Label Clinical Trial in Patients with Newly Diagnosed MM:
+A randomized multicenter, open-label, 3-arm trial of 1,623 patients, was conducted to compare the efficacy and safety of lenalidomide and low-dose dexamethasone
+ (Rd) given for 2 different durations of ti
+--------------------------------------------------
+PASSAGE_0096:
+[0.72, 1.13]
+Date of Unblinding in Maintenance Study 1 and 2 = 17 December 2009 and 7 July 2010, respectively.
+Auto-HSCT = autologous hematopoietic stem cell transplantation; CI = confidence interval; ITT = intent to treat; NE = not estimable;
+PFS = progression-free survival.
+PFS at time of unblindi
+--------------------------------------------------
+PASSAGE_0098:
+14.2 Myelodysplastic Syndromes (MDS) with a Deletion 5q Cytogenetic Abnormality
+The efficacy and safety of lenalidomide were evaluated in patients with transfusion-dependent anemia in low- or intermediate-1- risk MDS with a 5q (q31 to 33) c
+ytogenetic abnormality in isolation or with additional cytog
+--------------------------------------------------
+PASSAGE_0099:
+14.3 Mantle Cell Lymphoma
+A multicenter, single-arm, open-label trial of single-agent lenalidomide was conducted to evaluate the safety and efficacy of lenalidomide in patients with mant
+le cell lymphoma who have relapsed after or were refractory to bortezomib or a bortezomib-containing regimen. Pati
+--------------------------------------------------
+PASSAGE_0103:
+14.4 Follicular and Marginal Zone Lymphoma
+The efficacy of lenalidomide with rituximab in patients with relapsed or refractory follicular and marginal zone lymphoma was evaluated in the AUGMENT (NCT01938
+001) and MAGNIFY (NCT01996865) trials.
+AUGMENT is a randomized, double-blind, multicenter trial (
+--------------------------------------------------
+root@371ed25b9fd3:/workspace#

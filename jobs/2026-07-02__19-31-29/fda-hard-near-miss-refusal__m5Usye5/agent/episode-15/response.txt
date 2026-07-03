@@ -1,0 +1,10 @@
+{
+  "analysis": "The adverse reactions are discussed in `PASSAGE_0009` (\"6.1 Clinical Trials Experience\"), `PASSAGE_0028` (\"6.2 Postmarketing Experience\"), etc.\nLet's print out the text of `PASSAGE_0009` and `PASSAGE_0028` to see if there's any mention of \"therapeutic drug monitoring target range\" or anything similar.",
+  "plan": "I will print the full text of `PASSAGE_0009` and `PASSAGE_0028` to verify.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [9, 28]]\"\n",
+      "duration": 0.5
+    }
+  ]
+}

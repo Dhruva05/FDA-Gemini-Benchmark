@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); [print('=== PASSAGE', i, '===', c) for d in (json.loads(l)
+ for l in f) if d['set_id']=='42e49120-6f3f-11db-9fe1-0800200c9a66' for i, c in enumerate(d['chunks']) if i in [4, 5, 6, 7, 8]]"
+=== PASSAGE 4 === 2 DOSAGE AND ADMINISTRATION
+- Obtain liver tests (serum alanine and aspartate aminotransferases, alkaline phosphatase, and total bilirubin) prior to initiating ACTOPLUS MET
+- ACTOPLUS MET contains 15 mg of pioglitazone and 850 mg of metformin hydrochloride (HCl) in each tablet.
+- Take ACTOPLUS MET with meals to reduce gastrointestinal adverse reactions with metformin
+- If a dose is missed, do not double the next dose.
+=== PASSAGE 5 === Recommended Starting Dosage Based on Current Regimen
+Individualize the starting dosage of ACTOPLUS MET based on the patient's current regimen and the available strength of ACTOPLUS MET .
+=== PASSAGE 6 === Dosage Titration for Additional Glycemic Control
+Titrate the ACTOPLUS MET dosage gradually, as needed, after assessing therapeutic response and tolerability.
+ACTOPLUS MET may be increased to a maximum recommended total daily dosage of three tablets per day (45 mg of pioglitazone and 2,550 mg of metformin HCl). Total
+daily dosages of 2,550 mg of metformin HCl may be taken in divided doses three times a day to reduce gastrointestinal adverse reactions .
+=== PASSAGE 7 === - Assess renal function prior to initiation of ACTOPLUS MET and periodically thereafter
+- ACTOPLUS MET is contraindicated in patients with an estimated glomerular filtration rate (eGFR) below 30 mL/min.
+- Initiation of ACTOPLUS MET in patients with an eGFR between 30 to 45 mL/min is not recommended.
+- In patients taking ACTOPLUS MET whose eGFR later falls below 45 mL/min, assess the benefit and risk of continuing therapy.
+- Discontinue ACTOPLUS MET if the patient’s eGFR later falls below 30 mL/min
+=== PASSAGE 8 === Starting Dosage in Patients with NYHA Class I or II Congestive Heart Failure
+For patients with preexisting NYHA Class I or II congestive heart failure, the recommended starting dosage of ACTOPLUS MET is 15 mg of pioglitazone and 850 mg o
+f metformin .
+Monitoring for Fluid Retention and Dosage Modifications for Congestive Heart Failure
+After initiation of ACTOPLUS MET or with dosage increase, monitor patients carefully for adverse reactions related to fluid retention as has been seen with piog
+litazone (e.g., weight gain, edema and signs and symptoms of congestive heart failure).
+If congestive heart failure develops while taking ACTOPLUS MET, consider discontinuation of ACTOPLUS MET or dosage reduction of pioglitazone in ACTOPLUS MET .
+root@7e48d58e23f3:/workspace#

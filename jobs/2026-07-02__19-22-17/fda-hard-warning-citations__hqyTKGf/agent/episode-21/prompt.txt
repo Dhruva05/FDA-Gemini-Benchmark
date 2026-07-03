@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 191 (char 192) | Content preview: '{\n  "analysis": "The set_id for Paxlovid is 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a. The set_id for Lop'...
+
+Please fix these issues and provide a proper JSON response.

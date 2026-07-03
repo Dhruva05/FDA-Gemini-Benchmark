@@ -1,0 +1,46 @@
+New Terminal Output:
+
+root@4b1b7b4fd079:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Paxlovid":
+>             for i, chunk in enumerate(data["chunks"]):
+>                 if "DRUG INTERACTIONS" in chunk or "CONTRAINDICATIONS" in chunk or "avoid" in chunk.lower():
+>                     if len(chunk) < 500:
+>                         print(f"PASSAGE_{i:04d}: {chunk[:200]}...")
+> '
+PASSAGE_0023: ↑ tamsulosin
+Avoid concomitant use with PAXLOVID....
+PASSAGE_0029: ↑ anticancer drugs
+Avoid co-administration of encorafenib or ivosidenib due to potential risk of serious adverse events such as QT interval prolongation. Avoid use of neratinib, v
+enetoclax or ibrutini...
+PASSAGE_0031: ↑ rivaroxaban
+Increased bleeding risk with rivaroxaban. Avoid concomitant use.
+dabigatranSee Pharmacokinetics, Clinical Drug Interaction Studies (12.3)....
+PASSAGE_0032: ↑ dabigatran
+Increased bleeding risk with dabigatran. Depending on dabigatran indication and renal function, reduce dose of dabigatran or avoid concomitant use. Refer to the
+ dabigatran product label f...
+PASSAGE_0038: ↓ voriconazole
+Avoid concomitant use of voriconazole....
+PASSAGE_0056: aliskiren,ticagrelor,vorapaxar
+                                       clopidogrel
+↑ aliskiren↑ ticagrelor↑ vorapaxar
+↓ clopidogrel active metabolite
+Avoid concomitant use with PAXLOVID....
+PASSAGE_0065: glecaprevir/pibrentasvir
+Avoid concomitant use of glecaprevir/pibrentasvir with PAXLOVID....
+PASSAGE_0075: ↑ everolimus↑ sirolimus
+Avoid concomitant use of everolimus and sirolimus and PAXLOVID.
+Refer to the individual immunosuppressant product label and latest guidelines for further information....
+PASSAGE_0078: ↑ salmeterol
+Avoid concomitant use with PAXLOVID. The combination may result in increased risk of cardiovascular adverse events associated with salmeterol, including QT prol
+ongation, palpitations, and...
+PASSAGE_0082: ↑ rimegepant
+Avoid concomitant use with PAXLOVID....
+PASSAGE_0087: ↑ suvorexant
+Avoid concomitant use of suvorexant with PAXLOVID....
+PASSAGE_0091: ↑ tadalafil
+Avoid concomitant use of tadalafil with PAXLOVID for pulmonary hypertension....
+root@4b1b7b4fd079:/workspace#

@@ -1,0 +1,149 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > parse_passages.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print(label['drug_name'])
+>         raw = label['label_raw']
+>         # Let's find all occurrences of PASSAGE_####||
+>         matches = list(re.finditer(r'(PASSAGE_\d+)\|\|\n', raw))
+>         passages = {}
+>         for i in range(len(matches)):
+>             start = matches[i].end()
+>             end = matches[i+1].start() if i+1 < len(matches) else len(raw)
+>             pid = matches[i].group(1)
+>             ptext = raw[start:end]
+>             # Clean up trailing/leading newlines to see if it matches chunks
+>             passages[pid] = ptext
+>
+>         chunks = label['chunks']
+>         print(f"Chunks count: {len(chunks)}, Passages count: {len(passages)}")
+>
+>         matched = 0
+>         for idx, chunk in enumerate(chunks):
+>             pid = f"PASSAGE_{idx:04d}"
+>             if pid in passages:
+>                 ptext = passages[pid]
+>                 # Strip trailing newlines/whitespace
+>                 if ptext.rstrip() == chunk.rstrip():
+>                     matched += 1
+>                 else:
+>                     if matched < 2:
+>                         print(f"Mismatch for {pid}:")
+>                         print(f"ptext (repr): {repr(ptext[-100:])}")
+>                         print(f"chunk (repr): {repr(chunk[-100:])}")
+>             else:
+>                 print(f"{pid} not in parsed passages!")
+>         print(f"Matched: {matched}/{len(chunks)}")
+>         print("-"*40)
+> EOF
+root@15b83e10b8d1:/workspace# python3 parse_passages.py
+Paxlovid
+Chunks count: 209, Passages count: 209
+Mismatch for PASSAGE_0000:
+ptext (repr): ' risk of potential drug-drug interactions for an individual patient can be appropriately managed\n\n||'
+chunk (repr): ' the risk of potential drug-drug interactions for an individual patient can be appropriately managed'
+Mismatch for PASSAGE_0001:
+ptext (repr): 'lts who are at high risk for progression to severe COVID-19, including hospitalization or death.\n\n||'
+chunk (repr): ' adults who are at high risk for progression to severe COVID-19, including hospitalization or death.'
+Mismatch for PASSAGE_0002:
+ptext (repr): 's not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 .\n\n||'
+chunk (repr): 'ID is not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 .'
+Mismatch for PASSAGE_0003:
+ptext (repr): 'with or without food . The tablets should be swallowed whole and not chewed, broken, or crushed.\n\n||'
+chunk (repr): 'ken with or without food . The tablets should be swallowed whole and not chewed, broken, or crushed.'
+Mismatch for PASSAGE_0004:
+ptext (repr): ') with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days.\n\n||'
+chunk (repr): 'blet) with all 3 tablets taken together orally twice daily in the morning and at bedtime for 5 days.'
+Mismatch for PASSAGE_0005:
+ptext (repr): 'ed after hemodialysis .\nTable 1: Recommended Dose and Regimen for Patients with Renal Impairment\n\n||'
+chunk (repr): 'stered after hemodialysis .\nTable 1: Recommended Dose and Regimen for Patients with Renal Impairment'
+Mismatch for PASSAGE_0006:
+ptext (repr): 'roximately the same time each day for 5 days.\nModerate renal impairment (eGFR ≥30 to <60 mL/min)\n\n||'
+chunk (repr): ' approximately the same time each day for 5 days.\nModerate renal impairment (eGFR ≥30 to <60 mL/min)'
+Mismatch for PASSAGE_0007:
+ptext (repr): 'modialysis\nOn days of hemodialysis, the PAXLOVID dose should be administered after hemodialysis.\n\n||'
+chunk (repr): 'g hemodialysis\nOn days of hemodialysis, the PAXLOVID dose should be administered after hemodialysis.'
+Mismatch for PASSAGE_0008:
+ptext (repr): 'Day 1\n300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) once\n\n||'
+chunk (repr): 'Day 1\n300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) once'
+Mismatch for PASSAGE_0009:
+ptext (repr): '2-5\n150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) once daily\n\n||'
+chunk (repr): 'ays 2-5\n150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) once daily'
+Mismatch for PASSAGE_0010:
+ptext (repr): 'ent; therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment .\n\n||'
+chunk (repr): 'airment; therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment .'
+Mismatch for PASSAGE_0011:
+ptext (repr): 'niquely identified by the color, shape, and debossing. Each tablet contains 100 mg of ritonavir.\n\n||'
+chunk (repr): 'ts uniquely identified by the color, shape, and debossing. Each tablet contains 100 mg of ritonavir.'
+Mismatch for PASSAGE_0012:
+ptext (repr): "ne conductance regulator potent
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+py, including lopinavir and ritonavir .'
+Mismatch for PASSAGE_0167:
+ptext (repr): 'an result in substantial increases in the concentration of total cholesterol and triglycerides .\n\n||'
+chunk (repr): 'py can result in substantial increases in the concentration of total cholesterol and triglycerides .'
+Mismatch for PASSAGE_0168:
+ptext (repr): 'and that the cause and long term health effects of these conditions are not known at this time .\n\n||'
+chunk (repr): 'apy and that the cause and long term health effects of these conditions are not known at this time .'
+Mismatch for PASSAGE_0169:
+ptext (repr): 'ience increased bleeding when treated with protease inhibitors such as lopinavir and ritonavir .\n\n||'
+chunk (repr): 'xperience increased bleeding when treated with protease inhibitors such as lopinavir and ritonavir .'
+Mismatch for PASSAGE_0170:
+ptext (repr): 'ncy registry that monitors fetal outcomes of pregnant women exposed to lopinavir and ritonavir .\n\n||'
+chunk (repr): 'egnancy registry that monitors fetal outcomes of pregnant women exposed to lopinavir and ritonavir .'
+Mismatch for PASSAGE_0171:
+ptext (repr): 'd because HIV-1 can be passed to the baby in breast milk .\nDistributed by: Lannett Company, Inc.\n\n||'
+chunk (repr): 'tfeed because HIV-1 can be passed to the baby in breast milk .\nDistributed by: Lannett Company, Inc.'
+Mismatch for PASSAGE_0172:
+ptext (repr): "Lopinavir and Ritonavir\n(loe pin' a vir) (ri ton' na vir)\n\n||"
+chunk (repr): "Lopinavir and Ritonavir\n(loe pin' a vir) (ri ton' na vir)"
+Mismatch for PASSAGE_0173:
+ptext (repr): 'vir. Tell your healthcare provider if you have any signs or symptoms of pancreatitis \xa0including:\n\n||'
+chunk (repr): 'tonavir. Tell your healthcare provider if you have any signs or symptoms of pancreatitis \xa0including:'
+Mismatch for PASSAGE_0174:
+ptext (repr): 'r healthcare provider right away if you have any signs and symptoms of liver problems including:\n\n||'
+chunk (repr): ' your healthcare provider right away if you have any signs and symptoms of liver problems including:'
+Mismatch for PASSAGE_0175:
+ptext (repr): '°\xa0loss of appetite\n°\xa0yellow skin and whites of eyes (jaundice)\n\n||'
+chunk (repr): '°\xa0loss of appetite\n°\xa0yellow skin and whites of eyes (jaundice)'
+Mismatch for PASSAGE_0176:
+ptext (repr): 'navir and ritonavir.\nTell your healthcare provider right away if you have any of these symptoms:\n\n||'
+chunk (repr): 'lopinavir and ritonavir.\nTell your healthcare provider right away if you have any of these symptoms:'
+Mismatch for PASSAGE_0177:
+ptext (repr): 'te list of ingredients in lopinavir and ritonavir.\n- if you take any of the following medicines:\n\n||'
+chunk (repr): 'mplete list of ingredients in lopinavir and ritonavir.\n- if you take any of the following medicines:'
+Mismatch for PASSAGE_0178:
+ptext (repr): '°\xa0dronedarone\n° colchicine, if you have kidney or liver problems.\n\n||'
+chunk (repr): '°\xa0dronedarone\n° colchicine, if you have kidney or liver problems.'
+Mismatch for PASSAGE_0179:
+ptext (repr): 'ining medicines including:\n- dihydroergotamine mesylate\n- ergotamine tartrate\n- methylergonovine\n\n||'
+chunk (repr): 'ontaining medicines including:\n- dihydroergotamine mesylate\n- ergotamine tartrate\n- methylergonovine'
+Mismatch for PASSAGE_0180:
+ptext (repr): 'mitapide\n°\xa0sildenafil (Revatio®), when used for the treatment of pulmonary arterial hypertension\n\n||'
+chunk (repr): '° lomitapide\n°\xa0sildenafil (Revatio®), when used for the treatment of pulmonary arterial hypertension'
+Mismatch for PASSAGE_0181:
+ptext (repr): ' and ritonavir. Tell your healthcare provider if you get any of the following signs or symptoms:\n\n||'
+chunk (repr): 'avir and ritonavir. Tell your healthcare provider if you get any of the following signs or symptoms:'
+Mismatch for PASSAGE_0182:
+ptext (repr): ' and do not endorse Lannett Company, Inc. or its products.\nDistributed by:\nLannett Company, Inc.\n\n||'
+chunk (repr): 'with and do not endorse Lannett Company, Inc. or its products.\nDistributed by:\nLannett Company, Inc.'
+Mismatch for PASSAGE_0183:
+ptext (repr): 'phia, PA 19136\nThis Medication Guide has been approved by the U.S. Food and Drug Administration.\n\n||'
+chunk (repr): 'adelphia, PA 19136\nThis Medication Guide has been approved by the U.S. Food and Drug Administration.'
+Mismatch for PASSAGE_0184:
+ptext (repr): 'Ritonavir Oral Solution bottle 1 Lopinavir and Ritonavir Oral Solution bottle\n- 1 Bottle adapter\n\n||'
+chunk (repr): 'and Ritonavir Oral Solution bottle 1 Lopinavir and Ritonavir Oral Solution bottle\n- 1 Bottle adapter'
+Mismatch for PASSAGE_0185:
+ptext (repr): '1 Bottle adapter\n- 1 Oral syringe\n\n||'
+chunk (repr): '1 Bottle adapter\n- 1 Oral syringe'
+Mismatch for PASSAGE_0186:
+ptext (repr): '1 Oral syringe\n- 1 Prescribing Information\n\n||'
+chunk (repr): '1 Oral syringe\n- 1 Prescribing Information'
+Matched: 1/188
+----------------------------------------
+root@15b83e10b8d1:/workspace#

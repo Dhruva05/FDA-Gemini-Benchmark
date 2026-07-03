@@ -1,0 +1,25 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         chunks = data.get('chunks', [])
+>         print(data.get('drug_name'), type(chunks), len(chunks))
+>         if len(chunks) > 0:
+>             print('first element type:', type(chunks[0]))
+>             print('first element:', chunks[0] if isinstance(chunks, list) else list(chunks.items())[0])
+>         break
+> "
+Lopinavir-Ritonavir <class 'list'> 188
+first element type: <class 'str'>
+first element: 1 INDICATIONS AND USAGE
+Lopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in adults and pediatric patients 14 da
+ys and older.
+Limitations of Use:
+- Genotypic or phenotypic testing and/or treatment history should guide the use of lopinavir and ritonavir. The number of baseline lopinavir resistance-associat
+ed substitutions affects the virologic response to lopinavir and ritonavir
+Genotypic or phenotypic testing and/or treatment history should guide the use of lopinavir and ritonavir. The number of baseline lopinavir resistance-associated
+ substitutions affects the virologic response to lopinavir and ritonavir .
+root@3d44031eb234:/workspace#

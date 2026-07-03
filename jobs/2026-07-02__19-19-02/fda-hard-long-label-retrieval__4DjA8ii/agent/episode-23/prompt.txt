@@ -1,0 +1,5 @@
+New Terminal Output:
+
+>>> for idx in range(13, 19):
+...     print(f"{idx}: {label_data['chunks'][idx][:120]}")
+...

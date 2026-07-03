@@ -1,0 +1,13 @@
+task_name,job_timestamp,run_id,trial_path,agent,model,skip_reason,exception_type,exception_message
+fda-hard-long-label-retrieval,2026-07-02__17-07-50,BdTs7fn,jobs/2026-07-02__17-07-50/fda-hard-long-label-retrieval__BdTs7fn,terminus-2,gemini/gemini-3.5-flash,no verifier reward found,RateLimitError,"litellm.RateLimitError: litellm.RateLimitError: geminiException - {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.5-flash\nPlease re"
+fda-hard-warning-citations,2026-07-02__17-10-10,EKfvFii,jobs/2026-07-02__17-10-10/fda-hard-warning-citations__EKfvFii,terminus-2,gemini/gemini-3.5-flash,no verifier reward found,CancelledError,
+fda-hard-numeric-dosage,2026-07-02__17-20-28,oArzj5H,jobs/2026-07-02__17-20-28/fda-hard-numeric-dosage__oArzj5H,terminus-2,gemini/gemini-3.5-flash,no verifier reward found,CancelledError,
+fda-hard-numeric-dosage,2026-07-02__17-28-30,F6rSxwF,jobs/2026-07-02__17-28-30/fda-hard-numeric-dosage__F6rSxwF,terminus-2,gemini/gemini-3.5-flash,no verifier reward found,CancelledError,
+fda-hard-near-miss-refusal,2026-07-02__17-28-47,WkuVCj3,jobs/2026-07-02__17-28-47/fda-hard-near-miss-refusal__WkuVCj3,terminus-2,gemini/gemini-3.5-flash,no verifier reward found,CancelledError,
+fda-hard-long-label-retrieval,2026-07-02__17-42-00,fVx2Jt8,jobs/2026-07-02__17-42-00/fda-hard-long-label-retrieval__fVx2Jt8,terminus-2,gemini/gemini-3.5-flash,no verifier reward found,RateLimitError,"litellm.RateLimitError: litellm.RateLimitError: geminiException - {
+  ""error"": {
+    ""code"": 429,
+    ""message"": ""You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.5-flash\nPlease re"

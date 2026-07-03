@@ -1,0 +1,6 @@
+{
+  "analysis": "The temporary files are cleaned up, the answers are constructed perfectly, and the validation checks passed successfully. We are ready to declare the task complete.",
+  "plan": "I will submit the completed task.",
+  "commands": [],
+  "task_complete": true
+}

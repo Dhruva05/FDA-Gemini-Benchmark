@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 26 (char 27) | Content preview: '{\n  "analysis": "Excellent!\nLet\'s see:\nFor Paxlovid:\n- Section 4 CONTRAINDICATIONS is PASSAGE_0012.\n'...
+
+Please fix these issues and provide a proper JSON response.

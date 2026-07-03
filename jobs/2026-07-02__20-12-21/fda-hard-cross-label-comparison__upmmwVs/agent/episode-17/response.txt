@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, the terminal is not showing the output of `pwd` either. Let's wait a bit or try sending another newline.",
+  "plan": "I will send a newline to see if the prompt returns.",
+  "commands": [
+    {
+      "keystrokes": "\n",
+      "duration": 0.5
+    }
+  ]
+}

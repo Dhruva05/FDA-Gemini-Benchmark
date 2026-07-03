@@ -1,0 +1,43 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["set_id"] in ["ea5d0e55-2191-4094-b082-24b317f95752", "bba4e7c8-db8e-4522-915c-48ee809e3bce"]:
+>             print("="*40)
+>             print("Drug name:", data["drug_name"])
+>             print("Set ID:", data["set_id"])
+>             for i, chunk in enumerate(data["chunks"]):
+>                 if any(kw in chunk.lower() for kw in ["direction", "dosage", "dose", "route", "frequency", "population", "maximum", "adult", "children"]):
+>                     print(f"  PASSAGE_{i:04d}:")
+>                     print(chunk)
+>                     print("-"*20)
+> '
+========================================
+Drug name: 12HR Allergy Relief
+Set ID: ea5d0e55-2191-4094-b082-24b317f95752
+  PASSAGE_0002:
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+--------------------
+  PASSAGE_0006:
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+--------------------
+  PASSAGE_0007:
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+--------------------
+  PASSAGE_0008:
+do not use
+adults 65 years of age and older
+--------------------
+========================================
+Drug name: 365 Whole Foods Market Loratadine
+Set ID: bba4e7c8-db8e-4522-915c-48ee809e3bce
+  PASSAGE_0002:
+liver or kidney disease. Your doctor should determine if you need a different dose.
+--------------------
+  PASSAGE_0006:
+In case of overdose, get medical help or contact a Poison Control Center (1-800-222-1222) right away.
+--------------------
+root@2809f9ae2d53:/workspace#

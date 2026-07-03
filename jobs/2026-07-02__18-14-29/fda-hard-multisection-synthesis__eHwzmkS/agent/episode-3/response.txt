@@ -1,0 +1,10 @@
+{
+  "analysis": "There are two lines/documents in `labels.jsonl`. Let's see what the structure of `chunks` is, as well as `label_raw`. Let's print the first 2 chunks of the first label to see how they look.",
+  "plan": "I will run a python command to inspect the fields inside the `chunks` of the first label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; print('Label 0 name:', labels[0]['drug_name'], 'set_id:', labels[0]['set_id']); print('Number of chunks in Label 0:', len(labels[0]['chunks'])); print('First chunk keys:', labels[0]['chunks'][0].keys()); print('First chunk sample:', json.dumps(labels[0]['chunks'][0], indent=2)); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

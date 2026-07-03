@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's see how `label_raw` is structured, or if there is any mention of `passage_id` inside `label_raw` or if we should parse chunks. Let's write a python script to inspect the contents of `label_raw` for one of the labels.",
+  "plan": "I will run a python script to inspect the fields of `label_raw` of the first label.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; data=[json.loads(line) for line in open('/workspace/data/public/labels.jsonl')]; print(type(data[0]['label_raw'])); print(data[0]['label_raw'].keys() if isinstance(data[0]['label_raw'], dict) else data[0]['label_raw'][:100])\"\n",
+      "duration": 0.5
+    }
+  ]
+}

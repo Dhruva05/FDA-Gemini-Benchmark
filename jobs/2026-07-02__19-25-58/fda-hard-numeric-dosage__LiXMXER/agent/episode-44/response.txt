@@ -1,0 +1,13 @@
+{
+  "analysis": "Wait, look at Chunk 152 (PASSAGE_0152):
+`DRUG: CELECOXIB\nGENERIC: CELECOXIB\nDOSAGE: CAPSULE\nADMINSTRATION: ORAL\nNDC: 70518-2233-0\nNDC: 70518-2233-1\nNDC: 70518-2233-2\nCOLOR: white\nSHAPE: CAPSU`
+Wow! Let's print Chunk 152 in full. Let's see what else is in there.",
+  "plan": "I will write and run a python script to print the full text of Chunk 152 of CELECOXIB.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_celecoxib_152.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'CELECOXIB':\n            print(data['chunks'][152])\n            break\nEOF\npython3 print_celecoxib_152.py\n",
+      "duration": 2.0
+    }
+  ]
+}
+...

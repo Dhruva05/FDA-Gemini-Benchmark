@@ -1,0 +1,64 @@
+DRUG NAME: Guardian Loratadine
+SET ID: af8cdd37-8fd0-4651-ae03-36c7d4863301
+
+=== PASSAGE_0000 ===
+SECTION: USE(S)
+USE(S)
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+
+=== PASSAGE_0001 ===
+SECTION: .
+.
+
+=== PASSAGE_0002 ===
+SECTION: if you have ever had an allergic reaction to this product or any of its ingredients.
+if you have ever had an allergic reaction to this product or any of its ingredients.
+
+=== PASSAGE_0003 ===
+SECTION: liver or kidney disease. Your doctor should determine if you need a different dose.
+liver or kidney disease. Your doctor should determine if you need a different dose.
+
+=== PASSAGE_0004 ===
+SECTION: do not take more than directed. Taking more than directed may cause drowsiness.
+do not take more than directed. Taking more than directed may cause drowsiness.
+
+=== PASSAGE_0005 ===
+SECTION: an allergic reaction to this product occurs. Seek medical help right away.
+an allergic reaction to this product occurs. Seek medical help right away.
+
+=== PASSAGE_0006 ===
+SECTION: ask a health professional before use.
+ask a health professional before use.
+
+=== PASSAGE_0007 ===
+SECTION: In case of overdose, get medical help or contact a Poison Control Center right away.
+In case of overdose, get medical help or contact a Poison Control Center right away.
+
+=== PASSAGE_0008 ===
+SECTION: - Store at 20 to 25 C (68 to 77 F)
+- Store at 20 to 25 C (68 to 77 F)
+- Protect from excessive moisture
+SAFETY SEALED: DO NOT USE IF THE IMPRINTED BOTTLE SEAL WITH "SEALED FOR YOUR PROTECTION" IS OPEN OR TORN
+
+=== PASSAGE_0009 ===
+SECTION: colloidal silicon dioxide, croscarmellose sodium, lactose monohydrate, magnesium stearate
+colloidal silicon dioxide, croscarmellose sodium, lactose monohydrate, magnesium stearate
+
+=== PASSAGE_0010 ===
+SECTION: call 1-609-860-2600 Hours: 8am-4pm, EST.
+call 1-609-860-2600 Hours: 8am-4pm, EST.
+
+=== PASSAGE_0011 ===
+SECTION: Guardian
+Guardian
+NDC 53041-285-21
+Non-Drowsy*
+Original Prescription Strength
+Loratadine Tablets, USP 10 mg
+Antihistamine
+Indoor & Outdoor Allergies
+24 Hour Relief of: Sneezing Runny Nose Itchy, Watery Eyes Itchy Throat Or Nose

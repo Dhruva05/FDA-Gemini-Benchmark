@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 219 (char 220) | Content preview: '{\n  "analysis": "Wait, it didn\'t find any file containing \'answers.json\' except maybe standard syste'...
+
+Please fix these issues and provide a proper JSON response.

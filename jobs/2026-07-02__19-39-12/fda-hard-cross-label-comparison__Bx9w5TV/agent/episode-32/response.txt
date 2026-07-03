@@ -1,0 +1,30 @@
+{
+  "analysis": "This is great. Let's analyze:
+- ACETAMINOPHEN with CODEINE:
+  - Dose/strength: (1 - 2) tablets, or 1 to 2 tablets (PASSAGE_0011)
+  - Route: orally (PASSAGE_0011)
+  - Frequency: every 6-8 hours as needed (PASSAGE_0011)
+  - Population: adult patients / adults (and children can receive codeine phosphate 0.5 mg/kg) (PASSAGE_0011)
+  - Maximum daily dose: 'the prescriber must determine... the maximum number of tablets per 24 hours based upon the above dosage guidance' (PASSAGE_0011)
+  - Citation: PASSAGE_0011
+- AcetaZOLAMIDE:
+  - Dose/strength: varies by indication (e.g., Glaucoma: 250 mg to 1 g; Epilepsy: 375 to 1000 mg daily or 8 to 30 mg/kg; Congestive Heart Failure starting dose: 250 to 375 mg) (PASSAGE_0014, PASSAGE_0015, PASSAGE_0016)
+  - Route: orally / oral (as tablets, and intravenous therapy may be used in acute cases) (PASSAGE_0014)
+  - Frequency: divided doses for Glaucoma/Epilepsy, once daily in the morning for CHF (PASSAGE_0014, PASSAGE_0015, PASSAGE_0016)
+  - Population: adults and children (PASSAGE_0014, PASSAGE_0015, PASSAGE_0016)
+  - Maximum daily dose: 'dosage in excess of 1 g per 24 hours does not produce an increased effect' (PASSAGE_0014) or 'daily doses in excess of 1 g do not produce any better results' (PASSAGE_0015)
+  - Citation: PASSAGE_0014 (or PASSAGE_0015, PASSAGE_0016)
+This comparison has complete information and is answerable! So `status` is `ANSWERED`.
+
+Now let's check the fourth pair (ACETAZOLAMIDE EXTENDED-RELEASE vs Actoplus Met):
+- ACETAZOLAMIDE EXTENDED-RELEASE:
+  - Let's search for dosing instructions in the chunks of ACETAZOLAMIDE EXTENDED-RELEASE (8e396b27-b44a-4aa9-805b-086395444b5f).
+  - Let's print chunks 10 to 19 of ACETAZOLAMIDE EXTENDED-RELEASE.",
+  "plan": "Let's run a python script to inspect chunks 10 to 19 of ACETAZOLAMIDE EXTENDED-RELEASE.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"set_id\"] == \"8e396b27-b44a-4aa9-805b-086395444b5f\":\n            for i, c in enumerate(data[\"chunks\"][10:]):\n                print(f\"PASSAGE_{i+10:04d}: {repr(c)}\")\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

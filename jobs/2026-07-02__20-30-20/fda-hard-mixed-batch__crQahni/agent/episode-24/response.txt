@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's search for passages that have section titles like \"4 CONTRAINDICATIONS\" or \"7 DRUG INTERACTIONS\" in Paxlovid.",
+  "plan": "I will run a python script to find major section titles like \"4 CONTRAINDICATIONS\" or \"7 DRUG INTERACTIONS\" in Paxlovid.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"drug_name\"] == \"Paxlovid\":\n            for i, chunk in enumerate(data[\"chunks\"]):\n                if \"CONTRAINDICATIONS\" in chunk or \"DRUG INTERACTIONS\" in chunk:\n                    lines = chunk.split(\"\\n\")\n                    for l in lines:\n                        if \"CONTRAINDICATIONS\" in l or \"DRUG INTERACTIONS\" in l or \"7 \" in l or \"4 \" in l:\n                            print(f\"PASSAGE_{i:04d}: {l[:100]}\")\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

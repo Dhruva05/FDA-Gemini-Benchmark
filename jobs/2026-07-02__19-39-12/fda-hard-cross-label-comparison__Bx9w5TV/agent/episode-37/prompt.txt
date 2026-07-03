@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 236 (char 237) | Content preview: '{\n  "analysis": "Wait, let\'s look at PASSAGE_0009 of Actoplus Met: \'The maximum recommended dosage o'...
+
+Please fix these issues and provide a proper JSON response.

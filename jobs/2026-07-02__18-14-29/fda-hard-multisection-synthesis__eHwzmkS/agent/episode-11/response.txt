@@ -1,0 +1,10 @@
+{
+  "analysis": "Excellent. 419 parts means 1 empty string + 209 (passage ID, passage text) pairs for Paxlovid (209 passages). 377 parts means 1 empty string + 188 (passage ID, passage text) pairs for Lopinavir-Ritonavir (188 passages). Let's check if the `chunks` list matches these exactly.",
+  "plan": "I will run a python script to check if the `chunks` list matches the parsed passages exactly.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]\nfor label in labels:\n    raw = label['label_raw']\n    parts = re.split(r'\\|\\|(PASSAGE_\\d+)\\|\\|', raw)\n    passages_from_raw = [parts[i].strip() for i in range(2, len(parts), 2)]\n    chunks = [c.strip() for c in label['chunks']]\n    print(label['drug_name'], len(passages_from_raw), len(chunks), passages_from_raw == chunks)\nf.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": "Aha! In `label_raw`, the passage IDs are clearly delimited like `||PASSAGE_0000||`, `||PASSAGE_0001||`, etc., and they map exactly to the index of the chunks in the `chunks` list! For example, chunk 0 corresponds to `PASSAGE_0000`, chunk 1 corresponds to `PASSAGE_0001`, and so on.\nLet's double check this mapping. Let's write a python script to verify that each chunk matches the text in `label_raw` for that passage ID.",
+  "plan": "I will write a python script to verify that chunk index `i` corresponds to `PASSAGE_{i:04d}` in `label_raw`.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > verify_passages.py\nimport json\nimport re\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        label = json.loads(line)\n        drug_name = label['drug_name']\n        chunks = label['chunks']\n        raw = label['label_raw']\n        \n        # Let's split raw by ||PASSAGE_####||\n        parts = re.split(r'\\|\\|PASSAGE_\\d{4}\\|\\|', raw)\n        # The first part might be empty if raw starts with ||PASSAGE_0000||\n        if parts[0] == '':\n            parts = parts[1:]\n        # Strip each part\n        parts = [p.strip() for p in parts]\n        chunks_stripped = [c.strip() for c in chunks]\n        \n        print(f\"{drug_name}: chunks length = {len(chunks)}, parts length = {len(parts)}\")\n        mismatches = 0\n        for i in range(min(len(chunks_stripped), len(parts))):\n            if chunks_stripped[i] != parts[i]:\n                mismatches += 1\n        print(f\"  Mismatches: {mismatches}\")\nEOF\npython3 verify_passages.py\n",
+      "duration": 1.0
+    }
+  ]
+}

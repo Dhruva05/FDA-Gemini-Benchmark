@@ -1,0 +1,36 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0000
+=== PASSAGE_0000 ===
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe,
+ life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug interactions with a strong CYP3A inhibitor like PA
+XLOVID and 2) Determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring
+- Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual p
+atient can be appropriately managed
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0013
+=== PASSAGE_0013 ===
+5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications
+metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A. Medications that induce CYP
+3A may decrease concentrations of PAXLOVID. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Loss of therapeutic effect of PAXLOVID and possible development of viral resistance.
+Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated with PAXLOVID. The most commonly report
+ed concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel bloc
+kers.
+Prior to prescribing PAXLOVID, review all medications taken by the patient to assess potential drug-drug interactions and determine if concomitant medications r
+equire a dose adjustment, interruption, and/or additional monitoring (e.g., calcineurin inhibitors) . See Table 2 for clinically significant drug interactions,
+including contraindicated drugs. Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXLOV
+ID.
+Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual pat
+ient can be appropriately managed .
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0021
+=== PASSAGE_0021 ===
+7.3     Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered
+ a comprehensive list of all possible drugs that may interact with PAXLOVID. The healthcare provider should consult other appropriate resources such as the pres
+cribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor such as rito
+navir.
+root@2635f56baf2a:/workspace#

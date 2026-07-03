@@ -1,0 +1,11 @@
+{
+  "analysis": "Ah! So the recommended dosage for Adults is:\n- Once daily regimen: 800 mg/200 mg (10 mL) once daily (using the 80 mg/20 mg per mL Oral Solution) (PASSAGE_0004)\n- Twice daily regimen: 400 mg/100 mg (5 mL) twice daily (PASSAGE_0005)\n- When administered in combination with efavirenz, nevirapine or nelfinavir, the dose must be increased to 520 mg/130 mg (6.5 mL) twice daily (PASSAGE_0005, PASSAGE_0006).\nWait! Is there a tablet formulation or is this just oral solution? Let's check PASSAGE_0003 and PASSAGE_0004 again, or search for \"tablet\" in Lopinavir-Ritonavir chunks.",
+  "plan": "I will search the Lopinavir-Ritonavir label for the word \"tablet\".",
+  "commands": [
+    {
+      "keystrokes": "python3 search_labels.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 \"tablet\"\n",
+      "duration": 1.0
+    }
+  ],
+  "task_complete": false
+}

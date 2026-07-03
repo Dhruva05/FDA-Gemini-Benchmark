@@ -1,0 +1,12 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if '08c9d3dd' in line
+][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [6, 7]]"
+PASSAGE_0006: 'Pregnancy Category B Reproduction studies have been performed in rats and rabbits at chlorhexidine gluconate doses up to 300 mg/kg/day and 40 mg/
+kg/day, respectively, and have not revealed evidence of harm to the fetus. However, adequate and well-controlled studies in pregnant women have not been done. B
+ecause animal reproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.'
+PASSAGE_0007: "It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when chlo
+rhexidine gluconate oral rinse is administered to nursing women.\nIn parturition and lactation studies with rats, no evidence of impaired parturition or of toxi
+c effects to suckling pups was observed when chlorhexidine gluconate was administered to dams at doses that were over 100 times greater than that which would re
+sult from a person's ingesting 30 ml of chlorhexidine gluconate oral rinse per day."
+root@3646eb22abe5:/workspace#

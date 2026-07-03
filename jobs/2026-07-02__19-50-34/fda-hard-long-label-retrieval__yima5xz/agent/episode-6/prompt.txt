@@ -1,0 +1,26 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > inspect_labels2.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print('keys:', list(data.keys()))
+>         print('chunks length:', len(data['chunks']))
+>         for i in range(min(5, len(data['chunks']))):
+>             print(f"Chunk {i}: {data['chunks'][i][:150]}...")
+> EOF
+root@b161fe3d96d1:/workspace# python3 inspect_labels2.py
+keys: ['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']
+chunks length: 209
+Chunk 0: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of ce...
+Chunk 1: 1 INDICATIONS AND USAGE
+PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high risk...
+Chunk 2: Limitations of Use
+PAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 ....
+Chunk 3: 2.1    Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dos...
+Chunk 4: 2.2    Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) with ...
+root@b161fe3d96d1:/workspace#

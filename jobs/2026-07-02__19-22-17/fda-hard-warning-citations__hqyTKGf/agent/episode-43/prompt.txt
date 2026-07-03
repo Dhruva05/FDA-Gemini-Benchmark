@@ -1,0 +1,181 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# cat << 'EOF' > /workspace/generate_answers.py
+> import json
+",
+         >
+> answers = []
+>
+> # Question 1: What important drug interactions are noted for Paxlovid?
+> # qid: b2531657ba5c7a78, Paxlovid, set_id: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+> answers.append({
+ubes due to poten>     "qid": "b2531657ba5c7a78",
+>     "status": "ANSWERED",
+>     "answer": "Paxlovid is a strong CYP3A inhibitor due to its ritonavir component, which can lead to significantly increased concentrations of concomitant me
+dications metabolized by CYP3A, potentially resulting in severe, life-threatening, or fatal events. Concomitant use with strong CYP3A inducers can also decrease
+ Paxlovid concentrations, potentially leading to loss of virologic response and resistance.",
+mmended once daily dosage regimen is 8>     "citations": [
+>         {
+) using th>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>             "passage_id": "PASSAGE_0000",
+opi>             "section": "BOXED WARNING",
+ion>             "supporting_quote": "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medicatio
+ns, resulting in potentially severe, life-threatening, or fatal events"
+>         },
+>         {
+>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>             "passage_id": "PASSAGE_0013",
+2.3",
+          >             "section": "5.1",
+v>             "supporting_quote": "Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by
+ CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized b
+y CYP3A."
+>         }
+ m>     ],
+>     "structured_fields": {}
+> })
+>
+> # Question 2: Which medications should be avoided with Paxlovid?
+stion 5: What safety > # qid: 6f12607a1ba14dd5, Paxlovid, set_id: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+> answers.append({
+_id: 4>     "qid": "6f12607a1ba14dd5",
+>     "status": "ANSWERED",
+>     "answer": "Paxlovid is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with seriou
+s and/or life-threatening reactions, as well as drugs that are strong CYP3A inducers. Examples of contraindicated medications include alfuzosin, ranolazine, ami
+odarone, dronedarone, flecainide, propafenone, quinidine, colchicine (in renal/hepatic impairment), lurasidone, pimozide, silodosin, eplerenone, ivabradine, dih
+ydroergotamine, ergotamine, methylergonovine, lovastatin, simvastatin, voclosporin, lomitapide, eletriptan, ubrogepant, finerenone, naloxegol, sildenafil (for P
+AH), triazolam, oral midazolam, flibanserin, tolvaptan, apalutamide, enzalutamide, carbamazepine, phenobarbital, primidone, phenytoin, rifampin, rifapentine, lu
+macaftor/ivacaftor, and St. John's Wort.",
+>     "citations": [
+>         {
+>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>             "passage_id": "PASSAGE_0012",
+>             "section": "4",
+>             "supporting_quote": "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are asso
+ciated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers"
+>         }
+>     ],
+>     "structured_fields": {}
+ > })
+>
+> # Question 3: How should Lopinavir-Ritonavir be administered?
+> # qid: daef650b92e56473, Lopinavir-Ritonavir, set_id: 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85
+> answers.append({
+({
+ >     "qid": "daef650b92e56473",
+>     "status": "ANSWERED",
+,
+ >     "answer": "Lopinavir and ritonavir oral solution must be taken with food. When administered by a feeding tube, it is not recommended for use with polyure
+thane feeding tubes due to potential incompatibility with the ethanol and propylene glycol excipients. Silicone or polyvinyl chloride (PVC) feeding tubes should
+ be used instead.",
+>     "citations": [
+sion, a>         {
+);>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+>             "passage_id": "PASSAGE_0001",
+>             "section": "2.1",
+tut>             "supporting_quote": "Lopinavir and ritonavir oral solution must be taken with food."
+>         },
+ci>         {
+>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+>             "passage_id": "PASSAGE_0002",
+>             "section": "2.2",
+ecti>             "supporting_quote": "Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with p
+olyurethane feeding tubes due to potential incompatibility."
+>         }
+a>     ],
+>     "structured_fields": {}
+vir and ritonavi> })
+>
+m> # Question 4: What is the recommended dosage regimen of Lopinavir-Ritonavir?
+P3A."
+     > # qid: a0576a26f2a2eeac, Lopinavir-Ritonavir, set_id: 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85
+> answers.append({
+>     "qid": "a0576a26
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+>     "status": "ANSWERED",
+he>     "answer": "Important warnings and precautions associated with lopinavir and ritonavir include: the risk of serious adverse reactions due to drug interac
+tions (since it is a CYP3A inhibitor); toxicity in preterm neonates due to ethanol and propylene glycol excipients (which can lead to cardiac toxicity, lactic a
+cidosis, renal failure, CNS depression, and death); pancreatitis; hepatotoxicity; QT interval prolongation; PR interval prolongation; diabetes mellitus/hypergly
+cemia; immune reconstitution syndrome; lipid elevations; fat redistribution; and increased bleeding in hemophilia patients.",
+>     "citations": [
+>         {
+>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+>             "passage_id": "PASSAGE_0014",
+>             "section": "5.1",
+>             "supporting_quote": "Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiatio
+n of medications metabolized by CYP3A in patients already receiving lopinavir and ritonavir, may increase plasma concentrations of medications metabolized by CY
+P3A."
+>         },
+>         {
+>             "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+>             "passage_id": "PASSAGE_0015",
+>             "section": "5.2",
+>             "supporting_quote": "Lopinavir and ritonavir oral solution should not be used in preterm neonates in the immediate postnatal period because of pos
+sible toxicities."
+>         }
+>     ],
+>     "structured_fields": {}
+> })
+>
+> # Question 7: What important warnings or precautions are associated with Paxlovid?
+> # qid: fbab4114f66e2dda, Paxlovid, set_id: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+> answers.append({
+>     "qid": "fbab4114f66e2dda",
+>     "status": "ANSWERED",
+>     "answer": "Important warnings and precautions for Paxlovid include: 1) Risk of serious adverse reactions due to drug interactions, as initiation of Paxlov
+id (a strong CYP3A inhibitor) can significantly increase plasma concentrations of CYP3A-metabolized drugs; 2) Hypersensitivity reactions (such as anaphylaxis, t
+oxic epidermal necrolysis, and Stevens-Johnson syndrome); 3) Hepatotoxicity (including transaminase elevations, clinical hepatitis, and jaundice); and 4) Risk o
+f HIV-1 resistance development in patients with uncontrolled or undiagnosed HIV-1 infection.",
+>     "citations": [
+>         {
+>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>             "passage_id": "PASSAGE_0013",
+>             "section": "5.1",
+>             "supporting_quote": "Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by
+CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by
+ CYP3A."
+>         },
+>         {
+>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>             "passage_id": "PASSAGE_0014",
+>             "section": "5.2",
+>             "supporting_quote": "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensi
+tivity reactions have been reported with PAXLOVID ."
+>         }
+>     ],
+>     "structured_fields": {}
+> })
+>
+> # Question 8: What safety risks are listed for Paxlovid?
+> # qid: 2d63e0a82215867f, Paxlovid, set_id: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a
+> answers.append({
+>     "qid": "2d63e0a82215867f",
+>     "status": "ANSWERED",
+>     "answer": "Safety risks listed for Paxlovid include serious adverse reactions due to drug interactions (which can be severe, life-threatening, or fatal),
+hypersensitivity reactions (such as anaphylaxis, Stevens-Johnson syndrome, and toxic epidermal necrolysis), hepatotoxicity (with transaminase elevations, clinic
+al hepatitis, and jaundice), and the risk of HIV-1 resistance development in individuals with uncontrolled or undiagnosed HIV-1 infection.",
+>     "citations": [
+>         {
+>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>             "passage_id": "PASSAGE_0015",
+>             "section": "5.3",
+>             "supporting_quote": "Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir."
+>         },
+>         {
+>             "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>             "passage_id": "PASSAGE_0016",
+>             "section": "5.4",
+>             "supporting_quote": "Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease in
+hibitors in individuals with uncontrolled or undiagnosed HIV-1 infection ."
+>         }
+>     ],
+>     "structured_fields": {}
+> })
+>
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump({"answers": answers}, f, indent=2)
+> print("Done!")
+> EOF
+root@b9fc21343844:/workspace# python3 /workspace/generate_answers.py
+Done!
+root@b9fc21343844:/workspace#

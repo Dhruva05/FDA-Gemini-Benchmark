@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line
+][0]; print(repr(data['chunks'][30]))"
+'8.1 Pregnancy\nTeratogenic effects: Acamprosate calcium has been shown to be teratogenic in rats when given in doses that are approximately equal to the human
+dose (on a mg/m2 basis) and in rabbits when given in doses that are approximately 3 times the human dose (on a mg/m2 basis). Acamprosate calcium produced a dose
+-related increase in the number of fetuses with malformations in rats at oral doses of 300 mg/kg/day or greater (approximately equal to the maximum recommended
+human daily (MRHD) oral dose on a mg/m2 basis). The malformations included hydronephrosis, malformed iris, retinal dysplasia, and retroesophageal subclavian art
+ery. No findings were observed at an oral dose of 50 mg/kg/day (approximately one-fifth the MRHD oral dose on a mg/m2 basis). An increased incidence of hydronep
+hrosis was also noted in Burgundy Tawny rabbits at oral doses of 400 mg/kg/day or greater (approximately 3 times the MRHD oral dose on a mg/m2 basis). No develo
+pmental effects were observed in New Zealand white rabbits at oral doses up to 1000 mg/kg/day (approximately 8 times the MRHD oral dose on a mg/m2 basis). The f
+indings in animals should be considered in relation to known adverse developmental effects of ethyl alcohol, which include the characteristics of fetal alcohol
+syndrome (craniofacial dysmorphism, intrauterine and postnatal growth retardation, retarded psychomotor and intellectual development) and milder forms of neurol
+ogical and behavioral disorders in humans. There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be used during pregna
+ncy only if the potential benefit justifies the potential risk to the fetus.\nNonteratogenic effects: A study conducted in pregnant mice that were administered
+acamprosate calcium by the oral route starting on Day 15 of gestation through the end of lactation on postnatal day 28 demonstrated an increased incidence of st
+ill-born fetuses at doses of 960 mg/kg/day or greater (approximately 2 times the MRHD oral dose on a mg/m2 basis). No effects were observed at a dose of 320 mg/
+kg/day (approximately one-half the MRHD dose on a mg/m2 basis).'
+root@3646eb22abe5:/workspace#

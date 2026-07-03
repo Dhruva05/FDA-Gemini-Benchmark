@@ -1,0 +1,18 @@
+{
+  "analysis": "The previous attempt had an invalid control character. I will make sure the keystrokes are properly escaped and written.",
+  "plan": "I will write `print_label_outline.py` and run it, then look at the first 50 lines.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_label_outline.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        chunks = data.get('chunks', [])\n        for idx, chunk in enumerate(chunks):\n            first_line = chunk.split('\\n')[0].strip() if '\\n' in chunk else chunk.strip()\n            print(f'{idx:03d}: {first_line[:120]}')\nEOF\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 print_label_outline.py > outline.txt\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "head -n 50 outline.txt\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "analysis": "I will escape all newlines and control characters carefully. I want to check PASSAGE_0006 and PASSAGE_0008 to see the full details of Table 1 (dosing for renal impairment).",
+  "plan": "I will print PASSAGE_0006 and PASSAGE_0008 using print_passage.py.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0006\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0008\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# cat << 'EOF' > search_lopinavir.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+>             lop = data
+>             break
+>
+> for idx, chunk in enumerate(lop['chunks']):
+>     if any(h in chunk for h in ['2 DOSAGE AND ADMINISTRATION', '2.1 ', '2.2 ', '2.3 ', '2.4 ', 'administration', 'administer']):
+>         print(f"PASSAGE_{idx:04d} (len={len(chunk)}): {repr(chunk[:150])}")
+> EOF
+root@23e2e6a1b566:/workspace# python3 search_lopinavir.py
+PASSAGE_0001 (len=105): '2.1 General Administration Recommendations\nLopinavir\xa0and ritonavir oral solution must be taken with food.'
+PASSAGE_0002 (len=507): '2.2 Administering Oral Solution by Feeding Tube\nBecause lopinavir and ritonavir oral solution contains ethanol and propylene glycol, i
+t is not recomme'
+PASSAGE_0003 (len=1073): '2.3 Dosage Recommendations in Adults\nLopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages note
+d in Tables 1 and'
+PASSAGE_0005 (len=352): 'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL)\xa0twice daily\nThe dose of lopinavir and ritonavir must be i
+ncreased when admini'
+PASSAGE_0007 (len=893): '2.4 Dosage Recommendations in Pediatric Patients\nLopinavir and ritonavir oral solution is not recommended for once daily dosing in ped
+iatric patients '
+PASSAGE_0008 (len=1535): 'Pediatric Dosage Calculations\nCalculate the appropriate dose of lopinavir\xa0and ritonavir for each individual pediatric patient base
+d on body weight (kg'
+PASSAGE_0013 (len=2001): '4 CONTRAINDICATIONS\n- Lopinavir and ritonavir is contraindicated in patients with previously demonstrated clinically significant hype
+rsensitivity (e.g'
+PASSAGE_0015 (len=1831): '5.2 Toxicity in Preterm Neonates\nLopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and p
+ropylene glycol, '
+PASSAGE_0019 (len=892): '5.6 PR Interval Prolongation\nLopinavir\xa0and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atr
+ioventricular block'
+PASSAGE_0025 (len=318): '5.12 Resistance/Cross-resistance\nBecause the potential for HIV cross-resistance among protease inhibitors has not been fully explored
+in lopinavir\xa0and'
+PASSAGE_0047 (len=1117): '7.1 Potential for Lopinavir and Ritonavir to Affect Other Drugs\nLopinavir\xa0and ritonavir is an inhibitor of CYP3A and may increase
+plasma concentration'
+PASSAGE_0048 (len=448): '7.2 Potential for Other Drugs to Affect Lopinavir\nLopinavir\xa0and ritonavir is a CYP3A substrate; therefore, drugs that induce CYP3A
+may decrease lopina'
+PASSAGE_0052 (len=239): '↓lopinavir\nAn increased rate of adverse reactions has been observed with co-administration of these medications. Appropriate doses of
+the combinations'
+PASSAGE_0053 (len=245): '↑ indinavir\nDecrease indinavir dose to 600 mg twice daily, when co-administered with lopinavir\xa0and ritonavir 400/100 mg twice daily
+. Lopinavir\xa0and rit'
+PASSAGE_0056 (len=244): '↑ saquinavir\nThe saquinavir dose is 1000 mg twice daily, when co-administered with lopinavir\xa0and ritonavir 400/100 mg twice daily.
+Lopinavir\xa0and riton'
+PASSAGE_0057 (len=144): '↓ lopinavir\nCo-administration with tipranavir (500 mg twice daily) and ritonavir (200 mg twice daily) is not recommended.\nHIV CCR5 –
+Antagonist:'
+PASSAGE_0058 (len=211): '↑ maraviroc\nWhen co-administered, patients should receive 150 mg twice daily of maraviroc. For further details see complete prescribin
+g information fo'
+PASSAGE_0059 (len=311): '↓ lopinavir\nIncrease the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administered
+with efavirenz o'
+PASSAGE_0061 (len=298): 'didanosine\nFor lopinavir and ritonavir oral solution, it is recommended that didanosine be administered on an empty stomach; therefore
+, didanosine sho'
+PASSAGE_0066 (len=1508): '↓ lopinavir/ritonavir#\nApalutamide is contraindicated due to potential for loss of virologic response and possible resistance to lopi
+navir and ritonav'
+PASSAGE_0067 (len=358): '↑ rivaroxaban\nConcentrations of warfarin may be affected. Initial frequent monitoring of the INR during lopinavir and ritonavir and wa
+rfarin co-admini'
+PASSAGE_0068 (len=543): '↓ phenytoin\nLopinavir\xa0and ritonavir may be less effective due to decreased lopinavir plasma concentrations in patients taking these
+ agents concomitant'
+PASSAGE_0069 (len=255): '↓ or ↔ valproate\nA dose increase of lamotrigine or valproate may be needed when co-administered with lopinavir and ritonavir and thera
+peutic concentra'
+PASSAGE_0071 (len=214): '↑ trazodone\nAdverse reactions of nausea, dizziness, hypotension and syncope have been observed following co-administration of trazodon
+e and ritonavir.'
+PASSAGE_0073 (len=453): '↑ isavuconazonium\nHigh dose
+[... output limited to 10000 bytes; 69 interior bytes omitted ...]
+9 (len=523): 'quetiapine\nConsider alternative antiretroviral therapy to avoid increases in quetiapine exposures. If coadministration is necessary, r
+educe the quetia'
+PASSAGE_0081 (len=802): '↑ bosentan\nCo-administration of bosentan in patients on lopinavir and ritonavir:\nIn patients who have been receiving lopinavir\xa0and
+ ritonavir for at le'
+PASSAGE_0084 (len=234): '↔\xa0dasabuvir\nIt is not recommended to co-administer lopinavir and ritonavir and boceprevir, glecaprevir/pibrentasvir, simeprevir, so
+fosbuvir/velpatasvi'
+PASSAGE_0089 (len=290): '↑ salmeterol\nConcurrent administration of salmeterol and lopinavir\xa0and ritonavir is not recommended. The combination may result in
+increased risk of c'
+PASSAGE_0090 (len=319): '↑ fentanyl\nDosage of methadone may need to be increased when co-administered with lopinavir\xa0and ritonavir.\nCareful monitoring of t
+herapeutic and adver'
+PASSAGE_0091 (len=1833): '↑ vardenafil\nSildenafil when used for the treatment of pulmonary arterial hypertension (Revatio®) is contraindicated due to the poten
+tial for sildenaf'
+PASSAGE_0093 (len=300): '↓ lopinavir\nCo-administration with corticosteroids whose exposures are significantly increased by strong CYP3A inhibitors can increase
+ the risk for Cu'
+PASSAGE_0096 (len=1049): 'Risk Summary\nAvailable data from the Antiretroviral Pregnancy Registry show no difference in the risk of overall major birth defects
+compared to the b'
+PASSAGE_0099 (len=1129): 'Animal Data\nEmbryonic and fetal developmental toxicities (early resorption, decreased fetal viability, decreased fetal body weight, i
+ncreased incidenc'
+PASSAGE_0102 (len=2671): '8.4 Pediatric Use\nThe safety, efficacy, and pharmacokinetic profiles of lopinavir\xa0and ritonavir in pediatric patients below the ag
+e of 14 days have no'
+PASSAGE_0103 (len=463): '8.5 Geriatric Use\nClinical studies of lopinavir\xa0and ritonavir did not include sufficient numbers of subjects aged 65 and over to de
+termine whether the'
+PASSAGE_0104 (len=244): '8.6 Hepatic Impairment\nLopinavir\xa0and ritonavir is principally metabolized by the liver; therefore, caution should be exercised when
+ administering this'
+PASSAGE_0105 (len=1969): '10 OVERDOSAGE\nOverdoses with lopinavir\xa0and ritonavir oral solution have been reported. One of these reports described fatal cardio
+genic shock in a 2.1'
+PASSAGE_0106 (len=1774): '11 DESCRIPTION\nLopinavir\xa0and Ritonavir Oral Solution USP\xa0is a co-formulation of lopinavir and ritonavir. Lopinavir is an inhibi
+tor of the HIV-1 protea'
+PASSAGE_0107 (len=290): '12.1 Mechanism of Action\nLopinavir and ritonavir is a fixed-dose combination of HIV-1 antiviral drugs lopinavir and ritonavir. As co-f
+ormulated in lop'
+PASSAGE_0108 (len=1007): '12.2 Pharmacodynamics\nCardiac Electrophysiology\nThe effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo an
+d active (moxiflox'
+PASSAGE_0109 (len=514): '12.3 Pharmacokinetics\nThe pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic paramet
+ers of lopinavir'
+PASSAGE_0120 (len=883): 'Drug Interactions\nLopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit
+ CYP2D6, CYP2C9,'
+PASSAGE_0121 (len=123): 'n\nRatio (in combination with Co-administered drug/alone) of Lopinavir Pharmacokinetic Parameters (90% CI); No Effect = 1.00'
+PASSAGE_0124 (len=93): '(0.40, 0.58)\n2 Data extracted from the U.S. prescribing information of co-administered drugs.'
+PASSAGE_0125 (len=262): '3 Parallel group design\n4 Drug levels obtained at 8-16 hours post dose\nN/A = Not available.\nTable\xa017. Drug Interactions: Pharmaco
+kinetic Parameters fo'
+PASSAGE_0126 (len=138): 'n\nRatio (in combination with\nLopinavir and Ritonavir\n/alone) of Co-administered Drug Pharmacokinetic Parameters (90% CI); No Effect
+= 1.00'
+PASSAGE_0133 (len=209): '12.4 Microbiology\nMechanism of Action\nLopinavir, an inhibitor of the HIV-1 protease, prevents cleavage of the viral Gag-Pol polyprote
+in, resulting in '
+PASSAGE_0137 (len=1487): '<4 fold\nIsolates from patients previously treated with two or more protease inhibitors showed greater reductions in susceptibility to
+ lopinavir, as de'
+PASSAGE_0140 (len=1728): '13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\nCarcinogenesis\nLopinavir and ritonavir combination was evaluated for carci
+nogenic potential '
+PASSAGE_0145 (len=1561): '89\n2 Patients achieved HIV-1 RNA < 50 copies/mL at Week 48.\nThrough 48 weeks of therapy, the mean increase from baseline in CD4+ cel
+l count was 207 ce'
+PASSAGE_0150 (len=2043): "13%\n2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.\n3 Includes lost to follow-u
+p, patient's withd"
+PASSAGE_0159 (len=1832): '17 PATIENT COUNSELING INFORMATION\nAdvise the patient to read the FDA-approved patient labeling (Medication Guide)\nGeneral Administra
+tion Information\n:'
+root@23e2e6a1b566:/workspace#

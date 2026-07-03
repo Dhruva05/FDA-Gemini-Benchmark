@@ -1,0 +1,116 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > print_one_by_one.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = {q['qid']: q for q in (json.loads(line) for line in f)}
+>
+> def print_q(qid):
+>     q = questions[qid]
+>     print(f"=== {qid} ===")
+>     print("Question:", q['question'])
+>     label = labels[q['set_id']]
+>
+>     if qid == 'near-miss-04f3afa658fdef':
+>         for i, chunk in enumerate(label['chunks']):
+>             if 'warning' in chunk.lower() or 'kidney' in chunk.lower() or 'allergic' in chunk.lower():
+>                 print(f"  PASSAGE_{i:04d}: {repr(chunk)}")
+>
+>     elif qid == 'near-miss-0c6ec72416151f':
+>         for i, chunk in enumerate(label['chunks']):
+>             if any(w in chunk.lower() for w in ['renal', 'hepatic', 'liver', 'kidney']):
+>                 print(f"  PASSAGE_{i:04d}: {repr(chunk)}")
+>
+>     elif qid == 'near-miss-bd69d0bfb1fc7d':
+>         for i, chunk in enumerate(label['chunks']):
+>             if any(w in chunk.lower() for w in ['pregnancy', 'breast', 'nursing', 'lactat', 'milk']):
+>                 print(f"  PASSAGE_{i:04d}: {repr(chunk)}")
+>
+>     elif qid == 'near-miss-d4ca1884aa8ab4':
+>         for i, chunk in enumerate(label['chunks']):
+>             if '6.1' in chunk or '6.2' in chunk or 'ADVERSE' in chunk or 'adverse' in chunk.lower():
+>                 print(f"  PASSAGE_{i:04d}: {repr(chunk[:300])}...")
+>
+>     elif qid == 'near-miss-52e5f8cac33c50':
+>         for i, chunk in enumerate(label['chunks']):
+>             if '8.4' in chunk or '8.5' in chunk or 'pediatric' in chunk.lower() or 'geriatric' in chunk.lower():
+>                 print(f"  PASSAGE_{i:04d}: {repr(chunk)}")
+>
+>     elif qid == 'near-miss-5b5cb6a5249660':
+>         for i, chunk in enumerate(label['chunks']):
+>             if 'pregnancy' in chunk.lower() or 'nursing' in chunk.lower() or 'breast' in chunk.lower():
+>                 print(f"  PASSAGE_{i:04d}: {repr(chunk)}")
+>
+> for qid in sorted(questions.keys()):
+>     print_q(qid)
+> EOF
+root@0ef79956d710:/workspace# python3 print_one_by_one.py
+=== near-miss-04f3afa658fdef ===
+Question: The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND
+ if the label does not support it, and cite the section you searched.
+  PASSAGE_0001: 'Do not use\xa0if you have ever had an allergic reaction to this product or any of its ingredients.'
+  PASSAGE_0002: 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.'
+  PASSAGE_0004: 'Stop use and ask a doctor if an allergic reaction to this product occurs.\xa0 Seek medical help right away.'
+  PASSAGE_0009: '- store between 20-25°C (68-77°F)\n- protect from excessive moisture\n- retain carton for complete product information and warnings'
+=== near-miss-0c6ec72416151f ===
+Question: The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND i
+f the label does not support it, and cite the section you searched.
+  PASSAGE_0002: '2.1 Dosage in Renal Impairment\nFor patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 3
+33 mg tablet taken three times daily is recommended. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (c
+reatinine clearance of ≤30 mL/min) .'
+  PASSAGE_0005: '4.2 Severe Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/mi
+n) .'
+  PASSAGE_0006: '5.1 Renal Impairment\nTreatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) r
+equires a dose reduction . Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+  PASSAGE_0009: '6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the c
+linical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice
+.\nClinically significant serious adverse reactions associated with acamprosate calcium described elsewhere in labeling include suicidality and depression and a
+cute kidney failure .\nThe adverse event data described below reflect the safety experience in over 7000 patients exposed to acamprosate calcium for up to one y
+ear, including over 2000 acamprosate calcium-exposed patients who participated in placebo-controlled trials.'
+  PASSAGE_0027: 'Concomitant Therapies\nIn clinical trials, the safety profile in subjects treate
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+. There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be us
+ed during pregnancy only if the potential benefit justifies the potential risk to the fetus.\nNonteratogenic effects: A study conducted in pregnant mice that we
+re administered acamprosate calcium by the oral route starting on Day 15 of gestation through the end of lactation on postnatal day 28 demonstrated an increased
+ incidence of still-born fetuses at doses of 960 mg/kg/day or greater (approximately 2 times the MRHD oral dose on a mg/m2 basis). No effects were observed at a
+ dose of 320 mg/kg/day (approximately one-half the MRHD dose on a mg/m2 basis).'
+  PASSAGE_0032: '8.3 Nursing Mothers\nIn animal studies, acamprosate was excreted in the milk of lactating rats dosed orally with acamprosate calcium. The conce
+ntration of acamprosate in milk compared to blood was 1.3:1. It is not known whether acamprosate is excreted in human milk. Because many drugs are excreted in h
+uman milk, caution should be exercised when acamprosate calcium is administered to a nursing woman.'
+  PASSAGE_0046: '13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\nDietary administration of acamprosate calcium for 2 years to Sprague-Dawley rats at
+doses of 25, 100 and 400 mg/kg/day (up to 3 times the maximum recommended human daily (MRHD) oral dose on an AUC basis) and CD-1 mice at doses of 400, 1200 and
+3600 mg/kg/day (up to 25 times the MRHD on an AUC basis) showed no evidence of increased tumor incidence.\nAcamprosate calcium was negative in all genetic toxic
+ology studies conducted. Acamprosate calcium demonstrated no evidence of genotoxicity in an in vitro bacterial reverse point mutation assay (Ames assay) or an i
+n vitro mammalian cell gene mutation test using\nChinese Hamster Lung V79 cells. No clastogenicity was observed in an in vitro chromosomal aberration assay in h
+uman lymphocytes and no chromosomal damage detected in an in vivo mouse micronucleus assay.\nAcamprosate calcium had no effect on fertility after treatment for
+70 days prior to mating in male rats and for 14 days prior to mating, throughout mating, gestation and lactation in female rats at doses up to 1000 mg/kg/day (a
+pproximately 4 times the MRHD oral dose on a mg/m2 basis). In mice, acamprosate calcium administered orally for 60 days prior to mating and throughout gestation
+ in females at doses up to 2400 mg/kg/day (approximately 5 times the MRHD oral dose on a mg/m2 basis) had no effect on fertility.'
+  PASSAGE_0054: 'Pregnancy and Breast Feeding\n- Advise patients to notify their physician if they become pregnant or intend to become pregnant during therapy.\
+n- Advise patients to notify their physician if they are breast-feeding.'
+=== near-miss-d4ca1884aa8ab4 ===
+Question: The Acamprosate Calcium label discusses adverse reactions. Does it provide a supported recommendation for therapeutic drug monitoring target range? An
+swer NOT_FOUND if the label does not support it, and cite the section you searched.
+  PASSAGE_0007: '5.2 Suicidality and Depression\nIn controlled clinical trials of acamprosate calcium, adverse events of a suicidal nature (suicidal ideation, s
+uicide attempts, completed suicides) were infrequent overall, but were more common in acamprosate calcium-treated patients than in patients treated with place'.
+..
+  PASSAGE_0009: '6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the c
+linical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practi'.
+..
+  PASSAGE_0010: 'Adverse Events Leading to Discontinuation\nIn placebo-controlled trials of 6 months or less, 8% of acamprosate calcium-treated patients discont
+inued treatment due to an adverse event, as compared to 6% of patients treated with placebo. In studies longer than 6 months, the discontinuation rate due to '.
+..
+  PASSAGE_0027: 'Concomitant Therapies\nIn clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hypn
+otics and sedatives (including benzodiazepines), or non-opioid analgesics was similar to that of subjects taking placebo with these concomitant medications. P'.
+..
+  PASSAGE_0028: '6.2 Postmarketing Experience\nThe following adverse reactions have been identified during post approval use of acamprosate calcium. Because the
+se reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causa'.
+..
+  PASSAGE_0030: '8.1 Pregnancy\nTeratogenic effects: Acamprosate calcium has been shown to be teratogenic in rats when given in doses that are approximately equ
+al to the human dose (on a mg/m2 basis) and in rabbits when given in doses that are approximately 3 times the human dose (on a mg/m2 basis). Acamprosate calci'.
+..
+root@0ef79956d710:/workspace#

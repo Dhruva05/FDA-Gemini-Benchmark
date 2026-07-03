@@ -1,0 +1,38 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/questions.jsonl") as f:
+>     for line in f:
+>         q = json.loads(line)
+>         print("qid:", q["qid"])
+>         print("required_output_fields:", q.get("required_output_fields"))
+>         print("question:", q["question"])
+>         print("-"*40)
+> '
+qid: cross-0df97f1e2f1e4c
+required_output_fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+question: Compare the dosing instructions for 12HR Allergy Relief and 365 Whole Foods Market Loratadine. For each label, report dose or strength, route, frequen
+cy, population, and maximum daily dose if stated. Cite one passage from each label.
+----------------------------------------
+qid: cross-e9a79ba825959d
+required_output_fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+question: Compare the dosing instructions for Acamprosate Calcium and Acclean Chlorhexidine Gluconate 0.12% Oral Rinse. For each label, report dose or strength,
+ route, frequency, population, and maximum daily dose if stated. Cite one passage from each label.
+----------------------------------------
+qid: cross-7421ed8b98b8f9
+required_output_fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+question: Compare the dosing instructions for ACETAMINOPHEN with CODEINE and AcetaZOLAMIDE. For each label, report dose or strength, route, frequency, populatio
+n, and maximum daily dose if stated. Cite one passage from each label.
+----------------------------------------
+qid: cross-a4153187ea298f
+required_output_fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+question: Compare the dosing instructions for ACETAZOLAMIDE EXTENDED-RELEASE and Actoplus Met. For each label, report dose or strength, route, frequency, popula
+tion, and maximum daily dose if stated. Cite one passage from each label.
+----------------------------------------
+qid: cross-893c71f570b542
+required_output_fields: ['qid', 'status', 'answer', 'citations', 'structured_fields', 'structured_fields.comparison']
+question: Compare the dosing instructions for Acyclovir and Acyclovir suspension. For each label, report dose or strength, route, frequency, population, and max
+imum daily dose if stated. Cite one passage from each label.
+----------------------------------------
+root@2809f9ae2d53:/workspace#

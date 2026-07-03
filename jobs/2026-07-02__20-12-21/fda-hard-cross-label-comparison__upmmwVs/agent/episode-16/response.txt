@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The terminal output is updating but maybe the prompt wasn't shown properly. Let's run a simple python command or see the current directory.",
+  "plan": "I will run `pwd` to verify the shell is working.",
+  "commands": [
+    {
+      "keystrokes": "pwd\n",
+      "duration": 0.5
+    }
+  ]
+}

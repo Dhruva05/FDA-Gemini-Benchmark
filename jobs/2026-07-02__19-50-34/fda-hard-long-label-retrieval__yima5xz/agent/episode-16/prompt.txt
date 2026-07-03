@@ -1,0 +1,47 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# cat << 'EOF' > inspect_label_raw.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         raw = data.get('label_raw', '')
+>         pos = 0
+>         for _ in range(5):
+>             pos = raw.find('PASSAGE_', pos)
+>             if pos == -1:
+>                 break
+>             print(f"Occurrence: {raw[pos-50:pos+150]}")
+>             print('='*40)
+>             pos += 8
+> EOF
+root@b161fe3d96d1:/workspace# python3 inspect_label_raw.py
+Occurrence:
+========================================
+Occurrence: ndividual patient can be appropriately managed
+
+||PASSAGE_0001||
+1 INDICATIONS AND USAGE
+PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who a
+========================================
+Occurrence:  COVID-19, including hospitalization or death.
+
+||PASSAGE_0002||
+Limitations of Use
+PAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for prevention of COVID-19 .
+
+||PASSAG
+========================================
+Occurrence: osure prophylaxis for prevention of COVID-19 .
+
+||PASSAGE_0003||
+2.1     Important Dosage and Administration Information
+PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are thre
+========================================
+Occurrence: owed whole and not chewed, broken, or crushed.
+
+||PASSAGE_0004||
+2.2     Recommended Dosage
+The recommended dosage for PAXLOVID is 300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 m
+========================================
+root@b161fe3d96d1:/workspace#

@@ -1,0 +1,11 @@
+{
+  "analysis": "Wait, no \"DOSAGE FORMS\" in the text? Let's check how many chunks are in Lopinavir-Ritonavir and write a python script to search for \"STRENGTHS\" or \"formulation\" or \"solution\" or \"tablet\" in the first lines of the chunks.",
+  "plan": "I will write a python script to search for the words \"solution\" or \"oral\" in the Lopinavir-Ritonavir label's chunks.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > find_formulations.py\nimport json\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        label = json.loads(line)\n        if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85':\n            for idx, chunk in enumerate(label['chunks']):\n                if 'oral solution' in chunk.lower() and idx < 20:\n                    print(f\"PASSAGE_{idx:04d}: {chunk[:150]}\")\nEOF\npython3 find_formulations.py\n",
+      "duration": 1.0
+    }
+  ],
+  "task_complete": false
+}

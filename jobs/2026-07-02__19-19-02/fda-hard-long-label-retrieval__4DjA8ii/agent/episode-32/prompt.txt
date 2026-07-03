@@ -1,0 +1,42 @@
+New Terminal Output:
+
+>>> print(label_data['chunks'][5])
+2.3 Dosage in Patients with Renal Impairment
+Prescriptions should specify the numeric dose of each active ingredient within PAXLOVID. Providers should counsel patients about renal dosing instructions .
+No dosage adjustment is recommended in patients with mild renal impairment estimated glomerular filtration rate (eGFR) ≥60 to <90 mL/min].
+In patients with moderate renal impairment (eGFR ≥30 to <60 mL/min) or with severe renal impairment (eGFR <30 mL/min) including those requiring hemodialysis, th
+e dosage of PAXLOVID should be reduced as shown in Table 1. PAXLOVID should be administered at approximately the same time each day for 5 days. On days patients
+ with severe renal impairment undergo hemodialysis, the PAXLOVID dose should be administered after hemodialysis .
+Table 1: Recommended Dose and Regimen for Patients with Renal Impairment
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][6])
+Days of Treatment
+Dose and Dose Frequency
+PAXLOVID should be administered at approximately the same time each day for 5 days.
+Moderate renal impairment (eGFR ≥30 to <60 mL/min)
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][7])
+Days 1-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily
+Severe renal impairment (eGFR <30 mL/min) including those requiring hemodialysis
+On days of hemodialysis, the PAXLOVID dose should be administered after hemodialysis.
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][8])
+Day 1
+300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) once
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][9])
+Days 2-5
+150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) once daily
+>>> print('='*40)
+========================================
+>>> print(label_data['chunks'][10])
+2.4     Use in Patients with Hepatic Impairment
+No dosage adjustment is needed in patients with mild (Child-Pugh Class A) or moderate (Child-Pugh Class B) hepatic impairment.
+No pharmacokinetic or safety data are available regarding the use of nirmatrelvir or ritonavir in subjects with severe (Child-Pugh Class C) hepatic impairment;
+therefore, PAXLOVID is not recommended for use in patients with severe hepatic impairment .
+>>>

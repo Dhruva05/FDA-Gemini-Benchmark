@@ -1,0 +1,32 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > print_lenalidomide_dosage.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lenalidomide':
+>             print("=== CHUNK 19 ===")
+>             print(data['chunks'][19])
+>             print("=== CHUNK 22 ===")
+>             print(data['chunks'][22])
+>             break
+> EOF
+root@af996c5fe492:/workspace# python3 print_lenalidomide_dosage.py
+=== CHUNK 19 ===
+2.3 Recommended Dosage for Mantle Cell Lymphoma
+The recommended starting dose of lenalidomide is 25 mg/day orally on Days 1 to 21 of repeated 28-day cycles for relapsed or refractory mantle cell lymphoma.
+Treatment should be continued until disease progression or unacceptable toxicity.
+Treatment is continued, modified or discontinued based upon clinical and laboratory findings.
+Dose Adjustments for Hematologic Toxicities During MCL Treatment
+Dose modification guidelines as summarized below are recommended to manage Grade 3 or 4 neutropenia or thrombocytopenia or other Grade 3 or 4 toxicities conside
+red to be related to lenalidomide.
+=== CHUNK 22 ===
+2.4 Recommended Dosage for Follicular Lymphoma or Marginal Zone Lymphoma
+The recommended starting dose of lenalidomide is 20 mg orally once daily on Days 1 to 21 of repeated 28-day cycles for up to 12 cycles of treatment in combinati
+on with a rituximab-product. Refer to Section 14.4 for specific rituximab dosing from the AUGMENT trial. For dose adjustments due to toxicity with rituximab, re
+fer to the product prescribing information.
+Dose Adjustments for Hematologic Toxicities during FL or MZL Treatment
+Dose modification guidelines, as summarized below, are recommended to manage Grade 3 or 4 neutropenia or thrombocytopenia or other Grade 3 or 4 toxicity judged
+to be related to lenalidomide.
+root@af996c5fe492:/workspace#

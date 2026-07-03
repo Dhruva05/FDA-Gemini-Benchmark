@@ -1,0 +1,149 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > read_clean.py
+> with open('clean_details.txt') as f:
+>     content = f.read()
+>
+> blocks = content.split("=" * 80)
+> for b in blocks:
+>     if not b.strip():
+>         continue
+>     lines = b.strip().split('\n')
+>     qid = [l for l in lines if "QID:" in l][0]
+>     print("=" * 60)
+>     print(qid)
+>     # Let's find specific text or just write custom analysis for each QID
+> EOF
+root@c7da805c5eb1:/workspace# python3 -c "
+> with open('clean_details.txt') as f:
+>     content = f.read()
+> for b in content.split('=' * 80):
+>     if 'QID:' in b:
+>         print('='*40)
+>         print(b[:1200])
+> "
+========================================
+
+QID: near-miss-04f3afa658fdef
+DRUG: 12HR Allergy Relief
+QUESTION: The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND
+ if the label does not support it, and cite the section you searched.
+--------------------------------------------------------------------------------
+[PASSAGE_0000]
+Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+........................................
+[PASSAGE_0001]
+Do not use if you have ever had an allergic reaction to this product or any of its ingredients.
+........................................
+[PASSAGE_0002]
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+........................................
+[PASSAGE_0003]
+- do not take more than directed
+- do not take at the same time as aluminum or magnesium antacids
+- do not take with fruit juices
+........................................
+[PASSAGE_0004]
+Stop use and ask a doctor if an allergic reaction to this product occurs.  Seek me
+========================================
+
+QID: near-miss-0c6ec72416151f
+DRUG: Acamprosate Calcium
+QUESTION: The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND i
+f the label does not support it, and cite the section you searched.
+--------------------------------------------------------------------------------
+[PASSAGE_0002]
+2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommend
+ed. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+........................................
+[PASSAGE_0005]
+4.2 Severe Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+........................................
+[PASSAGE_0006]
+5.1 Renal Impairment
+Treatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose reduction . Acamprosate
+calcium is contraindicated in patients w
+========================================
+
+QID: near-miss-bd69d0bfb1fc7d
+DRUG: Acamprosate Calcium
+QUESTION: The Acamprosate Calcium label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adjustment? Answer NOT_FOUND if t
+he label does not support it, and cite the section you searched.
+--------------------------------------------------------------------------------
+[PASSAGE_0002]
+2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommend
+ed. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+........................................
+[PASSAGE_0005]
+4.2 Severe Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+........................................
+[PASSAGE_0006]
+5.1 Renal Impairment
+Treatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose reduction . Acamprosate
+calcium is contraindicated in patients with
+========================================
+
+QID: near-miss-d4ca1884aa8ab4
+DRUG: Acamprosate Calcium
+QUESTION: The Acamprosate Calcium label discusses adverse reactions. Does it provide a supported recommendation for therapeutic drug monitoring target range? An
+swer NOT_FOUND if the label does not support it, and cite the section you searched.
+--------------------------------------------------------------------------------
+[PASSAGE_0002]
+2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommend
+ed. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+........................................
+[PASSAGE_0005]
+4.2 Severe Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+........................................
+[PASSAGE_0006]
+5.1 Renal Impairment
+Treatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose reduction . Acamprosate
+calcium is contraindicat
+========================================
+
+QID: near-miss-52e5f8cac33c50
+DRUG: Acamprosate Calcium
+QUESTION: The Acamprosate Calcium label discusses pediatric. Does it provide a supported recommendation for geriatric maximum cumulative lifetime dose? Answer N
+OT_FOUND if the label does not support it, and cite the section you searched.
+--------------------------------------------------------------------------------
+[PASSAGE_0002]
+2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommend
+ed. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+........................................
+[PASSAGE_0005]
+4.2 Severe Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+........................................
+[PASSAGE_0006]
+5.1 Renal Impairment
+Treatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose reduction . Acamprosate
+calcium is contraindicated in
+========================================
+
+QID: near-miss-5b5cb6a5249660
+DRUG: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+QUESTION: The Acclean Chlorhexidine Gluconate 0.12% Oral Rinse label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adju
+stment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.
+--------------------------------------------------------------------------------
+[PASSAGE_0000]
+untitled
+ACCLEAN is an oral rinse containing 0.12% chlorhexidine gluconate (1,1’-hexamethylene bis 5-(p-chlorphenyl) biguanide]di-D-gluconate) in a base containing water
+, 11.6% alcohol, glycerin, PEG-40 sorbitan diisostearate, flavor, sodium saccharin and FD&C Blue No. 1. Chlorhexidine gluconate product is a near neutral soluti
+on (pH range 5-7). Chlorhexidine gluconate is a salt of chlorhexidine and gluconic acid. Its chemical structure is:
+........................................
+[PASSAGE_0001]
+ACCLEAN chlorhexidine gluconate oral rinse provides antimicrobial activity during oral rinsing. The clinical significance of chlorhexidine gluconate oral rinse’
+s antimicrobial activities is not clear. Microbiological sampling of plaque has shown a general reducti
+root@c7da805c5eb1:/workspace#

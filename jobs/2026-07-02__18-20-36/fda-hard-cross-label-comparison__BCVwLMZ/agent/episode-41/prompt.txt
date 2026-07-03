@@ -1,0 +1,41 @@
+Current Terminal Screen:
+>         },
+>         {
+>             "set_id": "3efa1e5e-5a14-4724-a2ca-25702f10faed",
+>             "passage_id": "PASSAGE_0033",
+>             "section": "Dosage and Administration",
+>             "supporting_quote": "800\xa0mg\xa0every\xa04\xa0hours\xa0orally,\xa05\xa0times\xa0daily\xa0for\xa07\xa0to\xa010\xa0days."
+>         }
+>     ],
+>     "structured_fields": {
+>         "comparison": {
+>             "dcc29902-1fe6-4713-947e-335503959464": {
+>                 "drug_name": "Acyclovir",
+>                 "dose_or_strength": "200 mg per 5 mL (teaspoonful)",
+>                 "route": "oral",
+>                 "frequency": "varies by indication (e.g., 5 times daily, twice daily, or 4 times daily)",
+>                 "population": "adults and children (chickenpox 2 years and older; safety not established under 2 years)",
+>                 "maximum_daily_dose": "up to 3,200 mg/day (for chickenpox in children) or 4,000 mg/day (800 mg 5 times daily for herpes zoster)"
+>             },
+>             "3efa1e5e-5a14-4724-a2ca-25702f10faed": {
+>                 "drug_name": "Acyclovir suspension",
+>                 "dose_or_strength": "200 mg per 5 mL (teaspoonful)",
+>                 "route": "oral",
+>                 "frequency": "varies by indication (e.g., 5 times daily, twice daily, or 4 times daily)",
+>                 "population": "adults and children (chickenpox 2 years and older; safety not established under 2 years)",
+>                 "maximum_daily_dose": "up to 3,200 mg/day (for chickenpox in children) or 4,000 mg/day (800 mg 5 times daily for herpes zoster)"
+>             }
+>         }
+>     }
+> }
+> answers.append(ans_5)
+>
+> # Final output assembly
+> output = {"answers": answers}
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(output, f, indent=2)
+> print("Done generating answers.json!")
+> EOF
+root@faa94ec9460f:/workspace# python3 generate_answers.py
+Done generating answers.json!
+root@faa94ec9460f:/workspace#

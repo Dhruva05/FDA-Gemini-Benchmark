@@ -1,0 +1,76 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["set_id"] == "dcc29902-1fe6-4713-947e-335503959464":
+>             for i, c in enumerate(data["chunks"]):
+>                 print(f"Acyclovir PASSAGE_{i:04d}: {repr(c)}")
+> '
+Acyclovir PASSAGE_0000: 'DESCRIPTION\nAcyclovir is a synthetic nucleoside analogue active against\nherpesviruses.\nEach teaspoonful (5 mL) of acyclovir oral sus
+pension, USP, for oral\nadministration, contains 200 mg of acyclovir and the inactive ingredients\nartificial banana flavor, carboxymethylcellulose sodium, glyc
+erin, methylparaben\n0.1% (added as a preservative), microcrystalline cellulose, propylparaben 0.02%\n(added as a preservative), purified water, and sorbitol.\n
+Acyclovir is a white, crystalline powder with the molecular formula C8H11N5O3 and a molecular weight of 225. The maximum solubility in\nwater at 37°C is 2.5 mg/
+mL. The pka’s of acyclovir are 2.27 and 9.25.\nThe chemical name of acyclovir is\n2-amino-1,9-dihydro-9-(2-hydroxyethoxy)methyl]- 6H-purin-6-one; it has the\nfo
+llowing structural formula:\nAcyclovir is a synthetic purine nucleoside analogue with in vitro and in vivo inhibitory\nactivity against herpes simplex virus typ
+es 1 (HSV-1), 2 (HSV-2), and\nvaricella-zoster virus (VZV).\nThe inhibitory activity of acyclovir is highly selective due to its affinity\nfor the enzyme thymid
+ine kinase (TK) encoded by HSV and VZV. This viral enzyme\nconverts acyclovir into acyclovir monophosphate, a nucleotide analogue. The\nmonophosphate is further
+ converted into diphosphate by cellular guanylate kinase\nand into triphosphate by a number of cellular enzymes. In\nvitro, acyclovir triphosphate stops replica
+tion of herpes viral DNA. This\nis accomplished in 3 ways: 1) competitive inhibition of viral DNA polymerase, 2)\nincorporation into and termination of the grow
+ing viral DNA chain, and 3)\ninactivation of the viral DNA polymerase. The greater antiviral activity of\nacyclovir against HSV compared with VZV is due to its
+more efficient\nphosphorylation by the viral TK.\nThe quantitative relationship between the in\nvitro susceptibility of herpes viruses to antivirals and the cli
+nical\nresponse to therapy has not been established in humans, and virus sensitivity\ntesting has not been standardized. Sensitivity testing results, expressed
+as the\nconcentration of drug required to inhibit by 50% the growth of virus in cell\nculture (IC50), vary greatly depending upon a number of\nfactors. Using pl
+aque-reduction assays, the IC50 against\nherpes simplex virus isolates ranges from 0.02 to 13.5 mcg/mL for HSV-1 and from\n0.01 to 9.9 mcg/mL for HSV-2. The IC5
+0 for acyclovir\nagainst most laboratory strains and clinical isolates of VZV ranges from 0.12 to\n10.8 mcg/mL. Acyclovir also demonstrates activity against the
+ Oka vaccine strain\nof VZV with a mean IC50 of 1.35 mcg/mL.\nResistance of HSV and VZV to acyclovir can result from\nqualitative and quantitative changes in th
+e viral TK and/or DNA polymerase.\nClinical isolates of HSV and VZV with reduced susceptibility to acyclovir have\nbeen recovered from immunocompromised patient
+s, especially with advanced HIV\ninfection. While most of the acyclovir-resistant mutants isolated thus far from\nimmunocompromised patients have been found to
+be TK-deficient mutants, other\nmutants involving the viral TK gene (TK partial and TK altered) and DNA\npolymerase have been isolated. TK-negative mutants may
+cause severe disease in\ninfants and immunocompromised adults. The possibility of viral resistance to\nacyclovir should be considered in patients who show poor
+clinical response\nduring therapy.'
+Acyclovir PASSAGE_0001: 'The pharmacokinetics of acyclovir after oral administration have\nbeen evaluated in healthy volunteers and in immunocompromised patient
+s with\nherpes simplex or varicella-zoster virus infection. Acyclovir pharmacokinetic\nparameters are summarized in Table 1.\n*Bioavailability decreases with in
+creasing dose.\nIn one multiple-dose, cross-over study in healthy subjects (n = 23), it was\nshown that increases in plasma acyclovir concentrations were less t
+han dose\nproportional with increasing dose, as shown in Table 2. The decrease in\nbioavailability is a function of the dose and not the dosage form.\nThere was
+ no effect of food on the absorption of acyclovir (n=6); therefore,\nacyclovir oral suspension, USP may be administered with or without food.\nThe only known ur
+inary metabolite is 9-(carboxymethoxy)methyl]guanine.\nThe half-life and total body clearance of acyclovir are dependent\non renal function. A dosage adjustment
+ is recommended for patients with reduced\nrenal function .\nAcyclovir plasma concentrations are higher in geriatric patients\ncompared with younger adults, in
+part due to age-related changes in renal\nfunction. Dosage reduction may be
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+ear reported\ndiarrhea (2.7%), nausea (2.4%), and headache (2.2%).\nThe most freq
+uent adverse event reported during 3 clinical trials\nof treatment of herpes zoster (shingles) with 800 mg of oral acyclovir 5 times\ndaily for 7 to 10 days in
+323 patients was malaise (11.5%). The 323 placebo\nrecipients reported malaise (11.1%).\nThe most frequent adverse event reported during 3 clinical trials\nof t
+reatment of chickenpox with oral acyclovir at doses of 10 to 20 mg/kg 4\ntimes daily for 5 to 7 days or 800 mg 4 times daily for 5 days in 495 patients\nwas dia
+rrhea (3.2%). The 498 patients receiving placebo reported diarrhea\n(2.2%).\nIn addition to adverse events reported from clinical trials, the\nfollowing events
+have been identified during post-approval use of acyclovir.\nBecause they are reported voluntarily from a population of unknown size,\nestimates of frequency ca
+nnot be made. These events have been chosen for\ninclusion due to either their seriousness, frequency of reporting, potential\ncausal connection to acyclovir, o
+r a combination of these factors.\nAnaphylaxis, angioedema, fever, headache, pain, peripheral\nedema.\nAggressive behavior, agitation, ataxia, coma, confusion,\
+ndecreased consciousness, delirium, dizziness, dysarthria, encephalopathy,\nhallucinations, paresthesia, psychosis, seizure, somnolence, tremors. These\nsymptom
+s may be marked, particularly in older adults or in patients with renal\nimpairment .\nDiarrhea, gastrointestinal distress, nausea.\nAnemia, leukocytoclastic va
+sculitis, leukopenia, lymphadenopathy,\nthrombocytopenia.\nElevated liver function tests, hepatitis, hyperbilirubinemia,\njaundice.\nMyalgia.\nAlopecia, erythem
+a multiforme, photosensitive rash, pruritus,\nrash, Stevens- Johnson syndrome, toxic epidermal necrolysis, urticaria.\nVisual abnormalities.\nRenal failure, ren
+al pain (may be associated with renal failure),\nelevated blood urea nitrogen, elevated creatinine, hematuria .'
+Acyclovir PASSAGE_0007: 'Overdoses involving ingestion of up to 20 g have been reported. Adverse events\nthat have been reported in association with overdosage
+include agitation, coma,\nseizures, and lethargy. Precipitation of acyclovir in renal tubules may occur\nwhen the solubility (2.5 mg/mL) is exceeded in the intr
+atubular fluid.\nOverdosage has been reported following bolus injections or inappropriately high\ndoses and in patients whose fluid and electrolyte balance were
+ not properly\nmonitored. This has resulted in elevated BUN and serum creatinine and subsequent\nrenal failure. In the event of acute renal failure and anuria,
+the patient may\nbenefit from hemodialysis until renal function is restored .'
+Acyclovir PASSAGE_0008: '800 mg every 4 hours orally, 5 times daily for 7 to 10\ndays.\n200 mg every 4 hours, 5 times daily for 10 days.\n400 mg 2 times daily f
+or up to 12 months, followed by\nre-evaluation. Alternative regimens have included doses ranging from 200 mg 3\ntimes daily to 200 mg 5 times daily.\nThe freque
+ncy and severity of episodes of untreated genital herpes may change\nover time. After 1 year of therapy, the frequency and severity of the patient’s\ngenital he
+rpes infection should be re-evaluated to assess the need for\ncontinuation of therapy with acyclovir oral suspension.\n200 mg every 4 hours, 5 times daily for 5
+ days. Therapy should be\ninitiated at the earliest sign or symptom (prodrome) of recurrence.\n20 mg/kg per dose orally 4 times daily\n(80 mg/kg per day) for 5
+days. Children over 40 kg should receive the adult dose\nfor chickenpox.\n800 mg 4 times daily for 5 days.\nIntravenous acyclovir oral suspension is indicated f
+or the treatment of\nvaricellazoster infections in immunocompromised patients.\nWhen therapy is indicated, it should be initiated at the earliest sign or\nsympt
+om of chickenpox. There is no information about the efficacy of therapy\ninitiated more than 24 hours after onset of signs and symptoms.\nIn patients with renal
+ impairment, the dose of acyclovir oral\nsuspension should be modified as shown in Table 3:'
+Acyclovir PASSAGE_0009: 'every 12 hours\nFor patients who require hemodialysis, the mean plasma half-life\nof acyclovir during hemodialysis is approximately 5 h
+ours. This results in a 60%\ndecrease in plasma concentrations following a 6-hour dialysis period. Therefore,\nthe patient’s dosing schedule should be adjusted
+so that an additional dose is\nadministered after each dialysis.\nNo supplemental dose appears to be necessary after adjustment of\nthe dosing interval.'
+Acyclovir PASSAGE_0010: 'Acyclovir oral suspension, USP (off-white, artificial\nbanana-flavored) containing 200 mg acyclovir in each teaspoonful (5 mL) – Bottle
+\nof 1 pint (473 mL)\nNDC 54868-5687-0.\nStore at 20° - 25°C (68° to 77°F) .\nManufactured by:\nHi-Tech Pharmacal Co., Inc.'
+Acyclovir PASSAGE_0011: 'MG #19296\nRelabeling of "Additional Barcode" by:Physicians Total Care, Inc.Tulsa, OK\xa0\xa0\xa0\xa0 74146'
+root@2809f9ae2d53:/workspace#

@@ -1,0 +1,37 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > print_celecoxib_152.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'CELECOXIB':
+>             print(data['chunks'][152])
+>             break
+> EOF
+root@af996c5fe492:/workspace# python3 print_celecoxib_152.py
+DRUG: CELECOXIB
+GENERIC: CELECOXIB
+DOSAGE: CAPSULE
+ADMINSTRATION: ORAL
+NDC: 70518-2233-0
+NDC: 70518-2233-1
+NDC: 70518-2233-2
+COLOR: white
+SHAPE: CAPSULE
+SCORE: No score
+SIZE: 19 mm
+IMPRINT: Cipla;421;200
+PACKAGING: 30 in 1 BOTTLE PLASTIC
+PACKAGING: 100 in 1 BOX
+PACKAGING: 1 in 1 POUCH
+ACTIVE INGREDIENT(S):
+- CELECOXIB 200mg in 1
+INACTIVE INGREDIENT(S):
+- CROSCARMELLOSE SODIUM
+- LACTOSE MONOHYDRATE
+- MAGNESIUM STEARATE
+- POVIDONE
+- SODIUM LAURYL SULFATE
+- GELATIN
+root@af996c5fe492:/workspace#

@@ -1,0 +1,25 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["set_id"] == "42e49120-6f3f-11db-9fe1-0800200c9a66":
+>             for i, c in enumerate(data["chunks"]):
+>                 if "maximum recommended dosage" in c.lower() or "maximum dosage" in c.lower() or "maximum dose" in c.lower():
+>                     print(f"PASSAGE_{i:04d}: {repr(c)}")
+> '
+PASSAGE_0009: 'The maximum recommended dosage of ACTOPLUS MET is one tablet (15 mg of pioglitazone and 850 mg of metformin HCl) once daily when used in combinat
+ion with gemfibrozil or other strong CYP2C8 inhibitors .'
+PASSAGE_0063: '7.1 Strong CYP2C8 Inhibitors\nAn inhibitor of CYP2C8 (e.g., gemfibrozil) significantly increases the exposure (area under the serum concentration
+-time curve or AUC) and half-life (t½) of pioglitazone. Therefore, the maximum recommended dosage of ACTOPLUS MET is 15 mg of pioglitazone and 850 mg of metform
+in HCl once daily if used in combination with gemfibrozil or other strong CYP2C8 inhibitors .'
+PASSAGE_0097: 'Metformin HCl\nThe absolute bioavailability of a 500 mg metformin tablet given under fasting conditions is approximately 50 to 60%. Studies using
+ single oral doses of metformin tablets of 500 mg to 1500 mg, and 850 mg to 2,550 mg, indicate that there is a lack of dose proportionality with increasing dose
+s, which is due to decreased absorption rather than an alteration in elimination. At usual clinical doses and dosing schedules of metformin, steady-state plasma
+ concentrations of metformin are reached within 24 to 48 hours and are generally <1 mcg/mL. During controlled clinical trials, maximum metformin plasma levels d
+id not exceed 5 mcg/mL, even at maximum doses.\nFood decreases the rate and extent of metformin absorption, as shown by a 40% lower mean Cmax, a 25% lower AUC,
+and a 35 minute prolongation of Tmax following administration of a single 850 mg tablet of metformin with food, compared to the same tablet strength administere
+d fasting. The clinical relevance of these decreases is unknown.'
+root@2809f9ae2d53:/workspace#

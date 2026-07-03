@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah, the python script inside the keystrokes had a newline character which is perfectly fine, but let's make sure the JSON itself is valid. Wait, let's keep the keystrokes clean and escape correctly.",
+  "plan": "I will run a python command to print the Question 2 block from `clean_dosing_structured.txt`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"with open('clean_dosing_structured.txt') as f: text = f.read()\nfor b in text.split('=== QUESTION '):\n    if b.startswith('2:'): print('=== QUESTION ' + b)\"\n",
+      "duration": 1.0
+    }
+  ]
+}

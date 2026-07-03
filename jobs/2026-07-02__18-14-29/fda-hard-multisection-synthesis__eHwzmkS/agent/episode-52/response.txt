@@ -1,0 +1,10 @@
+{
+  "analysis": "Let's print all of `PASSAGE_0018` to find the common adverse reactions for Paxlovid.",
+  "plan": "I will run a python script to print the full text of `PASSAGE_0018`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; print(labels[0]['chunks'][18]); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

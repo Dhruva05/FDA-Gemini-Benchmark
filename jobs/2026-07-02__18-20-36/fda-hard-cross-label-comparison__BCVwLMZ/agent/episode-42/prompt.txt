@@ -1,0 +1,41 @@
+Current Terminal Screen:
+> for i, ans in enumerate(answers):
+>     print(f"Checking answer {i} (qid: {ans.get('qid')}):")
+>     missing = required_keys - set(ans.keys())
+>     if missing:
+>         print(f"  ERROR: Missing keys: {missing}")
+>         exit(1)
+>
+>     if ans['status'] not in {'ANSWERED', 'NOT_FOUND'}:
+>         print(f"  ERROR: Invalid status {ans['status']}")
+>         exit(1)
+>
+>     if not isinstance(ans['citations'], list):
+>         print("  ERROR: citations must be a list!")
+>         exit(1)
+>
+>     for cit in ans['citations']:
+>         cit_keys = {'set_id', 'passage_id', 'section', 'supporting_quote'}
+>         missing_cit = cit_keys - set(cit.keys())
+>         if missing_cit:
+>             print(f"  ERROR: Missing citation keys: {missing_cit}")
+>             exit(1)
+>
+>     if not isinstance(ans['structured_fields'], dict):
+>         print("  ERROR: structured_fields must be a dict!")
+>         exit(1)
+>
+>     if 'comparison' not in ans['structured_fields']:
+>         print("  ERROR: 'comparison' key missing from structured_fields!")
+>         exit(1)
+>
+> print("SUCCESS: answers.json is valid and conforms to the schema!")
+> EOF
+root@faa94ec9460f:/workspace# python3 validate_answers.py
+Checking answer 0 (qid: cross-0df97f1e2f1e4c):
+Checking answer 1 (qid: cross-e9a79ba825959d):
+Checking answer 2 (qid: cross-7421ed8b98b8f9):
+Checking answer 3 (qid: cross-a4153187ea298f):
+Checking answer 4 (qid: cross-893c71f570b542):
+SUCCESS: answers.json is valid and conforms to the schema!
+root@faa94ec9460f:/workspace#

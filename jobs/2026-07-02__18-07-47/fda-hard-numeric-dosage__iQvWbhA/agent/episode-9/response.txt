@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The passage IDs must be formatted as `PASSAGE_####` where `####` is the 4-digit zero-padded index of the chunk in the list of chunks (e.g., `PASSAGE_0000`, `PASSAGE_0001`, `PASSAGE_0002`, etc.)? Or let's verify if there is any mention of `PASSAGE_` in the label data or if there is another way. Let's write a python snippet to search the entire `labels.jsonl` file for any occurrence of the string `PASSAGE_`.",
+  "plan": "Search for the string 'PASSAGE_' in the entire labels.jsonl file.",
+  "commands": [
+    {
+      "keystrokes": "grep -o \"PASSAGE_[0-9]*\" /workspace/data/public/labels.jsonl | head -n 10 || echo \"Not found\"\n",
+      "duration": 0.5
+    }
+  ]
+}

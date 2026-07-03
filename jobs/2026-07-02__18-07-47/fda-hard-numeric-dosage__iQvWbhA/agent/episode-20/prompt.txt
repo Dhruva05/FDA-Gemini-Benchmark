@@ -1,0 +1,102 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > print_emtricitabine_passages.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+> l = [label for label in labels if label['set_id'] == 'd9a4185e-43fa-4aeb-9b0f-8db01b166038'][0]
+> for i, chunk in enumerate(l['chunks']):
+>     if any(kw in chunk for kw in ['2 DOSAGE AND ADMINISTRATION', '2.1', '2.2', '2.3', '2.4']):
+>         print(f"PASSAGE_{i:04d}:")
+>         print(chunk)
+>         print("-"*50)
+> EOF
+root@371ed25b9fd3:/workspace# python3 print_emtricitabine_passages.py
+PASSAGE_0002:
+2.1 Testing Prior to Initiation and During Treatment with Emtricitabine, Rilpivirine and Tenofovir Disoproxil Fumarate Tablets
+Prior to or when initiating emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, test patients for hepatitis B virus infection .
+Prior to initiation of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, and during treatment with emtricitabine, rilpivirine and tenofovir
+disoproxil fumarate tablets, on a clinically appropriate schedule, assess serum creatinine, estimated creatinine clearance, urine glucose and urine protein in a
+ll patients. In patients with chronic kidney disease, also assess serum phosphorus .
+--------------------------------------------------
+PASSAGE_0003:
+2.2 Recommended Dosage
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are a three-drug fixed dose combination product containing 200 mg of emtricitabine (FTC), 2
+5 mg of rilpivirine (RPV), and 300 mg of tenofovir disoproxil fumarate (TDF). The recommended dosage of emtricitabine, rilpivirine and tenofovir disoproxil fuma
+rate tablets in adult and pediatric patients weighing at least 35 kg is one tablet taken orally once daily with food .
+--------------------------------------------------
+PASSAGE_0004:
+2.3 Recommended Dosage During Pregnancy
+For pregnant patients who are already on emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets prior to pregnancy and are virologically suppresse
+d (HIV-1 RNA less than 50 copies per mL), one tablet of emtricitabine, rilpivirine and tenofovir disoproxil fumarate taken once daily may be continued. Lower ex
+posures of rilpivirine, a component of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets, were observed during pregnancy, therefore viral loa
+d should be monitored closely .
+--------------------------------------------------
+PASSAGE_0005:
+2.4 Not Recommended in Patients with Moderate or Severe Renal Impairment
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are not recommended in patients with moderate or severe renal impairment (estimated creatin
+ine clearance below 50 mL per minute) .
+--------------------------------------------------
+PASSAGE_0021:
+Studies C209 and C215
+The safety assessment of RPV, used in combination with other antiretroviral drugs, is based on the Week 96 pooled data from 1368 subjects in the Phase 3 trials
+TMC278-C209 (ECHO) and TMC278-C215 (THRIVE) in antiretroviral treatment-naïve HIV-1-infected adult subjects. A total of 686 subjects received RPV in combination
+ with other antiretroviral drugs as background regimen; most (N=550) received FTC/TDF as background regimen. The number of subjects randomized to the control ar
+m EFV was 682, of which 546 received FTC/TDF as background regimen . The median duration of exposure for subjects in either treatment arm was 104 weeks.
+Adverse reactions observed at Week 96 in subjects who received RPV or EFV + FTC/TDF as background regimen are shown in Table 1. No new types of adverse reaction
+s were identified between Week 48 and Week 96. The adverse reactions observed in this subset of subjects were generally consistent with those seen for the overa
+ll patient population participating in these studies (refer to the prescribing information for Edurant).
+The proportion of subjects who discontinued treatment with RPV or EFV + FTC/TDF due to adverse reactions, regardless of severity, was 2% and 5%, respectively. T
+he most common adverse reactions leading to discontinuation were psychiatric disorders: 9 (1.6%) subjects in the RPV + FTC/TDF arm and 12 (2.2%) subjects in the
+ EFV + FTC/TDF arm. Rash led to discontinuation in 1 (0.2%) subject in the RPV + FTC/TDF arm and 10 (1.8%) subjects in the EFV + FTC/TDF arm.
+Common Adverse Reactions: Clinical adverse reactions to RPV or EFV of at least moderate intensity (≥ Grade 2) reported in at least 2% of adult subjects are show
+n in Table 1.
+--------------------------------------------------
+PASSAGE_0058:
+Prospective reports from the APR of overall major birth defects in pregnancies exposed to drug components of emtricitabine, rilpivirine and tenofovir disoproxil
+ fumarate tablets are compared with a U.S. background major birth defect rate. Methodological limitations of the APR include the use of MACDP as the external co
+mparator group. Limitation
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+tricitabine, rilpivirine and tenofovir disoproxil fumarate tablets
+ to EMTRIVA capsules (200 mg) plus Edurant tablets (25 mg) plus VIREAD tablets (300 mg) following single-dose administration to healthy subjects (N=34).
+Single-dose administration of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets to healthy subjects under fasted conditions provided approxim
+ately 25% higher exposure of RPV compared to administration of EMTRIVA capsules (200 mg) plus Edurant tablets (25 mg) plus VIREAD tablets (300 mg), while exposu
+res of FTC and tenofovir were comparable (N=15).
+--------------------------------------------------
+PASSAGE_0115:
+12.4 Microbiology
+Mechanism of Action
+Emtricitabine: FTC, a synthetic nucleoside analog of cytidine, is phosphorylated by cellular enzymes to form emtricitabine 5′-triphosphate. Emtricitabine 5′-tri
+phosphate inhibits the activity of the HIV-1 RT by competing with the natural substrate deoxycytidine 5′-triphosphate and by being incorporated into nascent vir
+al DNA, which results in chain termination. Emtricitabine 5′-triphosphate is a weak inhibitor of mammalian DNA polymerase α, β, ε, and mitochondrial DNA polymer
+ase γ.
+Rilpivirine: RPV is a diarylpyrimidine non-nucleoside reverse transcriptase inhibitor of HIV-1 and inhibits HIV-1 replication by non-competitive inhibition of H
+IV-1 RT. RPV does not inhibit the human cellular DNA polymerases α, β, and mitochondrial DNA polymerase γ.
+Tenofovir DF: TDF is an acyclic nucleoside phosphonate diester analog of adenosine monophosphate. TDF requires initial diester hydrolysis for conversion to teno
+fovir and subsequent phosphorylations by cellular enzymes to form tenofovir diphosphate. Tenofovir diphosphate inhibits the activity of HIV-1 RT by competing wi
+th the natural substrate deoxyadenosine 5′-triphosphate and, after incorporation into DNA, by DNA chain termination. Tenofovir diphosphate is a weak inhibitor o
+f mammalian DNA polymerases α, β, and mitochondrial DNA polymerase γ.
+--------------------------------------------------
+PASSAGE_0116:
+Antiviral Activity
+Emtricitabine, Rilpivirine, and TDF: The triple combination of FTC, RPV, and TDF was not antagonistic in cell culture.
+Emtricitabine: The antiviral activity of FTC against laboratory and clinical isolates of HIV-1 was assessed in lymphoblastoid cell lines, the MAGI-CCR5 cell lin
+e, and peripheral blood mononuclear cells. The 50% effective concentration (EC50) values for FTC were in the range of 0.0013–0.64 μM. FTC displayed antiviral ac
+tivity in cell culture against HIV-1 clades A, B, C, D, E, F, and G (EC50 values ranged from 0.007–0.075 μM) and showed strain specific activity against HIV-2 (
+EC50 values ranged from 0.007–1.5 μM). In drug combination studies of FTC with nucleoside reverse transcriptase inhibitors (abacavir, lamivudine, stavudine, ten
+ofovir, zidovudine), non-nucleoside reverse transcriptase inhibitors (delavirdine, EFV, nevirapine, and RPV), and protease inhibitors (amprenavir, nelfinavir, r
+itonavir, saquinavir), no antagonistic effects were observed.
+Rilpivirine: RPV exhibited activity against laboratory strains of wild-type HIV-1 in an acutely infected T-cell line with a median EC50 value for HIV-1IIIB of 0
+.73 nM. RPV demonstrated limited activity in cell culture against HIV-2 with a median EC50 value of 5220 nM (range 2510–10,830 nM). RPV demonstrated antiviral a
+ctivity against a broad panel of HIV-1 group M (subtype A, B, C, D, F, G, H) primary isolates with EC50 values ranging from 0.07–1.01 nM and was less active aga
+inst group O primary isolates with EC50 values ranging from 2.88–8.45 nM. The antiviral activity of RPV was not antagonistic when combined with the NNRTIs EFV,
+etravirine, or nevirapine; the N(t)RTIs abacavir, didanosine, FTC, lamivudine, stavudine, tenofovir, or zidovudine; the PIs amprenavir, atazanavir, darunavir, i
+ndinavir, lopinavir, nelfinavir, ritonavir, saquinavir, or tipranavir; the gp41 fusion inhibitor enfuvirtide; the CCR5 co-receptor antagonist maraviroc; or the
+integrase strand transfer inhibitor raltegravir.
+Tenofovir DF: The antiviral activity of tenofovir against laboratory and clinical isolates of HIV-1 was assessed in lymphoblastoid cell lines, primary monocyte/
+macrophage cells, and peripheral blood lymphocytes. The EC50 values for tenofovir were in the range of 0.04–8.5 μM. Tenofovir displayed antiviral activity in ce
+ll culture against HIV-1 clades A, B, C, D, E, F, G, and O (EC50 values ranged from 0.5–2.2 μM) and showed strain specific activity against HIV-2 (EC50 values r
+anged from 1.6 μM–5.5 μM). In drug combination studies of tenofovir with NRTIs (abacavir, didanosine, FTC, lamivudine, stavudine, and zidovudine), NNRTIs (delav
+irdine, EFV, nevirapine, and RPV), and PIs (amprenavir, indinavir, nelfinavir, ritonavir, saquinavir), no antagonistic effects were observed.
+--------------------------------------------------
+root@371ed25b9fd3:/workspace#

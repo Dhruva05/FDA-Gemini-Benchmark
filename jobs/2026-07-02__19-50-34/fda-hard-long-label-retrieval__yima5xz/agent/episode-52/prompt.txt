@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 56 (char 57) | Content preview: '{\n  "analysis": "Ah! In `fbab4114f66e2dda`, the quote is:\n`Initiation of PAXLOVID, which contains ri'...
+
+Please fix these issues and provide a proper JSON response.

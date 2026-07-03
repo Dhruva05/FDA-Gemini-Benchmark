@@ -1,0 +1,14 @@
+{
+  "analysis": "Ah! Table 2 is represented by passages starting at `PASSAGE_0022` with each passage covering a specific drug or drug class (e.g. `↑ alfuzosin`, `↑ tamsulosin`, `↑ ranolazine`, etc.).
+Let's see: what about the contraindications section of Paxlovid?
+Usually, drugs to avoid or contraindicated drugs are in Section 4 (CONTRAINDICATIONS).
+Let's see what is in Section 4 (CONTRAINDICATIONS) of Paxlovid.
+Let's search for passages in Paxlovid that are under section 4.",
+  "plan": "I will run a python script to search for Section 4 in the Paxlovid label and print the first few lines of those passages.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]\nfor i, c in enumerate(l['chunks']):\n    if re.search(r'^(4\\s+CONTRAINDICATIONS|CONTRAINDICATIONS)', c.strip(), re.IGNORECASE) or (i >= 12 and i <= 15):\n        print(f'PASSAGE_{i:04d}:', c.strip().split('\\n')[0][:80])\nf.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

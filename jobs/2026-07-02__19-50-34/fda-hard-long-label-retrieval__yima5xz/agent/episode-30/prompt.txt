@@ -1,0 +1,114 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# sed -n '100,209p' outline.txt
+099: ↑ tolvaptan
+100: 8.1 Pregnancy
+101: Disease-associated Maternal and/or Embryo-fetal Risk
+102: Ritonavir
+103: Nirmatrelvir
+104: Ritonavir
+105: 8.2 Lactation
+106: Data
+107: 8.3 Females and Males of Reproductive Potential
+108: 8.4 Pediatric Use
+109: 8.5 Geriatric Use
+110: 8.6 Renal Impairment
+111: 8.7 Hepatic Impairment
+112: 10 OVERDOSAGE
+113: 11 DESCRIPTION
+114: Nirmatrelvir
+115: Ritonavir
+116: 12.1 Mechanism of Action
+117: 12.2 Pharmacodynamics
+118: 12.3 Pharmacokinetics
+119: Tmax (hr), median
+120: Food effect
+121: 0.60
+122: Vz/F (L), mean
+123: Metabolic pathways
+124: % drug-related material in feces
+125: 11.3%
+126: 3.5%
+127: 3.29 (1.93, 5.40)
+128: Effect of Food
+129: There were no clinically significant differences in the pharmacokinetics of nirmatrelvir based on age (18 to 86 years),
+130: Pediatric Patients
+131: Patients with Renal Impairment
+132: Patients with Hepatic Impairment
+133: Clinical Drug Interaction Studies
+134: 138.82(129.25, 149.11)
+135: In Vitro Studies
+136: 12.4 Microbiology
+137: Cell Culture Antiviral Activity
+138: Clinical Antiviral Activity
+139: In Cell Culture and Biochemical Assays
+140: Single Substitutions
+141: ≥2 Substitutions
+142: Single Substitutions
+143: ≥2 Substitutions
+144: In Clinical Trials
+145: Viral RNA Rebound and Treatment-Emergent Substitutions
+146: Cross-Resistance
+147: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+148: Ritonavir
+149: 14.1       Efficacy in Subjects at High Risk of Progression to Severe COVID-19 (EPIC-HR)
+150: 64 (6.5%)
+151: -5.6 (-7.3, -4.0)
+152: 63 (6.4%)
+153: 12 (1.2%)
+154: 14.2       Trial in Unvaccinated Subjects Without a Risk Factor for Progression to Severe COVID-19 or Subjects Fully Vaccinate
+155: 14.3       Post-Exposure Prophylaxis Trial
+156: 16 HOW SUPPLIED/STORAGE AND HANDLING
+157: 300 mg nirmatrelvir; 100 mg ritonavir
+158: 0069-5045-30
+159: 0069-5321-30
+160: 0069-5045-06
+161: 0069-5321-03
+162: 150 mg nirmatrelvir; 100 mg ritonavir
+163: 0069-5317-20
+164: 0069-5434-20
+165: 0069-5317-02
+166: 0069-5434-02
+167: 0069-0521-11
+168: 0069-5450-11
+169: 0069-0521-11
+170: 0069-5450-11
+171: Storage and Handling
+172: 17 PATIENT COUNSELING INFORMATION
+173: Drug Interactions
+174: Hypersensitivity Reactions
+175: Moderate Renal Impairment
+176: Administration Instructions
+177: This product’s labeling may have been updated. For the most recent prescribing information, please visit www.pfizer.com.
+178: PATIENT INFORMATION
+179: How should I take PAXLOVID?
+180: Figure A
+181: Figure B
+182: Figure C
+183: 1 white ritonavir tablet together
+184: How should I store PAXLOVID?
+185: NDC 0069-5045-06
+186: Rx only
+187: PfizerNDC 0069-5045-30
+188: 300 mg; 100 mg Dose Pack
+189: NDC 0069-5321-03
+190: Rx only
+191: PfizerNDC 0069-5321-30
+192: 300 mg; 100 mg Dose Pack
+193: Take these 2 tabletstogether
+194: ritonavirtablet(100 mg)
+195: PfizerNDC 0069-5317-20
+196: 150 mg; 100 mg Dose Pack
+197: Day 1 (300 mg; 100 mg)Your first day’s dose. Take these 3 tablets together
+198: nirmatrelvirtablet(150 mg)nirmatrelvirtablet(150 mg)ritonavirtablet(100 mg)
+199: PAA228321
+200: PfizerNDC 0069-0521-11
+201: Take these 2 tabletstogether
+202: ritonavirtablet(100 mg)
+203: PfizerNDC 0069-5434-20
+204: 150 mg; 100 mg Dose Pack
+205: Day 1 (300 mg; 100 mg)Your first day’s dose. Take these 3 tablets together
+206: nirmatrelvirtablet(150 mg)nirmatrelvirtablet(150 mg)ritonavirtablet(100 mg)
+207: PAA228417
+208: PfizerNDC 0069-5450-11
+root@b161fe3d96d1:/workspace#

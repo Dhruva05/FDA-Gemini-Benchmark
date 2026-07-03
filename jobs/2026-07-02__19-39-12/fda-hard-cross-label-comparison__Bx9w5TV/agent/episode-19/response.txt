@@ -1,0 +1,14 @@
+{
+  "analysis": "Wait, for 365 Whole Foods Market Loratadine, where are the directions?
+Wait, did we miss some chunks, or is that all of them?
+Ah! There are 15 chunks (0 to 14). Let's look at the chunks printed.
+None of chunks 0 to 14 contain direct instructions like 'adults and children 6 years of age and over take 1 tablet daily...'
+Wait, is there any other passage in the label? Let's check `label_raw` for `bba4e7c8-db8e-4522-915c-48ee809e3bce`.",
+  "plan": "Let's print the entire `label_raw` for `bba4e7c8-db8e-4522-915c-48ee809e3bce`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"set_id\"] == \"bba4e7c8-db8e-4522-915c-48ee809e3bce\":\n            print(data[\"label_raw\"])\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

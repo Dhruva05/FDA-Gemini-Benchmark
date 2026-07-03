@@ -1,0 +1,11 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line
+][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [33, 34]]"
+PASSAGE_0033: '8.4 Pediatric Use\nThe safety and efficacy of acamprosate calcium have not been established in the pediatric population.'
+PASSAGE_0034: '8.5 Geriatric Use\nForty-one of the 4234 patients in double-blind, placebo-controlled, clinical trials of acamprosate calcium were 65 years of ag
+e or older, while none were 75 years of age or over. There were too few patients in the ≥65 age group to evaluate any differences in safety or effectiveness for
+ geriatric patients compared to younger patients.\nThis drug is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug m
+ay be greater in patients with impaired renal function. Because elderly patients are more likely to have decreased renal function, care should be taken in dose
+selection, and it may be useful to monitor renal function .'
+root@3646eb22abe5:/workspace#

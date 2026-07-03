@@ -1,0 +1,86 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > parse_celecoxib.py
+> with open('CELECOXIB_chunks.txt') as f:
+>     text = f.read()
+>     print(text[:4000])
+> EOF
+root@af996c5fe492:/workspace# python3 parse_celecoxib.py
+=== CHUNK 0 (PASSAGE_0000) ===
+WARNING: RISK OF SERIOUS CARDIOVASCULAR AND GASTROINTESTINAL EVENTS
+Cardiovascular Thrombotic Events
+- Nonsteroidal anti-inflammatory drugs (NSAIDs) cause an increased risk of serious cardiovascular thrombotic events, including myocardial infarction, and stroke
+, which can be fatal. This risk may ccur early in the treatment and may increase with duration of use see
+- Celecoxib is contraindicated in the setting of coronary artery bypass graft (CABG) surgery
+
+=== CHUNK 1 (PASSAGE_0001) ===
+Gastrointestinal Bleeding, Ulceration, and Perforation
+- NSAIDs cause an increased risk of serious gastrointestinal (GI) adverse events including bleeding, ulceration, and perforation of the stomach or intestines, w
+hich can be fatal. These events can occur at any time during use and without warning symptoms. Elderly patients and patients with a prior history of peptic ulce
+r disease and/or GI bleeding are at greater risk for serious GI events
+
+=== CHUNK 2 (PASSAGE_0002) ===
+1.1 Osteoarthritis (OA)
+For the management of the signs and symptoms of OA .
+
+=== CHUNK 3 (PASSAGE_0003) ===
+1.2 Rheumatoid Arthritis (RA)
+For the management of the signs and symptoms of RA .
+
+=== CHUNK 4 (PASSAGE_0004) ===
+1.3 Juvenile Rheumatoid Arthritis (JRA)
+For the management of the signs and symptoms of JRA in patients 2 years and older .
+
+=== CHUNK 5 (PASSAGE_0005) ===
+1.4 Ankylosing Spondylitis (AS)
+For the management of the signs and symptoms of AS .
+
+=== CHUNK 6 (PASSAGE_0006) ===
+1.5 Acute Pain
+For the management of acute pain in adults .
+
+=== CHUNK 7 (PASSAGE_0007) ===
+1.6 Primary Dysmenorrhea
+For the management of primary dysmenorrhea
+.
+
+=== CHUNK 8 (PASSAGE_0008) ===
+2.1 General Dosing Instructions
+Carefully consider the potential benefits and risks of celecoxib capsules and other treatment options before deciding to use celecoxib capsules. Use the lowest
+effective dosage for the shortest duration consistent with individual patient treatment goals .
+These doses can be given without regard to timing of meals.
+
+=== CHUNK 9 (PASSAGE_0009) ===
+2.2 Osteoarthritis
+For OA, the dosage is 200 mg per day administered as a single dose or as 100 mg twice daily.
+
+=== CHUNK 10 (PASSAGE_0010) ===
+2.3 Rheumatoid Arthritis
+For RA, the dosage is 100 mg to 200 mg twice daily.
+
+=== CHUNK 11 (PASSAGE_0011) ===
+2.4 Juvenile Rheumatoid Arthritis
+For JRA, the dosage for pediatric patients (age 2 years and older) is based on weight. For patients ≥10 kg to 25 kg the recommended dose is 50 mg twice daily.
+For patients >25 kg the recommended dose is 100 mg twice daily.
+For patients who have difficulty swallowing capsules, the contents of a celecoxib capsule can be added to applesauce. The entire capsule contents are carefully
+emptied onto a level teaspoon of cool or room temperature applesauce and ingested immediately with water. The sprinkled capsule contents on applesauce are stabl
+e for up to 6 hours under refrigerated conditions (2°C to 8°C/35°F to 45°F).
+
+=== CHUNK 12 (PASSAGE_0012) ===
+2.5 Ankylosing Spondylitis
+For AS, the dosage of celecoxib capsules is 200 mg daily in single (once per day) or divided (twice per day) doses. If no effect is observed after 6 weeks, a tr
+ial of 400 mg daily may be worthwhile. If no effect is observed after 6 weeks on 400 mg daily, a response is not likely and consideration should be given to alt
+ernate treatment options.
+
+=== CHUNK 13 (PASSAGE_0013) ===
+2.6 Management of Acute Pain and Treatment of Primary Dysmenorrhea
+For management of Acute Pain and Treatment of Primary Dysmenorrhea, the dosage is 400 mg initially, followed by an additional 200 mg dose if needed on the first
+ day. On subsequent days, the recommended dose is 200 mg twice daily as needed.
+
+=== CHUNK 14 (PASSAGE_0014) ===
+2.7 Special Populations
+Hepatic
+                           Impairment
+In patients with moderate hepatic impairment (Child-Pugh Class B), reduce the dose by 50%. The use of celecoxib capsules in patients with severe hepatic impairm
+ent is no
+root@af996c5fe492:/workspace#

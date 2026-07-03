@@ -1,0 +1,10 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# rm -f verify_quotes.py verify_quotes_2.py print_failed.py search.py search_all.py validate_answers.py generate_answers.py
+root@a1980178bfd8:/workspace# ls -la /workspace
+total 28
+drwxr-xr-x 1 root root  4096 Jul  2 22:20 .
+drwxr-xr-x 1 root root  4096 Jul  2 22:14 ..
+-rw-r--r-- 1 root root 16026 Jul  2 22:20 answers.json
+drwxr-xr-x 3 root root  4096 Jul  2 20:40 data
+root@a1980178bfd8:/workspace#

@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# python3 -c "import json; f=open('/workspace/data/public/questions.jsonl'); keys=set(); [keys.update(json.loads(line).keys()) for l
+ine in f]; print(keys)"
+{'set_id', 'qid', 'question', 'required_output_fields', 'drug_name', 'task_type'}
+root@1ce871952c8c:/workspace#

@@ -1,0 +1,10 @@
+{
+  "analysis": "Let's print more of `acyclovir_all.txt` to make sure we see everything.",
+  "plan": "I will print lines 50 to 150 of `acyclovir_all.txt`.",
+  "commands": [
+    {
+      "keystrokes": "sed -n '50,150p' acyclovir_all.txt\n",
+      "duration": 1.0
+    }
+  ]
+}

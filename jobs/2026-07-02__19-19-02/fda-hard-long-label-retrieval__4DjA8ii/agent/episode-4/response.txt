@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, each chunk is a string. But the citation requires a `passage_id` starting with `PASSAGE_####`! Let's see how passages are identified. Are they embedded in the string, or is there another way? Let's check if the chunks have some prefix, or if there is another file or way to get passage IDs, or if we need to parse them. Let's print the first 5 chunks of `labels.jsonl`.",
+  "plan": "Print the first 5 chunks of `labels.jsonl` to see their format.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    data = json.loads(f.readline())\n    for i, chunk in enumerate(data['chunks'][:5]):\n        print(f'--- Chunk {i} ---')\n        print(chunk[:300])\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

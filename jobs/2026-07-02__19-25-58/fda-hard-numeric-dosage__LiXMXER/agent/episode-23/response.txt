@@ -1,0 +1,16 @@
+{
+  "analysis": "This is extremely clear!
+For Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate:
+- Dose: \"one tablet\" or \"200 mg of emtricitabine (FTC), 25 mg of rilpivirine (RPV), and 300 mg of tenofovir disoproxil fumarate (TDF)\" or \"200 mg / 25 mg / 300 mg\"?
+Wait, let's look at Chunk 3:
+`Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are a three-drug fixed dose combination product containing 200 mg of emtricitabine (FTC), 25 mg of rilpivirine (RPV), and 300 mg of tenofovir disoproxil fumarate (TDF). The recommended dosage of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets in adult and pediatric patients weighing at least 35 kg is one tablet taken orally once daily with food .`
+
+Let's read Chunk 4 as well to see if there is more. Let's write a python script to parse and search for chunks 4, 5, 6.",
+  "plan": "I will write and run a python script to print chunks 4, 5, 6, 7 of Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > parse_emtricitabine_2.py\nwith open('Emtricitabine_Rilpivirine_Tenofovir_Disoproxil_Fumarate_chunks.txt') as f:\n    text = f.read()\n    # Let's find CHUNK 4\n    idx = text.find('=== CHUNK 4')\n    print(text[idx:idx+2500])\nEOF\npython3 parse_emtricitabine_2.py\n",
+      "duration": 2.0
+    }
+  ]
+}

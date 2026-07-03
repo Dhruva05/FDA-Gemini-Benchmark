@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! Some labels did not match my exact query because they are OTC drugs (which use \"Directions\" but maybe have specific formatting or don't have \"DOSAGE AND ADMINISTRATION\" in all caps, or use different casing, or the sections are named differently). Let's write a more robust python script that searches for any chunk containing \"Directions\" or \"Dosage\" in any casing, or simply lists all chunks for OTC labels, and lists chunks containing \"Dosage\" or \"Directions\" or \"Administration\" for the others.",
+  "plan": "I will write a python script to search and dump all chunks that might be relevant to dosage/directions for each of the 10 labels.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_all_dosage.py\nimport json\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = {l['set_id']: l for l in (json.loads(line) for line in f)}\n\nwith open('/workspace/data/public/questions.jsonl') as f:\n    questions = [json.loads(line) for line in f]\n\nfor q in questions:\n    print(f\"=== QUESTION: {q['drug_name']} ===\")\n    for set_id in q['comparison_set_ids']:\n        l = labels[set_id]\n        print(f\"  Label: {l['drug_name']} ({set_id})\")\n        for i, chunk in enumerate(l['chunks']):\n            lower = chunk.lower()\n            # If chunk is short, or contains key terms\n            terms = ['directions', 'dosage', 'administration', 'how to take', 'adults', 'children', 'active ingredient', 'warnings', 'use ']\n            if any(t in lower for t in terms) or len(chunk) < 200:\n                # Only print if it seems relevant to instructions\n                if any(t in lower for t in ['directions', 'dosage', 'administration', 'take', 'tablet', 'rinse', 'swish', 'dose', 'mg']):\n                    print(f\"    PASSAGE_{i:04d} ({len(chunk)} chars):\")\n                    print(chunk)\n                    print(\"-\" * 40)\n    print(\"=\" * 80)\nEOF\npython3 print_all_dosage.py > all_dosage.txt\n",
+      "duration": 1.0
+    }
+  ]
+}

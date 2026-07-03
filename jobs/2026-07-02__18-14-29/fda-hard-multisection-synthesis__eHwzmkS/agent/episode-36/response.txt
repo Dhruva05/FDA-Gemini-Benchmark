@@ -1,0 +1,17 @@
+{
+  "analysis": "The 8 questions are clear and well-defined.
+Let's analyze them one by one.
+
+### Q1 (b2531657ba5c7a78): \"What important drug interactions are noted for Paxlovid?\"
+Let's find the sections on drug interactions for Paxlovid.
+Paxlovid is the first label (`8a99d6d6-fd9e-45bb-b1bf-48c7f761232a`).
+Wait, let's write a python script to search for the sections that talk about drug interactions in Paxlovid, e.g. section 7 (DRUG INTERACTIONS).
+Let's list all passages in Paxlovid that start with `7` or mention `Drug Interactions`.",
+  "plan": "I will run a python script to list all passages in Paxlovid that are related to drug interactions.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]; [print(f'PASSAGE_{i:04d}:', c.strip().split('\\n')[0]) for i, c in enumerate(l['chunks']) if re.match(r'^(7|DRUG INTERACTIONS)', c.strip()) or 'drug interaction' in c.lower()[:50]]; f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

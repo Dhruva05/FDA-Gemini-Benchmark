@@ -1,0 +1,6 @@
+{
+  "analysis": "The workspace is clean, and only `/workspace/answers.json` and the `data` directory are left. The validation has passed successfully.",
+  "plan": "I will mark the task complete.",
+  "commands": [],
+  "task_complete": true
+}

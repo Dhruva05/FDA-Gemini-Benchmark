@@ -1,0 +1,154 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# cat << 'EOF' > generate_answers.py
+> import json
+>
+> with open("/workspace/data/public/questions.jsonl") as f:
+  >     questions = [json.loads(line) for line in f]
+ >
+> answers = []
+> for q in questions:
+>     qid = q["qid"]
+>     drug_name = q["drug_name"]
+>     set_id = q["set_id"]
+a>
+>     ans_obj = {
+ge Recommendations in>         "qid": qid,
+>         "status": "ANSWERED",
+>         "answer": "",
+>         "citations": [],
+ Adults",
+                "supporting_quote": "Lopinavir and ritonavir can be given in once daily>         "structured_fields": {}
+>     }
+>
+n>     if qid in ["b2531657ba5c7a78", "mixed-2a90a3df19df68", "mixed-eead76662cb6bf"]:
+>         # Paxlovid - What important drug interactions are noted for Paxlovid?
+>         ans_obj["answer"] = "Paxlovid is a strong CYP3A inhibitor due to its ritonavir component, which can lead to increased exposure of co-administered medi
+cations and potentially serious, life-threatening, or fatal events. It is contraindicated with drugs heavily dependent on CYP3A for clearance or strong CYP3A in
+ducers."
+>         ans_obj["citations"] = [
+>             {
+el >                 "set_id": set_id,
+does not provide a supported recom>                 "passage_id": "PASSAGE_0012",
+rem>                 "section": "4 CONTRAINDICATIONS",
+>                 "supporting_quote": "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are
+associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers"
+>             }
+>         ]
+isea>     elif qid in ["6f12607a1ba14dd5", "mixed-7c14643ec4356a", "mixed-97331106c3870d"]:
+>         # Paxlovid - Which medications should be avoided with Paxlovid?
+>         ans_obj["answer"] = "Medications that should be avoided or are contraindicated with Paxlovid include alpha 1-adrenoreceptor antagonists (alfuzosin), a
+ntianginals (ranolazine), antiarrhythmics (amiodarone, dronedarone, flecainide, propafenone, quinidine), antipsychotics (lurasidone, pimozide), cardiovascular a
+gents (eplerenone, ivabradine), HMG-CoA reductase inhibitors (lovastatin, simvastatin), migraine medications (eletriptan, ubrogepant), strong CYP3A inducers (ri
+fampin, carbamazepine, phenobarbital, phenytoin, St. John's Wort), and others listed in the label."
+>         ans_obj["citations"] = [
+tion": >             {
+>                 "set_id": set_id,
+>                 "passage_id": "PASSAGE_0012",
+>                 "section": "4 CONTRAINDICATIONS",
+>                 "supporting_quote": "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are
+associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers"
+>             }
+>         ]
+>     elif qid == "daef650b92e56473":
+>         # Lopinavir-Ritonavir - How should Lopinavir-Ritonavir be administered?
+>         ans_obj["answer"] = "Lopinavir-Ritonavir oral solution must be administered orally with food. The recommended dosage for adults is either 400 mg lopin
+avir / 100 mg ritonavir (5 mL) twice daily or 800 mg lopinavir / 200 mg ritonavir (10 mL) once daily."
+  >         ans_obj["citations"] = [
+>             {
+>                 "set_id": set_id,
+>                 "passage_id": "PASSAGE_0001",
+on3 generate_answers.py
+>                 "section": "2.1 General Administration Recommendations",
+>                 "supporting_quote": "and ritonavir oral solution must be taken with food."
+>             },
+>             {
+>                 "set_id": set_id,
+>                 "passage_id": "PASSAGE_0005",
+>                 "section": "Recommended Dosage",
+>                 "supporting_quote": "80 mg/20 mg per mL Oral Solution 400 mg/100 mg"
+>             }
+>         ]
+>         ans_obj["structured_fields"] = {
+>             "dose": "400/100",
+>             "unit": "mg",
+>             "route": "oral",
+>             "frequency": "twice daily",
+>             "population": "adults",
+>             "max_daily_dose": "800/200",
+>             "citation_passages": ["PASSAGE_0001", "PASSAGE_0005"]
+>         }
+>     elif qid == "a0576a26f2a2eeac":
+>         # Lopinavir-Ritonavir - What is the recommended dosage regimen of Lopinavir-Ritonavir?
+>         ans_obj["answer"] = "The recommended adult dosage regimen of Lopinavir-Ritonavir is either 400 mg lopinavir / 100 mg ritonavir twice daily or 800 mg l
+opinavir / 200 mg ritonavir once daily. Oral solution must be taken with food."
+>         ans_obj["citations"] = [
+>             {
+>                 "set_id": set_id,
+>                 "passage_id": "PASSAGE_0003",
+>                 "section": "2.3 Dosage Recommendations in Adults",
+>                 "supporting_quote": "Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2."
+>             }
+>         ]
+>         ans_obj["structured_fields"] = {
+>             "dose": "400/100",
+>             "unit": "mg",
+>             "route": "oral",
+>             "frequency": "twice daily",
+>             "population": "adults",
+>             "max_daily_dose": "800/200",
+>             "citation_passages": ["PASSAGE_0003"]
+>         }
+>     elif qid == "near-miss-04f3afa658fdef":
+>         # 12HR Allergy Relief - refusal
+>         ans_obj["status"] = "NOT_FOUND"
+>         ans_obj["answer"] = "The 12HR Allergy Relief label does not provide a supported recommendation for pharmacogenomic testing requirement. The label disc
+usses warnings but does not mention pharmacogenomic testing."
+>         ans_obj["citations"] = [
+>             {
+>                 "set_id": set_id,
+>                 "passage_id": "PASSAGE_0002",
+>                 "section": "Warnings",
+>                 "supporting_quote": "Ask a doctor before use if you have kidney disease."
+>             }
+>         ]
+>         ans_obj["structured_fields"] = {
+>             "searched_topic": "warnings",
+>             "unsupported_topic": "pharmacogenomic testing requirement"
+>         }
+>     elif qid == "near-miss-0c6ec72416151f":
+>         # Acamprosate Calcium - refusal
+>         ans_obj["status"] = "NOT_FOUND"
+>         ans_obj["answer"] = "The Acamprosate Calcium label discusses renal impairment in Section 8.6 and Section 12.3, but it does not provide a supported rec
+ommendation for severe hepatic impairment (only stating that no dosage adjustment is recommended for mild to moderate hepatic impairment)."
+>         ans_obj["citations"] = [
+>             {
+>                 "set_id": set_id,
+>                 "passage_id": "PASSAGE_0035",
+>                 "section": "8.6 Renal Impairment",
+>                 "supporting_quote": "Acamprosate calcium is contraindicated in patients with severe renal impairment"
+>             },
+>             {
+>                 "set_id": set_id,
+>                 "passage_id": "PASSAGE_0044",
+>                 "section": "12.3 Pharmacokinetics",
+>                 "supporting_quote": "Acamprosate is not metabolized by the liver and the pharmacokinetics of acamprosate calcium are not altered in patients w
+ith mild to moderate hepatic impairment"
+>             }
+>         ]
+>         ans_obj["structured_fields"] = {
+>             "searched_topic": "renal impairment",
+>             "unsupported_topic": "severe hepatic impairment"
+>         }
+>
+>     answers.append(ans_obj)
+>
+> output = {"answers": answers}
+> with open("/workspace/answers.json", "w") as f:
+>     json.dump(output, f, indent=2)
+>
+> print("Generated /workspace/answers.json successfully.")
+> EOF
+root@3faa5da3ba91:/workspace# python3 generate_answers.py
+Generated /workspace/answers.json successfully.
+root@3faa5da3ba91:/workspace#

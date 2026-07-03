@@ -1,0 +1,64 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > view_q1.py
+> with open('full_candidates.txt') as f:
+>     text = f.read()
+> parts = text.split("==================== QUESTION:")
+> for p in parts:
+>     if "cross-0df97f1e2f1e4c" in p:
+>         print(p)
+> EOF
+root@faa94ec9460f:/workspace# python3 view_q1.py
+ cross-0df97f1e2f1e4c ====================
+Drug: 12HR Allergy Relief vs 365 Whole Foods Market Loratadine
+*** Label: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752) ***
+  PASSAGE_0002:
+Ask a doctor before use if you have kidney disease.  Your doctor should determine if you need a different dose.
+------------------------------
+  PASSAGE_0003:
+- do not take more than directed
+- do not take at the same time as aluminum or magnesium antacids
+- do not take with fruit juices
+------------------------------
+  PASSAGE_0006:
+Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).
+------------------------------
+  PASSAGE_0007:
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+------------------------------
+  PASSAGE_0008:
+do not use
+adults 65 years of age and older
+------------------------------
+*** Label: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce) ***
+  PASSAGE_0002:
+liver or kidney disease. Your doctor should determine if you need a different dose.
+------------------------------
+  PASSAGE_0003:
+do not take more than directed. Taking more than directed may cause drowsiness.
+------------------------------
+  PASSAGE_0006:
+In case of overdose, get medical help or contact a Poison Control Center (1-800-222-1222) right away.
+------------------------------
+  PASSAGE_0011:
+Loratadine
+
+                     Tablets USP, 10mg
+Indoor & Outdoor
+Allergies
+*WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL.
+------------------------------
+  PASSAGE_0012:
+MARKET
+Antihistamine
+Allergy Relief
+Loratadine
+Tablets USP, 10mg
+**Compare to the Active Ingredient in Claritin®
+------------------------------
+  PASSAGE_0014:
+ACTUAL SIZE
+*WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL.
+------------------------------
+
+root@faa94ec9460f:/workspace#

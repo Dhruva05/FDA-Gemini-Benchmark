@@ -1,0 +1,7 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; raw_text = js
+on.dumps(labels); print('PASSAGE count:', raw_text.count('PASSAGE')); print('passage count:', raw_text.lower().count('passage')); f.close()"
+PASSAGE count: 397
+passage count: 397
+root@a1980178bfd8:/workspace#

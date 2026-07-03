@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ea5d0e55' in line
+][0]; print(repr(data['chunks'][2]))"
+'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.'
+root@3646eb22abe5:/workspace#

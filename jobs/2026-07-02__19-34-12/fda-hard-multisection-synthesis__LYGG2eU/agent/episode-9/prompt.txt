@@ -1,0 +1,64 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > match_chunks.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print(f"Drug: {label['drug_name']}")
+>         raw = label['label_raw']
+>         chunks = label['chunks']
+>         # Let's find all PASSAGE_#### in raw
+>         passages = re.findall(r'(PASSAGE_\d+)\|\|\n(.*?)(?=(?:PASSAGE_\d+\|\|\n|$))', raw, re.DOTALL)
+>         print(f"Found {len(passages)} passages in raw via regex.")
+>         print(f"Number of chunks in label: {len(chunks)}")
+>
+>         # Check matching
+>         matched = 0
+>         for i, (pid, ptext) in enumerate(passages):
+>             chunk_text = chunks[i] if i < len(chunks) else ""
+>             # Normalize whitespace to compare
+>             p_norm = " ".join(ptext.strip().split())
+>             c_norm = " ".join(chunk_text.strip().split())
+>             if p_norm == c_norm:
+>                 matched += 1
+>             else:
+>                 if i < 3:
+>                     print(f"Mismatch at index {i}:")
+>                     print(f"Raw passage text (first 100): {repr(p_norm[:100])}")
+>                     print(f"Chunk text (first 100):       {repr(c_norm[:100])}")
+>         print(f"Matched: {matched}/{len(passages)}")
+>         print("-"*40)
+> EOF
+root@15b83e10b8d1:/workspace# python3 match_chunks.py
+Drug: Paxlovid
+Found 209 passages in raw via regex.
+Number of chunks in label: 209
+Mismatch at index 0:
+Raw passage text (first 100): 'WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID - PAXLOVID includes ritonavir, a strong CYP3A i'
+Chunk text (first 100):       'WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID - PAXLOVID includes ritonavir, a strong CYP3A i'
+Mismatch at index 1:
+Raw passage text (first 100): '1 INDICATIONS AND USAGE PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus dise'
+Chunk text (first 100):       '1 INDICATIONS AND USAGE PAXLOVID is indicated for the treatment of mild-to-moderate coronavirus dise'
+Mismatch at index 2:
+Raw passage text (first 100): 'Limitations of Use PAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for'
+Chunk text (first 100):       'Limitations of Use PAXLOVID is not approved for use as pre-exposure or post-exposure prophylaxis for'
+Matched: 1/209
+----------------------------------------
+Drug: Lopinavir-Ritonavir
+Found 188 passages in raw via regex.
+Number of chunks in label: 188
+Mismatch at index 0:
+Raw passage text (first 100): '1 INDICATIONS AND USAGE Lopinavir and ritonavir is indicated in combination with other antiretrovira'
+Chunk text (first 100):       '1 INDICATIONS AND USAGE Lopinavir and ritonavir is indicated in combination with other antiretrovira'
+Mismatch at index 1:
+Raw passage text (first 100): '2.1 General Administration Recommendations Lopinavir and ritonavir oral solution must be taken with '
+Chunk text (first 100):       '2.1 General Administration Recommendations Lopinavir and ritonavir oral solution must be taken with '
+Mismatch at index 2:
+Raw passage text (first 100): '2.2 Administering Oral Solution by Feeding Tube Because lopinavir and ritonavir oral solution contai'
+Chunk text (first 100):       '2.2 Administering Oral Solution by Feeding Tube Because lopinavir and ritonavir oral solution contai'
+Matched: 1/188
+----------------------------------------
+root@15b83e10b8d1:/workspace#

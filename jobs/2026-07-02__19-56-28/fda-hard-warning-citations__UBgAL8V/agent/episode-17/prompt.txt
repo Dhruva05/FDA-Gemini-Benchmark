@@ -1,0 +1,66 @@
+New Terminal Output:
+
+>>> print(labels[0]['chunks'][12])
+4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Jo
+hnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.
+PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-thr
+eatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with t
+he potential for loss of virologic response and possible resistance. There are certain other drugs for which concomitant use with PAXLOVID should be avoided and
+/or dose adjustment, interruption, or therapeutic monitoring is recommended. Drugs listed in this section are a guide and not considered a comprehensive list of
+ all drugs that may be contraindicated with PAXLOVID. The healthcare provider should consult other appropriate resources such as the prescribing information for
+ the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor like PAXLOVID :
+- ➢ Drugs that are primarily metabolized by CYP3A for which elevated concentrations are associated with serious and/or life-threatening reactions
+- Alpha 1-adrenoreceptor antagonist: alfuzosin
+- Antianginal: ranolazine
+- Antiarrhythmic: amiodarone, dronedarone, flecainide, propafenone, quinidine
+- Anti-gout: colchicine (in patients with renal and/or hepatic impairment
+- Antipsychotics: lurasidone, pimozide
+- Benign prostatic hyperplasia agents: silodosin
+- Cardiovascular agents: eplerenone, ivabradine
+- Ergot derivatives: dihydroergotamine, ergotamine, methylergonovine
+- HMG-CoA reductase inhibitors: lovastatin, simvastatin (these drugs can be temporarily discontinued to allow PAXLOVID use
+- Immunosuppressants: voclosporin
+- Microsomal triglyceride transfer protein inhibitor: lomitapide
+- Migraine medications: eletriptan, ubrogepant
+- Mineralocorticoid receptor antagonists: finerenone
+- Opioid antagonists: naloxegol
+- PDE5 inhibitor: sildenafil (Revatio ® ) when used for pulmonary arterial hypertension (PAH)
+- Sedative/hypnotics: triazolam, oral midazolam
+- Serotonin receptor 1A agonist/serotonin receptor 2A antagonist: flibanserin
+- Vasopressin receptor antagonists: tolvaptan
+- ➢ Drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for lo
+ss of virologic response and possible resistance. PAXLOVID cannot be started immediately after discontinuation of any of the following medications due to the de
+layed offset of the recently discontinued CYP3A inducer
+- Anticancer drugs: apalutamide , enzalutamide
+- Anticonvulsant: carbamazepine, phenobarbital, primidone, phenytoin
+- Antimycobacterials: rifampin, rifapentine
+- Cystic fibrosis transmembrane conductance regulator potentiators: lumacaftor/ivacaftor
+- Herbal products: St. John's Wort (
+>>> [print(f'PASSAGE_{i:04d}:', c[:120].replace('\n', ' ')) for i, c in enumerate(labels[0]['chunks'][21:45])]
+PASSAGE_0000: 7.3       Established and Other Potentially Significant Drug Interactions Table 2 provides a listing of clinically significant
+PASSAGE_0001: ↑ alfuzosin Co-administration contraindicated due to potential hypotension .
+PASSAGE_0002: ↑ tamsulosin Avoid concomitant use with PAXLOVID.
+PASSAGE_0003: ↑ ranolazine Co-administration contraindicated due to potential for serious and/or life-threatening reactions .
+PASSAGE_0004: ↑ antiarrhythmic Co-administration contraindicated due to potential for cardiac arrhythmias .
+PASSAGE_0005: ↑ antiarrhythmic Caution is warranted and therapeutic concentration monitoring is recommended for antiarrhythmics if ava
+PASSAGE_0006: ↓ nirmatrelvir/ritonavir Co-administration contraindicated due to potential loss of virologic response and possible resi
+PASSAGE_0007: Anticancer drugs abemaciclib, ceritinib,dasatinib, encorafenib,ibrutinib, ivosidenib, neratinib, nilotinib, venetoclax,v
+PASSAGE_0008: ↑ anticancer drugs Avoid co-administration of encorafenib or ivosidenib due to potential risk of serious adverse events
+PASSAGE_0009: ↑↓ warfarin Closely monitor international normalized ratio (INR) if co-administration with warfarin is necessary.
+PASSAGE_0010: ↑ rivaroxaban Increased bleeding risk with rivaroxaban. Avoid concomitant use. dabigatranSee Pharmacokinetics, Clinical
+PASSAGE_0011: ↑ dabigatran Increased bleeding risk with dabigatran. Depending on dabigatran indication and renal function, reduce dose
+PASSAGE_0012: ↑ apixaban Combined P-gp and strong CYP3A inhibitors increase blood levels of apixaban and increase the risk of bleeding
+PASSAGE_0013: ↓ nirmatrelvir/ritonavir Co-administration contraindicated due to potential loss of virologic response and possible resi
+PASSAGE_0014: ↑ anticonvulsant A dose decrease may be needed for clonazepam when co-administered with PAXLOVID and clinical monitoring
+PASSAGE_0015: ↓ bupropion and active metabolite hydroxy-bupropion Monitor for an adequate clinical response to bupropion.
+PASSAGE_0016: ↑ trazodone Adverse reactions of nausea, dizziness, hypotension, and syncope have been observed following co-administrat
+PASSAGE_0017: ↓ voriconazole Avoid concomitant use of voriconazole.
+PASSAGE_0018: ↑ ketoconazole↑ isavuconazonium sulfate↑ itraconazole Refer to ketoconazole, isavuconazonium sulfate, and itraconazole p
+PASSAGE_0019: ↑ nirmatrelvir/ritonavir A nirmatrelvir/ritonavir dose reduction is not needed.
+PASSAGE_0020: ↑ colchicine Co-administration contraindicated due to potential for serious and/or life-threatening reactions in patient
+PASSAGE_0021: ↑ protease inhibitor For further information, refer to the respective protease inhibitors' prescribing information. Pati
+PASSAGE_0022: efavirenz,maraviroc,nevirapine,zidovudine,bictegravir/ emtricitabine/ tenofovir ↑ efavirenz↑ maraviroc↑ nevirapine↓ zido
+PASSAGE_0023: ↑ clarithromycin↑ erythromycin Refer to the respective prescribing information for anti-infective dose adjustment.
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>>

@@ -1,0 +1,118 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'CELECOXIB':
+>             for i, chunk in enumerate(data['chunks']):
+>                 if i < 25:
+>                     print(f'=== PASSAGE_{i:04d} ===')
+>                     print(chunk[:300] + '...')
+>             break
+> "
+=== PASSAGE_0000 ===
+WARNING: RISK OF SERIOUS CARDIOVASCULAR AND GASTROINTESTINAL EVENTS
+Cardiovascular Thrombotic Events
+- Nonsteroidal anti-inflammatory drugs (NSAIDs) cause an increased risk of serious cardiovascular thrombotic events, including myocardial infarction, and stroke
+, which can be fatal. This risk may ccu...
+=== PASSAGE_0001 ===
+Gastrointestinal Bleeding, Ulceration, and Perforation
+- NSAIDs cause an increased risk of serious gastrointestinal (GI) adverse events including bleeding, ulceration, and perforation of the stomach or intestines, w
+hich can be fatal. These events can occur at any time during use and without warning ...
+=== PASSAGE_0002 ===
+1.1 Osteoarthritis (OA)
+For the management of the signs and symptoms of OA ....
+=== PASSAGE_0003 ===
+1.2 Rheumatoid Arthritis (RA)
+For the management of the signs and symptoms of RA ....
+=== PASSAGE_0004 ===
+1.3 Juvenile Rheumatoid Arthritis (JRA)
+For the management of the signs and symptoms of JRA in patients 2 years and older ....
+=== PASSAGE_0005 ===
+1.4 Ankylosing Spondylitis (AS)
+For the management of the signs and symptoms of AS ....
+=== PASSAGE_0006 ===
+1.5 Acute Pain
+For the management of acute pain in adults ....
+=== PASSAGE_0007 ===
+1.6 Primary Dysmenorrhea
+For the management of primary dysmenorrhea
+....
+=== PASSAGE_0008 ===
+2.1 General Dosing Instructions
+Carefully consider the potential benefits and risks of celecoxib capsules and other treatment options before deciding to use celecoxib capsules. Use the lowest
+effective dosage for the shortest duration consistent with individual patient treatment goals .
+These doses ...
+=== PASSAGE_0009 ===
+2.2 Osteoarthritis
+For OA, the dosage is 200 mg per day administered as a single dose or as 100 mg twice daily....
+=== PASSAGE_0010 ===
+2.3 Rheumatoid Arthritis
+For RA, the dosage is 100 mg to 200 mg twice daily....
+=== PASSAGE_0011 ===
+2.4 Juvenile Rheumatoid Arthritis
+For JRA, the dosage for pediatric patients (age 2 years and older) is based on weight. For patients ≥10 kg to 25 kg the recommended dose is 50 mg twice daily.
+For patients >25 kg the recommended dose is 100 mg twice daily.
+For patients who have difficulty swallowin...
+=== PASSAGE_0012 ===
+2.5 Ankylosing Spondylitis
+For AS, the dosage of celecoxib capsules is 200 mg daily in single (once per day) or divided (twice per day) doses. If no effect is observed after 6 weeks, a tr
+ial of 400 mg daily may be worthwhile. If no effect is observed after 6 weeks on 400 mg daily, a response is not ...
+=== PASSAGE_0013 ===
+2.6 Management of Acute Pain and Treatment of Primary Dysmenorrhea
+For management of Acute Pain and Treatment of Primary Dysmenorrhea, the dosage is 400 mg initially, followed by an additional 200 mg dose if needed on the first
+ day. On subsequent days, the recommended dose is 200 mg twice daily as n...
+=== PASSAGE_0014 ===
+2.7 Special Populations
+Hepatic
+                           Impairment
+In patients with moderate hepatic impairment (Child-Pugh Class B), reduce the dose by 50%. The use of celecoxib capsules in patients with severe hepatic impairm
+ent is not recommended ....
+=== PASSAGE_0015 ===
+Poor Metabolizers of CYP2C9 Substrates
+In adult patients who are known or suspected to be poor CYP2C9 metabolizers based on genotype or previous history/experience with other CYP2C9 substrates (such
+as warfarin, phenytoin), initiate treatment with half of the lowest recommended dose.
+In patients wit...
+=== PASSAGE_0016 ===
+3 DOSAGE FORMS AND STRENGTHS
+Celecoxib capsules:
+50 mg  white to off white colored granules filled in size 2 hard gelatin white capsule, axially printed with 'Cipla' on cap & '423' over '50 mg' on body in red 
+ink.
+100 mg White to off white colored granules filled in size 2 hard gelatin white capsule...
+=== PASSAGE_0017 ===
+4 CONTRAINDICATIONS
+Celecoxib capsules are contraindicated in the following patients:
+- Known hypersensitivity (e.g., anaphylactic reactions and serious skin reactions) to celecoxib, any components of the drug product see
+- History of asthma, urticaria, or other allergic-type reactions after taking ...
+=== PASSAGE_0018 ===
+5.1 Cardiovascular Thrombotic Events
+Clinical trials of several cyclooxygenase-2 (COX-2) selective and nonselective NSAIDs of up to three years duration have shown an increased risk of serious card
+iovascular (CV) thrombotic events, including myocardial infarction (MI) and stroke, which can be fatal....
+=== PASSAGE_0019 ===
+Post-MI Patients
+Observational studies conducted in the Danish National Registry have demonstrated that patients treated with NSAIDs in the post-MI period were at increased risk
+ of reinfarction, CV-related death, and all-cause mortality beginning in the first week of treatment. In this same cohort, ...
+=== PASSAGE_0020 ===
+5.2 Gastrointestinal Bleeding, Ulceration, and Perforation
+NSAIDs, including celecoxib cause serious gastrointestinal (GI) adverse events including inflammation, bleeding, ulceration, and perforation of the esophagus, s
+tomach, small intestine, or large intestine, which can be fatal. These serious ad...
+=== PASSAGE_0021 ===
+5.3 Hepatotoxicity
+Elevations of ALT or AST (three or more times the upper limit of normal ULN]) have been reported in approximately 1% of NSAID-treated patients in clinical trial
+s. In addition, rare, sometimes fatal, cases of severe hepatic injury, including fulminant hepatitis, liver necrosis, and...
+=== PASSAGE_0022 ===
+5.4 Hypertension
+NSAIDs, including celecoxib capsules can lead to new onset of hypertension or worsening of preexisting hypertension, either of which may contribute to the incre
+ased incidence of CV events. Patients taking angiotensin converting enzyme (ACE) inhibitors, thiazide diuretics or loop diu...
+=== PASSAGE_0023 ===
+5.5 Heart Failure and Edema
+The Coxib and traditional NSAID Trialists' Collaboration meta-analysis of randomized controlled trials demonstrated an approximately two-fold increase in hospit
+alizations for heart failure in COX-2 selective-treated patients and nonselective NSAID-treated patients compare...
+=== PASSAGE_0024 ===
+5.6 Renal Toxicity and Hyperkalemia
+Renal Toxicity
+Long-term administration of NSAIDs has resulted in renal papillary necrosis and other renal injury.
+Renal toxicity has also been seen in patients in whom renal prostaglandins have a compensatory role in the maintenance of renal perfusion. In these p...
+root@3d44031eb234:/workspace#

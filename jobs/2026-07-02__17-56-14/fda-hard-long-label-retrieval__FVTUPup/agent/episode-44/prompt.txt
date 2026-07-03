@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0006
+=== PASSAGE_0006 ===
+Days of Treatment
+Dose and Dose Frequency
+PAXLOVID should be administered at approximately the same time each day for 5 days.
+Moderate renal impairment (eGFR ≥30 to <60 mL/min)
+root@2635f56baf2a:/workspace# python3 print_passage.py PASSAGE_0008
+=== PASSAGE_0008 ===
+Day 1
+300 mg nirmatrelvir (two 150 mg tablets) with 100 mg ritonavir (one 100 mg tablet) once
+root@2635f56baf2a:/workspace#

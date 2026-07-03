@@ -1,0 +1,47 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# head -n 40 /workspace/answers.json
+{
+  "answers": [
+    {
+      "qid": "daef650b92e56473",
+      "status": "ANSWERED",
+      "answer": "Lopinavir and ritonavir oral solution must be taken with food. It can be administered by feeding tube; however, polyurethane feeding tubes are
+not recommended due to potential incompatibility. Compatible feeding tubes include silicone and polyvinyl chloride (PVC) feeding tubes. For pediatric patients,
+the dose should be administered using the calibrated cup (supplied) or oral dosing syringe.",
+      "citations": [
+        {
+          "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+          "passage_id": "PASSAGE_0001",
+          "section": "2.1",
+          "supporting_quote": "Lopinavir and ritonavir oral solution must be taken with food."
+        },
+        {
+          "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+          "passage_id": "PASSAGE_0002",
+          "section": "2.2",
+          "supporting_quote": "Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyureth
+ane feeding tubes due to potential incompatibility."
+        },
+        {
+          "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+          "passage_id": "PASSAGE_0007",
+          "section": "2.4",
+          "supporting_quote": "The dose of the oral solution should be administered using the calibrated cup (supplied) or oral dosing syringe."
+        }
+      ],
+      "structured_fields": {
+        "dose": "800/200",
+        "unit": "mg/mg",
+        "route": "oral",
+        "frequency": "once daily or twice daily",
+        "population": "adults",
+        "max_daily_dose": "800/200 mg",
+        "citation_passages": [
+          "PASSAGE_0001",
+          "PASSAGE_0002",
+          "PASSAGE_0007"
+        ]
+      }
+    },
+root@3d44031eb234:/workspace#

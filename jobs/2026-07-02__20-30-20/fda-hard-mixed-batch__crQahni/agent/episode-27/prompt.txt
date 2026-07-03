@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid \escape: line 6 column 352 (char 6835) | Content preview: '{\n  "analysis": "This is extremely clear and detailed! Let\'s carefully analyze the Paxlovid question'...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah, Passage 83 says: 'At a dose two times the maximum recommended dose...' Let's print Passage 83 in full to see if it specifies what the maximum recommended dose is.",
+  "plan": "I will run a python script to print Passage 83 of Lenalidomide in full.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'Lenalidomide':\n            print(data['chunks'][83])\n            break\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > verify_answers.py
+> import json
+>
+> with open('/workspace/answers.json') as f:
+>     data = json.load(f)
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = {q['qid']: q for q in (json.loads(line) for line in f)}
+>
+> print("Validating schema...")
+> assert "answers" in data, "'answers' key missing"
+> assert isinstance(data["answers"], list), "'answers' must be a list"
+> assert len(data["answers"]) == len(questions), f"Expected {len(questions)} answers, got {len(data['answers'])}"
+>
+> for idx, ans in enumerate(data["answers"]):
+>     print(f"Checking answer {idx+1} (qid: {ans.get('qid')})...")
+>     assert "qid" in ans, "'qid' missing"
+>     qid = ans["qid"]
+>     assert qid in questions, f"Invalid qid: {qid}"
+>
+>     assert "status" in ans, "'status' missing"
+>     assert ans["status"] in ["ANSWERED", "NOT_FOUND"], f"Invalid status: {ans['status']}"
+>
+>     assert "answer" in ans, "'answer' missing"
+>     assert isinstance(ans["answer"], str), "'answer' must be string"
+>
+>     assert "citations" in ans, "'citations' missing"
+>     assert isinstance(ans["citations"], list), "'citations' must be a list"
+>     assert len(ans["citations"]) > 0, "At least one citation is required"
+>
+>     for cit in ans["citations"]:
+>         assert "set_id" in cit, "'set_id' missing in citation"
+>         set_id = cit["set_id"]
+>         assert set_id == questions[qid]["set_id"], f"set_id mismatch in citation: {set_id} vs {questions[qid]['set_id']}"
+>
+>         assert "passage_id" in cit, "'passage_id' missing in citation"
+>         passage_id = cit["passage_id"]
+>         assert passage_id.startswith("PASSAGE_"), f"Invalid passage_id: {passage_id}"
+>
+>         try:
+>             p_idx = int(passage_id.split("_")[1])
+>         except Exception:
+>             raise AssertionError(f"Could not parse passage_id index: {passage_id}")
+>
+>         label = labels[set_id]
+>         assert p_idx < len(label["chunks"]), f"passage_id index {p_idx} out of range for {set_id}"
+>
+>         passage_text = label["chunks"][p_idx]
+>
+>         assert "section" in cit, "'section' missing in citation"
+>         assert cit["section"] is None or isinstance(cit["section"], str), "'section' must be string or null"
+>
+>         assert "supporting_quote" in cit, "'supporting_quote' missing in citation"
+>         quote = cit["supporting_quote"]
+>         assert isinstance(quote, str), "'supporting_quote' must be string"
+>         assert len(quote) > 0, "'supporting_quote' must not be empty"
+>
+>         # Check if quote is exact substring of the passage text
+>         # Let's normalize spaces slightly to be safe, or check exact substring first
+>         if quote not in passage_text:
+>             print(f"WARNING: Exact quote not found in passage! Quote: {repr(quote)} | Passage: {repr(passage_text[:100])}")
+>             # Let's do a case-insensitive or whitespace-flexible check
+>             normalized_quote = " ".join(quote.split())
+>             normalized_passage = " ".join(passage_text.split())
+>             assert normalized_quote in normalized_passage, f"Quote not found even after normalization: {repr(quote)}"
+>             print("  Normalized quote match passed.")
+>         else:
+>             print("  Exact quote match passed.")
+>
+>     assert "structured_fields" in ans, "'structured_fields' missing"
+>     sf = ans["structured_fields"]
+>     assert isinstance(sf, dict), "'structured_fields' must be a dict"
+>     assert "searched_topic" in sf, "'searched_topic' missing in structured_fields"
+>     assert "unsupported_topic" in sf, "'unsupported_topic' missing in structured_fields"
+>     assert isinstance(sf["searched_topic"], str), "'searched_topic' must be string"
+>     assert isinstance(sf["unsupported_topic"], str), "'unsupported_topic' must be string"
+>
+> print("All validations passed successfully!")
+> EOF
+root@0ef79956d710:/workspace# python3 verify_answers.py
+Validating schema...
+Checking answer 1 (qid: near-miss-04f3afa658fdef)...
+WARNING: Exact quote not found in passage! Quote: 'Do not use if you have ever had an allergic reaction to this product or any of its ingredients.' | Passage: '
+Do not use\xa0if you have ever had an allergic reaction to this product or any of its ingredients.'
+  Normalized quote match passed.
+WARNING: Exact quote not found in passage! Quote: 'Ask a doctor before use if you have kidney disease. Your doctor should determine if you need a different dose
+.' | Passage: 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a diff'
+  Normalized quote match passed.
+Checking answer 2 (qid: near-miss-0c6ec72416151f)...
+  Exact quote match passed.
+Checking answer 3 (qid: near-miss-bd69d0bfb1fc7d)...
+  Exact quote match passed.
+Checking answer 4 (qid: near-miss-d4ca1884aa8ab4)...
+  Exact quote match passed.
+Checking answer 5 (qid: near-miss-52e5f8cac33c50)...
+  Exact quote match passed.
+Checking answer 6 (qid: near-miss-5b5cb6a5249660)...
+  Exact quote match passed.
+All validations passed successfully!
+root@0ef79956d710:/workspace#

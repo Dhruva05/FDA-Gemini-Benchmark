@@ -1,0 +1,109 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > dump_all_labels_for_questions.py
+> import json
+>
+> with open('/workspace/data/public/questions.jsonl', 'r') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> with open('/workspace/data/public/labels.jsonl', 'r') as f:
+>     labels = {data['set_id']: data for data in (json.loads(line) for line in f)}
+>
+> for i, q in enumerate(questions):
+>     print(f"========================================")
+>     print(f"QUESTION {i}: {q['qid']} - {q['drug_name']}")
+>     print(f"Question text: {q['question']}")
+>     for set_id in q['comparison_set_ids']:
+>         label = labels[set_id]
+>         print(f"  --- DRUG: {label['drug_name']} ({set_id}) ---")
+>         for idx, chunk in enumerate(label['chunks']):
+>             # Print chunk index and first line or full if short
+>             lines = chunk.strip().split('\n')
+>             first_line = lines[0] if lines else ""
+>             print(f"    PASSAGE_{idx:04d} ({len(lines)} lines, {len(chunk)} chars): {repr(first_line[:80])}")
+>             # If it looks like directions/dosing, print full
+>             lower_chunk = chunk.lower()
+>             if any(k in lower_chunk for k in ['direction', 'dosage', 'administration', 'take', 'rinse', 'adult', 'children', 'mg', 'ml', 'tablet', 'capsule',
+'every', 'daily']):
+>                 # let's print a bit more
+>                 print(f"      FULL: {repr(chunk)}")
+> EOF
+root@7e48d58e23f3:/workspace# python3 dump_all_labels_for_questions.py > all_questions_chunks.txt
+root@7e48d58e23f3:/workspace# head -n 100 all_questions_chunks.txt
+========================================
+QUESTION 0: cross-0df97f1e2f1e4c - 12HR Allergy Relief vs 365 Whole Foods Market Loratadine
+Question text: Compare the dosing instructions for 12HR Allergy Relief and 365 Whole Foods Market Loratadine. For each label, report dose or strength, route, fr
+equency, population, and maximum daily dose if stated. Cite one passage from each label.
+  --- DRUG: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752) ---
+    PASSAGE_0000 (6 lines, 172 chars): 'Uses'
+    PASSAGE_0001 (1 lines, 95 chars): 'Do not use\xa0if you have ever had an allergic reaction to this product or any of i'
+    PASSAGE_0002 (1 lines, 111 chars): 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determin'
+    PASSAGE_0003 (3 lines, 129 chars): '- do not take more than directed'
+      FULL: '- do not take more than directed\n- do not take at the same time as aluminum or magnesium antacids\n- do not take with fruit juices'
+    PASSAGE_0004 (1 lines, 104 chars): 'Stop use and ask a doctor if an allergic reaction to this product occurs.\xa0 Seek '
+    PASSAGE_0005 (1 lines, 68 chars): 'If pregnant or breast-feeding,\xa0ask a health professional before use.'
+    PASSAGE_0006 (1 lines, 132 chars): 'Keep out of reach of children. In case of overdose, get medical help or contact '
+      FULL: 'Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).'
+    PASSAGE_0007 (1 lines, 137 chars): 'adults and children 12 years of age and over take one 60 mg tablet with water ev'
+      FULL: 'adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours'
+    PASSAGE_0008 (2 lines, 43 chars): 'do not use'
+      FULL: 'do not use\nadults 65 years of age and older'
+    PASSAGE_0009 (3 lines, 129 chars): '- store between 20-25°C (68-77°F)'
+    PASSAGE_0010 (1 lines, 235 chars): 'colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black'
+    PASSAGE_0011 (2 lines, 39 chars): 'Antihistamine'
+    PASSAGE_0012 (2 lines, 66 chars): 'Actual Size'
+  --- DRUG: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce) ---
+    PASSAGE_0000 (6 lines, 176 chars): 'untitled'
+    PASSAGE_0001 (2 lines, 95 chars): 'Do not use'
+    PASSAGE_0002 (1 lines, 83 chars): 'liver or kidney disease. Your doctor should determine if you need a different do'
+    PASSAGE_0003 (1 lines, 79 chars): 'do not take more than directed. Taking more than directed may cause drowsiness.'
+      FULL: 'do not take more than directed. Taking more than directed may cause drowsiness.'
+    PASSAGE_0004 (1 lines, 74 chars): 'an allergic reaction to this product occurs. Seek medical help right away.'
+    PASSAGE_0005 (1 lines, 37 chars): 'ask a health professional before use.'
+    PASSAGE_0006 (1 lines, 101 chars): 'In case of overdose, get medical help or contact a Poison Control Center (1-800-'
+    PASSAGE_0007 (3 lines, 192 chars): '- Tamper-evident: do not use if foil seal under cap, printed with “SEALED for YO'
+    PASSAGE_0008 (1 lines, 96 chars): 'lactose monohydrate, magnesium stearate, pregelatinized starch (maize), sodium s'
+    PASSAGE_0009 (2 lines, 35 chars): 'call 1-855-274-4122'
+    PASSAGE_0010 (2 lines, 68 chars): '550 BOWIE STREET, AUSTIN, TX 7870
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+logical and behavioral disorders in humans. There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be used d
+uring pregnancy only if the potential benefit justifies the potential risk to the fetus.\nNonteratogenic effects: A study conducted in pregnant mice that were a
+dministered acamprosate calcium by the oral route starting on Day 15 of gestation through the end of lactation on postnatal day 28 demonstrated an increased inc
+idence of still-born fetuses at doses of 960 mg/kg/day or greater (approximately 2 times the MRHD oral dose on a mg/m2 basis). No effects were observed at a dos
+e of 320 mg/kg/day (approximately one-half the MRHD dose on a mg/m2 basis).'
+    PASSAGE_0031 (2 lines, 117 chars): '8.2 Labor and Delivery'
+    PASSAGE_0032 (2 lines, 401 chars): '8.3 Nursing Mothers'
+    PASSAGE_0033 (2 lines, 119 chars): '8.4 Pediatric Use'
+    PASSAGE_0034 (3 lines, 682 chars): '8.5 Geriatric Use'
+      FULL: '8.5 Geriatric Use\nForty-one of the 4234 patients in double-blind, placebo-controlled, clinical trials of acamprosate calcium were 65 years of age
+or older, while none were 75 years of age or over. There were too few patients in the ≥65 age group to evaluate any differences in safety or effectiveness for g
+eriatric patients compared to younger patients.\nThis drug is known to be substantially excreted by the kidney, and the risk of toxic reactions to this drug may
+ be greater in patients with impaired renal function. Because elderly patients are more likely to have decreased renal function, care should be taken in dose se
+lection, and it may be useful to monitor renal function .'
+    PASSAGE_0035 (2 lines, 139 chars): '8.6 Renal Impairment'
+      FULL: '8.6 Renal Impairment\nAcamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .'
+    PASSAGE_0036 (2 lines, 434 chars): '10 OVERDOSAGE'
+      FULL: '10 OVERDOSAGE\nIn all reported cases of acute overdosage with acamprosate calcium (total reported doses of up to 56 grams of acamprosate calcium),
+the only symptom that could be reasonably associated with acamprosate calcium was diarrhea. Hypercalcemia has not been reported in cases of acute overdose. A ri
+sk of hypercalcemia should be considered in chronic overdosage only. Treatment of overdose should be symptomatic and supportive.'
+    PASSAGE_0037 (4 lines, 1301 chars): '11 DESCRIPTION'
+      FULL: '11 DESCRIPTION\nAcamprosate calcium delayed-release tablets are supplied as an enteric-coated tablet for oral administration. Acamprosate calcium,
+USP is a synthetic compound with a chemical structure similar to that of the endogenous amino acid homotaurine, which is a structural analogue of the amino acid
+ neurotransmitter γ-aminobutyric acid and the amino acid neuromodulator taurine. Its chemical name is calcium bis 3-(acetylamino) propane-1-sulfonate]. Its chem
+ical formula is C10H20CaN2O8S2 and molecular weight is 400.5 g/mol. Its structural formula is:\nAcamprosate calcium, USP is a white to almost white powder, odor
+less or nearly odorless powder. It is freely soluble in water and practically insoluble in alcohol and methylene chloride.\nEach acamprosate calcium delayed-rel
+ease tablet contains acamprosate calcium, USP 333 mg, equivalent to 300 mg of acamprosate. Inactive ingredients in acamprosate calcium delayed-release tablets i
+nclude: colloidal silicon dioxide, crospovidone, methacrylic acid copolymer dispersion, magnesium silicate, magnesium stearate, microcrystalline cellulose, poly
+vinyl pyrollidone, propylene glycol, sodium starch glycolate, and talc. Sulfites were used in the synthesis of the drug substance and traces of residual sulfite
+s may be present in the drug product.'
+    PASSAGE_0038 (2 lines, 472 chars): '12.1 Mechanism of Action'
+    PASSAGE_0039 (5 lines, 993 chars): '12.2 Pharmacodynamics'
+      FULL: '12.2 Pharmacodynamics\nPharmacodynamic studies have shown that acamprosate calcium reduces alcohol intake in alcohol-dependent animals in a dose-de
+pendent manner and that this effect appears to be specific to alcohol and the mechanisms of alcohol dependence.\nAcamprosate calcium has negligible observable c
+entral nervous system (CNS) activity in animals outside of its effects on alcohol dependence, exhibiting no anticonvulsant, antidepressant, or anxiolytic activi
+ty.\nThe administration of acamprosate calcium is not associated with the development of tolerance or dependence in animal studies. Acamprosate calcium did not
+produce any evidence of withdrawal symptoms in patients in clinical trials at therapeutic doses. Post marketing data, collected retrospectively outside the U.S.
+ have provided no evidence of acamprosate calcium abuse or dependence.\nAcamprosate calcium is not known to cause alcohol aversion and does not cause a disulfir
+am-like reaction as a result of ethanol ingestion.'
+    PASSAGE_0040 (2 lines, 610 chars): '12.3\tAbsorption'
+root@7e48d58e23f3:/workspace#

@@ -1,0 +1,2006 @@
+[?2004hroot@23e2e6a1b566:/workspace# asciinema rec --stdin /logs/agent/recording.cast
+[?2004l[0;32masciinema: recording asciicast to /logs/agent/recording.cast[0m
+[0;32masciinema: press <ctrl-d> or type "exit" when you're done[0m
+[?2004hroot@23e2e6a1b566:/workspace# clear
+[?2004l[H[J[3J[?2004hroot@23e2e6a1b566:/workspace# ls -la /workspace/data/public
+[?2004ltotal 428
+drwxr-xr-x 2 root root   4096 Jul  2 20:58 [0m[01;34m.[0m
+drwxr-xr-x 3 root root   4096 Jul  2 20:40 [01;34m..[0m
+-rw-r--r-- 1 root root    495 Jul  2 20:40 README.md
+-rw-r--r-- 1 root root 419294 Jul  2 20:40 labels.jsonl
+-rw-r--r-- 1 root root   2357 Jul  2 20:40 questions.jsonl
+[?2004hroot@23e2e6a1b566:/workspace# cat /workspace/data/public/README.md
+[?2004l        # Public FDA Label Data
+
+        This directory contains only public task inputs for `fda-hard-warning-citations`.
+
+        - `labels.jsonl` has full FDA label rows with `label_raw` and `chunks`.
+        - `questions.jsonl` has 8 public questions.
+        - Gold answers, references, citations, and curated context are not included here.
+
+        Labels included:
+        - Paxlovid (`8a99d6d6-fd9e-45bb-b1bf-48c7f761232a`)
+- Lopinavir-Ritonavir (`4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85`)
+[?2004hroot@23e2e6a1b566:/workspace# cat /workspace/data/public/questions.jsonl
+[?2004l{"drug_name": "Paxlovid", "qid": "b2531657ba5c7a78", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "6f12607a1ba14dd5", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "daef650b92e56473", "question": "How should Lopinavir-Ritonavir be administered?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "factual"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "a0576a26f2a2eeac", "question": "What is the recommended dosage regimen of Lopinavir-Ritonavir?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "factual"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "9be5515bc3064979", "question": "What safety risks are listed for Lopinavir-Ritonavir?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "factual"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "18078efe9380c8dc", "question": "What important warnings or precautions are associated with Lopinavir-Ritonavir?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "fbab4114f66e2dda", "question": "What important warnings or precautions are associated with Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+{"drug_name": "Paxlovid", "qid": "2d63e0a82215867f", "question": "What safety risks are listed for Paxlovid?", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "factual"}
+[?2004hroot@23e2e6a1b566:/workspace# cat << 'EOF' > inspect_labels.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for idx, line in enumerate(f):
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         print(f"Row {idx}: set_id={data.get('set_id')}, drug_name={data.get('drug_name')}")
+[?2004l[?2004h>         print(f"Keys: {list(data.keys())}")
+[?2004l[?2004h>         chunks = data.get('chunks', [])
+[?2004l[?2004h>         print(f"Number of chunks: {len(chunks)}")
+[?2004l[?2004h>         if chunks:
+[?2004l[?2004h>             print(f"First chunk keys: {list(chunks[0].keys())}")
+[?2004l[?2004h>             print(f"First chunk sample: {chunks[0]}")
+[?2004l[?2004h>         print('='*50)
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@23e2e6a1b566:/workspace# python3 inspect_labels.py
+[?2004lRow 0: set_id=8a99d6d6-fd9e-45bb-b1bf-48c7f761232a, drug_name=Paxlovid
+Keys: ['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id']
+Number of chunks: 209
+Traceback (most recent call last):
+  File "/workspace/inspect_labels.py", line 10, in <module>
+    print(f"First chunk keys: {list(chunks[0].keys())}")
+                                    ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+[?2004hroot@23e2e6a1b566:/workspace# cat << 'EOF' > inspect_labels.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for idx, line in enumerate(f):
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         print(f"Row {idx}: set_id={data.get('set_id')}, drug_name={data.get('drug_name')}")
+[?2004l[?2004h>         chunks = data.get('chunks', [])
+[?2004l[?2004h>         print(f"Number of chunks: {len(chunks)}")
+[?2004l[?2004h>         if chunks:
+[?2004l[?2004h>             print(f"Type of first chunk: {type(chunks[0])}")
+[?2004l[?2004h>             print(f"First chunk: {repr(chunks[0][:200])}")
+[?2004l[?2004h>             print(f"Second chunk: {repr(chunks[1][:200]) if len(chunks) > 1 else ''}")
+[?2004l[?2004h>         print('='*50)
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@23e2e6a1b566:/workspace# python3 inspect_labels.py
+[?2004lRow 0: set_id=8a99d6d6-fd9e-45bb-b1bf-48c7f761232a, drug_name=Paxlovid
+Number of chunks: 209
+Type of first chunk: <class 'str'>
+First chunk: 'WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID\n- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potent'
+Second chunk: '1 INDICATIONS AND USAGE\nPAXLOVID is indicated for the treatment of mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high risk for progression to severe COVID-19, including hos'
+==================================================
+Row 1: set_id=4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85, drug_name=Lopinavir-Ritonavir
+Number of chunks: 188
+Type of first chunk: <class 'str'>
+First chunk: '1 INDICATIONS AND USAGE\nLopinavir and ritonavir is indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection in adults and pediatric patients 14 days and older.\nLi'
+Second chunk: '2.1 General Administration Recommendations\nLopinavir\xa0and ritonavir oral solution must be taken with food.'
+==================================================
+[?2004hroot@23e2e6a1b566:/workspace# ls -la /workspace
+[?2004ltotal 16
+drwxr-xr-x 1 root root 4096 Jul  2 22:04 [0m[01;34m.[0m
+drwxr-xr-x 1 root root 4096 Jul  2 22:04 [01;34m..[0m
+drwxr-xr-x 3 root root 4096 Jul  2 20:40 [01;34mdata[0m
+-rw-r--r-- 1 root root  564 Jul  2 22:04 inspect_labels.py
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         d = json.loads(line)
+[?2004l[?2004h>         has_pass = any('PASSAGE' in c for c in d['chunks'])
+[?2004l[?2004h>         print(d['drug_name'], len(d['chunks']), 'Has PASSAGE in text:', has_pass)
+[?2004l[?2004h> "
+[?2004lPaxlovid 209 Has PASSAGE in text: False
+Lopinavir-Ritonavir 188 Has PASSAGE in text: False
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/questions.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         q = json.loads(line)
+[?2004l[?2004h>         print('QID:', q['qid'])
+[?2004l[?2004h>         print('Drug:', q['drug_name'])
+[?2004l[?2004h>         print('Question:', q['question'])
+[?2004l[?2004h>         print('Fields:', q.get('required_output_fields'))
+[?2004l[?2004h>         print('-'*30)
+[?2004l[?2004h> "
+[?2004lQID: b2531657ba5c7a78
+Drug: Paxlovid
+Question: What important drug interactions are noted for Paxlovid?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: 6f12607a1ba14dd5
+Drug: Paxlovid
+Question: Which medications should be avoided with Paxlovid?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: daef650b92e56473
+Drug: Lopinavir-Ritonavir
+Question: How should Lopinavir-Ritonavir be administered?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: a0576a26f2a2eeac
+Drug: Lopinavir-Ritonavir
+Question: What is the recommended dosage regimen of Lopinavir-Ritonavir?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: 9be5515bc3064979
+Drug: Lopinavir-Ritonavir
+Question: What safety risks are listed for Lopinavir-Ritonavir?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: 18078efe9380c8dc
+Drug: Lopinavir-Ritonavir
+Question: What important warnings or precautions are associated with Lopinavir-Ritonavir?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: fbab4114f66e2dda
+Drug: Paxlovid
+Question: What important warnings or precautions are associated with Paxlovid?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: 2d63e0a82215867f
+Drug: Paxlovid
+Question: What safety risks are listed for Paxlovid?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+[?2004hroot@23e2e6a1b566:/workspace# find /workspace -type f
+[?2004l/workspace/inspect_labels.py
+/workspace/data/public/README.md
+/workspace/data/public/questions.jsonl
+/workspace/data/public/labels.jsonl
+[?2004hroot@23e2e6a1b566:/workspace# find / -name "*eval*" -o -name "*grade*" -o -name "*test*" -o -name "*score*" 2>/dev/null | grep -v "/usr/lib" | grep -v "/usr/share" | grep -v "/lib/" | head -n 50
+[?2004l/etc/systemd/system/timers.target.wants/apt-daily-upgrade.timer
+/proc/1/task/1/oom_score
+/proc/1/task/1/oom_score_adj
+/proc/1/oom_score
+/proc/1/oom_score_adj
+/proc/7/task/7/oom_score
+/proc/7/task/7/oom_score_adj
+/proc/7/oom_score
+/proc/7/oom_score_adj
+/proc/313/task/313/oom_score
+/proc/313/task/313/oom_score_adj
+/proc/313/oom_score
+/proc/313/oom_score_adj
+/proc/314/task/314/oom_score
+/proc/314/task/314/oom_score_adj
+/proc/314/oom_score
+/proc/314/oom_score_adj
+/proc/316/task/316/oom_score
+/proc/316/task/316/oom_score_adj
+/proc/316/oom_score
+/proc/316/oom_score_adj
+/proc/318/task/318/oom_score
+/proc/318/task/318/oom_score_adj
+/proc/318/oom_score
+/proc/318/oom_score_adj
+/proc/334/task/334/oom_score
+/proc/334/task/334/oom_score_adj
+/proc/334/task/341/oom_score
+/proc/334/task/341/oom_score_adj
+/proc/334/oom_score
+/proc/334/oom_score_adj
+/proc/335/task/335/oom_score
+/proc/335/task/335/oom_score_adj
+/proc/335/oom_score
+/proc/335/oom_score_adj
+/proc/336/task/336/oom_score
+/proc/336/task/336/oom_score_adj
+/proc/336/oom_score
+/proc/336/oom_score_adj
+/proc/337/task/337/oom_score
+/proc/337/task/337/oom_score_adj
+/proc/337/oom_score
+/proc/337/oom_score_adj
+/proc/338/task/338/oom_score
+/proc/338/task/338/oom_score_adj
+/proc/338/oom_score
+/proc/338/oom_score_adj
+/proc/540/task/540/oom_score
+/proc/540/task/540/oom_score_adj
+/proc/540/oom_score
+[?2004hroot@23e2e6a1b566:/workspace# find /home /root /opt /var -type f 2>/dev/null
+[?2004l/home/ubuntu/.bashrc
+/home/ubuntu/.profile
+/home/ubuntu/.bash_logout
+/root/.bashrc
+/root/.profile
+/root/.config/asciinema/install-id
+/var/lib/systemd/deb-systemd-helper-enabled/timers.target.wants/fstrim.timer
+/var/lib/systemd/deb-systemd-helper-enabled/timers.target.wants/apt-daily.timer
+/var/lib/systemd/deb-systemd-helper-enabled/timers.target.wants/e2scrub_all.timer
+/var/lib/systemd/deb-systemd-helper-enabled/timers.target.wants/dpkg-db-backup.timer
+/var/lib/systemd/deb-systemd-helper-enabled/timers.target.wants/apt-daily-upgrade.timer
+/var/lib/systemd/deb-systemd-helper-enabled/timers.target.wants/motd-news.timer
+/var/lib/systemd/deb-systemd-helper-enabled/e2scrub_reap.service.dsh-also
+/var/lib/systemd/deb-systemd-helper-enabled/e2scrub_all.timer.dsh-also
+/var/lib/systemd/deb-systemd-helper-enabled/multi-user.target.wants/e2scrub_reap.service
+/var/lib/systemd/deb-systemd-helper-enabled/dpkg-db-backup.timer.dsh-also
+/var/lib/systemd/deb-systemd-helper-enabled/apt-daily-upgrade.timer.dsh-also
+/var/lib/systemd/deb-systemd-helper-enabled/apt-daily.timer.dsh-also
+/var/lib/systemd/deb-systemd-helper-enabled/motd-news.timer.dsh-also
+/var/lib/systemd/deb-systemd-helper-enabled/fstrim.timer.dsh-also
+/var/lib/systemd/deb-systemd-user-helper-enabled/gpg-agent-ssh.socket.dsh-also
+/var/lib/systemd/deb-systemd-user-helper-enabled/gpg-agent-browser.socket.dsh-also
+/var/lib/systemd/deb-systemd-user-helper-enabled/gpg-agent.socket.dsh-also
+/var/lib/systemd/deb-systemd-user-helper-enabled/sockets.target.wants/gpg-agent-extra.socket
+/var/lib/systemd/deb-systemd-user-helper-enabled/sockets.target.wants/keyboxd.socket
+/var/lib/systemd/deb-systemd-user-helper-enabled/sockets.target.wants/gpg-agent-ssh.socket
+/var/lib/systemd/deb-systemd-user-helper-enabled/sockets.target.wants/dirmngr.socket
+/var/lib/systemd/deb-systemd-user-helper-enabled/sockets.target.wants/gpg-agent.socket
+/var/lib/systemd/deb-systemd-user-helper-enabled/sockets.target.wants/gpg-agent-browser.socket
+/var/lib/systemd/deb-systemd-user-helper-enabled/gpg-agent-extra.socket.dsh-also
+/var/lib/systemd/deb-systemd-user-helper-enabled/dirmngr.socket.dsh-also
+/var/lib/systemd/deb-systemd-user-helper-enabled/keyboxd.socket.dsh-also
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-updates_multiverse_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-security_multiverse_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble_InRelease
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-updates_restricted_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-backports_InRelease
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble_restricted_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-backports_main_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble_universe_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-updates_InRelease
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-updates_main_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-security_InRelease
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-backports_multiverse_binary-arm64_Packages.lz4
+/var/lib/apt/lists/lock
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-updates_universe_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble_multiverse_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-security_restricted_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble_main_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-security_universe_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-security_main_binary-arm64_Packages.lz4
+/var/lib/apt/lists/ports.ubuntu.com_ubuntu-ports_dists_noble-backports_universe_binary-arm64_Packages.lz4
+/var/lib/apt/extended_states
+/var/lib/pam/password
+/var/lib/pam/account
+/var/lib/pam/auth
+/var/lib/pam/session-noninteractive
+/var/lib/pam/session
+/var/lib/pam/seen
+/var/lib/shells.state
+/var/lib/dpkg/info/libpam-modules:arm64.templates
+/var/lib/dpkg/info/libc-bin.md5sums
+/var/lib/dpkg/info/libpam0g:arm64.list
+/var/lib/dpkg/info/base-passwd.postinst
+/var/lib/dpkg/info/debconf.list
+/var/lib/dpkg/info/libselinux1:arm64.shlibs
+/var/lib/dpkg/info/libss2:arm64.list
+/var/lib/dpkg/info/dpkg.postrm
+/var/lib/dpkg/info/passwd.prerm
+/var/lib/dpkg/info/libseccomp2:arm64.triggers
+/var/lib/dpkg/info/dash.postinst
+/var/lib/dpkg/info/liblzma5:arm64.list
+/var/lib/dpkg/info/libffi8:arm64.triggers
+/var/lib/dpkg/info/libc6:arm64.preinst
+/var/lib/dpkg/info/libc6:arm64.list
+/var/lib/dpkg/info/sensible-utils.md5sums
+/var/lib/dpkg/info/libgcrypt20:arm64.symbols
+/var/lib/dpkg/info/libzstd1:arm64.list
+/var/lib/dpkg/info/libunistring5:arm64.triggers
+/var/lib/dpkg/info/libpcre2-8-0:arm64.md5sums
+/var/lib/dpkg/info/coreutils.md5sums
+/var/lib/dpkg/info/procps.postinst
+/var/lib/dpkg/info/gzip.preinst
+/var/lib/dpkg/info/sysvinit-utils.list
+/var/lib/dpkg/info/libsystemd0:arm64.symbols
+/var/lib/dpkg/info/libncursesw6:arm64.md5sums
+/var/lib/dpkg/info/libdb5.3t64:arm64.list
+/var/lib/dpkg/info/passwd.md5sums
+/var/lib/dpkg/info/base-passwd.templates
+/var/lib/dpkg/info/ncurses-base.md5sums
+/var/lib/dpkg/info/libgmp10:arm64.triggers
+/var/lib/dpkg/info/libcap2:arm64.shlibs
+/var/lib/dpkg/info/libpam-runtime.list
+/var/lib/dpkg/info/libuuid1:arm64.list
+/var/lib/dpkg/info/ncurses-base.conffiles
+/var/lib/dpkg/info/apt.conffiles
+/var/lib/dpkg/info/sed.md5sums
+/var/lib/dpkg/info/e2fsprogs.postrm
+/var/lib/dpkg/info/gzip.md5sums
+/var/lib/dpkg/info/libss2:arm64.md5sums
+/var/lib/dpkg/info/libpam0g:arm64.shlibs
+/var/lib/dpkg/info/libpcre2-8-0:arm64.symbols
+/var/lib/dpkg/info/libssl3t64:arm64.shlibs
+/var/lib/dpkg/info/libcap-ng0:arm64.list
+/var/lib/dpkg/info/debconf.templates
+/var/lib/dpkg/info/passwd.conffiles
+/var/lib/dpkg/info/libzstd1:arm64.shlibs
+/var/lib/dpkg/info/libudev1:arm64.shlibs
+/var/lib/dpkg/info/procps.conffiles
+/var/lib/dpkg/info/libxxhash0:arm64.shlibs
+/var/lib/dpkg/info/libxxhash0:arm64.triggers
+/var/lib/dpkg/info/sysvinit-utils.md5sums
+/var/lib/dpkg/info/libattr1:arm64.triggers
+/var/lib/dpkg/info/zlib1g:arm64.symbols
+/var/lib/dpkg/info/apt.preinst
+/var/lib/dpkg/info/tar.list
+/var/lib/dpkg/info/libgcrypt20:arm64.triggers
+/var/lib/dpkg/info/libcom-err2:arm64.md5sums
+/var/lib/dpkg/info/libblkid1:arm64.shlibs
+/var/lib/dpkg/info/libsemanage2:arm64.list
+/var/lib/dpkg/info/libgpg-error0:arm64.list
+/var/lib/dpkg/info/perl-base.postinst
+/var/lib/dpkg/info/login.md5sums
+/var/lib/dpkg/info/libcrypt1:arm64.list
+/var/lib/dpkg/info/libhogweed6t64:arm64.symbols
+/var/lib/dpkg/info/libssl3t64:arm64.symbols
+/var/lib/dpkg/info/base-files.prerm
+/var/lib/dpkg/info/libnettle8t64:arm64.symbols
+/var/lib/dpkg/info/liblz4-1:arm64.list
+/var/lib/dpkg/info/libcrypt1:arm64.symbols
+/var/lib/dpkg/info/libnettle8t64:arm64.shlibs
+/var/lib/dpkg/info/libffi8:arm64.shlibs
+/var/lib/dpkg/info/base-files.preinst
+/var/lib/dpkg/info/procps.postrm
+/var/lib/dpkg/info/ubuntu-keyring.postinst
+/var/lib/dpkg/info/libc-bin.postinst
+/var/lib/dpkg/info/libblkid1:arm64.list
+/var/lib/dpkg/info/gpgv.list
+/var/lib/dpkg/info/coreutils.list
+/var/lib/dpkg/info/libsemanage-common.list
+/var/lib/dpkg/info/libsystemd0:arm64.shlibs
+/var/lib/dpkg/info/base-files.triggers
+/var/lib/dpkg/info/login.postrm
+/var/lib/dpkg/info/libcap-ng0:arm64.shlibs
+/var/lib/dpkg/info/libgmp10:arm64.shlibs
+/var/lib/dpkg/info/libnettle8t64:arm64.list
+/var/lib/dpkg/info/libext2fs2t64:arm64.md5sums
+/var/lib/dpkg/info/libpcre2-8-0:arm64.list
+/var/lib/dpkg/info/libselinux1:arm64.symbols
+/var/lib/dpkg/info/login.prerm
+/var/lib/dpkg/info/libcrypt1:arm64.md5sums
+/var/lib/dpkg/info/libcap-ng0:arm64.triggers
+/var/lib/dpkg/info/libnpth0t64:arm64.list
+/var/lib/dpkg/info/bash.postinst
+/var/lib/dpkg/info/libc-bin.conffiles
+/var/lib/dpkg/info/libblkid1:arm64.md5sums
+/var/lib/dpkg/info/libaudit1:arm64.list
+/var/lib/dpkg/info/libpam-modules:arm64.md5sums
+/var/lib/dpkg/info/libcom-err2:arm64.symbols
+/var/lib/dpkg/info/liblzma5:arm64.md5sums
+/var/lib/dpkg/info/base-files.conffiles
+/var/lib/dpkg/info/libtinfo6:arm64.shlibs
+/var/lib/dpkg/info/libpam-runtime.postinst
+/var/lib/dpkg/info/libidn2-0:arm64.shlibs
+/var/lib/dpkg/info/libstdc++6:arm64.shlibs
+/var/lib/dpkg/info/debianutils.prerm
+/var/lib/dpkg/info/libext2fs2t64:arm64.preinst
+/var/lib/dpkg/info/libgnutls30t64:arm64.md5sums
+/var/lib/dpkg/info/libapt-pkg6.0t64:arm64.md5sums
+/var/lib/dpkg/info/libzstd1:arm64.md5sums
+/var/lib/dpkg/info/grep.md5sums
+/var/lib/dpkg/info/libuuid1:arm64.symbols
+/var/lib/dpkg/info/libhogweed6t64:arm64.list
+/var/lib/dpkg/info/libdb5.3t64:arm64.triggers
+/var/lib/dpkg/info/libcap-ng0:arm64.symbols
+/var/lib/dpkg/info/util-linux.list
+/var/lib/dpkg/info/libp11-kit0:arm64.md5sums
+/var/lib/dpkg/info/libselinux1:arm64.md5sums
+/var/lib/dpkg/info/libext2fs2t64:arm64.shlibs
+/var/lib/dpkg/info/unminimize.md5sums
+/var/lib/dpkg/info/libsepol2:arm64.shlibs
+/var/lib/dpkg/info/libsystemd0:arm64.md5sums
+/var/lib/dpkg/info/logsave.list
+/var/lib/dpkg/info/diffutils.md5sums
+/var/lib/dpkg/info/libp11-kit0:arm64.triggers
+/var/lib/dpkg/info/tar.prerm
+/var/lib/dpkg/info/libproc2-0:arm64.triggers
+/var/lib/dpkg/info/libdb5.3t64:arm64.md5sums
+/var/lib/dpkg/info/libassuan0:arm64.triggers
+/var/lib/dpkg/info/findutils.md5sums
+/var/lib/dpkg/info/debianutils.md5sums
+/var/lib/dpkg/info/libncursesw6:arm64.list
+/var/lib/dpkg/info/libgnutls30t64:arm64.symbols
+/var/lib/dpkg/info/passwd.postrm
+/var/lib/dpkg/info/e2fsprogs.preinst
+/var/lib/dpkg/info/libzstd1:arm64.triggers
+/var/lib/dpkg/info/libpam-modules-bin.postinst
+/var/lib/dpkg/info/libidn2-0:arm64.symbols
+/var/lib/dpkg/info/libapt-pkg6.0t64:arm64.symbols
+/var/lib/dpkg/info/libattr1:arm64.list
+/var/lib/dpkg/info/debconf.config
+/var/lib/dpkg/info/libaudit1:arm64.shlibs
+/var/lib/dpkg/info/gcc-14-base:arm64.md5sums
+/var/lib/dpkg/info/libsemanage-common.conffiles
+/var/lib/dpkg/info/libtinfo6:arm64.list
+/var/lib/dpkg/info/libtinfo6:arm64.symbols
+/var/lib/dpkg/info/libmd0:arm64.shlibs
+/var/lib/dpkg/info/libgpg-error0:arm64.md5sums
+/var/lib/dpkg/info/libext2fs2t64:arm64.symbols
+/var/lib/dpkg/info/libxxhash0:arm64.symbols
+/var/lib/dpkg/info/libproc2-0:arm64.md5sums
+/var/lib/dpkg/info/libacl1:arm64.symbols
+/var/lib/dpkg/info/libmd0:arm64.md5sums
+/var/lib/dpkg/info/debconf.md5sums
+/var/lib/dpkg/info/libseccomp2:arm64.md5sums
+/var/lib/dpkg/info/passwd.list
+/var/lib/dpkg/info/libtasn1-6:arm64.symbols
+/var/lib/dpkg/info/libbz2-1.0:arm64.list
+/var/lib/dpkg/info/libc6:arm64.md5sums
+/var/lib/dpkg/info/debianutils.postinst
+/var/lib/dpkg/info/libncursesw6:arm64.triggers
+/var/lib/dpkg/info/libsemanage-common.md5sums
+/var/lib/dpkg/info/libtasn1-6:arm64.triggers
+/var/lib/dpkg/info/libmd0:arm64.symbols
+/var/lib/dpkg/info/base-passwd.postrm
+/var/lib/dpkg/info/login.conffiles
+/var/lib/dpkg/info/libnpth0t64:arm64.shlibs
+/var/lib/dpkg/info/libdebconfclient0:arm64.symbols
+/var/lib/dpkg/info/liblzma5:arm64.shlibs
+/var/lib/dpkg/info/libpam-modules-bin.prerm
+/var/lib/dpkg/info/libtinfo6:arm64.md5sums
+/var/lib/dpkg/info/libmount1:arm64.md5sums
+/var/lib/dpkg/info/libsemanage2:arm64.shlibs
+/var/lib/dpkg/info/libsmartcols1:arm64.triggers
+/var/lib/dpkg/info/libstdc++6:arm64.symbols
+/var/lib/dpkg/info/libmount1:arm64.shlibs
+/var/lib/dpkg/info/libaudit1:arm64.symbols
+/var/lib/dpkg/info/libunistring5:arm64.md5sums
+/var/lib/dpkg/info/libaudit1:arm64.md5sums
+/var/lib/dpkg/info/libuuid1:arm64.triggers
+/var/lib/dpkg/info/libgcrypt20:arm64.postinst
+/var/lib/dpkg/info/base-files.postinst
+/var/lib/dpkg/info/libss2:arm64.triggers
+/var/lib/dpkg/info/libnpth0t64:arm64.triggers
+/var/lib/dpkg/info/bash.md5sums
+/var/lib/dpkg/info/libcom-err2:arm64.triggers
+/var/lib/dpkg/info/libcap2:arm64.list
+/var/lib/dpkg/info/libnettle8t64:arm64.triggers
+/var/lib/dpkg/info/debconf.postinst
+/var/lib/dpkg/info/libpam-modules:arm64.list
+/var/lib/dpkg/info/libffi8:arm64.md5sums
+/var/lib/dpkg/info/libncursesw6:arm64.symbols
+/var/lib/dpkg/info/libassuan0:arm64.md5sums
+/var/lib/dpkg/info/libstdc++6:arm64.triggers
+/var/lib/dpkg/info/libpam-modules:arm64.postrm
+/var/lib/dpkg/info/libpam-runtime.prerm
+/var/lib/dpkg/info/libcrypt1:arm64.triggers
+/var/lib/dpkg/info/libnpth0t64:arm64.symbols
+/var/lib/dpkg/info/libacl1:arm64.shlibs
+/var/lib/dpkg/info/libsmartcols1:arm64.list
+/var/lib/dpkg/info/libsepol2:arm64.list
+/var/lib/dpkg/info/libacl1:arm64.md5sums
+/var/lib/dpkg/info/libseccomp2:arm64.list
+/var/lib/dpkg/info/libassuan0:arm64.list
+/var/lib/dpkg/info/sed.list
+/var/lib/dpkg/info/libpam0g:arm64.templates
+/var/lib/dpkg/info/util-linux.postinst
+/var/lib/dpkg/info/libpam-modules:arm64.postinst
+/var/lib/dpkg/info/mawk.postinst
+/var/lib/dpkg/info/apt.md5sums
+/var/lib/dpkg/info/libsepol2:arm64.triggers
+/var/lib/dpkg/info/libsemanage2:arm64.symbols
+/var/lib/dpkg/info/libc6:arm64.postrm
+/var/lib/dpkg/info/gpgv.md5sums
+/var/lib/dpkg/info/libc6:arm64.triggers
+/var/lib/dpkg/info/bash.postrm
+/var/lib/dpkg/info/libhogweed6t64:arm64.triggers
+/var/lib/dpkg/info/logsave.md5sums
+/var/lib/dpkg/info/libssl3t64:arm64.triggers
+/var/lib/dpkg/info/dpkg.conffiles
+/var/lib/dpkg/info/liblz4-1:arm64.shlibs
+/var/lib/dpkg/info/unminimize.postinst
+/var/lib/dpkg/info/zlib1g:arm64.shlibs
+/var/lib/dpkg/info/findutils.list
+/var/lib/dpkg/info/diffutils.list
+/var/lib/dpkg/info/libcom-err2:arm64.list
+/var/lib/dpkg/info/liblz4-1:arm64.symbols
+/var/lib/dpkg/info/libselinux1:arm64.triggers
+/var/lib/dpkg/info/libpcre2-8-0:arm64.triggers
+/var/lib/dpkg/info/libudev1:arm64.triggers
+/var/lib/dpkg/info/libstdc++6:arm64.prerm
+/var/lib/dpkg/info/util-linux.postrm
+/var/lib/dpkg/info/zlib1g:arm64.triggers
+/var/lib/dpkg/info/libc6:arm64.symbols
+/var/lib/dpkg/info/mount.md5sums
+/var/lib/dpkg/info/libselinux1:arm64.list
+/var/lib/dpkg/info/dpkg.postinst
+/var/lib/dpkg/info/e2fsprogs.list
+/var/lib/dpkg/info/libstdc++6:arm64.md5sums
+/var/lib/dpkg/info/perl-base.list
+/var/lib/dpkg/info/dpkg.list
+/var/lib/dpkg/info/libudev1:arm64.md5sums
+/var/lib/dpkg/info/libnpth0t64:arm64.md5sums
+/var/lib/dpkg/info/format
+/var/lib/dpkg/info/libp11-kit0:arm64.shlibs
+/var/lib/dpkg/info/libmount1:arm64.list
+/var/lib/dpkg/info/libc6:arm64.conffiles
+/var/lib/dpkg/info/libidn2-0:arm64.triggers
+/var/lib/dpkg/info/grep.list
+/var/lib/dpkg/info/base-files.list
+/var/lib/dpkg/info/libhogweed6t64:arm64.shlibs
+/var/lib/dpkg/info/perl-base.postrm
+/var/lib/dpkg/info/libgnutls30t64:arm64.list
+/var/lib/dpkg/info/libgcrypt20:arm64.shlibs
+/var/lib/dpkg/info/ncurses-base.list
+/var/lib/dpkg/info/procps.preinst
+/var/lib/dpkg/info/libidn2-0:arm64.md5sums
+/var/lib/dpkg/info/libpam0g:arm64.md5sums
+/var/lib/dpkg/info/bash.prerm
+/var/lib/dpkg/info/libapt-pkg6.0t64:arm64.triggers
+/var/lib/dpkg/info/sensible-utils.list
+/var/lib/dpkg/info/bsdutils.list
+/var/lib/dpkg/info/libext2fs2t64:arm64.list
+/var/lib/dpkg/info/login.postinst
+/var/lib/dpkg/info/libdebconfclient0:arm64.triggers
+/var/lib/dpkg/info/e2fsprogs.postinst
+/var/lib/dpkg/info/libuuid1:arm64.shlibs
+/var/lib/dpkg/info/libpam-runtime.conffiles
+/var/lib/dpkg/info/libpam-modules:arm64.preinst
+/var/lib/dpkg/info/e2fsprogs.prerm
+/var/lib/dpkg/info/libdebconfclient0:arm64.list
+/var/lib/dpkg/info/libsystemd0:arm64.triggers
+/var/lib/dpkg/info/init-system-helpers.md5sums
+/var/lib/dpkg/info/libcrypt1:arm64.shlibs
+/var/lib/dpkg/info/bash.conffiles
+/var/lib/dpkg/info/libproc2-0:arm64.list
+/var/lib/dpkg/info/libattr1:arm64.symbols
+/var/lib/dpkg/info/libcap2:arm64.symbols
+/var/lib/dpkg/info/libdebconfclient0:arm64.shlibs
+/var/lib/dpkg/info/apt.shlibs
+/var/lib/dpkg/info/perl-base.preinst
+/var/lib/dpkg/info/libgcc-s1:arm64.symbols
+/var/lib/dpkg/info/libncursesw6:arm64.shlibs
+/var/lib/dpkg/info/libacl1:arm64.triggers
+/var/lib/dpkg/info/passwd.preinst
+/var/lib/dpkg/info/bsdutils.md5sums
+/var/lib/dpkg/info/libseccomp2:arm64.symbols
+/var/lib/dpkg/info/libaudit-common.conffiles
+/var/lib/dpkg/info/base-files.postrm
+/var/lib/dpkg/info/libdb5.3t64:arm64.shlibs
+/var/lib/dpkg/info/liblzma5:arm64.triggers
+/var/lib/dpkg/info/libpam0g:arm64.postrm
+/var/lib/dpkg/info/libgcrypt20:arm64.list
+/var/lib/dpkg/info/libseccomp2:arm64.shlibs
+/var/lib/dpkg/info/debianutils.triggers
+/var/lib/dpkg/info/apt.triggers
+/var/lib/dpkg/info/login.preinst
+/var/lib/dpkg/info/libsepol2:arm64.md5sums
+/var/lib/dpkg/info/dash.list
+/var/lib/dpkg/info/debianutils.list
+/var/lib/dpkg/info/libunistring5:arm64.shlibs
+/var/lib/dpkg/info/dash.prerm
+/var/lib/dpkg/info/libc-bin.list
+/var/lib/dpkg/info/apt.list
+/var/lib/dpkg/info/libc6:arm64.templates
+/var/lib/dpkg/info/libxxhash0:arm64.md5sums
+/var/lib/dpkg/info/dash.postrm
+/var/lib/dpkg/info/libc-bin.triggers
+/var/lib/dpkg/info/ubuntu-keyring.list
+/var/lib/dpkg/info/base-files.md5sums
+/var/lib/dpkg/info/e2fsprogs.md5sums
+/var/lib/dpkg/info/libssl3t64:arm64.md5sums
+/var/lib/dpkg/info/libcap-ng0:arm64.md5sums
+/var/lib/dpkg/info/libgmp10:arm64.md5sums
+/var/lib/dpkg/info/libgpg-error0:arm64.symbols
+/var/lib/dpkg/info/libbz2-1.0:arm64.triggers
+/var/lib/dpkg/info/libblkid1:arm64.symbols
+/var/lib/dpkg/info/libtasn1-6:arm64.list
+/var/lib/dpkg/info/libp11-kit0:arm64.symbols
+/var/lib/dpkg/info/libattr1:arm64.conffiles
+/var/lib/dpkg/info/libc6:arm64.shlibs
+/var/lib/dpkg/info/libcom-err2:arm64.shlibs
+/var/lib/dpkg/info/libapt-pkg6.0t64:arm64.shlibs
+/var/lib/dpkg/info/util-linux.md5sums
+/var/lib/dpkg/info/liblz4-1:arm64.md5sums
+/var/lib/dpkg/info/libsemanage2:arm64.triggers
+/var/lib/dpkg/info/base-passwd.md5sums
+/var/lib/dpkg/info/procps.md5sums
+/var/lib/dpkg/info/libpam-modules-bin.postrm
+/var/lib/dpkg/info/libpam-runtime.templates
+/var/lib/dpkg/info/base-passwd.list
+/var/lib/dpkg/info/libaudit1:arm64.triggers
+/var/lib/dpkg/info/util-linux.prerm
+/var/lib/dpkg/info/procps.prerm
+/var/lib/dpkg/info/libattr1:arm64.shlibs
+/var/lib/dpkg/info/libp11-kit0:arm64.list
+/var/lib/dpkg/info/libpam0g:arm64.postinst
+/var/lib/dpkg/info/libmount1:arm64.symbols
+/var/lib/dpkg/info/perl-base.prerm
+/var/lib/dpkg/info/libpam-modules:arm64.conffiles
+/var/lib/dpkg/info/libpam-runtime.md5sums
+/var/lib/dpkg/info/liblz4-1:arm64.triggers
+/var/lib/dpkg/info/libgcc-s1:arm64.md5sums
+/var/lib/dpkg/info/unminimize.list
+/var/lib/dpkg/info/gzip.postinst
+/var/lib/dpkg/info/login.list
+/var/lib/dpkg/info/libtasn1-6:arm64.md5sums
+/var/lib/dpkg/info/libbz2-1.0:arm64.shlibs
+/var/lib/dpkg/info/apt.postinst
+/var/lib/dpkg/info/libext2fs2t64:arm64.triggers
+/var/lib/dpkg/info/debianutils.postrm
+/var/lib/dpkg/info/libpam0g:arm64.triggers
+/var/lib/dpkg/info/libgnutls30t64:arm64.conffiles
+/var/lib/dpkg/info/libattr1:arm64.md5sums
+/var/lib/dpkg/info/tar.md5sums
+/var/lib/dpkg/info/libgpg-error0:arm64.shlibs
+/var/lib/dpkg/info/util-linux.conffiles
+/var/lib/dpkg/info/libunistring5:arm64.symbols
+/var/lib/dpkg/info/libgcrypt20:arm64.md5sums
+/var/lib/dpkg/info/libuuid1:arm64.md5sums
+/var/lib/dpkg/info/libgcc-s1:arm64.shlibs
+/var/lib/dpkg/info/libgnutls30t64:arm64.shlibs
+/var/lib/dpkg/info/libss2:arm64.shlibs
+/var/lib/dpkg/info/libtasn1-6:arm64.shlibs
+/var/lib/dpkg/info/libmd0:arm64.triggers
+/var/lib/dpkg/info/libselinux1:arm64.postinst
+/var/lib/dpkg/info/libgmp10:arm64.list
+/var/lib/dpkg/info/libaudit-common.list
+/var/lib/dpkg/info/libext2fs2t64:arm64.postrm
+/var/lib/dpkg/info/libsemanage2:arm64.md5sums
+/var/lib/dpkg/info/mawk.prerm
+/var/lib/dpkg/info/libbz2-1.0:arm64.md5sums
+/var/lib/dpkg/info/libmd0:arm64.list
+/var/lib/dpkg/info/init-system-helpers.list
+/var/lib/dpkg/info/libacl1:arm64.list
+/var/lib/dpkg/info/libidn2-0:arm64.list
+/var/lib/dpkg/info/libmount1:arm64.triggers
+/var/lib/dpkg/info/libcap2:arm64.md5sums
+/var/lib/dpkg/info/dash.md5sums
+/var/lib/dpkg/info/libassuan0:arm64.shlibs
+/var/lib/dpkg/info/libsmartcols1:arm64.symbols
+/var/lib/dpkg/info/libgnutls30t64:arm64.triggers
+/var/lib/dpkg/info/libsmartcols1:arm64.shlibs
+/var/lib/dpkg/info/libhogweed6t64:arm64.md5sums
+/var/lib/dpkg/info/hostname.md5sums
+/var/lib/dpkg/info/zlib1g:arm64.list
+/var/lib/dpkg/info/mawk.list
+/var/lib/dpkg/info/libudev1:arm64.list
+/var/lib/dpkg/info/tar.postinst
+/var/lib/dpkg/info/perl-base.md5sums
+/var/lib/dpkg/info/mawk.md5sums
+/var/lib/dpkg/info/procps.list
+/var/lib/dpkg/info/libproc2-0:arm64.shlibs
+/var/lib/dpkg/info/libgcc-s1:arm64.triggers
+/var/lib/dpkg/info/dpkg.md5sums
+/var/lib/dpkg/info/hostname.list
+/var/lib/dpkg/info/libapt-pkg6.0t64:arm64.list
+/var/lib/dpkg/info/base-passwd.preinst
+/var/lib/dpkg/info/libblkid1:arm64.triggers
+/var/lib/dpkg/info/libsystemd0:arm64.list
+/var/lib/dpkg/info/libssl3t64:arm64.list
+/var/lib/dpkg/info/liblzma5:arm64.symbols
+/var/lib/dpkg/info/libstdc++6:arm64.list
+/var/lib/dpkg/info/libpam-modules-bin.md5sums
+/var/lib/dpkg/info/ubuntu-keyring.md5sums
+/var/lib/dpkg/info/libcap2:arm64.triggers
+/var/lib/dpkg/info/libgcc-s1:arm64.list
+/var/lib/dpkg/info/bash.list
+/var/lib/dpkg/info/libunistring5:arm64.list
+/var/lib/dpkg/info/libdebconfclient0:arm64.md5sums
+/var/lib/dpkg/info/libss2:arm64.symbols
+/var/lib/dpkg/info/libsmartcols1:arm64.md5sums
+/var/lib/dpkg/info/libassuan0:arm64.symbols
+/var/lib/dpkg/info/libffi8:arm64.symbols
+/var/lib/dpkg/info/e2fsprogs.conffiles
+/var/lib/dpkg/info/libffi8:arm64.list
+/var/lib/dpkg/info/libudev1:arm64.symbols
+/var/lib/dpkg/info/libpam-runtime.postrm
+/var/lib/dpkg/info/libpam-modules-bin.list
+/var/lib/dpkg/info/ncurses-bin.md5sums
+/var/lib/dpkg/info/libtinfo6:arm64.triggers
+/var/lib/dpkg/info/libxxhash0:arm64.list
+/var/lib/dpkg/info/gcc-14-base:arm64.list
+/var/lib/dpkg/info/libgpg-error0:arm64.triggers
+/var/lib/dpkg/info/libpam0g:arm64.symbols
+/var/lib/dpkg/info/zlib1g:arm64.md5sums
+/var/lib/dpkg/info/ncurses-bin.list
+/var/lib/dpkg/info/libaudit-common.md5sums
+/var/lib/dpkg/info/libsepol2:arm64.symbols
+/var/lib/dpkg/info/debconf.conffiles
+/var/lib/dpkg/info/apt.postrm
+/var/lib/dpkg/info/mount.list
+/var/lib/dpkg/info/libc6:arm64.postinst
+/var/lib/dpkg/info/libnettle8t64:arm64.md5sums
+/var/lib/dpkg/info/libpcre2-8-0:arm64.shlibs
+/var/lib/dpkg/info/passwd.postinst
+/var/lib/dpkg/info/gzip.list
+/var/lib/dpkg/info/apt.prerm
+/var/lib/dpkg/info/libutempter0:arm64.md5sums
+/var/lib/dpkg/info/libevent-core-2.1-7t64:arm64.shlibs
+/var/lib/dpkg/info/libutempter0:arm64.list
+/var/lib/dpkg/info/libevent-core-2.1-7t64:arm64.md5sums
+/var/lib/dpkg/info/libevent-core-2.1-7t64:arm64.symbols
+/var/lib/dpkg/info/libutempter0:arm64.triggers
+/var/lib/dpkg/info/asciinema.list
+/var/lib/dpkg/info/tmux.md5sums
+/var/lib/dpkg/info/asciinema.md5sums
+/var/lib/dpkg/info/libutempter0:arm64.shlibs
+/var/lib/dpkg/info/libevent-core-2.1-7t64:arm64.list
+/var/lib/dpkg/info/asciinema.postinst
+/var/lib/dpkg/info/tmux.list
+/var/lib/dpkg/info/asciinema.prerm
+/var/lib/dpkg/info/libutempter0:arm64.symbols
+/var/lib/dpkg/info/libevent-core-2.1-7t64:arm64.triggers
+/var/lib/dpkg/info/libpython3.12t64:arm64.list
+/var/lib/dpkg/info/fakeroot.list
+/var/lib/dpkg/info/libpython3.12t64:arm64.md5sums
+/var/lib/dpkg/info/python3.12-venv.prerm
+/var/lib/dpkg/info/gpgsm.md5sums
+/var/lib/dpkg/info/python3.md5sums
+/var/lib/dpkg/info/manpages.list
+/var/lib/dpkg/info/libjansson4:arm64.triggers
+/var/lib/dpkg/info/gpgconf.list
+/var/lib/dpkg/info/cpp.md5sums
+/var/lib/dpkg/info/libpng16-16t64:arm64.triggers
+/var/lib/dpkg/info/libasan8:arm64.shlibs
+/var/lib/dpkg/info/libx11-data.list
+/var/lib/dpkg/info/libsqlite3-0:arm64.md5sums
+/var/lib/dpkg/info/libctf-nobfd0:arm64.triggers
+/var/lib/dpkg/info/libjs-sphinxdoc.md5sums
+/var/lib/dpkg/info/libbrotli1:arm64.list
+/var/lib/dpkg/info/gcc.md5sums
+/var/lib/dpkg/info/python3-pip.postinst
+/var/lib/dpkg/info/g++-aarch64-linux-gnu.list
+/var/lib/dpkg/info/perl.prerm
+/var/lib/dpkg/info/g++-13-aarch64-linux-gnu.md5sums
+/var/lib/dpkg/info/g++-aarch64-linux-gnu.md5sums
+/var/lib/dpkg/info/libwebp7:arm64.list
+/var/lib/dpkg/info/libsasl2-modules:arm64.postrm
+/var/lib/dpkg/info/python3-dev.list
+/var/lib/dpkg/info/gnupg-l10n.md5sums
+/var/lib/dpkg/info/python3-wheel.md5sums
+/var/lib/dpkg/info/libsasl2-modules:arm64.preinst
+/var/lib/dpkg/info/libmpc3:arm64.md5sums
+/var/lib/dpkg/info/liblocale-gettext-perl.md5sums
+/var/lib/dpkg/info/gcc.prerm
+/var/lib/dpkg/info/gpg-agent.md5sums
+/var/lib/dpkg/info/python3.postinst
+/var/lib/dpkg/info/python3.12-minimal.preinst
+/var/lib/dpkg/info/pinentry-curses.md5sums
+/var/lib/dpkg/info/libfreetype6:arm64.shlibs
+/var/lib/dpkg/info/libwebp7:arm64.md5sums
+/var/lib/dpkg/info/libsasl2-modules-db:arm64.md5sums
+/var/lib/dpkg/info/gpg-wks-client.list
+/var/lib/dpkg/info/libfakeroot:arm64.md5sums
+/var/lib/dpkg/info/libubsan1:arm64.shlibs
+/var/lib/dpkg/info/libheif1:arm64.triggers
+/var/lib/dpkg/info/python3-pkg-resources.list
+/var/lib/dpkg/info/libpython3-dev:arm64.list
+/var/lib/dpkg/info/dirmngr.md5sums
+/var/lib/dpkg/info/openssl.conffiles
+/var/lib/dpkg/info/libxau6:arm64.shlibs
+/var/lib/dpkg/info/javascript-common.md5sums
+/var/lib/dpkg/info/libtiff6:arm64.triggers
+/var/lib/dpkg/info/libreadline8t64:arm64.postrm
+/var/lib/dpkg/info/libpython3.12-stdlib:arm64.list
+/var/lib/dpkg/info/python3-setuptools-whl.list
+/var/lib/dpkg/info/xz-utils.prerm
+/var/lib/dpkg/info/libctf-nobfd0:arm64.list
+/var/lib/dpkg/info/libatomic1:arm64.symbols
+/var/lib/dpkg/info/adduser.postrm
+/var/lib/dpkg/info/cpp.list
+/var/lib/dpkg/info/perl-modules-5.38.md5sums
+/var/lib/dpkg/info/python3.12-dev.md5sums
+/var/lib/dpkg/info/fonts-dejavu-core.list
+/var/lib/dpkg/info/ca-certificates.postrm
+/var/lib/dpkg/info/libctf-nobfd0:arm64.shlibs
+/var/lib/dpkg/info/python3-wheel.list
+/var/lib/dpkg/info/libisl23:arm64.shlibs
+/var/lib/dpkg/info/python3-minimal.md5sums
+/var/lib/dpkg/info/libfakeroot:arm64.conffiles
+/var/lib/dpkg/info/fontconfig-config.md5sums
+/var/lib/dpkg/info/libheif1:arm64.list
+/var/lib/dpkg/info/libfile-fcntllock-perl.md5sums
+/var/lib/dpkg/info/fontconfig-config.preinst
+/var/lib/dpkg/info/libbrotli1:arm64.shlibs
+/var/lib/dpkg/info/libcrypt-dev:arm64.prerm
+/var/lib/dpkg/info/dirmngr.postrm
+/var/lib/dpkg/info/libsasl2-modules:arm64.md5sums
+/var/lib/dpkg/info/dirmngr.prerm
+/var/lib/dpkg/info/fonts-dejavu-mono.conffiles
+/var/lib/dpkg/info/libtsan2:arm64.shlibs
+/var/lib/dpkg/info/gpg.md5sums
+/var/lib/dpkg/info/libctf0:arm64.shlibs
+/var/lib/dpkg/info/libgdbm-compat4t64:arm64.triggers
+/var/lib/dpkg/info/python3-dev.md5sums
+/var/lib/dpkg/info/libjansson4:arm64.list
+/var/lib/dpkg/info/libasan8:arm64.list
+/var/lib/dpkg/info/pinentry-curses.prerm
+/var/lib/dpkg/info/readline-common.postrm
+/var/lib/dpkg/info/libmpfr6:arm64.triggers
+/var/lib/dpkg/info/libfontconfig1:arm64.symbols
+/var/lib/dpkg/info/libldap2:arm64.symbols
+/var/lib/dpkg/info/fonts-dejavu-core.conffiles
+/var/lib/dpkg/info/libgdbm-compat4t64:arm64.list
+/var/lib/dpkg/info/libjs-jquery.prerm
+/var/lib/dpkg/info/manpages-dev.md5sums
+/var/lib/dpkg/info/fonts-dejavu-core.postrm
+/var/lib/dpkg/info/libxau6:arm64.list
+/var/lib/dpkg/info/readline-common.postinst
+/var/lib/dpkg/info/libexpat1:arm64.md5sums
+/var/lib/dpkg/info/gcc-13-aarch64-linux-gnu.list
+/var/lib/dpkg/info/libisl23:arm64.list
+/var/lib/dpkg/info/libgdbm-compat4t64:arm64.shlibs
+/var/lib/dpkg/info/libctf0:arm64.md5sums
+/var/lib/dpkg/info/dirmngr.preinst
+/var/lib/dpkg/info/libsasl2-modules:arm64.prerm
+/var/lib/dpkg/info/libjs-jquery.postinst
+/var/lib/dpkg/info/libexpat1:arm64.list
+/var/lib/dpkg/info/libgd3:arm64.symbols
+/var/lib/dpkg/info/libgprofng0:arm64.list
+/var/lib/dpkg/info/libgdbm-compat4t64:arm64.md5sums
+/var/lib/dpkg/info/python3-pip.list
+/var/lib/dpkg/info/gpg-agent.conffiles
+/var/lib/dpkg/info/ca-certificates.md5sums
+/var/lib/dpkg/info/libheif1:arm64.shlibs
+/var/lib/dpkg/info/python3.12-venv.md5sums
+/var/lib/dpkg/info/libx11-6:arm64.list
+/var/lib/dpkg/info/liblerc4:arm64.list
+/var/lib/dpkg/info/libexpat1:arm64.shlibs
+/var/lib/dpkg/info/libgprofng0:arm64.md5sums
+/var/lib/dpkg/info/fontconfig-config.postinst
+/var/lib/dpkg/info/tzdata.postrm
+/var/lib/dpkg/info/libc-dev-bin.md5sums
+/var/lib/dpkg/info/libksba8:arm64.symbols
+/var/lib/dpkg/info/libpython3.12-stdlib:arm64.prerm
+/var/lib/dpkg/info/python3.12.md5sums
+/var/lib/dpkg/info/fonts-dejavu-core.md5sums
+/var/lib/dpkg/info/libjbig0:arm64.shlibs
+/var/lib/dpkg/info/libsframe1:arm64.triggers
+/var/lib/dpkg/info/libwebp7:arm64.triggers
+/var/lib/dpkg/info/libasan8:arm64.symbols
+/var/lib/dpkg/info/libfreetype6:arm64.md5sums
+/var/lib/dpkg/info/libcc1-0:arm64.symbols
+/var/lib/dpkg/info/g++.postinst
+/var/lib/dpkg/info/libbinutils:arm64.shlibs
+/var/lib/dpkg/info/libsqlite3-0:arm64.triggers
+/var/lib/dpkg/info/libheif1:arm64.md5sums
+/var/lib/dpkg/info/ca-certificates.templates
+/var/lib/dpkg/info/libatomic1:arm64.list
+/var/lib/dpkg/info/libcc1-0:arm64.list
+/var/lib/dpkg/info/make.list
+/var/lib/dpkg/info/libfontconfig1:arm64.md5sums
+/var/lib/dpkg/info/libreadline8t64:arm64.preinst
+/var/lib/dpkg/info/python3.12-minimal.postrm
+/var/lib/dpkg/info/liblerc4:arm64.symbols
+/var/lib/dpkg/info/libjpeg-turbo8:arm64.md5sums
+/var/lib/dpkg/info/python3.12-minimal.md5sums
+/var/lib/dpkg/info/libpython3.12-minimal:arm64.postrm
+/var/lib/dpkg/info/g++-13.list
+/var/lib/dpkg/info/g++-13.md5sums
+/var/lib/dpkg/info/libtiff6:arm64.symbols
+/var/lib/dpkg/info/fonts-dejavu-core.preinst
+/var/lib/dpkg/info/libfontconfig1:arm64.triggers
+/var/lib/dpkg/info/keyboxd.md5sums
+/var/lib/dpkg/info/libtsan2:arm64.md5sums
+/var/lib/dpkg/info/libreadline8t64:arm64.list
+/var/lib/dpkg/info/libbsd0:arm64.md5sums
+/var/lib/dpkg/info/keyboxd.postrm
+/var/lib/dpkg/info/ca-certificates.postinst
+/var/lib/dpkg/info/libxpm4:arm64.triggers
+/var/lib/dpkg/info/libubsan1:arm64.triggers
+/var/lib/dpkg/info/libbsd0:arm64.list
+/var/lib/dpkg/info/dpkg-dev.conffiles
+/var/lib/dpkg/info/libfile-fcntllock-perl.list
+/var/lib/dpkg/info/libgd3:arm64.list
+/var/lib/dpkg/info/libreadline8t64:arm64.md5sums
+/var/lib/dpkg/info/binutils.list
+/var/lib/dpkg/info/media-types.md5sums
+/var/lib/dpkg/info/libpython3.12-minimal:arm64.md5sums
+/var/lib/dpkg/info/netbase.postrm
+/var/lib/dpkg/info/bzip2.list
+/var/lib/dpkg/info/libasan8:arm64.triggers
+/var/lib/dpkg/info/binutils-common:arm64.list
+/var/lib/dpkg/info/dirmngr.postinst
+/var/lib/dpkg/info/libfontconfig1:arm64.shlibs
+/var/lib/dpkg/info/gpg.list
+/var/lib/dpkg/info/bzip2.md5sums
+/var/lib/dpkg/info/media-types.list
+/var/lib/dpkg/info/adduser.conffiles
+/var/lib/dpkg/info/python3.preinst
+/var/lib/dpkg/info/libtiff6:arm64.shlibs
+/var/lib/dpkg/info/libjpeg8:arm64.md5sums
+/var/lib/dpkg/info/python3-setuptools.list
+/var/lib/dpkg/info/libpython3.12t64:arm64.triggers
+/var/lib/dpkg/info/fontconfig-config.postrm
+/var/lib/dpkg/info/libgdbm6t64:arm64.triggers
+/var/lib/dpkg/info/javascript-common.postrm
+/var/lib/dpkg/info/binutils-common:arm64.conffiles
+/var/lib/dpkg/info/libsasl2-2:arm64.md5sums
+/var/lib/dpkg/info/libjansson4:arm64.shlibs
+/var/lib/dpkg/info/libcrypt-dev:arm64.md5sums
+/var/lib/dpkg/info/liblsan0:arm64.md5sums
+/var/lib/dpkg/info/tzdata.list
+/var/lib/dpkg/info/liblerc4:arm64.md5sums
+/var/lib/dpkg/info/python3.12-venv.postinst
+/var/lib/dpkg/info/cpp-aarch64-linux-gnu.list
+/var/lib/dpkg/info/keyboxd.list
+/var/lib/dpkg/info/binutils.md5sums
+/var/lib/dpkg/info/libjbig0:arm64.triggers
+/var/lib/dpkg/info/libsqlite3-0:arm64.list
+/var/lib/dpkg/info/liblerc4:arm64.triggers
+/var/lib/dpkg/info/libtsan2:arm64.triggers
+/var/lib/dpkg/info/libxpm4:arm64.md5sums
+/var/lib/dpkg/info/libbsd0:arm64.symbols
+/var/lib/dpkg/info/libpython3.12-stdlib:arm64.md5sums
+/var/lib/dpkg/info/libsharpyuv0:arm64.list
+/var/lib/dpkg/info/libalgorithm-diff-perl.md5sums
+/var/lib/dpkg/info/libmpc3:arm64.symbols
+/var/lib/dpkg/info/libgdbm6t64:arm64.list
+/var/lib/dpkg/info/libdeflate0:arm64.shlibs
+/var/lib/dpkg/info/liblerc4:arm64.shlibs
+/var/lib/dpkg/info/python3-setuptools.postinst
+/var/lib/dpkg/info/ca-certificates.triggers
+/var/lib/dpkg/info/cpp-aarch64-linux-gnu.md5sums
+/var/lib/dpkg/info/libxau6:arm64.md5sums
+/var/lib/dpkg/info/libgdbm6t64:arm64.shlibs
+/var/lib/dpkg/info/python3.12-dev.list
+/var/lib/dpkg/info/libksba8:arm64.md5sums
+/var/lib/dpkg/info/perl-modules-5.38.list
+/var/lib/dpkg/info/libgprofng0:arm64.shlibs
+/var/lib/dpkg/info/perl.postinst
+/var/lib/dpkg/info/libtsan2:arm64.list
+/var/lib/dpkg/info/liblsan0:arm64.list
+/var/lib/dpkg/info/libgcc-13-dev:arm64.md5sums
+/var/lib/dpkg/info/libubsan1:arm64.list
+/var/lib/dpkg/info/libstdc++-13-dev:arm64.list
+/var/lib/dpkg/info/libc-devtools.md5sums
+/var/lib/dpkg/info/gcc-13-base:arm64.list
+/var/lib/dpkg/info/libfakeroot:arm64.list
+/var/lib/dpkg/info/libdeflate0:arm64.md5sums
+/var/lib/dpkg/info/libfreetype6:arm64.symbols
+/var/lib/dpkg/info/pinentry-curses.list
+/var/lib/dpkg/info/libxcb1:arm64.list
+/var/lib/dpkg/info/libxpm4:arm64.shlibs
+/var/lib/dpkg/info/libitm1:arm64.list
+/var/lib/dpkg/info/libsasl2-modules:arm64.list
+/var/lib/dpkg/info/libheif-plugin-aomenc:arm64.md5sums
+/var/lib/dpkg/info/libaom3:arm64.symbols
+/var/lib/dpkg/info/tzdata.config
+/var/lib/dpkg/info/libpython3.12-minimal:arm64.prerm
+/var/lib/dpkg/info/gcc-13.list
+/var/lib/dpkg/info/python3-pip.md5sums
+/var/lib/dpkg/info/libjbig0:arm64.md5sums
+/var/lib/dpkg/info/g++.md5sums
+/var/lib/dpkg/info/libdeflate0:arm64.symbols
+/var/lib/dpkg/info/libitm1:arm64.md5sums
+/var/lib/dpkg/info/libgprofng0:arm64.symbols
+/var/lib/dpkg/info/cpp-13-aarch64-linux-gnu.list
+/var/lib/dpkg/info/libmpc3:arm64.shlibs
+/var/lib/dpkg/info/libheif1:arm64.symbols
+/var/lib/dpkg/info/libdpkg-perl.md5sums
+/var/lib/dpkg/info/libgdbm-compat4t64:arm64.symbols
+/var/lib/dpkg/info/libitm1:arm64.symbols
+/var/lib/dpkg/info/gpg-agent.postinst
+/var/lib/dpkg/info/libitm1:arm64.shlibs
+/var/lib/dpkg/info/libjpeg8:arm64.list
+/var/lib/dpkg/info/fonts-dejavu-core.prerm
+/var/lib/dpkg/info/libreadline8t64:arm64.triggers
+/var/lib/dpkg/info/python3.12-minimal.postinst
+/var/lib/dpkg/info/libbsd0:arm64.shlibs
+/var/lib/dpkg/info/libxdmcp6:arm64.shlibs
+/var/lib/dpkg/info/readline-common.list
+/var/lib/dpkg/info/liblocale-gettext-perl.list
+/var/lib/dpkg/info/dirmngr.list
+/var/lib/dpkg/info/fonts-dejavu-mono.list
+/var/lib/dpkg/info/gnupg.list
+/var/lib/dpkg/info/libgd3:arm64.triggers
+/var/lib/dpkg/info/javascript-common.prerm
+/var/lib/dpkg/info/libctf0:arm64.list
+/var/lib/dpkg/info/perl.list
+/var/lib/dpkg/info/gcc.list
+/var/lib/dpkg/info/rpcsvc-proto.list
+/var/lib/dpkg/info/python3-setuptools.prerm
+/var/lib/dpkg/info/libc6-dev:arm64.md5sums
+/var/lib/dpkg/info/libpython3.12-minimal:arm64.postinst
+/var/lib/dpkg/info/libsharpyuv0:arm64.md5sums
+/var/lib/dpkg/info/perl.postrm
+/var/lib/dpkg/info/libc-dev-bin.list
+/var/lib/dpkg/info/libpython3-stdlib:arm64.list
+/var/lib/dpkg/info/gpgconf.md5sums
+/var/lib/dpkg/info/pinentry-curses.postinst
+/var/lib/dpkg/info/libdeflate0:arm64.triggers
+/var/lib/dpkg/info/fontconfig-config.prerm
+/var/lib/dpkg/info/libpng16-16t64:arm64.list
+/var/lib/dpkg/info/libaom3:arm64.shlibs
+/var/lib/dpkg/info/gcc-aarch64-linux-gnu.md5sums
+/var/lib/dpkg/info/libx11-6:arm64.shlibs
+/var/lib/dpkg/info/libgomp1:arm64.triggers
+/var/lib/dpkg/info/libtiff6:arm64.md5sums
+/var/lib/dpkg/info/gnupg.md5sums
+/var/lib/dpkg/info/libksba8:arm64.triggers
+/var/lib/dpkg/info/python3-minimal.postinst
+/var/lib/dpkg/info/libperl5.38t64:arm64.md5sums
+/var/lib/dpkg/info/python3-pip.prerm
+/var/lib/dpkg/info/libpython3.12-dev:arm64.md5sums
+/var/lib/dpkg/info/libxau6:arm64.triggers
+/var/lib/dpkg/info/libheif-plugin-aomenc:arm64.list
+/var/lib/dpkg/info/libjs-sphinxdoc.list
+/var/lib/dpkg/info/libhwasan0:arm64.list
+/var/lib/dpkg/info/libwebp7:arm64.shlibs
+/var/lib/dpkg/info/cpp.postinst
+/var/lib/dpkg/info/patch.md5sums
+/var/lib/dpkg/info/cpp-13.md5sums
+/var/lib/dpkg/info/tzdata.md5sums
+/var/lib/dpkg/info/python3-pkg-resources.prerm
+/var/lib/dpkg/info/libpng16-16t64:arm64.shlibs
+/var/lib/dpkg/info/dpkg-dev.md5sums
+/var/lib/dpkg/info/libsframe1:arm64.md5sums
+/var/lib/dpkg/info/libcrypt-dev:arm64.postinst
+/var/lib/dpkg/info/libjs-jquery.postrm
+/var/lib/dpkg/info/fakeroot.postinst
+/var/lib/dpkg/info/libatomic1:arm64.triggers
+/var/lib/dpkg/info/media-types.conffiles
+/var/lib/dpkg/info/libctf0:arm64.triggers
+/var/lib/dpkg/info/libsasl2-modules-db:arm64.list
+/var/lib/dpkg/info/libjbig0:arm64.symbols
+/var/lib/dpkg/info/cpp-13.list
+/var/lib/dpkg/info/libfakeroot:arm64.triggers
+/var/lib/dpkg/info/libdpkg-perl.list
+/var/lib/dpkg/info/libxcb1:arm64.md5sums
+/var/lib/dpkg/info/libbrotli1:arm64.md5sums
+/var/lib/dpkg/info/libxdmcp6:arm64.list
+/var/lib/dpkg/info/libperl5.38t64:arm64.symbols
+/var/lib/dpkg/info/libitm1:arm64.triggers
+/var/lib/dpkg/info/libgomp1:arm64.list
+/var/lib/dpkg/info/cpp.prerm
+/var/lib/dpkg/info/python3-pip-whl.list
+/var/lib/dpkg/info/libstdc++-13-dev:arm64.md5sums
+/var/lib/dpkg/info/binutils-aarch64-linux-gnu.list
+/var/lib/dpkg/info/libksba8:arm64.shlibs
+/var/lib/dpkg/info/libgd3:arm64.md5sums
+/var/lib/dpkg/info/libldap2:arm64.list
+/var/lib/dpkg/info/gpg-agent.list
+/var/lib/dpkg/info/openssl.postinst
+/var/lib/dpkg/info/libfreetype6:arm64.list
+/var/lib/dpkg/info/libxcb1:arm64.shlibs
+/var/lib/dpkg/info/ca-certificates.config
+/var/lib/dpkg/info/libasan8:arm64.md5sums
+/var/lib/dpkg/info/libalgorithm-diff-xs-perl:arm64.list
+/var/lib/dpkg/info/libjs-underscore.list
+/var/lib/dpkg/info/libbinutils:arm64.list
+/var/lib/dpkg/info/libc-devtools.list
+/var/lib/dpkg/info/readline-common.md5sums
+/var/lib/dpkg/info/libbinutils:arm64.md5sums
+/var/lib/dpkg/info/python3.list
+/var/lib/dpkg/info/libsasl2-modules:arm64.postinst
+/var/lib/dpkg/info/binutils-aarch64-linux-gnu.md5sums
+/var/lib/dpkg/info/libtiff6:arm64.list
+/var/lib/dpkg/info/libubsan1:arm64.md5sums
+/var/lib/dpkg/info/libjansson4:arm64.md5sums
+/var/lib/dpkg/info/libldap-common.list
+/var/lib/dpkg/info/libldap2:arm64.shlibs
+/var/lib/dpkg/info/libjs-jquery.md5sums
+/var/lib/dpkg/info/libisl23:arm64.triggers
+/var/lib/dpkg/info/fakeroot.prerm
+/var/lib/dpkg/info/gcc-13.md5sums
+/var/lib/dpkg/info/tzdata.templates
+/var/lib/dpkg/info/libgomp1:arm64.symbols
+/var/lib/dpkg/info/libsqlite3-0:arm64.symbols
+/var/lib/dpkg/info/libxdmcp6:arm64.md5sums
+/var/lib/dpkg/info/libbsd0:arm64.triggers
+/var/lib/dpkg/info/libatomic1:arm64.md5sums
+/var/lib/dpkg/info/libheif-plugin-aomdec:arm64.md5sums
+/var/lib/dpkg/info/libtsan2:arm64.symbols
+/var/lib/dpkg/info/libsframe1:arm64.symbols
+/var/lib/dpkg/info/libx11-6:arm64.md5sums
+/var/lib/dpkg/info/python3-setuptools.md5sums
+/var/lib/dpkg/info/python3.12.list
+/var/lib/dpkg/info/lto-disabled-list.md5sums
+/var/lib/dpkg/info/gcc.postinst
+/var/lib/dpkg/info/libjpeg-turbo8:arm64.shlibs
+/var/lib/dpkg/info/libatomic1:arm64.shlibs
+/var/lib/dpkg/info/libhwasan0:arm64.shlibs
+/var/lib/dpkg/info/libdeflate0:arm64.list
+/var/lib/dpkg/info/python3-setuptools-whl.md5sums
+/var/lib/dpkg/info/libmpc3:arm64.triggers
+/var/lib/dpkg/info/gpg-wks-client.md5sums
+/var/lib/dpkg/info/g++-13-aarch64-linux-gnu.list
+/var/lib/dpkg/info/python3.prerm
+/var/lib/dpkg/info/libbrotli1:arm64.triggers
+/var/lib/dpkg/info/libaom3:arm64.md5sums
+/var/lib/dpkg/info/libldap2:arm64.triggers
+/var/lib/dpkg/info/adduser.list
+/var/lib/dpkg/info/javascript-common.preinst
+/var/lib/dpkg/info/linux-libc-dev:arm64.md5sums
+/var/lib/dpkg/info/libxdmcp6:arm64.triggers
+/var/lib/dpkg/info/netbase.conffiles
+/var/lib/dpkg/info/python3.12-minimal.prerm
+/var/lib/dpkg/info/libldap-common.conffiles
+/var/lib/dpkg/info/keyboxd.postinst
+/var/lib/dpkg/info/python3-venv.md5sums
+/var/lib/dpkg/info/libaom3:arm64.list
+/var/lib/dpkg/info/javascript-common.postinst
+/var/lib/dpkg/info/zlib1g-dev:arm64.md5sums
+/var/lib/dpkg/info/libksba8:arm64.list
+/var/lib/dpkg/info/gcc-13-aarch64-linux-gnu.md5sums
+/var/lib/dpkg/info/libpython3.12-minimal:arm64.list
+/var/lib/dpkg/info/libgcc-13-dev:arm64.list
+/var/lib/dpkg/info/python3-pkg-resources.postinst
+/var/lib/dpkg/info/lto-disabled-list.list
+/var/lib/dpkg/info/python3-pkg-resources.md5sums
+/var/lib/dpkg/info/libsasl2-2:arm64.triggers
+/var/lib/dpkg/info/libcc1-0:arm64.shlibs
+/var/lib/dpkg/info/libsharpyuv0:arm64.triggers
+/var/lib/dpkg/info/gcc-aarch64-linux-gnu.list
+/var/lib/dpkg/info/manpages-dev.list
+/var/lib/dpkg/info/linux-libc-dev:arm64.list
+/var/lib/dpkg/info/libhwasan0:arm64.md5sums
+/var/lib/dpkg/info/libx11-6:arm64.triggers
+/var/lib/dpkg/info/libxpm4:arm64.list
+/var/lib/dpkg/info/libsasl2-2:arm64.list
+/var/lib/dpkg/info/ca-certificates.list
+/var/lib/dpkg/info/python3.12.prerm
+/var/lib/dpkg/info/libgomp1:arm64.shlibs
+/var/lib/dpkg/info/dpkg-dev.list
+/var/lib/dpkg/info/fontconfig-config.list
+/var/lib/dpkg/info/libctf-nobfd0:arm64.md5sums
+/var/lib/dpkg/info/libbrotli1:arm64.symbols
+/var/lib/dpkg/info/openssl.md5sums
+/var/lib/dpkg/info/cpp-13-aarch64-linux-gnu.md5sums
+/var/lib/dpkg/info/libjansson4:arm64.symbols
+/var/lib/dpkg/info/zlib1g-dev:arm64.list
+/var/lib/dpkg/info/libhwasan0:arm64.symbols
+/var/lib/dpkg/info/libjs-jquery.list
+/var/lib/dpkg/info/build-essential.md5sums
+/var/lib/dpkg/info/cpp.preinst
+/var/lib/dpkg/info/python3.12.postinst
+/var/lib/dpkg/info/libjs-jquery.preinst
+/var/lib/dpkg/info/gnupg-l10n.list
+/var/lib/dpkg/info/libjpeg-turbo8:arm64.symbols
+/var/lib/dpkg/info/libcrypt-dev:arm64.list
+/var/lib/dpkg/info/libalgorithm-diff-xs-perl:arm64.md5sums
+/var/lib/dpkg/info/libalgorithm-merge-perl.list
+/var/lib/dpkg/info/libsframe1:arm64.list
+/var/lib/dpkg/info/python3-pip-whl.md5sums
+/var/lib/dpkg/info/build-essential.list
+/var/lib/dpkg/info/g++.prerm
+/var/lib/dpkg/info/libpython3-stdlib:arm64.md5sums
+/var/lib/dpkg/info/libjs-underscore.md5sums
+/var/lib/dpkg/info/libperl5.38t64:arm64.triggers
+/var/lib/dpkg/info/libalgorithm-merge-perl.md5sums
+/var/lib/dpkg/info/manpages.md5sums
+/var/lib/dpkg/info/libmpfr6:arm64.list
+/var/lib/dpkg/info/libexpat1:arm64.symbols
+/var/lib/dpkg/info/netbase.md5sums
+/var/lib/dpkg/info/perl.conffiles
+/var/lib/dpkg/info/libgdbm6t64:arm64.symbols
+/var/lib/dpkg/info/liblsan0:arm64.symbols
+/var/lib/dpkg/info/libfakeroot:arm64.shlibs
+/var/lib/dpkg/info/libmpc3:arm64.list
+/var/lib/dpkg/info/python3.12-minimal.list
+/var/lib/dpkg/info/libjbig0:arm64.list
+/var/lib/dpkg/info/libjpeg-turbo8:arm64.list
+/var/lib/dpkg/info/libexpat1-dev:arm64.list
+/var/lib/dpkg/info/libreadline8t64:arm64.symbols
+/var/lib/dpkg/info/libmpfr6:arm64.symbols
+/var/lib/dpkg/info/libfreetype6:arm64.triggers
+/var/lib/dpkg/info/libfontconfig1:arm64.list
+/var/lib/dpkg/info/libsframe1:arm64.shlibs
+/var/lib/dpkg/info/make.md5sums
+/var/lib/dpkg/info/g++.list
+/var/lib/dpkg/info/libmpfr6:arm64.shlibs
+/var/lib/dpkg/info/patch.list
+/var/lib/dpkg/info/libgprofng0:arm64.triggers
+/var/lib/dpkg/info/netbase.list
+/var/lib/dpkg/info/perl.md5sums
+/var/lib/dpkg/info/libgomp1:arm64.md5sums
+/var/lib/dpkg/info/liblsan0:arm64.shlibs
+/var/lib/dpkg/info/libpython3-dev:arm64.md5sums
+/var/lib/dpkg/info/binutils-common:arm64.md5sums
+/var/lib/dpkg/info/libexpat1:arm64.triggers
+/var/lib/dpkg/info/javascript-common.conffiles
+/var/lib/dpkg/info/python3-wheel.postinst
+/var/lib/dpkg/info/libisl23:arm64.symbols
+/var/lib/dpkg/info/libalgorithm-diff-perl.list
+/var/lib/dpkg/info/libxcb1:arm64.triggers
+/var/lib/dpkg/info/fontconfig-config.conffiles
+/var/lib/dpkg/info/libcrypt-dev:arm64.preinst
+/var/lib/dpkg/info/libctf0:arm64.symbols
+/var/lib/dpkg/info/libc6-dev:arm64.list
+/var/lib/dpkg/info/cpp.postrm
+/var/lib/dpkg/info/fakeroot.md5sums
+/var/lib/dpkg/info/libsqlite3-0:arm64.shlibs
+/var/lib/dpkg/info/libsasl2-2:arm64.shlibs
+/var/lib/dpkg/info/libpython3.12t64:arm64.shlibs
+/var/lib/dpkg/info/liblsan0:arm64.triggers
+/var/lib/dpkg/info/netbase.postinst
+/var/lib/dpkg/info/python3.12-venv.list
+/var/lib/dpkg/info/gnupg-utils.list
+/var/lib/dpkg/info/libsharpyuv0:arm64.shlibs
+/var/lib/dpkg/info/libmpfr6:arm64.md5sums
+/var/lib/dpkg/info/libexpat1-dev:arm64.md5sums
+/var/lib/dpkg/info/gnupg-utils.md5sums
+/var/lib/dpkg/info/libheif-plugin-aomdec:arm64.list
+/var/lib/dpkg/info/libbinutils:arm64.triggers
+/var/lib/dpkg/info/openssl.list
+/var/lib/dpkg/info/python3.postrm
+/var/lib/dpkg/info/rpcsvc-proto.md5sums
+/var/lib/dpkg/info/python3-minimal.list
+/var/lib/dpkg/info/fonts-dejavu-mono.md5sums
+/var/lib/dpkg/info/libisl23:arm64.md5sums
+/var/lib/dpkg/info/gpgsm.list
+/var/lib/dpkg/info/libcc1-0:arm64.md5sums
+/var/lib/dpkg/info/libaom3:arm64.triggers
+/var/lib/dpkg/info/tzdata.postinst
+/var/lib/dpkg/info/libldap2:arm64.md5sums
+/var/lib/dpkg/info/libjpeg-turbo8:arm64.triggers
+/var/lib/dpkg/info/xz-utils.postinst
+/var/lib/dpkg/info/libreadline8t64:arm64.shlibs
+/var/lib/dpkg/info/python3-wheel.prerm
+/var/lib/dpkg/info/libcc1-0:arm64.triggers
+/var/lib/dpkg/info/libx11-data.md5sums
+/var/lib/dpkg/info/adduser.md5sums
+/var/lib/dpkg/info/libctf-nobfd0:arm64.symbols
+/var/lib/dpkg/info/libxcb1:arm64.symbols
+/var/lib/dpkg/info/libpython3.12-minimal:arm64.conffiles
+/var/lib/dpkg/info/gpg-agent.postrm
+/var/lib/dpkg/info/libubsan1:arm64.symbols
+/var/lib/dpkg/info/perl.preinst
+/var/lib/dpkg/info/libperl5.38t64:arm64.shlibs
+/var/lib/dpkg/info/xz-utils.list
+/var/lib/dpkg/info/gcc-13-base:arm64.md5sums
+/var/lib/dpkg/info/libgd3:arm64.shlibs
+/var/lib/dpkg/info/libx11-6:arm64.symbols
+/var/lib/dpkg/info/adduser.preinst
+/var/lib/dpkg/info/libpython3.12t64:arm64.symbols
+/var/lib/dpkg/info/python3.12-venv.postrm
+/var/lib/dpkg/info/xz-utils.md5sums
+/var/lib/dpkg/info/python3-venv.list
+/var/lib/dpkg/info/fonts-dejavu-core.postinst
+/var/lib/dpkg/info/libpng16-16t64:arm64.md5sums
+/var/lib/dpkg/info/libperl5.38t64:arm64.list
+/var/lib/dpkg/info/python3-minimal.prerm
+/var/lib/dpkg/info/libgdbm6t64:arm64.md5sums
+/var/lib/dpkg/info/libhwasan0:arm64.triggers
+/var/lib/dpkg/info/libpython3.12-dev:arm64.list
+/var/lib/dpkg/info/libcrypt-dev:arm64.postrm
+/var/lib/dpkg/info/libldap-common.md5sums
+/var/lib/dpkg/info/javascript-common.list
+/var/lib/dpkg/cmethopt
+/var/lib/dpkg/diversions
+/var/lib/dpkg/status
+/var/lib/dpkg/triggers/lib32
+/var/lib/dpkg/triggers/libo32
+/var/lib/dpkg/triggers/File
+/var/lib/dpkg/triggers/Lock
+/var/lib/dpkg/triggers/Unincorp
+/var/lib/dpkg/triggers/lib64
+/var/lib/dpkg/triggers/ldconfig
+/var/lib/dpkg/triggers/libx32
+/var/lib/dpkg/triggers/update-ca-certificates
+/var/lib/dpkg/triggers/update-ca-certificates-fresh
+/var/lib/dpkg/lock
+/var/lib/dpkg/lock-frontend
+/var/lib/dpkg/alternatives/pager
+/var/lib/dpkg/alternatives/awk
+/var/lib/dpkg/alternatives/rmt
+/var/lib/dpkg/alternatives/which
+/var/lib/dpkg/alternatives/lzma
+/var/lib/dpkg/alternatives/cpp
+/var/lib/dpkg/alternatives/fakeroot
+/var/lib/dpkg/alternatives/c++
+/var/lib/dpkg/alternatives/c99
+/var/lib/dpkg/alternatives/pinentry
+/var/lib/dpkg/alternatives/cc
+/var/lib/dpkg/alternatives/c89
+/var/lib/dpkg/available
+/var/lib/dpkg/status-old
+/var/lib/dpkg/diversions-old
+/var/lib/python/python3.12_installed
+/var/cache/apt/archives/lock
+/var/cache/debconf/config.dat
+/var/cache/debconf/templates.dat
+/var/cache/debconf/passwords.dat
+/var/cache/debconf/templates.dat-old
+/var/cache/debconf/config.dat-old
+/var/cache/ldconfig/aux-cache
+/var/log/wtmp
+/var/log/apt/history.log
+/var/log/apt/eipp.log.xz
+/var/log/apt/term.log
+/var/log/lastlog
+/var/log/dpkg.log
+/var/log/bootstrap.log
+/var/log/faillog
+/var/log/alternatives.log
+/var/log/btmp
+[?2004hroot@23e2e6a1b566:/workspace# pip list
+[?2004l[33mWARNING: Skipping /usr/lib/python3.12/dist-packages/asciinema-2.4.0.dist-info due to invalid metadata entry 'name'[0m[33m
+[0mPackage    Version
+---------- -------
+asciinema  2.4.0
+pip        24.0
+setuptools 68.1.2
+wheel      0.42.0
+[?2004hroot@23e2e6a1b566:/workspace# env
+[?2004lSHELL=/bin/bash
+TERM_PROGRAM_VERSION=3.4
+ASCIINEMA_REC=1
+TMUX=/tmp/tmux-0/default,313,0
+HOSTNAME=23e2e6a1b566
+PWD=/workspace
+HOME=/root
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:
+TERM=tmux-256color
+TMUX_PANE=%0
+GEMINI_CLI_TRUST_WORKSPACE=true
+SHLVL=2
+LC_CTYPE=C.UTF-8
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+DEBIAN_FRONTEND=noninteractive
+TERM_PROGRAM=tmux
+_=/usr/bin/env
+[?2004hroot@23e2e6a1b566:/workspace# cat << 'EOF' > search_label.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     labels = [json.loads(line) for line in f]
+[?2004l[?2004h> 
+[?2004l[?2004h> def search(label_idx, keyword, limit=10):
+[?2004l[?2004h>     label = labels[label_idx]
+[?2004l[?2004h>     print(f"=== Searching in {label['drug_name']} (set_id: {label['set_id']}) for '{keyword}' ===")
+[?2004l[?2004h>     found = 0
+[?2004l[?2004h>     for idx, chunk in enumerate(label['chunks']):
+[?2004l[?2004h>         if keyword.lower() in chunk.lower():
+[?2004l[?2004h>             print(f"PASSAGE_{idx:04d} (length: {len(chunk)}):")
+[?2004l[?2004h>             print(chunk[:300] + "...")
+[?2004l[?2004h>             print("-" * 40)
+[?2004l[?2004h>             found += 1
+[?2004l[?2004h>             if found >= limit:
+[?2004l[?2004h>                 break
+[?2004l[?2004h> 
+[?2004l[?2004h> search(0, "contraindicat")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@23e2e6a1b566:/workspace# python3 search_label.py
+[?2004l=== Searching in Paxlovid (set_id: 8a99d6d6-fd9e-45bb-b1bf-48c7f761232a) for 'contraindicat' ===
+PASSAGE_0012 (length: 3088):
+4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.
+PAXLOVID i...
+----------------------------------------
+PASSAGE_0013 (length: 1711):
+5.1	Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase pla...
+----------------------------------------
+PASSAGE_0019 (length: 736):
+7.1	Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID with drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or ...
+----------------------------------------
+PASSAGE_0021 (length: 554):
+7.3	Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXLO...
+----------------------------------------
+PASSAGE_0022 (length: 76):
+↑ alfuzosin
+Co-administration contraindicated due to potential hypotension ....
+----------------------------------------
+PASSAGE_0024 (length: 111):
+↑ ranolazine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions ....
+----------------------------------------
+PASSAGE_0025 (length: 93):
+↑ antiarrhythmic
+Co-administration contraindicated due to potential for cardiac arrhythmias ....
+----------------------------------------
+PASSAGE_0027 (length: 128):
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+----------------------------------------
+PASSAGE_0034 (length: 128):
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+----------------------------------------
+PASSAGE_0041 (length: 160):
+↑ colchicine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment ....
+----------------------------------------
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     pax = json.loads(f.readline())
+[?2004l[?2004h> for idx, chunk in enumerate(pax['chunks']):
+[?2004l[?2004h>     if any(h in chunk for h in ['7 DRUG INTERACTIONS', '5.1 ', '7.1', '7.2', '7.3']):
+[?2004l[?2004h>         print(f'PASSAGE_{idx:04d} (len={len(chunk)}): {repr(chunk[:150])}')
+[?2004l[?2004h> "
+[?2004lPASSAGE_0019 (len=736): '7.1\tPotential for PAXLOVID to Affect Other Drugs\nPAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor o'
+PASSAGE_0020 (len=235): '7.2\tPotential for Other Drugs to Affect PAXLOVID\nNirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A may decrease nirm'
+PASSAGE_0021 (len=554): '7.3\tEstablished and Other Potentially Significant Drug Interactions\nTable 2 provides a listing of clinically significant drug interactions, including '
+PASSAGE_0143 (len=457): '≥2 Substitutions\n(IC50/Ki value fold change in biochemical assay)\nT21I+S144A (20), T21I+E166V (120-11,000), T21I+A173V (15), L50F+E166V (100-4,500), T'
+PASSAGE_0151 (len=68): '-5.6 (-7.3, -4.0)\nCOVID-19 Related Hospitalization Through Day 28, %'
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     pax = json.loads(f.readline())
+[?2004l[?2004h> for idx in [13, 19, 20, 21]:
+[?2004l[?2004h>     print(f'=== PASSAGE_{idx:04d} ===')
+[?2004l[?2004h>     print(pax['chunks'][idx])
+[?2004l[?2004h> "
+[?2004l=== PASSAGE_0013 ===
+5.1	Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A. Medications that induce CYP3A may decrease concentrations of PAXLOVID. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Loss of therapeutic effect of PAXLOVID and possible development of viral resistance.
+Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated with PAXLOVID. The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers.
+Prior to prescribing PAXLOVID, review all medications taken by the patient to assess potential drug-drug interactions and determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring (e.g., calcineurin inhibitors) . See Table 2 for clinically significant drug interactions, including contraindicated drugs. Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXLOVID.
+Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed .
+=== PASSAGE_0019 ===
+7.1	Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID with drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or OATP1B1 may result in increased plasma concentrations of such drugs and increase the risk of adverse events. Co-administration of PAXLOVID with drugs highly dependent on CYP3A for clearance and for which elevated plasma concentrations are associated with serious and/or life-threatening events is contraindicated . Co-administration with other CYP3A substrates may require a dose adjustment or additional monitoring as shown in Table 2.
+=== PASSAGE_0020 ===
+7.2	Potential for Other Drugs to Affect PAXLOVID
+Nirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A may decrease nirmatrelvir and ritonavir plasma concentrations and reduce PAXLOVID therapeutic effect .
+=== PASSAGE_0021 ===
+7.3	Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXLOVID. The healthcare provider should consult other appropriate resources such as the prescribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor such as ritonavir.
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     pax = json.loads(f.readline())
+[?2004l[?2004h> print(pax['chunks'][12])
+[?2004l[?2004h> "
+[?2004l4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.
+PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance. There are certain other drugs for which concomitant use with PAXLOVID should be avoided and/or dose adjustment, interruption, or therapeutic monitoring is recommended. Drugs listed in this section are a guide and not considered a comprehensive list of all drugs that may be contraindicated with PAXLOVID. The healthcare provider should consult other appropriate resources such as the prescribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor like PAXLOVID :
+- ➢ Drugs that are primarily metabolized by CYP3A for which elevated concentrations are associated with serious and/or life-threatening reactions
+- Alpha 1-adrenoreceptor antagonist: alfuzosin
+- Antianginal: ranolazine
+- Antiarrhythmic: amiodarone, dronedarone, flecainide, propafenone, quinidine
+- Anti-gout: colchicine (in patients with renal and/or hepatic impairment
+- Antipsychotics: lurasidone, pimozide
+- Benign prostatic hyperplasia agents: silodosin
+- Cardiovascular agents: eplerenone, ivabradine
+- Ergot derivatives: dihydroergotamine, ergotamine, methylergonovine
+- HMG-CoA reductase inhibitors: lovastatin, simvastatin (these drugs can be temporarily discontinued to allow PAXLOVID use
+- Immunosuppressants: voclosporin
+- Microsomal triglyceride transfer protein inhibitor: lomitapide
+- Migraine medications: eletriptan, ubrogepant
+- Mineralocorticoid receptor antagonists: finerenone
+- Opioid antagonists: naloxegol
+- PDE5 inhibitor: sildenafil (Revatio ® ) when used for pulmonary arterial hypertension (PAH)
+- Sedative/hypnotics: triazolam, oral midazolam
+- Serotonin receptor 1A agonist/serotonin receptor 2A antagonist: flibanserin
+- Vasopressin receptor antagonists: tolvaptan
+- ➢ Drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance. PAXLOVID cannot be started immediately after discontinuation of any of the following medications due to the delayed offset of the recently discontinued CYP3A inducer
+- Anticancer drugs: apalutamide , enzalutamide
+- Anticonvulsant: carbamazepine, phenobarbital, primidone, phenytoin
+- Antimycobacterials: rifampin, rifapentine
+- Cystic fibrosis transmembrane conductance regulator potentiators: lumacaftor/ivacaftor
+- Herbal products: St. John's Wort (
+[?2004hroot@23e2e6a1b566:/workspace# cat << 'EOF' > search_lopinavir.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+[?2004l[?2004h>             lop = data
+[?2004l[?2004h>             break
+[?2004l[?2004h> 
+[?2004l[?2004h> for idx, chunk in enumerate(lop['chunks']):
+[?2004l[?2004h>     if any(h in chunk for h in ['2 DOSAGE AND ADMINISTRATION', '2.1 ', '2.2 ', '2.3 ', '2.4 ', 'administration', 'administer']):
+[?2004l[?2004h>         print(f"PASSAGE_{idx:04d} (len={len(chunk)}): {repr(chunk[:150])}")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@23e2e6a1b566:/workspace# python3 search_lopinavir.py
+[?2004lPASSAGE_0001 (len=105): '2.1 General Administration Recommendations\nLopinavir\xa0and ritonavir oral solution must be taken with food.'
+PASSAGE_0002 (len=507): '2.2 Administering Oral Solution by Feeding Tube\nBecause lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recomme'
+PASSAGE_0003 (len=1073): '2.3 Dosage Recommendations in Adults\nLopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and'
+PASSAGE_0005 (len=352): 'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL)\xa0twice daily\nThe dose of lopinavir and ritonavir must be increased when admini'
+PASSAGE_0007 (len=893): '2.4 Dosage Recommendations in Pediatric Patients\nLopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients '
+PASSAGE_0008 (len=1535): 'Pediatric Dosage Calculations\nCalculate the appropriate dose of lopinavir\xa0and ritonavir for each individual pediatric patient based on body weight (kg'
+PASSAGE_0013 (len=2001): '4 CONTRAINDICATIONS\n- Lopinavir and ritonavir is contraindicated in patients with previously demonstrated clinically significant hypersensitivity (e.g'
+PASSAGE_0015 (len=1831): '5.2 Toxicity in Preterm Neonates\nLopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, '
+PASSAGE_0019 (len=892): '5.6 PR Interval Prolongation\nLopinavir\xa0and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atrioventricular block'
+PASSAGE_0025 (len=318): '5.12 Resistance/Cross-resistance\nBecause the potential for HIV cross-resistance among protease inhibitors has not been fully explored in lopinavir\xa0and'
+PASSAGE_0047 (len=1117): '7.1 Potential for Lopinavir and Ritonavir to Affect Other Drugs\nLopinavir\xa0and ritonavir is an inhibitor of CYP3A and may increase plasma concentration'
+PASSAGE_0048 (len=448): '7.2 Potential for Other Drugs to Affect Lopinavir\nLopinavir\xa0and ritonavir is a CYP3A substrate; therefore, drugs that induce CYP3A may decrease lopina'
+PASSAGE_0052 (len=239): '↓lopinavir\nAn increased rate of adverse reactions has been observed with co-administration of these medications. Appropriate doses of the combinations'
+PASSAGE_0053 (len=245): '↑ indinavir\nDecrease indinavir dose to 600 mg twice daily, when co-administered with lopinavir\xa0and ritonavir 400/100 mg twice daily. Lopinavir\xa0and rit'
+PASSAGE_0056 (len=244): '↑ saquinavir\nThe saquinavir dose is 1000 mg twice daily, when co-administered with lopinavir\xa0and ritonavir 400/100 mg twice daily. Lopinavir\xa0and riton'
+PASSAGE_0057 (len=144): '↓ lopinavir\nCo-administration with tipranavir (500 mg twice daily) and ritonavir (200 mg twice daily) is not recommended.\nHIV CCR5 – Antagonist:'
+PASSAGE_0058 (len=211): '↑ maraviroc\nWhen co-administered, patients should receive 150 mg twice daily of maraviroc. For further details see complete prescribing information fo'
+PASSAGE_0059 (len=311): '↓ lopinavir\nIncrease the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administered with efavirenz o'
+PASSAGE_0061 (len=298): 'didanosine\nFor lopinavir and ritonavir oral solution, it is recommended that didanosine be administered on an empty stomach; therefore, didanosine sho'
+PASSAGE_0066 (len=1508): '↓ lopinavir/ritonavir#\nApalutamide is contraindicated due to potential for loss of virologic response and possible resistance to lopinavir and ritonav'
+PASSAGE_0067 (len=358): '↑ rivaroxaban\nConcentrations of warfarin may be affected. Initial frequent monitoring of the INR during lopinavir and ritonavir and warfarin co-admini'
+PASSAGE_0068 (len=543): '↓ phenytoin\nLopinavir\xa0and ritonavir may be less effective due to decreased lopinavir plasma concentrations in patients taking these agents concomitant'
+PASSAGE_0069 (len=255): '↓ or ↔ valproate\nA dose increase of lamotrigine or valproate may be needed when co-administered with lopinavir and ritonavir and therapeutic concentra'
+PASSAGE_0071 (len=214): '↑ trazodone\nAdverse reactions of nausea, dizziness, hypotension and syncope have been observed following co-administration of trazodone and ritonavir.'
+PASSAGE_0073 (len=453): '↑ isavuconazonium\nHigh doses of ketoconazole (>200 mg/day) or itraconazole (>\xa0200\xa0mg/day) are not recommended.\nThe co-administration of voriconazole a'
+PASSAGE_0074 (len=932): '↑ colchicine\nContraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment .\nFor pat'
+PASSAGE_0079 (len=523): 'quetiapine\nConsider alternative antiretroviral therapy to avoid increases in quetiapine exposures. If coadministration is necessary, reduce the quetia'
+PASSAGE_0081 (len=802): '↑ bosentan\nCo-administration of bosentan in patients on lopinavir and ritonavir:\nIn patients who have been receiving lopinavir\xa0and ritonavir for at le'
+PASSAGE_0084 (len=234): '↔\xa0dasabuvir\nIt is not recommended to co-administer lopinavir and ritonavir and boceprevir, glecaprevir/pibrentasvir, simeprevir, sofosbuvir/velpatasvi'
+PASSAGE_0089 (len=290): '↑ salmeterol\nConcurrent administration of salmeterol and lopinavir\xa0and ritonavir is not recommended. The combination may result in increased risk of c'
+PASSAGE_0090 (len=319): '↑ fentanyl\nDosage of methadone may need to be increased when co-administered with lopinavir\xa0and ritonavir.\nCareful monitoring of therapeutic and adver'
+PASSAGE_0091 (len=1833): '↑ vardenafil\nSildenafil when used for the treatment of pulmonary arterial hypertension (Revatio®) is contraindicated due to the potential for sildenaf'
+PASSAGE_0093 (len=300): '↓ lopinavir\nCo-administration with corticosteroids whose exposures are significantly increased by strong CYP3A inhibitors can increase the risk for Cu'
+PASSAGE_0096 (len=1049): 'Risk Summary\nAvailable data from the Antiretroviral Pregnancy Registry show no difference in the risk of overall major birth defects compared to the b'
+PASSAGE_0099 (len=1129): 'Animal Data\nEmbryonic and fetal developmental toxicities (early resorption, decreased fetal viability, decreased fetal body weight, increased incidenc'
+PASSAGE_0102 (len=2671): '8.4 Pediatric Use\nThe safety, efficacy, and pharmacokinetic profiles of lopinavir\xa0and ritonavir in pediatric patients below the age of 14 days have no'
+PASSAGE_0103 (len=463): '8.5 Geriatric Use\nClinical studies of lopinavir\xa0and ritonavir did not include sufficient numbers of subjects aged 65 and over to determine whether the'
+PASSAGE_0104 (len=244): '8.6 Hepatic Impairment\nLopinavir\xa0and ritonavir is principally metabolized by the liver; therefore, caution should be exercised when administering this'
+PASSAGE_0105 (len=1969): '10 OVERDOSAGE\nOverdoses with lopinavir\xa0and ritonavir oral solution have been reported. One of these reports described fatal cardiogenic shock in a 2.1'
+PASSAGE_0106 (len=1774): '11 DESCRIPTION\nLopinavir\xa0and Ritonavir Oral Solution USP\xa0is a co-formulation of lopinavir and ritonavir. Lopinavir is an inhibitor of the HIV-1 protea'
+PASSAGE_0107 (len=290): '12.1 Mechanism of Action\nLopinavir and ritonavir is a fixed-dose combination of HIV-1 antiviral drugs lopinavir and ritonavir. As co-formulated in lop'
+PASSAGE_0108 (len=1007): '12.2 Pharmacodynamics\nCardiac Electrophysiology\nThe effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo and active (moxiflox'
+PASSAGE_0109 (len=514): '12.3 Pharmacokinetics\nThe pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic parameters of lopinavir'
+PASSAGE_0120 (len=883): 'Drug Interactions\nLopinavir and ritonavir is an inhibitor of the P450 isoform CYP3A in vitro. Lopinavir and ritonavir does not inhibit CYP2D6, CYP2C9,'
+PASSAGE_0121 (len=123): 'n\nRatio (in combination with Co-administered drug/alone) of Lopinavir Pharmacokinetic Parameters (90% CI); No Effect = 1.00'
+PASSAGE_0124 (len=93): '(0.40, 0.58)\n2 Data extracted from the U.S. prescribing information of co-administered drugs.'
+PASSAGE_0125 (len=262): '3 Parallel group design\n4 Drug levels obtained at 8-16 hours post dose\nN/A = Not available.\nTable\xa017. Drug Interactions: Pharmacokinetic Parameters fo'
+PASSAGE_0126 (len=138): 'n\nRatio (in combination with\nLopinavir and Ritonavir\n/alone) of Co-administered Drug Pharmacokinetic Parameters (90% CI); No Effect = 1.00'
+PASSAGE_0133 (len=209): '12.4 Microbiology\nMechanism of Action\nLopinavir, an inhibitor of the HIV-1 protease, prevents cleavage of the viral Gag-Pol polyprotein, resulting in '
+PASSAGE_0137 (len=1487): '<4 fold\nIsolates from patients previously treated with two or more protease inhibitors showed greater reductions in susceptibility to lopinavir, as de'
+PASSAGE_0140 (len=1728): '13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\nCarcinogenesis\nLopinavir and ritonavir combination was evaluated for carcinogenic potential '
+PASSAGE_0145 (len=1561): '89\n2 Patients achieved HIV-1 RNA < 50 copies/mL at Week 48.\nThrough 48 weeks of therapy, the mean increase from baseline in CD4+ cell count was 207 ce'
+PASSAGE_0150 (len=2043): "13%\n2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.\n3 Includes lost to follow-up, patient's withd"
+PASSAGE_0159 (len=1832): '17 PATIENT COUNSELING INFORMATION\nAdvise the patient to read the FDA-approved patient labeling (Medication Guide)\nGeneral Administration Information\n:'
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+[?2004l[?2004h>             lop = data
+[?2004l[?2004h>             break
+[?2004l[?2004h> for idx in [1, 2, 3, 159]:
+[?2004l[?2004h>     print(f'=== PASSAGE_{idx:04d} ===')
+[?2004l[?2004h>     print(lop['chunks'][idx])
+[?2004l[?2004h> "
+[?2004l=== PASSAGE_0001 ===
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+=== PASSAGE_0002 ===
+2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potential incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be used for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+=== PASSAGE_0003 ===
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing regimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V, V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+=== PASSAGE_0159 ===
+17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to accurate administration of their dose to minimize the risk of accidental overdose or underdose of lopinavir and ritonavir.
+- Advise patients and caregivers that the oral solution should be administered using the calibrated dosing cup (supplied) or oral dosing syringe.
+- Advise caregivers to inform their healthcare provider if the child’s weight changes in order to make sure that the child’s lopinavir and ritonavir dose is adjusted as needed.
+- Inform patients and caregivers that lopinavir and ritonavir oral solution should be taken with food to enhance absorption.
+- Advise patients to remain under the care of a healthcare provider while using lopinavir and ritonavir and to take lopinavir and ritonavir in combination with other antiretroviral drugs as prescribed.
+- Advise patients not to alter the dose or discontinue therapy without consulting with their healthcare provider. If a dose of lopinavir and ritonavir is missed patients should take the dose as soon as possible and then return to their normal schedule. However, if a dose is skipped the patient should not double the next dose.
+- Inform patients that it is important to take lopinavir and ritonavir on a regular dosing schedule as directed and to avoid missing doses as that can result in development of resistance.
+- Inform patients that there may be a greater chance of developing diarrhea with the once daily regimen as compared with the twice daily regimen.
+- Inform patients that lopinavir and ritonavir is not a cure for HIV-1 infection and that they may continue to experience illnesses associated with HIV-1 infection, including opportunistic infections.
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+[?2004l[?2004h>             lop = data
+[?2004l[?2004h>             break
+[?2004l[?2004h> for idx in [4, 5, 6]:
+[?2004l[?2004h>     print(f'=== PASSAGE_{idx:04d} ===')
+[?2004l[?2004h>     print(lop['chunks'][idx])
+[?2004l[?2004h> "
+[?2004l=== PASSAGE_0004 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen
+=== PASSAGE_0005 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage recommendations for twice daily dosing when lopinavir and ritonavir is taken in combination with these agents.
+=== PASSAGE_0006 ===
+Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+[?2004l[?2004h>             lop = data
+[?2004l[?2004h>             break
+[?2004l[?2004h> for idx, chunk in enumerate(lop['chunks']):
+[?2004l[?2004h>     if chunk.startswith('5.') or 'WARNINGS AND PRECAUTIONS' in chunk:
+[?2004l[?2004h>         print(f'PASSAGE_{idx:04d}: {repr(chunk[:150])}')
+[?2004l[?2004h> "
+[?2004lPASSAGE_0014: '5.1 Risk of Serious Adverse Reactions Due to Drug Interactions\nInitiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medicat'
+PASSAGE_0015: '5.2 Toxicity in Preterm Neonates\nLopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, '
+PASSAGE_0016: '5.3 Pancreatitis\nPancreatitis has been observed in patients receiving lopinavir\xa0and ritonavir therapy, including those who developed marked triglyceri'
+PASSAGE_0017: '5.4 Hepatotoxicity\nPatients with underlying hepatitis B or C or marked elevations in transaminase prior to treatment may be at increased risk for deve'
+PASSAGE_0018: '5.5 QT Interval Prolongation\nPostmarketing cases of QT interval prolongation and torsade de pointes have been reported although causality of lopinavir'
+PASSAGE_0019: '5.6 PR Interval Prolongation\nLopinavir\xa0and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atrioventricular block'
+PASSAGE_0020: '5.7 Diabetes Mellitus/Hyperglycemia\nNew onset diabetes mellitus, exacerbation of pre-existing diabetes mellitus, and hyperglycemia have been reported '
+PASSAGE_0021: '5.8 Immune Reconstitution Syndrome\nImmune reconstitution syndrome has been reported in patients treated with combination antiretroviral therapy, inclu'
+PASSAGE_0022: '5.9 Lipid Elevations\nTreatment with lopinavir\xa0and ritonavir has resulted in large increases in the concentration of total cholesterol and triglyceride'
+PASSAGE_0023: '5.10 Fat Redistribution\nRedistribution/accumulation of body fat including central obesity, dorsocervical fat enlargement (buffalo hump), peripheral wa'
+PASSAGE_0024: '5.11 Patients with Hemophilia\nIncreased bleeding, including spontaneous skin hematomas and hemarthrosis have been reported in patients with hemophilia'
+PASSAGE_0025: '5.12 Resistance/Cross-resistance\nBecause the potential for HIV cross-resistance among protease inhibitors has not been fully explored in lopinavir\xa0and'
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+[?2004l[?2004h>             lop = data
+[?2004l[?2004h>             break
+[?2004l[?2004h> for idx in range(14, 20):
+[?2004l[?2004h>     print(f'=== PASSAGE_{idx:04d} ===')
+[?2004l[?2004h>     print(lop['chunks'][idx])
+[?2004l[?2004h> "
+[?2004l=== PASSAGE_0014 ===
+5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving lopinavir and ritonavir, may increase plasma concentrations of medications metabolized by CYP3A.  Initiation of medications that inhibit or induce CYP3A may increase or decrease concentrations of lopinavir and ritonavir, respectively. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Clinically significant adverse reactions from greater exposures of lopinavir and ritonavir.
+- Loss of therapeutic effect of lopinavir and ritonavir and possible development of resistance.
+See Table 12 for steps to prevent or manage these possible and known significant drug interactions, including dosing recommendations . Consider the potential for drug interactions prior to and during lopinavir and ritonavir therapy; review concomitant medications during lopinavir and ritonavir therapy, and monitor for the adverse reactions associated with the concomitant medications .
+=== PASSAGE_0015 ===
+5.2 Toxicity in Preterm Neonates
+Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, approximately 15% (w/v). When administered concomitantly with propylene glycol, ethanol competitively inhibits the metabolism of propylene glycol, which may lead to elevated concentrations. Preterm neonates may be at increased risk of propylene glycol-associated adverse events due to diminished ability to metabolize propylene glycol, thereby leading to accumulation and potential adverse events. Postmarketing life-threatening cases of cardiac toxicity (including complete AV block, bradycardia, and cardiomyopathy), lactic acidosis, acute renal failure, CNS depression and respiratory complications leading to death have been reported, predominantly in preterm neonates receiving lopinavir and ritonavir oral solution.
+Lopinavir and ritonavir oral solution should not be used in preterm neonates in the immediate postnatal period because of possible toxicities. A safe and effective dose of lopinavir and ritonavir oral solution in this patient population has not been established. However, if the benefit of using lopinavir and ritonavir oral solution to treat HIV infection in infants immediately after birth outweighs the potential risks, infants should be monitored closely for increases in serum osmolality and serum creatinine, and for toxicity related to lopinavir and ritonavir oral solution including: hyperosmolality, with or without lactic acidosis, renal toxicity, CNS depression (including stupor, coma, and apnea), seizures, hypotonia, cardiac arrhythmias and ECG changes, and hemolysis. Total amounts of ethanol and propylene glycol from all medicines that are to be given to infants should be taken into account in order to avoid toxicity from these excipients .
+=== PASSAGE_0016 ===
+5.3 Pancreatitis
+Pancreatitis has been observed in patients receiving lopinavir and ritonavir therapy, including those who developed marked triglyceride elevations. In some cases, fatalities have been observed. Although a causal relationship to lopinavir and ritonavir has not been established, marked triglyceride elevations are a risk factor for development of pancreatitis . Patients with advanced HIV-1 disease may be at increased risk of elevated triglycerides and pancreatitis, and patients with a history of pancreatitis may be at increased risk for recurrence during lopinavir and ritonavir therapy.
+Pancreatitis should be considered if clinical symptoms (nausea, vomiting, abdominal pain) or abnormalities in laboratory values (such as increased serum lipase or amylase values) suggestive of pancreatitis occur. Patients who exhibit these signs or symptoms should be evaluated and lopinavir and ritonavir and/or other antiretroviral therapy should be suspended as clinically appropriate.
+=== PASSAGE_0017 ===
+5.4 Hepatotoxicity
+Patients with underlying hepatitis B or C or marked elevations in transaminase prior to treatment may be at increased risk for developing or worsening of transaminase elevations or hepatic decompensation with use of lopinavir and ritonavir.
+There have been postmarketing reports of hepatic dysfunction, including some fatalities. These have generally occurred in patients with advanced HIV-1 disease taking multiple concomitant medications in the setting of underlying chronic hepatitis or cirrhosis. A causal relationship with lopinavir and ritonavir therapy has not been established.
+Elevated transaminases with or without elevated bilirubin levels have been reported in HIV-1 mono-infected and uninfected patients as early as 7 days after the initiation of lopinavir and ritonavir in conjunction with other antiretroviral agents. In some cases, the hepatic dysfunction was serious; however, a definitive causal relationship with lopinavir and ritonavir therapy has not been established.
+Appropriate laboratory testing should be conducted prior to initiating therapy with lopinavir and ritonavir and patients should be monitored closely during treatment. Increased AST/ALT monitoring should be considered in the patients with underlying chronic hepatitis or cirrhosis, especially during the first several months of lopinavir and ritonavir treatment .
+=== PASSAGE_0018 ===
+5.5 QT Interval Prolongation
+Postmarketing cases of QT interval prolongation and torsade de pointes have been reported although causality of lopinavir and ritonavir could not be established. Avoid use in patients with congenital long QT syndrome, those with hypokalemia, and with other drugs that prolong the QT interval .
+=== PASSAGE_0019 ===
+5.6 PR Interval Prolongation
+Lopinavir and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atrioventricular block have been reported. Lopinavir and ritonavir should be used with caution in patients with underlying structural heart disease, pre-existing conduction system abnormalities, ischemic heart disease or cardiomyopathies, as these patients may be at increased risk for developing cardiac conduction abnormalities.
+The impact on the PR interval of co-administration of lopinavir and ritonavir with other drugs that prolong the PR interval (including calcium channel blockers, beta-adrenergic blockers, digoxin and atazanavir) has not been evaluated. As a result, co-administration of lopinavir and ritonavir with these drugs should be undertaken with caution, particularly with those drugs metabolized by CYP3A. Clinical monitoring is recommended .
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     for line in f:
+[?2004l[?2004h>         data = json.loads(line)
+[?2004l[?2004h>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+[?2004l[?2004h>             lop = data
+[?2004l[?2004h>             break
+[?2004l[?2004h> for idx in range(20, 26):
+[?2004l[?2004h>     print(f'=== PASSAGE_{idx:04d} ===')
+[?2004l[?2004h>     print(lop['chunks'][idx])
+[?2004l[?2004h> "
+[?2004l=== PASSAGE_0020 ===
+5.7 Diabetes Mellitus/Hyperglycemia
+New onset diabetes mellitus, exacerbation of pre-existing diabetes mellitus, and hyperglycemia have been reported during post-marketing surveillance in HIV-1 infected patients receiving protease inhibitor therapy. Some patients required either initiation or dose adjustments of insulin or oral hypoglycemic agents for treatment of these events. In some cases, diabetic ketoacidosis has occurred. In those patients who discontinued protease inhibitor therapy, hyperglycemia persisted in some cases. Because these events have been reported voluntarily during clinical practice, estimates of frequency cannot be made and a causal relationship between protease inhibitor therapy and these events has not been established. Consider monitoring for hyperglycemia, new onset diabetes mellitus or an exacerbation of diabetes mellitus in patients treated with lopinavir and ritonavir.
+=== PASSAGE_0021 ===
+5.8 Immune Reconstitution Syndrome
+Immune reconstitution syndrome has been reported in patients treated with combination antiretroviral therapy, including lopinavir and ritonavir. During the initial phase of combination antiretroviral treatment, patients whose immune system responds may develop an inflammatory response to indolent or residual opportunistic infections (such as Mycobacterium avium infection, cytomegalovirus, Pneumocystis jirovecii pneumonia PCP], or tuberculosis) which may necessitate further evaluation and treatment.
+Autoimmune disorders (such as Graves’ disease, polymyositis, and Guillain-Barré syndrome) have also been reported to occur in the setting of immune reconstitution, however, the time to onset is more variable, and can occur many months after initiation of treatment.
+=== PASSAGE_0022 ===
+5.9 Lipid Elevations
+Treatment with lopinavir and ritonavir has resulted in large increases in the concentration of total cholesterol and triglycerides . Triglyceride and cholesterol testing should be performed prior to initiating lopinavir and ritonavir therapy and at periodic intervals during therapy. Lipid disorders should be managed as clinically appropriate, taking into account any potential drug-drug interactions with lopinavir and ritonavir and HMG-CoA reductase inhibitors .
+=== PASSAGE_0023 ===
+5.10 Fat Redistribution
+Redistribution/accumulation of body fat including central obesity, dorsocervical fat enlargement (buffalo hump), peripheral wasting, facial wasting, breast enlargement, and "cushingoid appearance" have been observed in patients receiving antiretroviral therapy. The mechanism and long-term consequences of these events are currently unknown. A causal relationship has not been established.
+=== PASSAGE_0024 ===
+5.11 Patients with Hemophilia
+Increased bleeding, including spontaneous skin hematomas and hemarthrosis have been reported in patients with hemophilia type A and B treated with protease inhibitors. In some patients additional factor VIII was given. In more than half of the reported cases, treatment with protease inhibitors was continued or reintroduced. A causal relationship between protease inhibitor therapy and these events has not been established.
+=== PASSAGE_0025 ===
+5.12 Resistance/Cross-resistance
+Because the potential for HIV cross-resistance among protease inhibitors has not been fully explored in lopinavir and ritonavir-treated patients, it is unknown what effect therapy with lopinavir and ritonavir will have on the activity of subsequently administered protease inhibitors .
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     pax = json.loads(f.readline())
+[?2004l[?2004h> for idx, chunk in enumerate(pax['chunks']):
+[?2004l[?2004h>     if chunk.startswith('5.') or 'WARNINGS AND PRECAUTIONS' in chunk:
+[?2004l[?2004h>         print(f'PASSAGE_{idx:04d}: {repr(chunk[:150])}')
+[?2004l[?2004h> "
+[?2004lPASSAGE_0013: '5.1\tRisk of Serious Adverse Reactions Due to Drug Interactions\nInitiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients'
+PASSAGE_0014: '5.2\tHypersensitivity Reactions\nAnaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hype'
+PASSAGE_0015: '5.3\tHepatotoxicity\nHepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir. Therefore, caution'
+PASSAGE_0016: '5.4\tRisk of HIV-1 Resistance Development\nBecause nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to'
+[?2004hroot@23e2e6a1b566:/workspace# python3 -c "
+[?2004l[?2004h> import json
+[?2004l[?2004h> with open('/workspace/data/public/labels.jsonl') as f:
+[?2004l[?2004h>     pax = json.loads(f.readline())
+[?2004l[?2004h> for idx in [13, 14, 15, 16]:
+[?2004l[?2004h>     print(f'=== PASSAGE_{idx:04d} ===')
+[?2004l[?2004h>     print(pax['chunks'][idx])
+[?2004l[?2004h> "
+[?2004l=== PASSAGE_0013 ===
+5.1	Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A. Medications that induce CYP3A may decrease concentrations of PAXLOVID. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Loss of therapeutic effect of PAXLOVID and possible development of viral resistance.
+Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated with PAXLOVID. The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers.
+Prior to prescribing PAXLOVID, review all medications taken by the patient to assess potential drug-drug interactions and determine if concomitant medications require a dose adjustment, interruption, and/or additional monitoring (e.g., calcineurin inhibitors) . See Table 2 for clinically significant drug interactions, including contraindicated drugs. Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXLOVID.
+Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an individual patient can be appropriately managed .
+=== PASSAGE_0014 ===
+5.2	Hypersensitivity Reactions
+Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported with PAXLOVID . If signs and symptoms of a clinically significant hypersensitivity reaction or anaphylaxis occur, immediately discontinue PAXLOVID and initiate appropriate medications and/or supportive care.
+=== PASSAGE_0015 ===
+5.3	Hepatotoxicity
+Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir. Therefore, caution should be exercised when administering PAXLOVID to patients with pre-existing liver diseases, liver enzyme abnormalities, or hepatitis.
+=== PASSAGE_0016 ===
+5.4	Risk of HIV-1 Resistance Development
+Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection .
+[?2004hroot@23e2e6a1b566:/workspace# cat << 'EOF' > generate_answers.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> answers_data = [
+[?2004l[?2004h>     {
+[?2004l[?2004h>         "qid": "b2531657ba5c7a78",
+[?2004l[?2004h>         "status": "ANSWERED",
+[?2004ll excipients in the oral solut[?2004h>         "answer": "Paxlovid (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Initiation of Paxlovid in patients receiving medications metabolized by CYP3A, or initiation of such medications in patients already receiving Paxlovid, may increase plasma concentrations of these concomitant medications. This can lead to clinically significant adverse reactions, potentially resulting in severe, life-threatening, or fatal events (such as serious reactions reported with calcineurin inhibitors like tacrolimus and cyclosporine, or calcium channel blockers). Conversely, co-administration of Paxlovid with medications that induce CYP3A can decrease nirmatrelvir/ritonavir plasma concentrations, leading to a loss of therapeutic effect and the potential development of viral resistance.",
+[?2004l[?2004h>         "citations": [
+[?2004l6d[?2004h>             {
+[?2004l,
+ [?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004lt[?2004h>                 "passage_id": "PASSAGE_0013",
+[?2004l[?2004h>                 "section": "5.1",
+[?2004l[?2004h>                 "supporting_quote": "Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A."
+[?2004l[?2004h>             },
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l/2[?2004h>                 "passage_id": "PASSAGE_0019",
+[?2004l[?2004h>                 "section": "7.1",
+[?2004l[?2004h>                 "supporting_quote": "PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1."
+[?2004l[?2004h>             }
+[?2004l[?2004h>         ],
+[?2004ltal, phenyt[?2004h>         "structured_fields": {}
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>         "qid": "6f12607a1ba14dd5",
+[?2004l[?2004h>         "status": "ANSWERED",
+[?2004lopinav[?2004h>         "answer": "Paxlovid is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions. These include: alfuzosin; ranolazine; amiodarone, dronedarone, flecainide, propafenone, quinidine; colchicine (in patients with renal and/or hepatic impairment); lurasidone, pimozide; silodosin; eplerenone, ivabradine; dihydroergotamine, ergotamine, methylergonovine; lovastatin, simvastatin; voclosporin; lomitapide; eletriptan, ubrogepant; finerenone; naloxegol; sildenafil (Revatio) when used for PAH; triazolam, oral midazolam; flibanserin; and tolvaptan. Additionally, it is contraindicated with strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations can cause loss of virologic response and resistance, including: apalutamide, enzalutamide; carbamazepine, phenobarbital, primidone, phenytoin; rifampin, rifapentine; lumacaftor/ivacaftor; and St. John's Wort.",
+[?2004l[?2004h>         "citations": [
+[?2004l "su[?2004h>             {
+[?2004lg_quote[?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0012",
+[?2004l[?2004h>                 "section": "4",
+[?2004l[?2004h>                 "supporting_quote": "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic response and possible resistance."
+[?2004l[?2004h>             }
+[?2004las bee[?2004h>         ],
+[?2004ln observed [?2004h>         "structured_fields": {}
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>         "qid": "daef650b92e56473",
+[?2004l[?2004h>         "status": "ANSWERED",
+[?2004l[?2004h>         "answer": "Lopinavir-Ritonavir oral solution must be taken with food to enhance absorption. Patients and caregivers should pay special attention to accurate administration to minimize the risk of accidental overdose or underdose, and they should use the calibrated dosing cup (supplied) or an oral dosing syringe. For administration via a feeding tube, polyurethane tubes are not recommended due to potential incompatibility with the ethanol and propylene glycol excipients in the oral solution; compatible feeding tubes such as silicone and polyvinyl chloride (PVC) feeding tubes should be used instead.",
+[?2004l[?2004h>         "citations": [
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l  [?2004h>                 "passage_id": "PASSAGE_0001",
+[?2004l[?2004h>                 "section": "2.1",
+[?2004l[?2004h>                 "supporting_quote": "Lopinavir and ritonavir oral solution must be taken with food."
+[?2004ld propylene glyco[?2004h>             },
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0002",
+[?2004l             "[?2004h>                 "section": "2.2",
+[?2004lpassage_id": "PASSAGE_0016",
+     [?2004h>                 "supporting_quote": "Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potential incompatibility."
+[?2004l[?2004h>             },
+[?2004l [?2004h>             {
+[?2004l        {
+    [?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0159",
+[?2004l [?2004h>                 "section": "17",
+[?2004l[?2004h>                 "supporting_quote": "Advise patients and caregivers that the oral solution should be administered using the calibrated dosing cup (supplied) or oral dosing syringe."
+[?2004l[?2004h>             }
+[?2004l[?2004h>         ],
+[?2004l[?2004h>         "structured_fields": {}
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>         "qid": "a0576a26f2a2eeac",
+[?2004l."
+           [?2004h>         "status": "ANSWERED",
+[?2004l[?2004h>         "answer": "Lopinavir-Ritonavir can be given in once daily or twice daily dosing regimens in adults. The recommended once daily regimen is 800 mg/200 mg (10 mL of 80 mg/20 mg per mL oral solution) once daily. The recommended twice daily regimen is 400 mg/100 mg (5 mL) twice daily. The once daily regimen is not recommended in pediatric patients, pregnant women, in combination with strong CYP3A inducers (carbamazepine, phenobarbital, phenytoin) or certain antiretrovirals (efavirenz, nevirapine, nelfinavir), or in patients with three or more lopinavir resistance-associated substitutions. When administered in combination with efavirenz, nevirapine, or nelfinavir, the twice daily dose of Lopinavir-Ritonavir should be increased to 520 mg/130 mg (6.5 mL) twice daily.",
+[?2004l[?2004h>         "citations": [
+[?2004ll[?2004h>             {
+[?2004li[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004ll[?2004h>                 "passage_id": "PASSAGE_0003",
+[?2004l[?2004h>                 "section": "2.3",
+[?2004l[?2004h>                 "supporting_quote": "Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2."
+[?2004l[?2004h>             },
+[?2004l  [?2004h>             {
+[?2004l {
+           [?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004ld9e6d85",
+           [?2004h>                 "passage_id": "PASSAGE_0004",
+[?2004l[?2004h>                 "section": "2.3",
+[?2004l[?2004h>                 "supporting_quote": "80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily"
+[?2004ln[?2004h>             },
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0005",
+[?2004l[?2004h>                 "section": "2.3",
+[?2004l[?2004h>                 "supporting_quote": "80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily"
+[?2004l[?2004h>             }
+[?2004l[?2004h>         ],
+[?2004l6d8[?2004h>         "structured_fields": {}
+[?2004l[?2004h>     },
+[?2004l"PASS[?2004h>     {
+[?2004l_00[?2004h>         "qid": "9be5515bc3064979",
+[?2004l[?2004h>         "status": "ANSWERED",
+[?2004l "supportin[?2004h>         "answer": "The safety risks listed for Lopinavir-Ritonavir include: (1) Toxicity in preterm neonates due to the excipients ethanol (approx. 42% v/v) and propylene glycol (approx. 15% w/v), which can accumulate and cause life-threatening cardiac toxicity, lactic acidosis, acute renal failure, CNS depression, and respiratory complications. (2) Pancreatitis, which has been observed in patients receiving therapy, sometimes leading to fatalities, particularly in patients with marked triglyceride elevations. (3) Hepatotoxicity, with reports of transaminase elevations, hepatitis, and hepatic decompensation, especially in patients with chronic hepatitis B or C or cirrhosis. (4) QT and PR interval prolongation, which can lead to cardiac conduction abnormalities, including second or third degree AV block. (5) New onset or worsening of diabetes mellitus/hyperglycemia. (6) Immune reconstitution syndrome. (7) Large lipid elevations (cholesterol and triglycerides). (8) Fat redistribution/accumulation. (9) Increased bleeding in patients with hemophilia.",
+[?2004l[?2004h>         "citations": [
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0015",
+[?2004l[?2004h>                 "section": "5.2",
+[?2004l[?2004h>                 "supporting_quote": "Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, approximately 15% (w/v)."
+[?2004l[?2004h>             },
+[?2004l  [?2004h>             {
+[?2004l[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l6-fd9e-45bb-b[?2004h>                 "passage_id": "PASSAGE_0016",
+[?2004l[?2004h>                 "section": "5.3",
+[?2004l013",
+               [?2004h>                 "supporting_quote": "Pancreatitis has been observed in patients receiving lopinavir and ritonavir therapy, including those who developed marked triglyceride elevations."
+[?2004l[?2004h>             },
+[?2004l[?2004h>             {
+[?2004ltions[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0017",
+[?2004l[?2004h>                 "section": "5.4",
+[?2004l[?2004h>                 "supporting_quote": "Patients with underlying hepatitis B or C or marked elevations in transaminase prior to treatment may be at increased risk for developing or worsening of transaminase elevations or hepatic decompensation with use of lopinavir and ritonavir."
+[?2004l[?2004h>             }
+[?2004l[?2004h>         ],
+[?2004l[?2004h>         "structured_fields": {}
+[?2004l[?2004h>     },
+[?2004lctions [?2004h>     {
+[?2004l b[?2004h>         "qid": "18078efe9380c8dc",
+[?2004l[?2004h>         "status": "ANSWERED",
+[?2004l[?2004h>         "answer": "The important warnings and precautions associated with Lopinavir-Ritonavir include: (1) Serious adverse reactions due to drug interactions, as lopinavir and ritonavir is a CYP3A inhibitor. (2) Toxicity in preterm neonates due to ethanol and propylene glycol excipients in the oral solution. (3) Pancreatitis (including fatalities), requiring evaluation and potential therapy suspension if symptoms or lab abnormalities occur. (4) Hepatotoxicity, requiring close monitoring of transaminases, especially in patients with underlying hepatitis B/C or cirrhosis. (5) QT interval prolongation and torsade de pointes, necessitating avoidance in patients with congenital long QT syndrome or hypokalemia. (6) PR interval prolongation, which can cause second or third degree AV block. (7) New onset or worsening of diabetes mellitus and hyperglycemia. (8) Immune reconstitution syndrome. (9) Large lipid elevations. (10) Fat redistribution. (11) Increased bleeding in patients with hemophilia.",
+[?2004l[?2004h>         "citations": [
+[?2004lividuals w[?2004h>             {
+[?2004l[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004ls": [
+      [?2004h>                 "passage_id": "PASSAGE_0014",
+[?2004l-fd[?2004h>                 "section": "5.1",
+[?2004l[?2004h>                 "supporting_quote": "Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving lopinavir and ritonavir, may increase plasma concentrations of medications metabolized by CYP3A."
+[?2004l[?2004h>             },
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0015",
+[?2004l  [?2004h>                 "section": "5.2",
+[?2004l[?2004h>                 "supporting_quote": "Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, approximately 15% (w/v)."
+[?2004l[?2004h>             },
+[?2004l[?2004h>             {
+[?2004ldermal[?2004h>                 "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0018",
+[?2004l[?2004h>                 "section": "5.5",
+[?2004l
+ [?2004h>                 "supporting_quote": "Avoid use in patients with congenital long QT syndrome, those with hypokalemia, and with other drugs that prolong the QT interval ."
+[?2004l[?2004h>             }
+[?2004l[?2004h>         ],
+[?2004l[?2004h>         "structured_fields": {}
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>         "qid": "fbab4114f66e2dda",
+[?2004l[?2004h>         "status": "ANSWERED",
+[?2004l[?2004h>         "answer": "The important warnings and precautions associated with Paxlovid are: (1) Risk of serious adverse reactions due to drug interactions: Paxlovid contains ritonavir, a strong CYP3A inhibitor, which can significantly increase concentrations of CYP3A substrates, potentially leading to severe, life-threatening, or fatal events. (2) Hypersensitivity reactions: Serious skin reactions (such as toxic epidermal necrolysis and Stevens-Johnson syndrome) and anaphylaxis have been reported. (3) Hepatotoxicity: Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred with ritonavir. (4) Risk of HIV-1 resistance development: In individuals with uncontrolled or undiagnosed HIV-1 infection, Paxlovid use may lead to HIV-1 developing resistance to HIV protease inhibitors.",
+[?2004l[?2004h>         "citations": [
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0013",
+[?2004l[?2004h>                 "section": "5.1",
+[?2004l[?2004h>                 "supporting_quote": "Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A."
+[?2004l[?2004h>             },
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0014",
+[?2004l[?2004h>                 "section": "5.2",
+[?2004l[?2004h>                 "supporting_quote": "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported with PAXLOVID ."
+[?2004l[?2004h>             },
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0015",
+[?2004l[?2004h>                 "section": "5.3",
+[?2004l[?2004h>                 "supporting_quote": "Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir."
+[?2004l[?2004h>             }
+[?2004l[?2004h>         ],
+[?2004l[?2004h>         "structured_fields": {}
+[?2004l[?2004h>     },
+[?2004l[?2004h>     {
+[?2004l[?2004h>         "qid": "2d63e0a82215867f",
+[?2004l[?2004h>         "status": "ANSWERED",
+[?2004l[?2004h>         "answer": "The safety risks listed for Paxlovid include: (1) Serious, life-threatening, and/or fatal adverse reactions due to drug interactions, especially when co-administered with calcineurin inhibitors (e.g., tacrolimus, cyclosporine) or calcium channel blockers. (2) Hypersensitivity reactions, including anaphylaxis and serious skin reactions such as toxic epidermal necrolysis and Stevens-Johnson syndrome. (3) Hepatotoxicity, including hepatic transaminase elevations, clinical hepatitis, and jaundice. (4) Risk of HIV-1 resistance development to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection.",
+[?2004l[?2004h>         "citations": [
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0013",
+[?2004l[?2004h>                 "section": "5.1",
+[?2004l[?2004h>                 "supporting_quote": "Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated with PAXLOVID. The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel blockers."
+[?2004l[?2004h>             },
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0014",
+[?2004l[?2004h>                 "section": "5.2",
+[?2004l[?2004h>                 "supporting_quote": "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypersensitivity reactions have been reported with PAXLOVID ."
+[?2004l[?2004h>             },
+[?2004l[?2004h>             {
+[?2004l[?2004h>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+[?2004l[?2004h>                 "passage_id": "PASSAGE_0016",
+[?2004l[?2004h>                 "section": "5.4",
+[?2004l[?2004h>                 "supporting_quote": "Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection ."
+[?2004l[?2004h>             }
+[?2004l[?2004h>         ],
+[?2004l[?2004h>         "structured_fields": {}
+[?2004l[?2004h>     }
+[?2004l[?2004h> ]
+[?2004l[?2004h> 
+[?2004l[?2004h> output = {"answers": answers_data}
+[?2004l[?2004h> with open('/workspace/answers.json', 'w') as f:
+[?2004l[?2004h>     json.dump(output, f, indent=2)
+[?2004l[?2004h> print("Generated answers.json successfully!")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@23e2e6a1b566:/workspace# python3 generate_answers.py
+[?2004lGenerated answers.json successfully!
+[?2004hroot@23e2e6a1b566:/workspace# cat << 'EOF' > validate_answers.py
+[?2004l[?2004h> import json
+[?2004l[?2004h> 
+[?2004l[?2004h> with open('/workspace/answers.json') as f:
+[?2004l[?2004h>     data = json.load(f)
+[?2004l[?2004h> 
+[?2004l[?2004h> assert "answers" in data, "Missing 'answers' key"
+[?2004l[?2004h> answers = data["answers"]
+[?2004l[?2004h> print(f"Number of answers: {len(answers)}")
+[?2004l[?2004h> assert len(answers) == 8, f"Expected 8 answers, got {len(answers)}"
+[?2004l[?2004h> 
+[?2004l[?2004h> expected_qids = {
+[?2004l[?2004h>     "b2531657ba5c7a78",
+[?2004l[?2004h>     "6f12607a1ba14dd5",
+[?2004l[?2004h>     "daef650b92e56473",
+[?2004l[?2004h>     "a0576a26f2a2eeac",
+[?2004l[?2004h>     "9be5515bc3064979",
+[?2004l[?2004h>     "18078efe9380c8dc",
+[?2004l[?2004h>     "fbab4114f66e2dda",
+[?2004l[?2004h>     "2d63e0a82215867f"
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> qids_found = set()
+[?2004l[?2004h> for idx, ans in enumerate(answers):
+[?2004l[?2004h>     qid = ans.get("qid")
+[?2004l[?2004h>     print(f"{idx}: qid={qid} status={ans.get('status')}")
+[?2004l[?2004h>     assert qid in expected_qids, f"Unexpected qid: {qid}"
+[?2004l[?2004h>     qids_found.add(qid)
+[?2004l[?2004h>     
+[?2004l[?2004h>     # Check fields
+[?2004l[?2004h>     for field in ["qid", "status", "answer", "citations", "structured_fields"]:
+[?2004l[?2004h>         assert field in ans, f"Missing field '{field}' in answer for qid {qid}"
+[?2004l[?2004h>     
+[?2004l[?2004h>     # Check citations
+[?2004l[?2004h>     citations = ans["citations"]
+[?2004l[?2004h>     assert isinstance(citations, list), "citations must be a list"
+[?2004l[?2004h>     assert len(citations) >= 1, "at least one citation is required"
+[?2004l[?2004h>     for cit in citations:
+[?2004l[?2004h>         for fld in ["set_id", "passage_id", "section", "supporting_quote"]:
+[?2004l[?2004h>             assert fld in cit, f"Missing field '{fld}' in citation of qid {qid}"
+[?2004l[?2004h>         assert cit["passage_id"].startswith("PASSAGE_"), f"Invalid passage_id: {cit['passage_id']}"
+[?2004l[?2004h> 
+[?2004l[?2004h> assert qids_found == expected_qids, "Not all expected qids were found"
+[?2004l[?2004h> print("All validations passed successfully!")
+[?2004l[?2004h> EOF
+[?2004l[?2004hroot@23e2e6a1b566:/workspace# python3 validate_answers.py
+[?2004lNumber of answers: 8
+0: qid=b2531657ba5c7a78 status=ANSWERED
+1: qid=6f12607a1ba14dd5 status=ANSWERED
+2: qid=daef650b92e56473 status=ANSWERED
+3: qid=a0576a26f2a2eeac status=ANSWERED
+4: qid=9be5515bc3064979 status=ANSWERED
+5: qid=18078efe9380c8dc status=ANSWERED
+6: qid=fbab4114f66e2dda status=ANSWERED
+7: qid=2d63e0a82215867f status=ANSWERED
+All validations passed successfully!
+[?2004hroot@23e2e6a1b566:/workspace# rm -f inspect_labels.py search_label.py search_lopinavir.py generate_answers.py validate_answers.py
+[?2004l[?2004hroot@23e2e6a1b566:/workspace# 

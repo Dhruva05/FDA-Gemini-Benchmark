@@ -1,0 +1,111 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat << 'EOF' > print_details.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print("="*80)
+>     print("QID:", q['qid'])
+>     print("Drug:", q['drug_name'])
+>     print("Question:", q['question'])
+>     set_id = q['set_id']
+>     label = labels[set_id]
+>
+>     print("Matching chunks:")
+>     for i, chunk in enumerate(label['chunks']):
+>         passage_id = f"PASSAGE_{i:04d}"
+>         if q['qid'] == 'near-miss-04f3afa658fdef':
+>             print(f"  {passage_id}: {repr(chunk)}")
+>         elif q['qid'] == 'near-miss-0c6ec72416151f':
+>             if 'renal' in chunk.lower() or 'impairment' in chunk.lower() or 'hepatic' in chunk.lower():
+>                 print(f"  {passage_id}: {repr(chunk)}")
+>         elif q['qid'] == 'near-miss-bd69d0bfb1fc7d':
+>             if 'pregnancy' in chunk.lower() or 'breast' in chunk.lower() or 'nursing' in chunk.lower() or 'lactat' in chunk.lower():
+>                 print(f"  {passage_id}: {repr(chunk)}")
+>         elif q['qid'] == 'near-miss-d4ca1884aa8ab4':
+>             if 'adverse' in chunk.lower() or 'monitoring' in chunk.lower() or 'therapeutic' in chunk.lower() or 'target' in chunk.lower():
+>                 print(f"  {passage_id}: {repr(chunk[:300])}...")
+>         elif q['qid'] == 'near-miss-52e5f8cac33c50':
+>             if 'pediatric' in chunk.lower() or 'geriatric' in chunk.lower() or 'child' in chunk.lower() or 'age' in chunk.lower():
+>                 print(f"  {passage_id}: {repr(chunk)}")
+>         elif q['qid'] == 'near-miss-5b5cb6a5249660':
+>             if 'pregnancy' in chunk.lower() or 'breast' in chunk.lower() or 'milk' in chunk.lower() or 'lactat' in chunk.lower():
+>                 print(f"  {passage_id}: {repr(chunk)}")
+> EOF
+root@0ef79956d710:/workspace# python3 print_details.py
+================================================================================
+QID: near-miss-04f3afa658fdef
+Drug: 12HR Allergy Relief
+Question: The 12HR Allergy Relief label discusses warnings. Does it provide a supported recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND
+ if the label does not support it, and cite the section you searched.
+Matching chunks:
+  PASSAGE_0000: 'Uses\ntemporarily relieves these symptoms due to hay fever or other upper respiratory allergies:\n- runny nose\n- sneezing\n- itchy, watery eye
+s\n- itching of the nose or throat'
+  PASSAGE_0001: 'Do not use\xa0if you have ever had an allergic reaction to this product or any of its ingredients.'
+  PASSAGE_0002: 'Ask a doctor before use if you have kidney disease.\xa0 Your doctor should determine if you need a different dose.'
+  PASSAGE_0003: '- do not take more than directed\n- do not take at the same time as aluminum or magnesium antacids\n- do not take with fruit juices'
+  PASSAGE_0004: 'Stop use and ask a doctor if an allergic reaction to this product occurs.\xa0 Seek medical help right away.'
+  PASSAGE_0005: 'If pregnant or breast-feeding,\xa0ask a health professional before use.'
+  PASSAGE_0006: 'Keep out of reach of children. In case of overdose, get medical help or contact a Poison Control Center right away (1-800-222-1222).'
+  PASSAGE_0007: 'adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours'
+  PASSAGE_0008: 'do not use\nadults 65 years of age and older'
+  PASSAGE_0009: '- store between 20-25°C (68-77°F)\n- protect from excessive moisture\n- retain carton for complete product information and warnings'
+  PASSAGE_0010: 'colloidal silicon dioxide, croscarmellose sodium, hypromellose, iron oxide black, iron oxide red, iron oxide yellow, lactose monohydrate, macro
+gol, magnesium stearate, microcrystalline cellulose, pregelatinized starch, titanium dioxide'
+  PASSAGE_0011: 'Antihistamine\nIndoor/Outdoor Relief of:'
+  PASSAGE_0012: 'Actual Size\nCOMPARE TO ALLEGRA® 12 HOUR ALLERGY active ingredient*'
+================================================================================
+QID: near-miss-0c6ec72416151f
+Drug: Acamprosate Calcium
+Question: The Acamprosate Calcium label discusses renal impairment. Does it provide a supported recommendation for severe hepatic impairment? Answer NOT_FOUND i
+f the label does not support it, and cite the section you searched.
+Matching chunks:
+  PASSAGE_0002: '2.1 Dosage in Renal Impairment\nFor patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 3
+33 mg tablet taken three times daily is recommended. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment (c
+reatinine clearance of ≤30 mL/min) .'
+  PASSAGE_0005: '4.2 Severe Renal Impairment\nAcamprosate calcium is
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+. Similarly, the pharmacokinetics of ethanol, diazepam and nordiazepam, imipramine and desipramine, naltrexone an
+d 6-beta naltrexol were unaffected following co-administration with acamprosate calcium. However, co-administration of acamprosate calcium with naltrexone led t
+o a 33% increase in the Cmax and a 25% increase in the AUC of acamprosate. No adjustment of dosage is recommended in such patients.'
+  PASSAGE_0046: '13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\nDietary administration of acamprosate calcium for 2 years to Sprague-Dawley rats at
+doses of 25, 100 and 400 mg/kg/day (up to 3 times the maximum recommended human daily (MRHD) oral dose on an AUC basis) and CD-1 mice at doses of 400, 1200 and
+3600 mg/kg/day (up to 25 times the MRHD on an AUC basis) showed no evidence of increased tumor incidence.\nAcamprosate calcium was negative in all genetic toxic
+ology studies conducted. Acamprosate calcium demonstrated no evidence of genotoxicity in an in vitro bacterial reverse point mutation assay (Ames assay) or an i
+n vitro mammalian cell gene mutation test using\nChinese Hamster Lung V79 cells. No clastogenicity was observed in an in vitro chromosomal aberration assay in h
+uman lymphocytes and no chromosomal damage detected in an in vivo mouse micronucleus assay.\nAcamprosate calcium had no effect on fertility after treatment for
+70 days prior to mating in male rats and for 14 days prior to mating, throughout mating, gestation and lactation in female rats at doses up to 1000 mg/kg/day (a
+pproximately 4 times the MRHD oral dose on a mg/m2 basis). In mice, acamprosate calcium administered orally for 60 days prior to mating and throughout gestation
+ in females at doses up to 2400 mg/kg/day (approximately 5 times the MRHD oral dose on a mg/m2 basis) had no effect on fertility.'
+  PASSAGE_0047: '14 CLINICAL STUDIES\nThe efficacy of acamprosate calcium in the maintenance of abstinence was supported by three clinical studies involving a t
+otal of 998 patients who were administered at least one dose of acamprosate calcium or placebo as an adjunct to psychosocial therapy. Each study was a double-bl
+ind, placebo-controlled trial in alcohol-dependent patients who had undergone inpatient detoxification and were abstinent from alcohol on the day of randomizati
+on. Study durations ranged from 90 days to 360 days. Acamprosate calcium proved superior to placebo in maintaining abstinence, as indicated by a greater percent
+age of subjects being assessed as continuously abstinent throughout treatment.\nIn a fourth study, the efficacy of acamprosate calcium was evaluated in alcoholi
+cs, including patients with a history of polysubstance abuse and patients who had not undergone detoxification and were not required to be abstinent at baseline
+. This study failed to demonstrate superiority of acamprosate calcium over placebo.'
+  PASSAGE_0048: '16 HOW SUPPLIED/STORAGE AND HANDLING\nAcamprosate calcium delayed-release tablets, 333 mg are white to off-white, round, biconvex, enteric-coat
+ed tablets debossed with ‘435’ on one side and plain on the other side.\nCartons of 30 tablets (10 tablets each blister pack x 3), NDC 0904-7213-04'
+  PASSAGE_0049: 'Storage and Handling\nStore at 20ºC to 25°C(68° F to 77ºF); excursions permitted to 15ºC to 30ºC (59ºF to 86ºF) .'
+  PASSAGE_0057: 'Mahwah, NJ 07430\nPackaged and Distributed by:'
+  PASSAGE_0058: "Indianapolis, IN 46268 USA\nRefer to package label for Distributor's NDC Number"
+================================================================================
+QID: near-miss-5b5cb6a5249660
+Drug: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+Question: The Acclean Chlorhexidine Gluconate 0.12% Oral Rinse label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adju
+stment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.
+Matching chunks:
+  PASSAGE_0006: 'Pregnancy Category B Reproduction studies have been performed in rats and rabbits at chlorhexidine gluconate doses up to 300 mg/kg/day and 40 m
+g/kg/day, respectively, and have not revealed evidence of harm to the fetus. However, adequate and well-controlled studies in pregnant women have not been done.
+ Because animal reproduction studies are not always predictive of human response, this drug should be used during pregnancy only if clearly needed.'
+  PASSAGE_0007: "It is not known whether this drug is excreted in human milk. Because many drugs are excreted in human milk, caution should be exercised when ch
+lorhexidine gluconate oral rinse is administered to nursing women.\nIn parturition and lactation studies with rats, no evidence of impaired parturition or of to
+xic effects to suckling pups was observed when chlorhexidine gluconate was administered to dams at doses that were over 100 times greater than that which would
+result from a person's ingesting 30 ml of chlorhexidine gluconate oral rinse per day."
+root@0ef79956d710:/workspace#

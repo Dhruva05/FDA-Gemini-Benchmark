@@ -1,0 +1,24 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line
+][0]; [print(f'PASSAGE_{i:04d}:', repr(data['chunks'][i])) for i in [30, 32, 54]]"
+PASSAGE_0030: '8.1 Pregnancy\nTeratogenic effects: Acamprosate calcium has been shown to be teratogenic in rats when given in doses that are approximately equal
+ to the human dose (on a mg/m2 basis) and in rabbits when given in doses that are approximately 3 times the human dose (on a mg/m2 basis). Acamprosate calcium p
+roduced a dose-related increase in the number of fetuses with malformations in rats at oral doses of 300 mg/kg/day or greater (approximately equal to the maximu
+m recommended human daily (MRHD) oral dose on a mg/m2 basis). The malformations included hydronephrosis, malformed iris, retinal dysplasia, and retroesophageal
+subclavian artery. No findings were observed at an oral dose of 50 mg/kg/day (approximately one-fifth the MRHD oral dose on a mg/m2 basis). An increased inciden
+ce of hydronephrosis was also noted in Burgundy Tawny rabbits at oral doses of 400 mg/kg/day or greater (approximately 3 times the MRHD oral dose on a mg/m2 bas
+is). No developmental effects were observed in New Zealand white rabbits at oral doses up to 1000 mg/kg/day (approximately 8 times the MRHD oral dose on a mg/m2
+ basis). The findings in animals should be considered in relation to known adverse developmental effects of ethyl alcohol, which include the characteristics of
+fetal alcohol syndrome (craniofacial dysmorphism, intrauterine and postnatal growth retardation, retarded psychomotor and intellectual development) and milder f
+orms of neurological and behavioral disorders in humans. There are no adequate and well controlled studies in pregnant women. Acamprosate calcium should be used
+ during pregnancy only if the potential benefit justifies the potential risk to the fetus.\nNonteratogenic effects: A study conducted in pregnant mice that were
+ administered acamprosate calcium by the oral route starting on Day 15 of gestation through the end of lactation on postnatal day 28 demonstrated an increased i
+ncidence of still-born fetuses at doses of 960 mg/kg/day or greater (approximately 2 times the MRHD oral dose on a mg/m2 basis). No effects were observed at a d
+ose of 320 mg/kg/day (approximately one-half the MRHD dose on a mg/m2 basis).'
+PASSAGE_0032: '8.3 Nursing Mothers\nIn animal studies, acamprosate was excreted in the milk of lactating rats dosed orally with acamprosate calcium. The concent
+ration of acamprosate in milk compared to blood was 1.3:1. It is not known whether acamprosate is excreted in human milk. Because many drugs are excreted in hum
+an milk, caution should be exercised when acamprosate calcium is administered to a nursing woman.'
+PASSAGE_0054: 'Pregnancy and Breast Feeding\n- Advise patients to notify their physician if they become pregnant or intend to become pregnant during therapy.\n-
+ Advise patients to notify their physician if they are breast-feeding.'
+root@3646eb22abe5:/workspace#

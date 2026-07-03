@@ -1,0 +1,120 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lenalidomide':
+>             for i, chunk in enumerate(data['chunks']):
+>                 if i < 25:
+>                     print(f'=== PASSAGE_{i:04d} ===')
+>                     print(chunk[:300] + '...')
+>             break
+> "
+=== PASSAGE_0000 ===
+WARNING: EMBRYO-FETAL TOXICITY, HEMATOLOGIC TOXICITY, and VENOUS and ARTERIAL THROMBOEMBOLISM
+Embryo-Fetal Toxicity
+Do not use lenalidomide during pregnancy. Lenalidomide, a thalidomide analogue, caused limb abnormalities in a developmental monkey study. Thalidomide is a know
+n human teratogen that c...
+=== PASSAGE_0001 ===
+Hematologic Toxicity (Neutropenia and Thrombocytopenia)
+Lenalidomide can cause significant neutropenia and thrombocytopenia. Eighty percent of patients with del 5q myelodysplastic syndromes had to have a dose delay/r
+eduction during the major study. Thirty-four percent of patients had to have a secon...
+=== PASSAGE_0002 ===
+Venous and Arterial Thromboembolism
+Lenalidomide has demonstrated a significantly increased risk of deep vein thrombosis (DVT) and pulmonary embolism (PE), as well as risk of myocardial infarction
+ and stroke in patients with multiple myeloma who were treated with lenalidomide and dexamethasone thera...
+=== PASSAGE_0003 ===
+1.1 Multiple Myeloma
+Lenalidomide in combination with dexamethasone is indicated for the treatment of adult patients with multiple myeloma (MM).
+Lenalidomide is indicated as maintenance therapy in adult patients with MM following autologous hematopoietic stem cell transplantation (auto-HSCT)....
+=== PASSAGE_0004 ===
+1.2 Myelodysplastic Syndromes
+Lenalidomide is indicated for the treatment of adult patients with transfusion-dependent anemia due to low- or intermediate-1-risk myelodysplastic syndromes (MD
+S) associated with a deletion 5q cytogenetic abnormality with or without additional cytogenetic abnormalities....
+=== PASSAGE_0005 ===
+1.3 Mantle Cell Lymphoma
+Lenalidomideis indicated for the treatment of adult patients with mantle cell lymphoma (MCL) whose disease has relapsed or progressed after two prior therapies,
+ one of which included bortezomib....
+=== PASSAGE_0006 ===
+1.4 Follicular Lymphoma
+Lenalidomidein combination with a rituximab product, is indicated for the treatment of adult patients with previously treated follicular lymphoma (FL)....
+=== PASSAGE_0007 ===
+1.5 Marginal Zone Lymphoma
+Lenalidomide in combination with a rituximab product, is indicated for the treatment of adult patients with previously treated marginal zone lymphoma (MZL)....
+=== PASSAGE_0008 ===
+1.6 Limitations of Use
+Lenalidomide is not indicated and is not recommended for the treatment of patients with CLL outside of controlled clinical trials ....
+=== PASSAGE_0009 ===
+2.1 Recommended Dosage for Multiple Myeloma
+Lenalidomide Combination Therapy
+The recommended starting dose of lenalidomide is 25 mg orally once daily on Days 1 to 21 of repeated 28-day cycles in combination with dexamethasone. Refer to S
+ection 14.1 for specific dexamethasone dosing. For patients gre...
+=== PASSAGE_0010 ===
+Lenalidomide Maintenance Therapy Following Auto-HSCT
+Following auto-HSCT, initiate lenalidomide maintenance therapy after adequate hematologic recovery (ANC at least 1,000/mcL and/or platelet counts at least 75,00
+0/mcL). The recommended starting dose of lenalidomide is 10 mg once daily continuously ...
+=== PASSAGE_0011 ===
+Interrupt lenalidomide treatment, follow CBC weekly
+Resume lenalidomide at next lower dose, continuously for Days 1 to 28 of repeated 28-day cycle
+If at the 5 mg daily dose,...
+=== PASSAGE_0012 ===
+Return to at least 30,000/mcL
+Interrupt lenalidomide treatment. Do not dose below 5 mg daily for Day 1 to 21 of 28 day cycle
+Resume lenalidomide at 5 mg daily for Days 1 to 21 of 28-day cycle. Do not dose below 5 mg daily for Day 1 to 21 of 28 day cycle...
+=== PASSAGE_0013 ===
+Interrupt lenalidomide treatment, follow CBC weekly
+Resume lenalidomide at next lower dose, continuously for Days 1 to 28 of repeated 28-day cycle...
+=== PASSAGE_0014 ===
+Return to at least 500/mcL
+Interrupt lenalidomide treatment. Do not dose below 5 mg daily for Day 1 to 21 of 28-day cycle
+Resume lenalidomide at 5 mg daily for Days 1 to 21 of 28-day cycle. Do not dose below 5 mg daily for Day 1 to 21 of 28-day cycle...
+=== PASSAGE_0015 ===
+2.2 Recommended Dosage for Myelodysplastic Syndromes
+The recommended starting dose of lenalidomide is 10 mg daily. Treatment is continued or modified based upon clinical and laboratory findings. Continue treatment
+ until disease progression or unacceptable toxicity.
+Dose Adjustments for Hematologic T...
+=== PASSAGE_0016 ===
+Platelet counts
+If thrombocytopenia develops WITHIN 4 weeks of starting treatment at 10 mg daily in MDS
+Fall to 50% of the baseline value
+If baseline is at least 60,000/mcL and returns to at least 50,000/mcL
+If baseline is below 60,000/mcL and returns to at least 30,000/mcL...
+=== PASSAGE_0017 ===
+Resume lenalidomide at 5 mg daily
+If thrombocytopenia develops AFTER 4 weeks of starting treatment at 10 mg daily in MDS
+Patients who experience thrombocytopenia at 5 mg daily should have their dosage adjusted as follows:
+If thrombocytopenia develops during treatment at 5 mg daily in MDS
+Patients wh...
+=== PASSAGE_0018 ===
+Absolute Neutrophil counts (ANC)
+If neutropenia develops WITHIN 4 weeks of starting treatment at 10 mg daily in MDS
+If neutropenia develops AFTER 4 weeks of starting treatment at 10 mg daily in MDS
+Patients who experience neutropenia at 5 mg daily should have their dosage adjusted as follows:
+If neu...
+=== PASSAGE_0019 ===
+2.3 Recommended Dosage for Mantle Cell Lymphoma
+The recommended starting dose of lenalidomide is 25 mg/day orally on Days 1 to 21 of repeated 28-day cycles for relapsed or refractory mantle cell lymphoma.
+Treatment should be continued until disease progression or unacceptable toxicity.
+Treatment is ...
+=== PASSAGE_0020 ===
+Neutropenia during treatment in MCL
+Fall below 1,000/mcL for at least 7 days...
+=== PASSAGE_0021 ===
+OR
+Falls below 1,000/mcL with an associated temperature at least 38.5°C...
+=== PASSAGE_0022 ===
+2.4 Recommended Dosage for Follicular Lymphoma or Marginal Zone Lymphoma
+The recommended starting dose of lenalidomide is 20 mg orally once daily on Days 1 to 21 of repeated 28-day cycles for up to 12 cycles of treatment in combinati
+on with a rituximab-product. Refer to Section 14.4 for specific rit...
+=== PASSAGE_0023 ===
+Platelet counts
+Thrombocytopenia during treatment in FL or MZL
+If patient starting dose was 20 mg daily, resume lenalidomide at 5 mg less than the previous dose. Do not dose below 5 mg daily.
+If patient starting dose was 10 mg daily, resume at 5 mg less than previous dose. Do not dose below 2.5 mg d...
+=== PASSAGE_0024 ===
+Absolute Neutrophil counts (ANC)
+Neutropenia during treatment in FL or MZL
+Fall below 1,000/mcL for at least 7 days...
+root@3d44031eb234:/workspace#

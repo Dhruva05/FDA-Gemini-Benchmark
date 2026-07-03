@@ -1,0 +1,14 @@
+{
+  "analysis": "I will escape all newlines and control characters carefully. I want to read the full text of PASSAGE_0003 and PASSAGE_0176 to extract detailed administration instructions.",
+  "plan": "I will print the full text of PASSAGE_0003 and PASSAGE_0176 using print_passage.py.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0003\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0176\n",
+      "duration": 0.5
+    }
+  ]
+}

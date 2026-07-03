@@ -1,0 +1,25 @@
+{
+  "analysis": "Great. Now let's print all chunks for Lopinavir-Ritonavir from 0 to 15 to make sure we didn't miss any general administration information. Wait, we already did that! Let's review the output:\n"
+              "- `PASSAGE_0001`: \"2.1 General Administration Recommendations. Lopinavir and ritonavir oral solution must be taken with food.\"\n"
+              "- `PASSAGE_0002`: \"2.2 Administering Oral Solution by Feeding Tube. Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potential incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be used for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.\"\n"
+              "- `PASSAGE_0007`: \"2.4 Dosage Recommendations in Pediatric Patients. Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral solution should be administered using the calibrated cup (supplied) or oral dosing syringe. Lopinavir and ritonavir oral solution is not recommended in neonates before a postmenstrual age... of 42 weeks and a postnatal age of at least 14 days has been attained. Lopinavir and ritonavir oral solution contains approximately 42% (v/v) ethanol and approximately 15% (w/v) propylene glycol...\"\n"
+              "\n"
+              "Wait, so how should Lopinavir-Ritonavir be administered?\n"
+              "- Route: Oral (or \"orally\" / \"oral solution\")\n"
+              "- Frequency: taken with food; oral solution must be taken with food. Also, can be given in once daily or twice daily dosing regimen.\n"
+              "- Let's check the dosage regimen for Lopinavir-Ritonavir:\n"
+              "  - \"What is the recommended dosage regimen of Lopinavir-Ritonavir?\" (QID: `a0576a26f2a2eeac`)\n"
+              "  - In adults (`PASSAGE_0003`): \"Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2.\"\n"
+              "  - `PASSAGE_0004` (Table 1 / Once Daily Regimen): \"80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily\"\n"
+              "  - `PASSAGE_0005` (Table 2 / Twice Daily Regimen): \"80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily\"\n"
+              "  - In pregnant patients (`PASSAGE_0012`): \"Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-associated resistance substitutions.\"\n"
+              "  - In pediatric patients (`PASSAGE_0008`): \"Total dose of lopinavir and ritonavir oral solution in pediatric patients should not exceed the recommended adult daily dose of 400/100 mg (5mL) twice daily.\"\n"
+              "  - Let's check what the maximum daily dose is. In `PASSAGE_0008`: \"Total dose of lopinavir and ritonavir oral solution in pediatric patients should not exceed the recommended adult daily dose of 400/100 mg (5mL) twice daily.\" Wait, what is the recommended adult daily dose? Let's check if there is a max daily dose specified anywhere else, or if the max daily dose is 800 mg lopinavir and 200 mg ritonavir (or 800/200 mg per day). Let's search the label for \"maximum dose\", \"maximum daily\", \"max dose\", \"not exceed\".",
+  "plan": "Search for maximum dose details in Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > search_lopinavir_max.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if any(kw in chunk.lower() for kw in ['maximum', 'exceed', 'limit', 'max']):\n        print(f\"PASSAGE_{i:04d}:\")\n        print(chunk[:300])\n        print(\"-\"*50)\nEOF\npython3 search_lopinavir_max.py\n",
+      "duration": 1.0
+    }
+  ]
+}

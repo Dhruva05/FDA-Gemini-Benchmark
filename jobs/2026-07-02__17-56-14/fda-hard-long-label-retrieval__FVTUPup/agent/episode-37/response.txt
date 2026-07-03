@@ -1,0 +1,11 @@
+{
+  "analysis": "These lists of contraindicated drugs and drugs to avoid are very rich and specific. Let's make sure we capture them well.
+Wait, let's print `PASSAGE_0012` to see the complete list of contraindications (Question 5 and Question 6).",
+  "plan": "I will print the full text of PASSAGE_0012.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0012\n",
+      "duration": 0.5
+    }
+  ]
+}

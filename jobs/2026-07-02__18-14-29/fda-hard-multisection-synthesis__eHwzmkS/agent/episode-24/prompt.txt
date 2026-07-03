@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 207 (char 208) | Content preview: '{\n  "analysis": "No references found. That means `structured_fields` is just a dictionary in the out'...
+
+Please fix these issues and provide a proper JSON response.

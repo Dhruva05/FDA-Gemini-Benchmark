@@ -1,0 +1,83 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > print_all_chunks.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl', 'r') as f:
+>     labels = {data['set_id']: data for data in (json.loads(line) for line in f)}
+>
+> label = labels['bba4e7c8-db8e-4522-915c-48ee809e3bce']
+> for idx, chunk in enumerate(label['chunks']):
+>     print(f"PASSAGE_{idx:04d}:")
+>     print(chunk)
+>     print("="*50)
+> EOF
+root@7e48d58e23f3:/workspace# python3 print_all_chunks.py
+PASSAGE_0000:
+untitled
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- itchy, watery eyes
+- sneezing
+- itching of the nose or throat
+==================================================
+PASSAGE_0001:
+Do not use
+if you have ever had an allergic reaction to this product or any of its ingredients.
+==================================================
+PASSAGE_0002:
+liver or kidney disease. Your doctor should determine if you need a different dose.
+==================================================
+PASSAGE_0003:
+do not take more than directed. Taking more than directed may cause drowsiness.
+==================================================
+PASSAGE_0004:
+an allergic reaction to this product occurs. Seek medical help right away.
+==================================================
+PASSAGE_0005:
+ask a health professional before use.
+==================================================
+PASSAGE_0006:
+In case of overdose, get medical help or contact a Poison Control Center (1-800-222-1222) right away.
+==================================================
+PASSAGE_0007:
+- Tamper-evident: do not use if foil seal under cap, printed with “SEALED for YOUR PROTECTION” is missing, open or broken
+- store at 20° to 25°C (68° to 77°F)
+- protect from excessive moisture
+==================================================
+PASSAGE_0008:
+lactose monohydrate, magnesium stearate, pregelatinized starch (maize), sodium starch glycolate.
+==================================================
+PASSAGE_0009:
+call 1-855-274-4122
+DISTRIBUTED BY:
+==================================================
+PASSAGE_0010:
+550 BOWIE STREET, AUSTIN, TX 78703
+©2025 WHOLE FOODS MARKET IP, INC.
+==================================================
+PASSAGE_0011:
+Loratadine
+
+                     Tablets USP, 10mg
+Indoor & Outdoor
+Allergies
+*WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL.
+==================================================
+PASSAGE_0012:
+MARKET
+Antihistamine
+Allergy Relief
+Loratadine
+Tablets USP, 10mg
+**Compare to the Active Ingredient in Claritin®
+==================================================
+PASSAGE_0013:
+Sneezing  |  Runny nose
+Itchy, Watery Eyes   |   Itchy Throat or Nose
+==================================================
+PASSAGE_0014:
+ACTUAL SIZE
+*WHEN TAKEN AS DIRECTED. SEE DRUG FACTS PANEL.
+==================================================
+root@7e48d58e23f3:/workspace#

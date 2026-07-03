@@ -1,0 +1,6 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f]; print([(d['drug_nam
+e'], type(d['chunks'][0])) for d in data])"
+[('Paxlovid', <class 'str'>), ('Lopinavir-Ritonavir', <class 'str'>)]
+root@1ce871952c8c:/workspace#

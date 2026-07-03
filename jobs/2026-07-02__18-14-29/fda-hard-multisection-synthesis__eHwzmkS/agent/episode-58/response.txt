@@ -1,0 +1,25 @@
+{
+  "analysis": "Excellent. We have the dosage details for adults:
+- Once daily regimen: 800 mg/200 mg (10 mL) once daily (`PASSAGE_0004`).
+- Twice daily regimen: 400 mg/100 mg (5 mL) twice daily (`PASSAGE_0005`).
+- Twice daily regimen in combination with efavirenz, nevirapine, or nelfinavir: 520 mg/130 mg (6.5 mL) twice daily (`PASSAGE_0006`).
+- Once daily regimen is NOT recommended in:
+  - Patients with 3 or more lopinavir resistance-associated substitutions (`PASSAGE_0003`).
+  - In combination with carbamazepine, phenobarbital, or phenytoin (`PASSAGE_0003`).
+  - In combination with efavirenz, nevirapine, or nelfinavir (`PASSAGE_0003`).
+  - In pediatric patients younger than 18 years of age (`PASSAGE_0003`).
+  - In pregnant women (`PASSAGE_0003`).
+- Administration: Must be taken with food (`PASSAGE_0001`).
+- Feeding Tube: Not recommended for polyurethane feeding tubes due to ethanol and propylene glycol content. Silicone and PVC tubes are compatible (`PASSAGE_0002`).
+
+Wait! Let's check pediatric dosage as well, just in case.
+Let's see: `PASSAGE_0007` (2.4 Dosage Recommendations in Pediatric Patients) and `PASSAGE_0008` (Pediatric Dosage Calculations).
+Let's print the first 400 characters of `PASSAGE_0007` and `PASSAGE_0008`.",
+  "plan": "I will run a python script to inspect the pediatric dosage passages in Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[1]; print('PASSAGE_0007:', l['chunks'][7][:400]); print('PASSAGE_0008:', l['chunks'][8][:400]); f.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

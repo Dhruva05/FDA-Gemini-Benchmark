@@ -1,0 +1,17 @@
+{
+  "analysis": "Excellent. We have the dosage details for CELECOXIB (set_id `27f17ae7-939b-402e-9498-3b6611104089`):\n"
+              "- Passage 8 (`PASSAGE_0008`): \"Use the lowest effective dosage for the shortest duration consistent with individual patient treatment goals. These doses can be given without regard to timing of meals.\"\n"
+              "- Passage 9 (`PASSAGE_0009`): \"For OA, the dosage is 200 mg per day administered as a single dose or as 100 mg twice daily.\"\n"
+              "- Passage 10 (`PASSAGE_0010`): \"For RA, the dosage is 100 mg to 200 mg twice daily.\"\n"
+              "- Passage 11 (`PASSAGE_0011`): \"For JRA, the dosage for pediatric patients (age 2 years and older) is based on weight. For patients >=10 kg to <=25 kg the recommended dose is 50 mg twice daily. For patients >25 kg the recommended dose is 100 mg twice daily.\"\n"
+              "- Passage 12 (`PASSAGE_0012`): \"For AS, the dosage of celecoxib capsules is 200 mg daily in single (once per day) or divided (twice per day) doses. If no effect is observed after 6 weeks, a trial of 400 mg daily may be worthwhile.\"\n"
+              "- Passage 13 (`PASSAGE_0013`): \"For management of Acute Pain and Treatment of Primary Dysmenorrhea, the dosage is 400 mg initially, followed by an additional 200 mg dose if needed on the first day. On subsequent days, the recommended dose is 200 mg twice daily as needed.\"\n\n"
+              "Let's look at Lenalidomide (set_id `ed7a3099-ce31-4865-b212-358d9ff6261b`). Let's search for and print its dosage/administration sections.",
+  "plan": "Write a script to search and print the dosage/administration sections for Lenalidomide.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_lenalidomide_passages.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == 'ed7a3099-ce31-4865-b212-358d9ff6261b'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if any(kw in chunk for kw in ['2 DOSAGE AND ADMINISTRATION', '2.1', '2.2', '2.3', '2.4', '2.5', '2.6']):\n        print(f\"PASSAGE_{i:04d}:\")\n        print(chunk)\n        print(\"-\"*50)\nEOF\npython3 print_lenalidomide_passages.py\n",
+      "duration": 1.0
+    }
+  ]
+}

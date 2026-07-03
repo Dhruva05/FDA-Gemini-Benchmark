@@ -1,0 +1,14 @@
+{
+  "analysis": "I will escape all newlines and control characters carefully. I want to search for passages containing 'contraindicated' or 'avoid' to find which medications should be avoided with Paxlovid (Question 2).",
+  "plan": "I will run the search.py script with keywords 'contraindicated' and 'avoid'.",
+  "commands": [
+    {
+      "keystrokes": "python3 search.py \"contraindicated\"\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 search.py \"avoid\"\n",
+      "duration": 0.5
+    }
+  ]
+}

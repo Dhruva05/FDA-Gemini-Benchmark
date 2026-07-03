@@ -1,0 +1,107 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["drug_name"] == "Paxlovid":
+>             for idx in range(12, 23):
+>                 print(f"PASSAGE_{idx:04d}: {data["chunks"][idx]}")
+> '
+PASSAGE_0012: 4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Jo
+hnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.
+PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-thr
+eatening reactions and drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with t
+he potential for loss of virologic response and possible resistance. There are certain other drugs for which concomitant use with PAXLOVID should be avoided and
+/or dose adjustment, interruption, or therapeutic monitoring is recommended. Drugs listed in this section are a guide and not considered a comprehensive list of
+ all drugs that may be contraindicated with PAXLOVID. The healthcare provider should consult other appropriate resources such as the prescribing information for
+ the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor like PAXLOVID :
+- ➢ Drugs that are primarily metabolized by CYP3A for which elevated concentrations are associated with serious and/or life-threatening reactions
+- Alpha 1-adrenoreceptor antagonist: alfuzosin
+- Antianginal: ranolazine
+- Antiarrhythmic: amiodarone, dronedarone, flecainide, propafenone, quinidine
+- Anti-gout: colchicine (in patients with renal and/or hepatic impairment
+- Antipsychotics: lurasidone, pimozide
+- Benign prostatic hyperplasia agents: silodosin
+- Cardiovascular agents: eplerenone, ivabradine
+- Ergot derivatives: dihydroergotamine, ergotamine, methylergonovine
+- HMG-CoA reductase inhibitors: lovastatin, simvastatin (these drugs can be temporarily discontinued to allow PAXLOVID use
+- Immunosuppressants: voclosporin
+- Microsomal triglyceride transfer protein inhibitor: lomitapide
+- Migraine medications: eletriptan, ubrogepant
+- Mineralocorticoid receptor antagonists: finerenone
+- Opioid antagonists: naloxegol
+- PDE5 inhibitor: sildenafil (Revatio ® ) when used for pulmonary arterial hypertension (PAH)
+- Sedative/hypnotics: triazolam, oral midazolam
+- Serotonin receptor 1A agonist/serotonin receptor 2A antagonist: flibanserin
+- Vasopressin receptor antagonists: tolvaptan
+- ➢ Drugs that are strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for lo
+ss of virologic response and possible resistance. PAXLOVID cannot be started immediately after discontinuation of any of the following medications due to the de
+layed offset of the recently discontinued CYP3A inducer
+- Anticancer drugs: apalutamide , enzalutamide
+- Anticonvulsant: carbamazepine, phenobarbital, primidone, phenytoin
+- Antimycobacterials: rifampin, rifapentine
+- Cystic fibrosis transmembrane conductance regulator potentiators: lumacaftor/ivacaftor
+- Herbal products: St. John's Wort (
+PASSAGE_0013: 5.1       Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications
+metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A. Medications that induce CYP
+3A may decrease concentrations of PAXLOVID. These interactions may lead to:
+- Clinically significant adverse reactions, potentially leading to severe, life-threatening, or fatal events from greater exposures of concomitant medications.
+- Loss of therapeutic effect of PAXLOVID and possible development of viral resistance.
+Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated with PAXLOVID. The most commonly report
+ed concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclosporine), followed by calcium channel bloc
+kers.
+Prior to prescribing PAXLOVID, review all medications taken by the patient to assess potential drug-drug interactions and determine if concomitant medications r
+equire a dose adjustment, interruption, and/or additional monitoring (e.g., calcineurin inhibitors) . See Table 2 for clinically significant drug interactions,
+including contraindicated drugs. Drugs listed in Table 2 are a guide and not considered a comprehensive list of all possible drugs that may interact with PAXL
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+nically significant adverse reactions are described elsewhere in the labeling:
+- Hypersensitivity reactions
+PASSAGE_0018: 6.1       Clinical Trials Experience
+Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compa
+red to rates in the clinical trials of another drug and may not reflect the rates observed in practice.
+The safety of PAXLOVID is based on two Phase 2/3 randomized, placebo-controlled trials in symptomatic adult subjects 18 years of age and older with a laboratory
+ confirmed diagnosis of SARS-CoV-2 infection. Subjects in both studies received PAXLOVID (nirmatrelvir/ritonavir 300 mg/100 mg) or placebo every 12 hours for 5
+days for the treatment of mild-to-moderate COVID-19 within 5 days of symptom onset :
+- Trial C4671005 (EPIC-HR) enrolled subjects who were at high risk for progression to severe disease.
+- Trial C4671002 (EPIC-SR) enrolled subjects who were at standard risk for progression to severe disease (previously unvaccinated subjects at standard risk or f
+ully vaccinated subjects with at least 1 risk factor for progression to severe disease).
+Adverse reactions were those reported while subjects were on study medication and through 28 days after the last dose of study treatment.
+In Trial C4671005 (EPIC-HR), 1,038 subjects received PAXLOVID and 1,053 subjects received placebo. The most common adverse reactions (≥1% incidence in the PAXLO
+VID group and occurring at a greater frequency than in the placebo group) were dysgeusia (5% and <1%, respectively) and diarrhea (3% and 2%, respectively).
+Among vaccinated or unvaccinated subjects at standard risk or fully vaccinated subjects with at least 1 risk factor for progression to severe disease in Trial C
+4671002 (EPIC-SR), 540 subjects received PAXLOVID and 528 subjects received placebo. The adverse reactions observed were consistent with those observed in EPIC-
+HR.
+Trial C4671028 (EPIC-SRI) was a Phase 1, open-label trial that evaluated the effects of severe renal impairment on the pharmacokinetics, safety, and tolerabilit
+y of PAXLOVID in non-hospitalized adult participants with COVID-19 and severe renal impairment. A total of 15 subjects with severe renal impairment were enrolle
+d in this trial, with 12 subjects receiving intermittent hemodialysis and 3 subjects not on hemodialysis. Subjects received nirmatrelvir/ritonavir 300 mg/100 mg
+ once on Day 1 followed by nirmatrelvir/ritonavir 150 mg/100 mg once daily from Days 2-5. The safety profile of PAXLOVID in subjects with severe renal impairmen
+t, including those requiring hemodialysis, was consistent with the safety profile observed in the Phase 2/3 randomized, placebo-controlled trials.
+Emergency Use Authorization Experience in Subjects with COVID-19
+The following adverse reactions have been identified during use of PAXLOVID under Emergency Use Authorization.
+Immune System Disorders: Anaphylaxis, hypersensitivity reactions
+Skin and Subcutaneous Tissue Disorders: Toxic epidermal necrolysis, Stevens-Johnson syndrome
+Nervous System Disorders: Headache
+Vascular Disorders: Hypertension
+Gastrointestinal Disorders: Abdominal pain, nausea, vomiting
+General Disorders and Administration Site Conditions: Malaise
+PASSAGE_0019: 7.1       Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID w
+ith drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or OATP1B1 may result in increased plasma concentrations of such drugs a
+nd increase the risk of adverse events. Co-administration of PAXLOVID with drugs highly dependent on CYP3A for clearance and for which elevated plasma concentra
+tions are associated with serious and/or life-threatening events is contraindicated . Co-administration with other CYP3A substrates may require a dose adjustmen
+t or additional monitoring as shown in Table 2.
+PASSAGE_0020: 7.2       Potential for Other Drugs to Affect PAXLOVID
+Nirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A may decrease nirmatrelvir and ritonavir plasma concentrations and reduce PAX
+LOVID therapeutic effect .
+PASSAGE_0021: 7.3       Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered
+ a comprehensive list of all possible drugs that may interact with PAXLOVID. The healthcare provider should consult other appropriate resources such as the pres
+cribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor such as rito
+navir.
+PASSAGE_0022: ↑ alfuzosin
+Co-administration contraindicated due to potential hypotension .
+root@3faa5da3ba91:/workspace#

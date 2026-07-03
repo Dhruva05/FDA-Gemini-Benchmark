@@ -1,0 +1,60 @@
+New Terminal Output:
+
+root@b161fe3d96d1:/workspace# history || cat ~/.bash_history
+    1  clear
+    2  ls -la /workspace/data/public
+    3  cat /workspace/data/public/README.md
+    4  head -n 2 /workspace/data/public/questions.jsonl
+    5  cat /workspace/data/public/questions.jsonl
+    6  cat << 'EOF' > inspect_labels.py
+import json
+with open('/workspace/data/public/labels.jsonl') as f:
+    for line in f:
+        data = json.loads(line)
+        print('set_id:', data.get('set_id'))
+        print('drug_name:', data.get('drug_name'))
+        print('keys:', list(data.keys()))
+        print('num_chunks:', len(data.get('chunks', [])))
+        if data.get('chunks'):
+            print('chunk 0 keys:', list(data['chunks'][0].keys()))
+            print('chunk 0 sample:', str(data['chunks'][0])[:300])
+EOF
+
+    7  python3 inspect_labels.py
+    8  cat << 'EOF' > inspect_labels.py
+import json
+with open('/workspace/data/public/labels.jsonl') as f:
+    for line in f:
+        data = json.loads(line)
+        chunks = data.get('chunks', [])
+        print('type of chunks:', type(chunks))
+        if chunks:
+            print('type of first chunk:', type(chunks[0]))
+            print('first chunk sample:', str(chunks[0])[:300])
+EOF
+
+    9  python3 inspect_labels.py
+   10  cat << 'EOF' > inspect_labels2.py
+import json
+with open('/workspace/data/public/labels.jsonl') as f:
+    for line in f:
+        data = json.loads(line)
+        print('keys:', list(data.keys()))
+        print('chunks length:', len(data['chunks']))
+        for i in range(min(5, len(data['chunks']))):
+            print(f"Chunk {i}: {data['chunks'][i][:150]}...")
+EOF
+
+   11  python3 inspect_labels2.py
+   12  find /workspace -maxdepth 3
+   13  cat /workspace/data/public/questions.jsonl
+   14  history || cat ~/.bash_history
+root@b161fe3d96d1:/workspace# pip list
+WARNING: Skipping /usr/lib/python3.12/dist-packages/asciinema-2.4.0.dist-info due to invalid metadata entry 'name'
+Package    Version
+---------- -------
+asciinema  2.4.0
+pip        24.0
+setuptools 68.1.2
+wheel      0.42.0
+root@b161fe3d96d1:/workspace#

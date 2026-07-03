@@ -1,0 +1,119 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# python3 -c "import print_details; print_details.search_drug_chunks('4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85', ['2 DOSAGE AND ADMINIST
+RATION', '2.1', '2.2', '2.3', '2.4', '2.5'])" | head -n 150
+====================================================================================================
+Drug: Lopinavir-Ritonavir (4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85)
+====================================================================================================
+PASSAGE_0001:
+2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food.
+--------------------------------------------------
+PASSAGE_0002:
+2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due to potent
+ial incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and polyvinyl chloride (PVC) feeding tubes, can be us
+ed for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tube to administer the medicine.
+--------------------------------------------------
+PASSAGE_0003:
+2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egimen is not recommended in:
+- Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V
+, V82A/C/F/S/T, and I84V
+Adult patients with three or more of the following lopinavir resistance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V,
+V82A/C/F/S/T, and I84V .
+- In combination with carbamazepine, phenobarbital, or phenytoin
+In combination with carbamazepine, phenobarbital, or phenytoin .
+- In combination with efavirenz, nevirapine, or nelfinavir
+In combination with efavirenz, nevirapine, or nelfinavir .
+- In pediatric patients younger than 18 years of age
+In pediatric patients younger than 18 years of age .
+- In pregnant women
+In pregnant women .
+Table 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen
+--------------------------------------------------
+PASSAGE_0007:
+2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral solution
+ should be administered using the calibrated cup (supplied) or oral dosing syringe.
+Lopinavir and ritonavir oral solution is not recommended in neonates before a postmenstrual age (first day of the mother’s last menstrual period to birth plus t
+he time elapsed after birth) of 42 weeks and a postnatal age of at least 14 days has been attained .
+Lopinavir and ritonavir oral solution contains approximately 42% (v/v) ethanol and approximately 15% (w/v) propylene glycol. Total amounts of ethanol and propyl
+ene glycol from all medicines that are to be given to pediatric patients 14 days to 6 months of age should be taken into account in order to avoid toxicity from
+ these excipients .
+--------------------------------------------------
+PASSAGE_0012:
+2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-associated resistance substitutions.
+- Once daily lopinavir and ritonavir dosing is not recommended in pregnancy
+Once daily lopinavir and ritonavir dosing is not recommended in pregnancy .
+- There are insufficient data to recommend dosing in pregnant women with any documented lopinavir-associated resistance substitutions.
+There are insufficient data to recommend dosing in pregnant women with any documented lopinavir-associated resistance substitutions.
+- No dosage adjustment of lopinavir and ritonavir is required for patients during the postpartum period.
+No dosage adjustment of lopinavir and ritonavir is required for patients during the postpartum period.
+- Avoid use of lopinavir and ritonavir oral solution in pregnant women
+Avoid use of lopinavir and ritonavir oral solution in pregnant women .
+--------------------------------------------------
+PASSAGE_0081:
+↑ bosentan
+Co-administration of bosentan in patients on lopinavir and ritonavir:
+In patients who have been receiving lopinavir and ritonavir for at least 10 days, start bosentan at 62.5 mg once daily or every other day based upon individual
+tolerability.
+Co-administration of lopinavir and ritonavir in patients on bosentan:
+Discontinue use of bosentan at least 36 hours prior to initiation of lopinavir and ritonavir.
+After at least 10 days following the initiation of lopinavir and ritonavir, resume bosentan at 62.5 mg once daily or every other day based upon individual toler
+ability.
+Ergo
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+ificant toxicity and could potentially be lethal.
+Human experience of acute overdosage with lopinavir and ritonavir is limited. Treatment of overdose with lopinavir and ritonavir should consist of general suppo
+rtive measures including monitoring of vital signs and observation of the clinical status of the patient. There is no specific antidote for overdose with lopina
+vir and ritonavir. If indicated, elimination of unabsorbed drug should be achieved by gastric lavage. Administration of activated charcoal may also be used to a
+id in removal of unabsorbed drug. Since lopinavir is highly protein bound, dialysis is unlikely to be beneficial in significant removal of the drug. However, di
+alysis can remove both ethanol and propylene glycol in the case of overdose with lopinavir and ritonavir oral solution.
+--------------------------------------------------
+PASSAGE_0107:
+12.1 Mechanism of Action
+Lopinavir and ritonavir is a fixed-dose combination of HIV-1 antiviral drugs lopinavir and ritonavir. As co-formulated in lopinavir and ritonavir, ritonavir inh
+ibits the CYP3A-mediated metabolism of lopinavir, thereby providing increased plasma levels of lopinavir.
+--------------------------------------------------
+PASSAGE_0108:
+12.2 Pharmacodynamics
+Cardiac Electrophysiology
+The effect of lopinavir and ritonavir on QTcF interval was evaluated in a placebo and active (moxifloxacin 400 mg once daily) controlled crossover study in 39 h
+ealthy adults. The maximum mean time-matched (95% upper confidence bound) differences in QTcF interval from placebo after baseline-correction were 5.3 (8.1) and
+ 15.2 (18.0) mseconds (msec) for 400/100 mg twice daily and supratherapeutic 800/200 mg twice daily lopinavir and ritonavir, respectively. Lopinavir and ritonav
+ir 800/200 mg twice daily resulted in a Day 3 mean Cmax approximately 2-fold higher than the mean Cmax observed with the approved once daily and twice daily lop
+inavir and ritonavir doses at steady state. The maximum mean (95% upper confidence bound) difference from placebo in the PR interval after baseline-correction w
+ere 24.9 (21.5, 28.3) and 31.9 (28.5, 35.3) msec for 400/100 mg twice daily and supratherapeutic 800/200 mg twice daily lopinavir and ritonavir, respectively .
+--------------------------------------------------
+PASSAGE_0109:
+12.3 Pharmacokinetics
+The pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic parameters of lopinavir are summarized in Table 14. Und
+er fed conditions, lopinavir concentrations were similar following administration of lopinavir and ritonavir tablets to capsules with less pharmacokinetic varia
+bility. Under fed conditions (500 kcal, 25% from fat), lopinavir concentrations were similar following administration of lopinavir and ritonavir capsules and or
+al solution.
+--------------------------------------------------
+PASSAGE_0133:
+12.4 Microbiology
+Mechanism of Action
+Lopinavir, an inhibitor of the HIV-1 protease, prevents cleavage of the viral Gag-Pol polyprotein, resulting in the production of immature, non-infectious viral
+ particles.
+--------------------------------------------------
+PASSAGE_0140:
+13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+Carcinogenesis
+Lopinavir and ritonavir combination was evaluated for carcinogenic potential by oral gavage administration to mice and rats for up to 104 weeks. Results showed
+an increase in the incidence of benign hepatocellular adenomas and an increase in the combined incidence of hepatocellular adenomas plus carcinoma in both males
+ and females in mice and males in rats at doses that produced approximately 1.6-2.2 times (mice) and 0.5 times (rats) the human exposure (based on AUC0-24hr mea
+surement) at the recommended dose of 400/100 mg lopinavir and ritonavir twice daily. Administration of lopinavir and ritonavir did not cause a statistically sig
+nificant increase in the incidence of any other benign or malignant neoplasm in mice or rats.
+Carcinogenicity studies in mice and rats have been carried out on ritonavir. In male mice, there was a dose dependent increase in the incidence of both adenomas
+ and combined adenomas and carcinomas in the liver. Based on AUC measurements, the exposure at the high dose was approximately 4-fold for males that of the expo
+sure in humans with the recommended therapeutic dose (400/100 mg lopinavir and ritonavir twice daily). There were no carcinogenic effects seen in females at the
+ dosages tested. The exposure at the high dose was approximately 9-fold for the females that of the exposure in humans. There were no carcinogenic effects in ra
+ts. In this study, the exposure at the high dose was approximately 0.7-fold that of the exposure in humans with the 400/100 mg lopinavir and ritonavir twice dai
+ly regimen. Based on the exposures achieved in the animal studies, the significance of the observed effects is not known.
+--------------------------------------------------
+root@371ed25b9fd3:/workspace#

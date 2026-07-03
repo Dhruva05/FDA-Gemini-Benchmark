@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > diff_check_2.py
+> import json
+> import re
+> import difflib
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         raw = label['label_raw']
+>         chunks = label['chunks']
+>         passages = re.findall(r'(PASSAGE_\d+)\|\|\n(.*?)(?=(?:PASSAGE_\d+\|\|\n|$))', raw, re.DOTALL)
+>         pid, ptext = passages[0]
+>         ctext = chunks[0]
+>         diff = list(difflib.ndiff(ptext, ctext))
+>         # Print non-matching parts
+>         for i, d in enumerate(diff):
+>             if not d.startswith(' '):
+>                 print(f"{i}: {repr(d)}")
+>         break
+> EOF
+root@15b83e10b8d1:/workspace# python3 diff_check_2.py
+724: '- \n'
+725: '- \n'
+726: '- |'
+727: '- |'
+root@15b83e10b8d1:/workspace#

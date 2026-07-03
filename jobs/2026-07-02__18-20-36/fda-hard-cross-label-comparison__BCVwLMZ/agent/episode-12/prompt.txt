@@ -1,0 +1,64 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > print_details.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print(f"=== {q['drug_name']} ===")
+>     for set_id in q['comparison_set_ids']:
+>         l = labels[set_id]
+>         print(f"  Label: {l['drug_name']} ({set_id})")
+>         for i, chunk in enumerate(l['chunks']):
+>             lower = chunk.lower()
+>             # If it looks like directions/dosage section
+>             if 'directions' in lower or 'dosage and administration' in lower or 'dosage &' in lower:
+>                 print(f"    PASSAGE_{i:04d}:")
+>                 print(chunk)
+>                 print("-" * 40)
+> EOF
+root@faa94ec9460f:/workspace# python3 print_details.py
+=== 12HR Allergy Relief vs 365 Whole Foods Market Loratadine ===
+  Label: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752)
+  Label: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce)
+=== Acamprosate Calcium vs Acclean Chlorhexidine Gluconate 0.12% Oral Rinse ===
+  Label: Acamprosate Calcium (ae6e79c0-a307-4888-b647-1b7be4cb9127)
+    PASSAGE_0001:
+2 DOSAGE AND ADMINISTRATION
+The recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should total 666 mg) taken three times daily. A lower dose
+may be effective in some patients.
+Although dosing may be done without regard to meals, dosing with meals was employed during clinical trials and is suggested in those patients who regularly eat
+three meals daily.
+Treatment with acamprosate calcium delayed-release tablets should be initiated as soon as possible after the period of alcohol withdrawal, when the patient has
+achieved abstinence, and should be maintained if the patient relapses. Acamprosate calcium delayed-release tablets should be used as part of a comprehensive psy
+chosocial treatment program.
+----------------------------------------
+  Label: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (08c9d3dd-717b-0148-e054-00144ff8d46c)
+    PASSAGE_0016:
+REF 112-6720
+DIRECTIONS FOR USE: Swish one tablespoon (15ml) in mouth undiluted for 30 seconds, then
+spit out. Use after breakfast and before bedtime. Or, use as prescribed.
+NOTE: to minimize medicinal taste, do not rinse with water immediately after use.
+----------------------------------------
+=== ACETAMINOPHEN with CODEINE vs AcetaZOLAMIDE ===
+  Label: ACETAMINOPHEN with CODEINE (36adb32c-638c-4d6e-b66a-1a1c35174ce6)
+  Label: AcetaZOLAMIDE (6972d9c1-36ec-4246-bf7b-13206d5952c3)
+=== ACETAZOLAMIDE EXTENDED-RELEASE vs Actoplus Met ===
+  Label: ACETAZOLAMIDE EXTENDED-RELEASE (8e396b27-b44a-4aa9-805b-086395444b5f)
+  Label: Actoplus Met (42e49120-6f3f-11db-9fe1-0800200c9a66)
+    PASSAGE_0004:
+2 DOSAGE AND ADMINISTRATION
+- Obtain liver tests (serum alanine and aspartate aminotransferases, alkaline phosphatase, and total bilirubin) prior to initiating ACTOPLUS MET
+- ACTOPLUS MET contains 15 mg of pioglitazone and 850 mg of metformin hydrochloride (HCl) in each tablet.
+- Take ACTOPLUS MET with meals to reduce gastrointestinal adverse reactions with metformin
+- If a dose is missed, do not double the next dose.
+----------------------------------------
+=== Acyclovir vs Acyclovir suspension ===
+  Label: Acyclovir (dcc29902-1fe6-4713-947e-335503959464)
+  Label: Acyclovir suspension (3efa1e5e-5a14-4724-a2ca-25702f10faed)
+root@faa94ec9460f:/workspace#

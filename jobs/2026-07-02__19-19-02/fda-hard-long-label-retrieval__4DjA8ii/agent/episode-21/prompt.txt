@@ -1,0 +1,6 @@
+New Terminal Output:
+
+...
+0: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A i...
+>>>

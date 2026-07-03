@@ -1,0 +1,5 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 94 (char 95) | Content preview: '{\n  "analysis": "This list of contraindicated drugs in PASSAGE_0012 is very clear. It includes:\n- Al'...
+WARNINGS: - Extra text detected after JSON object
+
+Please fix these issues and provide a proper JSON response.

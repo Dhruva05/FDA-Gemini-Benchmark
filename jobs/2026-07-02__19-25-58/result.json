@@ -1,0 +1,34 @@
+{
+    "id": "b96d3c8f-d6ab-4f34-8902-341dcef5660e",
+    "started_at": "2026-07-02T19:25:58.430714",
+    "finished_at": "2026-07-02T19:31:28.398830",
+    "n_total_trials": 1,
+    "stats": {
+        "n_trials": 1,
+        "n_errors": 0,
+        "evals": {
+            "terminus-2__gemini-3.5-flash__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.781354
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.781354": [
+                            "fda-hard-numeric-dosage__LiXMXER"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 1907863,
+        "n_cache_tokens": 1469773,
+        "n_output_tokens": 40063,
+        "cost_usd": 1.23816795
+    }
+}

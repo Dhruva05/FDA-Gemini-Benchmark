@@ -1,0 +1,18 @@
+New Terminal Output:
+
+root@c7da805c5eb1:/workspace# cat << 'EOF' > find_ar.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         if label['set_id'] == 'ae6e79c0-a307-4888-b647-1b7be4cb9127':
+>             for idx, chunk in enumerate(label['chunks']):
+>                 if "adverse reaction" in chunk.lower() or "clinical trials experience" in chunk.lower() or chunk.startswith("6"):
+>                     print(f"PASSAGE_{idx:04d}: {repr(chunk[:150])}")
+> EOF
+root@c7da805c5eb1:/workspace# python3 find_ar.py
+PASSAGE_0009: '6.1 Clinical Trials Experience\nBecause clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the cli
+nical '
+PASSAGE_0028: '6.2 Postmarketing Experience\nThe following adverse reactions have been identified during post approval use of acamprosate calcium. Because these
+ react'
+root@c7da805c5eb1:/workspace#

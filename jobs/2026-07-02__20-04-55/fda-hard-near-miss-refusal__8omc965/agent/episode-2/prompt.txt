@@ -1,0 +1,28 @@
+New Terminal Output:
+
+root@0ef79956d710:/workspace# cat /workspace/data/public/questions.jsonl
+{"drug_name": "12HR Allergy Relief", "qid": "near-miss-04f3afa658fdef", "question": "The 12HR Allergy Relief label discusses warnings. Does it provide a support
+ed recommendation for pharmacogenomic testing requirement? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_out
+put_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id":
+ "ea5d0e55-2191-4094-b082-24b317f95752", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-0c6ec72416151f", "question": "The Acamprosate Calcium label discusses renal impairment. Does it provide a
+ supported recommendation for severe hepatic impairment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_outpu
+t_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "
+ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-bd69d0bfb1fc7d", "question": "The Acamprosate Calcium label discusses pregnancy. Does it provide a suppor
+ted recommendation for breastfeeding dose adjustment? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "required_output_f
+ields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "set_id": "ae6
+e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-d4ca1884aa8ab4", "question": "The Acamprosate Calcium label discusses adverse reactions. Does it provide
+a supported recommendation for therapeutic drug monitoring target range? Answer NOT_FOUND if the label does not support it, and cite the section you searched.",
+ "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topi
+c"], "set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Acamprosate Calcium", "qid": "near-miss-52e5f8cac33c50", "question": "The Acamprosate Calcium label discusses pediatric. Does it provide a suppor
+ted recommendation for geriatric maximum cumulative lifetime dose? Answer NOT_FOUND if the label does not support it, and cite the section you searched.", "requ
+ired_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topic", "structured_fields.unsupported_topic"], "
+set_id": "ae6e79c0-a307-4888-b647-1b7be4cb9127", "task_type": "refusal"}
+{"drug_name": "Acclean Chlorhexidine Gluconate 0.12% Oral Rinse", "qid": "near-miss-5b5cb6a5249660", "question": "The Acclean Chlorhexidine Gluconate 0.12% Oral
+ Rinse label discusses pregnancy. Does it provide a supported recommendation for breastfeeding dose adjustment? Answer NOT_FOUND if the label does not support i
+t, and cite the section you searched.", "required_output_fields": ["qid", "status", "answer", "citations", "structured_fields", "structured_fields.searched_topi
+c", "structured_fields.unsupported_topic"], "set_id": "08c9d3dd-717b-0148-e054-00144ff8d46c", "task_type": "refusal"}
+root@0ef79956d710:/workspace#

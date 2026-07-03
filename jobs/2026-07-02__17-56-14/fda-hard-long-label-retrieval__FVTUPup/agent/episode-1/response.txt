@@ -1,0 +1,10 @@
+{
+  "analysis": "We see that `questions.jsonl` has 8 questions. Let's write a python script to inspect the exact structure of `questions.jsonl` and `labels.jsonl` to understand what is needed.",
+  "plan": "I will run a python one-liner or simple script to inspect the labels and questions.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/questions.jsonl') as f:\n    for line in f:\n        print(json.loads(line))\n\"\n",
+      "duration": 0.5
+    }
+  ]
+}

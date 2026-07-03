@@ -1,0 +1,14 @@
+{
+  "analysis": "Wait, the terminal is not responding or is lagging. Let's send a Ctrl+C and then run `ls`.",
+  "plan": "I will send `C-c` to interrupt any command and then `ls`.",
+  "commands": [
+    {
+      "keystrokes": "C-c\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "ls\n",
+      "duration": 0.5
+    }
+  ]
+}

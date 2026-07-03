@@ -1,0 +1,32 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# grep -o "PASSAGE_[0-9]*" /workspace/data/public/labels.jsonl | head -n 10
+PASSAGE_0000
+PASSAGE_0001
+PASSAGE_0002
+PASSAGE_0003
+PASSAGE_0004
+PASSAGE_0005
+PASSAGE_0006
+PASSAGE_0007
+PASSAGE_0008
+PASSAGE_0009
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if "PASSAGE" in str(data):
+>             print("Found PASSAGE in label for", data["drug_name"])
+> '
+Found PASSAGE in label for 12HR Allergy Relief
+Found PASSAGE in label for 365 Whole Foods Market Loratadine
+Found PASSAGE in label for Acamprosate Calcium
+Found PASSAGE in label for Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+Found PASSAGE in label for ACETAMINOPHEN with CODEINE
+Found PASSAGE in label for AcetaZOLAMIDE
+Found PASSAGE in label for ACETAZOLAMIDE EXTENDED-RELEASE
+Found PASSAGE in label for Actoplus Met
+Found PASSAGE in label for Acyclovir
+Found PASSAGE in label for Acyclovir suspension
+root@2809f9ae2d53:/workspace#

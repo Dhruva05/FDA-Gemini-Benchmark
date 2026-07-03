@@ -1,0 +1,72 @@
+[
+  {
+    "drug_name": "Milnacipran HCl",
+    "question": "What important warnings or precautions are associated with Milnacipran HCl?",
+    "question_id": "737e4762b27ce680",
+    "question_type": "factual",
+    "set_id": "eaa14195-1b9c-423c-9412-d2fe0857e39d"
+  },
+  {
+    "drug_name": "EDURANT",
+    "question": "How should EDURANT be administered?",
+    "question_id": "a4649bc06e063dc2",
+    "question_type": "factual",
+    "set_id": "03880372-2c68-45c6-a53a-f420c49541d6"
+  },
+  {
+    "drug_name": "Wakix",
+    "question": "How should Wakix be administered?",
+    "question_id": "90eb1b66d90719f8",
+    "question_type": "factual",
+    "set_id": "8daa5562-824e-476c-9652-26ceef3d4b0e"
+  },
+  {
+    "drug_name": "Milnacipran HCl",
+    "question": "What safety risks are listed for Milnacipran HCl?",
+    "question_id": "0ed77e51576671d1",
+    "question_type": "factual",
+    "set_id": "eaa14195-1b9c-423c-9412-d2fe0857e39d"
+  },
+  {
+    "drug_name": "EDURANT",
+    "question": "What is the recommended dosage regimen of EDURANT?",
+    "question_id": "fa2723bf33d48ed3",
+    "question_type": "factual",
+    "set_id": "03880372-2c68-45c6-a53a-f420c49541d6"
+  },
+  {
+    "drug_name": "Wakix",
+    "question": "What is the recommended dosage regimen of Wakix?",
+    "question_id": "bf541398e84eb4b1",
+    "question_type": "factual",
+    "set_id": "8daa5562-824e-476c-9652-26ceef3d4b0e"
+  },
+  {
+    "drug_name": "Milnacipran HCl",
+    "question": "Which medications should be avoided with Milnacipran HCl?",
+    "question_id": "6217f72118af6d67",
+    "question_type": "factual",
+    "set_id": "eaa14195-1b9c-423c-9412-d2fe0857e39d"
+  },
+  {
+    "drug_name": "EDURANT",
+    "question": "What adverse reactions have been reported for EDURANT?",
+    "question_id": "bf310eb9af209d12",
+    "question_type": "factual",
+    "set_id": "03880372-2c68-45c6-a53a-f420c49541d6"
+  },
+  {
+    "drug_name": "Wakix",
+    "question": "What important drug interactions are noted for Wakix?",
+    "question_id": "4fca227a924f7940",
+    "question_type": "factual",
+    "set_id": "8daa5562-824e-476c-9652-26ceef3d4b0e"
+  },
+  {
+    "drug_name": "Milnacipran HCl",
+    "question": "What important drug interactions are noted for Milnacipran HCl?",
+    "question_id": "c8e8afd47cbee25e",
+    "question_type": "factual",
+    "set_id": "eaa14195-1b9c-423c-9412-d2fe0857e39d"
+  }
+]

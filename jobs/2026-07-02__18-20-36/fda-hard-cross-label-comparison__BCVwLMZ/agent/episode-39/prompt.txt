@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); l={x['set_id']: x for x in (json.loads(line) for line in f
+)}; l2=l['3efa1e5e-5a14-4724-a2ca-25702f10faed']; [print(f'PASSAGE_{i:04d}: {c}') for i, c in enumerate(l2['chunks']) if 'younger than 2' in c.lower() or 'pedia
+tric' in c.lower()]"
+PASSAGE_0005: Pediatrics
+In general, the pharmacokinetics of acyclovir in pediatric patients is similar to that of adults. Mean half-life after oral doses of 300 mg/m2 and 600 mg/m2 in 
+pediatric patients aged 7 months to 7 years was 2.6 hours (range 1.59 to 3.74 hours).
+PASSAGE_0010: Chickenpox
+Three randomized, double-blind, placebo-controlled trials were conducted in 993 pediatric patients aged 2 to 18 years with chickenpox. All patients were treated
+ within 24 hours after the onset of rash. In 2 trials, acyclovir was administered at 20 mg/kg 4 times daily (up to 3,200 mg per day) for 5 days. In the third tr
+ial, doses of 10, 15, or 20 mg/kg were administered 4 times daily for 5 to 7 days. Treatment with acyclovir shortened the time to 50% healing; reduced the maxim
+um number of lesions; reduced the median number of vesicles; decreased the median number of residual lesions on day 28; and decreased the proportion of patients
+ with fever, anorexia, and lethargy by day 2. Treatment with acyclovir did not affect varicella-zoster virus-specific humoral or cellular immune responses at 1
+month or 1 year following treatment.
+PASSAGE_0025: Safety and effectiveness of oral formulations of acyclovir in pediatric patients younger than 2 years of age have not been established.
+root@faa94ec9460f:/workspace#

@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > search_labels.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+>
+> for label in labels:
+>     print(f"Drug: {label['drug_name']}, Set ID: {label['set_id']}, Chunks count: {len(label['chunks'])}")
+> EOF
+root@371ed25b9fd3:/workspace# python3 search_labels.py
+Drug: Lopinavir-Ritonavir, Set ID: 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85, Chunks count: 188
+Drug: Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate, Set ID: d9a4185e-43fa-4aeb-9b0f-8db01b166038, Chunks count: 167
+Drug: CELECOXIB, Set ID: 27f17ae7-939b-402e-9498-3b6611104089, Chunks count: 153
+Drug: Lenalidomide, Set ID: ed7a3099-ce31-4865-b212-358d9ff6261b, Chunks count: 143
+root@371ed25b9fd3:/workspace#

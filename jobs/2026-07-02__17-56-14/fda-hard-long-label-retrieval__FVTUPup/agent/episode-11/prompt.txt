@@ -1,0 +1,31 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "
+> import json, re
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>     label_raw = data['label_raw']
+>     passages = re.split(r'\|\|(PASSAGE_\d+)\|\|\n', label_raw)
+>     # The split results in ['', 'PASSAGE_0000', 'text...', 'PASSAGE_0001', 'text...', ...]
+>     print('Split length:', len(passages))
+>     parsed = {}
+>     for i in range(1, len(passages), 2):
+>         pid = passages[i]
+>         text = passages[i+1].strip()
+>         parsed[pid] = text
+>     print('Number of parsed passages:', len(parsed))
+>     chunks = [c.strip() for c in data['chunks']]
+>     print('Number of chunks:', len(chunks))
+>     # Check if they match
+>     matched = 0
+>     for i, chunk in enumerate(chunks):
+>         pid = f'PASSAGE_{i:04d}'
+>         if pid in parsed and parsed[pid] == chunk:
+>             matched += 1
+>     print('Matched chunks by index:', matched)
+> "
+Split length: 419
+Number of parsed passages: 209
+Number of chunks: 209
+Matched chunks by index: 209
+root@2635f56baf2a:/workspace#

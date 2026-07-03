@@ -1,0 +1,5 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Expecting ',' delimiter: line 6 column 4361 (char 4645) | Content preview: '{\n  "analysis": "The previous attempt had an invalid control character. I will make sure the keystro'...
+WARNINGS: - Extra text detected after JSON object
+
+Please fix these issues and provide a proper JSON response.

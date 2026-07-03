@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 294 (char 295) | Content preview: '{\n  "analysis": "Ah, it doesn\'t specify the exact value of the maximum recommended dose in that sent'...
+
+Please fix these issues and provide a proper JSON response.

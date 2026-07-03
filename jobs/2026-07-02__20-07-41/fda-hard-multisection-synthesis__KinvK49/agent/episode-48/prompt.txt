@@ -1,0 +1,5 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 42 (char 43) | Content preview: '{\n  "analysis": "This is extremely helpful!\nLet\'s review the required format for citations and struc'...
+WARNINGS: - Extra text detected after JSON object
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,25 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["set_id"] == "42e49120-6f3f-11db-9fe1-0800200c9a66":
+>             for i in [6, 7, 8]:
+>                 print(f"Actoplus Met PASSAGE_{i:04d}: {repr(data["chunks"][i])}")
+> '
+Actoplus Met PASSAGE_0006: 'Dosage Titration for Additional Glycemic Control\nTitrate the ACTOPLUS MET dosage gradually, as needed, after assessing therapeutic
+response and tolerability.\nACTOPLUS MET may be increased to a maximum recommended total daily dosage of three tablets per day (45 mg of pioglitazone and 2,550
+mg of metformin HCl). Total daily dosages of 2,550 mg of metformin HCl may be taken in divided doses three times a day to reduce gastrointestinal adverse reacti
+ons .'
+Actoplus Met PASSAGE_0007: '- Assess renal function prior to initiation of ACTOPLUS MET and periodically thereafter\n- ACTOPLUS MET is contraindicated in patien
+ts with an estimated glomerular filtration rate (eGFR) below 30 mL/min.\n- Initiation of ACTOPLUS MET in patients with an eGFR between 30 to 45 mL/min is not re
+commended.\n- In patients taking ACTOPLUS MET whose eGFR later falls below 45 mL/min, assess the benefit and risk of continuing therapy.\n- Discontinue ACTOPLUS
+ MET if the patient’s eGFR later falls below 30 mL/min'
+Actoplus Met PASSAGE_0008: 'Starting Dosage in Patients with NYHA Class I or II Congestive Heart Failure\nFor patients with preexisting NYHA Class I or II conge
+stive heart failure, the recommended starting dosage of ACTOPLUS MET is 15 mg of pioglitazone and 850 mg of metformin .\nMonitoring for Fluid Retention and Dosa
+ge Modifications for Congestive Heart Failure\nAfter initiation of ACTOPLUS MET or with dosage increase, monitor patients carefully for adverse reactions relate
+d to fluid retention as has been seen with pioglitazone (e.g., weight gain, edema and signs and symptoms of congestive heart failure).\nIf congestive heart fail
+ure develops while taking ACTOPLUS MET, consider discontinuation of ACTOPLUS MET or dosage reduction of pioglitazone in ACTOPLUS MET .'
+root@2809f9ae2d53:/workspace#

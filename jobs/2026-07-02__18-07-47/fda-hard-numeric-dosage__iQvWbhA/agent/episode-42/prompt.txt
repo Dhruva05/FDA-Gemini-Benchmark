@@ -1,0 +1,26 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > list_lenalidomide_headings.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+> l = [label for label in labels if label['set_id'] == 'ed7a3099-ce31-4865-b212-358d9ff6261b'][0]
+> for i, chunk in enumerate(l['chunks']):
+>     # Let's print the first line of each chunk
+>     first_line = chunk.split('\n')[0]
+>     if any(section in first_line.upper() for section in ['10 ', 'OVERDOSAGE', 'DOSAGE', 'ADMINISTRATION']):
+>         print(f"{i}: {first_line}")
+> EOF
+root@371ed25b9fd3:/workspace# python3 list_lenalidomide_headings.py
+9: 2.1 Recommended Dosage for Multiple Myeloma
+15: 2.2 Recommended Dosage for Myelodysplastic Syndromes
+19: 2.3 Recommended Dosage for Mantle Cell Lymphoma
+22: 2.4 Recommended Dosage for Follicular Lymphoma or Marginal Zone Lymphoma
+27: 2.5 Dosage Modifications for Non-Hematologic Adverse Reactions
+28: 2.6 Recommended Dosage for Patients with Renal Impairment
+32: 2.7 Administration
+33: 3 DOSAGE FORMS AND STRENGTHS
+48: 5.10 Tumor Lysis Syndrome
+79: 10 OVERDOSAGE
+139: Lenalidomide Capsules, 10 mg - 28 Count Bottle
+root@371ed25b9fd3:/workspace#

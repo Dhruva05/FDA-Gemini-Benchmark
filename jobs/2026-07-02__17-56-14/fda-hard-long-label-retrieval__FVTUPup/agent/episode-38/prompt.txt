@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 137 (char 138) | Content preview: '{\n  "analysis": "These lists of contraindicated drugs and drugs to avoid are very rich and specific.'...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,12 @@
+{
+  "analysis": "The search for 'maximum', 'exceed', 'limit', 'max' in Lenalidomide returned some passages. Let's look at `PASSAGE_0009` (dosing for Multiple Myeloma):\n"
+              "\"The recommended starting dose of lenalidomide is 25 mg orally once daily on Days 1 to 21 of repeated 28-day cycles...\"\n"
+              "Wait, does the label state any specific maximum daily dose for Lenalidomide? Usually, the starting dose is 25 mg daily (for MM and MCL) or 20 mg daily (for FL/MZL) or 10 mg daily (for MDS). Let's check if there is an overdosage section (`10 OVERDOSAGE`) for Lenalidomide.",
+  "plan": "Write a script to search for the overdosage section in Lenalidomide and print it.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > search_lenalidomide_overdose.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = [json.loads(line) for line in f]\nl = [label for label in labels if label['set_id'] == 'ed7a3099-ce31-4865-b212-358d9ff6261b'][0]\nfor i, chunk in enumerate(l['chunks']):\n    if 'overdosage' in chunk.lower() or '10 ' in chunk:\n        if i > 50:\n            print(f\"PASSAGE_{i:04d}:\")\n            print(chunk[:500])\n            print(\"-\"*50)\nEOF\npython3 search_lenalidomide_overdose.py\n",
+      "duration": 1.0
+    }
+  ]
+}

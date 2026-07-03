@@ -1,0 +1,48 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > print_last_chunks.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         drug_name = data['drug_name']
+>         last_idx = len(data['chunks']) - 1
+>         print(f"=== {drug_name} Last Chunk ({last_idx}) ===")
+>         print(data['chunks'][last_idx][:300])
+>         print()
+> EOF
+root@af996c5fe492:/workspace# python3 print_last_chunks.py
+=== Lopinavir-Ritonavir Last Chunk (187) ===
+1 Prescribing Information
+- 1 Medication Guide and Instructions for Use 1 Medication Guide and Instructions for Use
+Step 1: Remove the lopinavir and ritonavir oral solution bottle, bottle adapter, and oral syringe from the carton.
+Step 2: Open the bottle by pressing downward firmly on the child-resi
+
+=== Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate Last Chunk (166) ===
+RMXA5440H1
+Dispense only in original container.
+Keep container tightly closed.
+Code No.: MH/DRUGS/AD/089
+
+=== CELECOXIB Last Chunk (152) ===
+DRUG: CELECOXIB
+GENERIC: CELECOXIB
+DOSAGE: CAPSULE
+ADMINSTRATION: ORAL
+NDC: 70518-2233-0
+NDC: 70518-2233-1
+NDC: 70518-2233-2
+COLOR: white
+SHAPE: CAPSULE
+SCORE: No score
+SIZE: 19 mm
+IMPRINT: Cipla;421;200
+PACKAGING: 30 in 1 BOTTLE PLASTIC
+PACKAGING: 100 in 1 BOX
+PACKAGING: 1 in 1 POUCH
+ACTIVE INGREDI
+
+=== Lenalidomide Last Chunk (142) ===
+Lenalidomide Capsules, 25 mg - 21 Count Bottle
+
+root@af996c5fe492:/workspace#

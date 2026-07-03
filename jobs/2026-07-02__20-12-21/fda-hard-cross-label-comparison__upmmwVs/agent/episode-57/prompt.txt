@@ -1,0 +1,51 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); [print(i, c[:100].replace('\n', ' ')) for d in (json.loads
+(l) for l in f) if d['set_id']=='3efa1e5e-5a14-4724-a2ca-25702f10faed' for i, c in enumerate(d['chunks'])]"
+0 DESCRIPTION Acyclovir, USP is a synthetic nucleoside analogue active against herpes viruses. Acyclov
+1 Pharmacokinetics The pharmacokinetics of acyclovir after oral administration have been evaluated in 
+2 Table 1. Acyclovir Pharmacokinetic Characteristics (Range) *Bioavailability decreases with increasin
+3 Adults With Impaired Renal Function The half-life and total body clearance of acyclovir are dependen
+4 Geriatrics Acyclovir plasma concentrations are higher in geriatric patients compared with younger ad
+5 Pediatrics In general, the pharmacokinetics of acyclovir in pediatric patients is similar to that of
+6 Drug Interactions Coadministration of probenecid with intravenous acyclovir has been shown to increa
+7 Initial Genital Herpes Double-blind, placebo-controlled studies have demonstrated that orally admini
+8 Recurrent Genital Herpes Double-blind, placebo-controlled studies in patients with frequent recurren
+9 Herpes Zoster Infections In a double-blind, placebo-controlled study of immunocompetent patients wit
+10 Chickenpox Three randomized, double-blind, placebo-controlled trials were conducted in 993 pediatric
+11 Herpes Zoster Infections Acyclovir is indicated for the acute treatment of herpes zoster (shingles).
+12 Genital Herpes Acyclovir is indicated for the treatment of initial episodes and the management of re
+13 Chickenpox Acyclovir is indicated for the treatment of chickenpox (varicella).
+14 Acyclovir is contraindicated for patients who develop hypersensitivity to acyclovir or valacyclovir.
+15 Acyclovir Oral Suspension is intended for oral ingestion only. Renal failure, in some cases resultin
+16 Dosage adjustment is recommended when administering acyclovir to patients with renal impairment . Ca
+17 Patients are instructed to consult with their physician if they experience severe or troublesome adv
+18 Herpes Zoster There are no data on treatment initiated more than 72 hours after onset of the zoster
+19 Genital Herpes Infections Patients should be informed that acyclovir is not a cure for genital herpe
+20 Chickenpox Chickenpox in otherwise healthy children is usually a self-limited disease of mild to mod
+21 See CLINICAL PHARMACOLOGY: Pharmacokinetics.
+22 The data presented below include references to peak steady-state plasma acyclovir concentrations obs
+23 Acyclovir administered during organogenesis was not teratogenic in the mouse (450 mg/kg/day, p.o.),
+24 Acyclovir concentrations have been documented in breast milk in 2 women following oral administratio
+25 Safety and effectiveness of oral formulations of acyclovir in pediatric patients younger than 2 year
+26 Of 376 subjects who received acyclovir in a clinical study of herpes zoster treatment in immunocompe
+27 Short-Term Administration The most frequent adverse events reported during clinical trials of treatm
+28 Long-Term Administration The most frequent adverse events reported in a clinical trial for the preve
+29 Herpes Zoster The most frequent adverse event reported during 3 clinical trials of treatment of herp
+30 Chickenpox The most frequent adverse event reported during 3 clinical trials of treatment of chicken
+31 Observed During Clinical Practice In addition to adverse events reported from clinical trials, the f
+32 Overdoses involving ingestion of up to 100 capsules (20 g) have been reported. Adverse events that h
+33 Acute Treatment of Herpes Zoster 800 mg every 4 hours orally, 5 times daily for 7 to 10 days.
+34 Treatment of Initial Genital Herpes 200 mg every 4 hours, 5 times daily for 10 days.
+35 Chronic Suppressive Therapy for Recurrent Disease 400 mg 2 times daily for up to 12 months, followed
+36 Intermittent Therapy 200 mg every 4 hours, 5 times daily for 5 days. Therapy should be initiated at 
+37 Treatment of Chickenpox Children (2 years of age and older) 20 mg/kg per dose orally 4 times daily (
+38 Adults and Children over 40 kg 800 mg 4 times daily for 5 days. Intravenous acyclovir is indicated f
+39 Hemodialysis For patients who require hemodialysis, the mean plasma half-life of acyclovir during he
+40 Peritoneal Dialysis No supplemental dose appears to be necessary after adjustment of the dosing inte
+41 Bioequivalence of Dosage Forms Acyclovir Oral Suspension was shown to be bioequivalent to Acyclovir 
+42 Acyclovir Oral Suspension, USP contains 200 mg of acyclovir, USP in each teaspoonful (5 mL). The whi
+43 1 pint bottle (473 mL) Stor e at 15° to 25°C (59° to 77°F). Protect from light. For more information
+44 Piscataway, NJ 08854 Distributed by:
+45 Piscataway, NJ 08854-3714 Issued on: August 2022
+root@7e48d58e23f3:/workspace#

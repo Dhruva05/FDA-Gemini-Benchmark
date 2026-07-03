@@ -1,0 +1,4 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# rm explore.py print_chunks.py print_12hr.py generate_answers.py validate.py
+root@3646eb22abe5:/workspace#

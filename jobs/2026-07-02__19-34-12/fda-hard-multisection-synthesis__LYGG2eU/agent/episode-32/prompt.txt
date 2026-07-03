@@ -1,0 +1,26 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# python3 search_labels.py 4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85 "tablet"
+=== Searching in Lopinavir-Ritonavir (4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85) for ['tablet'] ===
+PASSAGE_0028 (Heading: Adverse Reactions in Adults):
+  The safety of lopinavir and ritonavir has been investigated in about 2,600 patients in Phase II-IV clinical trials, of w
+  In clinical studies the incidence of diarrhea in patients treated with either lopinavir and ritonavir capsules or tablet
+----------------------------------------
+PASSAGE_0059 (Heading: ↓ lopinavir):
+  Increase the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administere
+----------------------------------------
+PASSAGE_0074 (Heading: ↑ colchicine):
+  0.6 mg (1 tablet) x 1 dose, followed by 0.3 mg (half tablet) 1 hour later. Dose to be repeated no earlier than 3 days.
+----------------------------------------
+PASSAGE_0109 (Heading: 12.3 Pharmacokinetics):
+  The pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic parameters of l
+----------------------------------------
+PASSAGE_0145 (Heading: 89):
+  Tablets once daily + tenofovir DF + emtricitabine compared to Lopinavir and Ritonavir Tablets twice daily + tenofovir DF
+  Study 730 was a randomized, open-label, multicenter trial comparing treatment with lopinavir and ritonavir 800/200 mg on
+----------------------------------------
+PASSAGE_0150 (Heading: 13%):
+  Tablets 800/200 mg Once Daily Versus 400/100 mg Twice Daily when Co-­administered with Nucleoside/Nucleotide Reverse Tra
+  M06-802 was a randomized open-label study comparing the safety, tolerability, and antiviral activity of once daily and t
+----------------------------------------
+root@15b83e10b8d1:/workspace#

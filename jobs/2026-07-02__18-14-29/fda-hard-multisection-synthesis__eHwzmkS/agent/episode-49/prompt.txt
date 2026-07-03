@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = label
+s[0]
+> for i, c in enumerate(l['chunks']):
+>     if re.match(r'^5\.', c.strip()):
+>         print(f'PASSAGE_{i:04d}:', c.strip().split('\n')[0][:80])
+> f.close()"
+PASSAGE_0013: 5.1       Risk of Serious Adverse Reactions Due to Drug Interactions
+PASSAGE_0014: 5.2       Hypersensitivity Reactions
+PASSAGE_0015: 5.3       Hepatotoxicity
+PASSAGE_0016: 5.4       Risk of HIV-1 Resistance Development
+root@a1980178bfd8:/workspace#

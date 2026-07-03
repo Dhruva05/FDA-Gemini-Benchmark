@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah, the python command had a syntax error because of how nested quotes were resolved inside my inline python script. Let's write a small script to print passages 3 to 15 of Lopinavir-Ritonavir.",
+  "plan": "Write a script to print passages 3 to 15 of Lopinavir-Ritonavir and run it.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > print_lopinavir_passages.py\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    l = json.loads(f.readline())\nfor i in range(3, 16):\n    print(f\"PASSAGE_{i:04d}:\")\n    print(l['chunks'][i])\n    print(\"-\"*50)\nEOF\npython3 print_lopinavir_passages.py\n",
+      "duration": 1.0
+    }
+  ]
+}

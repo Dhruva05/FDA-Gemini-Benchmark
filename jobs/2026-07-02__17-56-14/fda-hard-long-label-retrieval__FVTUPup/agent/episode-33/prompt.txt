@@ -1,0 +1,36 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 search.py "interactions"
+=== PASSAGE_0000 ===
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentially severe,
+ life-threatening, or fatal events
+- Prior to prescribing PAXLOVID: 1) Review all medic...
+
+=== PASSAGE_0013 ===
+5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications
+metabolized by CYP3A in patients already receiving PAXLOVID, may increase pla...
+
+=== PASSAGE_0021 ===
+7.3     Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered
+ a comprehensive list of all possible drugs that may interact with PAXLO...
+
+=== PASSAGE_0135 ===
+In Vitro Studies
+Cytochrome P450 (CYP) Enzymes:
+- Nirmatrelvir is a reversible and time-dependent inhibitor of CYP3A, but not an inhibitor CYP1A2, CYP2B6, CYP2C8, CYP2C9, CYP2C19, or CYP2D6. Nirmatrelvir is a
+n inducer of CYP2B6, 2C8, 2C9, and 3A4, but there is minimal risk for pharmacokinetic intera...
+
+=== PASSAGE_0149 ===
+14.1    Efficacy in Subjects at High Risk of Progression to Severe COVID-19 (EPIC-HR)
+EPIC-HR (NCT04960202) was a Phase 2/3, randomized, double-blind, placebo-controlled trial in non-hospitalized symptomatic adult subjects with a laboratory confi
+rmed diagnosis of SARS-CoV-2 infection. Eligible subjects...
+
+=== PASSAGE_0173 ===
+Drug Interactions
+Inform patients that PAXLOVID may interact with certain drugs and is contraindicated for use with certain drugs; therefore, advise patients to report to their h
+ealthcare provider the use of any prescription, non-prescription medication, or herbal products ....
+
+root@2635f56baf2a:/workspace#

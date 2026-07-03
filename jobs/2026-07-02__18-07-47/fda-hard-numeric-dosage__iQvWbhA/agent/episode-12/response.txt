@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah! The first line (line 1) contains `PASSAGE_0000`, `PASSAGE_0001`... but wait, why didn't we see it in our `cut -c 1-1000`? Let's search inside the first line for `PASSAGE_` using python to see where it is.",
+  "plan": "Write a python script to search for the string 'PASSAGE_0000' in the first line of labels.jsonl.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; l = json.loads(open('/workspace/data/public/labels.jsonl').readline()); print('PASSAGE_0000' in str(l))\"\n",
+      "duration": 0.5
+    }
+  ]
+}

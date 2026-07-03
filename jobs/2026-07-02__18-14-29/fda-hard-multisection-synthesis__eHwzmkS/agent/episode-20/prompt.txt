@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 92 (char 93) | Content preview: '{\n  "analysis": "No scoring or evaluation scripts were found. Let\'s check `/workspace` again.\nWait! '...
+
+Please fix these issues and provide a proper JSON response.

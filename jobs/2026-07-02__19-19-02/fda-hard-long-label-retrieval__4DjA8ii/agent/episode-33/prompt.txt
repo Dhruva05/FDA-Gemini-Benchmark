@@ -1,0 +1,4 @@
+New Terminal Output:
+
+>>> exit()
+root@19fe3c8dfb02:/workspace#

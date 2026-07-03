@@ -1,0 +1,39 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > test_normalize.py
+> import re
+>
+> def get_exact_substring(chunk, target_text):
+>     # Normalize whitespaces to a single space, including non-breaking spaces
+>     def normalize(text):
+>         # replace non-breaking spaces and any other whitespace with standard space
+>         text = re.sub(r'\s+', ' ', text)
+>         return text.strip().lower()
+>
+>     norm_chunk = normalize(chunk)
+>     norm_target = normalize(target_text)
+>
+>     if norm_target not in norm_chunk:
+>         print(f"Target NOT found in normalized chunk!")
+>         print(f"Norm Target: {repr(norm_target)}")
+>         print(f"Norm Chunk:  {repr(norm_chunk[:200])}")
+>         return None
+>
+>     # Let's find the match by building a regex pattern from target_text
+>     # We split target_text by any whitespace and join with \s+
+>     words = target_text.split()
+>     escaped_words = [re.escape(w) for w in words]
+>     pattern = r'\s+'.join(escaped_words)
+>
+>     match = re.search(pattern, chunk, re.IGNORECASE)
+>     if match:
+>         return match.group(0)
+>     return None
+>
+> chunk = "Treatment with lopinavir\xa0and ritonavir has resulted in large increases"
+> target = "Treatment with lopinavir and ritonavir has resulted"
+> print(repr(get_exact_substring(chunk, target)))
+> EOF
+root@15b83e10b8d1:/workspace# python3 test_normalize.py
+'Treatment with lopinavir\xa0and ritonavir has resulted'
+root@15b83e10b8d1:/workspace#

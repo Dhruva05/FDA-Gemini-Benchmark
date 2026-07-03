@@ -1,0 +1,43 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["set_id"] == "08c9d3dd-717b-0148-e054-00144ff8d46c":
+>             for i, c in enumerate(data["chunks"][10:]):
+>                 print(f"PASSAGE_{i+10:04d}: {repr(c)}")
+> '
+PASSAGE_0010: 'In a drinking water study in rats, carcinogenic effects were not observed at doses up to 38 mg/kg/day. Mutagenic effects were not observed in two
+ mammalian in vivo mutagenesis studies with chlorhexidine gluconate. The highest doses of chlorhexidine used in a mouse dominant-lethal assay and a hamster cyto
+genetics test were 1000 mg/kg/day and 250 mg/kg/day, respectively. No evidence of impaired fertility was observed in rats at doses up to 100 mg/kg/day.'
+PASSAGE_0011: 'Ingestion of 1 or 2 ounces of chlorhexidine gluconate oral rinse by a small child (~10 kg body weight) might result in gastric distress, includin
+g nausea, or signs of alcohol intoxication. Medical attention should be sought if more than 4 ounces of chlorhexidine gluconate oral rinse is ingested by a smal
+l child or if signs of alcohol intoxication develop.'
+PASSAGE_0012: 'Chlorhexidine gluconate oral rinse therapy should be initiated directly following a dental prophylaxis. Patients using chlorhexidine gluconate or
+al rinse should be reevaluated and given a thorough prophylaxis at intervals no longer than six months.\nRecommended use is twice daily oral rinsing for 30 seco
+nds, morning and evening after tooth brushing. Usual dosage is 15 ml (1 tablespoon) of undiluted chlorhexidine gluconate oral rinse. Patients should be instruct
+ed to not rinse with water, or other mouthwashes, brush teeth, or eat immediately after using chlorhexidine gluconate oral rinse. Chlorhexidine gluconate oral r
+inse is not intended for ingestion and should be expectorated after rinsing.'
+PASSAGE_0013: 'Chlorhexidine gluconate oral rinse is supplied as a blue liquid in 4-ounce (118 ml) and 1-pint (473 ml) amber plastic bottles with child-resistan
+t dispensing closures. Store at 20°C to 25°C (68°F-77°F), excursions permitted to 15°C to 30°C (59°F-86°F) .'
+PASSAGE_0014: 'Rx Only\nRevised: December 2015\nDistributed by (in US only):\nHENRY SCHEIN, INC'
+PASSAGE_0015: 'Your dentist has prescribed ACCLEAN chlorhexidine gluconate oral rinse to treat your gingivitis, to help reduce the redness and swelling of your
+gums, and also to help you control any gum bleeding. Use chlorhexidine gluconate oral rinse regularly, as directed by your dentist, in addition to daily brushin
+g. Spit out after use, chlorhexidine gluconate oral rinse should not be swallowed.\nIf you develop allergic symptoms such as skin rash, itch, generalized swelli
+ng, breathing difficulties, light headedness, rapid heart rate, upset stomach or diarrhea, seek medical attention immediately. Chlorhexidine gluconate oral rins
+e should not be used by persons who have a sensitivity to it or its components.\nChlorhexidine gluconate oral rinse may cause some tooth discoloration, or incre
+ase in tartar (calculus) formation, particularly in areas where stain and tartar usually form. It is important to see your dentist for removal of any stain or t
+artar at least every six months or more frequently if your dentist advises.\n- Both stain and tartar can be removed by your dentist or hygienist. Chlorhexidine
+gluconate oral rinse may cause permanent discoloration of some front-tooth fillings.\n- To minimize discoloration, you should brush and floss daily, emphasizing
+ areas which begin to discolor.\n- Chlorhexidine gluconate oral rinse may taste bitter to some patients and can affect how food and beverages taste. This will b
+ecome less noticeable in most cases with continued use of chlorhexidine gluconate oral rinse.\n- To avoid taste interference, rinse with chlorhexidine gluconate
+ oral rinse after meals. Do not rinse with water or other mouthwashes immediately after rinsing with chlorhexidine gluconate oral rinse.\nIf you have any questi
+ons or comments about chlorhexidine gluconate oral rinse, contact your dentist or pharmacist.\nCall your health care provider for medical advice about side effe
+cts. You may report side effects to FDA at 1-800-FDA-1088.\nSTORE at 20°C to 25°C (68°F to 77°F), excursions permitted to 15°C to 30°C (59°F to 86°F) .'
+PASSAGE_0016: 'REF 112-6720\nDIRECTIONS FOR USE: Swish one tablespoon (15ml) in mouth undiluted for 30 seconds, then\nspit out. Use after breakfast and before b
+edtime. Or, use as prescribed.\nNOTE: to minimize medicinal taste, do not rinse with water immediately after use.'
+PASSAGE_0017: '\ufeff\nINGREDIENTS: 0.12% chlorhexidine gluconate in a base containing water, 11.6% alcohol, glycerin, PEG-40 sorbitan diisostearate, flavor, so
+dium saccharin, and FD&C Blue No.1.\nTo open, press down while turning cap. To reseal, turn cap past "clicks" until tightly locked.'
+root@2809f9ae2d53:/workspace#

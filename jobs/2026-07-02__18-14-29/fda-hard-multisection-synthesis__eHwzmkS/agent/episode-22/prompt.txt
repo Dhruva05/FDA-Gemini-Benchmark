@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 91 (char 92) | Content preview: '{\n  "analysis": "No hints in environment variables. Let\'s look at the exact questions again.\nWait! A'...
+
+Please fix these issues and provide a proper JSON response.

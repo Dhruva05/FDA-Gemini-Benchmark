@@ -1,0 +1,41 @@
+Current Terminal Screen:
+ially when co-administered with calcineurin inhibitors (e.g., tacrolimus, cyclosporine) or calcium channel blockers. (2) Hypersensitivity reactions, including a
+naphylaxis and serious skin reactions such as toxic epidermal necrolysis and Stevens-Johnson syndrome. (3) Hepatotoxicity, including hepatic transaminase elevat
+ions, clinical hepatitis, and jaundice. (4) Risk of HIV-1 resistance development to HIV protease inhibitors in individuals with uncontrolled or undiagnosed HIV-
+1 infection.",
+>         "citations": [
+>             {
+>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>                 "passage_id": "PASSAGE_0013",
+>                 "section": "5.1",
+>                 "supporting_quote": "Severe, life-threatening, and/or fatal adverse reactions due to drug interactions have been reported in patients treated
+with PAXLOVID. The most commonly reported concomitant medications resulting in serious adverse reactions were calcineurin inhibitors (e.g., tacrolimus, cyclospo
+rine), followed by calcium channel blockers."
+>             },
+>             {
+>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>                 "passage_id": "PASSAGE_0014",
+>                 "section": "5.2",
+>                 "supporting_quote": "Anaphylaxis, serious skin reactions (including toxic epidermal necrolysis and Stevens-Johnson syndrome), and other hypers
+ensitivity reactions have been reported with PAXLOVID ."
+>             },
+>             {
+>                 "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a",
+>                 "passage_id": "PASSAGE_0016",
+>                 "section": "5.4",
+>                 "supporting_quote": "Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV proteas
+e inhibitors in individuals with uncontrolled or undiagnosed HIV-1 infection ."
+>             }
+>         ],
+>         "structured_fields": {}
+>     }
+> ]
+>
+> output = {"answers": answers_data}
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(output, f, indent=2)
+> print("Generated answers.json successfully!")
+> EOF
+root@23e2e6a1b566:/workspace# python3 generate_answers.py
+Generated answers.json successfully!
+root@23e2e6a1b566:/workspace#

@@ -1,0 +1,10 @@
+{
+  "analysis": "Aha! `label_raw` is a string that contains `||PASSAGE_0000||` etc., followed by the passage content. And `chunks` is a list of these passages in order! So yes, the passage ID is indeed `PASSAGE_0000`, `PASSAGE_0001`, `PASSAGE_0002`, etc., corresponding to index 0, 1, 2, etc. of the `chunks` array! This is great. Let's verify this by checking if the number of chunks matches the number of PASSAGE_#### headers in `label_raw`.",
+  "plan": "I will write a python script to verify that `chunks[i]` corresponds to `PASSAGE_####` where `####` is formatted as `f\"PASSAGE_{i:04d}\"`. I will also print all questions and their requested fields.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > verify_passages.py\nimport json\nimport re\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        l = json.loads(line)\n        raw = l['label_raw']\n        passages = re.findall(r'\\|\\|PASSAGE_(\\d+)\\|\\|', raw)\n        print(f\"{l['drug_name']}: chunks count={len(l['chunks'])}, passage IDs in raw={len(passages)}, max ID={max(map(int, passages)) if passages else None}\")\nEOF\npython3 verify_passages.py\n",
+      "duration": 1.0
+    }
+  ]
+}

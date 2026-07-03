@@ -1,0 +1,18 @@
+{
+  "analysis": "I will escape all newlines and control characters carefully. I want to read the full text of PASSAGE_0000, PASSAGE_0013, and PASSAGE_0021 to get complete information about the drug interactions of Paxlovid.",
+  "plan": "I will print the full text of PASSAGE_0000, PASSAGE_0013, and PASSAGE_0021 using print_passage.py.",
+  "commands": [
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0000\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0013\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 print_passage.py PASSAGE_0021\n",
+      "duration": 0.5
+    }
+  ]
+}

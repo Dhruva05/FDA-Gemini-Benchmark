@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 40 (char 41) | Content preview: '{\n  "analysis": "This is incredibly rich.\n`PASSAGE_0012` lists:\n1. Hypersensitivity reactions (TEN, '...
+
+Please fix these issues and provide a proper JSON response.

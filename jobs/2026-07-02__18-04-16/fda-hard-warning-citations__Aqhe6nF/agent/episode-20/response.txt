@@ -1,0 +1,10 @@
+{
+  "analysis": "This is extremely informative! Let's print the full text of PASSAGE_0001, PASSAGE_0002, PASSAGE_0003, and PASSAGE_0159 for Lopinavir-Ritonavir to answer Question 3 (How should Lopinavir-Ritonavir be administered?) and Question 4 (What is the recommended dosage regimen of Lopinavir-Ritonavir?). Let's write a python script to print these.",
+  "plan": "I will print the text of PASSAGE_0001, PASSAGE_0002, PASSAGE_0003, and PASSAGE_0159 from Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'Lopinavir-Ritonavir':\n            lop = data\n            break\nfor idx in [1, 2, 3, 159]:\n    print(f'=== PASSAGE_{idx:04d} ===')\n    print(lop['chunks'][idx])\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

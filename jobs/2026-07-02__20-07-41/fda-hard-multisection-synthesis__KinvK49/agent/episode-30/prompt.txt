@@ -1,0 +1,115 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# sed -n '100,210p' /tmp/headers.txt
+PASSAGE_0098: ↑ flibanserin
+PASSAGE_0099: ↑ tolvaptan
+PASSAGE_0100: 8.1 Pregnancy
+PASSAGE_0101: Disease-associated Maternal and/or Embryo-fetal Risk
+PASSAGE_0102: Ritonavir
+PASSAGE_0103: Nirmatrelvir
+PASSAGE_0104: Ritonavir
+PASSAGE_0105: 8.2 Lactation
+PASSAGE_0106: Data
+PASSAGE_0107: 8.3 Females and Males of Reproductive Potential
+PASSAGE_0108: 8.4 Pediatric Use
+PASSAGE_0109: 8.5 Geriatric Use
+PASSAGE_0110: 8.6 Renal Impairment
+PASSAGE_0111: 8.7 Hepatic Impairment
+PASSAGE_0112: 10 OVERDOSAGE
+PASSAGE_0113: 11 DESCRIPTION
+PASSAGE_0114: Nirmatrelvir
+PASSAGE_0115: Ritonavir
+PASSAGE_0116: 12.1 Mechanism of Action
+PASSAGE_0117: 12.2 Pharmacodynamics
+PASSAGE_0118: 12.3 Pharmacokinetics
+PASSAGE_0119: Tmax (hr), median
+PASSAGE_0120: Food effect
+PASSAGE_0121: 0.60
+PASSAGE_0122: Vz/F (L), mean
+PASSAGE_0123: Metabolic pathways
+PASSAGE_0124: % drug-related material in feces
+PASSAGE_0125: 11.3%
+PASSAGE_0126: 3.5%
+PASSAGE_0127: 3.29 (1.93, 5.40)
+PASSAGE_0128: Effect of Food
+PASSAGE_0129: There were no clinically significant differences in the pharmacokinetics of nirmatrelvir based on ag
+PASSAGE_0130: Pediatric Patients
+PASSAGE_0131: Patients with Renal Impairment
+PASSAGE_0132: Patients with Hepatic Impairment
+PASSAGE_0133: Clinical Drug Interaction Studies
+PASSAGE_0134: 138.82(129.25, 149.11)
+PASSAGE_0135: In Vitro Studies
+PASSAGE_0136: 12.4 Microbiology
+PASSAGE_0137: Cell Culture Antiviral Activity
+PASSAGE_0138: Clinical Antiviral Activity
+PASSAGE_0139: In Cell Culture and Biochemical Assays
+PASSAGE_0140: Single Substitutions
+PASSAGE_0141: ≥2 Substitutions
+PASSAGE_0142: Single Substitutions
+PASSAGE_0143: ≥2 Substitutions
+PASSAGE_0144: In Clinical Trials
+PASSAGE_0145: Viral RNA Rebound and Treatment-Emergent Substitutions
+PASSAGE_0146: Cross-Resistance
+PASSAGE_0147: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+PASSAGE_0148: Ritonavir
+PASSAGE_0149: 14.1      Efficacy in Subjects at High Risk of Progression to Severe COVID-19 (EPIC-HR)
+PASSAGE_0150: 64 (6.5%)
+PASSAGE_0151: -5.6 (-7.3, -4.0)
+PASSAGE_0152: 63 (6.4%)
+PASSAGE_0153: 12 (1.2%)
+PASSAGE_0154: 14.2      Trial in Unvaccinated Subjects Without a Risk Factor for Progression to Severe COVID-19 or Subj
+PASSAGE_0155: 14.3      Post-Exposure Prophylaxis Trial
+PASSAGE_0156: 16 HOW SUPPLIED/STORAGE AND HANDLING
+PASSAGE_0157: 300 mg nirmatrelvir; 100 mg ritonavir
+PASSAGE_0158: 0069-5045-30
+PASSAGE_0159: 0069-5321-30
+PASSAGE_0160: 0069-5045-06
+PASSAGE_0161: 0069-5321-03
+PASSAGE_0162: 150 mg nirmatrelvir; 100 mg ritonavir
+PASSAGE_0163: 0069-5317-20
+PASSAGE_0164: 0069-5434-20
+PASSAGE_0165: 0069-5317-02
+PASSAGE_0166: 0069-5434-02
+PASSAGE_0167: 0069-0521-11
+PASSAGE_0168: 0069-5450-11
+PASSAGE_0169: 0069-0521-11
+PASSAGE_0170: 0069-5450-11
+PASSAGE_0171: Storage and Handling
+PASSAGE_0172: 17 PATIENT COUNSELING INFORMATION
+PASSAGE_0173: Drug Interactions
+PASSAGE_0174: Hypersensitivity Reactions
+PASSAGE_0175: Moderate Renal Impairment
+PASSAGE_0176: Administration Instructions
+PASSAGE_0177: This product’s labeling may have been updated. For the most recent prescribing information, please v
+PASSAGE_0178: PATIENT INFORMATION
+PASSAGE_0179: How should I take PAXLOVID?
+PASSAGE_0180: Figure A
+PASSAGE_0181: Figure B
+PASSAGE_0182: Figure C
+PASSAGE_0183: 1 white ritonavir tablet together
+PASSAGE_0184: How should I store PAXLOVID?
+PASSAGE_0185: NDC 0069-5045-06
+PASSAGE_0186: Rx only
+PASSAGE_0187: PfizerNDC 0069-5045-30
+PASSAGE_0188: 300 mg; 100 mg Dose Pack
+PASSAGE_0189: NDC 0069-5321-03
+PASSAGE_0190: Rx only
+PASSAGE_0191: PfizerNDC 0069-5321-30
+PASSAGE_0192: 300 mg; 100 mg Dose Pack
+PASSAGE_0193: Take these 2 tabletstogether
+PASSAGE_0194: ritonavirtablet(100 mg)
+PASSAGE_0195: PfizerNDC 0069-5317-20
+PASSAGE_0196: 150 mg; 100 mg Dose Pack
+PASSAGE_0197: Day 1 (300 mg; 100 mg)Your first day’s dose. Take these 3 tablets together
+PASSAGE_0198: nirmatrelvirtablet(150 mg)nirmatrelvirtablet(150 mg)ritonavirtablet(100 mg)
+PASSAGE_0199: PAA228321
+PASSAGE_0200: PfizerNDC 0069-0521-11
+PASSAGE_0201: Take these 2 tabletstogether
+PASSAGE_0202: ritonavirtablet(100 mg)
+PASSAGE_0203: PfizerNDC 0069-5434-20
+PASSAGE_0204: 150 mg; 100 mg Dose Pack
+PASSAGE_0205: Day 1 (300 mg; 100 mg)Your first day’s dose. Take these 3 tablets together
+PASSAGE_0206: nirmatrelvirtablet(150 mg)nirmatrelvirtablet(150 mg)ritonavirtablet(100 mg)
+PASSAGE_0207: PAA228417
+PASSAGE_0208: PfizerNDC 0069-5450-11
+root@1ce871952c8c:/workspace#

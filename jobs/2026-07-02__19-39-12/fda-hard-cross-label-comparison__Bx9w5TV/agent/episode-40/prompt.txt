@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 216 (char 217) | Content preview: '{\n  "analysis": "Ah! PASSAGE_0006 specifies: \'ACTOPLUS MET may be increased to a maximum recommended'...
+
+Please fix these issues and provide a proper JSON response.

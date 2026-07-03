@@ -1,0 +1,18 @@
+New Terminal Output:
+
+ly twice daily in the morning and at bedtime for 5 days.root@b161fe3d96d1:/workspace# cat chunk_176.txt
+Administration Instructions
+Inform patients to take PAXLOVID with or without food at approximately the same time each day as instructed. Advise patients to swallow all tablets for PAXLOVID
+ whole and not to chew, break, or crush the tablets. Alert the patient of the importance of completing the full 5-day treatment course and to continuing isolati
+on in accordance with public health recommendations to maximize viral clearance and minimize transmission of SARS-CoV-2. If the patient misses a dose of PAXLOVI
+D within 8 hours of the time it is usually taken, the patient should take it as soon as possible and resume the normal dosing schedule. If the patient misses a
+dose by more than 8 hours, the patient should not take the missed dose and instead take the next dose at the regularly scheduled time. The patient should not do
+uble the dose to make up for a missed dose .root@b161fe3d96d1:/workspace# cat chunk_179.txt
+How should I take PAXLOVID?
+- Take PAXLOVID exactly as your healthcare provider tells you to take it.
+- PAXLOVID consists of 2 medicines: nirmatrelvir tablets and ritonavir tablets. The 2 medicines are taken together for 5 days.
+- Nirmatrelvir is an oval, pink tablet.
+- Ritonavir is a white or off-white tablet.
+- PAXLOVID is available in 3 Dose Packs . Your healthcare provider will prescribe the PAXLOVID Dose Pack that is right for you. Follow the instruction for the D
+ose Pack you receive.
+- If you have kidney disease, your healthcare provider may prescribe a lower dose (see androot@b161fe3d96d1:/workspace#

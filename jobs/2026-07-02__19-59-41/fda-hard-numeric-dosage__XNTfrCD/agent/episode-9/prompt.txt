@@ -1,0 +1,69 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# cat << 'EOF' > search.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print("="*80)
+>         print(f"DRUG: {data['drug_name']} ({data['set_id']})")
+>         print("="*80)
+>         for idx, chunk in enumerate(data['chunks']):
+>             if any(kw in chunk.lower() for kw in ['dosage', 'dose', 'administration', 'recommended', 'schedule', 'frequency']):
+>                 print(f"PASSAGE_{idx:04d}: {chunk[:200]}...")
+> EOF
+root@3d44031eb234:/workspace# python3 search.py | head -n 40
+================================================================================
+DRUG: Lopinavir-Ritonavir (4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85)
+================================================================================
+PASSAGE_0001: 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food....
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feeding tubes due t...
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopinavir and ritonavir once daily dosing r
+egi...
+PASSAGE_0004: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily
+Table 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Daily Regimen...
+PASSAGE_0005: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily
+The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine o...
+PASSAGE_0006: Recommended Dosage
+80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily...
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+Lopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger than 18 years of age. The dose of the oral...
+PASSAGE_0008: Pediatric Dosage Calculations
+Calculate the appropriate dose of lopinavir and ritonavir for each individual pediatric patient based on body weight (kg) or body surface area (BSA) to avoid un
+derdosing ...
+PASSAGE_0011: Frequency
+> 6 months to < 18 years...
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+Administer 400/100 mg of lopinavir and ritonavir twice daily in pregnant patients with no documented lopinavir-associated resistance substitutions.
+- Once daily...
+PASSAGE_0015: 5.2 Toxicity in Preterm Neonates
+Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, approximately 15% (w/v). When administered
+concomi...
+PASSAGE_0019: 5.6 PR Interval Prolongation
+Lopinavir and ritonavir prolongs the PR interval in some patients. Cases of second or third degree atrioventricular block have been reported. Lopinavir and rito
+navir shoul...
+PASSAGE_0020: 5.7 Diabetes Mellitus/Hyperglycemia
+New onset diabetes mellitus, exacerbation of pre-existing diabetes mellitus, and hyperglycemia have been reported during post-marketing surveillance in HIV-1 in
+fect...
+PASSAGE_0028: Adverse Reactions in Adults
+The safety of lopinavir and ritonavir has been investigated in about 2,600 patients in Phase II-IV clinical trials, of which about 700 have received a dose of 8
+00/200 mg (6...
+PASSAGE_0039: Adverse Reactions in Pediatric Patients
+Lopinavir and ritonavir oral solution dosed up to 300/75 mg/m2 has been studied in 100 pediatric patients 6 months to 12 years of age. The adverse reaction prof
+...
+PASSAGE_0043: 6.2 Postmarketing Experience
+The following adverse reactions have been reported during postmarketing use of lopinavir and ritonavir. Because these reactions are reported voluntarily from a
+population ...
+PASSAGE_0047: 7.1 Potential for Lopinavir and Ritonavir to Affect Other Drugs
+Lopinavir and ritonavir is an inhibitor of CYP3A and may increase plasma concentrations of agents that are primarily metabolized by CYP3...
+Traceback (most recent call last):
+  File "/workspace/search.py", line 11, in <module>
+    print(f"PASSAGE_{idx:04d}: {chunk[:200]}...")
+BrokenPipeError: [Errno 32] Broken pipe
+root@3d44031eb234:/workspace#

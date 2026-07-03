@@ -1,0 +1,119 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# cat << 'EOF' > get_exact_passages.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         drug = data['drug_name']
+>         print("="*80)
+>         print(drug)
+>         print("="*80)
+>         if drug == 'Lopinavir-Ritonavir':
+>             # Passage 1, 2, 3, 4, 5, 7
+>             for i in [1, 2, 3, 4, 5, 7]:
+>                 print(f"PASSAGE_{i:04d}:")
+>                 print(repr(data['chunks'][i]))
+>         elif drug == 'Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate':
+>             # Passage 2, 3
+>             for i in [2, 3]:
+>                 print(f"PASSAGE_{i:04d}:")
+>                 print(repr(data['chunks'][i]))
+>         elif drug == 'CELECOXIB':
+>             # Passage 8, 9, 10, 11, 12, 13
+>             for i in [8, 9, 10, 11, 12, 13]:
+>                 print(f"PASSAGE_{i:04d}:")
+>                 print(repr(data['chunks'][i]))
+>         elif drug == 'Lenalidomide':
+>             # Passage 9, 10, 15, 19, 22, 32:
+>             for i in [9, 10, 15, 19, 22, 32]:
+>                 print(f"PASSAGE_{i:04d}:")
+>                 print(repr(data['chunks'][i]))
+> EOF
+root@3d44031eb234:/workspace# python3 get_exact_passages.py
+================================================================================
+Lopinavir-Ritonavir
+================================================================================
+PASSAGE_0001:
+'2.1 General Administration Recommendations\nLopinavir\xa0and ritonavir oral solution must be taken with food.'
+PASSAGE_0002:
+'2.2 Administering Oral Solution by Feeding Tube\nBecause lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for
+ use with polyurethane feeding tubes due to potential incompatibility. Feeding tubes that are compatible with ethanol and propylene glycol, such as silicone and
+ polyvinyl chloride (PVC) feeding tubes, can be used for administration of lopinavir and ritonavir oral solution. Follow instructions for use of the feeding tub
+e to administer the medicine.'
+PASSAGE_0003:
+'2.3 Dosage Recommendations in Adults\nLopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2. Lopi
+navir and ritonavir once daily dosing regimen is not recommended in:\n- Adult patients with three or more of the following lopinavir resistance-associated subst
+itutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V, V82A/C/F/S/T, and I84V\nAdult patients with three or more of the following lopinavir res
+istance-associated substitutions: L10F/I/R/V, K20M/N/R, L24I, L33F, M36I, I47V, G48V, I54L/T/V, V82A/C/F/S/T, and I84V .\n- In combination with carbamazepine, p
+henobarbital, or phenytoin\nIn combination with carbamazepine, phenobarbital, or phenytoin .\n- In combination with efavirenz, nevirapine, or nelfinavir\nIn com
+bination with efavirenz, nevirapine, or nelfinavir .\n- In pediatric patients younger than 18 years of age\nIn pediatric patients younger than 18 years of age .
+\n- In pregnant women\nIn pregnant women .\nTable 1. Recommended Dosage in Adults – Lopinavir and Ritonavir Once Daily Regimen'
+PASSAGE_0004:
+'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily\nTable 2. Recommended Dosage in Adults – Lopinavir and Ritonavir Twice Da
+ily Regimen'
+PASSAGE_0005:
+'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL)\xa0twice daily\nThe dose of lopinavir and ritonavir must be increased when administer
+ed in combination with efavirenz, nevirapine or nelfinavir. Table 3 outlines the dosage recommendations for twice daily dosing when lopinavir and ritonavir is t
+aken in combination with these agents.'
+PASSAGE_0007:
+'2.4 Dosage Recommendations in Pediatric Patients\nLopinavir and ritonavir oral solution is not recommended for once daily dosing in pediatric patients younger
+than 18 years of age. The dose of the oral solution should be administered using the calibrated cup (supplied) or oral dosing syringe.\nLopinavir and ritonavir
+oral solution is not recommended in neonates before a postmenstrual age (first day of the mother’s last menstrual period to birth plus the time elapsed after bi
+rth) of 42 weeks and a postnatal age of at least 14 days has been attained .\nLopinavir and ritonavir oral solution contains approximately 42% (v/v) ethanol and
+ approximately 15% (w/v) propylene glycol. Total amounts of ethanol and propylene glycol from all medicines that are to be given to pediatric patients 14 days t
+o 6 months of age should be taken into account in order to avoid toxicity from these excipients .'
+================================================================================
+Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate
+================================================================================
+PASSAGE_0002:
+'2.1 Testing Prior to Initiation and D
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+nditions (2°C
+ to 8°C/35°F to 45°F).'
+PASSAGE_0012:
+'2.5 Ankylosing Spondylitis\nFor AS, the dosage of celecoxib capsules is 200 mg daily in single (once per day) or divided (twice per day) doses. If no effect is
+ observed after 6 weeks, a trial of 400 mg daily may be worthwhile. If no effect is observed after 6 weeks on 400 mg daily, a response is not likely and conside
+ration should be given to alternate treatment options.'
+PASSAGE_0013:
+'2.6 Management of Acute Pain and Treatment of Primary Dysmenorrhea\nFor management of Acute Pain and Treatment of Primary Dysmenorrhea, the dosage is 400 mg in
+itially, followed by an additional 200 mg dose if needed on the first day. On subsequent days, the recommended dose is 200 mg twice daily as needed.'
+================================================================================
+Lenalidomide
+================================================================================
+PASSAGE_0009:
+'2.1 Recommended Dosage for Multiple Myeloma\nLenalidomide Combination Therapy\nThe recommended starting dose of lenalidomide is 25 mg orally once daily on Days
+ 1 to 21 of repeated 28-day cycles in combination with dexamethasone. Refer to Section 14.1 for specific dexamethasone dosing. For patients greater than 75 year
+s old, the starting dose of dexamethasone may be reduced . Treatment should be continued until disease progression or unacceptable toxicity.\nIn patients who ar
+e not eligible for auto-HSCT, treatment should continue until disease progression or unacceptable toxicity. For patients who are auto-HSCT-eligible, hematopoiet
+ic stem cell mobilization should occur within 4 cycles of a lenalidomide-containing therapy .\nDose Adjustments for Hematologic Toxicities During MM Treatment\n
+Dose modification guidelines, as summarized in Table 1 below, are recommended to manage Grade 3 or 4 neutropenia or thrombocytopenia or other Grade 3 or 4 toxic
+ity judged to be related to lenalidomide.\nTable 1: Dose Adjustments for Hematologic Toxicities for MM'
+PASSAGE_0010:
+'Lenalidomide Maintenance Therapy Following Auto-HSCT\nFollowing auto-HSCT, initiate lenalidomide maintenance therapy after adequate hematologic recovery (ANC a
+t least 1,000/mcL and/or platelet counts at least 75,000/mcL). The recommended starting dose of lenalidomide is 10 mg once daily continuously (Days 1 to 28 of r
+epeated 28-day cycles) until disease progression or unacceptable toxicity. After 3 cycles of maintenance therapy, the dose can be increased to 15 mg once daily
+if tolerated.\nDose Adjustments for Hematologic Toxicities During MM Treatment\nDose modification guidelines, as summarized in Table 2 below, are recommended to
+ manage Grade 3 or 4 neutropenia or thrombocytopenia or other Grade 3 or 4 toxicity judged to be related to lenalidomide.\nTable 2: Dose Adjustments for Hematol
+ogic Toxicities for MM'
+PASSAGE_0015:
+'2.2 Recommended Dosage for Myelodysplastic Syndromes\nThe recommended starting dose of lenalidomide is 10 mg daily. Treatment is continued or modified based up
+on clinical and laboratory findings. Continue treatment until disease progression or unacceptable toxicity.\nDose Adjustments for Hematologic Toxicities During
+MDS Treatment\nPatients who are dosed initially at 10 mg and who experience thrombocytopenia should have their dosage adjusted as follows:'
+PASSAGE_0019:
+'2.3 Recommended Dosage for Mantle Cell Lymphoma\nThe recommended starting dose of lenalidomide is 25 mg/day orally on Days 1 to 21 of repeated 28-day cycles fo
+r relapsed or refractory mantle cell lymphoma.\nTreatment should be continued until disease progression or unacceptable toxicity.\nTreatment is continued, modif
+ied or discontinued based upon clinical and laboratory findings.\nDose Adjustments for Hematologic Toxicities During MCL Treatment\nDose modification guidelines
+ as summarized below are recommended to manage Grade 3 or 4 neutropenia or thrombocytopenia or other Grade 3 or 4 toxicities considered to be related to lenalid
+omide.'
+PASSAGE_0022:
+'2.4 Recommended Dosage for Follicular Lymphoma or Marginal Zone Lymphoma\nThe recommended starting dose of lenalidomide is 20 mg orally once daily on Days 1 to
+ 21 of repeated 28-day cycles for up to 12 cycles of treatment in combination with a rituximab-product. Refer to Section 14.4 for specific rituximab dosing from
+ the AUGMENT trial. For dose adjustments due to toxicity with rituximab, refer to the product prescribing information.\nDose Adjustments for Hematologic Toxicit
+ies during FL or MZL Treatment\nDose modification guidelines, as summarized below, are recommended to manage Grade 3 or 4 neutropenia or thrombocytopenia or oth
+er Grade 3 or 4 toxicity judged to be related to lenalidomide.'
+PASSAGE_0032:
+'2.7 Administration\nAdvise patients to take lenalidomide orally at about the same time each day, either with or without food. Advise patients to swallow lenali
+domide capsules whole with water and not to open, break, or chew them.'
+root@3d44031eb234:/workspace#

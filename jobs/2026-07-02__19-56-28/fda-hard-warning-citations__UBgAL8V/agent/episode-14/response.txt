@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah, let's search for just 'DRUG INTERACTIONS' or check the titles of the first 20 chunks to find the sections.",
+  "plan": "I will run a loop to print the first 100 characters of the first 25 chunks of Paxlovid.",
+  "commands": [
+    {
+      "keystrokes": "[print(f'PASSAGE_{i:04d}:', c[:100].replace('\\n', ' ')) for i, c in enumerate(labels[0]['chunks'][:25])]\n",
+      "duration": 0.5
+    }
+  ]
+}

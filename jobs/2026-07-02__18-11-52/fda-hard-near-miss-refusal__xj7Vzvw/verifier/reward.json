@@ -1,0 +1,552 @@
+{
+  "aggregate_score": 0.908333,
+  "binary_pass": true,
+  "critical_errors": [],
+  "fractional_reward": 0.908333,
+  "num_answered": 6,
+  "num_missing": 0,
+  "num_questions": 6,
+  "num_schema_errors": 0,
+  "overall_fractional_score": 0.908333,
+  "pass_threshold": 0.85,
+  "passed": true,
+  "per_question": [
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "refusal explanation misses searched or unsupported topic",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "NOT_FOUND",
+      "passed": false,
+      "qid": "near-miss-04f3afa658fdef",
+      "score": 0.825,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.7
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "refusal explanation misses searched or unsupported topic",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 0.7,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "refusal explanation misses searched or unsupported topic"
+      ],
+      "expected_status": "NOT_FOUND",
+      "passed": true,
+      "qid": "near-miss-0c6ec72416151f",
+      "score": 0.9,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "refusal explanation misses searched or unsupported topic",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "refusal explanation misses searched or unsupported topic",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "NOT_FOUND",
+      "passed": false,
+      "qid": "near-miss-bd69d0bfb1fc7d",
+      "score": 0.825,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.7
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "refusal explanation misses searched or unsupported topic",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 0.7,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [],
+      "expected_status": "NOT_FOUND",
+      "passed": true,
+      "qid": "near-miss-d4ca1884aa8ab4",
+      "score": 1.0,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "",
+          "score": 1.0
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 1.0,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [],
+      "expected_status": "NOT_FOUND",
+      "passed": true,
+      "qid": "near-miss-52e5f8cac33c50",
+      "score": 1.0,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "",
+          "score": 1.0
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 1.0,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "refusal explanation misses searched or unsupported topic"
+      ],
+      "expected_status": "NOT_FOUND",
+      "passed": true,
+      "qid": "near-miss-5b5cb6a5249660",
+      "score": 0.9,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "refusal explanation misses searched or unsupported topic",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    }
+  ],
+  "question_scores": [
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "refusal explanation misses searched or unsupported topic",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "NOT_FOUND",
+      "passed": false,
+      "qid": "near-miss-04f3afa658fdef",
+      "score": 0.825,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.7
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "refusal explanation misses searched or unsupported topic",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 0.7,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "refusal explanation misses searched or unsupported topic"
+      ],
+      "expected_status": "NOT_FOUND",
+      "passed": true,
+      "qid": "near-miss-0c6ec72416151f",
+      "score": 0.9,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "refusal explanation misses searched or unsupported topic",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "refusal explanation misses searched or unsupported topic",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "NOT_FOUND",
+      "passed": false,
+      "qid": "near-miss-bd69d0bfb1fc7d",
+      "score": 0.825,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.7
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "refusal explanation misses searched or unsupported topic",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 0.7,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [],
+      "expected_status": "NOT_FOUND",
+      "passed": true,
+      "qid": "near-miss-d4ca1884aa8ab4",
+      "score": 1.0,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "",
+          "score": 1.0
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 1.0,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [],
+      "expected_status": "NOT_FOUND",
+      "passed": true,
+      "qid": "near-miss-52e5f8cac33c50",
+      "score": 1.0,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "",
+          "score": 1.0
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 1.0,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "refusal explanation misses searched or unsupported topic"
+      ],
+      "expected_status": "NOT_FOUND",
+      "passed": true,
+      "qid": "near-miss-5b5cb6a5249660",
+      "score": 0.9,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "refusal explanation misses searched or unsupported topic",
+          "score": 0.5
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 1.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.5,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    }
+  ],
+  "reward": 0.908333,
+  "schema_errors": [],
+  "task_name": "fda-hard-near-miss-refusal",
+  "weights": {
+    "answer_content": 0.35,
+    "citation_support": 0.25,
+    "clinical_qualifiers": 0.2,
+    "qid_present": 0.05,
+    "refusal_behavior": 0.1,
+    "schema": 0.05
+  }
+}

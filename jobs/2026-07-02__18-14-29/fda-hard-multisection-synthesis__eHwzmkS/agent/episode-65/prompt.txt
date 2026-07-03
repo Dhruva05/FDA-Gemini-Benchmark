@@ -1,0 +1,17 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; print(labels[
+1]['chunks'][28]); f.close()"
+Adverse Reactions in Adults
+The safety of lopinavir and ritonavir has been investigated in about 2,600 patients in Phase II-IV clinical trials, of which about 700 have received a dose of 8
+00/200 mg (6 capsules or 4 tablets) once daily. Along with nucleoside reverse transcriptase inhibitors (NRTIs), in some studies, lopinavir and ritonavir was use
+d in combination with efavirenz or nevirapine.
+In clinical studies the incidence of diarrhea in patients treated with either lopinavir and ritonavir capsules or tablets was greater in those patients treated
+once daily than in those patients treated twice daily. Any grade of diarrhea was reported by at least half of patients taking once daily lopinavir and ritonavir
+ capsules or tablets. At the time of treatment discontinuation, 4.2-6.3% of patients taking once daily lopinavir and ritonavir and 1.8-3.7% of those taking twic
+e daily lopinavir and ritonavir reported ongoing diarrhea.
+Commonly reported adverse reactions to lopinavir and ritonavir included diarrhea, nausea, vomiting, hypertriglyceridemia and hypercholesterolemia. Diarrhea, nau
+sea and vomiting may occur at the beginning of the treatment while hypertriglyceridemia and hypercholesterolemia may occur later. The following have been identi
+fied as adverse reactions of moderate or severe intensity (Table 8):
+System Organ Class (SOC) and Adverse Reaction
+root@a1980178bfd8:/workspace#

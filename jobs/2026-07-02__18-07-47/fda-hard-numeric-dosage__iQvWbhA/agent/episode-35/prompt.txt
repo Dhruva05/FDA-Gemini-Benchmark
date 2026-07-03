@@ -1,0 +1,139 @@
+New Terminal Output:
+
+root@371ed25b9fd3:/workspace# cat << 'EOF' > search_emtricitabine_max.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+> l = [label for label in labels if label['set_id'] == 'd9a4185e-43fa-4aeb-9b0f-8db01b166038'][0]
+> for i, chunk in enumerate(l['chunks']):
+>     if any(kw in chunk.lower() for kw in ['maximum', 'exceed', 'limit', 'max']):
+>         print(f"PASSAGE_{i:04d}:")
+>         print(chunk[:300])
+>         print("-"*50)
+> EOF
+root@371ed25b9fd3:/workspace# python3 search_emtricitabine_max.py
+PASSAGE_0001:
+1 INDICATIONS AND USAGE
+Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are indicated as a complete regimen for the treatment of HIV-1 infection in adults and pedi
+atric patients weighing at least 35 kg:
+- as initial therapy in those with no antiretroviral treatment history with
+--------------------------------------------------
+PASSAGE_0010:
+5.2 Skin and Hypersensitivity Reactions
+Severe skin and hypersensitivity reactions have been reported during the postmarketing experience, including cases of Drug Reaction with Eosinophilia and System
+ic Symptoms (DRESS) with RPV-containing regimens. While some skin reactions were accompanied by cons
+--------------------------------------------------
+PASSAGE_0036:
+7.4 Drugs Affecting Renal Function
+Because FTC and tenofovir are primarily eliminated by the kidneys through a combination of glomerular filtration and active tubular secretion, coadministration
+of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets with drugs that reduce renal func
+--------------------------------------------------
+PASSAGE_0037:
+7.5 QT Prolonging Drugs
+There is limited information available on the potential for a pharmacodynamic interaction between RPV and drugs that prolong the QTc interval of the electrocard
+iogram. In a study of healthy subjects, 75 mg once daily and 300 mg once daily doses of RPV (3 times and 12 times th
+--------------------------------------------------
+PASSAGE_0045:
+voriconazole
+↑ RPV,This interaction study has been performed with a dose higher than the recommended dose for RPV assessing the maximal effect on the coadministered drug. Th
+e dosing recommendation is applicable to the recommended dose of RPV 25 mg once daily.
+--------------------------------------------------
+PASSAGE_0058:
+Prospective reports from the APR of overall major birth defects in pregnancies exposed to drug components of emtricitabine, rilpivirine and tenofovir disoproxil
+ fumarate tablets are compared with a U.S. background major birth defect rate. Methodological limitations of the APR include the use of MACD
+--------------------------------------------------
+PASSAGE_0066:
+10 OVERDOSAGE
+If overdose occurs the patient must be monitored for evidence of toxicity. Treatment of overdose with emtricitabine, rilpivirine and tenofovir disoproxil fumara
+te tablets consists of general supportive measures, including monitoring of vital signs and ECG (QT interval) as well as obser
+--------------------------------------------------
+PASSAGE_0069:
+12.2 Pharmacodynamics
+The effect of RPV at the recommended dose of 25 mg once daily on the QTcF interval was evaluated in a randomized, placebo-, and active- (moxifloxacin 400 mg onc
+e daily) controlled crossover study in 60 healthy adults, with 13 measurements over 24 hours at steady state. The maxi
+--------------------------------------------------
+PASSAGE_0078:
+Pediatric Patient
+Pediatric trials have not been conducted using emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets. Pediatric information is based on trials co
+nducted with the individual components of emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets .
+Emtricita
+--------------------------------------------------
+PASSAGE_0079:
+79 (7−202)
+Tenofovir DF: Steady-state pharmacokinetics of tenofovir were evaluated in 8 HIV-1-infected pediatric subjects (12 to less than 18 years). Mean (± SD) Cmax and
+AUCtau are 0.38 ± 0.13 µg/mL and 3.39 ± 1.22 µg•hr/mL, respectively. Tenofovir exposure achieved in these pediatric subjects rece
+--------------------------------------------------
+PASSAGE_0082:
+Patients with Renal Impairment
+Emtricitabine and Tenofovir DF:
+The pharmacokinetics of FTC and TDF are altered in subjects with renal impairment. In subjects with creatinine clearance below 50 mL per minute or with end stag
+e renal disease requiring dialysis, Cmax and AUC of FTC and tenofovir were in
+--------------------------------------------------
+PASSAGE_0083:
+Patients with Hepatic Impairment
+Emtricitabine:
+The pharmacokinetics of FTC have not been studied in subjects with hepatic impairment; however, FTC is not significantly metabolized by liver enzymes, so the im
+pact of liver impairment should be limited.
+Rilpivirine:
+RPV is primarily metabolized and el
+--------------------------------------------------
+PASSAGE_0085:
+Pharmacokinetics of total RPV
+(mean ± SD, tmax: median range])
+--------------------------------------------------
+PASSAGE_0086:
+Drug Interaction Studies
+Rilpivirine: RPV is primarily metabolized by cytochrome CYP3A, and drugs that induce or inhibit CYP3A may thus affect the clearance of RPV. Coadministration of
+emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets and drugs that induce CYP3A may result in decr
+--------------------------------------------------
+PASSAGE_0087:
+RPV Dose (mg)
+N
+N=maximum number of subjects for Cmax, AUC, or Cmin
+Mean % Change of RPV Pharmacokinetic Parameters
+Increase = ↑; Decrease = ↓; No Effect = ↔
+--------------------------------------------------
+PASSAGE_0088:
+500 single dose
+150 once dailyThe interaction study has been performed with a dose higher than the recommended dose for RPV (25 mg once daily) assessing the maximal effect on t
+he coadministered drug.
+--------------------------------------------------
+PASSAGE_0098:
+FTC Dose (mg)
+N
+N=maximum number of subjects for Cmax, AUC, or Cmin
+Mean % Change of FTC Pharmacokinetic Parameters
+Increase = ↑; Decrease = ↓; No Effect = ↔
+--------------------------------------------------
+PASSAGE_0102:
+Dose of Coadministered Drug (mg)
+TDF Dose (mg)
+Subjects received VIREAD 300 mg daily.
+N
+N=maximum number of subjects for Cmax, AUC, or Cmin
+Mean % Change of Tenofovir Pharmacokinetic Parameters
+Increase = ↑; Decrease = ↓; No Effect = ↔
+--------------------------------------------------
+PASSAGE_0105:
+RPV Dose (mg)
+N
+N=maximum number of subjects for Cmax, AUC, or Cmin
+Mean % Change of Coadministered Drug Pharmacokinetic Parameters
+Increase = ↑; Decrease = ↓; No Effect = ↔
+--------------------------------------------------
+PASSAGE_0116:
+Antiviral Activity
+Emtricitabine, Rilpivirine, and TDF: The triple combination of FTC, RPV, and TDF was not antagonistic in cell culture.
+Emtricitabine: The antiviral activity of FTC against laboratory and clinical isolates of HIV-1 was assessed in lymphoblastoid cell lines, the MAGI-CCR5 cell lin
+e,
+--------------------------------------------------
+PASSAGE_0125:
+Site-Directed NNRTI Mutant Virus
+Cross-resistance has been observed among NNRTIs. The single NNRTI substitutions K101P, Y181I, and Y181V conferred 52-fold, 15-fold, and 12-fold decreased suscep
+tibility to RPV, respectively. The combination of E138K and M184I showed 6.7-fold reduced susceptibility to
+--------------------------------------------------
+PASSAGE_0162:
+Emtricitabine, Rilpivirine and Tenofovir Disoproxil Fumarate Tablets (em″ trye sye′ ta been ril″ pi vir′ een ten of′ oh vir dye″ soe prox′ il fue′ ma rate)
+Important: Ask your healthcare provider or pharmacist about medicines that should not be taken with emtricitabine, rilpivirine and tenofovir dis
+--------------------------------------------------
+root@371ed25b9fd3:/workspace#

@@ -1,0 +1,10 @@
+{
+  "analysis": "This is extremely detailed and directly answers both:\n- `6f12607a1ba14dd5` (\"Which medications should be avoided with Paxlovid?\")\n- `cf74a5a8ac9b19de` (\"What are the contraindications for Paxlovid?\")\n- `c4dc176c4827f0ef` (\"Who should not take Paxlovid?\") (e.g. patients with hypersensitivity, or those taking the contraindicated drugs, etc.)\n\nLet's check `fbab4114f66e2dda`: \"What important warnings or precautions are associated with Paxlovid?\"\nLet's search for 'warning' or 'precaution' to see what sections or chunks are related to warnings and precautions.",
+  "plan": "Search for chunks containing 'warning' or 'precaution'.",
+  "commands": [
+    {
+      "keystrokes": "print(len(search('warning')))\nprint(len(search('precaution')))\n",
+      "duration": 0.5
+    }
+  ]
+}

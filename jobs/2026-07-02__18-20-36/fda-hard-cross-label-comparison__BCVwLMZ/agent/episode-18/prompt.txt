@@ -1,0 +1,31 @@
+Previous response had warnings:
+WARNINGS: - Extra text detected after JSON object
+
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > print_all_label_passages.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print(f"=== QUESTION: {q['drug_name']} ({q['qid']}) ===")
+>     for set_id in q['comparison_set_ids']:
+>         l = labels[set_id]
+>         print(f"  Label: {l['drug_name']} ({set_id})")
+>         for i, chunk in enumerate(l['chunks']):
+>             lower = chunk.lower()
+>             # If it contains numbers and words like take, tablet, dose, or directions
+>             if any(w in lower for w in ['take', 'tablet', 'dose', 'dosing', 'directions', 'administration', 'capsule', 'mg', 'ml', 'tsp', 'tbsp', 'swish', 'ri
+nse']):
+>                 # and does not contain long lists of adverse events or chemistry stuff unless relevant
+>                 if len(chunk) < 800:
+>                     print(f"    PASSAGE_{i:04d}: {repr(chunk)}")
+>     print("="*80)
+> EOF
+root@faa94ec9460f:/workspace# python3 print_all_label_passages.py > all_candidate_passages.txt
+root@faa94ec9460f:/workspace#

@@ -1,0 +1,30 @@
+New Terminal Output:
+
+root@3d44031eb234:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data['drug_name'] == 'Lopinavir-Ritonavir':
+>             for i, chunk in enumerate(data['chunks']):
+>                 if 'tablet' in chunk.lower() and ('dosage' in chunk.lower() or 'adminis' in chunk.lower()):
+>                     print(f'PASSAGE_{i:04d}: {chunk[:200]}...')
+>             break
+> "
+PASSAGE_0059: ↓ lopinavir
+Increase the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administered with efavirenz or nevirapine. Lopinavi
+r and ritonavir once daily i...
+PASSAGE_0074: ↑ colchicine
+Contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment .
+For patients with normal renal or hepatic function:
+Treat...
+PASSAGE_0109: 12.3 Pharmacokinetics
+The pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic parameters of lopinavir are summarized in Table 14. Und
+er fed conditions,...
+PASSAGE_0145: 89
+2 Patients achieved HIV-1 RNA < 50 copies/mL at Week 48.
+Through 48 weeks of therapy, the mean increase from baseline in CD4+ cell count was 207 cells/mm3 for the lopinavir and ritonavir arm and 19...
+PASSAGE_0150: 13%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and othe...
+root@3d44031eb234:/workspace#

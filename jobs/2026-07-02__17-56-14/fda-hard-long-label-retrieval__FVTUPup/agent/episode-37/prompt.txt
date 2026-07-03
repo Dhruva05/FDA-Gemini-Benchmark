@@ -1,0 +1,211 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 search.py "contraindicated"
+=== PASSAGE_0012 ===
+4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Jo
+hnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.
+PAXLOVID i...
+
+=== PASSAGE_0013 ===
+5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of medications
+metabolized by CYP3A in patients already receiving PAXLOVID, may increase pla...
+
+=== PASSAGE_0019 ===
+7.1     Potential for PAXLOVID to Affect Other Drugs
+PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of PAXLOVID w
+ith drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or ...
+
+=== PASSAGE_0021 ===
+7.3     Established and Other Potentially Significant Drug Interactions
+Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not considered
+ a comprehensive list of all possible drugs that may interact with PAXLO...
+
+=== PASSAGE_0022 ===
+↑ alfuzosin
+Co-administration contraindicated due to potential hypotension ....
+
+=== PASSAGE_0024 ===
+↑ ranolazine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions ....
+
+=== PASSAGE_0025 ===
+↑ antiarrhythmic
+Co-administration contraindicated due to potential for cardiac arrhythmias ....
+
+=== PASSAGE_0027 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+
+=== PASSAGE_0034 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+
+=== PASSAGE_0041 ===
+↑ colchicine
+Co-administration contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment ....
+
+=== PASSAGE_0045 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance. Alternate antimycobacterial drugs such as rifabutin shoul
+d be considered ....
+
+=== PASSAGE_0048 ===
+↑ lurasidone↑ pimozide
+Co-administration contraindicated due to serious and/or life-threatening reactions such as cardiac arrhythmias ....
+
+=== PASSAGE_0051 ===
+↑ silodosin
+Co-administration contraindicated due to potential for postural hypotension ....
+
+=== PASSAGE_0054 ===
+↑ eplerenone
+Co-administration with eplerenone is contraindicated due to potential for hyperkalemia ....
+
+=== PASSAGE_0055 ===
+↑ ivabradine
+Co-administration with ivabradine is contraindicated due to potential for bradycardia or conduction disturbances ....
+
+=== PASSAGE_0059 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+
+=== PASSAGE_0063 ===
+↑ dihydroergotamine↑ ergotamine↑ methylergonovine
+Co-administration contraindicated due to potential for acute ergot toxicity characterized by vasospasm and ischemia of the extremities and other tissues includi
+ng the central nervous system ....
+
+=== PASSAGE_0068 ===
+↓ nirmatrelvir/ritonavir
+Co-administration contraindicated due to potential loss of virologic response and possible resistance ....
+
+=== PASSAGE_0069 ===
+↑ lovastatin↑ simvastatin
+Co-administration contraindicated due to potential for myopathy including rhabdomyolysis .
+If treatment with PAXLOVID is considered medically necessary, discontinue use of lovastatin and simvastatin at least 12 hours prior to initiation of PAXLOVID, d
+uring the 5 days of PAX...
+
+=== PASSAGE_0072 ===
+↑ voclosporin
+Co-administration contraindicated due to potential for acute and/or chronic nephrotoxicity ....
+
+=== PASSAGE_0079 ===
+↑ lomitapide
+Co-administration contraindicated due to potential for hepatotoxicity and gastrointestinal adverse reactions ....
+
+=== PASSAGE_0080 ===
+↑ eletriptan
+Co-administration of eletriptan within at least 72 hours of PAXLOVID is contraindicated due to potential for serious adverse reactions including cardiovascular
+and cerebrovascular events ....
+
+=== PASSAGE_0081 ===
+↑ ubrogepant
+Co-administration of ubrogepant with PAXLOVID is contraindicated due to potential for serious adverse reactions ....
+
+=== PASSAGE_0083 ===
+↑ finerenone
+Co-administration contraindicated due to potential for serious adverse reactions including hyperkalemia, hypotension, and hyponatremia ....
+
+=== PASSAGE_0089 ===
+↑ naloxegol
+Co-administration contraindicated due to the potential for opioid withdrawal symptoms ....
+
+=== PASSAGE_0090 ===
+↑ sildenafil
+Co-administration of sildenafil with PAXLOVID is contraindicated for use in pulmonary hypertension due to the potential for sildenafil associated adverse events
+, including visual abnormalities hypotension, prolonged erection, and syncope ....
+
+=== PASSAGE_0095 ===
+↑ triazolam↑ midazolam
+Co-administration contraindicated due to potential for extreme sedation and respiratory depression ....
+
+=== PASSAGE_0098 ===
+↑ flibanserin
+Co-administration contraindicated due to potential for hypotension, syncope, and CNS depression ....
+
+=== PASSAGE_0099 ===
+↑ tolvaptan
+Co-administration contraindicated due to potential for dehydration, hypovolemia and hyperkalemia ....
+
+=== PASSAGE_0173 ===
+Drug Interactions
+Inform patients that PAXLOVID may interact with certain drugs and is contraindicated for use with certain drugs; therefore, advise patients to report to their h
+ealthcare provider the use of any prescription, non-prescription medication, or herbal products ....
+
+root@2635f56baf2a:/workspace# python3 search.py "avoid"
+=== PASSAGE_0012 ===
+4 CONTRAINDICATIONS
+PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or Stevens-Jo
+hnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product.
+PAXLOVID i...
+
+=== PASSAGE_0023 ===
+↑ tamsulosin
+Avoid concomitant use with PAXLOVID....
+
+=== PASSAGE_0029 ===
+↑ anticancer drugs
+Avoid co-administration of encorafenib or ivosidenib due to potential risk of serious adverse events such as QT interval prolongation. Avoid use of neratinib, v
+enetoclax or ibrutinib.
+Co-administration of vincristine and vinblastine may lead to significant hematologic or gastroint...
+
+=== PASSAGE_0031 ===
+↑ rivaroxaban
+Increased bleeding risk with rivaroxaban. Avoid concomitant use.
+dabigatranSee Pharmacokinetics, Clinical Drug Interaction Studies (12.3)....
+
+=== PASSAGE_0032 ===
+↑ dabigatran
+Increased bleeding risk with dabigatran. Depending on dabigatran indication and renal function, reduce dose of dabigatran or avoid concomitant use. Refer to the
+ dabigatran product label for further information....
+
+=== PASSAGE_0038 ===
+↓ voriconazole
+Avoid concomitant use of voriconazole....
+
+=== PASSAGE_0056 ===
+aliskiren,ticagrelor,vorapaxar
+                                       clopidogrel
+↑ aliskiren↑ ticagrelor↑ vorapaxar
+↓ clopidogrel active metabolite
+Avoid concomitant use with PAXLOVID....
+
+=== PASSAGE_0065 ===
+glecaprevir/pibrentasvir
+Avoid concomitant use of glecaprevir/pibrentasvir with PAXLOVID....
+
+=== PASSAGE_0074 ===
+↑ cyclosporine↑ tacrolimus
+Avoid concomitant use of calcineurin inhibitors with PAXLOVID when close monitoring of immunosuppressant concentrations is not feasible. If co-administered, dos
+e adjustment of the immunosuppressant and close and regular monitoring for immunosuppressant concentrations and a...
+
+=== PASSAGE_0075 ===
+↑ everolimus↑ sirolimus
+Avoid concomitant use of everolimus and sirolimus and PAXLOVID.
+Refer to the individual immunosuppressant product label and latest guidelines for further information....
+
+=== PASSAGE_0078 ===
+↑ salmeterol
+Avoid concomitant use with PAXLOVID. The combination may result in increased risk of cardiovascular adverse events associated with salmeterol, including QT prol
+ongation, palpitations, and sinus tachycardia....
+
+=== PASSAGE_0082 ===
+↑ rimegepant
+Avoid concomitant use with PAXLOVID....
+
+=== PASSAGE_0087 ===
+↑ suvorexant
+Avoid concomitant use of suvorexant with PAXLOVID....
+
+=== PASSAGE_0091 ===
+↑ tadalafil
+Avoid concomitant use of tadalafil with PAXLOVID for pulmonary hypertension....
+
+=== PASSAGE_0105 ===
+8.2 Lactation
+Risk Summary
+Nirmatrelvir and ritonavir are present in human breast milk in small amounts (less than 2%). In a clinical lactation study in 8 lactating women, nirmatrelvir an
+d ritonavir were estimated to be present in human milk at a mean weight-normalized infant daily dose of 0.16 mg/k...
+
+root@2635f56baf2a:/workspace#

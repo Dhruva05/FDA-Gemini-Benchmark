@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid \escape: line 6 column 185 (char 819) | Content preview: '{\n  "analysis": "The output of `head -n 100 clean_dosing.txt` is displayed, but wait, the terminal o'...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,19 @@
+{
+  "analysis": "This is great.
+For CELECOXIB:
+Let's see what the recommended dosage regimen is. It varies by indication:
+- Osteoarthritis (OA): 200 mg per day as a single dose or 100 mg twice daily.
+- Rheumatoid Arthritis (RA): 100 mg to 200 mg twice daily.
+- Juvenile Rheumatoid Arthritis (JRA): based on weight (50 mg twice daily for 10-25 kg; 100 mg twice daily for >25 kg).
+- Ankylosing Spondylitis (AS): 200 mg daily in single or divided doses. Can increase to 400 mg daily.
+- Acute Pain and Primary Dysmenorrhea: 400 mg initially, followed by an additional 200 mg dose if needed on first day. On subsequent days, 200 mg twice daily.
+
+Wait, let's write a python script to print passages 8 to 15 in full so we have all the exact text.",
+  "plan": "I will run a python script to print passages 8 through 15 of CELECOXIB in full.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"\nimport json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        if data['drug_name'] == 'CELECOXIB':\n            for i in range(8, 16):\n                print(f'=== PASSAGE_{i:04d} ===')\n                print(data['chunks'][i])\n            break\n\"\n",
+      "duration": 1.0
+    }
+  ]
+}

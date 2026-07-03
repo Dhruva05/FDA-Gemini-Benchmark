@@ -1,0 +1,38 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# cat << 'EOF' > dump_headers.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         d = json.loads(line)
+>         print(f"==================== {d['drug_name']} ({d['set_id']}) ====================")
+>         for idx, chunk in enumerate(d['chunks']):
+>             lines = chunk.strip().split('\n')
+>             header = lines[0] if lines else ''
+>             print(f"PASSAGE_{idx:04d}: {header[:100]}")
+> EOF
+root@1ce871952c8c:/workspace# python3 dump_headers.py > /tmp/headers.txt
+root@1ce871952c8c:/workspace# grep -A 20 "Paxlovid" /tmp/headers.txt
+==================== Paxlovid (8a99d6d6-fd9e-45bb-b1bf-48c7f761232a) ====================
+PASSAGE_0000: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+PASSAGE_0001: 1 INDICATIONS AND USAGE
+PASSAGE_0002: Limitations of Use
+PASSAGE_0003: 2.1       Important Dosage and Administration Information
+PASSAGE_0004: 2.2       Recommended Dosage
+PASSAGE_0005: 2.3 Dosage in Patients with Renal Impairment
+PASSAGE_0006: Days of Treatment
+PASSAGE_0007: Days 1-5
+PASSAGE_0008: Day 1
+PASSAGE_0009: Days 2-5
+PASSAGE_0010: 2.4       Use in Patients with Hepatic Impairment
+PASSAGE_0011: 3 DOSAGE FORMS AND STRENGTHS
+PASSAGE_0012: 4 CONTRAINDICATIONS
+PASSAGE_0013: 5.1       Risk of Serious Adverse Reactions Due to Drug Interactions
+PASSAGE_0014: 5.2       Hypersensitivity Reactions
+PASSAGE_0015: 5.3       Hepatotoxicity
+PASSAGE_0016: 5.4       Risk of HIV-1 Resistance Development
+PASSAGE_0017: 6 ADVERSE REACTIONS
+PASSAGE_0018: 6.1       Clinical Trials Experience
+PASSAGE_0019: 7.1       Potential for PAXLOVID to Affect Other Drugs
+root@1ce871952c8c:/workspace#

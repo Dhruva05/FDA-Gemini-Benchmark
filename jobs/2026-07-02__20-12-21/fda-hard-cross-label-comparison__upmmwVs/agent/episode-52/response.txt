@@ -1,0 +1,18 @@
+{
+  "analysis": "Excellent! For Actoplus Met, we have:
+- Dose or strength: 15 mg pioglitazone and 850 mg metformin HCl per tablet
+- Route: oral (take with meals)
+- Frequency: individualized starting dosage, titrated gradually. Maximum daily dosage is three tablets per day (totaling 45 mg pioglitazone and 2,550 mg metformin HCl).
+- Population: patients requiring glycemic control (type 2 diabetes mellitus)
+- Maximum daily dose: three tablets per day (45 mg of pioglitazone and 2,550 mg of metformin HCl)
+- Passage: `PASSAGE_0006` or `PASSAGE_0004` or `PASSAGE_0009` (which mentions max dose with strong CYP2C8 inhibitors: one tablet once daily).
+
+Now let's examine Question 4: Acyclovir vs Acyclovir suspension.",
+  "plan": "I will run a python command to see which chunks in Acyclovir and Acyclovir suspension contain dosage or administration instructions.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); [print('DRUG:', d['drug_name'], d['set_id'], [(i, c[:100]) for i, c in enumerate(d['chunks']) if any(k in c.lower() for k in ['dosage', 'administration', 'directions', 'usual dose'])]) for d in (json.loads(l) for l in f) if d['set_id'] in ['dcc29902-1fe6-4713-947e-335503959464', '3efa1e5e-5a14-4724-a2ca-25702f10faed']]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

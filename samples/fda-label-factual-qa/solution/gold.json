@@ -1,0 +1,983 @@
+{
+  "questions": [
+    {
+      "answer": "- Suicidality : Monitor for worsening of depressive symptoms and suicide risk. \n- Serotonin Syndrome : Increased risk when co-administered with other serotonergic agents, but also when taken alone. If it occurs, discontinue Milnacipran hydrochloride\u00a0and any other serotonergic agents and initiate supportive treatment. \n- Elevated Blood Pressure and Heart Rate : Milnacipran hydrochloride\u00a0may increase blood pressure and heart rate. Measure blood pressure and heart rate prior to initiating treatment with milnacipran hydrochloride\u00a0and monitor periodically throughout treatment. (5.3,\n- Seizures : Cases have been reported with milnacipran hydrochloride\u00a0therapy. Prescribe milnacipran hydrochloride\u00a0with care in patients with a history of seizure disorder. \n- Hepatotoxicity : Milnacipran hydrochloride\u00a0may cause elevations of ALT and AST. Avoid concomitant use of milnacipran hydrochloride\u00a0in patients with substantial alcohol use or chronic liver disease. \n- Discontinuation : Withdrawal symptoms have been reported in patients when discontinuing treatment with milnacipran hydrochloride. A gradual dose reduction is recommended. \n- : Milnacipran hydrochloride\u00a0may increase the risk of bleeding events. Caution patients about the risk of bleeding associated with the concomitant use of milnacipran hydrochloride\u00a0and NSAIDs, aspirin, or other drugs that affect coagulation. \n- History of Dysuria : Male patients with a history of obstructive uropathies may experience higher rates of genitourinary adverse events. \n- Sexual Dysfunction : Milnacipran hydrochloride\u00a0use may cause symptoms of sexual dysfunction.",
+      "citations": [
+        "5.1",
+        "5.2",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.9",
+        "5.11",
+        "5.12"
+      ],
+      "context": [
+        {
+          "section_label": "5.1",
+          "section_title": "5.1 Suicide Risk",
+          "text": "Milnacipran hydrochloride\u00a0is a selective serotonin and norepinephrine re-uptake inhibitor (SNRI), similar to some drugs used for the treatment of depression and other psychiatric disorders.\nPatients, both adult and pediatric, with depression or other psychiatric disorders may experience worsening of their depression and/or the emergence of suicidal ideation and behavior (suicidality) or unusual changes in behavior, whether or not they are taking these medications, and this risk may persist until significant remission occurs. Suicide is a known risk of depression and certain other psychiatric disorders, and these disorders themselves are the strongest predictors of suicide. There has been a long-standing concern, however, that antidepressants, including drugs that inhibit the reuptake of norepinephrine and/or serotonin, may have a role in inducing worsening of depression and the emergence of suicidality in certain patients during the early phases of treatment.\nIn the placebo-controlled clinical trials of adults with fibromyalgia, among the patients who had a history of depression at treatment initiation, the incidence of suicidal ideation was 0.5% in patients treated with placebo, 0% in patients treated with milnacipran hydrochloride\u00a0100 mg/day, and 1.3% in patients treated with milnacipran hydrochloride\u00a0200 mg/day. No suicides occurred in the short-term or longer-term (up to 1 year) fibromyalgia trials.\nPooled analyses of short-term placebo-controlled trials of drugs used to treat depression (SSRIs and others) showed that these drugs increase the risk of suicidal thinking and behavior (suicidality) in children, adolescents, and young adults (ages 18 to 24) with major depressive disorder (MDD) and other psychiatric disorders. Short-term studies did not show an increase in the risk of suicidality with these drugs compared to placebo in adults beyond age 24; there was a reduction in suicidality risk with antidepressants compared to placebo in adults age 65 and older.\nThe pooled analyses of placebo-controlled trials in children and adolescents with MDD, obsessive compulsive disorder (OCD), or other psychiatric disorders included a total of 24 short-term trials of 9 drugs used to treat depression in over 4,400 patients. The pooled analyses of placebo-controlled trials in adults with MDD or other psychiatric disorders included a total of 295 short-term trials (median duration of 2 months) of 11 antidepressant drugs in over 77,000 patients.\nThere was considerable variation in risk of suicidality among drugs, but a tendency toward an increase in the younger patients for almost all drugs studied. There were differences in absolute risk of suicidality across the different indications, with the highest incidence in MDD. The risk of differences (drug versus placebo), however, were relatively stable within age strata and across indications. These risk differences (drug-placebo difference in the number of cases of suicidality per 1,000 patients treated) are provided in Table 1.\nTable 1: Risk Differences (Drug \u2013 Placebo) in the number of Cases of Suicidality, per 1,000 patients treated"
+        },
+        {
+          "section_label": "5.1",
+          "section_title": "5.1 Suicide Risk",
+          "text": "Age Range\nDrug-Placebo Difference in Number of Cases of Suicidality per 1,000 Patients Treated"
+        },
+        {
+          "section_label": "5.1",
+          "section_title": "5.1 Suicide Risk",
+          "text": "6 fewer cases\nNo suicides occurred in any of the pediatric trials. There were suicides in the adult trials, but the number was not sufficient to reach any conclusion about drug effect on suicide.\nIt is unknown whether the suicidality risk extends to longer-term use, i.e. beyond several months.\nHowever, there is substantial evidence from placebo-controlled maintenance trials in adults with depression that the use of antidepressants can delay the recurrence of depression.\nAll patients being treated with drugs inhibiting the reuptake of norepinephrine and/or serotonin for any indication should be monitored appropriately and observed closely for clinical worsening, suicidality, and unusual changes in behavior, especially during the initial few months of a course of drug therapy, or at times of dose changes, either increases or decreases.\nThe following symptoms, anxiety, agitation, panic attacks, insomnia, irritability, hostility, aggressiveness, impulsivity, akathisia (psychomotor restlessness), hypomania, mania, have been reported in adult and pediatric patients being treated with drugs inhibiting the reuptake of norepinephrine and/or serotonin for major depressive disorder as well as for other indications, both psychiatric and non-psychiatric. Although a causal link between the emergence of such symptoms and either the worsening of depression and/or the emergence of suicidal impulses has not been established, there is concern that such symptoms may represent precursors to emerging suicidality.\nConsideration should be given to changing the therapeutic regimen, including possibly discontinuing the medication, in patients who may experience worsening depressive symptoms, or who are experiencing emergent suicidality or symptoms that might be precursors to worsening depression or suicidality, especially if these symptoms are severe or abrupt in onset, or were not part of the patient\u2019s presenting symptoms.\nIf the decision has been made to discontinue treatment due to worsening depressive symptoms or emergent suicidality, medication should be tapered, as rapidly as is feasible, but with recognition that abrupt discontinuation can produce withdrawal symptoms .\nFamilies and caregivers of patients being treated with drugs inhibiting the reuptake of norepinephrine and/or serotonin for major depressive disorder or other indications, both psychiatric and nonpsychiatric, should be alerted about the need to monitor patients for the emergence of agitation, irritability, unusual changes in behavior, and the other symptoms described above, as well as the emergence of suicidality, and to report such symptoms immediately to health care providers. Such monitoring should include daily observation by families and caregivers. Prescriptions for milnacipran hydrochloride\u00a0should be written for the smallest quantity of tablets consistent with good patient management, in order to reduce the risk of overdose."
+        },
+        {
+          "section_label": "5.2",
+          "section_title": "5.2 Serotonin Syndrome",
+          "text": "Selective-serotonin reuptake inhibitors (SSRIs) and serotonin-norepinephrine reuptake inhibitors (SNRIs), including milnacipran hydrochloride, can precipitate serotonin syndrome, a potentially life-threatening condition. The risk is increased with concomitant use of other serotonergic drugs (including triptans, tricyclic antidepressants, fentanyl, tramadol, meperidine, methadone, lithium, tryptophan, buspirone, amphetamines, and St. John\u2019s Wort) and with drugs that impair metabolism of serotonin i.e. MAOIs . Serotonin syndrome can also occur when these drugs are used alone.\nSerotonin syndrome symptoms may include mental status changes (e.g., agitation, hallucinations, delirium, and coma), autonomic instability (e.g., tachycardia, labile blood pressure, dizziness, diaphoresis, flushing, hyperthermia), neuromuscular symptoms (e.g., tremor, rigidity, myoclonus, hyperreflexia, incoordination), seizures, and/or gastrointestinal symptoms (e.g., nausea, vomiting, diarrhea).\nThe concomitant use of milnacipran hydrochloride\u00a0with MAOIs is contraindicated. In addition, do not initiate milnacipran hydrochloride\u00a0in a patient who is being treated with MAOIs such as linezolid or intravenous methylene blue. No reports involved the administration of methylene blue by other routes (such as oral tablets or local tissue injection). If it is necessary to initiate treatment with a MAOI such as linezolid or intravenous methylene blue in a patient taking milnacipran hydrochloride, discontinue milnacipran hydrochloride\u00a0before initiating treatment with the MAOI .\nMonitor all patients taking milnacipran hydrochloride\u00a0for the emergence of serotonin syndrome. Discontinue treatment with milnacipran hydrochloride\u00a0and any concomitant serotonergic agents immediately if the above events occur and initiate supportive symptomatic treatment. If concomitant use of milnacipran hydrochloride\u00a0with other serotonergic drugs is clinically warranted, inform patients of the increased risk for serotonin syndrome and monitor for symptoms."
+        },
+        {
+          "section_label": "5.5",
+          "section_title": "5.5 Seizures",
+          "text": "Milnacipran hydrochloride\u00a0has not been systematically evaluated in patients with a seizure disorder. In clinical trials evaluating milnacipran hydrochloride\u00a0in patients with fibromyalgia, seizures/convulsions have not been reported. However, seizures have been reported infrequently in patients treated with milnacipran hydrochloride\u00a0for disorders other than fibromyalgia. Milnacipran hydrochloride\u00a0should be prescribed with care in patients with a history of a seizure disorder."
+        },
+        {
+          "section_label": "5.6",
+          "section_title": "5.6 Hepatotoxicity",
+          "text": "In the placebo-controlled fibromyalgia trials, increases in the number of patients treated with milnacipran hydrochloride\u00a0with mild elevations of ALT or AST (1 to 3 times the upper limit of normal, ULN) were observed. Increases in ALT were more frequently observed in the patients treated with milnacipran hydrochloride\u00a0100 mg/day (6%) and milnacipran hydrochloride\u00a0200 mg/day (7%), compared to the patients treated with placebo (3%). One patient receiving milnacipran hydrochloride\u00a0100 mg/day (0.2%) had an increase in ALT greater than 5 times the upper limit of normal but did not exceed 10 times the upper limit of normal. Increases in AST were more frequently observed in the patients treated with milnacipran hydrochloride\u00a0100 mg/day (3%) and milnacipran hydrochloride\u00a0200 mg/day (5%) compared to the patients treated with placebo (2%).\nThe increases of bilirubin observed in the fibromyalgia clinical trials were not clinically significant.\nNo case met the criteria of elevated ALT > 3x ULN and associated with an increase in bilirubin \u2265 2x ULN.\nThere have been cases of increased liver enzymes and reports of severe liver injury, including fulminant hepatitis with milnacipran from foreign post-marketing experience. In the cases of severe liver injury, there were significant underlying clinical conditions and/or the use of multiple concomitant medications. Because of underreporting, it is impossible to provide an accurate estimate of the true incidence of these reactions.\nDiscontinue milnacipran hydrochloride\u00a0in patients who develop jaundice or other evidence of liver dysfunction. Treatment with milnacipran hydrochloride\u00a0should not be resumed unless another cause can be established.\nMilnacipran hydrochloride\u00a0should ordinarily not be prescribed to patients with substantial alcohol use or evidence of chronic liver disease."
+        },
+        {
+          "section_label": "5.7",
+          "section_title": "5.7 Discontinuation of Treatment with Milnacipran Hydrochloride",
+          "text": "Withdrawal symptoms have been observed in clinical trials following discontinuation of milnacipran, as with other SNRIs and SSRIs.\nDuring marketing of milnacipran, and other SNRIs and SSRIs, there have been spontaneous reports of adverse events indicative of withdrawal and physical dependence occurring upon discontinuation of these drugs, particularly when discontinuation is abrupt. The adverse events include the following: dysphoric mood, irritability, agitation, dizziness, sensory disturbances (e.g., paresthesias such as electric shock sensations), anxiety, confusion, headache, lethargy, emotional lability, insomnia, hypomania, tinnitus, and seizures. Although these events are generally self-limiting, some have been reported to be severe.\nMonitor patients for these symptoms when discontinuing treatment with milnacipran hydrochloride. Milnacipran hydrochloride\u00a0should be tapered after extended use. Do not abruptly discontinue. If intolerable symptoms occur following a decrease in the dose or upon discontinuation of treatment, then resuming the previously prescribed dose may be considered. Subsequently, the physician may continue decreasing the dose but at a more gradual rate ."
+        },
+        {
+          "section_label": "5.9",
+          "section_title": "5.9 Increased Risk of Bleeding",
+          "text": "Drugs that interfere with serotonin reuptake, including milnacipran hydrochloride, may increase the risk of bleeding events. Concomitant use of aspirin, nonsteroidal anti-inflammatory drugs (NSAIDs), warfarin, and other anticoagulants may add to this risk. Case reports and epidemiological studies (case-control and cohort design) have demonstrated an association between use of drugs that interfere with serotonin reuptake and the occurrence of gastrointestinal bleeding. Based on data from published observational studies, exposure to SNRIs, particularly in the month before delivery, has been associated with a less than 2-fold increase in the risk of postpartum hemorrhage .\u00a0Bleeding events related to SSRIs and SNRIs have ranged from ecchymosis, hematoma, epistaxis, and petechiae to life-threatening hemorrhages.\nInform patients about the increased risk of bleeding associated with the concomitant use of milnacipran hydrochloride\u00a0and NSAIDs, aspirin, or other drugs that affect coagulation ."
+        },
+        {
+          "section_label": "5.11",
+          "section_title": "5.11 Patients with a History of Dysuria",
+          "text": "Because of their noradrenergic effect, SNRIs including milnacipran hydrochloride, can affect urethral resistance and micturition. In the controlled fibromyalgia trials, dysuria occurred more frequently in patients treated with milnacipran hydrochloride\u00a0(1%) than in placebo-treated patients (0.5%). Caution is advised in use of milnacipran hydrochloride\u00a0in patients with a history of dysuria, notably in male patients with prostatic hypertrophy, prostatitis, and other lower urinary tract obstructive disorders. Male patients are more prone to genitourinary adverse effects, such as dysuria or urinary retention, and may experience testicular pain or ejaculation disorders."
+        },
+        {
+          "section_label": "5.12",
+          "section_title": "5.12 Sexual Dysfunction",
+          "text": "Use of SNRIs, including milnacipran hydrochloride, may cause symptoms of sexual dysfunction . In male patients, SNRI use may result in ejaculatory delay or failure, decreased libido, and erectile dysfunction. In female patients, SNRI use may result in decreased libido and delayed or absent orgasm.\nIt is important for prescribers to inquire about sexual function prior to initiation of milnacipran hydrochloride\u00a0and to inquire specifically about changes in sexual function during treatment, because sexual function may not be spontaneously reported. When evaluating changes in sexual function, obtaining a detailed history (including timing of symptom onset) is important because sexual symptoms may have other causes, including the underlying psychiatric disorder. Discuss potential management strategies to support patients in making informed decisions about treatment."
+        }
+      ],
+      "drug_name": "Milnacipran HCl",
+      "question": "What important warnings or precautions are associated with Milnacipran HCl?",
+      "question_id": "737e4762b27ce680",
+      "question_type": "factual",
+      "references": [
+        "5\u00a0 WARNINGS AND PRECAUTIONS"
+      ],
+      "set_id": "eaa14195-1b9c-423c-9412-d2fe0857e39d"
+    },
+    {
+      "answer": "- One 25 mg EDURANT tablet taken once daily with a meal for patients weighing at least 25 kg. \n- Pediatric patients 2 years of age and older and weighing at least 14 kg to less than 25 kg: Dosage of EDURANT PED is based on body weight. \n- EDURANT PED must be dispersed in drinking water and taken with a meal. \n- Do not substitute EDURANT tablets and EDURANT PED tablets for oral suspension on a milligram-per-milligram basis due to differing pharmacokinetic profiles. \n- See full prescribing information for dosing information when used in combination with cabotegravir. \n- For pregnant patients who are already on a stable EDURANT regimen prior to pregnancy and who are virologically suppressed (HIV-1 RNA less than 50 copies per mL) the recommended dosage in adults and pediatric patients weighing more than 25 kg is one 25 mg tablet once daily taken orally with a meal. \n- Rifabutin coadministration: Take two 25 mg tablets of EDURANT once daily with a meal for the duration of the rifabutin coadministration.",
+      "citations": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "5.6",
+        "12.3"
+      ],
+      "context": [
+        {
+          "section_label": "2.1",
+          "section_title": "2.1 Overview of Different Dosage Forms",
+          "text": "EDURANT is available in two dosage forms:\n- EDURANT 25 mg film-coated tablets for adults and pediatric patients weighing at least 25 kg.\n- EDURANT PED 2.5 mg tablets for oral suspension should only be given to pediatric patients weighing at least 14 kg to less than 25 kg\nDo not substitute EDURANT tablets and EDURANT PED tablets for oral suspension on a milligram-per-milligram basis due to differing pharmacokinetic profiles. A difference in bioavailability between 1 \u00d7 25 mg film-coated tablet and 10 \u00d7 2.5 mg tablets for oral suspension was observed; therefore, they are NOT substitutable\n.\nTake EDURANT and EDURANT PED once daily with a meal in combination with other antiretrovirals\n."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2 Recommended Dosage in Treatment-Na\u00efve Adult Patients",
+          "text": "The recommended dosage of EDURANT in adult patients is one 25 mg tablet taken orally once daily with a meal\n."
+        },
+        {
+          "section_label": "2.3",
+          "section_title": "2.3 Recommended Dosage in Treatment-Na\u00efve Pediatric Patients 2 Years of Age and Older and Weighing at least 14 kg",
+          "text": "The recommended dosage of EDURANT and EDURANT PED in pediatric patients 2 years of age and older and weighing at least 14 kg is based on body weight . Both EDURANT and EDURANT PED should be taken orally once daily with a meal\n."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4 Preparation and Administration Instructions for EDURANT PED Only",
+          "text": "Advise patients or caregivers of patients taking EDURANT PED to refer to the Instructions for Use to properly prepare and take the medication.\nEDURANT PED must be dispersed in drinking water and taken immediately with a meal. If not taken immediately, then the oral suspension should be discarded, and a new dose of medicine should be prepared. The patient should not chew or swallow EDURANT PED whole. The following instructions should be followed:\n- Place the tablets for oral suspension in a cup, add 5 mL (1 teaspoon) of drinking water at room temperature. Do not crush the tablets.\n- Swirl the cup carefully for 1\u20132 minutes to disperse the tablets. The oral suspension will start to look cloudy.\n- Take all the prepared oral suspension immediately or to aid in administration, the oral suspension can be further diluted with 5 mL (1 teaspoon) of drinking water, milk, orange juice or applesauce. Swirl and take all the medicine immediately. A spoon can be used if needed.\n- Make sure the entire dose is taken and no medicine is left in the cup. If required, add another 5 mL (1 teaspoon) of drinking water (or alternative beverage or soft food), swirl and drink immediately."
+        },
+        {
+          "section_label": "2.5",
+          "section_title": "2.5 Recommended Dosage During Pregnancy",
+          "text": "For pregnant patients who are already on a stable EDURANT regimen prior to pregnancy and who are virologically suppressed (HIV-1 RNA less than 50 copies per mL) the recommended dosage in adults and pediatric patients weighing at least 25 kg is one 25 mg tablet once daily taken orally with a meal. Refer to Table 1 for dosing recommendations for pediatric patients\n.\nLower exposures of rilpivirine were observed during pregnancy, therefore viral load should be monitored closely\n."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Consult the prescribing information for CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) before initiating EDURANT to ensure therapy with CABENUVA is appropriate."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Oral Lead-In Dosing to Assess Tolerability of Rilpivirine\nOral lead-in should be used for approximately 1 month (at least 28 days) to assess the tolerability of rilpivirine prior to the initiation of CABENUVA. The recommended oral daily dose is one 25 mg tablet of EDURANT (rilpivirine) in combination with one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) orally once daily at approximately the same time each day with a meal\n.\nBecause EDURANT is indicated in combination with VOCABRIA (cabotegravir), the prescribing information for VOCABRIA (cabotegravir) tablets should also be consulted.\nThe last oral dose should be taken on the same day injections with CABENUVA are started."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Oral Dosing to Replace Planned Missed Injections of CABENUVA"
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Planned Missed Injections for Patients on Monthly Dosing Schedule\nIf a patient plans to miss a scheduled monthly injection of CABENUVA by more than 7 days, take daily oral therapy for up to 2 months to replace missed injection visits. The recommended oral daily dose is one 25 mg tablet of EDURANT and one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) at approximately the same time each day with a meal. The first dose of oral therapy should be initiated at approximately the same time as the planned missed injection and continued until the day injection dosing is restarted. For oral therapy with EDURANT and VOCABRIA of durations greater than 2 months, an alternative oral regimen is recommended, which may include EDURANT. See full prescribing information for CABENUVA to resume monthly injection dosing."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Planned Missed Injections for Patients on Every-2-Month Dosing Schedule\nIf a patient plans to miss a scheduled every-2-month injection of CABENUVA by more than 7 days, take daily oral therapy for a duration of up to 2 months to replace 1 missed scheduled every-2-month injection. The recommended oral daily dose is one 25 mg tablet of EDURANT and one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) at approximately the same time each day with a meal. The first dose of oral therapy should be initiated at approximately the same time as the planned missed injection and continued until the day injection dosing is restarted. For oral therapy with EDURANT and VOCABRIA of durations greater than 2 months, an alternative oral regimen is recommended, which may include EDURANT. See full prescribing information for CABENUVA to resume every-2-month injection dosing."
+        },
+        {
+          "section_label": "2.7",
+          "section_title": "2.7 Recommended Dosage with Rifabutin Coadministration",
+          "text": "If EDURANT is coadministered with rifabutin, the EDURANT dose should be increased to 50 mg (two 25 mg tablets) once daily, taken with a meal. When rifabutin coadministration is stopped, the EDURANT dose should be decreased to 25 mg once daily, taken with a meal\n.\nNote that use of CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) with rifabutin is contraindicated. Refer to CABENUVA labeling for additional detail."
+        },
+        {
+          "section_label": "5.6",
+          "section_title": "5.6 Different Formulations Are Not Substitutable",
+          "text": "EDURANT and EDURANT PED have differing pharmacokinetic profiles and are not substitutable on a milligram-per-milligram basis. A difference in bioavailability between 1 \u00d7 25 mg film-coated tablet and 10 \u00d7 2.5 mg tablets for oral suspension was observed; therefore, they are not substitutable\n.\nWhen a pediatric patient weighs 25 kg or greater, they must switch from EDURANT PED tablets for oral suspension to one 25 mg EDURANT tablet daily\n.\nIncorrect dosing of a given formulation may result in underdosing and loss of therapeutic effect and possible development of resistance or possible clinically significant adverse reactions from greater exposure to rilpivirine."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pharmacokinetics in Adults\nThe pharmacokinetic properties of rilpivirine have been evaluated in adult healthy subjects and in adult antiretroviral treatment-na\u00efve HIV-1-infected subjects. Exposure to rilpivirine was generally lower in HIV-1 infected subjects than in healthy subjects."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Absorption and Bioavailability\nAfter oral administration, the maximum plasma concentration of rilpivirine is generally achieved within 4\u20135 hours. The absolute bioavailability of EDURANT and EDURANT PED is unknown."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Effects of Food on Oral Absorption\nThe exposure to rilpivirine was approximately 40% lower when EDURANT was taken in a fasted condition as compared to a normal caloric meal (533 kcal) or high-fat high-caloric meal (928 kcal). When EDURANT was taken with only a protein-rich nutritional drink, exposures were 50% lower than when taken with a meal.\nAdministration of the EDURANT PED 2.5 mg tablets dispersed in drinking water in fasted conditions or after yogurt consumption resulted in a 31% and 28% lower exposure, respectively, compared to administration in fed conditions (a meal containing 533 kcal) in adults."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Distribution\nRilpivirine is approximately 99.7% bound to plasma proteins\nin vitro, primarily to albumin. The distribution of rilpivirine into compartments other than plasma (e.g., cerebrospinal fluid, genital tract secretions) has not been evaluated in humans."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Metabolism\nIn vitro experiments indicate that rilpivirine primarily undergoes oxidative metabolism mediated by the cytochrome P450 (CYP) 3A system."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Elimination\nThe terminal elimination half-life of rilpivirine is approximately 50 hours. After single dose oral administration of\n14C-rilpivirine, on average 85% and 6.1% of the radioactivity could be retrieved in feces and urine, respectively. In feces, unchanged rilpivirine accounted for on average 25% of the administered dose. Only trace amounts of unchanged rilpivirine (<1% of dose) were detected in urine."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pregnancy and Postpartum\nThe exposure (C\n0hand AUC\n24h) to total rilpivirine after intake of rilpivirine 25 mg once daily as part of an antiretroviral regimen was 30 to 40% lower during pregnancy (similar for the second and third trimester), compared with postpartum . However, the exposure during pregnancy was not significantly different from exposures obtained in Phase 3 trials. Based on the exposure-response relationship for rilpivirine, this decrease is not considered clinically relevant in patients who are virollogically suppressed. The protein binding of rilpivirine was similar (>99%) during the second trimester, third trimester, and postpartum."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric Patients\nThe pharmacokinetics of rilpivirine in HIV-1 infected pediatric patients 2 to less than 18 years of age and weighing at least 16 kg receiving the recommended weight-based dosing regimen of EDURANT and EDURANT PED were comparable or slightly higher than those obtained in treatment-na\u00efve HIV-1 infected adult patients ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Renal Impairment\nPharmacokinetic analysis indicated that rilpivirine exposure was similar in HIV-1 infected subjects with mild renal impairment relative to HIV-1 infected subjects with normal renal function. No dose adjustment is required in patients with mild renal impairment. There is limited or no information regarding the pharmacokinetics of rilpivirine in patients with moderate or severe renal impairment or in patients with end-stage renal disease, and rilpivirine concentrations may be increased due to alteration of drug absorption, distribution, and metabolism secondary to renal dysfunction. The potential impact is not expected to be of clinical relevance for HIV-1-infected subjects with moderate renal impairment, and no dose adjustment is required in these patients. Rilpivirine should be used with caution and with increased monitoring for adverse effects in patients with severe renal impairment or end-stage renal disease. As rilpivirine is highly bound to plasma proteins, it is unlikely that it will be significantly removed by hemodialysis or peritoneal dialysis\n."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Hepatic Impairment\nRilpivirine is primarily metabolized and eliminated by the liver. In a study comparing 8 subjects with mild hepatic impairment (Child-Pugh score A) to 8 matched controls, and 8 subjects with moderate hepatic impairment (Child-Pugh score B) to 8 matched controls, the multiple dose exposure of rilpivirine was 47% higher in subjects with mild hepatic impairment and 5% higher in subjects with moderate hepatic impairment. EDURANT has not been studied in subjects with severe hepatic impairment (Child-Pugh score C)\n."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Sex, Race, Hepatitis B and/or Hepatitis C Virus Co-infection\nNo clinically relevant differences in the pharmacokinetics of rilpivirine have been observed between sex, race and patients with hepatitis B and/or C-virus co-infection."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Drug Interactions\n.\nRilpivirine is primarily metabolized by cytochrome P450 (CYP)3A, and drugs that induce or inhibit CYP3A may thus affect the clearance of rilpivirine. Coadministration of EDURANT or EDURANT PED and drugs that induce CYP3A may result in decreased plasma concentrations of rilpivirine and loss of virologic response and possible resistance. Coadministration of EDURANT and EDURANT PED and drugs that inhibit CYP3A may result in increased plasma concentrations of rilpivirine. Coadministration of EDURANT and EDURANT PED with drugs that increase gastric pH may result in decreased plasma concentrations of rilpivirine and loss of virologic response and possible resistance to rilpivirine and to the class of NNRTIs.\nEDURANT and EDURANT PED at the recommended doses are not likely to have a clinically relevant effect on the exposure of medicinal products metabolized by CYP enzymes.\nDrug interaction studies were performed with EDURANT and other drugs likely to be coadministered or commonly used as probes for pharmacokinetic interactions. The effects of coadministration of other drugs on the C\nmax, AUC, and C\nminvalues of rilpivirine are summarized in Table 11 (effect of other drugs on EDURANT). The effect of coadministration of EDURANT on the C\nmax, AUC, and C\nminvalues of other drugs are summarized in Table 12 (effect of EDURANT on other drugs). For information regarding clinical recommendations,\nsee\nDrug Interactions (7)\n]."
+        }
+      ],
+      "drug_name": "EDURANT",
+      "question": "How should EDURANT be administered?",
+      "question_id": "a4649bc06e063dc2",
+      "question_type": "factual",
+      "references": [
+        "2 DOSAGE AND ADMINISTRATION"
+      ],
+      "set_id": "03880372-2c68-45c6-a53a-f420c49541d6"
+    },
+    {
+      "answer": "- See Full Prescribing Information for complete dosage instructions \n- Administer orally once daily in the morning upon wakening \n- Dosage Recommendations:\n- Hepatic impairment :\n- Moderate hepatic impairment (Child-Pugh Class B): Adults: Initial dosage is 8.9 mg once daily. Titrate to a maximum dosage of 17.8 mg once daily after 14 days Pediatric Patients: Initial dosage is 4.45 mg once daily. Titrate to 8.9 mg once daily after 14 days; for patients weighing \u226540 kg, may increase to 17.8 mg once daily after another 14 days\n- Renal impairment (eGFR less than 60 mL/minute/1.73 m 2 ) :\n- Adults: Initial dosage is 8.9 mg once daily. Titrate to a maximum dosage of 17.8 mg once daily after 7 days\n- Pediatric Patients: Initial dosage is 4.45 mg once daily. Titrate to 8.9 mg once daily after 7 days; for patients weighing \u226540 kg, may increase to 17.8 mg once daily after another 7 days\n- End-stage renal disease (ESRD): Not recommended\n- Poor Metabolizers of CYP2D6 :\n- Adults: Maximum recommended dosage is 17.8 mg once daily\n- Pediatric Patients: Maximum recommended dosage is 8.9 mg once daily for patients weighing <40 kg and 17.8 mg for patients weighing \u226540 kg",
+      "citations": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.6",
+        "8.6",
+        "8.7",
+        "12.3"
+      ],
+      "context": [
+        {
+          "section_label": "2.1",
+          "section_title": "2.1\tRecommended Dosage in Adult Patients",
+          "text": "The recommended dosage range for WAKIX for the treatment of EDS or cataplexy in adult patients is 17.8 mg to 35.6 mg administered orally once daily in the morning upon wakening.\nTitrate dosage as follows:\nWeek 1: Initiate with a dosage of 8.9 mg (two 4.45 mg tablets) once daily\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 2: Increase dosage to 17.8 mg (one 17.8 mg tablet) once daily\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 3: May increase to the maximum recommended dosage of 35.6 mg (two 17.8 mg tablets) once daily\nDose may be adjusted based on tolerability.\nIf a dose is missed, patients should take the next dose the following day in the morning upon wakening.\nIt may take up to 8 weeks for some patients to achieve a clinical response."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2\tRecommended Dosage in Pediatric Patients 6 Years and Older",
+          "text": "The recommended starting dosage of WAKIX for the treatment of EDS in pediatric patients 6 years and older is 4.45 mg administered orally once daily in the morning upon wakening.\nTitrate dosage as follows:\nWeek 1: Initiate with a dosage of 4.45 mg (one 4.45 mg tablet) once daily\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 2: Increase dosage to 8.9 mg (two 4.45 mg tablets) once daily\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 3: Increase dosage to 17.8 mg (one 17.8 mg tablet) once daily, which is the maximum recommended dosage for patients weighing <40 kg\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 4: For patients weighing \u226540 kg, may increase to the maximum recommended dosage of 35.6 mg (two 17.8 mg tablets) once daily\nDose may be adjusted based on tolerability. If a dose is missed, patients should take the next dose the following day in the morning upon wakening. It may take up to 8 weeks for some patients to achieve a clinical response."
+        },
+        {
+          "section_label": "2.3",
+          "section_title": "2.3\tDosage Recommendations in Patients with Hepatic Impairment",
+          "text": "Adult Patients with Moderate (Child-Pugh Class B) Hepatic Impairment\n- Initiate WAKIX at 8.9 mg once daily and increase after 14 days to a maximum recommended dosage of 17.8 mg once daily\nPediatric Patients (6 years and older) with Moderate (Child-Pugh Class B) Hepatic Impairment\n- Pediatric patients weighing <40 kg: Initiate WAKIX at 4.45 mg once daily and increase after 14 days to a maximum recommended dosage of 8.9 mg once daily\n- Pediatric patients weighing \u226540 kg: Initiate WAKIX at 4.45 mg once daily and increase after 14 days to 8.9 mg once daily. May increase after another 14 days to a maximum recommended dosage of 17.8 mg once daily\nWAKIX is contraindicated in patients with severe hepatic impairment. WAKIX has not been studied in patients with severe hepatic impairment ."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4\tDosage Recommendations in Patients with Renal Impairment and End-Stage Renal Disease",
+          "text": "Adult Patients with eGFR <60 mL/minute/1.73 m2\n- Initiate WAKIX at 8.9 mg once daily and increase after 7 days to a maximum recommended dosage of 17.8 mg once daily\nPediatric Patients (6 years and older) with eGFR <60 mL/minute/1.73 m2\n(using the Schwartz equation, eGFR (mL/min/1.73 m2)=(0.413*height in cm)/serum creatinine in mg/dL)\n- Pediatric patients weighing <40 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to a maximum recommended dosage of 8.9 mg once daily\n- Pediatric patients weighing \u226540 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to 8.9 mg once daily. May increase after another 7 days to a maximum recommended dosage of 17.8 mg once daily\nWAKIX is not recommended in patients with eGFR less than 15 mL/minute/1.73 m2\n."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6\tDosage Recommendations in Patients Who Are Known CYP2D6 Poor Metabolizers (PMs)",
+          "text": "Adult Patients\n- Initiate WAKIX at 8.9 mg once daily and titrate to a maximum recommended dosage of 17.8 mg once daily after 7 days"
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6\tDosage Recommendations in Patients Who Are Known CYP2D6 Poor Metabolizers (PMs)",
+          "text": "Pediatric patients\n- Pediatric patients weighing <40 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to a maximum recommended dosage of 8.9 mg once daily\n- Pediatric patients weighing \u226540 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to 8.9 mg once daily. May increase after another 7 days to a maximum recommended dosage of 17.8 mg once daily"
+        },
+        {
+          "section_label": "8.6",
+          "section_title": "8.6 Hepatic Impairment",
+          "text": "WAKIX is contraindicated in patients with severe hepatic impairment (Child-Pugh Class C) as it has not been studied in this population. WAKIX is extensively metabolized by the liver and there is a significant increase in WAKIX exposure in patients with moderate hepatic impairment .\nMonitor patients with moderate hepatic impairment (Child-Pugh Class B) and adjust the dosage of WAKIX .\nMonitor patients with mild hepatic impairment (Child-Pugh Class A). No dosage adjustment of WAKIX is recommended in patients with mild hepatic impairment."
+        },
+        {
+          "section_label": "8.7",
+          "section_title": "8.7 Renal Impairment",
+          "text": "The pharmacokinetics of WAKIX in patients with end-stage renal disease (ESRD) (eGFR of <15 mL/minute/1.73 m2) is unknown . Therefore, WAKIX is not recommended in patients with ESRD .\nDosage adjustment of WAKIX is recommended in patients with eGFR <60 mL/minute/1.73 m2\n."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Following oral administration of pitolisant 35.6 mg once daily, the steady state Cmax and AUC are 73 ng/mL (range: 49.2 to 126 ng/mL) and 812 ng*hr/mL (range: 518 to 1468 ng*hr/mL), respectively. Pitolisant exposure (Cmax and AUC) increases proportionally with dose and steady state is reached by day 7."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Absorption\nThe median time to maximum plasma concentration (Tmax) of pitolisant is 3.5 hours (2 to 5 hours).\nThe oral absorption of WAKIX is around 90%."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Food Effect\nNo clinically significant differences in the pharmacokinetics of pitolisant were observed following administration with a high-fat meal."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Distribution\nThe apparent volume of distribution of pitolisant is approximately 700 L (5 to 10 L/kg). Serum protein binding is approximately 91% to 96%. The blood to plasma ratio of pitolisant is 0.55 to 0.89."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Elimination\nAfter a single dose of 35.6 mg, the median half-life of pitolisant is approximately 20 hours (7.5 to 24.2 hours). The apparent oral clearance (CL/F) of pitolisant is 43.9 L/hr and renal clearance accounts for <2% of the total clearance of pitolisant."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Metabolism\nPitolisant is primarily metabolized by CYP2D6 and to a lesser extent by CYP3A4; these metabolites are further metabolized or conjugated with glycine or glucuronic acid. None of these metabolites are pharmacologically active."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Excretion\nAfter a single oral radiolabeled pitolisant 17.8 mg dose, approximately 90% of the dose was excreted in urine (<2% unchanged) and 2.3% in feces."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Specific Populations\nNo clinically significant differences in the pharmacokinetics of pitolisant were observed based on age (18 to 82 years old), sex, race/ethnicity (Caucasians or Blacks), or body weight (48 to 103 kg). The effects of end-stage renal disease and severe hepatic impairment on the pharmacokinetics of pitolisant are unknown."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric Patients\nPharmacokinetic data from 24 pediatric patients with narcolepsy (ages 7 to 17 years) receiving a single dose of WAKIX suggest that pediatric patients have higher exposure to pitolisant than adults. The geometric mean Cmax and AUC0-10h of pitolisant were 2.2 and 2.0-fold higher, respectively, in pediatric patients 12 to 17 years and 3.4 and 3.6-fold higher, respectively, in pediatric patients 7 to 11 years compared to adults."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Hepatic Impairment\nSix subjects with mild hepatic impairment (Child-Pugh Class A), 6 subjects with moderate hepatic impairment (Child-Pugh Class B), and 12 healthy subjects matched for age, sex, body mass index and ethnicity received a single dose of WAKIX 17.8 mg to assess the pharmacokinetics of WAKIX in patients with hepatic impairment. Exposure of pitolisant in patients with mild or moderate hepatic impairment is summarized in Figure 1. No studies have been conducted in patients with severe hepatic impairment.\nFigure 1: Effect of Hepatic Impairment on Pitolisant Pharmacokinetics\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUCinf = area under the curve from time 0 to time infinity; Cmax = maximum plasma concentration."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Renal Impairment\nA single dose of WAKIX 17.8 mg was administered to 4 subjects with mild renal impairment (eGFR of 60 to 89 mL/min/1.73 m2), 4 subjects with moderate renal impairment (eGFR of 30 to 59 mL/min/1.73 m2), 4 subjects with severe renal impairment (eGFR of 15 to 29 mL/min/1.73 m2), and 12 subjects with normal renal function (i.e., eGFR >90 mL/min/1.73 m2) to assess the pharmacokinetics of WAKIX in patients with renal impairment. Exposure of pitolisant in patients with mild, moderate, and severe renal impairment is summarized in Figure 2. No studies have been conducted in patients with ESRD.\nFigure 2: Effect of Renal Impairment on Pitolisant Pharmacokinetics\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUCinf = area under the curve from time 0 to time infinity; Cmax = maximum plasma concentration."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "CYP2D6 Poor Metabolizers\nThe pharmacokinetics of pitolisant were evaluated in 3 subjects who were CYP2D6 poor metabolizers (PMs) and 5 subjects who were CYP2D6 extensive metabolizers (EMs). All subjects received WAKIX 17.8 mg daily for 7 days. Exposure of pitolisant in CYP2D6 PMs is summarized in Figure 3.\nFigure 3: Pitolisant Pharmacokinetics in CYP2D6 Poor Metabolizers\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUC0-24 = area under the curve from time 0 to 24 hours post-dose; Cmax = maximum plasma concentration."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Drug-Drug Interactions\nEffect of Other Drugs on the Pharmacokinetics of WAKIX\nThe effect of other drugs on the pharmacokinetics of pitolisant is presented in Figure 4\n.\nFigure 4: Effect of Concomitant Medications on Pitolisant\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUCinf = area under the curve from time 0 to time infinity; Cmax = maximum plasma concentration.\nEffect of WAKIX on the Pharmacokinetics of Other Drugs\nThe effect of pitolisant on the pharmacokinetics of other drugs is presented in Figure 5\n.\nFigure 5: Effect of Pitolisant on Concomitant Medications\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUCinf = area under the curve from time 0 to time infinity; AUC0-24 = area under the curve from time 0 to 24 hours; Cmax = maximum plasma concentration."
+        }
+      ],
+      "drug_name": "Wakix",
+      "question": "How should Wakix be administered?",
+      "question_id": "90eb1b66d90719f8",
+      "question_type": "factual",
+      "references": [
+        "2 DOSAGE AND ADMINISTRATION"
+      ],
+      "set_id": "8daa5562-824e-476c-9652-26ceef3d4b0e"
+    },
+    {
+      "answer": "- Suicidality : Monitor for worsening of depressive symptoms and suicide risk. \n- Serotonin Syndrome : Increased risk when co-administered with other serotonergic agents, but also when taken alone. If it occurs, discontinue Milnacipran hydrochloride\u00a0and any other serotonergic agents and initiate supportive treatment. \n- Elevated Blood Pressure and Heart Rate : Milnacipran hydrochloride\u00a0may increase blood pressure and heart rate. Measure blood pressure and heart rate prior to initiating treatment with milnacipran hydrochloride\u00a0and monitor periodically throughout treatment. (5.3,\n- Seizures : Cases have been reported with milnacipran hydrochloride\u00a0therapy. Prescribe milnacipran hydrochloride\u00a0with care in patients with a history of seizure disorder. \n- Hepatotoxicity : Milnacipran hydrochloride\u00a0may cause elevations of ALT and AST. Avoid concomitant use of milnacipran hydrochloride\u00a0in patients with substantial alcohol use or chronic liver disease. \n- Discontinuation : Withdrawal symptoms have been reported in patients when discontinuing treatment with milnacipran hydrochloride. A gradual dose reduction is recommended. \n- : Milnacipran hydrochloride\u00a0may increase the risk of bleeding events. Caution patients about the risk of bleeding associated with the concomitant use of milnacipran hydrochloride\u00a0and NSAIDs, aspirin, or other drugs that affect coagulation. \n- History of Dysuria : Male patients with a history of obstructive uropathies may experience higher rates of genitourinary adverse events. \n- Sexual Dysfunction : Milnacipran hydrochloride\u00a0use may cause symptoms of sexual dysfunction.",
+      "citations": [
+        "5.1",
+        "5.2",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.9",
+        "5.11",
+        "5.12"
+      ],
+      "context": [
+        {
+          "section_label": "5.1",
+          "section_title": "5.1 Suicide Risk",
+          "text": "Milnacipran hydrochloride\u00a0is a selective serotonin and norepinephrine re-uptake inhibitor (SNRI), similar to some drugs used for the treatment of depression and other psychiatric disorders.\nPatients, both adult and pediatric, with depression or other psychiatric disorders may experience worsening of their depression and/or the emergence of suicidal ideation and behavior (suicidality) or unusual changes in behavior, whether or not they are taking these medications, and this risk may persist until significant remission occurs. Suicide is a known risk of depression and certain other psychiatric disorders, and these disorders themselves are the strongest predictors of suicide. There has been a long-standing concern, however, that antidepressants, including drugs that inhibit the reuptake of norepinephrine and/or serotonin, may have a role in inducing worsening of depression and the emergence of suicidality in certain patients during the early phases of treatment.\nIn the placebo-controlled clinical trials of adults with fibromyalgia, among the patients who had a history of depression at treatment initiation, the incidence of suicidal ideation was 0.5% in patients treated with placebo, 0% in patients treated with milnacipran hydrochloride\u00a0100 mg/day, and 1.3% in patients treated with milnacipran hydrochloride\u00a0200 mg/day. No suicides occurred in the short-term or longer-term (up to 1 year) fibromyalgia trials.\nPooled analyses of short-term placebo-controlled trials of drugs used to treat depression (SSRIs and others) showed that these drugs increase the risk of suicidal thinking and behavior (suicidality) in children, adolescents, and young adults (ages 18 to 24) with major depressive disorder (MDD) and other psychiatric disorders. Short-term studies did not show an increase in the risk of suicidality with these drugs compared to placebo in adults beyond age 24; there was a reduction in suicidality risk with antidepressants compared to placebo in adults age 65 and older.\nThe pooled analyses of placebo-controlled trials in children and adolescents with MDD, obsessive compulsive disorder (OCD), or other psychiatric disorders included a total of 24 short-term trials of 9 drugs used to treat depression in over 4,400 patients. The pooled analyses of placebo-controlled trials in adults with MDD or other psychiatric disorders included a total of 295 short-term trials (median duration of 2 months) of 11 antidepressant drugs in over 77,000 patients.\nThere was considerable variation in risk of suicidality among drugs, but a tendency toward an increase in the younger patients for almost all drugs studied. There were differences in absolute risk of suicidality across the different indications, with the highest incidence in MDD. The risk of differences (drug versus placebo), however, were relatively stable within age strata and across indications. These risk differences (drug-placebo difference in the number of cases of suicidality per 1,000 patients treated) are provided in Table 1.\nTable 1: Risk Differences (Drug \u2013 Placebo) in the number of Cases of Suicidality, per 1,000 patients treated"
+        },
+        {
+          "section_label": "5.1",
+          "section_title": "5.1 Suicide Risk",
+          "text": "Age Range\nDrug-Placebo Difference in Number of Cases of Suicidality per 1,000 Patients Treated"
+        },
+        {
+          "section_label": "5.1",
+          "section_title": "5.1 Suicide Risk",
+          "text": "6 fewer cases\nNo suicides occurred in any of the pediatric trials. There were suicides in the adult trials, but the number was not sufficient to reach any conclusion about drug effect on suicide.\nIt is unknown whether the suicidality risk extends to longer-term use, i.e. beyond several months.\nHowever, there is substantial evidence from placebo-controlled maintenance trials in adults with depression that the use of antidepressants can delay the recurrence of depression.\nAll patients being treated with drugs inhibiting the reuptake of norepinephrine and/or serotonin for any indication should be monitored appropriately and observed closely for clinical worsening, suicidality, and unusual changes in behavior, especially during the initial few months of a course of drug therapy, or at times of dose changes, either increases or decreases.\nThe following symptoms, anxiety, agitation, panic attacks, insomnia, irritability, hostility, aggressiveness, impulsivity, akathisia (psychomotor restlessness), hypomania, mania, have been reported in adult and pediatric patients being treated with drugs inhibiting the reuptake of norepinephrine and/or serotonin for major depressive disorder as well as for other indications, both psychiatric and non-psychiatric. Although a causal link between the emergence of such symptoms and either the worsening of depression and/or the emergence of suicidal impulses has not been established, there is concern that such symptoms may represent precursors to emerging suicidality.\nConsideration should be given to changing the therapeutic regimen, including possibly discontinuing the medication, in patients who may experience worsening depressive symptoms, or who are experiencing emergent suicidality or symptoms that might be precursors to worsening depression or suicidality, especially if these symptoms are severe or abrupt in onset, or were not part of the patient\u2019s presenting symptoms.\nIf the decision has been made to discontinue treatment due to worsening depressive symptoms or emergent suicidality, medication should be tapered, as rapidly as is feasible, but with recognition that abrupt discontinuation can produce withdrawal symptoms .\nFamilies and caregivers of patients being treated with drugs inhibiting the reuptake of norepinephrine and/or serotonin for major depressive disorder or other indications, both psychiatric and nonpsychiatric, should be alerted about the need to monitor patients for the emergence of agitation, irritability, unusual changes in behavior, and the other symptoms described above, as well as the emergence of suicidality, and to report such symptoms immediately to health care providers. Such monitoring should include daily observation by families and caregivers. Prescriptions for milnacipran hydrochloride\u00a0should be written for the smallest quantity of tablets consistent with good patient management, in order to reduce the risk of overdose."
+        },
+        {
+          "section_label": "5.2",
+          "section_title": "5.2 Serotonin Syndrome",
+          "text": "Selective-serotonin reuptake inhibitors (SSRIs) and serotonin-norepinephrine reuptake inhibitors (SNRIs), including milnacipran hydrochloride, can precipitate serotonin syndrome, a potentially life-threatening condition. The risk is increased with concomitant use of other serotonergic drugs (including triptans, tricyclic antidepressants, fentanyl, tramadol, meperidine, methadone, lithium, tryptophan, buspirone, amphetamines, and St. John\u2019s Wort) and with drugs that impair metabolism of serotonin i.e. MAOIs . Serotonin syndrome can also occur when these drugs are used alone.\nSerotonin syndrome symptoms may include mental status changes (e.g., agitation, hallucinations, delirium, and coma), autonomic instability (e.g., tachycardia, labile blood pressure, dizziness, diaphoresis, flushing, hyperthermia), neuromuscular symptoms (e.g., tremor, rigidity, myoclonus, hyperreflexia, incoordination), seizures, and/or gastrointestinal symptoms (e.g., nausea, vomiting, diarrhea).\nThe concomitant use of milnacipran hydrochloride\u00a0with MAOIs is contraindicated. In addition, do not initiate milnacipran hydrochloride\u00a0in a patient who is being treated with MAOIs such as linezolid or intravenous methylene blue. No reports involved the administration of methylene blue by other routes (such as oral tablets or local tissue injection). If it is necessary to initiate treatment with a MAOI such as linezolid or intravenous methylene blue in a patient taking milnacipran hydrochloride, discontinue milnacipran hydrochloride\u00a0before initiating treatment with the MAOI .\nMonitor all patients taking milnacipran hydrochloride\u00a0for the emergence of serotonin syndrome. Discontinue treatment with milnacipran hydrochloride\u00a0and any concomitant serotonergic agents immediately if the above events occur and initiate supportive symptomatic treatment. If concomitant use of milnacipran hydrochloride\u00a0with other serotonergic drugs is clinically warranted, inform patients of the increased risk for serotonin syndrome and monitor for symptoms."
+        },
+        {
+          "section_label": "5.5",
+          "section_title": "5.5 Seizures",
+          "text": "Milnacipran hydrochloride\u00a0has not been systematically evaluated in patients with a seizure disorder. In clinical trials evaluating milnacipran hydrochloride\u00a0in patients with fibromyalgia, seizures/convulsions have not been reported. However, seizures have been reported infrequently in patients treated with milnacipran hydrochloride\u00a0for disorders other than fibromyalgia. Milnacipran hydrochloride\u00a0should be prescribed with care in patients with a history of a seizure disorder."
+        },
+        {
+          "section_label": "5.6",
+          "section_title": "5.6 Hepatotoxicity",
+          "text": "In the placebo-controlled fibromyalgia trials, increases in the number of patients treated with milnacipran hydrochloride\u00a0with mild elevations of ALT or AST (1 to 3 times the upper limit of normal, ULN) were observed. Increases in ALT were more frequently observed in the patients treated with milnacipran hydrochloride\u00a0100 mg/day (6%) and milnacipran hydrochloride\u00a0200 mg/day (7%), compared to the patients treated with placebo (3%). One patient receiving milnacipran hydrochloride\u00a0100 mg/day (0.2%) had an increase in ALT greater than 5 times the upper limit of normal but did not exceed 10 times the upper limit of normal. Increases in AST were more frequently observed in the patients treated with milnacipran hydrochloride\u00a0100 mg/day (3%) and milnacipran hydrochloride\u00a0200 mg/day (5%) compared to the patients treated with placebo (2%).\nThe increases of bilirubin observed in the fibromyalgia clinical trials were not clinically significant.\nNo case met the criteria of elevated ALT > 3x ULN and associated with an increase in bilirubin \u2265 2x ULN.\nThere have been cases of increased liver enzymes and reports of severe liver injury, including fulminant hepatitis with milnacipran from foreign post-marketing experience. In the cases of severe liver injury, there were significant underlying clinical conditions and/or the use of multiple concomitant medications. Because of underreporting, it is impossible to provide an accurate estimate of the true incidence of these reactions.\nDiscontinue milnacipran hydrochloride\u00a0in patients who develop jaundice or other evidence of liver dysfunction. Treatment with milnacipran hydrochloride\u00a0should not be resumed unless another cause can be established.\nMilnacipran hydrochloride\u00a0should ordinarily not be prescribed to patients with substantial alcohol use or evidence of chronic liver disease."
+        },
+        {
+          "section_label": "5.7",
+          "section_title": "5.7 Discontinuation of Treatment with Milnacipran Hydrochloride",
+          "text": "Withdrawal symptoms have been observed in clinical trials following discontinuation of milnacipran, as with other SNRIs and SSRIs.\nDuring marketing of milnacipran, and other SNRIs and SSRIs, there have been spontaneous reports of adverse events indicative of withdrawal and physical dependence occurring upon discontinuation of these drugs, particularly when discontinuation is abrupt. The adverse events include the following: dysphoric mood, irritability, agitation, dizziness, sensory disturbances (e.g., paresthesias such as electric shock sensations), anxiety, confusion, headache, lethargy, emotional lability, insomnia, hypomania, tinnitus, and seizures. Although these events are generally self-limiting, some have been reported to be severe.\nMonitor patients for these symptoms when discontinuing treatment with milnacipran hydrochloride. Milnacipran hydrochloride\u00a0should be tapered after extended use. Do not abruptly discontinue. If intolerable symptoms occur following a decrease in the dose or upon discontinuation of treatment, then resuming the previously prescribed dose may be considered. Subsequently, the physician may continue decreasing the dose but at a more gradual rate ."
+        },
+        {
+          "section_label": "5.9",
+          "section_title": "5.9 Increased Risk of Bleeding",
+          "text": "Drugs that interfere with serotonin reuptake, including milnacipran hydrochloride, may increase the risk of bleeding events. Concomitant use of aspirin, nonsteroidal anti-inflammatory drugs (NSAIDs), warfarin, and other anticoagulants may add to this risk. Case reports and epidemiological studies (case-control and cohort design) have demonstrated an association between use of drugs that interfere with serotonin reuptake and the occurrence of gastrointestinal bleeding. Based on data from published observational studies, exposure to SNRIs, particularly in the month before delivery, has been associated with a less than 2-fold increase in the risk of postpartum hemorrhage .\u00a0Bleeding events related to SSRIs and SNRIs have ranged from ecchymosis, hematoma, epistaxis, and petechiae to life-threatening hemorrhages.\nInform patients about the increased risk of bleeding associated with the concomitant use of milnacipran hydrochloride\u00a0and NSAIDs, aspirin, or other drugs that affect coagulation ."
+        },
+        {
+          "section_label": "5.11",
+          "section_title": "5.11 Patients with a History of Dysuria",
+          "text": "Because of their noradrenergic effect, SNRIs including milnacipran hydrochloride, can affect urethral resistance and micturition. In the controlled fibromyalgia trials, dysuria occurred more frequently in patients treated with milnacipran hydrochloride\u00a0(1%) than in placebo-treated patients (0.5%). Caution is advised in use of milnacipran hydrochloride\u00a0in patients with a history of dysuria, notably in male patients with prostatic hypertrophy, prostatitis, and other lower urinary tract obstructive disorders. Male patients are more prone to genitourinary adverse effects, such as dysuria or urinary retention, and may experience testicular pain or ejaculation disorders."
+        },
+        {
+          "section_label": "5.12",
+          "section_title": "5.12 Sexual Dysfunction",
+          "text": "Use of SNRIs, including milnacipran hydrochloride, may cause symptoms of sexual dysfunction . In male patients, SNRI use may result in ejaculatory delay or failure, decreased libido, and erectile dysfunction. In female patients, SNRI use may result in decreased libido and delayed or absent orgasm.\nIt is important for prescribers to inquire about sexual function prior to initiation of milnacipran hydrochloride\u00a0and to inquire specifically about changes in sexual function during treatment, because sexual function may not be spontaneously reported. When evaluating changes in sexual function, obtaining a detailed history (including timing of symptom onset) is important because sexual symptoms may have other causes, including the underlying psychiatric disorder. Discuss potential management strategies to support patients in making informed decisions about treatment."
+        }
+      ],
+      "drug_name": "Milnacipran HCl",
+      "question": "What safety risks are listed for Milnacipran HCl?",
+      "question_id": "0ed77e51576671d1",
+      "question_type": "factual",
+      "references": [
+        "5\u00a0 WARNINGS AND PRECAUTIONS"
+      ],
+      "set_id": "eaa14195-1b9c-423c-9412-d2fe0857e39d"
+    },
+    {
+      "answer": "- One 25 mg EDURANT tablet taken once daily with a meal for patients weighing at least 25 kg. \n- Pediatric patients 2 years of age and older and weighing at least 14 kg to less than 25 kg: Dosage of EDURANT PED is based on body weight. \n- EDURANT PED must be dispersed in drinking water and taken with a meal. \n- Do not substitute EDURANT tablets and EDURANT PED tablets for oral suspension on a milligram-per-milligram basis due to differing pharmacokinetic profiles. \n- See full prescribing information for dosing information when used in combination with cabotegravir. \n- For pregnant patients who are already on a stable EDURANT regimen prior to pregnancy and who are virologically suppressed (HIV-1 RNA less than 50 copies per mL) the recommended dosage in adults and pediatric patients weighing more than 25 kg is one 25 mg tablet once daily taken orally with a meal. \n- Rifabutin coadministration: Take two 25 mg tablets of EDURANT once daily with a meal for the duration of the rifabutin coadministration.",
+      "citations": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "5.6",
+        "12.3"
+      ],
+      "context": [
+        {
+          "section_label": "2.1",
+          "section_title": "2.1 Overview of Different Dosage Forms",
+          "text": "EDURANT is available in two dosage forms:\n- EDURANT 25 mg film-coated tablets for adults and pediatric patients weighing at least 25 kg.\n- EDURANT PED 2.5 mg tablets for oral suspension should only be given to pediatric patients weighing at least 14 kg to less than 25 kg\nDo not substitute EDURANT tablets and EDURANT PED tablets for oral suspension on a milligram-per-milligram basis due to differing pharmacokinetic profiles. A difference in bioavailability between 1 \u00d7 25 mg film-coated tablet and 10 \u00d7 2.5 mg tablets for oral suspension was observed; therefore, they are NOT substitutable\n.\nTake EDURANT and EDURANT PED once daily with a meal in combination with other antiretrovirals\n."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2 Recommended Dosage in Treatment-Na\u00efve Adult Patients",
+          "text": "The recommended dosage of EDURANT in adult patients is one 25 mg tablet taken orally once daily with a meal\n."
+        },
+        {
+          "section_label": "2.3",
+          "section_title": "2.3 Recommended Dosage in Treatment-Na\u00efve Pediatric Patients 2 Years of Age and Older and Weighing at least 14 kg",
+          "text": "The recommended dosage of EDURANT and EDURANT PED in pediatric patients 2 years of age and older and weighing at least 14 kg is based on body weight . Both EDURANT and EDURANT PED should be taken orally once daily with a meal\n."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4 Preparation and Administration Instructions for EDURANT PED Only",
+          "text": "Advise patients or caregivers of patients taking EDURANT PED to refer to the Instructions for Use to properly prepare and take the medication.\nEDURANT PED must be dispersed in drinking water and taken immediately with a meal. If not taken immediately, then the oral suspension should be discarded, and a new dose of medicine should be prepared. The patient should not chew or swallow EDURANT PED whole. The following instructions should be followed:\n- Place the tablets for oral suspension in a cup, add 5 mL (1 teaspoon) of drinking water at room temperature. Do not crush the tablets.\n- Swirl the cup carefully for 1\u20132 minutes to disperse the tablets. The oral suspension will start to look cloudy.\n- Take all the prepared oral suspension immediately or to aid in administration, the oral suspension can be further diluted with 5 mL (1 teaspoon) of drinking water, milk, orange juice or applesauce. Swirl and take all the medicine immediately. A spoon can be used if needed.\n- Make sure the entire dose is taken and no medicine is left in the cup. If required, add another 5 mL (1 teaspoon) of drinking water (or alternative beverage or soft food), swirl and drink immediately."
+        },
+        {
+          "section_label": "2.5",
+          "section_title": "2.5 Recommended Dosage During Pregnancy",
+          "text": "For pregnant patients who are already on a stable EDURANT regimen prior to pregnancy and who are virologically suppressed (HIV-1 RNA less than 50 copies per mL) the recommended dosage in adults and pediatric patients weighing at least 25 kg is one 25 mg tablet once daily taken orally with a meal. Refer to Table 1 for dosing recommendations for pediatric patients\n.\nLower exposures of rilpivirine were observed during pregnancy, therefore viral load should be monitored closely\n."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Consult the prescribing information for CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) before initiating EDURANT to ensure therapy with CABENUVA is appropriate."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Oral Lead-In Dosing to Assess Tolerability of Rilpivirine\nOral lead-in should be used for approximately 1 month (at least 28 days) to assess the tolerability of rilpivirine prior to the initiation of CABENUVA. The recommended oral daily dose is one 25 mg tablet of EDURANT (rilpivirine) in combination with one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) orally once daily at approximately the same time each day with a meal\n.\nBecause EDURANT is indicated in combination with VOCABRIA (cabotegravir), the prescribing information for VOCABRIA (cabotegravir) tablets should also be consulted.\nThe last oral dose should be taken on the same day injections with CABENUVA are started."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Oral Dosing to Replace Planned Missed Injections of CABENUVA"
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Planned Missed Injections for Patients on Monthly Dosing Schedule\nIf a patient plans to miss a scheduled monthly injection of CABENUVA by more than 7 days, take daily oral therapy for up to 2 months to replace missed injection visits. The recommended oral daily dose is one 25 mg tablet of EDURANT and one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) at approximately the same time each day with a meal. The first dose of oral therapy should be initiated at approximately the same time as the planned missed injection and continued until the day injection dosing is restarted. For oral therapy with EDURANT and VOCABRIA of durations greater than 2 months, an alternative oral regimen is recommended, which may include EDURANT. See full prescribing information for CABENUVA to resume monthly injection dosing."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6 Recommended Dosage in Combination with Cabotegravir in Adults and Adolescents 12 Years of Age and Older and Weighing at least 35 kg",
+          "text": "Planned Missed Injections for Patients on Every-2-Month Dosing Schedule\nIf a patient plans to miss a scheduled every-2-month injection of CABENUVA by more than 7 days, take daily oral therapy for a duration of up to 2 months to replace 1 missed scheduled every-2-month injection. The recommended oral daily dose is one 25 mg tablet of EDURANT and one 30 mg tablet of VOCABRIA (cabotegravir). Take EDURANT with VOCABRIA (cabotegravir) at approximately the same time each day with a meal. The first dose of oral therapy should be initiated at approximately the same time as the planned missed injection and continued until the day injection dosing is restarted. For oral therapy with EDURANT and VOCABRIA of durations greater than 2 months, an alternative oral regimen is recommended, which may include EDURANT. See full prescribing information for CABENUVA to resume every-2-month injection dosing."
+        },
+        {
+          "section_label": "2.7",
+          "section_title": "2.7 Recommended Dosage with Rifabutin Coadministration",
+          "text": "If EDURANT is coadministered with rifabutin, the EDURANT dose should be increased to 50 mg (two 25 mg tablets) once daily, taken with a meal. When rifabutin coadministration is stopped, the EDURANT dose should be decreased to 25 mg once daily, taken with a meal\n.\nNote that use of CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) with rifabutin is contraindicated. Refer to CABENUVA labeling for additional detail."
+        },
+        {
+          "section_label": "5.6",
+          "section_title": "5.6 Different Formulations Are Not Substitutable",
+          "text": "EDURANT and EDURANT PED have differing pharmacokinetic profiles and are not substitutable on a milligram-per-milligram basis. A difference in bioavailability between 1 \u00d7 25 mg film-coated tablet and 10 \u00d7 2.5 mg tablets for oral suspension was observed; therefore, they are not substitutable\n.\nWhen a pediatric patient weighs 25 kg or greater, they must switch from EDURANT PED tablets for oral suspension to one 25 mg EDURANT tablet daily\n.\nIncorrect dosing of a given formulation may result in underdosing and loss of therapeutic effect and possible development of resistance or possible clinically significant adverse reactions from greater exposure to rilpivirine."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pharmacokinetics in Adults\nThe pharmacokinetic properties of rilpivirine have been evaluated in adult healthy subjects and in adult antiretroviral treatment-na\u00efve HIV-1-infected subjects. Exposure to rilpivirine was generally lower in HIV-1 infected subjects than in healthy subjects."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Absorption and Bioavailability\nAfter oral administration, the maximum plasma concentration of rilpivirine is generally achieved within 4\u20135 hours. The absolute bioavailability of EDURANT and EDURANT PED is unknown."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Effects of Food on Oral Absorption\nThe exposure to rilpivirine was approximately 40% lower when EDURANT was taken in a fasted condition as compared to a normal caloric meal (533 kcal) or high-fat high-caloric meal (928 kcal). When EDURANT was taken with only a protein-rich nutritional drink, exposures were 50% lower than when taken with a meal.\nAdministration of the EDURANT PED 2.5 mg tablets dispersed in drinking water in fasted conditions or after yogurt consumption resulted in a 31% and 28% lower exposure, respectively, compared to administration in fed conditions (a meal containing 533 kcal) in adults."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Distribution\nRilpivirine is approximately 99.7% bound to plasma proteins\nin vitro, primarily to albumin. The distribution of rilpivirine into compartments other than plasma (e.g., cerebrospinal fluid, genital tract secretions) has not been evaluated in humans."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Metabolism\nIn vitro experiments indicate that rilpivirine primarily undergoes oxidative metabolism mediated by the cytochrome P450 (CYP) 3A system."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Elimination\nThe terminal elimination half-life of rilpivirine is approximately 50 hours. After single dose oral administration of\n14C-rilpivirine, on average 85% and 6.1% of the radioactivity could be retrieved in feces and urine, respectively. In feces, unchanged rilpivirine accounted for on average 25% of the administered dose. Only trace amounts of unchanged rilpivirine (<1% of dose) were detected in urine."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pregnancy and Postpartum\nThe exposure (C\n0hand AUC\n24h) to total rilpivirine after intake of rilpivirine 25 mg once daily as part of an antiretroviral regimen was 30 to 40% lower during pregnancy (similar for the second and third trimester), compared with postpartum . However, the exposure during pregnancy was not significantly different from exposures obtained in Phase 3 trials. Based on the exposure-response relationship for rilpivirine, this decrease is not considered clinically relevant in patients who are virollogically suppressed. The protein binding of rilpivirine was similar (>99%) during the second trimester, third trimester, and postpartum."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric Patients\nThe pharmacokinetics of rilpivirine in HIV-1 infected pediatric patients 2 to less than 18 years of age and weighing at least 16 kg receiving the recommended weight-based dosing regimen of EDURANT and EDURANT PED were comparable or slightly higher than those obtained in treatment-na\u00efve HIV-1 infected adult patients ."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Renal Impairment\nPharmacokinetic analysis indicated that rilpivirine exposure was similar in HIV-1 infected subjects with mild renal impairment relative to HIV-1 infected subjects with normal renal function. No dose adjustment is required in patients with mild renal impairment. There is limited or no information regarding the pharmacokinetics of rilpivirine in patients with moderate or severe renal impairment or in patients with end-stage renal disease, and rilpivirine concentrations may be increased due to alteration of drug absorption, distribution, and metabolism secondary to renal dysfunction. The potential impact is not expected to be of clinical relevance for HIV-1-infected subjects with moderate renal impairment, and no dose adjustment is required in these patients. Rilpivirine should be used with caution and with increased monitoring for adverse effects in patients with severe renal impairment or end-stage renal disease. As rilpivirine is highly bound to plasma proteins, it is unlikely that it will be significantly removed by hemodialysis or peritoneal dialysis\n."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Hepatic Impairment\nRilpivirine is primarily metabolized and eliminated by the liver. In a study comparing 8 subjects with mild hepatic impairment (Child-Pugh score A) to 8 matched controls, and 8 subjects with moderate hepatic impairment (Child-Pugh score B) to 8 matched controls, the multiple dose exposure of rilpivirine was 47% higher in subjects with mild hepatic impairment and 5% higher in subjects with moderate hepatic impairment. EDURANT has not been studied in subjects with severe hepatic impairment (Child-Pugh score C)\n."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Sex, Race, Hepatitis B and/or Hepatitis C Virus Co-infection\nNo clinically relevant differences in the pharmacokinetics of rilpivirine have been observed between sex, race and patients with hepatitis B and/or C-virus co-infection."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Drug Interactions\n.\nRilpivirine is primarily metabolized by cytochrome P450 (CYP)3A, and drugs that induce or inhibit CYP3A may thus affect the clearance of rilpivirine. Coadministration of EDURANT or EDURANT PED and drugs that induce CYP3A may result in decreased plasma concentrations of rilpivirine and loss of virologic response and possible resistance. Coadministration of EDURANT and EDURANT PED and drugs that inhibit CYP3A may result in increased plasma concentrations of rilpivirine. Coadministration of EDURANT and EDURANT PED with drugs that increase gastric pH may result in decreased plasma concentrations of rilpivirine and loss of virologic response and possible resistance to rilpivirine and to the class of NNRTIs.\nEDURANT and EDURANT PED at the recommended doses are not likely to have a clinically relevant effect on the exposure of medicinal products metabolized by CYP enzymes.\nDrug interaction studies were performed with EDURANT and other drugs likely to be coadministered or commonly used as probes for pharmacokinetic interactions. The effects of coadministration of other drugs on the C\nmax, AUC, and C\nminvalues of rilpivirine are summarized in Table 11 (effect of other drugs on EDURANT). The effect of coadministration of EDURANT on the C\nmax, AUC, and C\nminvalues of other drugs are summarized in Table 12 (effect of EDURANT on other drugs). For information regarding clinical recommendations,\nsee\nDrug Interactions (7)\n]."
+        }
+      ],
+      "drug_name": "EDURANT",
+      "question": "What is the recommended dosage regimen of EDURANT?",
+      "question_id": "fa2723bf33d48ed3",
+      "question_type": "factual",
+      "references": [
+        "2 DOSAGE AND ADMINISTRATION"
+      ],
+      "set_id": "03880372-2c68-45c6-a53a-f420c49541d6"
+    },
+    {
+      "answer": "- See Full Prescribing Information for complete dosage instructions \n- Administer orally once daily in the morning upon wakening \n- Dosage Recommendations:\n- Hepatic impairment :\n- Moderate hepatic impairment (Child-Pugh Class B): Adults: Initial dosage is 8.9 mg once daily. Titrate to a maximum dosage of 17.8 mg once daily after 14 days Pediatric Patients: Initial dosage is 4.45 mg once daily. Titrate to 8.9 mg once daily after 14 days; for patients weighing \u226540 kg, may increase to 17.8 mg once daily after another 14 days\n- Renal impairment (eGFR less than 60 mL/minute/1.73 m 2 ) :\n- Adults: Initial dosage is 8.9 mg once daily. Titrate to a maximum dosage of 17.8 mg once daily after 7 days\n- Pediatric Patients: Initial dosage is 4.45 mg once daily. Titrate to 8.9 mg once daily after 7 days; for patients weighing \u226540 kg, may increase to 17.8 mg once daily after another 7 days\n- End-stage renal disease (ESRD): Not recommended\n- Poor Metabolizers of CYP2D6 :\n- Adults: Maximum recommended dosage is 17.8 mg once daily\n- Pediatric Patients: Maximum recommended dosage is 8.9 mg once daily for patients weighing <40 kg and 17.8 mg for patients weighing \u226540 kg",
+      "citations": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.6",
+        "8.6",
+        "8.7",
+        "12.3"
+      ],
+      "context": [
+        {
+          "section_label": "2.1",
+          "section_title": "2.1\tRecommended Dosage in Adult Patients",
+          "text": "The recommended dosage range for WAKIX for the treatment of EDS or cataplexy in adult patients is 17.8 mg to 35.6 mg administered orally once daily in the morning upon wakening.\nTitrate dosage as follows:\nWeek 1: Initiate with a dosage of 8.9 mg (two 4.45 mg tablets) once daily\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 2: Increase dosage to 17.8 mg (one 17.8 mg tablet) once daily\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 3: May increase to the maximum recommended dosage of 35.6 mg (two 17.8 mg tablets) once daily\nDose may be adjusted based on tolerability.\nIf a dose is missed, patients should take the next dose the following day in the morning upon wakening.\nIt may take up to 8 weeks for some patients to achieve a clinical response."
+        },
+        {
+          "section_label": "2.2",
+          "section_title": "2.2\tRecommended Dosage in Pediatric Patients 6 Years and Older",
+          "text": "The recommended starting dosage of WAKIX for the treatment of EDS in pediatric patients 6 years and older is 4.45 mg administered orally once daily in the morning upon wakening.\nTitrate dosage as follows:\nWeek 1: Initiate with a dosage of 4.45 mg (one 4.45 mg tablet) once daily\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 2: Increase dosage to 8.9 mg (two 4.45 mg tablets) once daily\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 3: Increase dosage to 17.8 mg (one 17.8 mg tablet) once daily, which is the maximum recommended dosage for patients weighing <40 kg\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0Week 4: For patients weighing \u226540 kg, may increase to the maximum recommended dosage of 35.6 mg (two 17.8 mg tablets) once daily\nDose may be adjusted based on tolerability. If a dose is missed, patients should take the next dose the following day in the morning upon wakening. It may take up to 8 weeks for some patients to achieve a clinical response."
+        },
+        {
+          "section_label": "2.3",
+          "section_title": "2.3\tDosage Recommendations in Patients with Hepatic Impairment",
+          "text": "Adult Patients with Moderate (Child-Pugh Class B) Hepatic Impairment\n- Initiate WAKIX at 8.9 mg once daily and increase after 14 days to a maximum recommended dosage of 17.8 mg once daily\nPediatric Patients (6 years and older) with Moderate (Child-Pugh Class B) Hepatic Impairment\n- Pediatric patients weighing <40 kg: Initiate WAKIX at 4.45 mg once daily and increase after 14 days to a maximum recommended dosage of 8.9 mg once daily\n- Pediatric patients weighing \u226540 kg: Initiate WAKIX at 4.45 mg once daily and increase after 14 days to 8.9 mg once daily. May increase after another 14 days to a maximum recommended dosage of 17.8 mg once daily\nWAKIX is contraindicated in patients with severe hepatic impairment. WAKIX has not been studied in patients with severe hepatic impairment ."
+        },
+        {
+          "section_label": "2.4",
+          "section_title": "2.4\tDosage Recommendations in Patients with Renal Impairment and End-Stage Renal Disease",
+          "text": "Adult Patients with eGFR <60 mL/minute/1.73 m2\n- Initiate WAKIX at 8.9 mg once daily and increase after 7 days to a maximum recommended dosage of 17.8 mg once daily\nPediatric Patients (6 years and older) with eGFR <60 mL/minute/1.73 m2\n(using the Schwartz equation, eGFR (mL/min/1.73 m2)=(0.413*height in cm)/serum creatinine in mg/dL)\n- Pediatric patients weighing <40 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to a maximum recommended dosage of 8.9 mg once daily\n- Pediatric patients weighing \u226540 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to 8.9 mg once daily. May increase after another 7 days to a maximum recommended dosage of 17.8 mg once daily\nWAKIX is not recommended in patients with eGFR less than 15 mL/minute/1.73 m2\n."
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6\tDosage Recommendations in Patients Who Are Known CYP2D6 Poor Metabolizers (PMs)",
+          "text": "Adult Patients\n- Initiate WAKIX at 8.9 mg once daily and titrate to a maximum recommended dosage of 17.8 mg once daily after 7 days"
+        },
+        {
+          "section_label": "2.6",
+          "section_title": "2.6\tDosage Recommendations in Patients Who Are Known CYP2D6 Poor Metabolizers (PMs)",
+          "text": "Pediatric patients\n- Pediatric patients weighing <40 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to a maximum recommended dosage of 8.9 mg once daily\n- Pediatric patients weighing \u226540 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to 8.9 mg once daily. May increase after another 7 days to a maximum recommended dosage of 17.8 mg once daily"
+        },
+        {
+          "section_label": "8.6",
+          "section_title": "8.6 Hepatic Impairment",
+          "text": "WAKIX is contraindicated in patients with severe hepatic impairment (Child-Pugh Class C) as it has not been studied in this population. WAKIX is extensively metabolized by the liver and there is a significant increase in WAKIX exposure in patients with moderate hepatic impairment .\nMonitor patients with moderate hepatic impairment (Child-Pugh Class B) and adjust the dosage of WAKIX .\nMonitor patients with mild hepatic impairment (Child-Pugh Class A). No dosage adjustment of WAKIX is recommended in patients with mild hepatic impairment."
+        },
+        {
+          "section_label": "8.7",
+          "section_title": "8.7 Renal Impairment",
+          "text": "The pharmacokinetics of WAKIX in patients with end-stage renal disease (ESRD) (eGFR of <15 mL/minute/1.73 m2) is unknown . Therefore, WAKIX is not recommended in patients with ESRD .\nDosage adjustment of WAKIX is recommended in patients with eGFR <60 mL/minute/1.73 m2\n."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Following oral administration of pitolisant 35.6 mg once daily, the steady state Cmax and AUC are 73 ng/mL (range: 49.2 to 126 ng/mL) and 812 ng*hr/mL (range: 518 to 1468 ng*hr/mL), respectively. Pitolisant exposure (Cmax and AUC) increases proportionally with dose and steady state is reached by day 7."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Absorption\nThe median time to maximum plasma concentration (Tmax) of pitolisant is 3.5 hours (2 to 5 hours).\nThe oral absorption of WAKIX is around 90%."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Food Effect\nNo clinically significant differences in the pharmacokinetics of pitolisant were observed following administration with a high-fat meal."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Distribution\nThe apparent volume of distribution of pitolisant is approximately 700 L (5 to 10 L/kg). Serum protein binding is approximately 91% to 96%. The blood to plasma ratio of pitolisant is 0.55 to 0.89."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Elimination\nAfter a single dose of 35.6 mg, the median half-life of pitolisant is approximately 20 hours (7.5 to 24.2 hours). The apparent oral clearance (CL/F) of pitolisant is 43.9 L/hr and renal clearance accounts for <2% of the total clearance of pitolisant."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Metabolism\nPitolisant is primarily metabolized by CYP2D6 and to a lesser extent by CYP3A4; these metabolites are further metabolized or conjugated with glycine or glucuronic acid. None of these metabolites are pharmacologically active."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Excretion\nAfter a single oral radiolabeled pitolisant 17.8 mg dose, approximately 90% of the dose was excreted in urine (<2% unchanged) and 2.3% in feces."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Specific Populations\nNo clinically significant differences in the pharmacokinetics of pitolisant were observed based on age (18 to 82 years old), sex, race/ethnicity (Caucasians or Blacks), or body weight (48 to 103 kg). The effects of end-stage renal disease and severe hepatic impairment on the pharmacokinetics of pitolisant are unknown."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Pediatric Patients\nPharmacokinetic data from 24 pediatric patients with narcolepsy (ages 7 to 17 years) receiving a single dose of WAKIX suggest that pediatric patients have higher exposure to pitolisant than adults. The geometric mean Cmax and AUC0-10h of pitolisant were 2.2 and 2.0-fold higher, respectively, in pediatric patients 12 to 17 years and 3.4 and 3.6-fold higher, respectively, in pediatric patients 7 to 11 years compared to adults."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Hepatic Impairment\nSix subjects with mild hepatic impairment (Child-Pugh Class A), 6 subjects with moderate hepatic impairment (Child-Pugh Class B), and 12 healthy subjects matched for age, sex, body mass index and ethnicity received a single dose of WAKIX 17.8 mg to assess the pharmacokinetics of WAKIX in patients with hepatic impairment. Exposure of pitolisant in patients with mild or moderate hepatic impairment is summarized in Figure 1. No studies have been conducted in patients with severe hepatic impairment.\nFigure 1: Effect of Hepatic Impairment on Pitolisant Pharmacokinetics\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUCinf = area under the curve from time 0 to time infinity; Cmax = maximum plasma concentration."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Patients with Renal Impairment\nA single dose of WAKIX 17.8 mg was administered to 4 subjects with mild renal impairment (eGFR of 60 to 89 mL/min/1.73 m2), 4 subjects with moderate renal impairment (eGFR of 30 to 59 mL/min/1.73 m2), 4 subjects with severe renal impairment (eGFR of 15 to 29 mL/min/1.73 m2), and 12 subjects with normal renal function (i.e., eGFR >90 mL/min/1.73 m2) to assess the pharmacokinetics of WAKIX in patients with renal impairment. Exposure of pitolisant in patients with mild, moderate, and severe renal impairment is summarized in Figure 2. No studies have been conducted in patients with ESRD.\nFigure 2: Effect of Renal Impairment on Pitolisant Pharmacokinetics\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUCinf = area under the curve from time 0 to time infinity; Cmax = maximum plasma concentration."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "CYP2D6 Poor Metabolizers\nThe pharmacokinetics of pitolisant were evaluated in 3 subjects who were CYP2D6 poor metabolizers (PMs) and 5 subjects who were CYP2D6 extensive metabolizers (EMs). All subjects received WAKIX 17.8 mg daily for 7 days. Exposure of pitolisant in CYP2D6 PMs is summarized in Figure 3.\nFigure 3: Pitolisant Pharmacokinetics in CYP2D6 Poor Metabolizers\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUC0-24 = area under the curve from time 0 to 24 hours post-dose; Cmax = maximum plasma concentration."
+        },
+        {
+          "section_label": "12.3",
+          "section_title": "12.3 Pharmacokinetics",
+          "text": "Drug-Drug Interactions\nEffect of Other Drugs on the Pharmacokinetics of WAKIX\nThe effect of other drugs on the pharmacokinetics of pitolisant is presented in Figure 4\n.\nFigure 4: Effect of Concomitant Medications on Pitolisant\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUCinf = area under the curve from time 0 to time infinity; Cmax = maximum plasma concentration.\nEffect of WAKIX on the Pharmacokinetics of Other Drugs\nThe effect of pitolisant on the pharmacokinetics of other drugs is presented in Figure 5\n.\nFigure 5: Effect of Pitolisant on Concomitant Medications\nDots = Geometric least squares mean ratios, Error bars = 90% CI; reference dashed lines are 0.8 and 1.25.\nAUCinf = area under the curve from time 0 to time infinity; AUC0-24 = area under the curve from time 0 to 24 hours; Cmax = maximum plasma concentration."
+        }
+      ],
+      "drug_name": "Wakix",
+      "question": "What is the recommended dosage regimen of Wakix?",
+      "question_id": "bf541398e84eb4b1",
+      "question_type": "factual",
+      "references": [
+        "2 DOSAGE AND ADMINISTRATION"
+      ],
+      "set_id": "8daa5562-824e-476c-9652-26ceef3d4b0e"
+    },
+    {
+      "answer": "- Milnacipran hydrochloride\u00a0is unlikely to be involved in clinically significant pharmacokinetic drug interactions. \n- Pharmacodynamic interactions of milnacipran hydrochloride\u00a0with other drugs can occur.",
+      "citations": [
+        "7"
+      ],
+      "context": [
+        {
+          "section_label": "7",
+          "section_title": "7\u00a0 DRUG INTERACTIONS",
+          "text": "Milnacipran undergoes minimal CYP450 related metabolism, with the majority of the dose excreted unchanged in urine (55%) and has a low binding to plasma proteins (13%). In vitro and in vivo studies showed that milnacipran hydrochloride\u00a0is unlikely to be involved in clinically significant pharmacokinetic drug interactions ."
+        },
+        {
+          "section_label": "7.1",
+          "section_title": "7.1 Monoamine Oxidase Inhibitors (MAOIs)",
+          "text": "The concomitant use of SSRIs and SNRIs, including milnacipran hydrochloride, with MAOIs increases the risk of serotonin syndrome. The use of MAOIs intended to treat psychiatric disorders with milnacipran hydrochloride\u00a0or within 5 days of stopping treatment with milnacipran hydrochloride\u00a0is contraindicated. The use of milnacipran hydrochloride\u00a0within 14 days of stopping an MAOI intended to treat psychiatric disorders is also contraindicated. In addition, do not initiate milnacipran hydrochloride\u00a0in a patient who is being treated with MAOIs such as linezolid or intravenous methylene blue. No reports involved the administration of methylene blue by other routes (such as oral tablets or local tissue injection). If it is necessary to initiate treatment with a MAOI such as linezolid or intravenous methylene blue in a patient taking milnacipran hydrochloride, discontinue milnacipran hydrochloride\u00a0before initiating treatment with the MAOI ."
+        },
+        {
+          "section_label": "7.2",
+          "section_title": "7.2 Serotonergic Drugs",
+          "text": "Serotonin syndrome can occur with use of milnacipran hydrochloride\u00a0and other serotonergic drugs (other SNRIs, SSRIs, triptans, tricyclic antidepressants, opioids, lithium, tryptophan, buspirone, amphetamines, and St. John\u2019s Wort), or with drugs that impair metabolism of serotonin (i.e. monoamine oxidase inhibitors). Advise patients of the signs and symptoms associated with serotonin syndrome and to seek medical care immediately if they experience these symptoms ."
+        },
+        {
+          "section_label": "7.3",
+          "section_title": "7.3 Triptans",
+          "text": "There have been rare post-marketing reports of serotonin syndrome with use of an SSRI and a triptan. If concomitant treatment of milnacipran hydrochloride\u00a0with a triptan is clinically warranted, careful observation of the patient is advised, particularly during treatment initiation and dose increases ."
+        },
+        {
+          "section_label": "7.4",
+          "section_title": "7.4 Catecholamines",
+          "text": "Milnacipran hydrochloride\u00a0inhibits the reuptake of norepinephrine. Therefore, concomitant use of milnacipran hydrochloride\u00a0with epinephrine and norepinephrine may be associated with paroxysmal hypertension and possible arrhythmia ."
+        },
+        {
+          "section_label": "7.5",
+          "section_title": "7.5 CNS-active drugs",
+          "text": "Given the primary CNS effects of milnacipran hydrochloride, use caution when it is taken in combination with other centrally acting drugs, including those with a similar mechanism of action.\nClomipramine: In a drug-drug interaction study, an increase in euphoria and postural hypotension was observed in patients who switched from clomipramine to milnacipran hydrochloride."
+        },
+        {
+          "section_label": "7.6",
+          "section_title": "7.6 Clinically Important Interactions with Select Cardiovascular Agents",
+          "text": "Digoxin: Use of milnacipran hydrochloride\u00a0concomitantly with digoxin may be associated with potentiation of adverse hemodynamic effects. Postural hypotension and tachycardia have been reported in combination therapy with intravenously administered digoxin (1 mg). Avoid co-administration of milnacipran hydrochloride\u00a0and intravenous digoxin\u00a0.\nClonidine: Because milnacipran hydrochloride\u00a0inhibits norepinephrine reuptake, co-administration with clonidine may inhibit clonidine\u2019s anti-hypertensive effect."
+        },
+        {
+          "section_label": "7.7",
+          "section_title": "7.7 Drugs that Interfere with Hemostasis",
+          "text": "Concomitant use of milnacipran hydrochloride\u00a0with an antiplatelet or anticoagulant drug (e.g., NSAIDs, aspirin, and warfarin) may potentiate the risk of bleeding. This may be due to the effect of milnacipran hydrochloride\u00a0on the release of serotonin by platelets. Closely monitor for bleeding for patients receiving an antiplatelet or anticoagulant drug when milnacipran hydrochloride\u00a0is initiated or discontinued ."
+        }
+      ],
+      "drug_name": "Milnacipran HCl",
+      "question": "Which medications should be avoided with Milnacipran HCl?",
+      "question_id": "6217f72118af6d67",
+      "question_type": "factual",
+      "references": [
+        "7\u00a0 DRUG INTERACTIONS"
+      ],
+      "set_id": "eaa14195-1b9c-423c-9412-d2fe0857e39d"
+    },
+    {
+      "answer": "The most common adverse reactions to EDURANT or EDURANT PED (incidence >2%) of at least moderate to severe intensity (\u2265 Grade 2) were depressive disorders, headache, insomnia and rash. \nTo report SUSPECTED ADVERSE REACTIONS, contact Janssen Products, LP at 1-800-526-7736 or FDA at 1-800-FDA-1088 or\nwww.fda.gov/medwatch.",
+      "citations": [
+        "6.1"
+      ],
+      "context": [
+        {
+          "section_label": "6",
+          "section_title": "6 ADVERSE REACTIONS",
+          "text": "The following adverse reactions are discussed below and in other sections of the labeling:\n- Skin and Hypersensitivity Reactions\n- Hepatotoxicity\n- Depressive Disorders"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in clinical practice."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Clinical Trials Experience in Adults\nThe safety assessment is based on the Week 96 pooled data from 1368 patients in the Phase 3 controlled trials TMC278-C209 (ECHO) and TMC278-C215 (THRIVE) in antiretroviral treatment-na\u00efve HIV-1 infected adult patients, 686 of whom received EDURANT (25 mg once daily)\n. The median duration of exposure for patients in the EDURANT arm and efavirenz arm was 104.3 and 104.1 weeks, respectively. Most adverse reactions occurred in the first 48 weeks of treatment. The proportion of subjects who discontinued treatment with EDURANT or efavirenz due to adverse reaction, regardless of severity, was 2% and 4%, respectively. The most common adverse reactions leading to discontinuation were psychiatric disorders: 10 (1%) subjects in the EDURANT arm and 11 (2%) subjects in the efavirenz arm. Rash led to discontinuation in 1 (<1%) subject in the EDURANT arm and 10 (2%) subjects in the efavirenz arm."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Common Adverse Reactions\nAdverse reactions of at least moderate intensity (\u2265Grade 2) reported in at least 2% of adult subjects are presented in Table 3. Selected laboratory abnormalities are included in Table 4.\nNo new adverse reaction terms were identified in adult subjects in the Phase 3 TMC278-C209 and TMC278-C215 trials between 48 weeks and 96 weeks nor in the Phase 2b TMC278-C204 trial through 240 weeks. The incidence of adverse events in the Phase 2b TMC278-C204 trial was similar to the Phase 3 trials through 96 weeks."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Less Common Adverse Reactions\nAdverse reactions of at least moderate intensity (\u2265Grade 2) occurring in less than 2% of antiretroviral treatment-na\u00efve subjects receiving EDURANT are listed below by System Organ Class. Some adverse events have been included because of investigator's assessment of potential causal relationship and were considered serious or have been reported in more than 1 subject treated with EDURANT.\nGastrointestinal Disorders: diarrhea, abdominal discomfort\nHepatobiliary Disorders: cholecystitis, cholelithiasis\nMetabolism and Nutrition Disorders: decreased appetite\nNervous System Disorders: somnolence\nPsychiatric Disorders: sleep disorders, anxiety\nRenal and Urinary Disorders: glomerulonephritis membranous, glomerulonephritis mesangioproliferative, nephrolithiasis"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Laboratory Abnormalities in Treatment-Na\u00efve Subjects\nThe percentage of subjects treated with EDURANT or efavirenz in the Phase 3 trials with selected laboratory abnormalities (Grades 1 to 4), representing worst Grade toxicity are shown in Table 4."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Adrenal Function\nIn the pooled Phase 3 trials, at Week 96, there was an overall mean change from baseline in basal cortisol of -0.69 (-1.12, 0.27) micrograms/dL in the EDURANT group and of -0.02 (-0.48, 0.44) micrograms/dL in the efavirenz group.\nIn the EDURANT group, 43/588 (7%) of subjects with a normal 250 micrograms ACTH stimulation test at baseline developed an abnormal 250 micrograms ACTH stimulation test (peak cortisol level <18.1 micrograms/dL) during the trial compared to 18/561 (3%) in the efavirenz group. Of the subjects who developed an abnormal 250 micrograms ACTH stimulation test during the trial, fourteen subjects in the EDURANT group and nine subjects in the efavirenz group had an abnormal 250 micrograms ACTH stimulation test at Week 96. Overall, there were no serious adverse events, deaths, or treatment discontinuations that could clearly be attributed to adrenal insufficiency. The clinical significance of the higher abnormal rate of 250 micrograms ACTH stimulation tests in the EDURANT group is not known."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Serum Creatinine\nIn the pooled Phase 3 trials, an increase in serum creatinine was observed over the 96 weeks of treatment with EDURANT. Most of this increase occurred within the first four weeks of treatment, with a mean change of 0.1 mg/dL (range: -0.3 mg/dL to 0.6 mg/dL) observed after 96 weeks of treatment. In subjects who entered the trial with mild or moderate renal impairment, the serum creatinine increase observed was similar to that seen in subjects with normal renal function. These changes are not considered to be clinically relevant and no subject discontinued treatment due to increases in serum creatinine. Serum creatinine increases occurred regardless of the background N(t)RTI regimen."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Serum Lipids\nChanges from baseline in total cholesterol, LDL-cholesterol, HDL-cholesterol and triglycerides are presented in Table 5. The clinical benefit of these findings has not been demonstrated."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Subjects Co-infected with Hepatitis B and/or Hepatitis C Virus\nIn subjects co-infected with hepatitis B or C virus receiving EDURANT, the incidence of hepatic enzyme elevation was higher than in subjects receiving EDURANT who were not co-infected. This observation was the same in the efavirenz arm. The pharmacokinetic exposure of rilpivirine in co-infected subjects was comparable to that in subjects without co-infection."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Use in Combination with Cabotegravir\nSafety findings from Phase 3/3b trials in adults were similar when EDURANT was administered in combination with VOCABRIA (cabotegravir) or other antiretrovirals. See full prescribing information for VOCABRIA and CABENUVA (cabotegravir extended-release injectable suspension; rilpivirine extended-release injectable suspension) for additional information."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Pediatric Population (\u226512 to less than 18 years of age)"
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Trial TMC278-C213 Cohort 1\nThe safety assessment is based on the Week 48 analysis of the single-arm, open-label, Phase 2 trial, TMC278-C213 Cohort 1, in which 36 antiretroviral treatment-na\u00efve HIV-1 infected patients 12 to less than 18 years of age and weighing at least 32 kg received EDURANT (25 mg once daily) in combination with other antiretroviral agents\n. The median duration of exposure was 63.5 weeks. There were no patients who discontinued treatment due to adverse reactions. No new adverse reactions were identified compared to those seen in adults.\nAdverse reactions were reported in nineteen pediatric subjects (53%). Most adverse reactions were Grade 1 or 2. The most common adverse reactions reported in at least 2 subjects (regardless of severity) include headache (19%), depression (19%), somnolence (14%), nausea (11%), dizziness (8%), abdominal pain (8%), vomiting (6%) and rash (6%).\nObserved laboratory abnormalities were comparable to those in adults."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Adrenal Function\nIn trial TMC278-C213 Cohort 1, at Week 48, the overall mean change from baseline in basal cortisol showed an increase of 1.59 (0.24, 2.93) micrograms/dL.\nSix of 30 (20%) subjects with a normal 250 micrograms ACTH stimulation test at baseline developed an abnormal 250 micrograms ACTH stimulation test (peak cortisol level <18.1 micrograms/dL) during the trial. Three of these subjects had an abnormal 250 micrograms ACTH stimulation test at Week 48. Overall, there were no serious adverse events, deaths, or treatment discontinuations that could clearly be attributed to adrenal insufficiency. The clinical significance of the abnormal 250 micrograms ACTH stimulation tests is not known."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Trial 208580 [MOCHA]\nBased on data from the Week 16 analysis of the MOCHA trial in 15 adolescents (12 to less than 18 years of age and weighing \u226535 kg) receiving EDURANT (25 mg once daily) in addition to continuing background antiretroviral therapy, the safety profile during the oral lead-in period in adolescents was consistent with the safety profile established with EDURANT in adults."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Pediatric Population (\u22652 to less than 12 years of age)\nTwo clinical trials were conducted in pediatric subjects weighing at least 16 kg (5 to less than 12 years of age). A total of 18 and 26 pediatric subjects were enrolled in Trial TMC278-C213 and Trial TMC278HTX2002, respectively. Overall, the safety data in these pediatric studies were similar to those observed in adults. Safety results from the two trials are summarized below."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Trial TMC278-C213 Cohort 2\nCohort 2 of the single-arm, open-label Phase 2 trial, TMC278-C213 evaluated the safety of the EDURANT and EDURANT PED weight adjusted doses 25, 15 and 12.5 mg once daily in antiretroviral treatment-na\u00efve HIV-1 infected patients (\u22656 to <12 years of age and weighing at least 17 kg)\n. The median duration of exposure for patients in the Week 48 analysis (including post-Week 48 extension) was 69.5 (range 35 to 218) weeks.\nAll adverse reactions were Grade 1 or 2. Adverse reactions reported in at least 2 subjects, regardless of grading, in Trial TMC278-C213 Cohort 2 were: decreased appetite (3/18, 17%), vomiting (2/18, 11%), ALT increased (2/18, 11%), AST increased (2/18, 11%), and rash (2/18, 11%). No adverse reactions led to discontinuation."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Adrenal Function\nIn trial TMC278-C213 Cohort 2, basal cortisol at baseline was normal (\u22659 \u03bcg/dL) for 4/18 subjects, low for 13/18 subjects, and missing for 1/18 subjects.\nAmong the 4 subjects with normal basal cortisol at baseline, 3 subjects had either normal basal cortisol levels (\u22659 \u03bcg/dL) or normal cortisol levels 1 hour after ACTH stimulation (\u226518.1 \u03bcg/dL) throughout the trial and/or at the last available visit (Week 24 and Week 72), and 1 subject had low basal cortisol at the last available assessment (Week 48) and no ACTH stimulation test was performed. Among the 13 subjects with low basal cortisol pre-dose at baseline, 2 subjects had low basal and ACTH stimulated cortisol values throughout the trial, including ACTH stimulated cortisol at baseline before starting treatment with rilpivirine. For both subjects, no adverse events suggestive for adrenal insufficiency were reported. The remaining 11 subjects had normal serum cortisol values after ACTH stimulation at baseline and/or during treatment."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Trial TMC278HTX2002\nThe single arm, open-label Phase 2 trial, TMC278HTX2002, evaluated the safety of EDURANT and EDURANT PED weight-adjusted doses 25, 15 and 12.5 mg once daily in virologically suppressed HIV-1 infected patients (\u22652 to <12 years of age and weighing at least 16 kg). The median duration of exposure for patients in the Week 48 analysis was 48.4 (range 47 to 52) weeks.\nAll adverse reactions were Grade 1 or 2. Adverse reactions reported in at least 2 subjects, regardless of grading, in Trial TMC278HTX2002 were: vomiting (4/26, 15%), abdominal pain (3/26, 12%), nausea (2/26, 8%), ALT increased (3/26, 12%), AST increased (2/26, 8%), and decreased appetite (2/26, 8%). No adverse reactions led to discontinuation."
+        },
+        {
+          "section_label": "6.1",
+          "section_title": "6.1 Clinical Trials Experience",
+          "text": "Adrenal Function\nIn trial TMC278HTX2002, 15/26 subjects had either normal basal cortisol (\u22659 \u03bcg/dL) or normal cortisol 1 hour after ACTH stimulation (\u226518.1 \u03bcg/dL), 9 had low basal cortisol on Day 1, and in 2 subjects the baseline value was missing.\nFrom the 19 subjects with low basal cortisol at Week 48, in 15 subjects, the Week 48 serum cortisol levels returned to normal (\u2265248 nmol/L) after repeat serum basal cortisol testing or was normal after ACTH stimulation testing (\u2265500 nmol/L). In 4 subjects, the serum cortisol levels remained low after repeat serum basal cortisol testing or after ACTH stimulation testing. At Week 48, 6 subjects had normal (basal) cortisol (\u22659 ug/dL) and the Week 48 result was not available for 1 subject."
+        }
+      ],
+      "drug_name": "EDURANT",
+      "question": "What adverse reactions have been reported for EDURANT?",
+      "question_id": "bf310eb9af209d12",
+      "question_type": "factual",
+      "references": [
+        "6 ADVERSE REACTIONS"
+      ],
+      "set_id": "03880372-2c68-45c6-a53a-f420c49541d6"
+    },
+    {
+      "answer": "- Strong CYP2D6 Inhibitors: Maximum recommended dosage is 17.8 mg once daily \n- Strong CYP3A4 Inducers: Decreased exposure of WAKIX; consider dosage adjustment \n- Sensitive CYP3A4 Substrates (including hormonal contraceptives): WAKIX may reduce effectiveness of sensitive CYP3A4 substrates. Use an alternative non-hormonal contraceptive method during treatment with WAKIX and for at least 21 days after discontinuation of treatment",
+      "citations": [
+        "2.5",
+        "7.1",
+        "8.3"
+      ],
+      "context": [
+        {
+          "section_label": "2.5",
+          "section_title": "2.5\tDosage Modifications for Concomitant Use with Strong CYP2D6 Inhibitors and Strong CYP3A4 Inducers",
+          "text": "Coadministration with Strong CYP2D6 Inhibitors\n- Adult patients: Initiate WAKIX at 8.9 mg once daily and increase after 7 days to a maximum recommended dosage of 17.8 mg once daily\n- Pediatric patients (6 years and older) weighing <40 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to a maximum recommended dosage of 8.9 mg once daily\n- Pediatric patients (6 years and older) weighing \u226540 kg: Initiate WAKIX at 4.45 mg once daily and increase after 7 days to 8.9 mg once daily. May increase after another 7 days to a maximum recommended dosage of 17.8 mg once daily\n- Adult and pediatric patients on a stable dose of WAKIX: Reduce the WAKIX dose by half upon initiating strong CYP2D6 inhibitors"
+        },
+        {
+          "section_label": "2.5",
+          "section_title": "2.5\tDosage Modifications for Concomitant Use with Strong CYP2D6 Inhibitors and Strong CYP3A4 Inducers",
+          "text": "Coadministration with Strong CYP3A4 Inducers\nConcomitant use of WAKIX with strong CYP3A4 inducers decreases pitolisant exposure by 50%. Assess for loss of efficacy after initiation of a strong CYP3A4 inducer.\nFor adult and pediatric patients stable on WAKIX 8.9 mg or 17.8 mg once daily, increase the dose of WAKIX to double the original daily dose (i.e., 17.8 mg or 35.6 mg, respectively) over 7 days.\nIf concomitant dosing of a strong CYP3A4 inducer is discontinued, decrease WAKIX dosage by half ."
+        },
+        {
+          "section_label": "8.3",
+          "section_title": "8.3 Females and Males of Reproductive Potential",
+          "text": "Contraception\nWAKIX may reduce the effectiveness of hormonal contraceptives. Patients using hormonal contraception should be advised to use an alternative non-hormonal contraceptive method during treatment with WAKIX and for at least 21 days after discontinuing treatment ."
+        }
+      ],
+      "drug_name": "Wakix",
+      "question": "What important drug interactions are noted for Wakix?",
+      "question_id": "4fca227a924f7940",
+      "question_type": "factual",
+      "references": [
+        "7 DRUG INTERACTIONS"
+      ],
+      "set_id": "8daa5562-824e-476c-9652-26ceef3d4b0e"
+    },
+    {
+      "answer": "- Milnacipran hydrochloride\u00a0is unlikely to be involved in clinically significant pharmacokinetic drug interactions. \n- Pharmacodynamic interactions of milnacipran hydrochloride\u00a0with other drugs can occur.",
+      "citations": [
+        "7"
+      ],
+      "context": [
+        {
+          "section_label": "7",
+          "section_title": "7\u00a0 DRUG INTERACTIONS",
+          "text": "Milnacipran undergoes minimal CYP450 related metabolism, with the majority of the dose excreted unchanged in urine (55%) and has a low binding to plasma proteins (13%). In vitro and in vivo studies showed that milnacipran hydrochloride\u00a0is unlikely to be involved in clinically significant pharmacokinetic drug interactions ."
+        },
+        {
+          "section_label": "7.1",
+          "section_title": "7.1 Monoamine Oxidase Inhibitors (MAOIs)",
+          "text": "The concomitant use of SSRIs and SNRIs, including milnacipran hydrochloride, with MAOIs increases the risk of serotonin syndrome. The use of MAOIs intended to treat psychiatric disorders with milnacipran hydrochloride\u00a0or within 5 days of stopping treatment with milnacipran hydrochloride\u00a0is contraindicated. The use of milnacipran hydrochloride\u00a0within 14 days of stopping an MAOI intended to treat psychiatric disorders is also contraindicated. In addition, do not initiate milnacipran hydrochloride\u00a0in a patient who is being treated with MAOIs such as linezolid or intravenous methylene blue. No reports involved the administration of methylene blue by other routes (such as oral tablets or local tissue injection). If it is necessary to initiate treatment with a MAOI such as linezolid or intravenous methylene blue in a patient taking milnacipran hydrochloride, discontinue milnacipran hydrochloride\u00a0before initiating treatment with the MAOI ."
+        },
+        {
+          "section_label": "7.2",
+          "section_title": "7.2 Serotonergic Drugs",
+          "text": "Serotonin syndrome can occur with use of milnacipran hydrochloride\u00a0and other serotonergic drugs (other SNRIs, SSRIs, triptans, tricyclic antidepressants, opioids, lithium, tryptophan, buspirone, amphetamines, and St. John\u2019s Wort), or with drugs that impair metabolism of serotonin (i.e. monoamine oxidase inhibitors). Advise patients of the signs and symptoms associated with serotonin syndrome and to seek medical care immediately if they experience these symptoms ."
+        },
+        {
+          "section_label": "7.3",
+          "section_title": "7.3 Triptans",
+          "text": "There have been rare post-marketing reports of serotonin syndrome with use of an SSRI and a triptan. If concomitant treatment of milnacipran hydrochloride\u00a0with a triptan is clinically warranted, careful observation of the patient is advised, particularly during treatment initiation and dose increases ."
+        },
+        {
+          "section_label": "7.4",
+          "section_title": "7.4 Catecholamines",
+          "text": "Milnacipran hydrochloride\u00a0inhibits the reuptake of norepinephrine. Therefore, concomitant use of milnacipran hydrochloride\u00a0with epinephrine and norepinephrine may be associated with paroxysmal hypertension and possible arrhythmia ."
+        },
+        {
+          "section_label": "7.5",
+          "section_title": "7.5 CNS-active drugs",
+          "text": "Given the primary CNS effects of milnacipran hydrochloride, use caution when it is taken in combination with other centrally acting drugs, including those with a similar mechanism of action.\nClomipramine: In a drug-drug interaction study, an increase in euphoria and postural hypotension was observed in patients who switched from clomipramine to milnacipran hydrochloride."
+        },
+        {
+          "section_label": "7.6",
+          "section_title": "7.6 Clinically Important Interactions with Select Cardiovascular Agents",
+          "text": "Digoxin: Use of milnacipran hydrochloride\u00a0concomitantly with digoxin may be associated with potentiation of adverse hemodynamic effects. Postural hypotension and tachycardia have been reported in combination therapy with intravenously administered digoxin (1 mg). Avoid co-administration of milnacipran hydrochloride\u00a0and intravenous digoxin\u00a0.\nClonidine: Because milnacipran hydrochloride\u00a0inhibits norepinephrine reuptake, co-administration with clonidine may inhibit clonidine\u2019s anti-hypertensive effect."
+        },
+        {
+          "section_label": "7.7",
+          "section_title": "7.7 Drugs that Interfere with Hemostasis",
+          "text": "Concomitant use of milnacipran hydrochloride\u00a0with an antiplatelet or anticoagulant drug (e.g., NSAIDs, aspirin, and warfarin) may potentiate the risk of bleeding. This may be due to the effect of milnacipran hydrochloride\u00a0on the release of serotonin by platelets. Closely monitor for bleeding for patients receiving an antiplatelet or anticoagulant drug when milnacipran hydrochloride\u00a0is initiated or discontinued ."
+        }
+      ],
+      "drug_name": "Milnacipran HCl",
+      "question": "What important drug interactions are noted for Milnacipran HCl?",
+      "question_id": "c8e8afd47cbee25e",
+      "question_type": "factual",
+      "references": [
+        "7\u00a0 DRUG INTERACTIONS"
+      ],
+      "set_id": "eaa14195-1b9c-423c-9412-d2fe0857e39d"
+    }
+  ],
+  "seed": 20260701,
+  "source_data": {
+    "debug_subset": "qa_toy.jsonl",
+    "final_eval_inputs": [
+      "labels.jsonl",
+      "qa.jsonl"
+    ],
+    "private_field_policy": "Verifier-only QA scoring fields are not exposed to agents.",
+    "source_files": [
+      {
+        "description": "FDA drug-label documents with raw label text and chunked sections.",
+        "path": "labels.jsonl",
+        "role": "primary label corpus used to build public label files"
+      },
+      {
+        "description": "QA records with public question metadata and verifier-only scoring fields.",
+        "path": "qa.jsonl",
+        "role": "primary QA corpus used to select questions and private verifier scoring data"
+      },
+      {
+        "description": "small debug subset used for inspection and smoke testing the source format.",
+        "path": "qa_toy.jsonl",
+        "role": "debug subset only; not used for final sampled benchmark tasks"
+      }
+    ]
+  },
+  "task_name": "fda-label-factual-qa",
+  "task_type": "factual"
+}

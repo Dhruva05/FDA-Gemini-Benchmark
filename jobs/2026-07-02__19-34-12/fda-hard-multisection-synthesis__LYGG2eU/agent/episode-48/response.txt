@@ -1,0 +1,6 @@
+{
+  "analysis": "The workspace is clean, the temporary files are removed, and `/workspace/answers.json` contains the exactly formatted answers, verified citations, and correct schema. We are ready to complete the task.",
+  "plan": "I will mark the task as complete.",
+  "commands": [],
+  "task_complete": true
+}

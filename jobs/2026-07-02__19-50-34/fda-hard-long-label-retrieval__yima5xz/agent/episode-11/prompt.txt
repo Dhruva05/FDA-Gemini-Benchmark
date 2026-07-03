@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 110 (char 111) | Content preview: '{\n  "analysis": "Okay, so there\'s no pre-existing history or extra packages. Let\'s think about the p'...
+
+Please fix these issues and provide a proper JSON response.

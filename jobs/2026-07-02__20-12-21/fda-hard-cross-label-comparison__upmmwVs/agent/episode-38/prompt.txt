@@ -1,0 +1,41 @@
+Current Terminal Screen:
+Hepatotoxicity:
+Acetaminophen has been associated with cases of acute liver failure, at times resulting in liver transplant and death. Most of the cases of liver injury are ass
+ociated with the use of acetaminophen at doses that exceed 4000 milligrams per day, and often involve more than one acetaminophen-containing product. The excess
+ive intake of acetaminophen may be intentional to cause self-harm or unintentional as patients attempt to obtain more pain relief or unknowingly take other acet
+aminophen-containing products.
+The risk of acute liver failure is higher in individuals with underlying liver disease and in individuals who ingest alcohol while taking acetaminophen.
+Instruct patients to look for acetaminophen or APAP on package labels and not to use more than one product that contains acetaminophen. Instruct patients to see
+k medical attention immediately upon ingestion of more than 4000 milligrams of acetaminophen per day, even if they feel well.   Serious skin reactions:
+Rarely, acetaminophen may cause serious skin reactions such as acute generalized exanthematous pustulosis (AGEP), Stevens-Johnson Syndrome (SJS), and toxic epid
+ermal necrolysis (TEN), which can be fatal. Patients should be informed about the signs of serious skin reactions, and use of the drug should be discontinued at
+ the first appearance of skin rash or any other sign of hypersensitivity.  Death Related to Ultra-Rapid Metabolism of Codeine to Morphine:
+Respiratory depression and death have occurred in children who received codeine in the postoperative period following tonsillectomy and/or adenoidectomy and had
+ evidence of being ultra-rapid metabolizers of codeine (i.e., multiple copies of the gene for cytochrome P450 isoenzyme 2D6 or high morphine concentrations). De
+aths have also occurred in nursing infants who were exposed to high levels of morphine in breast milk because their mothers were ultra-rapid metabolizers of cod
+eine.
+Some individuals may be ultra-rapid metabolizers because of a specific CYP2D6 genotype (gene duplications denoted as *1/*1xN or *1/*2xN). The prevalence of this
+ CYP2D6 phenotype varies widely and has been estimated at 0.5 to 1% in Chinese and Japanese, 0.5 to 1% in Hispanics, 1 to 10% in Caucasians, 3% in African Ameri
+cans, and 16 to 28% in North Africans, Ethiopians, and Arabs. Data are not available for other ethnic groups. These individuals convert codeine into its active
+metabolite, morphine, more rapidly and completely than other people. This rapid conversion results in higher than expected serum morphine levels. Even at labele
+d dosage regimens, individuals who are ultra-rapid metabolizers may have life-threatening or fatal respiratory depression or experience signs of overdose (such
+as extreme sleepiness, confusion, or shallow breathing).
+Children with obstructive sleep apnea who are treated with codeine for post-tonsillectomy and/or adenoidectomy pain may be particularly sensitive to the respira
+tory depressant effects of codeine that has been rapidly metabolized to morphine. Codeine-containing products are contraindicated for post-operative pain manage
+ment in all pediatric patients undergoing tonsillectomy and/or adenoidectomy.
+When prescribing codeine-containing products, healthcare providers should choose the lowest effective dose for the shortest period of time and inform patients a
+nd caregivers about these risks and the signs of morphine overdose.  Hypersensitivity/anaphylaxis:
+There have been post-marketing reports of hypersensitivity and anaphylaxis associated with use of acetaminophen. Clinical signs included swelling of the face, m
+outh, and throat, respiratory distress, urticaria, rash, pruritus, and vomiting. There were infrequent reports of life-threatening anaphylaxis requiring emergen
+cy medical attention. Instruct patients to discontinue Acetaminophen and Codeine Phosphate Tablets, USP immediately and seek medical care if they experience the
+se symptoms. Do not prescribe Acetaminophen and Codeine Phosphate Tablets, USP for patients with acetaminophen allergy.
+In the presence of head injury or other intracranial lesions, the respiratory depressant effects of codeine and other narcotics may be markedly enhanced, as wel
+l as their capacity for elevating cerebrospinal fluid pressure. Narcotics also produce other CNS depressant effects such as drowsiness, that may further obscure
+ the clinical course of the patients with head injuries.
+Codeine or other narcotics may obscure signs on which to judge the diagnosis or clinical course of patients with acute abdominal conditions.
+Codeine is habit-forming and potentially abusable. Consequently, the extended use of this product is not recommended.
+Acetaminophen and codeine phosphate tablets contain sodium metabisulfite, a sulfite that may cause allergic-type reactions including anaphylactic symptoms and l
+ife-threatening or less severe asthmatic episodes in certain susceptible people. The overall prevalence of sulfite sensitivity in the general population is unkn
+own and probably low. Sulfite sensitivity is seen more frequently in asthmatic than in nonasthmatic people.
+...
+root@7e48d58e23f3:/workspace#

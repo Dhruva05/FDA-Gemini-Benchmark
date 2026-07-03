@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# python3 -c "import json; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[0]
+> for i in range(22, 36):
+>     print(f'PASSAGE_{i:04d}:', l['chunks'][i].strip().split('\n')[0][:80])
+> f.close()"
+PASSAGE_0022: ↑ alfuzosin
+PASSAGE_0023: ↑ tamsulosin
+PASSAGE_0024: ↑ ranolazine
+PASSAGE_0025: ↑ antiarrhythmic
+PASSAGE_0026: ↑ antiarrhythmic
+PASSAGE_0027: ↓ nirmatrelvir/ritonavir
+PASSAGE_0028: Anticancer drugs
+PASSAGE_0029: ↑ anticancer drugs
+PASSAGE_0030: ↑↓ warfarin
+PASSAGE_0031: ↑ rivaroxaban
+PASSAGE_0032: ↑ dabigatran
+PASSAGE_0033: ↑ apixaban
+PASSAGE_0034: ↓ nirmatrelvir/ritonavir
+PASSAGE_0035: ↑ anticonvulsant
+root@a1980178bfd8:/workspace#

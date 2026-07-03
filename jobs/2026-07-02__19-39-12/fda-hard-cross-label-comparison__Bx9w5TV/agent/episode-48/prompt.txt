@@ -1,0 +1,56 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+>
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     labels = {}
+>     for line in f:
+>         data = json.loads(line)
+>         labels[data["set_id"]] = data
+>
+> with open("/workspace/answers.json") as f:
+>     answers_data = json.load(f)
+>
+> for a in answers_data["answers"]:
+>     qid = a["qid"]
+>     status = a["status"]
+>     print(f"Checking {qid} ({status})...")
+>     for cit in a["citations"]:
+>         sid = cit["set_id"]
+>         pid = cit["passage_id"]
+>         quote = cit["supporting_quote"]
+>         if sid not in labels:
+>             print(f"  ERROR: set_id {sid} not found in labels!")
+>             continue
+>         label = labels[sid]
+>         import re
+>         match = re.match(r"PASSAGE_(\d+)", pid)
+>         if not match:
+>             print(f"  ERROR: invalid passage_id format {pid}!")
+>             continue
+>         idx = int(match.group(1))
+>         if idx >= len(label["chunks"]):
+>             print(f"  ERROR: passage index {idx} out of range for {sid}!")
+>             continue
+>         chunk = label["chunks"][idx]
+>         if quote not in chunk:
+>             print(f"  ERROR: quote {repr(quote)} not found in passage {pid}!")
+>             print(f"    Passage content: {repr(chunk)}")
+>         else:
+>             print(f"  Citation OK: {pid} on {sid}")
+> '
+Checking cross-0df97f1e2f1e4c (NOT_FOUND)...
+Checking cross-e9a79ba825959d (ANSWERED)...
+  Citation OK: PASSAGE_0001 on ae6e79c0-a307-4888-b647-1b7be4cb9127
+  Citation OK: PASSAGE_0012 on 08c9d3dd-717b-0148-e054-00144ff8d46c
+Checking cross-7421ed8b98b8f9 (ANSWERED)...
+  Citation OK: PASSAGE_0011 on 36adb32c-638c-4d6e-b66a-1a1c35174ce6
+  Citation OK: PASSAGE_0014 on 6972d9c1-36ec-4246-bf7b-13206d5952c3
+Checking cross-a4153187ea298f (ANSWERED)...
+  Citation OK: PASSAGE_0017 on 8e396b27-b44a-4aa9-805b-086395444b5f
+  Citation OK: PASSAGE_0006 on 42e49120-6f3f-11db-9fe1-0800200c9a66
+Checking cross-893c71f570b542 (ANSWERED)...
+  Citation OK: PASSAGE_0008 on dcc29902-1fe6-4713-947e-335503959464
+  Citation OK: PASSAGE_0033 on 3efa1e5e-5a14-4724-a2ca-25702f10faed
+root@2809f9ae2d53:/workspace#

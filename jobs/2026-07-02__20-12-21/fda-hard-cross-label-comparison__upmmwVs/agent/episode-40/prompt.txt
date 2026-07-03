@@ -1,0 +1,40 @@
+New Terminal Output:
+
+...
+root@7e48d58e23f3:/workspace# cat << 'EOF' > print_q_dosing.py
+> import json
+>
+> with open('/workspace/data/public/questions.jsonl', 'r') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> with open('/workspace/data/public/labels.jsonl', 'r') as f:
+>     labels = {data['set_id']: data for data in (json.loads(line) for line in f)}
+>
+> for i, q in enumerate(questions):
+>     print('=== QUESTION ' + str(i) + ': ' + q['qid'] + ' (' + q['drug_name'] + ') ===')
+>     for set_id in q['comparison_set_ids']:
+>         label = labels[set_id]
+>         print('  DRUG: ' + label['drug_name'] + ' (' + set_id + ')')
+>         found_any = False
+>         for idx, chunk in enumerate(label['chunks']):
+>             lower_chunk = chunk.lower()
+>             if 'dosage and administration' in lower_chunk or 'directions' in lower_chunk or 'directions for use' in lower_chunk:
+>                 print('    PASSAGE_' + f'{idx:04d}' + ':')
+>                 print(chunk)
+>                 print('-'*30)
+>                 found_any = True
+>         if not found_any:
+>             print('    (No explicit section found. Showing chunks with dose/tablet/take)')
+>             count = 0
+>             for idx, chunk in enumerate(label['chunks']):
+>                 lower_chunk = chunk.lower()
+>                 if any(k in lower_chunk for k in ['dose', 'tablet', 'take', 'capsule', 'rinse']):
+>                     print('    PASSAGE_' + f'{idx:04d}' + ':')
+>                     print(chunk)
+>                     print('-'*30)
+>                     count += 1
+>                     if count >= 3:
+>                         break
+> EOF
+root@7e48d58e23f3:/workspace# python3 print_q_dosing.py > clean_dosing_structured.txt
+root@7e48d58e23f3:/workspace#

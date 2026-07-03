@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 386 (char 387) | Content preview: '{\n  "analysis": "No explicit maximum daily dose statement exists in the CELECOXIB chunks. This means'...
+
+Please fix these issues and provide a proper JSON response.

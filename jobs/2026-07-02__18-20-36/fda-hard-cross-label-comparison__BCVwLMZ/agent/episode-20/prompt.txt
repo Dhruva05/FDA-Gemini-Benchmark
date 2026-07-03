@@ -1,0 +1,30 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# cat << 'EOF' > print_full_candidates.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in (json.loads(line) for line in f)}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print(f"==================== QUESTION: {q['qid']} ====================")
+>     print(f"Drug: {q['drug_name']}")
+>     for set_id in q['comparison_set_ids']:
+>         l = labels[set_id]
+>         print(f"*** Label: {l['drug_name']} ({set_id}) ***")
+>         for i, chunk in enumerate(l['chunks']):
+>             lower = chunk.lower()
+>             # Print chunks that mention dosage, directions, administration, or are short/relevant
+>             if any(w in lower for w in ['take', 'tablet', 'dose', 'dosing', 'directions', 'administration', 'capsule', 'mg', 'ml', 'tsp', 'tbsp', 'swish', 'ri
+nse', 'adults', 'children', 'geriatric', 'pediatric']):
+>                 if len(chunk) < 1500 and not any(w in lower for w in ['carcinogenesis', 'mutagenesis', 'impairment of fertility', 'clinical trials', 'adverse
+reactions', 'drug interactions']):
+>                     print(f"  PASSAGE_{i:04d}:")
+>                     print(chunk)
+>                     print("-" * 30)
+> EOF
+root@faa94ec9460f:/workspace# python3 print_full_candidates.py > full_candidates.txt
+root@faa94ec9460f:/workspace#

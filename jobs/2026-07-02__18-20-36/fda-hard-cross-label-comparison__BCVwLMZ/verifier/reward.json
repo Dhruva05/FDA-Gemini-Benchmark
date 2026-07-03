@@ -1,0 +1,488 @@
+{
+  "aggregate_score": 0.603685,
+  "binary_pass": false,
+  "critical_errors": [],
+  "fractional_reward": 0.603685,
+  "num_answered": 5,
+  "num_missing": 0,
+  "num_questions": 5,
+  "num_schema_errors": 0,
+  "overall_fractional_score": 0.603685,
+  "pass_threshold": 0.85,
+  "passed": false,
+  "per_question": [
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "wrong ANSWERED/NOT_FOUND status",
+        "refused an answerable question",
+        "comparison structured_fields omit expected label-specific qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-0df97f1e2f1e4c",
+      "score": 0.442857,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "refused an answerable question",
+          "score": 0.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.464286
+        },
+        "refusal": {
+          "reason": "wrong ANSWERED/NOT_FOUND status",
+          "score": 0.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.464286,
+        "qid_present": 1.0,
+        "refusal_behavior": 0.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.694",
+        "comparison structured_fields omit expected label-specific qualifiers",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-e9a79ba825959d",
+      "score": 0.729598,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.85
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.694",
+          "score": 0.69375
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.371429
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.69375,
+        "citation_support": 0.85,
+        "clinical_qualifiers": 0.371429,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.431",
+        "comparison structured_fields omit expected label-specific qualifiers",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-7421ed8b98b8f9",
+      "score": 0.57413,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.7
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.431",
+          "score": 0.43125
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.240964
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.43125,
+        "citation_support": 0.7,
+        "clinical_qualifiers": 0.240964,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.519",
+        "comparison structured_fields omit expected label-specific qualifiers",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-a4153187ea298f",
+      "score": 0.649135,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.85
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.519",
+          "score": 0.51875
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.275362
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.51875,
+        "citation_support": 0.85,
+        "clinical_qualifiers": 0.275362,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.475",
+        "comparison structured_fields omit expected label-specific qualifiers",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-893c71f570b542",
+      "score": 0.622706,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.85
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.475",
+          "score": 0.475
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.21978
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.475,
+        "citation_support": 0.85,
+        "clinical_qualifiers": 0.21978,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    }
+  ],
+  "question_scores": [
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "wrong ANSWERED/NOT_FOUND status",
+        "refused an answerable question",
+        "comparison structured_fields omit expected label-specific qualifiers"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-0df97f1e2f1e4c",
+      "score": 0.442857,
+      "subcriteria": {
+        "citations": {
+          "reason": "",
+          "score": 1.0
+        },
+        "content": {
+          "reason": "refused an answerable question",
+          "score": 0.0
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.464286
+        },
+        "refusal": {
+          "reason": "wrong ANSWERED/NOT_FOUND status",
+          "score": 0.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.0,
+        "citation_support": 1.0,
+        "clinical_qualifiers": 0.464286,
+        "qid_present": 1.0,
+        "refusal_behavior": 0.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.694",
+        "comparison structured_fields omit expected label-specific qualifiers",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-e9a79ba825959d",
+      "score": 0.729598,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.85
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.694",
+          "score": 0.69375
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.371429
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.69375,
+        "citation_support": 0.85,
+        "clinical_qualifiers": 0.371429,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.431",
+        "comparison structured_fields omit expected label-specific qualifiers",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-7421ed8b98b8f9",
+      "score": 0.57413,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.7
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.431",
+          "score": 0.43125
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.240964
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.43125,
+        "citation_support": 0.7,
+        "clinical_qualifiers": 0.240964,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.519",
+        "comparison structured_fields omit expected label-specific qualifiers",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-a4153187ea298f",
+      "score": 0.649135,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.85
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.519",
+          "score": 0.51875
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.275362
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.51875,
+        "citation_support": 0.85,
+        "clinical_qualifiers": 0.275362,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    },
+    {
+      "critical_errors": [],
+      "diagnostics": [
+        "answer has low semantic overlap with gold; score=0.475",
+        "comparison structured_fields omit expected label-specific qualifiers",
+        "citations miss expected label, passage, quote, or evidence support"
+      ],
+      "expected_status": "ANSWERED",
+      "passed": false,
+      "qid": "cross-893c71f570b542",
+      "score": 0.622706,
+      "subcriteria": {
+        "citations": {
+          "reason": "citations miss expected label, passage, quote, or evidence support",
+          "score": 0.85
+        },
+        "content": {
+          "reason": "answer has low semantic overlap with gold; score=0.475",
+          "score": 0.475
+        },
+        "qid_set": {
+          "reason": "",
+          "score": 1.0
+        },
+        "qualifiers": {
+          "reason": "comparison structured_fields omit expected label-specific qualifiers",
+          "score": 0.21978
+        },
+        "refusal": {
+          "reason": "",
+          "score": 1.0
+        },
+        "schema": {
+          "reason": "",
+          "score": 1.0
+        }
+      },
+      "subscores": {
+        "answer_content": 0.475,
+        "citation_support": 0.85,
+        "clinical_qualifiers": 0.21978,
+        "qid_present": 1.0,
+        "refusal_behavior": 1.0,
+        "schema": 1.0
+      }
+    }
+  ],
+  "reward": 0.603685,
+  "schema_errors": [],
+  "task_name": "fda-hard-cross-label-comparison",
+  "weights": {
+    "answer_content": 0.35,
+    "citation_support": 0.25,
+    "clinical_qualifiers": 0.2,
+    "qid_present": 0.05,
+    "refusal_behavior": 0.1,
+    "schema": 0.05
+  }
+}

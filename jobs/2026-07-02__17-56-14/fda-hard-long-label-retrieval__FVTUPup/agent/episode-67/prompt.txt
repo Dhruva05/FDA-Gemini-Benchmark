@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 37 (char 38) | Content preview: '{\n  "analysis": "Ah! The quote I used:\n`\\"Initiation of PAXLOVID, which contains ritonavir, a strong'...
+
+Please fix these issues and provide a proper JSON response.

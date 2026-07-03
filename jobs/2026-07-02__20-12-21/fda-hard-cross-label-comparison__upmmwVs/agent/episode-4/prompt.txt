@@ -1,0 +1,50 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > explore_labels.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl', 'r') as f:
+>     for i, line in enumerate(f):
+>         data = json.loads(line)
+>         print(f"Row {i}: set_id={data.get('set_id')}, drug_name={data.get('drug_name')}")
+>         if 'chunks' in data:
+>             chunks = data['chunks']
+>             print(f"  chunks type: {type(chunks)}, length: {len(chunks)}")
+>             if len(chunks) > 0:
+>                 print(f"  first chunk type: {type(chunks[0])}")
+>                 print(f"  first chunk (truncated): {str(chunks[0])[:200]}")
+>         if i >= 3:
+>             break
+> EOF
+root@7e48d58e23f3:/workspace# python3 explore_labels.py
+Row 0: set_id=ea5d0e55-2191-4094-b082-24b317f95752, drug_name=12HR Allergy Relief
+  chunks type: <class 'list'>, length: 13
+  first chunk type: <class 'str'>
+  first chunk (truncated): Uses
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- sneezing
+- itchy, watery eyes
+- itching of the nose or throat
+Row 1: set_id=bba4e7c8-db8e-4522-915c-48ee809e3bce, drug_name=365 Whole Foods Market Loratadine
+  chunks type: <class 'list'>, length: 15
+  first chunk type: <class 'str'>
+  first chunk (truncated): untitled
+temporarily relieves these symptoms due to hay fever or other upper respiratory allergies:
+- runny nose
+- itchy, watery eyes
+- sneezing
+- itching of the nose or throat
+Row 2: set_id=ae6e79c0-a307-4888-b647-1b7be4cb9127, drug_name=Acamprosate Calcium
+  chunks type: <class 'list'>, length: 59
+  first chunk type: <class 'str'>
+  first chunk (truncated): 1 INDICATIONS AND USAGE
+Acamprosate calcium delayed-release tablets are indicated for the maintenance of abstinence from alcohol in patients with alcohol dependence who are abstinent a
+t treatment init
+Row 3: set_id=08c9d3dd-717b-0148-e054-00144ff8d46c, drug_name=Acclean Chlorhexidine Gluconate 0.12% Oral Rinse
+  chunks type: <class 'list'>, length: 18
+  first chunk type: <class 'str'>
+  first chunk (truncated): untitled
+ACCLEAN is an oral rinse containing 0.12% chlorhexidine gluconate (1,1’-hexamethylene bis 5-(p-chlorphenyl) biguanide]di-D-gluconate) in a base containing water
+, 11.6% alcohol, glycerin, PEG-
+root@7e48d58e23f3:/workspace#

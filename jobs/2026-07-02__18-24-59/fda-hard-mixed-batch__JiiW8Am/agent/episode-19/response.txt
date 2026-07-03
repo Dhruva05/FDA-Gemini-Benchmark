@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at the dosage and administration section more broadly. Let's list all passages in Lopinavir-Ritonavir from 0 to 15 to find the complete text of section 2 \"DOSAGE AND ADMINISTRATION\".",
+  "plan": "I will run a python script to print the first 15 passages of Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        obj = json.loads(line)\n        if obj[\"drug_name\"] == \"Lopinavir-Ritonavir\":\n            for i in range(15):\n                print(f\"PASSAGE_{i:04d}: {obj[\"chunks\"][i][:300]}\")\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "analysis": "Ah, the file is a JSONL file, so I need to read line by line or load each line. Let's fix that.",
+  "plan": "I will write a python command to read the first line and print its `label_raw` field.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; line = open('/workspace/data/public/labels.jsonl').readline(); data = json.loads(line); print(data['label_raw'][:3000])\"\n",
+      "duration": 0.5
+    }
+  ]
+}

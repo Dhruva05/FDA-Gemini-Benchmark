@@ -1,0 +1,19 @@
+New Terminal Output:
+
+root@2809f9ae2d53:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         if data["set_id"] == "42e49120-6f3f-11db-9fe1-0800200c9a66":
+>             for i in [4, 5, 9]:
+>                 print(f"Actoplus Met PASSAGE_{i:04d}: {repr(data["chunks"][i])}")
+> '
+Actoplus Met PASSAGE_0004: '2 DOSAGE AND ADMINISTRATION\n- Obtain liver tests (serum alanine and aspartate aminotransferases, alkaline phosphatase, and total bi
+lirubin) prior to initiating ACTOPLUS MET\n- ACTOPLUS MET contains 15 mg of pioglitazone and 850 mg of metformin hydrochloride (HCl) in each tablet.\n- Take ACT
+OPLUS MET with meals to reduce gastrointestinal adverse reactions with metformin\n- If a dose is missed, do not double the next dose.'
+Actoplus Met PASSAGE_0005: "Recommended Starting Dosage Based on Current Regimen\nIndividualize the starting dosage of ACTOPLUS MET based on the patient's curre
+nt regimen and the available strength of ACTOPLUS MET ."
+Actoplus Met PASSAGE_0009: 'The maximum recommended dosage of ACTOPLUS MET is one tablet (15 mg of pioglitazone and 850 mg of metformin HCl) once daily when use
+d in combination with gemfibrozil or other strong CYP2C8 inhibitors .'
+root@2809f9ae2d53:/workspace#

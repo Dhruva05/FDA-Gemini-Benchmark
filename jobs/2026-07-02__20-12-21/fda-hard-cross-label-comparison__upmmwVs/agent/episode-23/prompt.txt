@@ -1,0 +1,142 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# cat << 'EOF' > get_full_chunks.py
+> import json
+>
+> with open('/workspace/data/public/questions.jsonl', 'r') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> with open('/workspace/data/public/labels.jsonl', 'r') as f:
+>     labels = {data['set_id']: data for data in (json.loads(line) for line in f)}
+>
+> # Let's inspect each question one by one to avoid huge outputs
+> for i, q in enumerate(questions):
+>     print(f"=== QUESTION {i}: {q['drug_name']} ===")
+>     print(q['question'])
+>     for set_id in q['comparison_set_ids']:
+>         label = labels[set_id]
+>         print(f"  Label: {label['drug_name']} ({set_id})")
+>         for idx, chunk in enumerate(label['chunks']):
+>             lower_chunk = chunk.lower()
+>             # Look for chunks with directions, dosing, dosage, administration, etc.
+>             if 'directions' in lower_chunk or 'dosage and administration' in lower_chunk or 'dosing' in lower_chunk or 'adults and children' in lower_chunk or
+ 'how to use' in lower_chunk:
+>                 print(f"    PASSAGE_{idx:04d}:")
+>                 print(chunk)
+>                 print("."*40)
+>     print("="*60)
+> EOF
+root@7e48d58e23f3:/workspace# python3 get_full_chunks.py
+=== QUESTION 0: 12HR Allergy Relief vs 365 Whole Foods Market Loratadine ===
+Compare the dosing instructions for 12HR Allergy Relief and 365 Whole Foods Market Loratadine. For each label, report dose or strength, route, frequency, popula
+tion, and maximum daily dose if stated. Cite one passage from each label.
+  Label: 12HR Allergy Relief (ea5d0e55-2191-4094-b082-24b317f95752)
+    PASSAGE_0007:
+adults and children 12 years of age and over take one 60 mg tablet with water every 12 hours; do not take more than 2 tablets in 24 hours
+........................................
+  Label: 365 Whole Foods Market Loratadine (bba4e7c8-db8e-4522-915c-48ee809e3bce)
+============================================================
+=== QUESTION 1: Acamprosate Calcium vs Acclean Chlorhexidine Gluconate 0.12% Oral Rinse ===
+Compare the dosing instructions for Acamprosate Calcium and Acclean Chlorhexidine Gluconate 0.12% Oral Rinse. For each label, report dose or strength, route, fr
+equency, population, and maximum daily dose if stated. Cite one passage from each label.
+  Label: Acamprosate Calcium (ae6e79c0-a307-4888-b647-1b7be4cb9127)
+    PASSAGE_0001:
+2 DOSAGE AND ADMINISTRATION
+The recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should total 666 mg) taken three times daily. A lower dose
+may be effective in some patients.
+Although dosing may be done without regard to meals, dosing with meals was employed during clinical trials and is suggested in those patients who regularly eat
+three meals daily.
+Treatment with acamprosate calcium delayed-release tablets should be initiated as soon as possible after the period of alcohol withdrawal, when the patient has
+achieved abstinence, and should be maintained if the patient relapses. Acamprosate calcium delayed-release tablets should be used as part of a comprehensive psy
+chosocial treatment program.
+........................................
+    PASSAGE_0040:
+12.3    Absorption
+The absolute bioavailability of acamprosate calcium after oral administration is about 11%. Steady-state plasma concentrations of acamprosate are reached within
+ 5 days of dosing. Steady-state peak plasma concentrations after acamprosate calcium doses of 2 x 333 mg tablets three times daily average 350 ng/mL and occur a
+t 3 to 8 hours post-dose. Coadministration of acamprosate calcium with food decreases bioavailability as measured by Cmax and AUC, by approximately 42% and 23%,
+ respectively. The food effect on absorption is not clinically significant and no adjustment of dose is necessary.
+........................................
+    PASSAGE_0043:
+After oral dosing of 2 x 333 mg of acamprosate calcium, the terminal half-life ranges from approximately 20 to 33 hours. Following oral administration of acampr
+osate calcium, the major route of excretion is via the kidneys as acamprosate.
+........................................
+  Label: Acclean Chlorhexidine Gluconate 0.12% Oral Rinse (08c9d3dd-717b-0148-e054-00144ff8d46c)
+    PASSAGE_0016:
+REF 112-6720
+DIRECTIONS FOR USE: Swish one tablespoon (15ml) in mouth undiluted for 30 seconds, then
+spit out. Use after breakfast and before bedtime. Or, use as prescribed.
+NOTE: to minimize medicinal taste, do not rinse with water immediately after use.
+........................................
+============================================================
+=== QUESTION 2: ACETAMINOPHEN with CODEINE vs AcetaZOLAMIDE ===
+Compare the dosing instructions for ACETAMINOPHEN with CODEINE and AcetaZOLAMIDE. For each label, report dose or strength, route, frequency, population, and max
+imum daily dose if stated. Cite one passage from each label.
+  Label: ACETAMINOPHEN with CODEINE (36adb32c-638c-4d6e-b66a-1a1
+[... output limited to 10000 bytes; 71 interior bytes omitted ...]
+n the general population. However, the small size of
+the registry is insufficient to evaluate the risk for less common defects or to
+permit reliable or definitive conclusions regarding the safety of acyclovir in
+pregnant women and their developing fetuses. Acyclovir should be used during
+pregnancy only if the potential benefit justifies the potential risk to the
+fetus.
+Acyclovir concentrations have been documented in breast milk in 2
+women following oral administration of acyclovir and ranged from 0.6 to 4.1
+times corresponding plasma levels. These concentrations would potentially expose
+the nursing infant to a dose of acyclovir up to 0.3 mg/kg per day. Acyclovir
+should be administered to a nursing mother with caution and only when
+indicated.
+Safety and effectiveness of oral formulations of acyclovir in
+pediatric patients younger than 2 years of age have not been established.
+Of 376 subjects who received acyclovir in a clinical study of
+herpes zoster treatment in immunocompetent subjects greater than or equal to 50
+years of age, 244 were 65 and over while 111 were 75 and over. No overall
+differences in effectiveness for time to cessation of new lesion formation or
+time to healing were reported between geriatric subjects and younger adult
+subjects. The duration of pain after healing was longer in patients 65 and over.
+Nausea, vomiting, and dizziness were reported more frequently in elderly
+subjects. Elderly patients are more likely to have reduced renal function and
+require dose reduction. Elderly patients are also more likely to have renal or
+CNS adverse events. With respect to CNS adverse events observed during clinical
+practice, somnolence, hallucinations, confusion, and coma were reported more
+frequently in elderly patients .
+........................................
+    PASSAGE_0009:
+every 12 hours
+For patients who require hemodialysis, the mean plasma half-life
+of acyclovir during hemodialysis is approximately 5 hours. This results in a 60%
+decrease in plasma concentrations following a 6-hour dialysis period. Therefore,
+the patient’s dosing schedule should be adjusted so that an additional dose is
+administered after each dialysis.
+No supplemental dose appears to be necessary after adjustment of
+the dosing interval.
+........................................
+  Label: Acyclovir suspension (3efa1e5e-5a14-4724-a2ca-25702f10faed)
+    PASSAGE_0022:
+The data presented below include references to peak steady-state plasma acyclovir concentrations observed in humans treated with 800 mg given orally 5 times a d
+ay (dosing appropriate for treatment of herpes zoster) or 200 mg given orally 5 times a day (dosing appropriate for treatment of genital herpes). Plasma drug co
+ncentrations in animal studies are expressed as multiples of human exposure to acyclovir at the higher and lower dosing schedules .
+Acyclovir was tested in lifetime bioassays in rats and mice at single daily doses of up to 450 mg/kg administered by gavage. There was no statistically signific
+ant difference in the incidence of tumors between treated and control animals, nor did acyclovir shorten the latency of tumors. Maximum plasma concentrations we
+re 3 to 6 times human levels in the mouse bioassay and 1 to 2 times human levels in the rat bioassay.
+Acyclovir was tested in 16 in vitro and in vivo genetic toxicity assays. Acyclovir was positive in 5 of the assays.
+Acyclovir did not impair fertility or reproduction in mice (450 mg/kg/day, p.o.) or in rats (25 mg/kg/day, s.c.). In the mouse study, plasma levels were 9 to 18
+ times human levels, while in the rat study, they were 8 to 15 times human levels. At higher doses (50 mg/kg/day, s.c.) in rats and rabbits (11 to 22 and 16 to
+31 times human levels, respectively) implantation efficacy, but not litter size, was decreased. In a rat peri- and post-natal study at 50 mg/kg/day, s.c., there
+ was a statistically significant decrease in group mean numbers of corpora lutea, total implantation sites, and live fetuses.
+No testicular abnormalities were seen in dogs given 50 mg/kg/day, IV for 1 month (21 to 41 times human levels) or in dogs given 60 mg/kg/day orally for 1 year (
+6 to 12 times human levels).
+Testicular atrophy and aspermatogenesis were observed in rats and dogs at higher dose levels.
+........................................
+    PASSAGE_0039:
+Hemodialysis
+For patients who require hemodialysis, the mean plasma half-life of acyclovir during hemodialysis is approximately 5 hours. This results in a 60% decrease in pl
+asma concentrations following a 6-hour dialysis period. Therefore, the patient’s dosing schedule should be adjusted so that an additional dose is administered a
+fter each dialysis.
+........................................
+    PASSAGE_0040:
+Peritoneal Dialysis
+No supplemental dose appears to be necessary after adjustment of the dosing interval.
+........................................
+============================================================
+root@7e48d58e23f3:/workspace#

@@ -1,0 +1,93 @@
+New Terminal Output:
+
+root@1ce871952c8c:/workspace# cat << 'EOF' > search_labels.py
+> import json, re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = [json.loads(line) for line in f]
+>
+> def search_drug(drug_name, keywords):
+>     for label in labels:
+>         if label['drug_name'].lower() == drug_name.lower():
+>             print(f"=== {label['drug_name']} ({label['set_id']}) ===")
+>             for idx, chunk in enumerate(label['chunks']):
+>                 if any(kw.lower() in chunk.lower() for kw in keywords):
+>                     print(f"PASSAGE_{idx:04d} (len={len(chunk)}):")
+>                     lines = chunk.strip().split('\n')
+>                     print("  Header:", lines[0])
+>                     print("  Snippet:", ' | '.join(lines[1:4]))
+>                     print("-" * 40)
+>
+> print("Search Paxlovid interactions:")
+> search_drug("Paxlovid", ["interaction", "co-administered", "cyp3a"])
+> EOF
+root@1ce871952c8c:/workspace# python3 search_labels.py > /tmp/search_paxlovid_interactions.txt
+root@1ce871952c8c:/workspace# head -n 40 /tmp/search_paxlovid_interactions.txt
+Search Paxlovid interactions:
+=== Paxlovid (8a99d6d6-fd9e-45bb-b1bf-48c7f761232a) ===
+PASSAGE_0000 (len=724):
+  Header: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+  Snippet: - PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting in potentia
+lly severe, life-threatening, or fatal events | - Prior to prescribing PAXLOVID: 1) Review all medications taken by the patient to assess potential drug-drug in
+teractions with a strong CYP3A inhibitor like PAXLOVID and 2) Determine if concomitant medications require a dose adjustment, interruption, and/or additional mo
+nitoring | - Consider the benefit of PAXLOVID treatment in reducing hospitalization and death, and whether the risk of potential drug-drug interactions for an i
+ndividual patient can be appropriately managed
+----------------------------------------
+PASSAGE_0003 (len=2022):
+  Header: 2.1   Important Dosage and Administration Information
+  Snippet: PAXLOVID is nirmatrelvir tablets co-packaged with ritonavir tablets. There are three different dose packs available: | - PAXLOVID (nirmatrelvir; rito
+navir) co-packaged for oral use 300 mg;100 mg | - PAXLOVID (nirmatrelvir; ritonavir) co-packaged for oral use 150 mg;100 mg for patients with moderate renal imp
+airment
+----------------------------------------
+PASSAGE_0012 (len=3088):
+  Header: 4 CONTRAINDICATIONS
+  Snippet: PAXLOVID is contraindicated in patients with a history of clinically significant hypersensitivity reactions e.g., toxic epidermal necrolysis (TEN) or
+ Stevens-Johnson syndrome] to its active ingredients (nirmatrelvir or ritonavir) or any other components of the product. | PAXLOVID is contraindicated with drug
+s that are primarily metabolized by CYP3A and for which elevated concentrations are associated with serious and/or life-threatening reactions and drugs that are
+ strong CYP3A inducers where significantly reduced nirmatrelvir or ritonavir plasma concentrations may be associated with the potential for loss of virologic re
+sponse and possible resistance. There are certain other drugs for which concomitant use with PAXLOVID should be avoided and/or dose adjustment, interruption, or
+ therapeutic monitoring is recommended. Drugs listed in this section are a guide and not considered a comprehensive list of all drugs that may be contraindicate
+d with PAXLOVID. The healthcare provider should consult other appropriate resources such as the prescribing information for the interacting drug for comprehensi
+ve information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor like PAXLOVID : | - ➢ Drugs that are primarily metabolized by CYP3A for
+which elevated concentrations are associated with serious and/or life-threatening reactions
+----------------------------------------
+PASSAGE_0013 (len=1711):
+  Header: 5.1   Risk of Serious Adverse Reactions Due to Drug Interactions
+  Snippet: Initiation of PAXLOVID, which contains ritonavir, a strong CYP3A inhibitor, in patients receiving medications metabolized by CYP3A or initiation of m
+edications metabolized by CYP3A in patients already receiving PAXLOVID, may increase plasma concentrations of medications metabolized by CYP3A. Medications that
+ induce CYP3A may decrease concentrations of PAXLOVID. These interactions may lead to: | - Clinically significant adverse reactions, potentially leading to seve
+re, life-threatening, or fatal events from greater exposures of concomitant medications. | - Loss of therapeutic effect of PAXLOVID and possible development of
+viral resistance.
+----------------------------------------
+PASSAGE_0016 (len=240):
+  Header: 5.4   Risk of HIV-1 Resistance Development
+  Snippet: Because nirmatrelvir is co-administered with ritonavir, there may be a risk of HIV-1 developing resistance to HIV protease inhibitors in individuals
+with uncontrolled or undiagnosed HIV-1 infection .
+----------------------------------------
+PASSAGE_0019 (len=736):
+  Header: 7.1   Potential for PAXLOVID to Affect Other Drugs
+  Snippet: PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1. Co-administration of
+ PAXLOVID with drugs that are primarily metabolized by CYP3A and CYP2D6 or are transported by P-gp or OATP1B1 may result in increased plasma concentrations of s
+uch drugs and increase the risk of adverse events. Co-administration of PAXLOVID with drugs highly dependent on CYP3A for clearance and for which elevated plasm
+a concentrations are associated with serious and/or life-threatening events is contraindicated . Co-administration with other CYP3A substrates may require a dos
+e adjustment or additional monitoring as shown in Table 2.
+----------------------------------------
+PASSAGE_0020 (len=235):
+  Header: 7.2   Potential for Other Drugs to Affect PAXLOVID
+  Snippet: Nirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A may decrease nirmatrelvir and ritonavir plasma concentrations and
+ reduce PAXLOVID therapeutic effect .
+----------------------------------------
+PASSAGE_0021 (len=554):
+  Header: 7.3   Established and Other Potentially Significant Drug Interactions
+  Snippet: Table 2 provides a listing of clinically significant drug interactions, including contraindicated drugs . Drugs listed in Table 2 are a guide and not
+ considered a comprehensive list of all possible drugs that may interact with PAXLOVID. The healthcare provider should consult other appropriate resources such
+as the prescribing information for the interacting drug for comprehensive information on dosing or monitoring with concomitant use of a strong CYP3A inhibitor s
+uch as ritonavir.
+----------------------------------------
+PASSAGE_0031 (len=152):
+  Header: ↑ rivaroxaban
+  Snippet: Increased bleeding risk with rivaroxaban. Avoid concomitant use. | dabigatranSee Pharmacokinetics, Clinical Drug Interaction Studies (12.3).
+----------------------------------------
+PASSAGE_0033 (len=279):
+  Header: ↑ apixaban
+root@1ce871952c8c:/workspace#

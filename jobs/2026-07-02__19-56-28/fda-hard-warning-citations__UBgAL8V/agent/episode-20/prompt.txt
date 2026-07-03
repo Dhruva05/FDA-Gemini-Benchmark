@@ -1,0 +1,30 @@
+New Terminal Output:
+
+>>> [print(f'PASSAGE_{i:04d}:', c[:100].replace('\n', ' ')) for i, c in enumerate(labels[1]['chunks'][:25])]
+PASSAGE_0000: 1 INDICATIONS AND USAGE Lopinavir and ritonavir is indicated in combination with other antiretrovira
+PASSAGE_0001: 2.1 General Administration Recommendations Lopinavir and ritonavir oral solution must be taken with
+PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube Because lopinavir and ritonavir oral solution contai
+PASSAGE_0003: 2.3 Dosage Recommendations in Adults Lopinavir and ritonavir can be given in once daily or twice dai
+PASSAGE_0004: Recommended Dosage 80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily Table 2. Recomm
+PASSAGE_0005: Recommended Dosage 80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL) twice daily The dose of lop
+PASSAGE_0006: Recommended Dosage 80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily
+PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients Lopinavir and ritonavir oral solution is not recomm
+PASSAGE_0008: Pediatric Dosage Calculations Calculate the appropriate dose of lopinavir and ritonavir for each ind
+PASSAGE_0009: Based on Weight (mg/kg) Concomitant Therapy: Efavirenz, Nevirapine, or Nelfinavir
+PASSAGE_0010: Dosing recommendations using oral solution Table 6 provides the dosing recommendations for pediatric
+PASSAGE_0011: Frequency > 6 months to < 18 years
+PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy Administer 400/100 mg of lopinavir and ritonavir twice daily
+PASSAGE_0013: 4 CONTRAINDICATIONS - Lopinavir and ritonavir is contraindicated in patients with previously demonst
+PASSAGE_0014: 5.1 Risk of Serious Adverse Reactions Due to Drug Interactions Initiation of lopinavir and ritonavir
+PASSAGE_0015: 5.2 Toxicity in Preterm Neonates Lopinavir and ritonavir oral solution contains the excipients ethan
+PASSAGE_0016: 5.3 Pancreatitis Pancreatitis has been observed in patients receiving lopinavir and ritonavir therap
+PASSAGE_0017: 5.4 Hepatotoxicity Patients with underlying hepatitis B or C or marked elevations in transaminase pr
+PASSAGE_0018: 5.5 QT Interval Prolongation Postmarketing cases of QT interval prolongation and torsade de pointes
+PASSAGE_0019: 5.6 PR Interval Prolongation Lopinavir and ritonavir prolongs the PR interval in some patients. Case
+PASSAGE_0020: 5.7 Diabetes Mellitus/Hyperglycemia New onset diabetes mellitus, exacerbation of pre-existing diabet
+PASSAGE_0021: 5.8 Immune Reconstitution Syndrome Immune reconstitution syndrome has been reported in patients trea
+PASSAGE_0022: 5.9 Lipid Elevations Treatment with lopinavir and ritonavir has resulted in large increases in the c
+PASSAGE_0023: 5.10 Fat Redistribution Redistribution/accumulation of body fat including central obesity, dorsocerv
+PASSAGE_0024: 5.11 Patients with Hemophilia Increased bleeding, including spontaneous skin hematomas and hemarthro
+[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+>>>

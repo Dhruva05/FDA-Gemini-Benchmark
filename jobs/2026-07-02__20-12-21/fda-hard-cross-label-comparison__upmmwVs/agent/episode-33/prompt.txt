@@ -1,0 +1,41 @@
+Current Terminal Screen:
+ that acetaZOLAMIDE has utility as an adjuvant in the treatment of certain dysfunctions of the central nervous system (e.g., epilepsy). Inhibition of carbonic a
+nhydrase in this area appears to retard abnormal, paroxysmal, excessive discharge from central nervous system neurons. The diuretic effect of acetaZOLAMIDE is d
+ue to its action in the kidney on the reversible reaction involving hydration of carbon dioxide and dehydration of carbonic acid. The result of renal loss of HC
+O3 ion, which carries out sodium, water, and potassium. Alkalinization of the urine and promotion of diuresis are thus affected. Alteration in ammonia metabolis
+m occurs due to increased reabsorption of ammonia by the renal tubules as a result of urinary alkalinization.
+Placebo-controlled clinical trials have shown that prophylactic administration of acetaZOLAMIDE at a dose of 250 mg every eight to 12 hours (or a 500 mg control
+led-release capsule once daily) before and during rapid ascent to altitude results in fewer and/or less severe symptoms (such as headache, nausea, shortness of
+breath, dizziness, drowsiness, and fatigue) of acute mountain sickness (AMS). Pulmonary function (e.g., minute ventilation, expired vital capacity and peak flow
+) is greater in the acetaZOLAMIDE treated group, both in subjects with AMS and asymptomatic subjects. The acetaZOLAMIDE treated climbers also had less difficult
+y in sleeping.
+----------------------------------------
+    PASSAGE_0003:
+AcetaZOLAMIDE therapy is contraindicated in situations in which sodium and/or potassium blood serum levels are depressed, in cases of marked kidney and liver di
+sease or dysfunction, in suprarenal gland failure, and in hyperchloremia acidosis. It is contraindicated in patients with cirrhosis because of the risk of devel
+opment of hepatic encephalopathy.
+Long-term administration of acetaZOLAMIDE is contraindicated in patients with chronic non-congestive angle-closure glaucoma since it may permit organic closure
+of the angle to occur while the worsening glaucoma is masked by lowered intraocular pressure.
+----------------------------------------
+    PASSAGE_0004:
+Fatalities have occurred, although rarely, due to severe reactions to sulfonamides including Stevens-Johnson syndrome, toxic epidermal necrolysis, fulminant hep
+atic necrosis, agranulocytosis, aplastic anemia, and other blood dyscrasias. Sensitizations may recur when a sulfonamide is readministered irrespective of the r
+oute of administration. If signs of hypersensitivity or other serious reactions occur, discontinue use of this drug. Caution is advised for patients receiving c
+oncomitant high-dose aspirin and acetaZOLAMIDE, as anorexia, tachypnea, lethargy, coma and death have been reported.
+----------------------------------------
+    PASSAGE_0008:
+Long-term studies in animals to evaluate the carcinogenic potential of acetaZOLAMIDE have not been conducted. In a bacterial mutagenicity assay, acetaZOLAMIDE w
+as not mutagenic when evaluated with and without metabolic activation. The drug had no effect on fertility when administered in the diet to male and female rats
+ at a daily intake of up to 4 times the recommended human dose of 1000 mg in a 50 kg individual.
+----------------------------------------
+    PASSAGE_0013:
+No data are available regarding acetaZOLAMIDE overdose in humans as no cases of acute poisoning with this drug have been reported. Animal data suggest that acet
+aZOLAMIDE is remarkably nontoxic. No specific antidote is known. Treatment should be symptomatic and supportive.
+Electrolyte imbalance, development of an acidotic state, and central nervous effects might be expected to occur. Serum electrolyte levels (particularly potassiu
+m) and blood pH levels should be monitored.
+Supportive measures are required to restore electrolyte and pH balance. The acidotic state can usually be corrected by the administration of bicarbonate.
+Despite its high intraerythrocytic distribution and plasma protein binding properties, acetaZOLAMIDE may be dialyzable. This may be particularly important in th
+e management of acetaZOLAMIDE overdosage when complicated by the presence of renal failure.
+----------------------------------------
+    PASSAGE_0014:
+root@7e48d58e23f3:/workspace#

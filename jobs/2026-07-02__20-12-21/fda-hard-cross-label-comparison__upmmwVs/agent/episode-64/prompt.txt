@@ -1,0 +1,7 @@
+New Terminal Output:
+
+root@7e48d58e23f3:/workspace# python3 -c "import json; data=json.load(open('/workspace/answers.json')); ans=data['answers'][0]; print('Keys in answer 0:', list(
+ans.keys())); print('Keys in structured_fields:', list(ans['structured_fields'].keys()))"
+Keys in answer 0: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+Keys in structured_fields: ['comparison']
+root@7e48d58e23f3:/workspace#

@@ -1,0 +1,15 @@
+New Terminal Output:
+
+root@7ddc515b1a59:/workspace# grep -o -i "passage_" /workspace/data/public/labels.jsonl | head -n 10
+PASSAGE_
+PASSAGE_
+PASSAGE_
+PASSAGE_
+PASSAGE_
+PASSAGE_
+PASSAGE_
+PASSAGE_
+PASSAGE_
+PASSAGE_
+root@7ddc515b1a59:/workspace# grep -o -i "passage_" /workspace/data/public/questions.jsonl | head -n 10
+root@7ddc515b1a59:/workspace#

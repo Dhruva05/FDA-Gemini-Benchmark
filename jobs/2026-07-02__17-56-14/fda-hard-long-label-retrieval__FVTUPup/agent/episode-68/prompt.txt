@@ -1,0 +1,41 @@
+Current Terminal Screen:
+>                 "section": "17 PATIENT COUNSELING INFORMATION",
+>                 "supporting_quote": "Advise patients to swallow all tablets for PAXLOVID whole and not to chew, break, or crush the tablets."
+>             }
+>         ],
+>         "structured_fields": {
+>             "route": "oral",
+>             "food_coadministration": "with or without food",
+>             "tablet_instructions": "swallow whole, do not chew, break, or crush",
+>             "missed_dose_instructions": {
+>                 "within_8_hours": "take as soon as possible and resume normal schedule",
+>                 "more_than_8_hours": "skip missed dose and take next dose at regular time"
+>             }
+>         }
+>     }
+> ]
+>
+> output = {"answers": answers}
+> with open('/workspace/answers.json', 'w') as f:
+>     json.dump(output, f, indent=2)
+> print("Done generating answers.json")
+> EOF
+root@2635f56baf2a:/workspace# python3 generate_answers.py
+Done generating answers.json
+root@2635f56baf2a:/workspace# python3 validate_answers.py
+Keys in answers_data: dict_keys(['answers'])
+Number of answers: 8
+Questions QIDs: {'b54c25890c1ae3a6', '6f12607a1ba14dd5', '2d63e0a82215867f', 'fbab4114f66e2dda', 'cf74a5a8ac9b19de', '000ecd1d6df50389', 'c4dc176c4827f0ef', 'b2
+531657ba5c7a78'}
+Answers QIDs: {'b54c25890c1ae3a6', '6f12607a1ba14dd5', '2d63e0a82215867f', 'fbab4114f66e2dda', 'cf74a5a8ac9b19de', '000ecd1d6df50389', 'c4dc176c4827f0ef', 'b253
+1657ba5c7a78'}
+Checking QID: b2531657ba5c7a78
+Checking QID: 6f12607a1ba14dd5
+Checking QID: fbab4114f66e2dda
+Checking QID: 2d63e0a82215867f
+Checking QID: cf74a5a8ac9b19de
+Checking QID: c4dc176c4827f0ef
+Checking QID: 000ecd1d6df50389
+Checking QID: b54c25890c1ae3a6
+All validations passed successfully!
+root@2635f56baf2a:/workspace#

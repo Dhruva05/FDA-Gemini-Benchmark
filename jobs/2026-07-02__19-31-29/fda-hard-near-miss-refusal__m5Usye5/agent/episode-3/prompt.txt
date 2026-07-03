@@ -1,0 +1,20 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# cat << 'EOF' > explore.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         print(f"Drug: {data['drug_name']}, Set ID: {data['set_id']}, Chunks count: {len(data['chunks'])}")
+>         if data['chunks']:
+>             print("First chunk keys:", data['chunks'][0].keys())
+>             print("First chunk example:", json.dumps(data['chunks'][0], indent=2)[:500])
+> EOF
+root@3646eb22abe5:/workspace# python3 explore.py
+Drug: 12HR Allergy Relief, Set ID: ea5d0e55-2191-4094-b082-24b317f95752, Chunks count: 13
+Traceback (most recent call last):
+  File "/workspace/explore.py", line 7, in <module>
+    print("First chunk keys:", data['chunks'][0].keys())
+                               ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'keys'
+root@3646eb22abe5:/workspace#

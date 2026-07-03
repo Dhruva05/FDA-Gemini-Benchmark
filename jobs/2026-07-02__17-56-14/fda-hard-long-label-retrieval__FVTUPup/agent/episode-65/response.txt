@@ -1,0 +1,10 @@
+{
+  "analysis": "I will escape all newlines and control characters carefully. I want to check the raw representation of PASSAGE_0013 to see if there are any newlines or other formatting characters.",
+  "plan": "I will print the raw representation of chunk 13.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json\nwith open('/workspace/data/public/labels.jsonl') as f:\n    data = json.loads(f.readline())\n    print(repr(data['chunks'][13]))\"\n",
+      "duration": 0.5
+    }
+  ]
+}

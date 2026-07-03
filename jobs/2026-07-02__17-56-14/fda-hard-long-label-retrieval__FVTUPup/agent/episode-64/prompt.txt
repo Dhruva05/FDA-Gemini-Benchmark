@@ -1,0 +1,9 @@
+New Terminal Output:
+
+root@2635f56baf2a:/workspace# python3 -c "import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     data = json.loads(f.readline())
+>     print(repr(data['chunks'][7]))"
+'Days 1-5\n150 mg nirmatrelvir (one 150 mg tablet) with 100 mg ritonavir (one 100 mg tablet) twice daily\nSevere renal impairment (eGFR <30 mL/min) including th
+ose requiring hemodialysis\nOn days of hemodialysis, the PAXLOVID dose should be administered after hemodialysis.'
+root@2635f56baf2a:/workspace#

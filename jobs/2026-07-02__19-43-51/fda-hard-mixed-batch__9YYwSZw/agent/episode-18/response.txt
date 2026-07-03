@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's print PASSAGE_0009, PASSAGE_0010, PASSAGE_0011 to see if we can find more information or tables.",
+  "plan": "I will print PASSAGE_0009 through PASSAGE_0011 for Lopinavir-Ritonavir.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        data = json.loads(line)\n        if data[\"drug_name\"] == \"Lopinavir-Ritonavir\":\n            for idx in range(9, 12):\n                print(f\"--- PASSAGE_{idx:04d} ---\")\n                print(data[\"chunks\"][idx])\n'\n",
+      "duration": 1.0
+    }
+  ]
+}

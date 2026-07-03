@@ -1,0 +1,10 @@
+New Terminal Output:
+
+root@3646eb22abe5:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); data=[json.loads(line) for line in f if 'ae6e79c0' in line
+][0]; [print(f'PASSAGE_{i:04d}:', repr(chunk[:150])) for i, chunk in enumerate(data['chunks']) if 'hepatic' in chunk.lower() or 'liver' in chunk.lower()]"
+PASSAGE_0027: 'Concomitant Therapies\nIn clinical trials, the safety profile in subjects treated with acamprosate calcium concomitantly with anxiolytics, hypnot
+ics an'
+PASSAGE_0031: '8.2 Labor and Delivery\nThe potential for acamprosate calcium to affect the duration of labor and delivery is unknown.'
+PASSAGE_0044: 'Gender:\nAcamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.\nAge:\nThe pharmacoki
+netics o'
+root@3646eb22abe5:/workspace#

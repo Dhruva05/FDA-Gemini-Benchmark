@@ -1,0 +1,14 @@
+{
+  "analysis": "The previous attempt had an invalid control character. I will make sure the keystrokes are properly escaped and written.",
+  "plan": "I will write `check_passages_mapping.py` and run it.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > check_passages_mapping.py\nimport json\nimport re\nwith open('/workspace/data/public/labels.jsonl') as f:\n    for line in f:\n        data = json.loads(line)\n        raw = data.get('label_raw', '')\n        chunks = data.get('chunks', [])\n        passages = re.findall(r'\\|\\|PASSAGE_(\\d{4})\\|\\|', raw)\n        print('All passage IDs found in raw:', passages[:10], '...', passages[-10:])\n        print('Count of passage IDs:', len(passages))\n        parts = re.split(r'(\\|\\|PASSAGE_\\d{4}\\|\\|)', raw)\n        print('Length of parts list:', len(parts))\n        mapped = {}\n        for i in range(len(chunks)):\n            chunk_stripped = chunks[i].strip()\n            found = False\n            for j in range(1, len(parts), 2):\n                pid = parts[j].replace('||', '')\n                content = parts[j+1].strip()\n                if chunk_stripped == content:\n                    mapped[i] = pid\n                    found = True\n                    break\n            if not found:\n                for j in range(1, len(parts), 2):\n                    pid = parts[j].replace('||', '')\n                    content = parts[j+1].strip()\n                    if chunk_stripped in content or content in chunk_stripped:\n                        mapped[i] = (pid, 'partial')\n                        found = True\n                        break\n            if not found:\n                mapped[i] = None\n        print('Mapping for first 10 chunks:')\n        for i in range(10):\n            print(f'Chunk {i}: {mapped.get(i)}')\nEOF\n",
+      "duration": 0.5
+    },
+    {
+      "keystrokes": "python3 check_passages_mapping.py\n",
+      "duration": 1.0
+    }
+  ]
+}

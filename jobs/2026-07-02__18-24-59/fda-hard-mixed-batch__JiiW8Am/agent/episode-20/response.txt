@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's print out the full text of PASSAGE_0003, PASSAGE_0004, PASSAGE_0005, and PASSAGE_0006 to see all details of adult dosage.",
+  "plan": "I will run a python script to print the full text of PASSAGE_0003, PASSAGE_0004, PASSAGE_0005, and PASSAGE_0006.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c '\nimport json\nwith open(\"/workspace/data/public/labels.jsonl\") as f:\n    for line in f:\n        obj = json.loads(line)\n        if obj[\"drug_name\"] == \"Lopinavir-Ritonavir\":\n            for i in [3, 4, 5, 6]:\n                print(f\"--- PASSAGE_{i:04d} ---\")\n                print(obj[\"chunks\"][i])\n'\n",
+      "duration": 0.5
+    }
+  ]
+}

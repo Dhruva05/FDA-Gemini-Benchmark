@@ -1,0 +1,54 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     for line in f:
+>         q = json.loads(line)
+>         print('QID:', q['qid'])
+>         print('Drug:', q['drug_name'])
+>         print('Question:', q['question'])
+>         print('Fields:', q.get('required_output_fields'))
+>         print('-'*30)
+> "
+QID: b2531657ba5c7a78
+Drug: Paxlovid
+Question: What important drug interactions are noted for Paxlovid?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: 6f12607a1ba14dd5
+Drug: Paxlovid
+Question: Which medications should be avoided with Paxlovid?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: daef650b92e56473
+Drug: Lopinavir-Ritonavir
+Question: How should Lopinavir-Ritonavir be administered?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: a0576a26f2a2eeac
+Drug: Lopinavir-Ritonavir
+Question: What is the recommended dosage regimen of Lopinavir-Ritonavir?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: 9be5515bc3064979
+Drug: Lopinavir-Ritonavir
+Question: What safety risks are listed for Lopinavir-Ritonavir?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: 18078efe9380c8dc
+Drug: Lopinavir-Ritonavir
+Question: What important warnings or precautions are associated with Lopinavir-Ritonavir?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: fbab4114f66e2dda
+Drug: Paxlovid
+Question: What important warnings or precautions are associated with Paxlovid?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+QID: 2d63e0a82215867f
+Drug: Paxlovid
+Question: What safety risks are listed for Paxlovid?
+Fields: ['qid', 'status', 'answer', 'citations', 'structured_fields']
+------------------------------
+root@23e2e6a1b566:/workspace#

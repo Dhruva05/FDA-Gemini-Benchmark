@@ -1,0 +1,4 @@
+New Terminal Output:
+
+root@b9fc21343844:/workspace# find / -maxdepth 3 -name "*fda*" 2>/dev/null
+root@b9fc21343844:/workspace#

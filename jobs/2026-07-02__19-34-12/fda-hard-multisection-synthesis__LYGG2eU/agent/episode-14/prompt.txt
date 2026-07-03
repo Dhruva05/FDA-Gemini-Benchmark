@@ -1,0 +1,59 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > parse_passages_v2.py
+> import json
+> import re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print(label['drug_name'])
+>         raw = label['label_raw']
+>         # Let's find all occurrences of (?:\|\|)?PASSAGE_####||
+>         matches = list(re.finditer(r'\|\|PASSAGE_(\d+)\|\|\n', raw))
+>         # Wait, the first passage might not have || before it if it starts the string. Let's see if the first one has ||.
+>         if not matches or matches[0].start() > 10:
+>             # Try without || for the very first one if needed, or check if PASSAGE_0000 has ||
+>             # Let's look at the start of raw
+>             print("Start of raw:", repr(raw[:100]))
+>
+>         # Let's find all PASSAGE_#### and extract
+>         matches = list(re.finditer(r'(?:\|\|)?PASSAGE_(\d+)\|\|\n', raw))
+>         passages = {}
+>         for i in range(len(matches)):
+>             start = matches[i].end()
+>             end = matches[i+1].start() if i+1 < len(matches) else len(raw)
+>             pid = f"PASSAGE_{int(matches[i].group(1)):04d}"
+>             ptext = raw[start:end].rstrip('\n\r| ')
+>             passages[pid] = ptext
+>
+>         chunks = label['chunks']
+>         print(f"Chunks count: {len(chunks)}, Passages count: {len(passages)}")
+>
+>         matched = 0
+>         for idx, chunk in enumerate(chunks):
+>             pid = f"PASSAGE_{idx:04d}"
+>             if pid in passages:
+>                 ptext = passages[pid]
+>                 if ptext.strip() == chunk.strip():
+>                     matched += 1
+>                 else:
+>                     if matched < 2:
+>                         print(f"Mismatch for {pid}:")
+>                         print(f"ptext (repr): {repr(ptext[-100:])}")
+>                         print(f"chunk (repr): {repr(chunk[-100:])}")
+>             else:
+>                 print(f"{pid} not in parsed passages!")
+>         print(f"Matched: {matched}/{len(chunks)}")
+>         print("-"*40)
+> EOF
+root@15b83e10b8d1:/workspace# python3 parse_passages_v2.py
+Paxlovid
+Chunks count: 209, Passages count: 209
+Matched: 209/209
+----------------------------------------
+Lopinavir-Ritonavir
+Chunks count: 188, Passages count: 188
+Matched: 188/188
+----------------------------------------
+root@15b83e10b8d1:/workspace#

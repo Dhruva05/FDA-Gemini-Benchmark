@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 101 (char 102) | Content preview: '{\n  "analysis": "Wow! It actually generated all 8 answers and wrote them to `/workspace/answers.json'...
+
+Please fix these issues and provide a proper JSON response.

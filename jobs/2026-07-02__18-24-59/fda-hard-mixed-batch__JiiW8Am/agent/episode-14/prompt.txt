@@ -1,0 +1,34 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         if obj["drug_name"] == "Acamprosate Calcium":
+>             for i, chunk in enumerate(obj["chunks"]):
+>                 if "renal" in chunk.lower() or "hepatic" in chunk.lower():
+>                     print(f"PASSAGE_{i:04d}: {chunk[:300]}")
+> '
+PASSAGE_0002: 2.1 Dosage in Renal Impairment
+For patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min), a starting dose of one 333 mg tablet taken three times daily is recommend
+ed. Acamprosate calcium delayed-release tablets are contraindicated in patients with severe renal impairment
+PASSAGE_0005: 4.2 Severe Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+PASSAGE_0006: 5.1 Renal Impairment
+Treatment with acamprosate calcium in patients with moderate renal impairment (creatinine clearance of 30 to 50 mL/min) requires a dose reduction . Acamprosate
+calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+PASSAGE_0034: 8.5 Geriatric Use
+Forty-one of the 4234 patients in double-blind, placebo-controlled, clinical trials of acamprosate calcium were 65 years of age or older, while none were 75 yea
+rs of age or over. There were too few patients in the ≥65 age group to evaluate any differences in safety or effectiveness
+PASSAGE_0035: 8.6 Renal Impairment
+Acamprosate calcium is contraindicated in patients with severe renal impairment (creatinine clearance of ≤30 mL/min) .
+PASSAGE_0044: Gender:
+Acamprosate calcium does not exhibit any significant pharmacokinetic differences between male and female subjects.
+Age:
+The pharmacokinetics of acamprosate calcium have not been evaluated in a geriatric population. However, since renal function diminishes in elderly patients and
+acamprosate
+PASSAGE_0051: Renal Impairment
+A lower dose is recommended for patients with moderate renal impairment. Acamprosate calcium is contraindicated in patients with severe renal impairment (creati
+nine clearance of ≤30 mL/min) .
+root@c3dfb07a1d45:/workspace#

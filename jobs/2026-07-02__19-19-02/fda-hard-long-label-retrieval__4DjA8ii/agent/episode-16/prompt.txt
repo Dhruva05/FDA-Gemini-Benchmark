@@ -1,0 +1,6 @@
+New Terminal Output:
+
+>>> for idx, chunk in search('contraindicated')[:10]:
+...     print(f"=== PASSAGE_{idx:04d} ===")
+...     print(chunk[:250] + "...")
+...

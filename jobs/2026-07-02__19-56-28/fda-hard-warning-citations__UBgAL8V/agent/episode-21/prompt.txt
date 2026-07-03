@@ -1,0 +1,44 @@
+New Terminal Output:
+
+>>> search('Lopinavir-Ritonavir', 'tablet')
+Searching for 'tablet' in Lopinavir-Ritonavir:
+PASSAGE_0028 (len=1368): Adverse Reactions in Adults
+The safety of lopinavir and ritonavir has been investigated in about 2,600 patients in Phase II-IV clinical trials, of which about 700 have received a dose of 8
+00/200 mg (6...
+PASSAGE_0059 (len=311): ↓ lopinavir
+Increase the dose of lopinavir and ritonavir tablets to 500/125 mg when lopinavir and ritonavir tablet is co-administered with efavirenz or nevirapine. Lopinavi
+r and ritonavir once daily i...
+PASSAGE_0074 (len=932): ↑ colchicine
+Contraindicated due to potential for serious and/or life-threatening reactions in patients with renal and/or hepatic impairment .
+For patients with normal renal or hepatic function:
+Treat...
+PASSAGE_0109 (len=514): 12.3 Pharmacokinetics
+The pharmacokinetic properties of lopinavir are summarized in Table 13. The steady-state pharmacokinetic parameters of lopinavir are summarized in Table 14. Und
+er fed conditions,...
+PASSAGE_0145 (len=1561): 89
+2 Patients achieved HIV-1 RNA < 50 copies/mL at Week 48.
+Through 48 weeks of therapy, the mean increase from baseline in CD4+ cell count was 207 cells/mm3 for the lopinavir and ritonavir arm and 19...
+PASSAGE_0150 (len=2043): 13%
+2 Includes confirmed viral rebound and failure to achieve confirmed < 400 copies/mL through Week 48.
+3 Includes lost to follow-up, patient's withdrawal, non-compliance, protocol violation and othe...
+>>> search('Lopinavir-Ritonavir', 'food')
+Searching for 'food' in Lopinavir-Ritonavir:
+PASSAGE_0001 (len=105): 2.1 General Administration Recommendations
+Lopinavir and ritonavir oral solution must be taken with food....
+PASSAGE_0061 (len=298): didanosine
+For lopinavir and ritonavir oral solution, it is recommended that didanosine be administered on an empty stomach; therefore, didanosine should be given one hour
+ before or two hours after lo...
+PASSAGE_0159 (len=1832): 17 PATIENT COUNSELING INFORMATION
+Advise the patient to read the FDA-approved patient labeling (Medication Guide)
+General Administration Information
+:
+- Advise patients to pay special attention to acc...
+PASSAGE_0181 (len=5533): ° St. John’s Wort (Hypericum perforatum®)
+Serious problems can happen if you or your child takes any of the medicines listed above with lopinavir and ritonavir.
+- have ever had a serious skin rash or ...
+PASSAGE_0183 (len=104): Philadelphia, PA 19136
+This Medication Guide has been approved by the U.S. Food and Drug Administration....
+PASSAGE_0187 (len=4080): 1 Prescribing Information
+- 1 Medication Guide and Instructions for Use 1 Medication Guide and Instructions for Use
+Step 1: Remove the lopinavir and ritonavir oral solution bottle, bottle adapter, and...
+>>>

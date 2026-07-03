@@ -1,0 +1,10 @@
+{
+  "analysis": "Wait, let's look at the output of `view_q4_full.py`. The first part for `ACETAZOLAMIDE EXTENDED-RELEASE` was scrolled off. Let's write a python script to display the passages for `ACETAZOLAMIDE EXTENDED-RELEASE` specifically.",
+  "plan": "I will write a python script to print the candidate passages for ACETAZOLAMIDE EXTENDED-RELEASE.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; f=open('/workspace/data/public/labels.jsonl'); l={x['set_id']: x for x in (json.loads(line) for line in f)}; l1=l['8e396b27-b44a-4aa9-805b-086395444b5f']; [print(f'PASSAGE_{i:04d}: {c}') for i, c in enumerate(l1['chunks']) if any(w in c.lower() for w in ['dosage', 'direction', 'take', 'tablet', 'dose', 'mg', 'capsule'])]\"\n",
+      "duration": 1.0
+    }
+  ]
+}

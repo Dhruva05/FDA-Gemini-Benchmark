@@ -1,0 +1,75 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# cat << 'EOF' > verify_quotes_2.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in [json.loads(line) for line in f]}
+>
+> paxlovid_id = '8a99d6d6-fd9e-45bb-b1bf-48c7f761232a'
+> lop_rit_id = '4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85'
+>
+> test_quotes = [
+>     (paxlovid_id, 0, "PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, resulting
+in potentially severe, life-threatening, or fatal events"),
+>     (paxlovid_id, 19, "PAXLOVID (nirmatrelvir co-packaged with ritonavir) is a strong inhibitor of CYP3A, and an inhibitor of CYP2D6, P-gp and OATP1B1."),
+>     (paxlovid_id, 20, "Nirmatrelvir and ritonavir are CYP3A substrates; therefore, drugs that induce CYP3A may decrease nirmatrelvir and ritonavir plasma conc
+entrations and reduce PAXLOVID therapeutic effect"),
+>     (paxlovid_id, 12, "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associated wit
+h serious and/or life-threatening reactions and drugs that are strong CYP3A inducers"),
+>     (lop_rit_id, 1, "oral solution must be taken with food."),
+>     (lop_rit_id, 2, "Because lopinavir and ritonavir oral solution contains ethanol and propylene glycol, it is not recommended for use with polyurethane feed
+ing tubes due to potential incompatibility."),
+>     (lop_rit_id, 7, "The dose of the oral solution should be administered using the calibrated cup (supplied) or oral dosing syringe."),
+>     (lop_rit_id, 3, "Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen"),
+>     (lop_rit_id, 4, "80 mg/20 mg per mL Oral Solution 800 mg/200 mg (10 mL) once daily"),
+>     (lop_rit_id, 5, "The dose of lopinavir and ritonavir must be increased when administered in combination with efavirenz, nevirapine or nelfinavir."),
+>     (lop_rit_id, 6, "80 mg/20 mg per mL Oral Solution 520 mg/130 mg (6.5 mL) twice daily"),
+>     (lop_rit_id, 14, "Initiation of lopinavir and ritonavir, a CYP3A inhibitor, in patients receiving medications metabolized by CYP3A"),
+>     (lop_rit_id, 15, "Lopinavir and ritonavir oral solution contains the excipients ethanol, approximately 42% (v/v) and propylene glycol, approximately 15% (
+w/v)."),
+>     (lop_rit_id, 16, "Pancreatitis has been observed in patients receiving"),
+>     (lop_rit_id, 28, "reported ongoing diarrhea."),
+>     (lop_rit_id, 18, "Avoid use in patients with congenital long QT syndrome"),
+>     (lop_rit_id, 19, "Cases of second or third degree atrioventricular block have been reported."),
+>     (paxlovid_id, 13, "Medications that induce CYP3A may decrease concentrations of PAXLOVID."),
+>     (paxlovid_id, 14, "immediately discontinue PAXLOVID and initiate appropriate medications and/or supportive care."),
+>     (paxlovid_id, 15, "Hepatic transaminase elevations, clinical hepatitis, and jaundice have occurred in patients receiving ritonavir."),
+>     (paxlovid_id, 16, "Because nirmatrelvir is co-administered with ritonavir"),
+>     (paxlovid_id, 18, "The most common adverse reactions (≥1% incidence in the PAXLOVID group and occurring at a greater frequency than in the placebo group)
+were dysgeusia (5% and <1%, respectively) and diarrhea (3% and 2%, respectively).")
+> ]
+>
+> for set_id, idx, quote in test_quotes:
+>     chunk = labels[set_id]['chunks'][idx]
+>     if quote in chunk:
+>         print(f"OK: {set_id[:8]} PASSAGE_{idx:04d}")
+>     else:
+>         print(f"FAIL: {set_id[:8]} PASSAGE_{idx:04d}")
+>         print(f"  Expected quote: {repr(quote)}")
+>         print(f"  Chunk start: {repr(chunk[:300])}")
+> EOF
+root@a1980178bfd8:/workspace# python3 verify_quotes_2.py
+OK: 8a99d6d6 PASSAGE_0000
+OK: 8a99d6d6 PASSAGE_0019
+OK: 8a99d6d6 PASSAGE_0020
+OK: 8a99d6d6 PASSAGE_0012
+OK: 4b1caefa PASSAGE_0001
+OK: 4b1caefa PASSAGE_0002
+OK: 4b1caefa PASSAGE_0007
+OK: 4b1caefa PASSAGE_0003
+OK: 4b1caefa PASSAGE_0004
+OK: 4b1caefa PASSAGE_0005
+OK: 4b1caefa PASSAGE_0006
+OK: 4b1caefa PASSAGE_0014
+OK: 4b1caefa PASSAGE_0015
+OK: 4b1caefa PASSAGE_0016
+OK: 4b1caefa PASSAGE_0028
+OK: 4b1caefa PASSAGE_0018
+OK: 4b1caefa PASSAGE_0019
+OK: 8a99d6d6 PASSAGE_0013
+OK: 8a99d6d6 PASSAGE_0014
+OK: 8a99d6d6 PASSAGE_0015
+OK: 8a99d6d6 PASSAGE_0016
+OK: 8a99d6d6 PASSAGE_0018
+root@a1980178bfd8:/workspace#

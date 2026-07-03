@@ -1,0 +1,68 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > find_dosage_chunks_2.py
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         data = json.loads(line)
+>         drug_name = data['drug_name']
+>         print('='*40)
+>         print(f'Drug: {drug_name}')
+>         print('='*40)
+>         found = 0
+>         for idx, chunk in enumerate(data['chunks']):
+>             if 'dosage' in chunk.lower() and ('administration' in chunk.lower() or 'dose' in chunk.lower()):
+>                 print(f'Chunk {idx} (PASSAGE_{idx:04d}): {repr(chunk[:120])}')
+>                 found += 1
+>                 if found >= 15:
+>                     print('... more chunks found ...')
+>                     break
+> EOF
+root@af996c5fe492:/workspace# python3 find_dosage_chunks_2.py
+========================================
+Drug: Lopinavir-Ritonavir
+========================================
+Chunk 5 (PASSAGE_0005): 'Recommended Dosage\n80 mg/20 mg per mL Oral Solution 400 mg/100 mg (5 mL)\xa0twice daily\nThe dose of lopinavir and ritonavir'
+Chunk 7 (PASSAGE_0007): '2.4 Dosage Recommendations in Pediatric Patients\nLopinavir and ritonavir oral solution is not recommended for once daily'
+Chunk 8 (PASSAGE_0008): 'Pediatric Dosage Calculations\nCalculate the appropriate dose of lopinavir\xa0and ritonavir for each individual pediatric pa'
+Chunk 66 (PASSAGE_0066): '↓ lopinavir/ritonavir#\nApalutamide is contraindicated due to potential for loss of virologic response and possible resis'
+Chunk 69 (PASSAGE_0069): '↓ or ↔ valproate\nA dose increase of lamotrigine or valproate may be needed when co-administered with lopinavir and riton'
+Chunk 76 (PASSAGE_0076): '↑ rifabutin and rifabutin metabolite\nDosage reduction of rifabutin by at least 75% of the usual dose of 300 mg/day is re'
+Chunk 91 (PASSAGE_0091): '↑ vardenafil\nSildenafil when used for the treatment of pulmonary arterial hypertension (Revatio®) is contraindicated due'
+Chunk 99 (PASSAGE_0099): 'Animal Data\nEmbryonic and fetal developmental toxicities (early resorption, decreased fetal viability, decreased fetal b'
+Chunk 105 (PASSAGE_0105): '10 OVERDOSAGE\nOverdoses with lopinavir\xa0and ritonavir oral solution have been reported. One of these reports described fa'
+Chunk 140 (PASSAGE_0140): '13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility\nCarcinogenesis\nLopinavir and ritonavir combination was evaluat'
+Chunk 187 (PASSAGE_0187): '1 Prescribing Information\n- 1 Medication Guide and Instructions for Use 1 Medication Guide and Instructions for Use\nStep'
+========================================
+Drug: Emtricitabine, Rilpivirine, Tenofovir Disoproxil Fumarate
+========================================
+Chunk 3 (PASSAGE_0003): '2.2 Recommended Dosage\nEmtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are a three-drug fixed dose '
+Chunk 6 (PASSAGE_0006): '2.5 Recommended Dosage with Rifabutin Coadministration\nIf emtricitabine, rilpivirine and tenofovir disoproxil fumarate t'
+Chunk 57 (PASSAGE_0057): 'Available data from the APR show no increase in the overall risk of major birth defects with first trimester exposure fo'
+Chunk 66 (PASSAGE_0066): '10 OVERDOSAGE\nIf overdose occurs the patient must be monitored for evidence of toxicity. Treatment of overdose with emtr'
+Chunk 67 (PASSAGE_0067): '11 DESCRIPTION\nEmtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are fixed-dose combination tablets c'
+========================================
+Drug: CELECOXIB
+========================================
+Chunk 8 (PASSAGE_0008): '2.1 General Dosing Instructions\nCarefully consider the potential benefits and risks of celecoxib capsules and other trea'
+Chunk 9 (PASSAGE_0009): '2.2 Osteoarthritis\nFor OA, the dosage is 200 mg per day administered as a single dose or as 100 mg twice daily.'
+Chunk 11 (PASSAGE_0011): '2.4 Juvenile Rheumatoid Arthritis\nFor JRA, the dosage for pediatric patients (age 2 years and older) is based on weight.'
+Chunk 12 (PASSAGE_0012): '2.5 Ankylosing Spondylitis\nFor AS, the dosage of celecoxib capsules is 200 mg daily in single (once per day) or divided '
+Chunk 13 (PASSAGE_0013): '2.6 Management of Acute Pain and Treatment of Primary Dysmenorrhea\nFor management of Acute Pain and Treatment of Primary'
+Chunk 20 (PASSAGE_0020): '5.2 Gastrointestinal Bleeding, Ulceration, and Perforation\nNSAIDs, including celecoxib cause serious gastrointestinal (G'
+Chunk 73 (PASSAGE_0073): 'CYP2C9 Inhibitors or Inducers\nClinical Impact:\nCelecoxib metabolism is predominantly mediated via cytochrome P450 (CYP) '
+Chunk 90 (PASSAGE_0090): '10 OVERDOSAGE\nSymptoms following acute NSAID overdosages have been typically limited to lethargy, drowsiness, nausea, vo'
+========================================
+Drug: Lenalidomide
+========================================
+Chunk 9 (PASSAGE_0009): '2.1 Recommended Dosage for Multiple Myeloma\nLenalidomide Combination Therapy\nThe recommended starting dose of lenalidomi'
+Chunk 15 (PASSAGE_0015): '2.2 Recommended Dosage for Myelodysplastic Syndromes\nThe recommended starting dose of lenalidomide is 10 mg daily. Treat'
+Chunk 17 (PASSAGE_0017): 'Resume lenalidomide at 5 mg daily\nIf thrombocytopenia develops AFTER 4 weeks of starting treatment at 10 mg daily in MDS'
+Chunk 19 (PASSAGE_0019): '2.3 Recommended Dosage for Mantle Cell Lymphoma\nThe recommended starting dose of lenalidomide is 25 mg/day orally on Day'
+Chunk 22 (PASSAGE_0022): '2.4 Recommended Dosage for Follicular Lymphoma or Marginal Zone Lymphoma\nThe recommended starting dose of lenalidomide i'
+Chunk 27 (PASSAGE_0027): '2.5 Dosage Modifications for Non-Hematologic Adverse Reactions\nFor non-hematologic Grade 3/4 toxicities judged to be rel'
+Chunk 79 (PASSAGE_0079): '10 OVERDOSAGE\nThere is no specific experience in the management of lenalidomide overdose in patients with MM, MDS, MCL, '
+Chunk 84 (PASSAGE_0084): '12.3 Pharmacokinetics\nAbsorption\nFollowing single and multiple doses of lenalidomide in patients with MM or MDS, the max'
+Chunk 98 (PASSAGE_0098): '14.2 Myelodysplastic Syndromes (MDS) with a Deletion 5q Cytogenetic Abnormality\nThe efficacy and safety of lenalidomide '
+Chunk 103 (PASSAGE_0103): '14.4 Follicular and Marginal Zone Lymphoma\nThe efficacy of lenalidomide with rituximab in patients with relapsed or refr'
+root@af996c5fe492:/workspace#

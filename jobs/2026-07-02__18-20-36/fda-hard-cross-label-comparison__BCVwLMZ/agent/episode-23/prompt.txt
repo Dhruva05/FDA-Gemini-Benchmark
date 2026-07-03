@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@faa94ec9460f:/workspace# python3 -c "import json; f=open('/workspace/data/public/labels.jsonl'); l={x['set_id']: x for x in (json.loads(line) for line in f
+)}; print(l['ae6e79c0-a307-4888-b647-1b7be4cb9127']['chunks'][1])"
+2 DOSAGE AND ADMINISTRATION
+The recommended dose of acamprosate calcium delayed-release tablets is two 333 mg tablets (each dose should total 666 mg) taken three times daily. A lower dose
+may be effective in some patients.
+Although dosing may be done without regard to meals, dosing with meals was employed during clinical trials and is suggested in those patients who regularly eat
+three meals daily.
+Treatment with acamprosate calcium delayed-release tablets should be initiated as soon as possible after the period of alcohol withdrawal, when the patient has
+achieved abstinence, and should be maintained if the patient relapses. Acamprosate calcium delayed-release tablets should be used as part of a comprehensive psy
+chosocial treatment program.
+root@faa94ec9460f:/workspace#

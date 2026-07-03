@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@23e2e6a1b566:/workspace# python3 -c "
+> import json
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         d = json.loads(line)
+>         has_pass = any('PASSAGE' in c for c in d['chunks'])
+>         print(d['drug_name'], len(d['chunks']), 'Has PASSAGE in text:', has_pass)
+> "
+Paxlovid 209 Has PASSAGE in text: False
+Lopinavir-Ritonavir 188 Has PASSAGE in text: False
+root@23e2e6a1b566:/workspace#

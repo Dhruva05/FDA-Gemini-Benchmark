@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@c3dfb07a1d45:/workspace# python3 -c '
+> import json
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         obj = json.loads(line)
+>         print(obj.keys())
+>         print("type of label_raw:", type(obj.get("label_raw")))
+>         if isinstance(obj.get("label_raw"), dict):
+>             print("label_raw keys:", list(obj["label_raw"].keys()))
+>         elif isinstance(obj.get("label_raw"), str):
+>             print("label_raw sample:", obj["label_raw"][:200])
+>         break
+> '
+dict_keys(['chunks', 'drug_id', 'drug_name', 'label_raw', 'set_id'])
+type of label_raw: <class 'str'>
+label_raw sample: ||PASSAGE_0000||
+WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+- PAXLOVID includes ritonavir, a strong CYP3A inhibitor, which may lead to greater exposure of certain concomitant medications, re
+root@c3dfb07a1d45:/workspace#

@@ -1,0 +1,50 @@
+New Terminal Output:
+
+root@3faa5da3ba91:/workspace# cat << 'EOF' > verify_quotes.py
+> import json
+>
+> labels = {}
+> with open("/workspace/data/public/labels.jsonl") as f:
+>     for line in f:
+>         data = json.loads(line)
+>         labels[data["drug_name"]] = data
+>
+> def check_quote(drug_name, passage_idx, quote):
+>     chunk = labels[drug_name]["chunks"][passage_idx]
+>     if quote in chunk:
+>         print(f"SUCCESS: {drug_name} PASSAGE_{passage_idx:04d} contains quote.")
+>     else:
+>         print(f"FAILURE: {drug_name} PASSAGE_{passage_idx:04d} does NOT contain quote.")
+>         print("Chunk:", repr(chunk))
+>         print("Quote:", repr(quote))
+>
+> print("--- Paxlovid ---")
+> check_quote("Paxlovid", 12, "PAXLOVID is contraindicated with drugs that are primarily metabolized by CYP3A and for which elevated concentrations are associat
+ed with serious and/or life-threatening reactions")
+>
+> print("--- Lopinavir-Ritonavir ---")
+> check_quote("Lopinavir-Ritonavir", 1, "and ritonavir oral solution must be taken with food.")
+> check_quote("Lopinavir-Ritonavir", 3, "Lopinavir and ritonavir can be given in once daily or twice daily dosing regimen at dosages noted in Tables 1 and 2.")
+> check_quote("Lopinavir-Ritonavir", 5, "80 mg/20 mg per mL Oral Solution 400 mg/100 mg")
+>
+> print("--- 12HR Allergy Relief ---")
+> check_quote("12HR Allergy Relief", 2, "Ask a doctor before use if you have kidney disease.")
+>
+> print("--- Acamprosate Calcium ---")
+> check_quote("Acamprosate Calcium", 35, "Acamprosate calcium is contraindicated in patients with severe renal impairment")
+> check_quote("Acamprosate Calcium", 44, "Acamprosate is not metabolized by the liver and the pharmacokinetics of acamprosate calcium are not altered in patient
+s with mild to moderate hepatic impairment")
+> EOF
+root@3faa5da3ba91:/workspace# python3 verify_quotes.py
+--- Paxlovid ---
+SUCCESS: Paxlovid PASSAGE_0012 contains quote.
+--- Lopinavir-Ritonavir ---
+SUCCESS: Lopinavir-Ritonavir PASSAGE_0001 contains quote.
+SUCCESS: Lopinavir-Ritonavir PASSAGE_0003 contains quote.
+SUCCESS: Lopinavir-Ritonavir PASSAGE_0005 contains quote.
+--- 12HR Allergy Relief ---
+SUCCESS: 12HR Allergy Relief PASSAGE_0002 contains quote.
+--- Acamprosate Calcium ---
+SUCCESS: Acamprosate Calcium PASSAGE_0035 contains quote.
+SUCCESS: Acamprosate Calcium PASSAGE_0044 contains quote.
+root@3faa5da3ba91:/workspace#

@@ -1,0 +1,41 @@
+Current Terminal Screen:
+------------------------------
+  PASSAGE_0038:
+Adults and Children over 40 kg
+800 mg 4 times daily for 5 days.
+Intravenous acyclovir is indicated for the treatment of varicella-zoster infections in immunocompromised patients.
+When therapy is indicated, it should be initiated at the earliest sign or symptom of chickenpox. There is no information about the efficacy of therapy initiated
+ more than 24 hours after onset of signs and symptoms.
+Patients With Acute or Chronic Renal Impairment
+In patients with renal impairment, the dose of Acyclovir Capsules, Tablets, or Oral Suspension should be modified as shown in Table 3.
+Table 3. Dosage Modification for Renal Impairment
+------------------------------
+  PASSAGE_0039:
+Hemodialysis
+For patients who require hemodialysis, the mean plasma half-life of acyclovir during hemodialysis is approximately 5 hours. This results in a 60% decrease in pl
+asma concentrations following a 6-hour dialysis period. Therefore, the patient’s dosing schedule should be adjusted so that an additional dose is administered a
+fter each dialysis.
+------------------------------
+  PASSAGE_0040:
+Peritoneal Dialysis
+No supplemental dose appears to be necessary after adjustment of the dosing interval.
+------------------------------
+  PASSAGE_0041:
+Bioequivalence of Dosage Forms
+Acyclovir Oral Suspension was shown to be bioequivalent to Acyclovir Capsules (n = 20) and 1 acyclovir 800-mg tablet was shown to be bioequivalent to 4 acyclovi
+r 200-mg capsules (n = 24).
+------------------------------
+  PASSAGE_0042:
+Acyclovir Oral Suspension, USP contains 200 mg of acyclovir, USP in each teaspoonful (5 mL). The white to off white, banana flavored suspension is available as
+follows:
+------------------------------
+  PASSAGE_0043:
+1 pint bottle (473 mL)
+Stor
+e at 15° to 25°C (59° to 77°F). Protect from light.
+For more information, go to www.novadozpharma.com or call 1-855-668-2369.
+Manufactured by:
+MSN Pharmaceuticals Inc.
+------------------------------
+
+root@faa94ec9460f:/workspace#

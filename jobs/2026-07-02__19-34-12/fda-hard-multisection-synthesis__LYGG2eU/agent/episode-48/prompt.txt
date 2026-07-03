@@ -1,0 +1,13 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# rm -f diff_check.py diff_check_2.py explore.py find_desc.py find_formulations.py find_passage.py find_passage_raw.py find_sec3.py
+generate_answers.py inspect_questions.py list_headings.py list_lopinavir_dosage.py list_lopinavir_forms.py list_lopinavir_warnings.py list_paxlovid_adverse.py l
+ist_paxlovid_warnings.py match_chunks.py parse_passages.py parse_passages_v2.py print_around.py print_passages.py search_labels.py test_normalize.py test_passag
+e.py validate_answers.py
+root@15b83e10b8d1:/workspace# ls -la /workspace
+total 36
+drwxr-xr-x 1 root root  4096 Jul  2 23:38 .
+drwxr-xr-x 1 root root  4096 Jul  2 23:34 ..
+-rw-r--r-- 1 root root 21224 Jul  2 23:38 answers.json
+drwxr-xr-x 3 root root  4096 Jul  2 20:40 data
+root@15b83e10b8d1:/workspace#

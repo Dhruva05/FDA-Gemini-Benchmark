@@ -1,0 +1,4 @@
+Previous response had parsing errors:
+ERROR: Invalid JSON: Invalid control character at: line 2 column 107 (char 108) | Content preview: '{\n  "analysis": "This is perfect! The `chunks` list corresponds exactly to the `PASSAGE_####` IDs, i'...
+
+Please fix these issues and provide a proper JSON response.

@@ -1,0 +1,60 @@
+New Terminal Output:
+
+root@af996c5fe492:/workspace# cat << 'EOF' > parse_lenalidomide.py
+> with open('Lenalidomide_chunks.txt') as f:
+>     text = f.read()
+>     print(text[:4000])
+> EOF
+root@af996c5fe492:/workspace# python3 parse_lenalidomide.py
+=== CHUNK 0 (PASSAGE_0000) ===
+WARNING: EMBRYO-FETAL TOXICITY, HEMATOLOGIC TOXICITY, and VENOUS and ARTERIAL THROMBOEMBOLISM
+Embryo-Fetal Toxicity
+Do not use lenalidomide during pregnancy. Lenalidomide, a thalidomide analogue, caused limb abnormalities in a developmental monkey study. Thalidomide is a know
+n human teratogen that causes severe life-threatening human birth defects. If lenalidomide is used during pregnancy, it may cause birth defects or embryo-fetal
+death. In females of reproductive potential, obtain 2 negative pregnancy tests before starting lenalidomide treatment. Females of reproductive potential must us
+e 2 forms of contraception or continuously abstain from heterosexual sex during and for 4 weeks after lenalidomide treatment . To avoid embryo-fetal exposure to
+ lenalidomide, lenalidomide is only available through a restricted distribution program, the Lenalidomide REMS program (5.2).
+Information about the Lenalidomide REMS program is available at www.lenalidomiderems.com or by calling the REMS Call Center at 1-888-423-5436.
+
+=== CHUNK 1 (PASSAGE_0001) ===
+Hematologic Toxicity (Neutropenia and Thrombocytopenia)
+Lenalidomide can cause significant neutropenia and thrombocytopenia. Eighty percent of patients with del 5q myelodysplastic syndromes had to have a dose delay/r
+eduction during the major study. Thirty-four percent of patients had to have a second dose delay/reduction. Grade 3 or 4 hematologic toxicity was seen in 80% of
+ patients enrolled in the study. Patients on therapy for del 5q myelodysplastic syndromes should have their complete blood counts monitored weekly for the first
+ 8 weeks of therapy and at least monthly thereafter. Patients may require dose interruption and/or reduction. Patients may require use of blood product support
+and/or growth factors .
+
+=== CHUNK 2 (PASSAGE_0002) ===
+Venous and Arterial Thromboembolism
+Lenalidomide has demonstrated a significantly increased risk of deep vein thrombosis (DVT) and pulmonary embolism (PE), as well as risk of myocardial infarction
+ and stroke in patients with multiple myeloma who were treated with lenalidomide and dexamethasone therapy. Monitor for and advise patients about signs and symp
+toms of thromboembolism. Advise patients to seek immediate medical care if they develop symptoms such as shortness of breath, chest pain, or arm or leg swelling
+. Thromboprophylaxis is recommended and the choice of regimen should be based on an assessment of the patient's underlying risks .
+
+=== CHUNK 3 (PASSAGE_0003) ===
+1.1 Multiple Myeloma
+Lenalidomide in combination with dexamethasone is indicated for the treatment of adult patients with multiple myeloma (MM).
+Lenalidomide is indicated as maintenance therapy in adult patients with MM following autologous hematopoietic stem cell transplantation (auto-HSCT).
+
+=== CHUNK 4 (PASSAGE_0004) ===
+1.2 Myelodysplastic Syndromes
+Lenalidomide is indicated for the treatment of adult patients with transfusion-dependent anemia due to low- or intermediate-1-risk myelodysplastic syndromes (MD
+S) associated with a deletion 5q cytogenetic abnormality with or without additional cytogenetic abnormalities.
+
+=== CHUNK 5 (PASSAGE_0005) ===
+1.3 Mantle Cell Lymphoma
+Lenalidomideis indicated for the treatment of adult patients with mantle cell lymphoma (MCL) whose disease has relapsed or progressed after two prior therapies,
+ one of which included bortezomib.
+
+=== CHUNK 6 (PASSAGE_0006) ===
+1.4 Follicular Lymphoma
+Lenalidomidein combination with a rituximab product, is indicated for the treatment of adult patients with previously treated follicular lymphoma (FL).
+
+=== CHUNK 7 (PASSAGE_0007) ===
+1.5 Marginal Zone Lymphoma
+Lenalidomide in combination with a rituximab product, is indicated for the treatment of adult patients with previously treated marginal zone lymphoma (MZL).
+
+=== CHUNK 8 (PASSAGE_0008) ===
+1.6 Limitations of Use
+Lenalidomide is not indicated and is not recommended for the treatment of patients with CLL outside of controlled clinical
+root@af996c5fe492:/workspace#

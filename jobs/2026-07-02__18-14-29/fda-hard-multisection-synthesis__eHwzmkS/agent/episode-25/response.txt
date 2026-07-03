@@ -1,0 +1,12 @@
+{
+  "analysis": "All questions have the same `required_output_fields` which are `['qid', 'status', 'answer', 'citations', 'structured_fields']`.
+Wait, let's check if there are any other fields inside each question in `questions.jsonl`.
+Let's print all the keys of each question.",
+  "plan": "I will run a python command to print all the keys of each question in `questions.jsonl`.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json; [print(list(q.keys())) for q in [json.loads(line) for line in open('/workspace/data/public/questions.jsonl')]]\"\n",
+      "duration": 0.5
+    }
+  ]
+}

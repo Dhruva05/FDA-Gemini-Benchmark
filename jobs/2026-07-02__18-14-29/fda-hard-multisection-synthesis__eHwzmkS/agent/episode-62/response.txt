@@ -1,0 +1,12 @@
+{
+  "analysis": "This is incredibly rich and complete!
+Let's see what are the most common adverse reactions for Lopinavir-Ritonavir as well, which are part of safety risks (Q5).
+Let's search for keywords like 'most common', 'adverse reaction', 'diarrhea', 'nausea' in Lopinavir-Ritonavir's Section 6.",
+  "plan": "I will run a python script to search for common adverse reactions in Lopinavir-Ritonavir's Section 6.",
+  "commands": [
+    {
+      "keystrokes": "python3 -c \"import json, re; f = open('/workspace/data/public/labels.jsonl'); labels = [json.loads(line) for line in f]; l = labels[1]\nfor i in range(26, len(l['chunks'])):\n    text = l['chunks'][i]\n    if '6.1' in text or '6.2' in text or 'adverse reaction' in text.lower():\n        if any(w in text.lower() for w in ['common', 'diarrhea', 'nausea', 'vomiting']):\n            print(f'PASSAGE_{i:04d}:', text.strip().split('\\n')[0][:80])\nf.close()\"\n",
+      "duration": 0.5
+    }
+  ]
+}

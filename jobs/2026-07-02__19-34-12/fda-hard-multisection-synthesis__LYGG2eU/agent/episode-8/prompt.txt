@@ -1,0 +1,136 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat << 'EOF' > find_passage_raw.py
+> import json
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     for line in f:
+>         label = json.loads(line)
+>         print(label['drug_name'])
+>         raw_str = json.dumps(label)
+>         idx = 0
+>         while True:
+>             idx = raw_str.find('PASSAGE', idx)
+>             if idx == -1:
+>                 break
+>             print(f"Found 'PASSAGE' at index {idx}: {raw_str[idx:idx+50]}")
+>             idx += 1
+>         break
+> EOF
+root@15b83e10b8d1:/workspace# python3 find_passage_raw.py
+Paxlovid
+Found 'PASSAGE' at index 93966: PASSAGE_0000||\nWARNING: SIGNIFICANT DRUG INTERACT
+Found 'PASSAGE' at index 94715: PASSAGE_0001||\n1 INDICATIONS AND USAGE\nPAXLOVID
+Found 'PASSAGE' at index 94960: PASSAGE_0002||\nLimitations of Use\nPAXLOVID is no
+Found 'PASSAGE' at index 95108: PASSAGE_0003||\n2.1\tImportant Dosage and Administ
+Found 'PASSAGE' at index 97162: PASSAGE_0004||\n2.2\tRecommended Dosage\nThe recom
+Found 'PASSAGE' at index 97425: PASSAGE_0005||\n2.3 Dosage in Patients with Renal
+Found 'PASSAGE' at index 98308: PASSAGE_0006||\nDays of Treatment\nDose and Dose F
+Found 'PASSAGE' at index 98514: PASSAGE_0007||\nDays 1-5\n150 mg nirmatrelvir (one
+Found 'PASSAGE' at index 98808: PASSAGE_0008||\nDay 1\n300 mg nirmatrelvir (two 15
+Found 'PASSAGE' at index 98924: PASSAGE_0009||\nDays 2-5\n150 mg nirmatrelvir (one
+Found 'PASSAGE' at index 99048: PASSAGE_0010||\n2.4\tUse in Patients with Hepatic
+Found 'PASSAGE' at index 99495: PASSAGE_0011||\n3 DOSAGE FORMS AND STRENGTHS\nPAXL
+Found 'PASSAGE' at index 99981: PASSAGE_0012||\n4 CONTRAINDICATIONS\nPAXLOVID is c
+Found 'PASSAGE' at index 103133: PASSAGE_0013||\n5.1\tRisk of Serious Adverse React
+Found 'PASSAGE' at index 104873: PASSAGE_0014||\n5.2\tHypersensitivity Reactions\nA
+Found 'PASSAGE' at index 105296: PASSAGE_0015||\n5.3\tHepatotoxicity\nHepatic trans
+Found 'PASSAGE' at index 105606: PASSAGE_0016||\n5.4\tRisk of HIV-1 Resistance Deve
+Found 'PASSAGE' at index 105870: PASSAGE_0017||\n6 ADVERSE REACTIONS\nThe following
+Found 'PASSAGE' at index 106038: PASSAGE_0018||\n6.1\tClinical Trials Experience\nB
+Found 'PASSAGE' at index 109222: PASSAGE_0019||\n7.1\tPotential for PAXLOVID to Aff
+Found 'PASSAGE' at index 109982: PASSAGE_0020||\n7.2\tPotential for Other Drugs to
+Found 'PASSAGE' at index 110241: PASSAGE_0021||\n7.3\tEstablished and Other Potenti
+Found 'PASSAGE' at index 110819: PASSAGE_0022||\n\u2191 alfuzosin\nCo-administratio
+Found 'PASSAGE' at index 110923: PASSAGE_0023||\n\u2191 tamsulosin\nAvoid concomita
+Found 'PASSAGE' at index 111000: PASSAGE_0024||\n\u2191 ranolazine\nCo-administrati
+Found 'PASSAGE' at index 111139: PASSAGE_0025||\n\u2191 antiarrhythmic\nCo-administ
+Found 'PASSAGE' at index 111260: PASSAGE_0026||\n\u2191 antiarrhythmic\nCaution is
+Found 'PASSAGE' at index 111415: PASSAGE_0027||\n\u2193 nirmatrelvir/ritonavir\nCo-
+Found 'PASSAGE' at index 111571: PASSAGE_0028||\nAnticancer drugs\nabemaciclib, cer
+Found 'PASSAGE' at index 111737: PASSAGE_0029||\n\u2191 anticancer drugs\nAvoid co-
+Found 'PASSAGE' at index 112168: PASSAGE_0030||\n\u2191\u2193 warfarin\nClosely mon
+Found 'PASSAGE' at index 112314: PASSAGE_0031||\n\u2191 rivaroxaban\nIncreased blee
+Found 'PASSAGE' at index 112495: PASSAGE_0032||\n\u2191 dabigatran\nIncreased bleed
+Found 'PASSAGE' at index 112746: PASSAGE_0033||\n\u2191 apixaban\nCombined P-gp and
+Found 'PASSAGE' at index 113053: PASSAGE_0034||\n\u2193 nirmatrelvir/ritonavir\nCo-
+Found 'PASSAGE' at index 113209: PASSAGE_0035||\n\u2191 anticonvulsant\nA dose decr
+Found 'PASSAGE' at index 113373: PASSAGE_0036||\n\u2193 bupropion and active metabo
+Found 'PASSAGE' at index 113508: PASSAGE_0037||\n\u2191 trazodone\nAdverse reaction
+Found 'PASSAGE' at index 113793: PASSAGE_0038||\n\u2193 voriconazole\nAvoid concomi
+Found 'PASSAGE' at index 113874: PASSAGE_0039||\n\u2191 ketoconazole\u2191 isavucon
+Found 'PASSAGE' at index 114070: PASSAGE_0040||\n\u2191 nirmatrelvir/ritonavir\nA n
+Found 'PASSAGE' at index 114177: PASSAGE_0041||\n\u2191 colchicine\nCo-administrati
+Found 'PASSAGE' at index 114365: PASSAGE_0042||\n\u2191 protease inhibitor\nFor fur
+Found 'PASSAGE' at index 114685: PASSAGE_0043||\nefavirenz,maraviroc,nevirapine,zid
+Found 'PASSAGE' at index 114998: PASSAGE_0044||\n\u2191 clarithromycin\u2191 erythr
+Found 'PASSAGE' at index 115145: PASSAGE_0045||\n\u2193 nirmatrelvir/ritonavir\nCo-
+Found 'PASSAGE' at index 115375: PASSAGE_0046||\n\u2191 bedaquiline\nRefer to the b
+Found 'PASSAGE' at index 115480: PASSAGE_0047||\n\u2191 rifabutin\nRefer to rifabut
+Found 'PASSAGE' at index 115605: PASSAGE_0048||\n\u2191 lurasidone\u2191 pimozide\n
+Found 'PASSAGE' at index 115773: PASSAGE_0049||\n\u2191 quetiapine\nIf co-administr
+Found 'PASSAGE' at index 115997: PASSAGE_0050||\n\u2191 clozapine\nIf co-administra
+Found 'PASSAGE' at index 116143: PASSAGE_0051||\n\u2191 silodosin\nCo-administratio
+Found 'PASSAGE' at index 1162
+[... output limited to 10000 bytes; 70 interior bytes omitted ...]
+in Subjects at High
+Found 'PASSAGE' at index 163052: PASSAGE_0150||\n64 (6.5%)\nReduction Relative to P
+Found 'PASSAGE' at index 163399: PASSAGE_0151||\n-5.6 (-7.3, -4.0)\nCOVID-19 Relate
+Found 'PASSAGE' at index 163490: PASSAGE_0152||\n63 (6.4%)\nAll-cause Mortality Thr
+Found 'PASSAGE' at index 163709: PASSAGE_0153||\n12 (1.2%)\nConsistent results were
+Found 'PASSAGE' at index 164350: PASSAGE_0154||\n14.2\tTrial in Unvaccinated Subjec
+Found 'PASSAGE' at index 166091: PASSAGE_0155||\n14.3\tPost-Exposure Prophylaxis Tr
+Found 'PASSAGE' at index 167382: PASSAGE_0156||\n16 HOW SUPPLIED/STORAGE AND HANDLI
+Found 'PASSAGE' at index 167702: PASSAGE_0157||\n300 mg nirmatrelvir; 100 mg ritona
+Found 'PASSAGE' at index 167823: PASSAGE_0158||\n0069-5045-30\nNirmatrelvir tablets
+Found 'PASSAGE' at index 168141: PASSAGE_0159||\n0069-5321-30\nNirmatrelvir tablets
+Found 'PASSAGE' at index 168497: PASSAGE_0160||\n0069-5045-06\nNirmatrelvir tablets
+Found 'PASSAGE' at index 168815: PASSAGE_0161||\n0069-5321-03\nNirmatrelvir tablets
+Found 'PASSAGE' at index 169075: PASSAGE_0162||\n150 mg nirmatrelvir; 100 mg ritona
+Found 'PASSAGE' at index 169196: PASSAGE_0163||\n0069-5317-20\nNirmatrelvir tablets
+Found 'PASSAGE' at index 169464: PASSAGE_0164||\n0069-5434-20\nNirmatrelvir tablets
+Found 'PASSAGE' at index 169903: PASSAGE_0165||\n0069-5317-02\nNirmatrelvir tablets
+Found 'PASSAGE' at index 170171: PASSAGE_0166||\n0069-5434-02\nNirmatrelvir tablets
+Found 'PASSAGE' at index 170666: PASSAGE_0167||\n0069-0521-11\nNirmatrelvir tablets
+Found 'PASSAGE' at index 170934: PASSAGE_0168||\n0069-5450-11\nNirmatrelvir tablets
+Found 'PASSAGE' at index 171375: PASSAGE_0169||\n0069-0521-11\nNirmatrelvir tablets
+Found 'PASSAGE' at index 171643: PASSAGE_0170||\n0069-5450-11\nNirmatrelvir tablets
+Found 'PASSAGE' at index 171989: PASSAGE_0171||\nStorage and Handling\nStore at USP
+Found 'PASSAGE' at index 172200: PASSAGE_0172||\n17 PATIENT COUNSELING INFORMATION\
+Found 'PASSAGE' at index 172340: PASSAGE_0173||\nDrug Interactions\nInform patients
+Found 'PASSAGE' at index 172638: PASSAGE_0174||\nHypersensitivity Reactions\nInform
+Found 'PASSAGE' at index 173258: PASSAGE_0175||\nModerate Renal Impairment\nTo ensu
+Found 'PASSAGE' at index 174120: PASSAGE_0176||\nAdministration Instructions\nInfor
+Found 'PASSAGE' at index 175015: PASSAGE_0177||\nThis product\u2019s labeling may h
+Found 'PASSAGE' at index 175261: PASSAGE_0178||\nPATIENT INFORMATION\nPAXLOVID (pax
+Found 'PASSAGE' at index 179144: PASSAGE_0179||\nHow should I take PAXLOVID?\n- Tak
+Found 'PASSAGE' at index 179757: PASSAGE_0180||\nFigure A\nIf you are prescribed PA
+Found 'PASSAGE' at index 180154: PASSAGE_0181||\nFigure B\nIf you are prescribed PA
+Found 'PASSAGE' at index 180525: PASSAGE_0182||\nFigure C\nIf you are prescribed PA
+Found 'PASSAGE' at index 180993: PASSAGE_0183||\n1 white ritonavir tablet together\
+Found 'PASSAGE' at index 183957: PASSAGE_0184||\nHow should I store PAXLOVID?\n- St
+Found 'PASSAGE' at index 185575: PASSAGE_0185||\nNDC 0069-5045-06\nPAXLOVID\u2122(n
+Found 'PASSAGE' at index 185708: PASSAGE_0186||\nRx only\nPAA232044Dist. by Pfizer
+Found 'PASSAGE' at index 185811: PASSAGE_0187||\nPfizerNDC 0069-5045-30\nPAXLOVID\u
+Found 'PASSAGE' at index 185937: PASSAGE_0188||\n300 mg; 100 mg Dose Pack\nTake all
+Found 'PASSAGE' at index 186386: PASSAGE_0189||\nNDC 0069-5321-03\nPAXLOVID\u2122(n
+Found 'PASSAGE' at index 186519: PASSAGE_0190||\nRx only\nPAA206981Dist. by Pfizer
+Found 'PASSAGE' at index 186622: PASSAGE_0191||\nPfizerNDC 0069-5321-30\nPAXLOVID\u
+Found 'PASSAGE' at index 186748: PASSAGE_0192||\n300 mg; 100 mg Dose Pack\nTake all
+Found 'PASSAGE' at index 187197: PASSAGE_0193||\nTake these 2 tabletstogether\nPAXL
+Found 'PASSAGE' at index 187342: PASSAGE_0194||\nritonavirtablet(100 mg)\nDist. by
+Found 'PASSAGE' at index 187461: PASSAGE_0195||\nPfizerNDC 0069-5317-20\nPAXLOVID\u
+Found 'PASSAGE' at index 187587: PASSAGE_0196||\n150 mg; 100 mg Dose Pack\nTake bot
+Found 'PASSAGE' at index 188034: PASSAGE_0197||\nDay 1 (300 mg; 100 mg)Your first d
+Found 'PASSAGE' at index 188135: PASSAGE_0198||\nnirmatrelvirtablet(150 mg)nirmatre
+Found 'PASSAGE' at index 188440: PASSAGE_0199||\nPAA228321\nnirmatrelvirtablet(150
+Found 'PASSAGE' at index 188831: PASSAGE_0200||\nPfizerNDC 0069-0521-11\nPAXLOVID\u
+Found 'PASSAGE' at index 189407: PASSAGE_0201||\nTake these 2 tabletstogether\nPAXL
+Found 'PASSAGE' at index 189552: PASSAGE_0202||\nritonavirtablet(100 mg)\nDist. by
+Found 'PASSAGE' at index 189671: PASSAGE_0203||\nPfizerNDC 0069-5434-20\nPAXLOVID\u
+Found 'PASSAGE' at index 189797: PASSAGE_0204||\n150 mg; 100 mg Dose Pack\nTake bot
+Found 'PASSAGE' at index 190244: PASSAGE_0205||\nDay 1 (300 mg; 100 mg)Your first d
+Found 'PASSAGE' at index 190345: PASSAGE_0206||\nnirmatrelvirtablet(150 mg)nirmatre
+Found 'PASSAGE' at index 190650: PASSAGE_0207||\nPAA228417\nnirmatrelvirtablet(150
+Found 'PASSAGE' at index 191041: PASSAGE_0208||\nPfizerNDC 0069-5450-11\nPAXLOVID\u
+root@15b83e10b8d1:/workspace#

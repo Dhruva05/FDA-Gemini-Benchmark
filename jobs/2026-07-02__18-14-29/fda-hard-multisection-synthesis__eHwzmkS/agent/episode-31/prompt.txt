@@ -1,0 +1,248 @@
+New Terminal Output:
+
+root@a1980178bfd8:/workspace# cat << 'EOF' > search_all.py
+> import json, re
+>
+> with open('/workspace/data/public/labels.jsonl') as f:
+>     labels = {l['set_id']: l for l in [json.loads(line) for line in f]}
+>
+> with open('/workspace/data/public/questions.jsonl') as f:
+>     questions = [json.loads(line) for line in f]
+>
+> for q in questions:
+>     print(f"QID: {q['qid']} | Drug: {q['drug_name']} | Question: {q['question']}")
+>     set_id = q['set_id']
+>     label = labels[set_id]
+>
+>     keywords = []
+>     q_lower = q['question'].lower()
+>     if 'interaction' in q_lower:
+>         keywords = ['interaction', 'contraindication']
+>     elif 'avoid' in q_lower:
+>         keywords = ['avoid', 'contraindication', 'interaction']
+>     elif 'administer' in q_lower:
+>         keywords = ['administration', 'dosage', 'how to']
+>     elif 'dosage' in q_lower or 'dose' in q_lower:
+>         keywords = ['dosage', 'administration', 'regimen']
+>     elif 'safety' in q_lower or 'risk' in q_lower:
+>         keywords = ['warning', 'precaution', 'adverse', 'risk', 'safety']
+>     elif 'warning' in q_lower or 'precaution' in q_lower:
+>         keywords = ['warning', 'precaution']
+>
+>     print("Matches:")
+>     for i, chunk in enumerate(label['chunks']):
+>         for kw in keywords:
+>             if re.search(r'\b' + kw + r'\b', chunk, re.IGNORECASE):
+>                 first_line = chunk.strip().split('\n')[0]
+>                 if len(first_line) < 100:
+>                     print(f"  PASSAGE_{i:04d}: {first_line}")
+>                 break
+>     print()
+> EOF
+root@a1980178bfd8:/workspace# python3 search_all.py
+QID: b2531657ba5c7a78 | Drug: Paxlovid | Question: What important drug interactions are noted for Paxlovid?
+Matches:
+  PASSAGE_0031: ↑ rivaroxaban
+  PASSAGE_0133: Clinical Drug Interaction Studies
+
+QID: 6f12607a1ba14dd5 | Drug: Paxlovid | Question: Which medications should be avoided with Paxlovid?
+Matches:
+  PASSAGE_0023: ↑ tamsulosin
+  PASSAGE_0029: ↑ anticancer drugs
+  PASSAGE_0031: ↑ rivaroxaban
+  PASSAGE_0032: ↑ dabigatran
+  PASSAGE_0038: ↓ voriconazole
+  PASSAGE_0056: aliskiren,ticagrelor,vorapaxar
+  PASSAGE_0065: glecaprevir/pibrentasvir
+  PASSAGE_0074: ↑ cyclosporine↑ tacrolimus
+  PASSAGE_0075: ↑ everolimus↑ sirolimus
+  PASSAGE_0078: ↑ salmeterol
+  PASSAGE_0082: ↑ rimegepant
+  PASSAGE_0087: ↑ suvorexant
+  PASSAGE_0091: ↑ tadalafil
+  PASSAGE_0105: 8.2 Lactation
+  PASSAGE_0133: Clinical Drug Interaction Studies
+
+QID: daef650b92e56473 | Drug: Lopinavir-Ritonavir | Question: How should Lopinavir-Ritonavir be administered?
+Matches:
+  PASSAGE_0001: 2.1 General Administration Recommendations
+  PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+  PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+  PASSAGE_0004: Recommended Dosage
+  PASSAGE_0005: Recommended Dosage
+  PASSAGE_0006: Recommended Dosage
+  PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+  PASSAGE_0008: Pediatric Dosage Calculations
+  PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+  PASSAGE_0019: 5.6 PR Interval Prolongation
+  PASSAGE_0047: 7.1 Potential for Lopinavir and Ritonavir to Affect Other Drugs
+  PASSAGE_0048: 7.2 Potential for Other Drugs to Affect Lopinavir
+  PASSAGE_0052: ↓lopinavir
+  PASSAGE_0057: ↓ lopinavir
+  PASSAGE_0066: ↓ lopinavir/ritonavir#
+  PASSAGE_0067: ↑ rivaroxaban
+  PASSAGE_0068: ↓ phenytoin
+  PASSAGE_0069: ↓ or ↔ valproate
+  PASSAGE_0071: ↑ trazodone
+  PASSAGE_0073: ↑ isavuconazonium
+  PASSAGE_0074: ↑ colchicine
+  PASSAGE_0076: ↑ rifabutin and rifabutin metabolite
+  PASSAGE_0081: ↑ bosentan
+  PASSAGE_0089: ↑ salmeterol
+  PASSAGE_0090: ↑ fentanyl
+  PASSAGE_0091: ↑ vardenafil
+  PASSAGE_0093: ↓ lopinavir
+  PASSAGE_0099: Animal Data
+  PASSAGE_0103: 8.5 Geriatric Use
+  PASSAGE_0105: 10 OVERDOSAGE
+  PASSAGE_0106: 11 DESCRIPTION
+  PASSAGE_0109: 12.3 Pharmacokinetics
+  PASSAGE_0120: Drug Interactions
+  PASSAGE_0137: <4 fold
+  PASSAGE_0140: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+  PASSAGE_0159: 17 PATIENT COUNSELING INFORMATION
+  PASSAGE_0183: Philadelphia, PA 19136
+  PASSAGE_0187: 1 Prescribing Information
+
+QID: a0576a26f2a2eeac | Drug: Lopinavir-Ritonavir | Question: What is the recommended dosage regimen of Lopinavir-Ritonavir?
+Matches:
+  PASSAGE_0001: 2.1 General Administration Recommendations
+  PASSAGE_0002: 2.2 Administering Oral Solution by Feeding Tube
+  PASSAGE_0003: 2.3 Dosage Recommendations in Adults
+  PASSAGE_0004: Recommended Dosage
+  PASSAGE_0005: Recommended Dosage
+  PASSAGE_0006: Recommended Dosage
+  PASSAGE_0007: 2.4 Dosage Recommendations in Pediatric Patients
+  PASSAGE_0008: Pediatric Dosage Calculations
+  PASSAGE_0012: 2.5 Dosage Recommendations in Pregnancy
+  PASSAGE_0019: 5.6 PR Interval Prolongation
+  PASSAGE_0039: Adverse Reactions in Pediatric Patients
+  PASSAGE_0047: 7.1 Potential for Lopinavir and Ritonavir to Affect Other Drugs
+  PASSAGE_0048: 7.2 Potential for Other Drugs to A
+[... output limited to 10000 bytes; 68 interior bytes omitted ...]
+ablished and Other Potentially Significant Drug Interactions
+  PASSAGE_0052: ↓lopinavir
+  PASSAGE_0057: ↓ lopinavir
+  PASSAGE_0066: ↓ lopinavir/ritonavir#
+  PASSAGE_0067: ↑ rivaroxaban
+  PASSAGE_0068: ↓ phenytoin
+  PASSAGE_0069: ↓ or ↔ valproate
+  PASSAGE_0071: ↑ trazodone
+  PASSAGE_0073: ↑ isavuconazonium
+  PASSAGE_0074: ↑ colchicine
+  PASSAGE_0076: ↑ rifabutin and rifabutin metabolite
+  PASSAGE_0081: ↑ bosentan
+  PASSAGE_0089: ↑ salmeterol
+  PASSAGE_0090: ↑ fentanyl
+  PASSAGE_0091: ↑ vardenafil
+  PASSAGE_0093: ↓ lopinavir
+  PASSAGE_0099: Animal Data
+  PASSAGE_0102: 8.4 Pediatric Use
+  PASSAGE_0103: 8.5 Geriatric Use
+  PASSAGE_0105: 10 OVERDOSAGE
+  PASSAGE_0106: 11 DESCRIPTION
+  PASSAGE_0109: 12.3 Pharmacokinetics
+  PASSAGE_0112: Pediatric Patients
+  PASSAGE_0120: Drug Interactions
+  PASSAGE_0125: 3 Parallel group design
+  PASSAGE_0137: <4 fold
+  PASSAGE_0140: 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility
+  PASSAGE_0150: 13%
+  PASSAGE_0156: 14.4 Pediatric Studies
+  PASSAGE_0159: 17 PATIENT COUNSELING INFORMATION
+  PASSAGE_0183: Philadelphia, PA 19136
+  PASSAGE_0187: 1 Prescribing Information
+
+QID: 9be5515bc3064979 | Drug: Lopinavir-Ritonavir | Question: What safety risks are listed for Lopinavir-Ritonavir?
+Matches:
+  PASSAGE_0014: 5.1 Risk of Serious Adverse Reactions Due to Drug Interactions
+  PASSAGE_0015: 5.2 Toxicity in Preterm Neonates
+  PASSAGE_0016: 5.3 Pancreatitis
+  PASSAGE_0017: 5.4 Hepatotoxicity
+  PASSAGE_0019: 5.6 PR Interval Prolongation
+  PASSAGE_0026: 6 ADVERSE REACTIONS
+  PASSAGE_0027: 6.1 Clinical Trials Experience
+  PASSAGE_0028: Adverse Reactions in Adults
+  PASSAGE_0039: Adverse Reactions in Pediatric Patients
+  PASSAGE_0043: 6.2 Postmarketing Experience
+  PASSAGE_0052: ↓lopinavir
+  PASSAGE_0055: ↑ lopinavir
+  PASSAGE_0060: ↑ lopinavir
+  PASSAGE_0062: ↑ tenofovir
+  PASSAGE_0066: ↓ lopinavir/ritonavir#
+  PASSAGE_0067: ↑ rivaroxaban
+  PASSAGE_0071: ↑ trazodone
+  PASSAGE_0073: ↑ isavuconazonium
+  PASSAGE_0076: ↑ rifabutin and rifabutin metabolite
+  PASSAGE_0079: quetiapine
+  PASSAGE_0083: elbasvir/grazoprevir
+  PASSAGE_0089: ↑ salmeterol
+  PASSAGE_0090: ↑ fentanyl
+  PASSAGE_0091: ↑ vardenafil
+  PASSAGE_0093: ↓ lopinavir
+  PASSAGE_0096: Risk Summary
+  PASSAGE_0098: Human Data
+  PASSAGE_0100: 8.2 Lactation
+  PASSAGE_0102: 8.4 Pediatric Use
+  PASSAGE_0105: 10 OVERDOSAGE
+  PASSAGE_0150: 13%
+  PASSAGE_0152: 24%
+  PASSAGE_0154: 3%
+  PASSAGE_0155: 14.3 Other Studies Supporting Approval in Adult Patients
+  PASSAGE_0156: 14.4 Pediatric Studies
+  PASSAGE_0159: 17 PATIENT COUNSELING INFORMATION
+  PASSAGE_0173: Oral Solution USP
+  PASSAGE_0174: ° stomach-area (abdominal) pain
+  PASSAGE_0176: ° stomach area (abdominal) pain
+  PASSAGE_0181: ° St. John’s Wort (Hypericum perforatum®)
+
+QID: 18078efe9380c8dc | Drug: Lopinavir-Ritonavir | Question: What important warnings or precautions are associated with Lopinavir-Ritonavir?
+Matches:
+
+QID: fbab4114f66e2dda | Drug: Paxlovid | Question: What important warnings or precautions are associated with Paxlovid?
+Matches:
+  PASSAGE_0000: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+
+QID: 2d63e0a82215867f | Drug: Paxlovid | Question: What safety risks are listed for Paxlovid?
+Matches:
+  PASSAGE_0000: WARNING: SIGNIFICANT DRUG INTERACTIONS WITH PAXLOVID
+  PASSAGE_0001: 1 INDICATIONS AND USAGE
+  PASSAGE_0010: 2.4     Use in Patients with Hepatic Impairment
+  PASSAGE_0013: 5.1     Risk of Serious Adverse Reactions Due to Drug Interactions
+  PASSAGE_0016: 5.4     Risk of HIV-1 Resistance Development
+  PASSAGE_0017: 6 ADVERSE REACTIONS
+  PASSAGE_0018: 6.1     Clinical Trials Experience
+  PASSAGE_0019: 7.1     Potential for PAXLOVID to Affect Other Drugs
+  PASSAGE_0029: ↑ anticancer drugs
+  PASSAGE_0031: ↑ rivaroxaban
+  PASSAGE_0032: ↑ dabigatran
+  PASSAGE_0033: ↑ apixaban
+  PASSAGE_0037: ↑ trazodone
+  PASSAGE_0042: ↑ protease inhibitor
+  PASSAGE_0049: ↑ quetiapine
+  PASSAGE_0050: ↑ clozapine
+  PASSAGE_0058: ↑ corticosteroid
+  PASSAGE_0067: sofosbuvir/velpatasvir/ voxilaprevir
+  PASSAGE_0074: ↑ cyclosporine↑ tacrolimus
+  PASSAGE_0078: ↑ salmeterol
+  PASSAGE_0079: ↑ lomitapide
+  PASSAGE_0080: ↑ eletriptan
+  PASSAGE_0081: ↑ ubrogepant
+  PASSAGE_0083: ↑ finerenone
+  PASSAGE_0085: ↑ fentanyl↑ hydrocodone↑ oxycodone↑ meperidine
+  PASSAGE_0090: ↑ sildenafil
+  PASSAGE_0096: ↑ sedative/hypnotic
+  PASSAGE_0100: 8.1 Pregnancy
+  PASSAGE_0101: Disease-associated Maternal and/or Embryo-fetal Risk
+  PASSAGE_0103: Nirmatrelvir
+  PASSAGE_0105: 8.2 Lactation
+  PASSAGE_0109: 8.5 Geriatric Use
+  PASSAGE_0110: 8.6 Renal Impairment
+  PASSAGE_0111: 8.7 Hepatic Impairment
+  PASSAGE_0135: In Vitro Studies
+  PASSAGE_0138: Clinical Antiviral Activity
+  PASSAGE_0149: 14.1    Efficacy in Subjects at High Risk of Progression to Severe COVID-19 (EPIC-HR)
+  PASSAGE_0155: 14.3    Post-Exposure Prophylaxis Trial
+  PASSAGE_0178: PATIENT INFORMATION
+
+root@a1980178bfd8:/workspace#

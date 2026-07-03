@@ -1,0 +1,21 @@
+New Terminal Output:
+
+root@15b83e10b8d1:/workspace# cat /workspace/data/public/questions.jsonl
+{"drug_name": "Paxlovid", "qid": "b2531657ba5c7a78", "question": "What important drug interactions are noted for Paxlovid?", "required_output_fields": ["qid", "
+status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "multihop"}
+{"drug_name": "Paxlovid", "qid": "6f12607a1ba14dd5", "question": "Which medications should be avoided with Paxlovid?", "required_output_fields": ["qid", "status
+", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "multihop"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "daef650b92e56473", "question": "How should Lopinavir-Ritonavir be administered?", "required_output_fields": ["qid",
+ "status", "answer", "citations", "structured_fields"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "multihop"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "a0576a26f2a2eeac", "question": "What is the recommended dosage regimen of Lopinavir-Ritonavir?", "required_output_f
+ields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "multihop"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "9be5515bc3064979", "question": "What safety risks are listed for Lopinavir-Ritonavir?", "required_output_fields": [
+"qid", "status", "answer", "citations", "structured_fields"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "multihop"}
+{"drug_name": "Lopinavir-Ritonavir", "qid": "18078efe9380c8dc", "question": "What important warnings or precautions are associated with Lopinavir-Ritonavir?", "
+required_output_fields": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "4b1caefa-e6a2-42f3-9194-6dc1dd9e6d85", "task_type": "multihop
+"}
+{"drug_name": "Paxlovid", "qid": "fbab4114f66e2dda", "question": "What important warnings or precautions are associated with Paxlovid?", "required_output_fields
+": ["qid", "status", "answer", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "multihop"}
+{"drug_name": "Paxlovid", "qid": "2d63e0a82215867f", "question": "What safety risks are listed for Paxlovid?", "required_output_fields": ["qid", "status", "answ
+er", "citations", "structured_fields"], "set_id": "8a99d6d6-fd9e-45bb-b1bf-48c7f761232a", "task_type": "multihop"}
+root@15b83e10b8d1:/workspace#

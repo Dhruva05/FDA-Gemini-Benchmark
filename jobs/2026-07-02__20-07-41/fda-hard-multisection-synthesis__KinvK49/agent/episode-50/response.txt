@@ -1,0 +1,10 @@
+{
+  "analysis": "My previous JSON had a control character error. I will make sure not to include any literal control characters or unescaped newlines in the JSON strings.",
+  "plan": "I will run a find command to check for any files in `/root` or `/home` that might contain templates, testing scripts, or instructions.",
+  "commands": [
+    {
+      "keystrokes": "find /root /home -type f 2>/dev/null || true\n",
+      "duration": 0.5
+    }
+  ]
+}

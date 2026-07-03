@@ -1,0 +1,10 @@
+{
+  "analysis": "Now let's write a python script to search for sections/passages related to 'dosage', 'administration', 'recommended', 'dose', etc. inside these labels, especially for the sections. We want to find the exact text of the label chunks and their passage IDs.",
+  "plan": "I will write a python script to inspect chunks that contain dosage information for each drug and print them out so we can read and extract precise facts.",
+  "commands": [
+    {
+      "keystrokes": "cat << 'EOF' > find_dosage.py\nimport json\nimport re\n\nwith open('/workspace/data/public/labels.jsonl') as f:\n    labels = {l['set_id']: l for l in [json.loads(line) for line in f]}\n\nfor set_id, label in labels.items():\n    print(\"=\"*80)\n    print(f\"DRUG: {label['drug_name']} ({set_id})\")\n    print(\"=\"*80)\n    # Let's find chunks whose heading or text contains 'DOSAGE AND ADMINISTRATION'\n    for chunk in label['chunks']:\n        text = chunk.get('text', '')\n        heading = chunk.get('heading', '')\n        passage_id = chunk.get('passage_id', '')\n        # Let's check if 'dosage' or 'administration' is in heading or text\n        if any(re.search(r'dosage|administration', str(x), re.IGNORECASE) for x in [heading, passage_id]):\n            print(f\"Passage ID: {passage_id} | Heading: {heading}\")\n            # print first 200 chars\n            print(text[:300].replace('\\n', ' ')) \n            print(\"-\"*40)\nEOF\npython3 find_dosage.py > dosage_headings.txt\nhead -n 50 dosage_headings.txt\n",
+      "duration": 1.0
+    }
+  ]
+}
