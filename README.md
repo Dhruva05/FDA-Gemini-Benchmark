@@ -2,13 +2,13 @@
 
 # FDA-Gemini Benchmark
 
-**A citation-grounded benchmark for reasoning over FDA drug labels**
+**An independent side project for benchmarking LLM reasoning over FDA drug labels**
 
 <p>
   <img alt="Python 3.10+" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white">
   <img alt="Harbor benchmark" src="https://img.shields.io/badge/Runner-Harbor-0F766E">
   <img alt="12 task suites" src="https://img.shields.io/badge/Task_suites-12-7C3AED">
-  <img alt="Research benchmark" src="https://img.shields.io/badge/Status-Research-334155">
+  <img alt="Independent side project" src="https://img.shields.io/badge/Project-Independent-334155">
 </p>
 
 <sub>Long-context retrieval · precise citations · calibrated refusal · structured clinical QA</sub>
@@ -19,9 +19,9 @@
 
 ## Overview
 
-FDA-Gemini Benchmark evaluates how reliably an agent can answer questions from FDA drug labels while staying grounded in the supplied evidence. It tests more than answer similarity: agents must identify the right label, cite real passages, preserve clinical qualifiers, return valid structured output, and refuse claims that the label does not support.
+FDA-Gemini Benchmark is an independent side project exploring how reliably LLM agents can answer questions from FDA drug labels while staying grounded in the supplied evidence. It tests more than answer similarity: agents must identify the right label, cite real passages, preserve clinical qualifiers, return valid structured output, and refuse claims that the label does not support.
 
-The repository contains Harbor-ready task environments, hidden verifiers, task builders, run artifacts, and analysis reports for both the original FDA-label suite and a deliberately harder challenge set.
+The repository documents an iterative LLM benchmarking workflow with Harbor-ready task environments, hidden verifiers, task builders, run artifacts, and analysis reports for both the original FDA-label suite and a deliberately harder challenge set.
 
 ## Benchmark at a glance
 
@@ -159,4 +159,4 @@ This produces both strict pass/fail outcomes and fractional rewards that make ne
 
 ## Research use
 
-This benchmark is intended for model evaluation and retrieval research. It is not a clinical decision-support system, and benchmark outputs should not be used as medical advice.
+This independent project is intended for LLM evaluation and retrieval research. It is not a clinical decision-support system, and benchmark outputs should not be used as medical advice.

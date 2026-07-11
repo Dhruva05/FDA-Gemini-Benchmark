@@ -2,7 +2,7 @@
 
 **Figure 1 — Difficulty profile by task.** Mean fractional reward across three Gemini 3.5 Flash runs per task. Lower reward indicates more headroom. Error bars show the observed min-max range across the three runs.
 
-**Figure 2 — Headroom check.** Strict pass@1 and pass@3 are computed using full verifier success only (`reward == 1.0`). Both are below the assignment target ceiling of 30% pass@3.
+**Figure 2 — Headroom check.** Strict pass@1 and pass@3 are computed using full verifier success only (`reward == 1.0`). Both are below the benchmark headroom ceiling of 30% pass@3.
 
 **Figure 3 — Difficulty curve.** Tasks sorted from hardest to easiest by mean fractional reward. Cross-label comparison is the hardest task family; near-miss refusal is the easiest.
 

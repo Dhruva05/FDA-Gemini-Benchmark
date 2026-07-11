@@ -549,9 +549,9 @@ def write_difficulty_profile(path, task_metrics, aggregate):
     pass3 = aggregate["aggregate_pass_at_k"]["pass@3"]
     target = aggregate["target_pass_at_3"]
     target_sentence = (
-        f"The task set meets the take-home target because aggregate pass@3 is below {percent(target)}."
+        f"The task set meets the benchmark headroom target because aggregate pass@3 is below {percent(target)}."
         if aggregate["meets_pass_at_3_target"]
-        else f"The task set does not meet the take-home target because aggregate pass@3 is not below {percent(target)}."
+        else f"The task set does not meet the benchmark headroom target because aggregate pass@3 is not below {percent(target)}."
     )
 
     lines = [
@@ -954,7 +954,7 @@ def build_parser():
         "--target-pass-at-3",
         type=float,
         default=0.30,
-        help="Take-home target line for aggregate pass@3.",
+        help="Benchmark headroom target line for aggregate pass@3.",
     )
     return parser
 
